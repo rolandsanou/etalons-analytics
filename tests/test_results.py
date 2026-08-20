@@ -1,0 +1,45 @@
+import pandas as pd
+
+from pipeline.results import _afcon_editions, classify_tournament, team_matches
+
+
+def test_classify_tournament():
+    assert classify_tournament("African Cup of Nations") == "afcon"
+    assert classify_tournament("African Cup of Nations qualification") == "afcon_qual"
+    assert classify_tournament("FIFA World Cup qualification") == "wc_qual"
+    assert classify_tournament("Friendly") == "friendly"
+    assert classify_tournament("WAFU Cup") == "other"
+
+
+def _df(rows):
+    return pd.DataFrame(rows, columns=["date", "home_team", "away_team",
+                                       "home_score", "away_score", "tournament", "neutral"])
+
+
+def test_afcon_edition_clustering_across_new_year():
+    df = _df([
+        ("2025-12-22", "Burkina Faso", "Ghana", 1, 0, "African Cup of Nations", True),
+        ("2026-01-06", "Ivory Coast", "Burkina Faso", 3, 0, "African Cup of Nations", True),
+        ("2022-01-10", "Burkina Faso", "Cameroon", 1, 2, "African Cup of Nations", True),
+    ])
+    df["date"] = pd.to_datetime(df["date"])
+    m = team_matches(df, "Burkina Faso")
+    m["comp"] = m.tournament.map(classify_tournament)
+    editions = _afcon_editions(m)
+    years = sorted(e["year"] for e in editions)
+    assert years == [2021, 2025]
+    ed2025 = next(e for e in editions if e["year"] == 2025)
+    assert ed2025["pld"] == 2
+    assert ed2025["w"] == 1
+    assert ed2025["l"] == 1
+
+
+def test_team_matches_venue_and_result():
+    df = _df([("2024-06-01", "Burkina Faso", "Togo", 2, 1, "Friendly", False)])
+    df["date"] = pd.to_datetime(df["date"])
+    m = team_matches(df, "Burkina Faso")
+    r = m.iloc[0]
+    assert r.venue == "H"
+    assert r.result == "W"
+    assert r.gf == 2 and r.ga == 1
+    assert r.opponent == "Togo"

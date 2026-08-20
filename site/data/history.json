@@ -1,0 +1,1293 @@
+{
+ "all_time": {
+  "pld": 464,
+  "w": 164,
+  "d": 123,
+  "l": 177,
+  "gf": 580,
+  "ga": 617,
+  "win_pct": 35.3
+ },
+ "by_decade": [
+  {
+   "decade": 1960,
+   "pld": 19,
+   "w": 7,
+   "d": 1,
+   "l": 11,
+   "gf": 33,
+   "ga": 46,
+   "win_pct": 36.8
+  },
+  {
+   "decade": 1970,
+   "pld": 28,
+   "w": 5,
+   "d": 5,
+   "l": 18,
+   "gf": 40,
+   "ga": 67,
+   "win_pct": 17.9
+  },
+  {
+   "decade": 1980,
+   "pld": 44,
+   "w": 17,
+   "d": 9,
+   "l": 18,
+   "gf": 43,
+   "ga": 55,
+   "win_pct": 38.6
+  },
+  {
+   "decade": 1990,
+   "pld": 89,
+   "w": 27,
+   "d": 31,
+   "l": 31,
+   "gf": 109,
+   "ga": 129,
+   "win_pct": 30.3
+  },
+  {
+   "decade": 2000,
+   "pld": 101,
+   "w": 31,
+   "d": 25,
+   "l": 45,
+   "gf": 113,
+   "ga": 137,
+   "win_pct": 30.7
+  },
+  {
+   "decade": 2010,
+   "pld": 107,
+   "w": 41,
+   "d": 32,
+   "l": 34,
+   "gf": 127,
+   "ga": 103,
+   "win_pct": 38.3
+  },
+  {
+   "decade": 2020,
+   "pld": 76,
+   "w": 36,
+   "d": 20,
+   "l": 20,
+   "gf": 115,
+   "ga": 80,
+   "win_pct": 47.4
+  }
+ ],
+ "by_year": [
+  {
+   "year": 1960,
+   "pld": 2,
+   "w": 1,
+   "d": 0,
+   "l": 1,
+   "gf": 6,
+   "ga": 10,
+   "win_pct": 50.0
+  },
+  {
+   "year": 1961,
+   "pld": 2,
+   "w": 1,
+   "d": 0,
+   "l": 1,
+   "gf": 6,
+   "ga": 3,
+   "win_pct": 50.0
+  },
+  {
+   "year": 1963,
+   "pld": 4,
+   "w": 0,
+   "d": 1,
+   "l": 3,
+   "gf": 2,
+   "ga": 8,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1967,
+   "pld": 8,
+   "w": 3,
+   "d": 0,
+   "l": 5,
+   "gf": 13,
+   "ga": 21,
+   "win_pct": 37.5
+  },
+  {
+   "year": 1968,
+   "pld": 3,
+   "w": 2,
+   "d": 0,
+   "l": 1,
+   "gf": 6,
+   "ga": 4,
+   "win_pct": 66.7
+  },
+  {
+   "year": 1970,
+   "pld": 1,
+   "w": 0,
+   "d": 1,
+   "l": 0,
+   "gf": 3,
+   "ga": 3,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1971,
+   "pld": 3,
+   "w": 0,
+   "d": 0,
+   "l": 3,
+   "gf": 1,
+   "ga": 7,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1972,
+   "pld": 1,
+   "w": 0,
+   "d": 1,
+   "l": 0,
+   "gf": 3,
+   "ga": 3,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1973,
+   "pld": 5,
+   "w": 0,
+   "d": 0,
+   "l": 5,
+   "gf": 5,
+   "ga": 19,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1975,
+   "pld": 2,
+   "w": 1,
+   "d": 0,
+   "l": 1,
+   "gf": 5,
+   "ga": 4,
+   "win_pct": 50.0
+  },
+  {
+   "year": 1976,
+   "pld": 5,
+   "w": 1,
+   "d": 2,
+   "l": 2,
+   "gf": 5,
+   "ga": 6,
+   "win_pct": 20.0
+  },
+  {
+   "year": 1977,
+   "pld": 2,
+   "w": 0,
+   "d": 0,
+   "l": 2,
+   "gf": 1,
+   "ga": 5,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1978,
+   "pld": 7,
+   "w": 3,
+   "d": 1,
+   "l": 3,
+   "gf": 12,
+   "ga": 12,
+   "win_pct": 42.9
+  },
+  {
+   "year": 1979,
+   "pld": 2,
+   "w": 0,
+   "d": 0,
+   "l": 2,
+   "gf": 5,
+   "ga": 8,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1981,
+   "pld": 4,
+   "w": 0,
+   "d": 1,
+   "l": 3,
+   "gf": 2,
+   "ga": 11,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1982,
+   "pld": 6,
+   "w": 1,
+   "d": 3,
+   "l": 2,
+   "gf": 5,
+   "ga": 6,
+   "win_pct": 16.7
+  },
+  {
+   "year": 1984,
+   "pld": 8,
+   "w": 3,
+   "d": 3,
+   "l": 2,
+   "gf": 10,
+   "ga": 10,
+   "win_pct": 37.5
+  },
+  {
+   "year": 1986,
+   "pld": 6,
+   "w": 1,
+   "d": 1,
+   "l": 4,
+   "gf": 2,
+   "ga": 7,
+   "win_pct": 16.7
+  },
+  {
+   "year": 1987,
+   "pld": 10,
+   "w": 4,
+   "d": 1,
+   "l": 5,
+   "gf": 10,
+   "ga": 13,
+   "win_pct": 40.0
+  },
+  {
+   "year": 1988,
+   "pld": 10,
+   "w": 8,
+   "d": 0,
+   "l": 2,
+   "gf": 14,
+   "ga": 8,
+   "win_pct": 80.0
+  },
+  {
+   "year": 1990,
+   "pld": 6,
+   "w": 3,
+   "d": 1,
+   "l": 2,
+   "gf": 6,
+   "ga": 4,
+   "win_pct": 50.0
+  },
+  {
+   "year": 1991,
+   "pld": 8,
+   "w": 3,
+   "d": 2,
+   "l": 3,
+   "gf": 11,
+   "ga": 18,
+   "win_pct": 37.5
+  },
+  {
+   "year": 1992,
+   "pld": 1,
+   "w": 1,
+   "d": 0,
+   "l": 0,
+   "gf": 3,
+   "ga": 1,
+   "win_pct": 100.0
+  },
+  {
+   "year": 1993,
+   "pld": 3,
+   "w": 2,
+   "d": 1,
+   "l": 0,
+   "gf": 4,
+   "ga": 1,
+   "win_pct": 66.7
+  },
+  {
+   "year": 1994,
+   "pld": 6,
+   "w": 1,
+   "d": 3,
+   "l": 2,
+   "gf": 4,
+   "ga": 6,
+   "win_pct": 16.7
+  },
+  {
+   "year": 1995,
+   "pld": 6,
+   "w": 0,
+   "d": 4,
+   "l": 2,
+   "gf": 7,
+   "ga": 13,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1996,
+   "pld": 14,
+   "w": 2,
+   "d": 6,
+   "l": 6,
+   "gf": 10,
+   "ga": 19,
+   "win_pct": 14.3
+  },
+  {
+   "year": 1997,
+   "pld": 10,
+   "w": 2,
+   "d": 2,
+   "l": 6,
+   "gf": 13,
+   "ga": 18,
+   "win_pct": 20.0
+  },
+  {
+   "year": 1998,
+   "pld": 21,
+   "w": 7,
+   "d": 8,
+   "l": 6,
+   "gf": 27,
+   "ga": 27,
+   "win_pct": 33.3
+  },
+  {
+   "year": 1999,
+   "pld": 14,
+   "w": 6,
+   "d": 4,
+   "l": 4,
+   "gf": 24,
+   "ga": 22,
+   "win_pct": 42.9
+  },
+  {
+   "year": 2000,
+   "pld": 14,
+   "w": 4,
+   "d": 5,
+   "l": 5,
+   "gf": 17,
+   "ga": 19,
+   "win_pct": 28.6
+  },
+  {
+   "year": 2001,
+   "pld": 16,
+   "w": 4,
+   "d": 3,
+   "l": 9,
+   "gf": 15,
+   "ga": 21,
+   "win_pct": 25.0
+  },
+  {
+   "year": 2002,
+   "pld": 8,
+   "w": 1,
+   "d": 4,
+   "l": 3,
+   "gf": 8,
+   "ga": 11,
+   "win_pct": 12.5
+  },
+  {
+   "year": 2003,
+   "pld": 11,
+   "w": 5,
+   "d": 3,
+   "l": 3,
+   "gf": 13,
+   "ga": 6,
+   "win_pct": 45.5
+  },
+  {
+   "year": 2004,
+   "pld": 15,
+   "w": 4,
+   "d": 3,
+   "l": 8,
+   "gf": 16,
+   "ga": 25,
+   "win_pct": 26.7
+  },
+  {
+   "year": 2005,
+   "pld": 8,
+   "w": 2,
+   "d": 1,
+   "l": 5,
+   "gf": 9,
+   "ga": 12,
+   "win_pct": 25.0
+  },
+  {
+   "year": 2006,
+   "pld": 6,
+   "w": 2,
+   "d": 2,
+   "l": 2,
+   "gf": 4,
+   "ga": 4,
+   "win_pct": 33.3
+  },
+  {
+   "year": 2007,
+   "pld": 7,
+   "w": 0,
+   "d": 2,
+   "l": 5,
+   "gf": 5,
+   "ga": 15,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2008,
+   "pld": 8,
+   "w": 5,
+   "d": 1,
+   "l": 2,
+   "gf": 15,
+   "ga": 9,
+   "win_pct": 62.5
+  },
+  {
+   "year": 2009,
+   "pld": 8,
+   "w": 4,
+   "d": 1,
+   "l": 3,
+   "gf": 11,
+   "ga": 15,
+   "win_pct": 50.0
+  },
+  {
+   "year": 2010,
+   "pld": 6,
+   "w": 3,
+   "d": 2,
+   "l": 1,
+   "gf": 9,
+   "ga": 4,
+   "win_pct": 50.0
+  },
+  {
+   "year": 2011,
+   "pld": 8,
+   "w": 3,
+   "d": 3,
+   "l": 2,
+   "gf": 12,
+   "ga": 8,
+   "win_pct": 37.5
+  },
+  {
+   "year": 2012,
+   "pld": 13,
+   "w": 3,
+   "d": 3,
+   "l": 7,
+   "gf": 11,
+   "ga": 16,
+   "win_pct": 23.1
+  },
+  {
+   "year": 2013,
+   "pld": 19,
+   "w": 9,
+   "d": 3,
+   "l": 7,
+   "gf": 24,
+   "ga": 18,
+   "win_pct": 47.4
+  },
+  {
+   "year": 2014,
+   "pld": 8,
+   "w": 3,
+   "d": 4,
+   "l": 1,
+   "gf": 10,
+   "ga": 6,
+   "win_pct": 37.5
+  },
+  {
+   "year": 2015,
+   "pld": 14,
+   "w": 4,
+   "d": 3,
+   "l": 7,
+   "gf": 16,
+   "ga": 16,
+   "win_pct": 28.6
+  },
+  {
+   "year": 2016,
+   "pld": 8,
+   "w": 4,
+   "d": 2,
+   "l": 2,
+   "gf": 7,
+   "ga": 5,
+   "win_pct": 50.0
+  },
+  {
+   "year": 2017,
+   "pld": 17,
+   "w": 6,
+   "d": 8,
+   "l": 3,
+   "gf": 26,
+   "ga": 21,
+   "win_pct": 35.3
+  },
+  {
+   "year": 2018,
+   "pld": 7,
+   "w": 3,
+   "d": 1,
+   "l": 3,
+   "gf": 7,
+   "ga": 6,
+   "win_pct": 42.9
+  },
+  {
+   "year": 2019,
+   "pld": 7,
+   "w": 3,
+   "d": 3,
+   "l": 1,
+   "gf": 5,
+   "ga": 3,
+   "win_pct": 42.9
+  },
+  {
+   "year": 2020,
+   "pld": 4,
+   "w": 3,
+   "d": 1,
+   "l": 0,
+   "gf": 8,
+   "ga": 2,
+   "win_pct": 75.0
+  },
+  {
+   "year": 2021,
+   "pld": 11,
+   "w": 4,
+   "d": 5,
+   "l": 2,
+   "gf": 14,
+   "ga": 7,
+   "win_pct": 36.4
+  },
+  {
+   "year": 2022,
+   "pld": 15,
+   "w": 8,
+   "d": 3,
+   "l": 4,
+   "gf": 22,
+   "ga": 21,
+   "win_pct": 53.3
+  },
+  {
+   "year": 2023,
+   "pld": 9,
+   "w": 3,
+   "d": 4,
+   "l": 2,
+   "gf": 9,
+   "ga": 7,
+   "win_pct": 33.3
+  },
+  {
+   "year": 2024,
+   "pld": 15,
+   "w": 5,
+   "d": 3,
+   "l": 7,
+   "gf": 21,
+   "ga": 22,
+   "win_pct": 33.3
+  },
+  {
+   "year": 2025,
+   "pld": 17,
+   "w": 12,
+   "d": 2,
+   "l": 3,
+   "gf": 33,
+   "ga": 12,
+   "win_pct": 70.6
+  },
+  {
+   "year": 2026,
+   "pld": 5,
+   "w": 1,
+   "d": 2,
+   "l": 2,
+   "gf": 8,
+   "ga": 9,
+   "win_pct": 20.0
+  }
+ ],
+ "by_comp": {
+  "afcon": {
+   "pld": 56,
+   "w": 12,
+   "d": 17,
+   "l": 27,
+   "gf": 55,
+   "ga": 83,
+   "win_pct": 21.4
+  },
+  "afcon_qual": {
+   "pld": 88,
+   "w": 39,
+   "d": 22,
+   "l": 27,
+   "gf": 110,
+   "ga": 104,
+   "win_pct": 44.3
+  },
+  "friendly": {
+   "pld": 206,
+   "w": 65,
+   "d": 60,
+   "l": 81,
+   "gf": 243,
+   "ga": 275,
+   "win_pct": 31.6
+  },
+  "other": {
+   "pld": 38,
+   "w": 13,
+   "d": 8,
+   "l": 17,
+   "gf": 50,
+   "ga": 65,
+   "win_pct": 34.2
+  },
+  "wc_qual": {
+   "pld": 76,
+   "w": 35,
+   "d": 16,
+   "l": 25,
+   "gf": 122,
+   "ga": 90,
+   "win_pct": 46.1
+  }
+ },
+ "biggest_wins": [
+  {
+   "date": "2025-09-05",
+   "opponent": "Djibouti",
+   "score": "6-0",
+   "tournament": "FIFA World Cup qualification",
+   "venue": "N"
+  },
+  {
+   "date": "2026-03-28",
+   "opponent": "Guinea-Bissau",
+   "score": "5-0",
+   "tournament": "Friendly",
+   "venue": "H"
+  },
+  {
+   "date": "1961-12-27",
+   "opponent": "Liberia",
+   "score": "5-1",
+   "tournament": "African Friendship Games",
+   "venue": "N"
+  },
+  {
+   "date": "2003-06-07",
+   "opponent": "Mozambique",
+   "score": "4-0",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "H"
+  },
+  {
+   "date": "2011-03-26",
+   "opponent": "Namibia",
+   "score": "4-0",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "H"
+  }
+ ],
+ "heaviest_losses": [
+  {
+   "date": "1981-08-30",
+   "opponent": "Algeria",
+   "score": "0-7",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "A"
+  },
+  {
+   "date": "1991-07-27",
+   "opponent": "Nigeria",
+   "score": "1-7",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "A"
+  },
+  {
+   "date": "1960-04-15",
+   "opponent": "Madagascar",
+   "score": "1-6",
+   "tournament": "African Friendship Games",
+   "venue": "A"
+  },
+  {
+   "date": "1973-04-15",
+   "opponent": "DR Congo",
+   "score": "0-5",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "H"
+  },
+  {
+   "date": "2009-09-05",
+   "opponent": "Ivory Coast",
+   "score": "0-5",
+   "tournament": "FIFA World Cup qualification",
+   "venue": "A"
+  }
+ ],
+ "top_opponents": [
+  {
+   "opponent": "Mali",
+   "pld": 35,
+   "w": 12,
+   "d": 3,
+   "l": 20,
+   "gf": 40,
+   "ga": 58,
+   "win_pct": 34.3
+  },
+  {
+   "opponent": "Gabon",
+   "pld": 25,
+   "w": 5,
+   "d": 11,
+   "l": 9,
+   "gf": 26,
+   "ga": 38,
+   "win_pct": 20.0
+  },
+  {
+   "opponent": "Algeria",
+   "pld": 24,
+   "w": 6,
+   "d": 8,
+   "l": 10,
+   "gf": 22,
+   "ga": 38,
+   "win_pct": 25.0
+  },
+  {
+   "opponent": "Ivory Coast",
+   "pld": 24,
+   "w": 3,
+   "d": 9,
+   "l": 12,
+   "gf": 22,
+   "ga": 42,
+   "win_pct": 12.5
+  },
+  {
+   "opponent": "Togo",
+   "pld": 22,
+   "w": 5,
+   "d": 7,
+   "l": 10,
+   "gf": 20,
+   "ga": 24,
+   "win_pct": 22.7
+  },
+  {
+   "opponent": "Niger",
+   "pld": 21,
+   "w": 10,
+   "d": 9,
+   "l": 2,
+   "gf": 33,
+   "ga": 19,
+   "win_pct": 47.6
+  },
+  {
+   "opponent": "Benin",
+   "pld": 20,
+   "w": 12,
+   "d": 5,
+   "l": 3,
+   "gf": 37,
+   "ga": 19,
+   "win_pct": 60.0
+  },
+  {
+   "opponent": "Ghana",
+   "pld": 20,
+   "w": 7,
+   "d": 2,
+   "l": 11,
+   "gf": 20,
+   "ga": 30,
+   "win_pct": 35.0
+  }
+ ],
+ "last10": [
+  {
+   "date": "2026-06-09",
+   "opponent": "Belarus",
+   "score": "2-2",
+   "tournament": "Friendly",
+   "venue": "A",
+   "result": "D"
+  },
+  {
+   "date": "2026-06-05",
+   "opponent": "Russia",
+   "score": "0-3",
+   "tournament": "Friendly",
+   "venue": "A",
+   "result": "L"
+  },
+  {
+   "date": "2026-03-31",
+   "opponent": "Guinea-Bissau",
+   "score": "1-1",
+   "tournament": "Friendly",
+   "venue": "H",
+   "result": "D"
+  },
+  {
+   "date": "2026-03-28",
+   "opponent": "Guinea-Bissau",
+   "score": "5-0",
+   "tournament": "Friendly",
+   "venue": "H",
+   "result": "W"
+  },
+  {
+   "date": "2026-01-06",
+   "opponent": "Ivory Coast",
+   "score": "0-3",
+   "tournament": "African Cup of Nations",
+   "venue": "N",
+   "result": "L"
+  },
+  {
+   "date": "2025-12-31",
+   "opponent": "Sudan",
+   "score": "2-0",
+   "tournament": "African Cup of Nations",
+   "venue": "N",
+   "result": "W"
+  },
+  {
+   "date": "2025-12-28",
+   "opponent": "Algeria",
+   "score": "0-1",
+   "tournament": "African Cup of Nations",
+   "venue": "N",
+   "result": "L"
+  },
+  {
+   "date": "2025-12-24",
+   "opponent": "Equatorial Guinea",
+   "score": "2-1",
+   "tournament": "African Cup of Nations",
+   "venue": "N",
+   "result": "W"
+  },
+  {
+   "date": "2025-11-18",
+   "opponent": "Benin",
+   "score": "3-0",
+   "tournament": "Friendly",
+   "venue": "N",
+   "result": "W"
+  },
+  {
+   "date": "2025-11-14",
+   "opponent": "Niger",
+   "score": "3-2",
+   "tournament": "Friendly",
+   "venue": "N",
+   "result": "W"
+  }
+ ],
+ "afcon_editions": [
+  {
+   "year": 1978,
+   "pld": 3,
+   "w": 0,
+   "d": 0,
+   "l": 3,
+   "gf": 2,
+   "ga": 9,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1996,
+   "pld": 3,
+   "w": 0,
+   "d": 0,
+   "l": 3,
+   "gf": 3,
+   "ga": 9,
+   "win_pct": 0.0
+  },
+  {
+   "year": 1998,
+   "pld": 6,
+   "w": 2,
+   "d": 2,
+   "l": 2,
+   "gf": 8,
+   "ga": 9,
+   "win_pct": 33.3
+  },
+  {
+   "year": 2000,
+   "pld": 3,
+   "w": 0,
+   "d": 1,
+   "l": 2,
+   "gf": 4,
+   "ga": 8,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2002,
+   "pld": 3,
+   "w": 0,
+   "d": 1,
+   "l": 2,
+   "gf": 2,
+   "ga": 4,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2004,
+   "pld": 3,
+   "w": 0,
+   "d": 1,
+   "l": 2,
+   "gf": 1,
+   "ga": 6,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2010,
+   "pld": 2,
+   "w": 0,
+   "d": 1,
+   "l": 1,
+   "gf": 0,
+   "ga": 1,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2012,
+   "pld": 3,
+   "w": 0,
+   "d": 0,
+   "l": 3,
+   "gf": 2,
+   "ga": 6,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2013,
+   "pld": 6,
+   "w": 2,
+   "d": 3,
+   "l": 1,
+   "gf": 7,
+   "ga": 3,
+   "win_pct": 33.3
+  },
+  {
+   "year": 2015,
+   "pld": 3,
+   "w": 0,
+   "d": 1,
+   "l": 2,
+   "gf": 1,
+   "ga": 4,
+   "win_pct": 0.0
+  },
+  {
+   "year": 2017,
+   "pld": 6,
+   "w": 3,
+   "d": 3,
+   "l": 0,
+   "gf": 8,
+   "ga": 3,
+   "win_pct": 50.0
+  },
+  {
+   "year": 2021,
+   "pld": 7,
+   "w": 2,
+   "d": 3,
+   "l": 2,
+   "gf": 9,
+   "ga": 10,
+   "win_pct": 28.6
+  },
+  {
+   "year": 2023,
+   "pld": 4,
+   "w": 1,
+   "d": 1,
+   "l": 2,
+   "gf": 4,
+   "ga": 6,
+   "win_pct": 25.0
+  },
+  {
+   "year": 2025,
+   "pld": 4,
+   "w": 2,
+   "d": 0,
+   "l": 2,
+   "gf": 4,
+   "ga": 5,
+   "win_pct": 50.0
+  }
+ ],
+ "first_match": "1960-04-14",
+ "last_match": "2026-06-09",
+ "most_capped": [
+  {
+   "rank": 1,
+   "name": "Charles Kaboré",
+   "caps": 102,
+   "goals": 4,
+   "career": "2006–2021"
+  },
+  {
+   "rank": 2,
+   "name": "Steeve Yago",
+   "caps": 96,
+   "goals": 1,
+   "career": "2013–present"
+  },
+  {
+   "rank": 3,
+   "name": "Issoufou Dayo",
+   "caps": 92,
+   "goals": 9,
+   "career": "2012–present"
+  },
+  {
+   "rank": 4,
+   "name": "Bertrand Traoré",
+   "caps": 91,
+   "goals": 22,
+   "career": "2011–present"
+  },
+  {
+   "rank": 5,
+   "name": "Jonathan Pitroipa",
+   "caps": 84,
+   "goals": 19,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 6,
+   "name": "Moumouni Dagano",
+   "caps": 83,
+   "goals": 34,
+   "career": "1998–2013"
+  },
+  {
+   "rank": 7,
+   "name": "Bakary Koné",
+   "caps": 83,
+   "goals": 0,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 8,
+   "name": "Aristide Bancé",
+   "caps": 79,
+   "goals": 24,
+   "career": "2003–2019"
+  },
+  {
+   "rank": 9,
+   "name": "Hervé Koffi",
+   "caps": 72,
+   "goals": 0,
+   "career": "2016–present"
+  },
+  {
+   "rank": 10,
+   "name": "Saïdou Panandétiguiri",
+   "caps": 66,
+   "goals": 2,
+   "career": "2002–2013"
+  }
+ ],
+ "top_scorers": [
+  {
+   "rank": 1,
+   "name": "Moumouni Dagano",
+   "caps": 83,
+   "goals": 34,
+   "career": "1998–2013"
+  },
+  {
+   "rank": 2,
+   "name": "Aristide Bancé",
+   "caps": 79,
+   "goals": 24,
+   "career": "2003–2019"
+  },
+  {
+   "rank": 3,
+   "name": "Bertrand Traoré",
+   "caps": 91,
+   "goals": 22,
+   "career": "2011–present"
+  },
+  {
+   "rank": 4,
+   "name": "Alain Traoré",
+   "caps": 65,
+   "goals": 21,
+   "career": "2006–2021"
+  },
+  {
+   "rank": 5,
+   "name": "Jonathan Pitroipa",
+   "caps": 84,
+   "goals": 19,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 6,
+   "name": "Lassina Traoré",
+   "caps": 34,
+   "goals": 15,
+   "career": "2017–present"
+  },
+  {
+   "rank": 7,
+   "name": "Mamadou Zongo",
+   "caps": 30,
+   "goals": 13,
+   "career": "1996–2013"
+  },
+  {
+   "rank": 8,
+   "name": "Préjuce Nakoulma",
+   "caps": 53,
+   "goals": 13,
+   "career": "2012–2019"
+  },
+  {
+   "rank": 9,
+   "name": "Dango Ouattara",
+   "caps": 40,
+   "goals": 12,
+   "career": "2021–present"
+  },
+  {
+   "rank": 10,
+   "name": "Amadou Touré",
+   "caps": 30,
+   "goals": 10,
+   "career": "1998–2006"
+  },
+  {
+   "rank": 11,
+   "name": "Oumar Barro",
+   "caps": 48,
+   "goals": 10,
+   "career": "1996–2003"
+  }
+ ],
+ "afcon_record": [
+  {
+   "year": 1978,
+   "round": "Group stage"
+  },
+  {
+   "year": 1996,
+   "round": "Group stage"
+  },
+  {
+   "year": 1998,
+   "round": "Fourth place"
+  },
+  {
+   "year": 2000,
+   "round": "Group stage"
+  },
+  {
+   "year": 2002,
+   "round": "Group stage"
+  },
+  {
+   "year": 2004,
+   "round": "Group stage"
+  },
+  {
+   "year": 2010,
+   "round": "Group stage"
+  },
+  {
+   "year": 2012,
+   "round": "Group stage"
+  },
+  {
+   "year": 2013,
+   "round": "Runners-up"
+  },
+  {
+   "year": 2015,
+   "round": "Group stage"
+  },
+  {
+   "year": 2017,
+   "round": "Third place"
+  },
+  {
+   "year": 2021,
+   "round": "Fourth place"
+  },
+  {
+   "year": 2023,
+   "round": "Round of 16"
+  },
+  {
+   "year": 2025,
+   "round": "Round of 16"
+  }
+ ]
+}
