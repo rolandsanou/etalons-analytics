@@ -26,6 +26,12 @@ name override").
   page + section listing a squad. To add a window (a new tournament squad page,
   or the current squad after a new call-up), add a row and run
   `python -m etl all --force`.
+- `data/seed/sofa_ids.csv` — manual `player_id,sofa_id` links for players the
+  automatic search can't resolve (the quality report lists them). Find the id in
+  the player's Sofascore URL.
+- `data/seed/int_retirements.csv` — international retirements
+  (`player_id,date,source,note`). Only add entries backed by a public announcement;
+  the pipeline never infers retirement, it only labels long absences "out of the group".
 
 ## Layering rules
 
@@ -43,7 +49,6 @@ name override").
 - Cards and substitution timelines from Sofascore incidents endpoint.
 - Player detail pages on the dashboard.
 - WCQ 2023–2025 squad lists (no Wikipedia squad pages; needs a curated seed).
-- Women's team (Les Étalonnes) as a second team pipeline.
 
 ## Licensing
 
