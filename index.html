@@ -18,6 +18,8 @@
       <a href="#joueurs" data-i18n="nav_pool"></a>
       <a href="#repartitions" data-i18n="nav_breakdowns"></a>
       <a href="#systemes" data-i18n="nav_forms"></a>
+      <a href="#tempo" data-i18n="nav_tempo"></a>
+      <a href="#importance" data-i18n="nav_imp"></a>
       <a href="#histoire" data-i18n="nav_history"></a>
       <a href="#elo" data-i18n="nav_elo"></a>
       <a href="#projections" data-i18n="nav_proj"></a>
@@ -80,6 +82,37 @@
         <div class="tablewrap pool"><table id="pool_table"></table></div>
         <p class="sub" id="pool_note"></p>
       </div>
+      <div class="card w12" id="card_strip">
+        <h3 data-i18n="c_strip"></h3>
+        <p class="sub" data-i18n="c_strip_sub"></p>
+        <div class="chart short" id="c_strip"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="importance">
+    <h2 data-i18n="s_imp"></h2>
+    <p class="lead" data-i18n="s_imp_lead"></p>
+    <div class="grid">
+      <div class="card w12" id="card_imp">
+        <h3 data-i18n="c_imp_table"></h3>
+        <p class="sub" data-i18n="c_imp_table_sub"></p>
+        <p class="sub" id="pilier_note"></p>
+        <div class="tablewrap"><table id="imp_table"></table></div>
+      </div>
+      <div class="card" id="card_prof">
+        <h3 data-i18n="c_imp_prof"></h3>
+        <p class="sub" data-i18n="c_imp_prof_sub"></p>
+        <div class="pickrow"><label for="imp_picker" data-i18n="imp_picker"></label>
+          <select id="imp_picker"></select></div>
+        <div class="chart short" id="c_prof"></div>
+      </div>
+      <div class="card" id="card_bench">
+        <h3 data-i18n="c_bench"></h3>
+        <p class="sub" data-i18n="c_bench_sub"></p>
+        <div class="chart short" id="c_bench"></div>
+        <p class="sub" id="bench_note"></p>
+      </div>
     </div>
   </section>
 
@@ -109,6 +142,26 @@
         <h3 data-i18n="c_forms"></h3>
         <p class="sub" data-i18n="c_forms_sub"></p>
         <div class="chart short" id="c_forms"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tempo">
+    <h2 data-i18n="s_tempo"></h2>
+    <p class="lead" id="lead_tempo"></p>
+    <div class="grid">
+      <div class="card w8" id="card_bins">
+        <h3 data-i18n="c_bins"></h3>
+        <p class="sub" data-i18n="c_bins_sub"></p>
+        <div class="chart" id="c_bins"></div>
+        <p class="sub" id="chi_note"></p>
+      </div>
+      <div class="card w4" id="card_gamestate">
+        <h3 data-i18n="c_gamestate"></h3>
+        <p class="sub" data-i18n="c_gamestate_sub"></p>
+        <div class="mini-tiles" id="tempo_tiles"></div>
+        <div class="league-bar" id="state_bar"></div>
+        <div class="league-legend" id="state_legend"></div>
       </div>
     </div>
   </section>
