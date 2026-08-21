@@ -146,7 +146,8 @@ function renderSquadTable() {
     <th>${t("h_club")}</th><th>${t("h_country")}</th><th class="num">${t("h_age27")}</th></tr>` +
     rows.map(p => `<tr><td>${p.name}</td><td>${p.pos}</td>
       <td class="num">${fmt(p.age, 1)}</td><td class="num">${fmt(p.caps)}</td>
-      <td class="num">${fmt(p.goals)}</td><td>${p.club || "–"}</td>
+      <td class="num">${fmt(p.goals)}</td>
+      <td>${p.club ? p.club + (p.club_verified ? ' <span class="vmark" title="' + t("club_verified_tip") + '">✓</span>' : ' <span class="wmark" title="' + t("club_wiki_tip") + '">⚠</span>') : "–"}</td>
       <td>${p.club_country || "–"}</td>
       <td class="num">${fmt(p.age_afcon27, 1)} ${phasePill(p.phase_afcon27)}</td></tr>`).join("");
   const cu = DATA.squad.callups;
@@ -211,9 +212,30 @@ function renderGoalsChart() {
     top.map(p => [p.name, p.goals, p.assists]));
 }
 
+function statusPill(s) {
+  if (!s) { return "–"; }
+  const cls = { active: "active", fringe: "fringe", out: "out",
+    retired_int: "retired", retired_career: "retired" }[s] || "out";
+  return `<span class="pill st ${cls}">${t("st_" + s)}</span>`;
+}
+
+function clubCell(p) {
+  const club = p.club_v || p.club;
+  if (!club) { return "–"; }
+  const mark = p.club_v
+    ? `<span class="vmark" title="${t("club_verified_tip")}">✓</span>`
+    : `<span class="wmark" title="${t("club_wiki_tip")}">⚠</span>`;
+  return `${club} ${mark}`;
+}
+
+function mvCell(v) {
+  return num(v) ? fmt(num(v) / 1e6, 1) + " M€" : "–";
+}
+
 const POOL_COLS = [
   { key: "name", label: "h_player", numFmt: null },
   { key: "pos", label: "h_pos", numFmt: null },
+  { key: "status", label: "h_status", numFmt: null },
   { key: "age", label: "h_age", numFmt: v => fmt(v, 1) },
   { key: "n_windows", label: "h_windows", numFmt: v => fmt(v) },
   { key: "matchday_squads", label: "h_sheets", numFmt: v => fmt(v) },
@@ -227,6 +249,9 @@ const POOL_COLS = [
   { key: "interceptions", label: "h_inter", numFmt: v => fmt(v) },
   { key: "saves", label: "h_saves", numFmt: v => num(v) ? fmt(v) : "–" },
   { key: "rating_avg", label: "h_rating", numFmt: v => v ? fmt(v, 2) : "–" },
+  { key: "club_v", label: "h_club", numFmt: null },
+  { key: "league_v", label: "h_league", numFmt: null },
+  { key: "market_value_eur", label: "h_mv", numFmt: null },
 ];
 let poolSort = { key: "minutes", dir: -1 };
 
@@ -235,8 +260,8 @@ function renderPoolTable() {
   let rows = DATA.pool.profiles.filter(p => !q || p.name.toLowerCase().includes(q));
   const k = poolSort.key;
   rows = [...rows].sort((a, b) => {
-    if (k === "name" || k === "pos") {
-      return poolSort.dir * String(a[k]).localeCompare(String(b[k]));
+    if (["name", "pos", "status", "club_v", "league_v"].includes(k)) {
+      return poolSort.dir * String(a[k] || "").localeCompare(String(b[k] || ""));
     }
     return poolSort.dir * (num(a[k]) - num(b[k]));
   });
@@ -246,6 +271,10 @@ function renderPoolTable() {
   const body = rows.map(p => "<tr>" + POOL_COLS.map(c => {
     if (c.key === "name") { return `<td>${p.name}</td>`; }
     if (c.key === "pos") { return `<td>${p.pos || "–"}</td>`; }
+    if (c.key === "status") { return `<td>${statusPill(p.status)}</td>`; }
+    if (c.key === "club_v") { return `<td>${clubCell(p)}</td>`; }
+    if (c.key === "league_v") { return `<td>${p.league_v || "–"}</td>`; }
+    if (c.key === "market_value_eur") { return `<td class="num">${mvCell(p.market_value_eur)}</td>`; }
     if (c.key === "dribbles_won") {
       const won = num(p.dribbles_won), att = num(p.dribbles_attempted);
       return `<td class="num">${att ? `${won}/${att}` : "–"}</td>`;

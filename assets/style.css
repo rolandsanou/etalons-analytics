@@ -284,6 +284,24 @@ th {
   font-size: 11.5px;
   background: var(--neutral-bg);
   color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.pill.st.active { background: var(--good-bg); color: var(--good-tx); }
+.pill.st.fringe { background: #fdf3d7; color: #8a6400; }
+.pill.st.out { background: var(--neutral-bg); color: var(--ink-2); }
+.pill.st.retired { background: #ece9e4; color: var(--muted); }
+
+.vmark {
+  color: var(--good-tx);
+  font-size: 11px;
+  cursor: help;
+}
+
+.wmark {
+  color: #8a6400;
+  font-size: 11px;
+  cursor: help;
 }
 
 .search {
