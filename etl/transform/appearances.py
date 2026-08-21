@@ -88,6 +88,7 @@ def _new_player(entry, registry, name_index, used_ids, overrides):
         "first_window": "",
         "last_window": "",
         "n_windows": 0,
+        "last_seen": "",
         "sofa_id": entry["player"]["id"],
         "source": "sofascore",
     }
@@ -139,6 +140,8 @@ def run(registry):
                 p["sofa_id"] = entry["player"]["id"]
             if not p["dob"]:
                 p["dob"] = _dob_from_ts(entry["player"].get("dateOfBirthTimestamp"))
+            if ev["date"] > p.get("last_seen", ""):
+                p["last_seen"] = ev["date"]
             row = dict(base)
             row.update({
                 "player_id": pid,

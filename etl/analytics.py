@@ -3,7 +3,7 @@ from datetime import date
 import numpy as np
 
 from .config import AFCON_2027, WC_2030, PEAK_WINDOW, TOP5_LEAGUES, TEAM
-from .transform.elo import expected
+from .elo_model import expected
 
 CAF = {
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon",
@@ -169,6 +169,22 @@ def win_expectancy(ranked, team=TEAM):
                 "expected": round(expected(mine - elos[op]), 2),
             })
     return out
+
+
+def player_status(retired_int, career_retired, last_seen, today):
+    """Precedence: seeded international retirement > career retirement > recency."""
+    if retired_int:
+        return "retired_int"
+    if career_retired:
+        return "retired_career"
+    if not last_seen:
+        return "out"
+    months = (today - date.fromisoformat(last_seen)).days / 30.44
+    if months <= 12:
+        return "active"
+    if months <= 18:
+        return "fringe"
+    return "out"
 
 
 def classify_sofa_tournament(name):

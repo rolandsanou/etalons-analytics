@@ -27,6 +27,29 @@ def _check_players(report):
                    f"(possible name variants -> data/seed/name_overrides.csv), by minutes: "
                    + ", ".join(f"{p['name']} ({minutes.get(p['player_id'], 0)}')"
                                for p in sofa_only[:8])))
+    verified = sum(1 for p in players if p.get("club_v"))
+    pct_v = round(100 * verified / len(players), 1) if players else 0
+    report.append(("players: verified club coverage", "WARN" if pct_v < 60 else "PASS",
+                   f"{pct_v}% have a Sofascore-verified club ({verified}/{len(players)})"))
+    unresolved = [p["name"] for p in players if not p.get("sofa_id")]
+    report.append(("players: sofa_id resolution", "WARN" if unresolved else "PASS",
+                   f"{len(unresolved)} without sofa_id"
+                   + (": " + ", ".join(unresolved[:6]) + " -> data/seed/sofa_ids.csv"
+                      if unresolved else "")))
+    from .util import norm_name
+    mismatch = [f"{p['name']}: {p['club']} -> {p['club_v']}"
+                for p in players
+                if p.get("club") and p.get("club_v")
+                and norm_name(p["club"]) != norm_name(p["club_v"])]
+    report.append(("players: wiki vs sofascore club", "INFO",
+                   f"{len(mismatch)} players whose verified club differs from the "
+                   "Wikipedia list (transfer or naming) — "
+                   + "; ".join(mismatch[:6]) + ("…" if len(mismatch) > 6 else "")))
+    statuses = {}
+    for p in players:
+        statuses[p.get("status", "?")] = statuses.get(p.get("status", "?"), 0) + 1
+    report.append(("players: status distribution", "INFO",
+                   ", ".join(f"{k}={v}" for k, v in sorted(statuses.items()))))
     return {p["player_id"] for p in players}
 
 

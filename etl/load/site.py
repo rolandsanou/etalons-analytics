@@ -24,10 +24,24 @@ def _callup_to_player(c):
     }
 
 
+def _overlay_verified(players):
+    registry = {r["player_id"]: r for r in read_csv(STAGING / "players.csv")}
+    for p in players:
+        r = registry.get(p["player_id"])
+        if r and r.get("club_v"):
+            p["club"] = r["club_v"]
+            p["club_country"] = r["club_country_v"] or p["club_country"]
+            p["league"] = r["league_v"]
+            p["club_verified"] = True
+        else:
+            p["club_verified"] = False
+    return players
+
+
 def build_squad_json(today):
     callups = read_csv(STAGING / "callups.csv")
-    current = [_callup_to_player(c) for c in callups if c["window_id"] == "current"]
-    recent = [_callup_to_player(c) for c in callups if c["window_id"] == "recent"]
+    current = _overlay_verified([_callup_to_player(c) for c in callups if c["window_id"] == "current"])
+    recent = _overlay_verified([_callup_to_player(c) for c in callups if c["window_id"] == "recent"])
     squad = analytics.enrich_players(current, today)
     pool = analytics.enrich_players(recent, today)
     seen = {p["name"] for p in squad}

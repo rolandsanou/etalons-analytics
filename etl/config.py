@@ -18,6 +18,7 @@ FORMER_NAMES_URL = "https://raw.githubusercontent.com/martj42/international_resu
 SOFA_BASE = "https://www.sofascore.com/api/v1"
 SOFA_TEAM_ID = 4749
 SOFA_SLEEP = 1.3
+PROFILE_MAX_AGE_DAYS = 30
 
 # study window: every call-up since AFCON 2021 (played January 2022)
 STATS_SINCE = date(2022, 1, 1)
