@@ -63,6 +63,7 @@ def run_elo(df, team):
                 "date": r.date.strftime("%Y-%m-%d"),
                 "elo": round(h2 if r.home_team == team else a2, 1),
                 "opponent": r.away_team if r.home_team == team else r.home_team,
+                "opp_elo": round(a if r.home_team == team else h, 1),
             })
     # only teams active in the last 2 years count for rankings
     cutoff = df.date.max() - pd.Timedelta(days=730)

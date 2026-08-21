@@ -171,6 +171,59 @@ def win_expectancy(ranked, team=TEAM):
     return out
 
 
+def classify_sofa_tournament(name):
+    t = str(name).lower()
+    if "friendly" in t:
+        return "friendly"
+    if "africa cup of nations" in t or "african nations" in t:
+        return "afcon_qual" if "quali" in t else "afcon"
+    if "world cup" in t or "world championship" in t:
+        return "wc_qual" if "quali" in t else "wc"
+    return "other"
+
+
+def _formation_agg(name, rows, elo_lookup):
+    n = len(rows)
+    w = sum(1 for r in rows if r["result"] == "W")
+    d = sum(1 for r in rows if r["result"] == "D")
+    l = sum(1 for r in rows if r["result"] == "L")
+    gf = sum(int(r["gf"]) for r in rows)
+    ga = sum(int(r["ga"]) for r in rows)
+    elos = [elo_lookup(r["date"]) for r in rows]
+    elos = [e for e in elos if e]
+    comps = {}
+    for r in rows:
+        c = classify_sofa_tournament(r["tournament"])
+        comps[c] = comps.get(c, 0) + 1
+    return {
+        "formation": name,
+        "matches": n, "w": w, "d": d, "l": l,
+        "gf": gf, "ga": ga,
+        "gf_pm": round(gf / n, 2), "ga_pm": round(ga / n, 2),
+        "ppg": round((3 * w + d) / n, 2),
+        "opp_elo_avg": round(float(np.mean(elos)), 0) if elos else None,
+        "n_elo": len(elos),
+        "comps": comps,
+    }
+
+
+def formation_table(events, elo_lookup, min_n=8):
+    groups = {}
+    for e in events:
+        f = e.get("bf_formation") or "?"
+        groups.setdefault(f, []).append(e)
+    main = sorted((f for f in groups
+                   if f != "?" and len(groups[f]) >= min_n),
+                  key=lambda f: -len(groups[f]))
+    rows = [_formation_agg(f, groups[f], elo_lookup) for f in main]
+    pooled = [e for f, g in groups.items() if f not in main for e in g]
+    if pooled:
+        row = _formation_agg("others", pooled, elo_lookup)
+        row["pooled_from"] = sorted({f for f in groups if f not in main and f != "?"})
+        rows.append(row)
+    return rows
+
+
 def elo_summary(timeline, ranked, team=TEAM):
     world_rank = next((r["rank"] for r in ranked if r["team"] == team), None)
     caf = [r for r in ranked if r["team"] in CAF]

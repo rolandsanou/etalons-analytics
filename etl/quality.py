@@ -72,8 +72,18 @@ def _check_staging_present(report):
                        "present" if ok else "missing or empty"))
 
 
+def _check_events(report):
+    events = read_csv(STAGING / "events.csv")
+    if not events:
+        return
+    n = sum(1 for e in events if e.get("bf_formation"))
+    pct = round(100 * n / len(events), 1)
+    report.append(("events: formation coverage", "WARN" if pct < 70 else "PASS",
+                   f"{pct}% of matches have a starting formation ({n}/{len(events)})"))
+
+
 def _check_site(report):
-    for name in ("squad.json", "pool.json", "history.json", "elo.json", "meta.json"):
+    for name in ("team.json", "squad.json", "pool.json", "history.json", "elo.json", "meta.json"):
         path = SITE_DATA / name
         try:
             json.loads(path.read_text(encoding="utf-8"))
@@ -88,6 +98,7 @@ def run():
     ids = _check_players(report)
     _check_callups(report, ids)
     _check_appearances(report, ids)
+    _check_events(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
     fails = 0

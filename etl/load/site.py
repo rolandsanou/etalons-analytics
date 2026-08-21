@@ -8,7 +8,7 @@ from ..extract.wikipedia import squad_windows
 from ..parsers.wikipedia import parse_afcon_record, parse_as_of, parse_leaders
 from ..transform import matches as matches_mod
 from ..util import read_csv, write_json
-from .marts import build_profiles
+from .marts import build_formations, build_profiles
 
 
 def _callup_to_player(c):
@@ -84,8 +84,18 @@ def build_elo_json():
     return analytics.elo_summary(timeline, ranked)
 
 
+def build_team_json():
+    events = read_csv(STAGING / "events.csv")
+    with_formation = sum(1 for e in events if e.get("bf_formation"))
+    return {
+        "formations": build_formations(),
+        "coverage": {"events": len(events), "with_formation": with_formation},
+    }
+
+
 def run():
     today = date.today()
+    write_json(SITE_DATA / "team.json", build_team_json())
     write_json(SITE_DATA / "squad.json", build_squad_json(today))
     write_json(SITE_DATA / "pool.json", build_pool_json(today))
     write_json(SITE_DATA / "history.json", build_history_json())
