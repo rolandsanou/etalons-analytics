@@ -187,6 +187,39 @@ def player_status(retired_int, career_retired, last_seen, today):
     return "out"
 
 
+CHI2_CRIT_DF5 = 11.070  # p = 0.05, df = 5
+
+
+def chi_square_uniform(counts):
+    """(statistic, significant) against a uniform spread across the bins."""
+    n = sum(counts)
+    k = len(counts)
+    if n == 0 or k < 2:
+        return 0.0, False
+    e = n / k
+    stat = sum((o - e) ** 2 / e for o in counts)
+    return round(stat, 2), stat > CHI2_CRIT_DF5
+
+
+def importance_tier(minutes_share, start_share, window_matches, min_matches=8):
+    if window_matches < min_matches:
+        return ""
+    if minutes_share >= 0.60 and start_share >= 0.66:
+        return "pilier"
+    if minutes_share >= 0.25:
+        return "rotation"
+    return "marge"
+
+
+def percentile_among(value, peers):
+    """Midrank percentile of value within its peer values (peers include value)."""
+    if value is None or len(peers) <= 1:
+        return None
+    below = sum(1 for v in peers if v < value)
+    equal = max(sum(1 for v in peers if v == value) - 1, 0)
+    return round(100 * (below + 0.5 * equal) / (len(peers) - 1))
+
+
 def classify_sofa_tournament(name):
     t = str(name).lower()
     if "friendly" in t:

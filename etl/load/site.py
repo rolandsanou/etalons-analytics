@@ -57,8 +57,10 @@ def build_squad_json(today):
 
 
 def build_pool_json(today):
+    from .performance import build_bench, build_importance
     profiles = build_profiles(today)
     events = read_csv(STAGING / "events.csv")
+    players = read_csv(STAGING / "players.csv")
     n_detailed = sum(1 for e in events if int(e["n_with_stats"] or 0) > 0)
     windows = [{"window_id": w["window_id"], "label_fr": w["label_fr"],
                 "label_en": w["label_en"], "date": w["window_date"]}
@@ -72,6 +74,8 @@ def build_pool_json(today):
             "events_with_stats": n_detailed,
         },
         "profiles": profiles,
+        "importance": build_importance(players),
+        "bench": build_bench(players),
     }
 
 
@@ -99,10 +103,13 @@ def build_elo_json():
 
 
 def build_team_json():
+    from .performance import build_team_timeline
     events = read_csv(STAGING / "events.csv")
     with_formation = sum(1 for e in events if e.get("bf_formation"))
+    bins, summary = build_team_timeline()
     return {
         "formations": build_formations(),
+        "timeline": {"bins": bins, "summary": summary},
         "coverage": {"events": len(events), "with_formation": with_formation},
     }
 

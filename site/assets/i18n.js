@@ -23,6 +23,36 @@ const I18N = {
     c_goals: "Buteurs & passeurs", c_goals_sub: "Buts + passes décisives depuis janv. 2022",
     c_clubs: "Pays des clubs", c_clubs_sub: "Effectif actuel",
     c_leagues: "Type de championnat", c_leagues_sub: "Effectif actuel",
+    nav_tempo: "Temps forts", nav_imp: "Importance",
+    s_tempo: "Temps forts, temps faibles", s_tempo_lead: "Quand les Étalons marquent et encaissent depuis janv. 2022, et ce que devient un match selon qui ouvre le score. Comptages bruts — {n} matchs.",
+    c_bins: "Buts par période de jeu", c_bins_sub: "Segments clairs = part inscrite dans les arrêts de jeu (45+ / 90+) · Prol. à part",
+    c_gamestate: "Physionomie des matchs", c_gamestate_sub: "Minutes passées en tête, à égalité, menés — et l'impact du premier but",
+    bin_1_15: "1–15", bin_16_30: "16–30", bin_31_45: "31–45+", bin_46_60: "46–60",
+    bin_61_75: "61–75", bin_76_90: "76–90+", bin_et: "Prol.",
+    legend_gf: "Buts marqués", legend_ga: "Buts encaissés",
+    legend_gf_stop: "Marqués (arrêts de jeu)", legend_ga_stop: "Encaissés (arrêts de jeu)",
+    chi_none: "Aucune période statistiquement atypique (χ², p ≥ 0,05).",
+    chi_low: "Période statistiquement atypique ({side}) : {bin} — anormalement peu (χ² = {stat}, p < 0,05).",
+    chi_high: "Période statistiquement atypique ({side}) : {bin} — anormalement beaucoup (χ² = {stat}, p < 0,05).",
+    side_gf: "buts marqués", side_ga: "buts encaissés",
+    t_scored_first: "Ouvre le score", t_conceded_first: "Encaisse en premier",
+    t_comebacks: "Mené, puis…", t_blown: "En tête, puis…",
+    st_leading: "En tête", st_level: "À égalité", st_trailing: "Mené",
+    pts_per_match: "pts/m",
+    s_imp: "Importance des joueurs & banc", s_imp_lead: "Qui pèse vraiment sur les résultats depuis janv. 2022 — sans indice composite : chaque composante est affichée avec son échantillon, et masquée sous son seuil (« – »). Fenêtre = depuis la première convocation du joueur.",
+    c_imp_table: "Composantes d'importance", c_imp_table_sub: "Joueurs avec ≥ 8 matchs d'équipe dans leur fenêtre, classés par part des minutes · « – » = échantillon insuffisant",
+    c_imp_prof: "Profil percentile", c_imp_prof_sub: "Position du joueur parmi les pairs qualifiés pour chaque composante (points gris = pairs)",
+    c_bench: "Impact du banc", c_bench_sub: "Buts + passes en sortie de banc (bruts) · /90 seulement si ≥ 5 entrées et ≥ 150 min",
+    h_tier: "Rôle", h_share: "Part min.", h_onoff: "On/Off ±/90", h_ppgdiff: "PPM tit.−remp.",
+    h_ga90: "B+P /90", h_subs: "Entrées", h_entry: "Entrée moy.",
+    tier_pilier: "Pilier", tier_rotation: "Rotation", tier_marge: "Marge",
+    comp_share: "Part des minutes", comp_onoff: "On/Off (±/90)", comp_ppg: "PPM tit. vs remp.",
+    comp_ga90: "Buts+passes /90", comp_rating: "Note moyenne",
+    imp_picker: "Joueur :",
+    bench_baseline: "Référence équipe après la 60e : {gd90} but(s) d'écart /90 ({gf} marqués, {ga} encaissés en {min} min).",
+    bench_bar_label: "{ga} B+P · {min} min",
+    c_strip: "Dernière apparition par joueur", c_strip_sub: "Chaque point = un joueur, positionné à sa dernière convocation ou feuille de match, coloré par statut",
+    no_pilier_note: "Aucun joueur n'atteint le seuil « Pilier » (≥ 60 % des minutes ET ≥ 66 % de titularisations) — l'effectif tourne beaucoup.",
     s_forms: "Systèmes de jeu", s_forms_lead: "Bilan par système de départ depuis janv. 2022. Les systèmes utilisés moins de 8 fois sont regroupés — les effectifs restent trop petits pour des conclusions causales.",
     c_forms: "Résultats par formation", c_forms_sub: "V / N / D par système de départ · le détail (buts, Elo moyen des adversaires) est dans l'infobulle et les données",
     forms_other: "Autres ({n} systèmes)",
@@ -73,6 +103,12 @@ const I18N = {
       <p>Recalculé sur ~49 000 matchs internationaux depuis 1872 (données martj42, CC0) : K = 60 (CM), 50 (CAN), 40 (qualifs), 30 (autres), 20 (amicaux) ; multiplicateur d'écart de buts ; +100 d'avantage à domicile. La projection est une tendance linéaire sur les Elo de fin d'année depuis 2010, bande ≈ 80 % basée sur la volatilité annuelle — un modèle illustratif, pas une prédiction.</p>
       <h3>Projections d'âge</h3>
       <p>CAN 2027 supposée mi-2027 (dates non finalisées), CM 2030 en juin 2030. Fenêtres de pic indicatives : gardiens 26–33 ans, défenseurs 25–30, milieux et attaquants 24–29.</p>
+      <h3>Périodes de jeu & physionomie</h3>
+      <p>Chronologie reconstruite match par match à partir des incidents (arrêts de jeu inclus ; prolongations détectées, y compris via la présence d'une séance de tirs au but). Les buts sont classés en 6 périodes de 15 minutes — ceux du temps additionnel restent dans 31–45+ / 76–90+, leur part est affichée séparément ; la prolongation est comptée à part. Une période n'est déclarée atypique que si le χ² sur les 6 périodes réglementaires est significatif (p &lt; 0,05). Les minutes en tête / à égalité / menés découlent de la même chronologie.</p>
+      <h3>Importance des joueurs</h3>
+      <p>Pas d'indice composite. Chaque composante est affichée séparément, avec son seuil : part des minutes (fenêtre = depuis la première convocation du joueur) ; on/off ±/90 (≥ 900 min sur le terrain ET ≥ 450 min hors terrain en étant dans le groupe) ; points par match titulaire vs remplaçant (≥ 10 titularisations ET ≥ 8 matchs dans le groupe sans titularisation) ; buts+passes /90 (≥ 450 min) ; note pondérée par les minutes (≥ 5 matchs notés ET ≥ 300 min). Rôles : Pilier ≥ 60 % des minutes ET ≥ 66 % de titularisations ; Rotation ≥ 25 % ; sinon Marge. Percentiles calculés parmi les seuls joueurs qualifiés pour chaque composante. Lecture descriptive, jamais causale.</p>
+      <h3>Impact du banc</h3>
+      <p>Buts + passes en sortie de banc en valeurs brutes ; /90 uniquement à partir de 5 entrées et 150 minutes ; différence de buts après entrée (≥ 8 entrées) à comparer à la référence de l'équipe après la 60e minute, affichée à côté.</p>
       <h3>Limites connues</h3>
       <p>Sélections/buts « carrière » figés à la dernière mise à jour Wikipedia ; pas de listes complètes pour les fenêtres de qualifications (contributions bienvenues) ; ~24 % des apparitions (amicaux mineurs) sans statistiques détaillées.</p>`,
     footer: "Étalons Analytics — projet open source (MIT). Données : Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (non affilié). Généré le {date}.",
@@ -100,6 +136,36 @@ const I18N = {
     c_goals: "Scorers & creators", c_goals_sub: "Goals + assists since Jan 2022",
     c_clubs: "Club countries", c_clubs_sub: "Current squad",
     c_leagues: "League type", c_leagues_sub: "Current squad",
+    nav_tempo: "Timing", nav_imp: "Importance",
+    s_tempo: "Strong and weak periods", s_tempo_lead: "When the Étalons score and concede since Jan 2022, and what a match becomes depending on who scores first. Raw counts — {n} matches.",
+    c_bins: "Goals by period of play", c_bins_sub: "Lighter caps = share scored in stoppage time (45+ / 90+) · ET counted apart",
+    c_gamestate: "Game states", c_gamestate_sub: "Minutes spent leading, level, trailing — and what the first goal does",
+    bin_1_15: "1–15", bin_16_30: "16–30", bin_31_45: "31–45+", bin_46_60: "46–60",
+    bin_61_75: "61–75", bin_76_90: "76–90+", bin_et: "ET",
+    legend_gf: "Goals scored", legend_ga: "Goals conceded",
+    legend_gf_stop: "Scored (stoppage)", legend_ga_stop: "Conceded (stoppage)",
+    chi_none: "No statistically unusual period (χ², p ≥ 0.05).",
+    chi_low: "Statistically unusual period ({side}): {bin} — unusually few (χ² = {stat}, p < 0.05).",
+    chi_high: "Statistically unusual period ({side}): {bin} — unusually many (χ² = {stat}, p < 0.05).",
+    side_gf: "goals scored", side_ga: "goals conceded",
+    t_scored_first: "Scores first", t_conceded_first: "Concedes first",
+    t_comebacks: "Trailed, then…", t_blown: "Led, then…",
+    st_leading: "Leading", st_level: "Level", st_trailing: "Trailing",
+    pts_per_match: "pts/m",
+    s_imp: "Player importance & bench", s_imp_lead: "Who actually moves results since Jan 2022 — no composite index: every component is shown with its sample and hidden below its threshold (\"–\"). Window = since the player's first call-up.",
+    c_imp_table: "Importance components", c_imp_table_sub: "Players with ≥ 8 team matches in their window, ranked by minutes share · \"–\" = insufficient sample",
+    c_imp_prof: "Percentile profile", c_imp_prof_sub: "Player's position among qualified peers for each component (grey dots = peers)",
+    c_bench: "Bench impact", c_bench_sub: "Goals + assists off the bench (raw) · /90 only with ≥ 5 sub apps and ≥ 150 min",
+    h_tier: "Role", h_share: "Min. share", h_onoff: "On/Off ±/90", h_ppgdiff: "PPG started−sub",
+    h_ga90: "G+A /90", h_subs: "Sub apps", h_entry: "Avg entry",
+    tier_pilier: "Pillar", tier_rotation: "Rotation", tier_marge: "Fringe",
+    comp_share: "Minutes share", comp_onoff: "On/Off (±/90)", comp_ppg: "PPG started vs sub",
+    comp_ga90: "Goals+assists /90", comp_rating: "Average rating",
+    imp_picker: "Player:",
+    bench_baseline: "Team baseline after 60': {gd90} goal difference /90 ({gf} scored, {ga} conceded in {min} min).",
+    bench_bar_label: "{ga} G+A · {min} min",
+    c_strip: "Last appearance per player", c_strip_sub: "Each dot is a player at their last call-up or matchday sheet, colored by status",
+    no_pilier_note: "No player clears the \"Pillar\" bar (≥ 60% of minutes AND ≥ 66% of squad matches started) — the squad rotates heavily.",
     s_forms: "Playing systems", s_forms_lead: "Record by starting formation since Jan 2022. Systems used fewer than 8 times are pooled — samples stay too small for causal claims.",
     c_forms: "Results by formation", c_forms_sub: "W / D / L by starting system · details (goals, average opponent Elo) in the tooltip and data view",
     forms_other: "Other ({n} systems)",
@@ -150,6 +216,12 @@ const I18N = {
       <p>Recomputed over ~49,000 internationals since 1872 (martj42 data, CC0): K = 60 (WC), 50 (AFCON), 40 (qualifiers), 30 (other), 20 (friendlies); goal-difference multiplier; +100 home advantage. The projection is a linear trend on year-end Elo since 2010 with an ≈80% band from year-on-year volatility — an illustrative model, not a prediction.</p>
       <h3>Age projections</h3>
       <p>AFCON 2027 assumed mid-2027 (dates not final), WC 2030 in June 2030. Indicative peak windows: goalkeepers 26–33, defenders 25–30, midfielders and forwards 24–29.</p>
+      <h3>Periods of play & game states</h3>
+      <p>A per-match timeline is rebuilt from incident data (stoppage time included; extra time detected, including via the presence of a shootout). Goals fall into six 15-minute periods — stoppage-time goals stay in 31–45+ / 76–90+ with their share shown separately; extra time is counted apart. A period is flagged as unusual only when the χ² across the six regulation periods is significant (p &lt; 0.05). Minutes leading / level / trailing come from the same timeline.</p>
+      <h3>Player importance</h3>
+      <p>No composite index. Each component is shown separately with its own gate: minutes share (window = since the player's first call-up); on/off goal difference per 90 (≥ 900 min on pitch AND ≥ 450 min off pitch while in the squad); points per game started vs not started (≥ 10 starts AND ≥ 8 squad matches without starting); goals+assists per 90 (≥ 450 min); minutes-weighted rating (≥ 5 rated matches AND ≥ 300 min). Roles: Pillar ≥ 60% of minutes AND ≥ 66% of squad matches started; Rotation ≥ 25%; otherwise Fringe. Percentiles are computed only among players qualified for each component. Descriptive reading only, never causal.</p>
+      <h3>Bench impact</h3>
+      <p>Goals + assists off the bench are raw counts; per-90 only with ≥ 5 sub appearances and ≥ 150 minutes; goal difference after entry (≥ 8 sub apps) should be read against the team's own post-60' baseline, shown alongside.</p>
       <h3>Known limitations</h3>
       <p>Career caps/goals frozen at the latest Wikipedia update; no complete squad lists for qualifier windows yet (contributions welcome); ~24% of appearances (minor friendlies) lack detailed stats.</p>`,
     footer: "Étalons Analytics — open-source project (MIT). Data: Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (unaffiliated). Generated {date}.",

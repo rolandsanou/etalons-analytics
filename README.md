@@ -106,12 +106,27 @@ python -m http.server 8123 --directory site
 | `data/seed/sofa_ids.csv` | manual player ↔ Sofascore id links when auto-search can't |
 | `data/seed/int_retirements.csv` | verified international-retirement announcements |
 
+- **Goal timing & game states** — a per-match timeline rebuilt from incidents
+  (stoppage time included; extra time detected even when the source logs ET events as
+  "90+X", via the shootout marker). Goals in six 15-minute bins with the
+  stoppage share split out; a bin is flagged strong/weak only when the χ² across the
+  six regulation bins is significant (p < 0.05). Minutes leading/level/trailing,
+  scored-first vs conceded-first records, comebacks and blown leads all derive from
+  the same timeline.
+- **Player importance** — no composite index. Gated components: minutes share of team
+  minutes in the player's own window; on/off GD per 90 (≥900' on AND ≥450' off);
+  PPG started vs not started (≥10 starts AND ≥8 non-started squad matches); G+A per 90
+  (≥450'); minutes-weighted rating (≥5 rated apps AND ≥300'). Roles: Pillar ≥60%
+  minutes AND ≥66% of squad matches started; Rotation ≥25%; otherwise Fringe.
+  Percentiles are computed among qualified peers only.
+- **Bench impact** — raw sub G+A with minutes; per-90 gated (≥5 sub apps, ≥150');
+  GD after entry (≥8 sub apps) read against the team's own post-60' baseline.
+
 ## Roadmap
 
-- [ ] Goal timelines & substitutions from the incidents endpoint (strength/weakness by
-      game period, bench impact)
-- [ ] Player importance profiles (minutes share, on/off, started-vs-not PPG — gated,
-      no composite index)
+- [x] Goal timelines & substitutions from the incidents endpoint
+- [x] Player importance profiles (gated components, no composite index)
+- [x] Bench impact
 - [ ] Qualifier-window squad lists (curated seed)
 - [ ] Player detail pages
 - [ ] xG (no free CAF source today), Transfermarkt values (blocked)
