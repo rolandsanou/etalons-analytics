@@ -1,4 +1,11 @@
+from etl.extract.sofascore import _real_score
 from etl.transform.appearances import POS_MAP, STATS_MAP, _dob_from_ts, _match_player
+
+
+def test_real_score_strips_shootout_goals():
+    assert _real_score({"current": 8, "penalties": 7}) == (1, 7)
+    assert _real_score({"current": 2}) == (2, 0)
+    assert _real_score({}) == (None, 0)
 
 
 def test_pos_map():

@@ -45,7 +45,8 @@ APPEARANCE_FIELDS = (["event_id", "date", "tournament", "opponent", "venue", "gf
                      + sorted(set(STATS_MAP.values())))
 
 EVENT_FIELDS = ["event_id", "date", "tournament", "opponent", "venue", "gf", "ga",
-                "result", "n_lineup", "n_with_stats", "bf_formation", "opp_formation"]
+                "pens", "result", "n_lineup", "n_with_stats",
+                "bf_formation", "opp_formation"]
 
 
 def _dob_from_ts(ts):
@@ -157,8 +158,11 @@ def run(registry):
             for sofa_key, col in STATS_MAP.items():
                 row[col] = int(st.get(sofa_key, 0) or 0)
             app_rows.append(row)
+        bf_pens = ev.get("home_pens" if bf_home else "away_pens", 0)
+        opp_pens = ev.get("away_pens" if bf_home else "home_pens", 0)
         event_rows.append({
             **base,
+            "pens": f"{bf_pens}-{opp_pens}" if (bf_pens or opp_pens) else "",
             "result": "W" if gf > ga else ("D" if gf == ga else "L"),
             "n_lineup": len(side.get("players", [])),
             "n_with_stats": n_with_stats,

@@ -1,59 +1,59 @@
-event_id,date,tournament,opponent,venue,gf,ga,result,n_lineup,n_with_stats,bf_formation,opp_formation
-9786529,2022-01-09,"Africa Cup of Nations, Group A",Cameroon,A,1,2,L,23,14,4-2-3-1,4-1-4-1
-9737692,2022-01-13,"Africa Cup of Nations, Group A",Cabo Verde,A,1,0,W,23,15,4-2-3-1,3-4-3
-9737943,2022-01-17,"Africa Cup of Nations, Group A",Ethiopia,H,1,1,D,23,14,4-2-3-1,4-2-3-1
-10054216,2022-01-23,"Africa Cup of Nations, Knockout stage",Gabon,H,8,7,W,23,16,4-2-3-1,3-4-1-2
-10083099,2022-01-29,"Africa Cup of Nations, Knockout stage",Tunisia,H,1,0,W,23,12,4-2-3-1,4-3-3
-10083102,2022-02-02,"Africa Cup of Nations, Knockout stage",Senegal,H,1,3,L,23,15,4-3-3,4-2-3-1
-10083104,2022-02-05,"Africa Cup of Nations, Knockout stage",Cameroon,H,6,8,L,23,14,4-2-3-1,4-2-3-1
-10151732,2022-03-24,Int. Friendly Games,Kosovo,A,0,5,L,21,0,4-3-3,4-3-3
-10152235,2022-03-29,Int. Friendly Games,Belgium,A,0,3,L,23,0,4-2-3-1,3-4-2-1
-10339110,2022-06-03,"Africa Cup of Nations, Qualification, Group B",Cabo Verde,H,2,0,W,23,15,4-3-3,5-4-1
-10339120,2022-06-07,"Africa Cup of Nations, Qualification, Group B",Eswatini,A,3,1,W,23,15,4-3-3,4-2-3-1
-10718435,2022-09-27,Int. Friendly Games,Comoros,H,2,1,W,11,0,4-3-3,4-3-3
-10891794,2022-11-19,Int. Friendly Games,Côte d'Ivoire,H,2,1,W,23,0,4-4-2,4-2-3-1
-11092139,2023-03-24,"Africa Cup of Nations, Qualification, Group B",Togo,H,1,0,W,23,14,4-3-3,3-4-1-2
-10339159,2023-03-28,"Africa Cup of Nations, Qualification, Group B",Togo,A,1,1,D,22,13,4-4-2,3-4-1-2
-10339183,2023-06-18,"Africa Cup of Nations, Qualification, Group B",Cabo Verde,A,1,3,L,23,15,4-2-3-1,4-3-3
-10339208,2023-09-08,"Africa Cup of Nations, Qualification, Group B",Eswatini,H,0,0,D,23,14,4-2-3-1,4-3-3
-11612976,2023-09-12,Int. Friendly Games,Morocco,A,0,1,L,22,0,4-2-3-1,4-3-3
-11735406,2023-10-17,Int. Friendly Games,Mauritania,A,2,1,W,11,0,4-3-3,4-4-2
-11797997,2023-11-17,"FIFA World Cup, Qualification CAF, Group A",Guinea-Bissau,H,1,1,D,23,0,4-3-3,4-1-4-1
-11798005,2023-11-21,"FIFA World Cup, Qualification CAF, Group A",Ethiopia,A,3,0,W,22,0,4-4-2,4-4-2
-11940049,2024-01-05,Int. Friendly Games,Iran,A,1,2,L,11,0,4-3-3,4-1-3-2
-11961075,2024-01-10,Int. Friendly Games,DR Congo,A,2,1,W,11,0,3-5-2,4-4-2
-11761878,2024-01-16,"Africa Cup of Nations, Group D",Mauritania,H,1,0,W,23,15,4-2-3-1,4-4-2
-11761889,2024-01-20,"Africa Cup of Nations, Group D",Algeria,A,2,2,D,23,16,4-2-3-1,4-1-4-1
-11761902,2024-01-23,"Africa Cup of Nations, Group D",Angola,A,0,2,L,23,16,4-2-3-1,4-3-3
-11940715,2024-01-30,"Africa Cup of Nations, Knockout stage",Mali,A,1,2,L,23,16,4-3-3,4-3-1-2
-12183516,2024-06-06,"FIFA World Cup, Qualification CAF, Group A",Egypt,A,1,2,L,22,0,4-3-3,3-5-2
-12183524,2024-06-10,"FIFA World Cup, Qualification CAF, Group A",Sierra Leone,H,2,2,D,23,0,4-3-3,4-1-4-1
-12526616,2024-09-06,"Africa Cup of Nations, Qualification, Group L",Senegal,A,1,1,D,23,16,4-3-3,4-4-2
-12526614,2024-09-10,"Africa Cup of Nations, Qualification, Group L",Malawi,H,3,1,W,23,16,4-3-3,4-3-3
-12526613,2024-10-10,"Africa Cup of Nations, Qualification, Group L",Burundi,H,4,1,W,21,16,4-3-3,4-3-3
-12526608,2024-10-13,"Africa Cup of Nations, Qualification, Group L",Burundi,A,2,0,W,23,15,4-2-3-1,3-4-3
-12526607,2024-11-14,"Africa Cup of Nations, Qualification, Group L",Senegal,H,0,1,L,23,13,4-1-4-1,4-2-3-1
-12526738,2024-11-18,"Africa Cup of Nations, Qualification, Group L",Malawi,A,0,3,L,22,16,4-1-4-1,4-4-2
-13315144,2025-01-09,Int. Friendly Games,Tanzania,A,2,0,W,23,0,3-4-3,4-3-3
-12183513,2025-03-21,"FIFA World Cup, Qualification CAF, Group A",Djibouti,H,4,1,W,22,0,4-2-3-1,4-5-1
-12183510,2025-03-24,"FIFA World Cup, Qualification CAF, Group A",Guinea-Bissau,A,2,1,W,20,0,4-2-3-1,4-2-3-1
-13961689,2025-06-02,Int. Friendly Games,Tunisia,A,0,2,L,22,15,4-4-2,4-2-3-1
-13975674,2025-06-06,Int. Friendly Games,Zimbabwe,A,2,0,W,11,0,4-3-3,5-2-3
-14085001,2025-08-02,"African Nations Championship, Group B",Tanzania,A,0,2,L,23,15,4-1-4-1,4-3-3
-14085010,2025-08-06,"African Nations Championship, Group B",Central African Republic,H,4,2,W,23,15,4-2-3-1,3-5-2
-14085026,2025-08-13,"African Nations Championship, Group B",Mauritania,A,0,1,L,23,15,4-1-4-1,3-3-1-3
-14085032,2025-08-16,"African Nations Championship, Group B",Madagascar,H,1,2,L,23,15,4-4-2,4-1-4-1
-12183532,2025-09-05,"FIFA World Cup, Qualification CAF, Group A",Djibouti,A,6,0,W,23,0,4-5-1,3-4-3
-12183469,2025-09-09,"FIFA World Cup, Qualification CAF, Group A",Egypt,H,0,0,D,23,0,4-1-4-1,3-2-4-1
-12183427,2025-10-08,"FIFA World Cup, Qualification CAF, Group A",Sierra Leone,A,1,0,W,22,0,4-1-4-1,4-3-3
-12183405,2025-10-12,"FIFA World Cup, Qualification CAF, Group A",Ethiopia,H,3,1,W,23,0,4-5-1,4-2-3-1
-15032911,2025-11-14,Int. Friendly Games,Niger,H,3,2,W,14,0,4-5-1,4-3-3
-15033101,2025-11-18,Int. Friendly Games,Benin,H,3,0,W,22,0,4-3-3,4-3-3
-13424942,2025-12-24,"Africa Cup of Nations, Group E",Equatorial Guinea,H,2,1,W,25,16,4-3-3,4-4-2
-13424954,2025-12-28,"Africa Cup of Nations, Group E",Algeria,A,0,1,L,25,15,4-3-3,4-2-3-1
-13424968,2025-12-31,"Africa Cup of Nations, Group E",Sudan,A,2,0,W,24,16,4-2-3-1,4-2-3-1
-14058095,2026-01-06,"Africa Cup of Nations, Knockout stage",Côte d'Ivoire,A,0,3,L,25,16,5-4-1,4-3-3
-15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,W,12,0,4-3-3,4-3-3
-15910597,2026-03-31,Int. Friendly Games,Guinea-Bissau,H,1,1,D,11,0,3-4-2-1,4-3-3
-16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,L,25,17,4-1-4-1,4-3-3
-16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,D,24,0,4-4-2,4-2-3-1
+event_id,date,tournament,opponent,venue,gf,ga,pens,result,n_lineup,n_with_stats,bf_formation,opp_formation
+9786529,2022-01-09,"Africa Cup of Nations, Group A",Cameroon,A,1,2,,L,23,14,4-2-3-1,4-1-4-1
+9737692,2022-01-13,"Africa Cup of Nations, Group A",Cabo Verde,A,1,0,,W,23,15,4-2-3-1,3-4-3
+9737943,2022-01-17,"Africa Cup of Nations, Group A",Ethiopia,H,1,1,,D,23,14,4-2-3-1,4-2-3-1
+10054216,2022-01-23,"Africa Cup of Nations, Knockout stage",Gabon,H,1,1,7-6,D,23,16,4-2-3-1,3-4-1-2
+10083099,2022-01-29,"Africa Cup of Nations, Knockout stage",Tunisia,H,1,0,,W,23,12,4-2-3-1,4-3-3
+10083102,2022-02-02,"Africa Cup of Nations, Knockout stage",Senegal,H,1,3,,L,23,15,4-3-3,4-2-3-1
+10083104,2022-02-05,"Africa Cup of Nations, Knockout stage",Cameroon,H,3,3,3-5,D,23,14,4-2-3-1,4-2-3-1
+10151732,2022-03-24,Int. Friendly Games,Kosovo,A,0,5,,L,21,0,4-3-3,4-3-3
+10152235,2022-03-29,Int. Friendly Games,Belgium,A,0,3,,L,23,0,4-2-3-1,3-4-2-1
+10339110,2022-06-03,"Africa Cup of Nations, Qualification, Group B",Cabo Verde,H,2,0,,W,23,15,4-3-3,5-4-1
+10339120,2022-06-07,"Africa Cup of Nations, Qualification, Group B",Eswatini,A,3,1,,W,23,15,4-3-3,4-2-3-1
+10718435,2022-09-27,Int. Friendly Games,Comoros,H,2,1,,W,11,0,4-3-3,4-3-3
+10891794,2022-11-19,Int. Friendly Games,Côte d'Ivoire,H,2,1,,W,23,0,4-4-2,4-2-3-1
+11092139,2023-03-24,"Africa Cup of Nations, Qualification, Group B",Togo,H,1,0,,W,23,14,4-3-3,3-4-1-2
+10339159,2023-03-28,"Africa Cup of Nations, Qualification, Group B",Togo,A,1,1,,D,22,13,4-4-2,3-4-1-2
+10339183,2023-06-18,"Africa Cup of Nations, Qualification, Group B",Cabo Verde,A,1,3,,L,23,15,4-2-3-1,4-3-3
+10339208,2023-09-08,"Africa Cup of Nations, Qualification, Group B",Eswatini,H,0,0,,D,23,14,4-2-3-1,4-3-3
+11612976,2023-09-12,Int. Friendly Games,Morocco,A,0,1,,L,22,0,4-2-3-1,4-3-3
+11735406,2023-10-17,Int. Friendly Games,Mauritania,A,2,1,,W,11,0,4-3-3,4-4-2
+11797997,2023-11-17,"FIFA World Cup, Qualification CAF, Group A",Guinea-Bissau,H,1,1,,D,23,0,4-3-3,4-1-4-1
+11798005,2023-11-21,"FIFA World Cup, Qualification CAF, Group A",Ethiopia,A,3,0,,W,22,0,4-4-2,4-4-2
+11940049,2024-01-05,Int. Friendly Games,Iran,A,1,2,,L,11,0,4-3-3,4-1-3-2
+11961075,2024-01-10,Int. Friendly Games,DR Congo,A,2,1,,W,11,0,3-5-2,4-4-2
+11761878,2024-01-16,"Africa Cup of Nations, Group D",Mauritania,H,1,0,,W,23,15,4-2-3-1,4-4-2
+11761889,2024-01-20,"Africa Cup of Nations, Group D",Algeria,A,2,2,,D,23,16,4-2-3-1,4-1-4-1
+11761902,2024-01-23,"Africa Cup of Nations, Group D",Angola,A,0,2,,L,23,16,4-2-3-1,4-3-3
+11940715,2024-01-30,"Africa Cup of Nations, Knockout stage",Mali,A,1,2,,L,23,16,4-3-3,4-3-1-2
+12183516,2024-06-06,"FIFA World Cup, Qualification CAF, Group A",Egypt,A,1,2,,L,22,0,4-3-3,3-5-2
+12183524,2024-06-10,"FIFA World Cup, Qualification CAF, Group A",Sierra Leone,H,2,2,,D,23,0,4-3-3,4-1-4-1
+12526616,2024-09-06,"Africa Cup of Nations, Qualification, Group L",Senegal,A,1,1,,D,23,16,4-3-3,4-4-2
+12526614,2024-09-10,"Africa Cup of Nations, Qualification, Group L",Malawi,H,3,1,,W,23,16,4-3-3,4-3-3
+12526613,2024-10-10,"Africa Cup of Nations, Qualification, Group L",Burundi,H,4,1,,W,21,16,4-3-3,4-3-3
+12526608,2024-10-13,"Africa Cup of Nations, Qualification, Group L",Burundi,A,2,0,,W,23,15,4-2-3-1,3-4-3
+12526607,2024-11-14,"Africa Cup of Nations, Qualification, Group L",Senegal,H,0,1,,L,23,13,4-1-4-1,4-2-3-1
+12526738,2024-11-18,"Africa Cup of Nations, Qualification, Group L",Malawi,A,0,3,,L,22,16,4-1-4-1,4-4-2
+13315144,2025-01-09,Int. Friendly Games,Tanzania,A,2,0,,W,23,0,3-4-3,4-3-3
+12183513,2025-03-21,"FIFA World Cup, Qualification CAF, Group A",Djibouti,H,4,1,,W,22,0,4-2-3-1,4-5-1
+12183510,2025-03-24,"FIFA World Cup, Qualification CAF, Group A",Guinea-Bissau,A,2,1,,W,20,0,4-2-3-1,4-2-3-1
+13961689,2025-06-02,Int. Friendly Games,Tunisia,A,0,2,,L,22,15,4-4-2,4-2-3-1
+13975674,2025-06-06,Int. Friendly Games,Zimbabwe,A,2,0,,W,11,0,4-3-3,5-2-3
+14085001,2025-08-02,"African Nations Championship, Group B",Tanzania,A,0,2,,L,23,15,4-1-4-1,4-3-3
+14085010,2025-08-06,"African Nations Championship, Group B",Central African Republic,H,4,2,,W,23,15,4-2-3-1,3-5-2
+14085026,2025-08-13,"African Nations Championship, Group B",Mauritania,A,0,1,,L,23,15,4-1-4-1,3-3-1-3
+14085032,2025-08-16,"African Nations Championship, Group B",Madagascar,H,1,2,,L,23,15,4-4-2,4-1-4-1
+12183532,2025-09-05,"FIFA World Cup, Qualification CAF, Group A",Djibouti,A,6,0,,W,23,0,4-5-1,3-4-3
+12183469,2025-09-09,"FIFA World Cup, Qualification CAF, Group A",Egypt,H,0,0,,D,23,0,4-1-4-1,3-2-4-1
+12183427,2025-10-08,"FIFA World Cup, Qualification CAF, Group A",Sierra Leone,A,1,0,,W,22,0,4-1-4-1,4-3-3
+12183405,2025-10-12,"FIFA World Cup, Qualification CAF, Group A",Ethiopia,H,3,1,,W,23,0,4-5-1,4-2-3-1
+15032911,2025-11-14,Int. Friendly Games,Niger,H,3,2,,W,14,0,4-5-1,4-3-3
+15033101,2025-11-18,Int. Friendly Games,Benin,H,3,0,,W,22,0,4-3-3,4-3-3
+13424942,2025-12-24,"Africa Cup of Nations, Group E",Equatorial Guinea,H,2,1,,W,25,16,4-3-3,4-4-2
+13424954,2025-12-28,"Africa Cup of Nations, Group E",Algeria,A,0,1,,L,25,15,4-3-3,4-2-3-1
+13424968,2025-12-31,"Africa Cup of Nations, Group E",Sudan,A,2,0,,W,24,16,4-2-3-1,4-2-3-1
+14058095,2026-01-06,"Africa Cup of Nations, Knockout stage",Côte d'Ivoire,A,0,3,,L,25,16,5-4-1,4-3-3
+15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,,W,12,0,4-3-3,4-3-3
+15910597,2026-03-31,Int. Friendly Games,Guinea-Bissau,H,1,1,,D,11,0,3-4-2-1,4-3-3
+16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,,L,25,17,4-1-4-1,4-3-3
+16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,,D,24,0,4-4-2,4-2-3-1

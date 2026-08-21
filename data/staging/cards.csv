@@ -1,0 +1,207 @@
+event_id,date,minute,added_time,is_bf,card,sofa_id,name,player_id,reason,rescinded
+9786529,2022-01-09,1,0,1,yellow,174911,Steeve Yago,steeve-yago,Foul,0
+9786529,2022-01-09,32,0,1,yellow,867239,Patrick Malo,patrick-malo,Foul,0
+9786529,2022-01-09,42,0,0,yellow,580750,Jérôme Onguene,,Foul,0
+9737692,2022-01-13,36,0,0,yellow,814125,Dylan Tavares,,Foul,0
+9737692,2022-01-13,83,0,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Foul,0
+9737692,2022-01-13,90,2,0,yellow,339227,Steven Fortes,,Foul,0
+9737943,2022-01-17,36,0,0,yellow,1064121,Yehun Endeshaw,,Foul,0
+9737943,2022-01-17,74,0,0,yellow,199538,Getaneh Kebede,,Foul,0
+10054216,2022-01-23,-5,0,0,yellow,98752,Anthony Mfa,,Argument,0
+10054216,2022-01-23,8,0,0,yellow,988632,Jim Allevinah,,Foul,0
+10054216,2022-01-23,9,0,1,yellow,139357,Adama Guira,adama-guira,Foul,0
+10054216,2022-01-23,16,0,0,yellow,1020721,Sidney Obissa,,Foul,0
+10054216,2022-01-23,18,0,0,yellow,891419,Aaron-Salem Boupendza,,Argument,0
+10054216,2022-01-23,22,0,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Foul,0
+10054216,2022-01-23,58,0,0,yellow,177103,André Poko,,Foul,0
+10054216,2022-01-23,67,0,0,yellow,31993,Bruno Ecuele Manga,,Argument,0
+10054216,2022-01-23,67,0,0,yellowRed,1020721,Sidney Obissa,,Foul,0
+10054216,2022-01-23,68,0,0,yellow,760618,Denis Bouanga,,Argument,0
+10054216,2022-01-23,70,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Time wasting,0
+10054216,2022-01-23,88,0,1,yellow,785883,Saidou Simporé,saidou-simpore,Foul,0
+10054216,2022-01-23,90,0,1,yellow,850011,Mohamed Konaté,mohamed-konate,Foul,0
+10054216,2022-01-23,102,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,,0
+10054216,2022-01-23,130,0,0,yellow,1142300,Jean-Noël Amonome,,,0
+10083099,2022-01-29,-5,0,1,yellow,886227,Hassane Bandé,hassane-bande,Argument,0
+10083099,2022-01-29,44,0,1,yellow,867299,Hervé Koffi,herve-koffi,Foul,0
+10083099,2022-01-29,47,0,0,yellow,828077,Aissa Laïdouni,,Argument,0
+10083099,2022-01-29,67,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Foul,0
+10083099,2022-01-29,79,0,1,yellow,785876,Cyrille Bayala,cyrille-bayala,Foul,0
+10083099,2022-01-29,82,0,1,red,1106451,Dango Ouattara,dango-ouattara,Violent conduct,0
+10083102,2022-02-02,28,0,1,yellow,139357,Adama Guira,adama-guira,Foul,0
+10083102,2022-02-02,50,0,0,yellow,158233,Bouna Sarr,,Foul,0
+10083102,2022-02-02,90,3,0,yellow,790198,Pape Abou Cissé,,Foul,0
+10083104,2022-02-05,45,0,1,yellow,174911,Steeve Yago,steeve-yago,Argument,0
+10083104,2022-02-05,48,0,0,yellow,153220,Stéphane Bahoken,,Foul,0
+10083104,2022-02-05,52,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,Foul,0
+10083104,2022-02-05,68,0,0,yellow,842931,Karl Toko Ekambi,,Argument,0
+10083104,2022-02-05,68,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,Foul,0
+10083104,2022-02-05,73,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Argument,0
+10151732,2022-03-24,-5,0,1,red,116623,Bryan Dabo,bryan-dabo,,0
+10151732,2022-03-24,10,0,1,yellow,139357,Adama Guira,adama-guira,,0
+10151732,2022-03-24,37,0,0,yellow,833255,Astrit Selmani,,,0
+10151732,2022-03-24,58,0,0,yellow,887766,Edon Zhegrova,,,0
+10151732,2022-03-24,67,0,1,yellow,174911,Steeve Yago,steeve-yago,,0
+10151732,2022-03-24,81,0,0,yellow,883997,Lirim Kastrati,,,0
+10151732,2022-03-24,82,0,1,yellow,886227,Hassane Bandé,hassane-bande,,0
+10152235,2022-03-29,32,0,1,yellow,785876,Cyrille Bayala,cyrille-bayala,,0
+10152235,2022-03-29,72,0,1,yellow,139357,Adama Guira,adama-guira,,0
+10152235,2022-03-29,84,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,,0
+10339110,2022-06-03,41,0,0,yellow,1093294,Cuca,,Argument,0
+10339110,2022-06-03,59,0,1,yellow,886227,Hassane Bandé,hassane-bande,,0
+10339110,2022-06-03,60,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Foul,0
+10339110,2022-06-03,61,0,0,yellow,814125,Dylan Tavares,,Foul,0
+10339110,2022-06-03,90,0,0,yellow,59609,Stopira,,Foul,0
+10339120,2022-06-07,25,0,0,yellow,1218853,Kwakhe Thwala,,Foul,0
+10339120,2022-06-07,29,0,0,yellow,1015094,Lindo Thembinkosi Mkhonta,,Foul,0
+10339120,2022-06-07,38,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Foul,0
+10339120,2022-06-07,62,0,1,yellow,1089464,Abdoul Bandaogo,abdoul-bandaogo,Foul,0
+10339120,2022-06-07,74,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Time wasting,0
+10339120,2022-06-07,84,0,0,yellowRed,1015094,Lindo Thembinkosi Mkhonta,,Foul,0
+10711032,2022-09-23,26,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,,0
+10711032,2022-09-23,44,0,0,yellow,352964,Samuel Bastien,,,0
+10718435,2022-09-27,26,0,0,yellow,891507,Yacine Bourhane,,,0
+10718435,2022-09-27,36,0,0,yellow,1201694,Yakine Said M'Madi,,,0
+10718435,2022-09-27,57,0,1,yellow,,,,,0
+10718435,2022-09-27,62,0,1,yellow,,,,,0
+10891794,2022-11-19,21,0,0,yellow,843754,Ibrahim Sangaré,,Foul,0
+10891794,2022-11-19,65,0,0,yellow,593526,Nicolas Pépé,,Foul,0
+10891794,2022-11-19,73,0,1,red,1019038,Gustavo Sangaré,gustavo-sangare,Violent conduct,0
+10891794,2022-11-19,88,0,1,yellow,989361,Cédric Badolo,cedric-badolo,Foul,0
+10891794,2022-11-19,90,3,0,yellow,1170197,Abakar Sylla,,Foul,0
+10891794,2022-11-19,90,4,1,yellow,1106451,Dango Ouattara,dango-ouattara,Foul,0
+11092139,2023-03-24,53,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Foul,0
+11092139,2023-03-24,85,0,0,yellow,1138588,Wassiou Ouro-Gneni,,Handball,0
+10339159,2023-03-28,26,0,1,yellow,174911,Steeve Yago,steeve-yago,,0
+10339159,2023-03-28,61,0,0,yellow,1150445,Thibault Klidjé,,Foul,0
+10339159,2023-03-28,69,0,1,yellow,989361,Cédric Badolo,cedric-badolo,Time wasting,0
+10339159,2023-03-28,77,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Simulation,0
+10339183,2023-06-18,39,0,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Argument,0
+10339183,2023-06-18,64,0,1,yellow,174911,Steeve Yago,steeve-yago,Foul,0
+10339183,2023-06-18,88,0,0,yellow,52797,Ryan Mendes,,Time wasting,0
+10339183,2023-06-18,90,2,0,yellow,814125,Dylan Tavares,,Time wasting,0
+10339183,2023-06-18,90,6,0,yellow,1151076,Clé,,,0
+10339208,2023-09-08,79,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Foul,0
+11612976,2023-09-12,41,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,,0
+11612976,2023-09-12,64,0,0,yellow,814594,Achraf Hakimi,,,0
+11612976,2023-09-12,90,4,1,yellow,364758,Issoufou Dayo,issoufou-dayo,,0
+11612976,2023-09-12,90,5,1,yellow,1108094,Adamo Nagalo,adamo-nagalo,,0
+11612976,2023-09-12,90,5,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,,0
+11735406,2023-10-17,42,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,,0
+11735406,2023-10-17,70,0,0,yellow,985945,Hemeya Tanjy,,,0
+11735406,2023-10-17,78,0,0,yellow,985946,Souleymane Anne,,,0
+11797997,2023-11-17,44,0,0,yellow,581606,Janio Bikel,,Foul,0
+11797997,2023-11-17,68,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,Foul,0
+11797997,2023-11-17,69,0,0,yellow,887343,Alfa Semedo,,Foul,0
+11797997,2023-11-17,85,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Foul,0
+11797997,2023-11-17,90,1,0,yellow,827781,Sori Mané,,Foul,0
+11798005,2023-11-21,13,0,0,yellow,1006932,Ramadan Yesuf,,Foul,0
+11798005,2023-11-21,71,0,1,yellow,1106451,Dango Ouattara,dango-ouattara,Foul,0
+11798005,2023-11-21,74,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,Foul,0
+11798005,2023-11-21,86,0,0,yellow,1535692,Fitsum Tilahun,,Foul,0
+11940049,2024-01-05,67,0,1,yellow,1108094,Adamo Nagalo,adamo-nagalo,,0
+11940049,2024-01-05,87,0,0,yellow,144594,Karim Ansarifard,,,0
+11940049,2024-01-05,90,2,0,yellow,1196902,Ehsan Hajsafi,,,0
+11761878,2024-01-16,45,0,1,yellow,850011,Mohamed Konaté,mohamed-konate,Foul,0
+11761878,2024-01-16,47,0,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Foul,0
+11761878,2024-01-16,76,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,Foul,0
+11761878,2024-01-16,90,4,0,yellow,1444497,Nouh Mohamed El Abd,,Foul,0
+11761878,2024-01-16,90,9,0,yellow,932021,Aly Abeid,,Foul,0
+11761889,2024-01-20,17,0,1,yellow,1108094,Adamo Nagalo,adamo-nagalo,Foul,0
+11761889,2024-01-20,23,0,1,yellow,1019038,Gustavo Sangaré,gustavo-sangare,Foul,0
+11761889,2024-01-20,53,0,0,yellow,577726,Ramy Bensebaini,,Foul,0
+11761889,2024-01-20,62,0,1,yellow,850011,Mohamed Konaté,mohamed-konate,Foul,0
+11761889,2024-01-20,90,2,1,yellow,1127169,Nasser Djiga,nasser-djiga,Foul,0
+11761889,2024-01-20,90,6,0,yellow,785926,Baghdad Bounedjah,,,0
+11761889,2024-01-20,90,8,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Foul,0
+11761902,2024-01-23,27,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,Foul,0
+11761902,2024-01-23,36,0,0,yellow,333341,Mabululu,,,0
+11761902,2024-01-23,79,0,0,yellow,939721,Milson,,Foul,0
+11761902,2024-01-23,88,0,0,yellow,933128,Neblú,,Handball,0
+11940715,2024-01-30,27,0,1,yellow,1000129,Abdoul Tapsoba,abdoul-tapsoba,Foul,0
+11940715,2024-01-30,72,0,1,yellow,989361,Cédric Badolo,cedric-badolo,Foul,0
+11940715,2024-01-30,81,0,0,yellow,927005,Lassine Sinayoko,,Time wasting,0
+11940715,2024-01-30,81,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Argument,0
+12183516,2024-06-06,31,0,1,yellow,1506773,Mohamed Ouédraogo,mohamed-ouedraogo,Foul,0
+12183516,2024-06-06,55,0,0,yellow,926506,Mohamed Abdelmonem,,Foul,0
+12183516,2024-06-06,90,2,0,yellow,295361,Mahmoud Trézéguet,,Foul,0
+12183524,2024-06-10,24,0,0,yellow,1029678,Abdul Jarju Kabia,,Foul,0
+12183524,2024-06-10,43,0,1,yellow,174911,Steeve Yago,steeve-yago,Foul,0
+12183524,2024-06-10,82,0,1,yellow,1126690,Sacha Banse,sacha-banse,Foul,0
+12526614,2024-09-10,29,0,1,yellow,785883,Saidou Simporé,saidou-simpore,Foul,0
+12526614,2024-09-10,59,0,0,yellow,1169455,Lawrence Chaziya,,Handball,0
+12526613,2024-10-10,31,0,0,yellow,1435441,Samuel Ndizeye,,Foul,0
+12526613,2024-10-10,39,0,0,yellow,1635753,Keita Bukuru,,Foul,0
+12526613,2024-10-10,73,0,0,yellow,1925640,Prince Musore,,Persistent fouling,0
+12526613,2024-10-10,85,0,1,yellow,1006190,Farid Ouedraogo,farid-ouedraogo,Time wasting,0
+12526613,2024-10-10,86,0,1,yellow,806244,Ibrahim Blati Tourè,blati-toure,Foul,0
+12526613,2024-10-10,90,4,0,yellow,943697,Hussein Shabani,,Foul,0
+12526608,2024-10-13,53,0,0,yellow,18113,Saidi Ntibazonkiza,,Foul,0
+12526608,2024-10-13,85,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Leaving field,0
+12526738,2024-11-18,56,0,0,yellow,991031,Richard Mbulu,,Foul,0
+12526738,2024-11-18,81,0,1,yellow,1506773,Mohamed Ouédraogo,mohamed-ouedraogo,Foul,0
+13315144,2025-01-09,14,0,1,yellow,2028657,Abdoul Abass Guiro,abdoul-abass-guiro,,0
+13315144,2025-01-09,35,0,1,yellow,1099246,Abdoul Baguian,abdoul-baguian,,0
+12183513,2025-03-21,7,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Foul,0
+12183513,2025-03-21,13,0,0,yellow,1000113,Abdi Idleh Hamza,,Foul,0
+12183513,2025-03-21,38,0,1,yellow,218160,Bertrand Traoré,bertrand-traore,Foul,0
+12183513,2025-03-21,51,0,0,yellow,1608328,Moustapha Abdi,,Foul,0
+12183510,2025-03-24,35,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Foul,0
+12183510,2025-03-24,53,0,1,yellow,174911,Steeve Yago,steeve-yago,Foul,0
+12183510,2025-03-24,65,0,1,yellow,785883,Saidou Simporé,saidou-simpore,Foul,0
+12183510,2025-03-24,68,0,0,yellow,990295,Zé Turbo,,Foul,0
+12183510,2025-03-24,90,7,0,yellow,887343,Alfa Semedo,,Foul,0
+13961689,2025-06-02,45,1,1,yellow,785883,Saidou Simporé,saidou-simpore,Foul,0
+14085001,2025-08-02,37,0,0,yellow,985960,Mudathir Yahya,,Foul,0
+14085001,2025-08-02,45,0,1,yellow,2200985,Frank Tologo,frank-tologo,Foul,0
+14085001,2025-08-02,90,6,0,yellow,1481930,Yusuph Kagoma,,Foul,0
+14085010,2025-08-06,13,0,1,yellow,2201029,Mohamed Guira,mohamed-guira,Foul,0
+14085010,2025-08-06,45,6,1,yellow,2201007,Josaphat Ouattara,josaphat-ouattara,Foul,0
+14085010,2025-08-06,59,0,0,yellow,1535610,Saturnin Ngarsouma,,Foul,0
+14085010,2025-08-06,70,0,0,yellow,2172115,Sydney Tchibinda,,Foul,0
+14085026,2025-08-13,32,0,1,yellow,867239,Patrick Malo,patrick-malo,Foul,0
+14085026,2025-08-13,41,0,1,red,2025851,Abdoulaye Toure,abdoulaye-toure,Violent conduct,0
+14085026,2025-08-13,59,0,0,yellow,881023,Alassane Diop,,Foul,0
+14085026,2025-08-13,62,0,1,yellow,2201040,Yves Koutiama,yves-koutiama,Foul,0
+14085026,2025-08-13,66,0,1,yellow,2201033,Moumoune Diallo,moumoune-diallo,Foul,0
+14085026,2025-08-13,89,0,1,yellow,2201056,Papus Ouattara,papus-ouattara,Foul,0
+14085032,2025-08-16,57,0,1,yellow,2025852,Hanaby Sagne,hanaby-hadalou-sagne,Foul,0
+14085032,2025-08-16,65,0,0,yellow,1389706,Fenohasina Gilles Razafimaro,,Argument,0
+14085032,2025-08-16,87,0,1,yellow,1099246,Abdoul Baguian,abdoul-baguian,Argument,0
+12183532,2025-09-05,10,0,0,red,1126252,Yabe Siad,,Violent conduct,0
+12183532,2025-09-05,61,0,1,yellow,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,Foul,0
+12183469,2025-09-09,37,0,1,yellow,1183551,Mohamed Zougrana,mohamed-zougrana,Foul,0
+12183469,2025-09-09,49,0,0,yellow,1013699,Marwan Attia,,Foul,0
+12183427,2025-10-08,19,0,0,yellow,917327,Augustus Kargbo,,Foul,0
+12183427,2025-10-08,39,0,1,yellow,2399613,Abdul Ayinde,abdoul-ayinde,Foul,0
+12183427,2025-10-08,58,0,1,yellow,364758,Issoufou Dayo,issoufou-dayo,Foul,0
+12183427,2025-10-08,84,0,1,yellow,1006189,Issa Kaboré,issa-kabore,Foul,0
+12183405,2025-10-12,31,0,0,yellow,1536779,Ramkel James,,Foul,0
+12183405,2025-10-12,36,0,0,yellow,2076737,Abduselam Yusuf,,Foul,0
+12183405,2025-10-12,38,0,0,yellow,1457873,Kitika Jemma,,Foul,0
+12183405,2025-10-12,69,0,1,yellow,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,Foul,0
+15033101,2025-11-18,44,0,1,yellow,,,,,0
+15033101,2025-11-18,51,0,0,yellow,,,,,0
+15033101,2025-11-18,58,0,1,yellow,,,,,0
+15033101,2025-11-18,71,0,0,yellow,,,,,0
+15033101,2025-11-18,90,5,1,yellow,,,,,0
+13424942,2025-12-24,32,0,1,yellow,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,Foul,0
+13424942,2025-12-24,50,0,0,red,922372,Basilio Ndong,,Foul,0
+13424942,2025-12-24,67,0,0,yellow,259063,Iban Salvador,,Time wasting,0
+13424954,2025-12-28,10,0,1,yellow,1019038,Gustavo Sangaré,gustavo-sangare,Foul,0
+13424954,2025-12-28,16,0,1,yellow,1102857,Pierre Landry Kaboré,pierre-landry-kabore,Foul,0
+13424954,2025-12-28,27,0,0,yellow,823733,Ismaël Bennacer,,Foul,0
+13424954,2025-12-28,73,0,0,yellow,1107591,Mohamed Amoura,,Foul,0
+13424954,2025-12-28,89,0,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Foul,0
+13424968,2025-12-31,35,0,1,yellow,989361,Cédric Badolo,cedric-badolo,Foul,0
+13424968,2025-12-31,88,0,1,yellow,1183551,Mohamed Zougrana,mohamed-zougrana,Foul,0
+14058095,2026-01-06,5,0,1,yellow,1108094,Adamo Nagalo,adamo-nagalo,Foul,0
+14058095,2026-01-06,63,0,0,yellow,1888002,Christ Inao Oulaï,,Foul,0
+14058095,2026-01-06,66,0,0,yellow,843754,Ibrahim Sangaré,,Argument,0
+16189861,2026-06-05,23,0,1,yellow,1170523,Lohann Doucet,lohann-doucet,Foul,0
+16189861,2026-06-05,43,0,1,red,1506773,Mohamed Ouédraogo,mohamed-ouedraogo,Professional foul last man,0
+16189861,2026-06-05,72,0,1,yellow,983282,Ousseni Bouda,ousseni-bouda,Foul,0
+16189861,2026-06-05,90,4,1,yellow,883262,Edmond Tapsoba,edmond-tapsoba,Argument,0
+16205035,2026-06-09,51,0,1,yellow,1106451,Dango Ouattara,dango-ouattara,,0
+16205035,2026-06-09,84,0,0,yellow,1006699,Yuri Kovalev,,,0
+16205035,2026-06-09,87,0,0,yellow,881947,Zakhar Volkov,,,0

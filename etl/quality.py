@@ -95,6 +95,36 @@ def _check_staging_present(report):
                        "present" if ok else "missing or empty"))
 
 
+def _check_goal_events(report):
+    path = STAGING / "goal_events.csv"
+    if not path.exists():
+        report.append(("goal_events: staged", "FAIL", "missing"))
+        return
+    goals = read_csv(path)
+    events = {e["event_id"]: e for e in read_csv(STAGING / "events.csv")}
+    final = {}
+    for g in goals:
+        final[g["event_id"]] = g
+    bad = []
+    for eid, g in final.items():
+        ev = events.get(eid)
+        if not ev:
+            continue
+        if (g["bf_score_after"], g["opp_score_after"]) != (ev["gf"], ev["ga"]):
+            bad.append(f"{ev['date']} vs {ev['opponent']} "
+                       f"({g['bf_score_after']}-{g['opp_score_after']} != {ev['gf']}-{ev['ga']})")
+    report.append(("goal_events: final running score == match score",
+                   "FAIL" if bad else "PASS",
+                   f"{len(final)} scoring matches checked"
+                   + ("; MISMATCH: " + "; ".join(bad[:4]) if bad else "")))
+    bf_goals = [g for g in goals if g["is_bf"] == "1"]
+    unattributed = sum(1 for g in bf_goals
+                       if g["class"] != "ownGoal" and not g["scorer_player_id"])
+    report.append(("goal_events: BF scorer attribution",
+                   "WARN" if unattributed else "PASS",
+                   f"{len(bf_goals)} BF goals, {unattributed} scorers not matched to registry"))
+
+
 def _check_events(report):
     events = read_csv(STAGING / "events.csv")
     if not events:
@@ -122,6 +152,7 @@ def run():
     _check_callups(report, ids)
     _check_appearances(report, ids)
     _check_events(report)
+    _check_goal_events(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
     fails = 0

@@ -1,0 +1,447 @@
+event_id,date,minute,added_time,is_bf,in_sofa_id,in_name,in_player_id,out_sofa_id,out_name,out_player_id,injury
+9786529,2022-01-09,69,0,0,291665,Clinton N'Jie,,788352,Pierre Kunde,,0
+9786529,2022-01-09,69,0,0,21626,Eric Maxim Choupo-Moting,,842931,Karl Toko Ekambi,,0
+9786529,2022-01-09,71,0,1,843336,Zakaria Sanogo,zakaria-sanogo,785876,Cyrille Bayala,cyrille-bayala,0
+9786529,2022-01-09,71,0,1,850011,Mohamed Konaté,mohamed-konate,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+9786529,2022-01-09,81,0,0,818218,Christian Bassogog,,846154,Nicolas Moumie Ngamaleu,,0
+9786529,2022-01-09,86,0,1,886227,Hassane Bandé,hassane-bande,218160,Bertrand Traoré,bertrand-traore,0
+9786529,2022-01-09,88,0,0,869931,Yvan Neyou,,116869,Vincent Aboubakar,,0
+9737692,2022-01-13,69,0,0,889052,Willy Semedo,,814125,Dylan Tavares,,0
+9737692,2022-01-13,69,0,1,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,1019038,Gustavo Sangaré,gustavo-sangare,0
+9737692,2022-01-13,69,0,1,843336,Zakaria Sanogo,zakaria-sanogo,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+9737692,2022-01-13,73,0,0,52797,Ryan Mendes,,789070,Patrick Andrade,,0
+9737692,2022-01-13,78,0,1,850011,Mohamed Konaté,mohamed-konate,785876,Cyrille Bayala,cyrille-bayala,0
+9737692,2022-01-13,82,0,0,803701,Lisandro Semedo,,52753,Jeffrey Fortes,,0
+9737692,2022-01-13,90,1,1,933047,Dramane Nikiema,dramane-nikiema,886227,Hassane Bandé,hassane-bande,0
+9737943,2022-01-17,60,0,0,994644,Mesfin Tafesse,,1064121,Yehun Endeshaw,,0
+9737943,2022-01-17,61,0,0,1169460,Bezabih Mekengo,,959533,Dawa Hotessa,,0
+9737943,2022-01-17,63,0,1,1106451,Dango Ouattara,dango-ouattara,785876,Cyrille Bayala,cyrille-bayala,0
+9737943,2022-01-17,63,0,1,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,1019038,Gustavo Sangaré,gustavo-sangare,0
+9737943,2022-01-17,75,0,0,990501,Amanuel Gebremikael,,1006963,Surafel Dagnachew,,0
+9737943,2022-01-17,76,0,1,843336,Zakaria Sanogo,zakaria-sanogo,886227,Hassane Bandé,hassane-bande,0
+10054216,2022-01-23,46,0,0,898964,Louis Ameka Autchanga,,1141425,Alex Moussounda,,0
+10054216,2022-01-23,50,0,0,242537,Axel Meye,,1106257,Anthony Oyono,,0
+10054216,2022-01-23,50,0,0,760618,Denis Bouanga,,988632,Jim Allevinah,,0
+10054216,2022-01-23,73,0,1,843336,Zakaria Sanogo,zakaria-sanogo,886227,Hassane Bandé,hassane-bande,0
+10054216,2022-01-23,81,0,1,850011,Mohamed Konaté,mohamed-konate,218160,Bertrand Traoré,bertrand-traore,1
+10054216,2022-01-23,82,0,1,785883,Saidou Simporé,saidou-simpore,1019038,Gustavo Sangaré,gustavo-sangare,0
+10054216,2022-01-23,84,0,0,873051,Yannis N'Gakoutou-Yapende,,302640,Johann Obiang,,0
+10054216,2022-01-23,89,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,1106451,Dango Ouattara,dango-ouattara,0
+10054216,2022-01-23,114,0,1,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,806244,Ibrahim Blati Tourè,blati-toure,1
+10083099,2022-01-29,46,0,0,332547,Ali Maâloul,,867180,Oussama Haddadi,,0
+10083099,2022-01-29,46,0,0,153158,Naïm Sliti,,1006147,Anis Ben Slimane,,0
+10083099,2022-01-29,72,0,1,850011,Mohamed Konaté,mohamed-konate,971036,Djibril Ouattara,djibril-ouattara,1
+10083099,2022-01-29,75,0,0,793187,Issam Jebali,,918996,Seifeddine Jaziri,,0
+10083099,2022-01-29,84,0,0,857772,Hamza Rafia,,591706,Ellyes Skhiri,,0
+10083102,2022-02-02,36,0,1,1006190,Farid Ouedraogo,farid-ouedraogo,867299,Hervé Koffi,herve-koffi,1
+10083102,2022-02-02,60,0,1,843336,Zakaria Sanogo,zakaria-sanogo,785876,Cyrille Bayala,cyrille-bayala,0
+10083102,2022-02-02,65,0,0,845286,Ismaïla Sarr,,293115,Famara Diédhiou,,0
+10083102,2022-02-02,65,0,0,879694,Pape Gueye,,45944,Cheikhou Kouyaté,,0
+10083102,2022-02-02,77,0,0,1002711,Pape Matar Sarr,,1102503,Ahmadou Bamba Dieng,,0
+10083102,2022-02-02,81,0,1,971036,Djibril Ouattara,djibril-ouattara,139357,Adama Guira,adama-guira,0
+10083102,2022-02-02,81,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,886227,Hassane Bandé,hassane-bande,0
+10083102,2022-02-02,90,2,0,790198,Pape Abou Cissé,,123166,Nampalys Mendy,,0
+10083104,2022-02-05,46,0,0,846154,Nicolas Moumie Ngamaleu,,890329,Ignatius Ganago,,0
+10083104,2022-02-05,46,0,0,116869,Vincent Aboubakar,,898405,Samuel Oum Gouet,,0
+10083104,2022-02-05,54,0,0,842931,Karl Toko Ekambi,,818218,Christian Bassogog,,0
+10083104,2022-02-05,86,0,1,785871,Eric Traoré,eric-traore,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+10083104,2022-02-05,87,0,1,886227,Hassane Bandé,hassane-bande,218160,Bertrand Traoré,bertrand-traore,0
+10083104,2022-02-05,90,4,1,866124,Aboubacar Sawadogo,aboubacar-sawadogo,1006190,Farid Ouedraogo,farid-ouedraogo,1
+10083104,2022-02-05,90,4,1,850011,Mohamed Konaté,mohamed-konate,971036,Djibril Ouattara,djibril-ouattara,0
+10151732,2022-03-24,57,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,971036,Djibril Ouattara,djibril-ouattara,0
+10151732,2022-03-24,65,0,1,989361,Cédric Badolo,cedric-badolo,116623,Bryan Dabo,bryan-dabo,0
+10151732,2022-03-24,66,0,1,886227,Hassane Bandé,hassane-bande,785876,Cyrille Bayala,cyrille-bayala,0
+10151732,2022-03-24,73,0,0,226784,Zymer Bytyqi,,800411,Milot Rashica,,0
+10151732,2022-03-24,73,0,0,970518,Lumbardh Dellova,,798147,Mërgim Vojvoda,,0
+10151732,2022-03-24,78,0,0,831407,Florian Loshaj,,858226,Toni Domgjoni,,0
+10151732,2022-03-24,85,0,1,1127169,Nasser Djiga,nasser-djiga,174911,Steeve Yago,steeve-yago,0
+10151732,2022-03-24,85,0,1,994867,Mamady Bangré,mamady-bangre,1019038,Gustavo Sangaré,gustavo-sangare,0
+10152235,2022-03-29,46,0,0,190405,Leander Dendoncker,,352664,Jason Denayer,,0
+10152235,2022-03-29,53,0,0,901898,Yari Verschaeren,,328145,Adnan Januzaj,,0
+10152235,2022-03-29,53,0,0,901891,Alexis Saelemaekers,,960441,Charles De Ketelaere,,0
+10152235,2022-03-29,59,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+10152235,2022-03-29,59,0,1,989361,Cédric Badolo,cedric-badolo,785876,Cyrille Bayala,cyrille-bayala,0
+10152235,2022-03-29,69,0,0,45970,Christian Benteke,,147745,Michy Batshuayi,,0
+10152235,2022-03-29,78,0,0,190399,Divock Origi,,135666,Leandro Trossard,,0
+10152235,2022-03-29,78,0,0,793988,Orel Mangala,,118085,Hans Vanaken,,0
+10152235,2022-03-29,79,0,1,920754,Abou Ouattara,abou-ouattara,218160,Bertrand Traoré,bertrand-traore,0
+10152235,2022-03-29,79,0,1,1103414,Joffrey Bazié,joffrey-bazie,174911,Steeve Yago,steeve-yago,0
+10152235,2022-03-29,89,0,1,1103418,Abdel Rachid Zagré,abdel-rachid-zagre,1106451,Dango Ouattara,dango-ouattara,0
+10152235,2022-03-29,89,0,1,1127169,Nasser Djiga,nasser-djiga,364758,Issoufou Dayo,issoufou-dayo,0
+10339110,2022-06-03,30,0,1,886227,Hassane Bandé,hassane-bande,1000129,Abdoul Tapsoba,abdoul-tapsoba,1
+10339110,2022-06-03,46,0,0,921089,Deroy Duarte,,1093294,Cuca,,0
+10339110,2022-06-03,65,0,0,867520,Kenny Rocha Santos,,814125,Dylan Tavares,,0
+10339110,2022-06-03,65,0,0,845802,Jovane Cabral,,787429,Garry Rodrigues,,0
+10339110,2022-06-03,76,0,0,218652,Júlio Tavares,,815080,Jamiro Monteiro,,0
+10339110,2022-06-03,78,0,0,803701,Lisandro Semedo,,52797,Ryan Mendes,,0
+10339110,2022-06-03,81,0,1,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,1019038,Gustavo Sangaré,gustavo-sangare,0
+10339110,2022-06-03,81,0,1,989361,Cédric Badolo,cedric-badolo,785876,Cyrille Bayala,cyrille-bayala,0
+10339110,2022-06-03,88,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,806244,Ibrahim Blati Tourè,blati-toure,0
+10339120,2022-06-07,57,0,0,990893,Sandile Gamedze,,1112002,Mkhontfo Khethokuhle,,0
+10339120,2022-06-07,63,0,1,983282,Ousseni Bouda,ousseni-bouda,886227,Hassane Bandé,hassane-bande,0
+10339120,2022-06-07,63,0,1,989361,Cédric Badolo,cedric-badolo,785876,Cyrille Bayala,cyrille-bayala,0
+10339120,2022-06-07,81,0,1,174911,Steeve Yago,steeve-yago,1006189,Issa Kaboré,issa-kabore,0
+10339120,2022-06-07,81,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+10339120,2022-06-07,83,0,0,1185686,Andy Junior Magagula,,1218856,Philani Thabo Mkhontfo,,0
+10339120,2022-06-07,90,0,0,1064100,Mlamuli Msibi,,1015112,Sifiso Matse,,0
+10711032,2022-09-23,19,0,0,553488,Chadrac Akolo,,137786,Neeskens Kebano,,0
+10711032,2022-09-23,46,0,1,785876,Cyrille Bayala,cyrille-bayala,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+10711032,2022-09-23,63,0,0,917305,Edo Kayembe,,352964,Samuel Bastien,,0
+10711032,2022-09-23,63,0,0,927649,Jackson Muleka,,872350,Ben Malango,,0
+10711032,2022-09-23,64,0,0,,,,862078,Meschak Elia,,0
+10711032,2022-09-23,87,0,0,361342,Arnaud Lusamba,,553488,Chadrac Akolo,,0
+10718435,2022-09-27,46,0,0,1047983,Yannick Pandor,,102689,Ali Ahamada,,0
+10718435,2022-09-27,63,0,0,896210,Saïd Bakari,,862001,Akim Abdallah,,0
+10718435,2022-09-27,63,0,0,1128559,Aymeric Ahmed,,124267,Fouad Bachirou,,0
+10718435,2022-09-27,70,0,0,579712,Bendjaloud Youssouf,,891507,Yacine Bourhane,,0
+10718435,2022-09-27,82,0,0,147622,Chaker Alhadhur,,941160,Abdallah Ali Mohamed,,0
+10718435,2022-09-27,82,0,0,247447,Nasser Chamed,,1128559,Aymeric Ahmed,,0
+10891794,2022-11-19,61,0,0,1090458,David Datro Fofana,,156008,Jean Evrard Kouassi,,0
+10891794,2022-11-19,61,0,0,1170197,Abakar Sylla,,326419,Simon Deli,,0
+10891794,2022-11-19,61,0,0,940328,Jean-Philippe Krasso,,812946,Christian Kouamé,,0
+10891794,2022-11-19,77,0,0,16590,Max Gradel,,305282,Jean Michaël Seri,,0
+10891794,2022-11-19,77,0,0,366760,Souleyman Doumbia,,831781,Ghislain Konan,,0
+10891794,2022-11-19,87,0,0,1139103,Karim Konaté,,843754,Ibrahim Sangaré,,0
+10891794,2022-11-19,88,0,1,785876,Cyrille Bayala,cyrille-bayala,989361,Cédric Badolo,cedric-badolo,0
+10891794,2022-11-19,90,4,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,1106451,Dango Ouattara,dango-ouattara,0
+11092139,2023-03-24,57,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,911719,Lassina Traoré,lassina-traore,0
+11092139,2023-03-24,61,0,0,1196860,Tawfik Moukaïla,,790765,David Henen,,0
+11092139,2023-03-24,71,0,0,1099571,Ismail Ouro-Agoro,,862470,Kévin Denkey,,0
+11092139,2023-03-24,71,0,1,994867,Mamady Bangré,mamady-bangre,218160,Bertrand Traoré,bertrand-traore,0
+11092139,2023-03-24,90,0,0,1150445,Thibault Klidjé,,1130307,Karim Dermane,,0
+11092139,2023-03-24,90,0,1,919990,Trova Boni,trova-boni,1019038,Gustavo Sangaré,gustavo-sangare,0
+10339159,2023-03-28,61,0,0,1099571,Ismail Ouro-Agoro,,1150445,Thibault Klidjé,,0
+10339159,2023-03-28,62,0,0,1469681,Harissou Ouro-Bodi,,790765,David Henen,,0
+10339159,2023-03-28,75,0,0,1099569,Gnama Akaté,,254297,Ihlas Bebou,,0
+10339159,2023-03-28,79,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,1106451,Dango Ouattara,dango-ouattara,0
+10339159,2023-03-28,89,0,0,1469651,Abdou Ouattara,,1469671,Roland Amouzou,,0
+10339159,2023-03-28,90,1,1,919990,Trova Boni,trova-boni,1019038,Gustavo Sangaré,gustavo-sangare,0
+10339183,2023-06-18,46,0,1,785876,Cyrille Bayala,cyrille-bayala,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+10339183,2023-06-18,46,0,0,1390389,Duk,,978064,Bryan Silva Teixeira,,0
+10339183,2023-06-18,59,0,0,906838,Kevin Pina,,789070,Patrick Andrade,,0
+10339183,2023-06-18,62,0,1,994867,Mamady Bangré,mamady-bangre,218160,Bertrand Traoré,bertrand-traore,1
+10339183,2023-06-18,73,0,1,1019038,Gustavo Sangaré,gustavo-sangare,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+10339183,2023-06-18,80,0,1,1435940,Valentin Nouma,valentin-nouma,174911,Steeve Yago,steeve-yago,0
+10339183,2023-06-18,80,0,0,878494,David Tavares,,124950,Bebé,,0
+10339183,2023-06-18,80,0,0,784677,Diney Borges,,815080,Jamiro Monteiro,,0
+10339183,2023-06-18,89,0,0,1151076,Clé,,52797,Ryan Mendes,,0
+10339208,2023-09-08,55,0,1,785876,Cyrille Bayala,cyrille-bayala,989361,Cédric Badolo,cedric-badolo,1
+10339208,2023-09-08,63,0,0,1480091,Leon Manyisa,,990700,Justice Figuareido,,0
+10339208,2023-09-08,71,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+10339208,2023-09-08,71,0,1,983282,Ousseni Bouda,ousseni-bouda,994867,Mamady Bangré,mamady-bangre,0
+11612976,2023-09-12,66,0,1,1019038,Gustavo Sangaré,gustavo-sangare,806244,Ibrahim Blati Tourè,blati-toure,0
+11612976,2023-09-12,66,0,1,850011,Mohamed Konaté,mohamed-konate,971036,Djibril Ouattara,djibril-ouattara,0
+11612976,2023-09-12,67,0,0,1063767,Ismael Saibari,,801211,Selim Amallah,,0
+11612976,2023-09-12,67,0,0,856737,Zakaria Aboukhlal,,991478,Amine Adli,,0
+11612976,2023-09-12,81,0,0,1126569,Bilal El Khannouss,,919677,Yahia Attiyat Allah,,0
+11612976,2023-09-12,81,0,0,827522,Amine Harit,,1011375,Abdessamad Ezzalzouli,,0
+11612976,2023-09-12,81,0,1,994867,Mamady Bangré,mamady-bangre,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+11612976,2023-09-12,88,0,0,919793,Ayoub El Kaabi,,846470,Youssef En-Nesyri,,0
+11612976,2023-09-12,88,0,0,1121333,Amir Richardson,,991421,Azzedine Ounahi,,0
+11735406,2023-10-17,62,0,0,1139209,Mouhamed Soueid,,1010564,Idrissa Thiam,,0
+11735406,2023-10-17,62,0,0,1089665,Almike Moussa N'Diaye,,869078,Bakari Camara,,0
+11735406,2023-10-17,88,0,0,1407653,Khadim Diaw,,932021,Aly Abeid,,0
+11797997,2023-11-17,45,6,1,174911,Steeve Yago,steeve-yago,1006189,Issa Kaboré,issa-kabore,0
+11797997,2023-11-17,68,0,0,1493213,Marciano,,1091675,Manuel Baldé,,0
+11797997,2023-11-17,74,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+11797997,2023-11-17,83,0,0,845750,Moreto Cassama,,787646,Dálcio,,0
+11797997,2023-11-17,83,0,1,886227,Hassane Bandé,hassane-bande,218160,Bertrand Traoré,bertrand-traore,0
+11797997,2023-11-17,83,0,0,1023056,Famana Quizera,,1146009,Franculino Djú,,0
+11797997,2023-11-17,88,0,0,978212,Mauro Rodrigues,,581606,Janio Bikel,,0
+11798005,2023-11-21,46,0,1,218160,Bertrand Traoré,bertrand-traore,886227,Hassane Bandé,hassane-bande,0
+11798005,2023-11-21,46,0,0,959566,Abel Yalew,,990501,Amanuel Gebremikael,,0
+11798005,2023-11-21,71,0,0,1502238,Habtamu Tadesse,,959549,Canaan Markneh,,0
+11798005,2023-11-21,73,0,1,1019038,Gustavo Sangaré,gustavo-sangare,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+11798005,2023-11-21,76,0,1,1108094,Adamo Nagalo,adamo-nagalo,364758,Issoufou Dayo,issoufou-dayo,0
+11798005,2023-11-21,76,0,1,1435940,Valentin Nouma,valentin-nouma,915839,Abdoul Guiebre,abdoul-guiebre,0
+11798005,2023-11-21,79,0,0,1535692,Fitsum Tilahun,,1139235,Chernet Gugsa,,0
+11798005,2023-11-21,90,2,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,989361,Cédric Badolo,cedric-badolo,0
+11940049,2024-01-05,46,0,0,359350,Ali Gholizadeh,,331837,Alireza Jahanbakhsh,,0
+11940049,2024-01-05,46,0,0,144594,Karim Ansarifard,,993899,Shahriar Moghanlou,,0
+11940049,2024-01-05,46,0,0,932194,Reza Asadi,,812533,Mehdi Taremi,,0
+11940049,2024-01-05,46,0,0,881182,Mehdi Ghayedi,,996805,Mohammad Mohebi,,0
+11940049,2024-01-05,46,0,0,828230,Roozbeh Cheshmi,,548050,Saman Ghoddos,,0
+11940049,2024-01-05,46,0,0,150993,Omid Ebrahimi,,359334,Saeid Ezatolahi,,0
+11940049,2024-01-05,46,0,0,1196902,Ehsan Hajsafi,,812531,Milad Mohammadi,,0
+11940049,2024-01-05,46,0,0,1170977,Aria Yousefi,,359358,Sadegh Moharrami,,0
+11940049,2024-01-05,46,0,0,223340,Shoja Khalilzadeh,,812952,Hossein Kanaani,,0
+11940049,2024-01-05,46,0,0,1101888,Saman Fallah,,359332,Majid Hosseini,,0
+11940049,2024-01-05,46,0,0,932221,Payam Niazmand,,791374,Alireza Beiranvand,,0
+11940049,2024-01-05,76,0,0,812953,Mahdi Torabi,,881182,Mehdi Ghayedi,,0
+11761878,2024-01-16,28,0,0,985946,Souleymane Anne,,603736,Aboubakar Kamara,,1
+11761878,2024-01-16,46,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,994867,Mamady Bangré,mamady-bangre,0
+11761878,2024-01-16,57,0,0,1459304,Sidi Amar Bouna,,985945,Hemeya Tanjy,,0
+11761878,2024-01-16,58,0,0,222588,El-Hadji Ba,,1010564,Idrissa Thiam,,0
+11761878,2024-01-16,67,0,0,1175854,Oumar Ngom,,845092,Guessouma Fofana,,0
+11761878,2024-01-16,67,0,0,878256,Mohamed Dellahi Yali,,872038,Lamine Ba,,1
+11761878,2024-01-16,73,0,1,218160,Bertrand Traoré,bertrand-traore,989361,Cédric Badolo,cedric-badolo,0
+11761878,2024-01-16,85,0,1,971036,Djibril Ouattara,djibril-ouattara,850011,Mohamed Konaté,mohamed-konate,0
+11761878,2024-01-16,86,0,1,886227,Hassane Bandé,hassane-bande,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+11761889,2024-01-20,39,0,1,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,139357,Adama Guira,adama-guira,1
+11761889,2024-01-20,46,0,0,1107591,Mohamed Amoura,,37240,Sofiane Feghouli,,0
+11761889,2024-01-20,64,0,1,218160,Bertrand Traoré,bertrand-traore,850011,Mohamed Konaté,mohamed-konate,0
+11761889,2024-01-20,74,0,0,1192318,Farès Chaïbi,,901827,Youcef Belaïli,,0
+11761889,2024-01-20,74,0,0,818440,Adam Ounas,,158213,Riyad Mahrez,,0
+11761889,2024-01-20,81,0,0,238708,Islam Slimani,,368120,Nabil Bentaleb,,0
+11761889,2024-01-20,84,0,1,989361,Cédric Badolo,cedric-badolo,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+11761889,2024-01-20,84,0,1,924861,Dramane Salou,dramane-salou,1019038,Gustavo Sangaré,gustavo-sangare,0
+11761889,2024-01-20,84,0,1,1127169,Nasser Djiga,nasser-djiga,1108094,Adamo Nagalo,adamo-nagalo,1
+11761902,2024-01-23,46,0,1,971036,Djibril Ouattara,djibril-ouattara,989361,Cédric Badolo,cedric-badolo,0
+11761902,2024-01-23,58,0,0,1000150,Zito Luvumbo,,1435399,Gilberto,,0
+11761902,2024-01-23,58,0,0,282917,Jérémie Bela,,825067,Gelson Dala,,0
+11761902,2024-01-23,64,0,0,933115,Show,,845821,Bruno Paz,,1
+11761902,2024-01-23,76,0,1,174911,Steeve Yago,steeve-yago,915839,Abdoul Guiebre,abdoul-guiebre,0
+11761902,2024-01-23,76,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,218160,Bertrand Traoré,bertrand-traore,0
+11761902,2024-01-23,77,0,0,939721,Milson,,333341,Mabululu,,0
+11761902,2024-01-23,77,0,0,1002334,Zini,,845281,Fredy,,1
+11761902,2024-01-23,89,0,1,886227,Hassane Bandé,hassane-bande,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+11761902,2024-01-23,89,0,1,1126690,Sacha Banse,sacha-banse,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+11940715,2024-01-30,46,0,1,989361,Cédric Badolo,cedric-badolo,174911,Steeve Yago,steeve-yago,0
+11940715,2024-01-30,46,0,1,1108094,Adamo Nagalo,adamo-nagalo,1000129,Abdoul Tapsoba,abdoul-tapsoba,0
+11940715,2024-01-30,68,0,1,1126690,Sacha Banse,sacha-banse,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+11940715,2024-01-30,73,0,0,796358,Diadié Samassékou,,822708,Amadou Haidara,,1
+11940715,2024-01-30,74,0,0,796374,Fousseni Diabaté,,804621,Lassana Coulibaly,,0
+11940715,2024-01-30,74,0,0,822710,Sekou Koita,,333239,Adama Traoré,,0
+11940715,2024-01-30,77,0,1,1106451,Dango Ouattara,dango-ouattara,218160,Bertrand Traoré,bertrand-traore,0
+11940715,2024-01-30,87,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+11940715,2024-01-30,90,3,0,982613,Boubacar Traoré,,927005,Lassine Sinayoko,,0
+11940715,2024-01-30,90,3,0,822703,Mamadou Fofana,,1008849,Mohamed Camara,,0
+12183516,2024-06-06,46,0,1,886227,Hassane Bandé,hassane-bande,983282,Ousseni Bouda,ousseni-bouda,0
+12183516,2024-06-06,46,0,1,989361,Cédric Badolo,cedric-badolo,1019038,Gustavo Sangaré,gustavo-sangare,0
+12183516,2024-06-06,46,0,1,785883,Saidou Simporé,saidou-simpore,806244,Ibrahim Blati Tourè,blati-toure,0
+12183516,2024-06-06,58,0,0,871736,Akram Tawfik,,967032,Emam Ashour,,0
+12183516,2024-06-06,72,0,0,918743,Omar Kamal,,547494,Zizo,,0
+12183516,2024-06-06,84,0,1,850011,Mohamed Konaté,mohamed-konate,911719,Lassina Traoré,lassina-traore,0
+12183516,2024-06-06,90,2,0,1008171,Ibrahim Adel,,873551,Mostafa Mohamed,,0
+12183516,2024-06-06,90,2,0,1190336,Ahmed Amin Oufa,,295361,Mahmoud Trézéguet,,0
+12183524,2024-06-10,69,0,0,849623,Mustapha Bundu,,536318,Sullay Kaikai,,0
+12183524,2024-06-10,69,0,0,1170160,Kamil Conteh,,1000101,Abu Dumbuya,,0
+12183524,2024-06-10,69,0,1,785883,Saidou Simporé,saidou-simpore,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+12183524,2024-06-10,69,0,1,850011,Mohamed Konaté,mohamed-konate,911719,Lassina Traoré,lassina-traore,0
+12183524,2024-06-10,78,0,0,836959,Josh Koroma,,917327,Augustus Kargbo,,0
+12183524,2024-06-10,80,0,1,156151,Hassim Traore,hassim-traore,886227,Hassane Bandé,hassane-bande,0
+12183524,2024-06-10,86,0,0,548704,Amadou Bakayoko,,1182579,Daniel Kanu,,0
+12183524,2024-06-10,86,0,0,1126032,Rodney Michael,,1089936,Emmanuel Samadiya,,0
+12183524,2024-06-10,89,0,1,806244,Ibrahim Blati Tourè,blati-toure,989361,Cédric Badolo,cedric-badolo,0
+12183524,2024-06-10,89,0,1,983282,Ousseni Bouda,ousseni-bouda,1106451,Dango Ouattara,dango-ouattara,0
+12526616,2024-09-06,45,0,1,1542806,Ousmane Camara,ousmane-camara,1106451,Dango Ouattara,dango-ouattara,1
+12526616,2024-09-06,68,0,0,1389846,Lamine Camara,,1002711,Pape Matar Sarr,,0
+12526616,2024-09-06,69,0,1,911719,Lassina Traoré,lassina-traore,886227,Hassane Bandé,hassane-bande,0
+12526616,2024-09-06,69,0,1,785883,Saidou Simporé,saidou-simpore,919990,Trova Boni,trova-boni,0
+12526616,2024-09-06,69,0,0,897291,Ismail Jakobs,,845286,Ismaïla Sarr,,0
+12526616,2024-09-06,82,0,1,1652684,Abdoul Kader Ouattara,abdoul-kader-ouattara,989361,Cédric Badolo,cedric-badolo,0
+12526616,2024-09-06,82,0,1,983282,Ousseni Bouda,ousseni-bouda,850011,Mohamed Konaté,mohamed-konate,0
+12526616,2024-09-06,82,0,0,802159,Habibou Diallo,,1085381,Nicolas Jackson,,0
+12526616,2024-09-06,82,0,0,123166,Nampalys Mendy,,106337,Idrissa Gana Gueye,,0
+12526616,2024-09-06,90,3,0,914309,Iliman Ndiaye,,217704,Sadio Mané,,0
+12526614,2024-09-10,46,0,0,1868761,Zeliat Nkhoma,,1502236,Chifundo Mphasi,,0
+12526614,2024-09-10,56,0,1,1542806,Ousmane Camara,ousmane-camara,1126690,Sacha Banse,sacha-banse,0
+12526614,2024-09-10,69,0,0,1169459,Wisdom Mpinganjira,,1500926,Lanjesi Nkhoma,,0
+12526614,2024-09-10,69,0,0,1169458,Robert Saizi,,1006035,Denis Chembezi,,0
+12526614,2024-09-10,77,0,1,983282,Ousseni Bouda,ousseni-bouda,886227,Hassane Bandé,hassane-bande,0
+12526614,2024-09-10,77,0,1,919990,Trova Boni,trova-boni,989361,Cédric Badolo,cedric-badolo,0
+12526614,2024-09-10,77,0,1,850011,Mohamed Konaté,mohamed-konate,1652684,Abdoul Kader Ouattara,abdoul-kader-ouattara,0
+12526614,2024-09-10,85,0,1,924861,Dramane Salou,dramane-salou,850011,Mohamed Konaté,mohamed-konate,1
+12526613,2024-10-10,46,0,0,1635754,Mokono Eldhino,,1406921,Henry Msanga,,0
+12526613,2024-10-10,46,0,0,1962874,David Irishura,,994630,Bienvenue Kanakimana,,0
+12526613,2024-10-10,46,0,0,1064811,Trésor Mossi,,1435441,Samuel Ndizeye,,0
+12526613,2024-10-10,46,0,0,985919,Jonathan Nahimana,,1191250,Mattéo Nkurunziza,,0
+12526613,2024-10-10,63,0,0,880536,Richard Bazombwa,,1482919,Abedi Bigirimana,,0
+12526613,2024-10-10,69,0,1,785883,Saidou Simporé,saidou-simpore,1126690,Sacha Banse,sacha-banse,0
+12526613,2024-10-10,69,0,1,989361,Cédric Badolo,cedric-badolo,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+12526613,2024-10-10,69,0,1,886227,Hassane Bandé,hassane-bande,1106451,Dango Ouattara,dango-ouattara,0
+12526613,2024-10-10,77,0,1,850011,Mohamed Konaté,mohamed-konate,911719,Lassina Traoré,lassina-traore,0
+12526613,2024-10-10,78,0,1,1542806,Ousmane Camara,ousmane-camara,218160,Bertrand Traoré,bertrand-traore,0
+12526608,2024-10-13,58,0,0,1871748,Abdoul Manirakoze,,1119531,Akbar Muderi,,1
+12526608,2024-10-13,59,0,0,985931,Shassiri Nahimana,,18113,Saidi Ntibazonkiza,,0
+12526608,2024-10-13,64,0,1,1106451,Dango Ouattara,dango-ouattara,886227,Hassane Bandé,hassane-bande,0
+12526608,2024-10-13,64,0,1,218160,Bertrand Traoré,bertrand-traore,1652684,Abdoul Kader Ouattara,abdoul-kader-ouattara,1
+12526608,2024-10-13,64,0,1,911719,Lassina Traoré,lassina-traore,850011,Mohamed Konaté,mohamed-konate,0
+12526608,2024-10-13,76,0,0,1406921,Henry Msanga,,1540049,Aruna Mussa,,1
+12526608,2024-10-13,76,0,0,880536,Richard Bazombwa,,1962874,David Irishura,,1
+12526608,2024-10-13,76,0,0,943697,Hussein Shabani,,994630,Bienvenue Kanakimana,,0
+12526608,2024-10-13,83,0,1,924861,Dramane Salou,dramane-salou,989361,Cédric Badolo,cedric-badolo,0
+12526607,2024-11-14,64,0,1,1542806,Ousmane Camara,ousmane-camara,989361,Cédric Badolo,cedric-badolo,0
+12526607,2024-11-14,64,0,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,983282,Ousseni Bouda,ousseni-bouda,0
+12526607,2024-11-14,64,0,0,868268,Cherif Ndiaye,,1085381,Nicolas Jackson,,0
+12526607,2024-11-14,64,0,0,1128532,Habib Diarra,,845286,Ismaïla Sarr,,0
+12526607,2024-11-14,88,0,0,1002711,Pape Matar Sarr,,914309,Iliman Ndiaye,,0
+12526738,2024-11-18,46,0,1,983282,Ousseni Bouda,ousseni-bouda,1542806,Ousmane Camara,ousmane-camara,0
+12526738,2024-11-18,46,0,1,989361,Cédric Badolo,cedric-badolo,919990,Trova Boni,trova-boni,0
+12526738,2024-11-18,75,0,1,1506773,Mohamed Ouédraogo,mohamed-ouedraogo,1435940,Valentin Nouma,valentin-nouma,0
+12526738,2024-11-18,75,0,1,1099250,Clement Pitroipa,clement-pitroipa,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,0
+12526738,2024-11-18,77,0,0,1160144,Lloyd Njaliwa,,991031,Richard Mbulu,,0
+12526738,2024-11-18,79,0,1,1103415,Hamed Blakiss Ouattara,hamed-blakiss-ouattara,174911,Steeve Yago,steeve-yago,0
+12526738,2024-11-18,80,0,0,1870427,Maxwell Paipi,,1991920,Yankho Singo,,0
+12526738,2024-11-18,88,0,0,1023552,Chawanangwa Kawonga,,1169459,Wisdom Mpinganjira,,1
+13315144,2025-01-09,12,0,0,2028676,Senfuko Hussein,,1167500,Sospeter Bajana,,0
+13315144,2025-01-09,46,0,1,2025848,Cheick Guel,cheick-guel,2025851,Abdoulaye Toure,abdoulaye-toure,0
+13315144,2025-01-09,46,0,1,1542760,Jack Diarra,jack-diarra,2335171,Honoré Ye,honore-ye,0
+13315144,2025-01-09,60,0,0,1611982,Crispin Mhagama,,1196002,Ibrahim Joshua,,0
+13315144,2025-01-09,60,0,0,994645,Iddy Seleman Nado,,2024673,Said Naushad,,0
+13315144,2025-01-09,60,0,0,2024672,Sabri Kondo,,2024678,William Edgar,,0
+13315144,2025-01-09,61,0,0,2024664,Bakary Msimu,,2024680,Zidane Sereri,,0
+13315144,2025-01-09,81,0,1,1102864,Kalifa Nikiema,kalifa-nikiema,1103415,Hamed Blakiss Ouattara,hamed-blakiss-ouattara,0
+13315144,2025-01-09,81,0,1,1103412,Memel Raouf Dao,raouf-memel-dao,888297,Adolphe Belem,adolphe-belem,0
+12183513,2025-03-21,72,0,0,1126252,Yabe Siad,,1138850,Moussa Araita,,0
+12183513,2025-03-21,78,0,1,850011,Mohamed Konaté,mohamed-konate,911719,Lassina Traoré,lassina-traore,0
+12183513,2025-03-21,78,0,1,924861,Dramane Salou,dramane-salou,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,0
+12183513,2025-03-21,78,0,1,886227,Hassane Bandé,hassane-bande,218160,Bertrand Traoré,bertrand-traore,0
+12183513,2025-03-21,78,0,1,1499155,Mohamed Ali Yabré,mohamed-ali-yabre,174911,Steeve Yago,steeve-yago,0
+12183513,2025-03-21,78,0,1,1127169,Nasser Djiga,nasser-djiga,364758,Issoufou Dayo,issoufou-dayo,0
+12183513,2025-03-21,81,0,0,2076016,Ahemdini Gohar,,1000113,Abdi Idleh Hamza,,0
+12183513,2025-03-21,81,0,0,1009421,Ahmed Youssouf Omar,,1009416,Doualeh Mahamoud Elabeh,,0
+12183513,2025-03-21,87,0,0,1009412,Mahdi Mahabeh,,1500168,Gabriel Dadzie,,0
+12183513,2025-03-21,87,0,0,1009420,Ali Youssouf Farada,,2076015,Ahmed Zakaria,,0
+12183510,2025-03-24,49,0,0,352680,Jorginho,,851283,Jefferson Encada,,0
+12183510,2025-03-24,59,0,0,1153099,Gilberto Batista,,1397449,Babacar Fati,,0
+12183510,2025-03-24,60,0,1,806244,Ibrahim Blati Tourè,blati-toure,1183551,Mohamed Zougrana,mohamed-zougrana,0
+12183510,2025-03-24,60,0,1,218160,Bertrand Traoré,bertrand-traore,886227,Hassane Bandé,hassane-bande,0
+12183510,2025-03-24,75,0,0,867853,Jardel,,878384,Zidane Banjaqui,,0
+12183510,2025-03-24,75,0,0,827781,Sori Mané,,581606,Janio Bikel,,0
+12183510,2025-03-24,75,0,0,1094384,Tamblé Monteiro,,990295,Zé Turbo,,0
+12183510,2025-03-24,79,0,1,989361,Cédric Badolo,cedric-badolo,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,0
+12183510,2025-03-24,79,0,1,850011,Mohamed Konaté,mohamed-konate,911719,Lassina Traoré,lassina-traore,0
+13961689,2025-06-02,55,0,0,1006147,Anis Ben Slimane,,967295,Hamza Khadraoui,,0
+13961689,2025-06-02,63,0,0,919225,Mortadha Ben Ouanes,,1549264,Moez Haj Ali,,0
+13961689,2025-06-02,63,0,0,919027,Ali Abdi,,1094487,Amine Cherni,,0
+13961689,2025-06-02,69,0,1,218160,Bertrand Traoré,bertrand-traore,886227,Hassane Bandé,hassane-bande,0
+13961689,2025-06-02,69,0,1,989361,Cédric Badolo,cedric-badolo,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,0
+13961689,2025-06-02,80,0,0,1991585,Hazem Mastouri,,1032926,Sayfallah Ltaief,,0
+13961689,2025-06-02,80,0,0,1102846,Youssef Snana,,919198,Firas Chaouat,,0
+13961689,2025-06-02,80,0,0,828077,Aissa Laïdouni,,359398,Mohamed Ben Larbi,,0
+13961689,2025-06-02,83,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,850011,Mohamed Konaté,mohamed-konate,0
+13961689,2025-06-02,83,0,1,1542760,Jack Diarra,jack-diarra,1508537,Cyriaque Irié,cyriaque-irie,0
+14085001,2025-08-02,46,0,1,867239,Patrick Malo,patrick-malo,2025852,Hanaby Sagne,hanaby-hadalou-sagne,0
+14085001,2025-08-02,46,0,1,2201040,Yves Koutiama,yves-koutiama,2201046,Souleymane Sangaré,souleymane-sangare,0
+14085001,2025-08-02,46,0,1,1099246,Abdoul Baguian,abdoul-baguian,1140895,Aliou Chitou Adjibadé,aliou-chitou-adjibade,0
+14085001,2025-08-02,76,0,0,1103591,Pascal Msindo,,1103596,Abdul Suleiman Sopu,,0
+14085001,2025-08-02,77,0,1,2201001,Issouf Kaboré,issouf-kabore,2200985,Frank Tologo,frank-tologo,0
+14085001,2025-08-02,83,0,0,1138796,Lusajo Mwaikenda,,994645,Iddy Seleman Nado,,0
+14085010,2025-08-06,46,0,1,2201058,Ousmane Siry,ousmane-siry,2025856,Romain Lougoutiogue,romain-lougoutiogue,0
+14085010,2025-08-06,60,0,0,2201060,Nelson Ngaro,,2171012,Ghislain Mounguide,,0
+14085010,2025-08-06,70,0,0,1160255,Donald Guesset-Bangagbi,,1090372,Melky Ndokomandji,,0
+14085010,2025-08-06,73,0,1,2201040,Yves Koutiama,yves-koutiama,2201056,Papus Ouattara,papus-ouattara,0
+14085010,2025-08-06,73,0,1,2201045,Tertius Bagré,tertius-bagre,2201001,Issouf Kaboré,issouf-kabore,0
+14085010,2025-08-06,80,0,0,1471412,Juvénal Pouguy,,2200997,Isaac Souango,,0
+14085010,2025-08-06,81,0,0,1103473,Angelo Galabazi,,2172115,Sydney Tchibinda,,0
+14085010,2025-08-06,90,3,1,2201046,Souleymane Sangaré,souleymane-sangare,2201007,Josaphat Ouattara,josaphat-ouattara,0
+14085026,2025-08-13,46,0,1,2201040,Yves Koutiama,yves-koutiama,2201001,Issouf Kaboré,issouf-kabore,0
+14085026,2025-08-13,46,0,1,2201033,Moumoune Diallo,moumoune-diallo,1102864,Kalifa Nikiema,kalifa-nikiema,0
+14085026,2025-08-13,69,0,0,912144,Moctar El Hacen,,881023,Alassane Diop,,0
+14085026,2025-08-13,70,0,0,1103221,Mohamed Diop,,1103644,Mohamed Ramdane Zweide,,0
+14085026,2025-08-13,76,0,0,2023465,Hamady N'Diaye,,825413,Bessam Ahmed,,0
+14085026,2025-08-13,80,0,1,1140895,Aliou Chitou Adjibadé,aliou-chitou-adjibade,2201058,Ousmane Siry,ousmane-siry,0
+14085026,2025-08-13,85,0,0,2202278,Mohamed El Kheir Faraji,,1101148,El Mami Tetah,,0
+14085026,2025-08-13,90,3,1,2201046,Souleymane Sangaré,souleymane-sangare,2201056,Papus Ouattara,papus-ouattara,0
+14085032,2025-08-16,34,0,0,1389698,Rayan Hery Rajaonarivelo,,2201004,Jean Ranaivoson,,0
+14085032,2025-08-16,43,0,1,2200963,Damassi Konaté,damassi-konate,2201058,Ousmane Siry,ousmane-siry,1
+14085032,2025-08-16,63,0,0,1535552,Andy Rakotondrajoa,,2200989,Harison Randrianantenaina,,0
+14085032,2025-08-16,63,0,0,2171220,Toky Rakotondraibe,,2169885,Nantenaina Razafimahatana,,0
+14085032,2025-08-16,74,0,1,2201056,Papus Ouattara,papus-ouattara,2200974,Cédric Barro,cedric-barro,0
+14085032,2025-08-16,83,0,0,1535607,Rado Rabemananjara,,1389698,Rayan Hery Rajaonarivelo,,0
+14085032,2025-08-16,83,0,0,2171206,Hajatiana Ratsimbazafy,,2169883,Mamisoa Alexandre Rakotoson,,0
+14085032,2025-08-16,86,0,1,2201045,Tertius Bagré,tertius-bagre,1140895,Aliou Chitou Adjibadé,aliou-chitou-adjibade,0
+14085032,2025-08-16,86,0,1,1099246,Abdoul Baguian,abdoul-baguian,2025856,Romain Lougoutiogue,romain-lougoutiogue,1
+12183532,2025-09-05,15,0,0,2246455,Mohamed Khaire,,2076011,Sadik Aden,,0
+12183532,2025-09-05,46,0,0,2076009,Aboubaker Abdi,,1832264,Ibrahim Idriss Mohamed,,0
+12183532,2025-09-05,46,0,0,1009421,Ahmed Youssouf Omar,,1009416,Doualeh Mahamoud Elabeh,,0
+12183532,2025-09-05,46,0,1,1065760,Abdoul Yoda,abdoul-yoda,806244,Ibrahim Blati Tourè,blati-toure,0
+12183532,2025-09-05,46,0,1,1492520,Georgi Minoungou,georgi-minoungou,1508537,Cyriaque Irié,cyriaque-irie,0
+12183532,2025-09-05,69,0,0,2246446,Egal Awaleh,,2076013,Mouad Mahamed,,0
+12183532,2025-09-05,73,0,1,1108094,Adamo Nagalo,adamo-nagalo,883262,Edmond Tapsoba,edmond-tapsoba,0
+12183532,2025-09-05,73,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,850011,Mohamed Konaté,mohamed-konate,0
+12183532,2025-09-05,84,0,1,2246745,Clovis Bazemo,clovis-bazemo,867299,Hervé Koffi,herve-koffi,0
+12183532,2025-09-05,86,0,0,2246445,Abdichakour Farah,,2076012,Moussa Wais,,0
+12183469,2025-09-09,9,0,0,1048067,Osama Faisal,,873554,Omar Marmoush,,0
+12183469,2025-09-09,67,0,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,1183551,Mohamed Zougrana,mohamed-zougrana,0
+12183469,2025-09-09,73,0,1,1492520,Georgi Minoungou,georgi-minoungou,1508537,Cyriaque Irié,cyriaque-irie,0
+12183469,2025-09-09,85,0,0,547494,Zizo,,1048067,Osama Faisal,,0
+12183469,2025-09-09,85,0,0,873551,Mostafa Mohamed,,295361,Mahmoud Trézéguet,,0
+12183469,2025-09-09,86,0,0,918506,Mohanad Lasheen,,1092709,Ahmed Nabil Koka,,0
+12183469,2025-09-09,90,1,1,850011,Mohamed Konaté,mohamed-konate,806244,Ibrahim Blati Tourè,blati-toure,0
+12183469,2025-09-09,90,5,0,1063327,Hossam Abdelmaguid,,159665,Mohamed Salah,,0
+12183427,2025-10-08,68,0,0,2080821,Samuel Gandi,,48978,Kei Kamara,,0
+12183427,2025-10-08,69,0,0,990486,Alhassan Koroma,,1000101,Abu Dumbuya,,0
+12183427,2025-10-08,69,0,0,2074858,John Bilili Sesay,,889275,Sallieu Tarawallie,,0
+12183427,2025-10-08,73,0,1,1506773,Mohamed Ouédraogo,mohamed-ouedraogo,1183551,Mohamed Zougrana,mohamed-zougrana,0
+12183427,2025-10-08,74,0,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,2399613,Abdul Ayinde,abdoul-ayinde,0
+12183427,2025-10-08,81,0,1,1492520,Georgi Minoungou,georgi-minoungou,1106451,Dango Ouattara,dango-ouattara,0
+12183427,2025-10-08,82,0,1,785883,Saidou Simporé,saidou-simpore,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+12183427,2025-10-08,82,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,218160,Bertrand Traoré,bertrand-traore,0
+12183427,2025-10-08,90,2,0,793174,Mohamed Turay,,1800044,Nathaniel Jalloh,,0
+12183405,2025-10-12,57,0,0,2076076,Ahmed Hussien,,1381823,Bereket Desta,,0
+12183405,2025-10-12,57,0,0,1867181,Biniam Ayten,,1924931,Bereket Waza,,0
+12183405,2025-10-12,62,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,1106451,Dango Ouattara,dango-ouattara,0
+12183405,2025-10-12,62,0,1,1492520,Georgi Minoungou,georgi-minoungou,850011,Mohamed Konaté,mohamed-konate,0
+12183405,2025-10-12,63,0,0,2294753,Yetagesu Tariku,,1457873,Kitika Jemma,,0
+12183405,2025-10-12,63,0,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+12183405,2025-10-12,80,0,0,2245595,Nigatu Gebreselassie,,1139235,Chernet Gugsa,,0
+12183405,2025-10-12,80,0,0,2076099,Mohammed Abera,,1502247,Wogene Gezahegn,,0
+12183405,2025-10-12,83,0,1,806244,Ibrahim Blati Tourè,blati-toure,1183551,Mohamed Zougrana,mohamed-zougrana,0
+13424942,2025-12-24,53,0,0,1416384,Charles Ondo,,1064103,Luís Asué,,0
+13424942,2025-12-24,67,0,0,914248,Jannick Buyla,,792308,José Machín,,0
+13424942,2025-12-24,68,0,0,922371,Santiago Eneme,,259063,Iban Salvador,,0
+13424942,2025-12-24,70,0,1,865473,Stephane Aziz Ki,stephane-aziz-ki,1019038,Gustavo Sangaré,gustavo-sangare,0
+13424942,2025-12-24,70,0,1,911719,Lassina Traoré,lassina-traore,1102857,Pierre Landry Kaboré,pierre-landry-kabore,0
+13424942,2025-12-24,70,0,1,785883,Saidou Simporé,saidou-simpore,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+13424942,2025-12-24,79,0,1,1492520,Georgi Minoungou,georgi-minoungou,218160,Bertrand Traoré,bertrand-traore,0
+13424942,2025-12-24,82,0,0,949472,Marvin Anieboh,,786586,Pablo Ganet,,0
+13424942,2025-12-24,82,0,0,1160222,Dorian Hanza,,1095674,Loren Zúñiga,,0
+13424942,2025-12-24,89,0,1,1508537,Cyriaque Irié,cyriaque-irie,174911,Steeve Yago,steeve-yago,0
+13424954,2025-12-28,13,0,0,785926,Baghdad Bounedjah,,1049534,Jaouen Hadjam,,1
+13424954,2025-12-28,46,0,1,1492520,Georgi Minoungou,georgi-minoungou,1183551,Mohamed Zougrana,mohamed-zougrana,0
+13424954,2025-12-28,60,0,0,1103488,Rafik Belghali,,981168,Samir Chergui,,1
+13424954,2025-12-28,61,0,0,1018822,Zineddine Belaid,,158213,Riyad Mahrez,,0
+13424954,2025-12-28,66,0,1,911719,Lassina Traoré,lassina-traore,1102857,Pierre Landry Kaboré,pierre-landry-kabore,0
+13424954,2025-12-28,78,0,1,785883,Saidou Simporé,saidou-simpore,174911,Steeve Yago,steeve-yago,0
+13424954,2025-12-28,78,0,1,1508537,Cyriaque Irié,cyriaque-irie,1019038,Gustavo Sangaré,gustavo-sangare,0
+13424954,2025-12-28,87,0,0,945830,Himad Abdelli,,823733,Ismaël Bennacer,,0
+13424954,2025-12-28,88,0,0,1192318,Farès Chaïbi,,1107591,Mohamed Amoura,,0
+13424968,2025-12-31,46,0,1,1149858,Kilian Nikièma,kilian-nikiema,867299,Hervé Koffi,herve-koffi,1
+13424968,2025-12-31,59,0,1,1108094,Adamo Nagalo,adamo-nagalo,364758,Issoufou Dayo,issoufou-dayo,0
+13424968,2025-12-31,59,0,1,1106451,Dango Ouattara,dango-ouattara,1508537,Cyriaque Irié,cyriaque-irie,1
+13424968,2025-12-31,60,0,0,2208865,Muhamed Tia Asad,,990622,Yasir Mozamil,,0
+13424968,2025-12-31,74,0,1,1183551,Mohamed Zougrana,mohamed-zougrana,865473,Stephane Aziz Ki,stephane-aziz-ki,0
+13424968,2025-12-31,74,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,911719,Lassina Traoré,lassina-traore,0
+13424968,2025-12-31,81,0,0,2396532,Abdelsamad Manen,,1104515,Al-Gozoli Nooh,,0
+13424968,2025-12-31,81,0,0,990965,Mustafa Karshom,,1169811,Mohamed Kasri,,0
+13424968,2025-12-31,90,0,0,880502,Mohamed Abuaagla,,990898,Salaheldin Adil,,1
+14058095,2026-01-06,42,0,1,806244,Ibrahim Blati Tourè,blati-toure,1108094,Adamo Nagalo,adamo-nagalo,0
+14058095,2026-01-06,46,0,1,1492520,Georgi Minoungou,georgi-minoungou,911719,Lassina Traoré,lassina-traore,0
+14058095,2026-01-06,71,0,1,218160,Bertrand Traoré,bertrand-traore,1508537,Cyriaque Irié,cyriaque-irie,0
+14058095,2026-01-06,71,0,1,1006189,Issa Kaboré,issa-kabore,174911,Steeve Yago,steeve-yago,0
+14058095,2026-01-06,75,0,0,940328,Jean-Philippe Krasso,,930245,Evann Guessand,,0
+14058095,2026-01-06,75,0,0,1568123,Bazoumana Touré,,2087085,Yan Diomande,,0
+14058095,2026-01-06,79,0,1,983282,Ousseni Bouda,ousseni-bouda,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+14058095,2026-01-06,81,0,0,1188191,Oumar Diakité,,971037,Amad Diallo,,0
+14058095,2026-01-06,81,0,0,191188,Seko Fofana,,1888002,Christ Inao Oulaï,,0
+14058095,2026-01-06,90,3,0,1394342,Ousmane Diomande,,973437,Odilon Kossounou,,1
+16189861,2026-06-05,46,0,1,983282,Ousseni Bouda,ousseni-bouda,1492520,Georgi Minoungou,georgi-minoungou,0
+16189861,2026-06-05,46,0,1,2618161,Pakwo Gnanou,pakwo-gnanou,1019038,Gustavo Sangaré,gustavo-sangare,0
+16189861,2026-06-05,60,0,0,1545186,Amir Ibragimov,,358746,Anton Miranchuk,,0
+16189861,2026-06-05,60,0,0,795746,Georgiy Melkadze,,921347,Maksim Glushenkov,,0
+16189861,2026-06-05,61,0,0,2067016,Kirill Danilov,,1004394,Evgeniy Morozov,,1
+16189861,2026-06-05,61,0,0,919370,Maksim Petrov,,966520,Lechi Sadulaev,,0
+16189861,2026-06-05,61,0,0,1432296,Matvey Kislyak,,939507,Nail Umyarov,,0
+16189861,2026-06-05,61,0,0,996969,Ilya Vakhaniya,,842947,Mingiyan Beveev,,0
+16189861,2026-06-05,70,0,1,785883,Saidou Simporé,saidou-simpore,1170523,Lohann Doucet,lohann-doucet,0
+16189861,2026-06-05,70,0,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,850011,Mohamed Konaté,mohamed-konate,0
+16189861,2026-06-05,77,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,1106451,Dango Ouattara,dango-ouattara,0
+16189861,2026-06-05,79,0,0,923985,Aleksandr Silyanov,,821475,Danil Krugovoy,,0
+16189861,2026-06-05,79,0,0,845347,Ivan Oblyakov,,324353,Aleksey Miranchuk,,0
+16189861,2026-06-05,88,0,1,1636036,Aboubacar Bassinga,aboubacar-bassinga,1855502,Arsène Kouassi,arsene-kouassi,0
+16205035,2026-06-09,46,0,0,917236,Artem Kontsevoy,,110653,Mikhail Kozlov,,0
+16205035,2026-06-09,46,0,0,1000420,Vladislav Kalinin,,981511,Gleb Shevchenko,,0
+16205035,2026-06-09,60,0,1,1490960,Moise Kaboré,moise-kabore,1102857,Pierre Landry Kaboré,pierre-landry-kabore,0
+16205035,2026-06-09,60,0,1,1492520,Georgi Minoungou,georgi-minoungou,983282,Ousseni Bouda,ousseni-bouda,0
+16205035,2026-06-09,62,0,0,1088702,Karen Vardanyan,,1151998,Ruslan Myalkovskiy,,0
+16205035,2026-06-09,70,0,0,1424808,Artem Sokolovskiy,,797646,Valeriy Gromyko,,0
+16205035,2026-06-09,70,0,0,1027249,Ruslan Lisakovich,,358118,Evgeniy Yablonskiy,,0
+16205035,2026-06-09,70,0,0,883953,Kirill Pechenin,,856293,Vladislav Malkevich,,0
+16205035,2026-06-09,71,0,1,785883,Saidou Simporé,saidou-simpore,1170523,Lohann Doucet,lohann-doucet,0
+16205035,2026-06-09,71,0,1,910053,Arthur Zagre,arthur-zagre,1099259,Ismahila Ouédraogo,ismahila-ouedraogo,0
+16205035,2026-06-09,79,0,0,1006699,Yuri Kovalev,,1126180,Artem Shumanskiy,,0
+16205035,2026-06-09,79,0,0,1967637,Kirill Gomanov,,889009,Max Ebong,,0
+16205035,2026-06-09,79,0,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,1508537,Cyriaque Irié,cyriaque-irie,0
+16205035,2026-06-09,79,0,1,1636036,Aboubacar Bassinga,aboubacar-bassinga,1855502,Arsène Kouassi,arsene-kouassi,0
