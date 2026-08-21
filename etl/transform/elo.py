@@ -1,5 +1,8 @@
 import pandas as pd
 
+from ..config import STAGING, TEAM
+from . import matches as matches_mod
+
 CONT_FINALS = ("african cup of nations", "copa américa", "uefa euro",
                "afc asian cup", "gold cup", "oceania nations cup", "confederations cup")
 
@@ -67,10 +70,15 @@ def run_elo(df, team):
         ((t, e) for t, e in ratings.items() if last_played[t] >= cutoff),
         key=lambda kv: -kv[1],
     )
-    peak = max(timeline, key=lambda p: p["elo"]) if timeline else None
-    return {
-        "timeline": timeline,
-        "current": timeline[-1]["elo"] if timeline else None,
-        "peak": peak,
-        "ranked": [{"team": t, "elo": round(e, 1)} for t, e in ranked],
-    }
+    return timeline, [{"rank": i + 1, "team": t, "elo": round(e, 1)}
+                      for i, (t, e) in enumerate(ranked)]
+
+
+def run():
+    df = matches_mod.load_results()
+    timeline, ranked = run_elo(df, TEAM)
+    STAGING.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(timeline).to_csv(STAGING / "elo_timeline.csv", index=False)
+    pd.DataFrame(ranked).to_csv(STAGING / "elo_rankings.csv", index=False)
+    print(f"wrote {STAGING / 'elo_timeline.csv'} ({len(timeline)} rows), "
+          f"elo_rankings.csv ({len(ranked)} rows)")

@@ -1,0 +1,6 @@
+window_id,label_fr,label_en,url,section_id,window_date
+afcon2021,CAN 2021 (janv. 2022),AFCON 2021 (Jan 2022),https://en.wikipedia.org/wiki/2021_Africa_Cup_of_Nations_squads,Burkina_Faso,2022-01-09
+afcon2023,CAN 2023 (janv. 2024),AFCON 2023 (Jan 2024),https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_squads,Burkina_Faso,2024-01-13
+afcon2025,CAN 2025 (déc. 2025),AFCON 2025 (Dec 2025),https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_squads,Burkina_Faso,2025-12-21
+current,Effectif actuel (juin 2026),Current squad (June 2026),TEAM_PAGE,Current_squad,2026-06-09
+recent,Convocations récentes (12 mois),Recent call-ups (12 months),TEAM_PAGE,Recent_call-ups,2026-06-01

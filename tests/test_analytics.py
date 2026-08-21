@@ -1,6 +1,6 @@
 from datetime import date
 
-from pipeline.analytics import age_on, bucket, league_group, peak_phase
+from etl.analytics import age_on, bucket, league_group, peak_phase
 
 
 def test_bucket_fractional_ages():

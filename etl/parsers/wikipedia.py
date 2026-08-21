@@ -8,9 +8,12 @@ FLAG_RE = re.compile(r"Flag_of_(?:the_)?(.+?)\.(?:svg|png|gif)", re.I)
 YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
 
 
+def _soup(html):
+    return BeautifulSoup(html, "lxml")
+
+
 def _heading(soup, section_id):
-    el = soup.find(id=section_id)
-    return el
+    return soup.find(id=section_id)
 
 
 def _next_table(el, classes=None):
@@ -31,23 +34,30 @@ def _flag_country(cell):
     return None
 
 
-def _player_rows(table):
+def parse_players(html, section_id):
+    table = _next_table(_heading(_soup(html), section_id))
     players = []
     if table is None:
         return players
     for tr in table.find_all("tr", class_="nat-fs-player"):
         tds = tr.find_all("td")
         th = tr.find("th")
-        if th is None or len(tds) < 6:
+        if th is None or len(tds) < 5:
             continue
         name_link = th.find("a")
         name = (name_link or th).get_text(strip=True)
-        pos_cell = tds[1].get_text(strip=True)
+        # locate the DOB cell: squad tables have a leading shirt-number column,
+        # call-up tables do not
+        dob_idx = next((i for i, td in enumerate(tds[:4])
+                        if DOB_RE.search(td.get_text(" ", strip=True))), None)
+        if dob_idx is None or dob_idx < 1 or len(tds) < dob_idx + 4:
+            continue
+        pos_cell = tds[dob_idx - 1].get_text(strip=True)
         pos = re.sub(r"^\d+", "", pos_cell) or pos_cell
-        dob_m = DOB_RE.search(tds[2].get_text(" ", strip=True))
-        caps = tds[3].get_text(strip=True)
-        goals = tds[4].get_text(strip=True)
-        club_cell = tds[5]
+        dob_m = DOB_RE.search(tds[dob_idx].get_text(" ", strip=True))
+        caps = tds[dob_idx + 1].get_text(strip=True)
+        goals = tds[dob_idx + 2].get_text(strip=True)
+        club_cell = tds[dob_idx + 3]
         club_links = [a for a in club_cell.find_all("a") if a.get_text(strip=True)]
         club = club_links[-1].get_text(strip=True) if club_links else club_cell.get_text(strip=True)
         players.append({
@@ -58,7 +68,7 @@ def _player_rows(table):
             "goals": int(goals) if goals.isdigit() else 0,
             "club": club,
             "club_country": _flag_country(club_cell),
-            "note": tds[6].get_text(" ", strip=True) if len(tds) > 6 else None,
+            "note": tds[dob_idx + 4].get_text(" ", strip=True) if len(tds) > dob_idx + 4 else None,
         })
     return players
 
@@ -103,6 +113,15 @@ def _leaders(table):
     return rows[:12]
 
 
+def parse_leaders(html):
+    soup = _soup(html)
+    capped = _leaders(_next_table(
+        _heading(soup, "Most_capped_players") or _heading(soup, "Most_appearances"),
+        classes=["wikitable"]))
+    scorers = _leaders(_next_table(_heading(soup, "Top_goalscorers"), classes=["wikitable"]))
+    return capped, scorers
+
+
 def _expand_table(table):
     grid = []
     pending = {}
@@ -138,7 +157,8 @@ def _expand_table(table):
     return grid
 
 
-def _afcon_record(soup):
+def parse_afcon_record(html):
+    soup = _soup(html)
     el = _heading(soup, "Africa_Cup_of_Nations_2") or _heading(soup, "Africa_Cup_of_Nations_record")
     table = _next_table(el, classes=["wikitable"])
     if table is None:
@@ -163,23 +183,9 @@ def _afcon_record(soup):
     return editions
 
 
-def parse_page(html):
-    soup = BeautifulSoup(html, "lxml")
-    squad = _player_rows(_next_table(_heading(soup, "Current_squad")))
-    callups = _player_rows(_next_table(_heading(soup, "Recent_call-ups")))
-    capped = _leaders(_next_table(
-        _heading(soup, "Most_capped_players") or _heading(soup, "Most_appearances"),
-        classes=["wikitable"]))
-    scorers = _leaders(_next_table(_heading(soup, "Top_goalscorers"), classes=["wikitable"]))
-    as_of = None
+def parse_as_of(html):
+    soup = _soup(html)
     m = soup.find(string=re.compile(r"Caps and goals (?:are )?correct as of", re.I))
     if m:
-        as_of = re.sub(r"\s+", " ", m.find_parent().get_text(" ", strip=True))
-    return {
-        "squad": squad,
-        "callups": callups,
-        "most_capped": capped,
-        "top_scorers": scorers,
-        "afcon_record": _afcon_record(soup),
-        "as_of": as_of,
-    }
+        return re.sub(r"\s+", " ", m.find_parent().get_text(" ", strip=True))
+    return None

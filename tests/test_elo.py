@@ -1,4 +1,4 @@
-from pipeline.elo import expected, gd_multiplier, k_factor, update
+from etl.transform.elo import expected, gd_multiplier, k_factor, update
 
 
 def test_k_factor():

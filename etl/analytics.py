@@ -3,7 +3,7 @@ from datetime import date
 import numpy as np
 
 from .config import AFCON_2027, WC_2030, PEAK_WINDOW, TOP5_LEAGUES, TEAM
-from .elo import expected
+from .transform.elo import expected
 
 CAF = {
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon",
@@ -58,7 +58,7 @@ def peak_phase(pos, age):
 
 
 def league_group(country):
-    if country is None:
+    if not country:
         return "unknown"
     if country == "Burkina Faso":
         return "home"
@@ -155,7 +155,7 @@ def elo_forecast(timeline):
     }
 
 
-def win_expectancy(ranked, team):
+def win_expectancy(ranked, team=TEAM):
     elos = {r["team"]: r["elo"] for r in ranked}
     mine = elos.get(team)
     if mine is None:
@@ -171,20 +171,20 @@ def win_expectancy(ranked, team):
     return out
 
 
-def elo_summary(elo_data, team=TEAM):
-    ranked = elo_data["ranked"]
-    world_rank = next((i + 1 for i, r in enumerate(ranked) if r["team"] == team), None)
+def elo_summary(timeline, ranked, team=TEAM):
+    world_rank = next((r["rank"] for r in ranked if r["team"] == team), None)
     caf = [r for r in ranked if r["team"] in CAF]
     caf_rank = next((i + 1 for i, r in enumerate(caf) if r["team"] == team), None)
+    peak = max(timeline, key=lambda p: p["elo"]) if timeline else None
     return {
-        "timeline": elo_data["timeline"],
-        "current": elo_data["current"],
-        "peak": elo_data["peak"],
+        "timeline": timeline,
+        "current": timeline[-1]["elo"] if timeline else None,
+        "peak": peak,
         "world_rank": world_rank,
         "n_world": len(ranked),
         "caf_rank": caf_rank,
         "n_caf": len(caf),
         "caf_top10": caf[:10],
-        "forecast": elo_forecast(elo_data["timeline"]),
+        "forecast": elo_forecast(timeline),
         "win_expectancy": win_expectancy(ranked, team),
     }

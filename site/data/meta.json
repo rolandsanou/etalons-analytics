@@ -1,8 +1,10 @@
 {
- "generated_at": "2026-08-20T17:40:12",
+ "generated_at": "2026-08-21T09:44:31",
  "team": "Burkina Faso",
+ "stats_since": "2022-01-01",
  "sources": {
-  "squad": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
-  "results": "https://github.com/martj42/international_results"
+  "squads_callups": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
+  "results": "https://github.com/martj42/international_results",
+  "player_match_stats": "Sofascore (unofficial API, non-commercial attribution)"
  }
 }

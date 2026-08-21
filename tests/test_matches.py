@@ -1,6 +1,6 @@
 import pandas as pd
 
-from pipeline.results import _afcon_editions, classify_tournament, team_matches
+from etl.transform.matches import afcon_editions, classify_tournament, team_matches
 
 
 def test_classify_tournament():
@@ -25,7 +25,7 @@ def test_afcon_edition_clustering_across_new_year():
     df["date"] = pd.to_datetime(df["date"])
     m = team_matches(df, "Burkina Faso")
     m["comp"] = m.tournament.map(classify_tournament)
-    editions = _afcon_editions(m)
+    editions = afcon_editions(m)
     years = sorted(e["year"] for e in editions)
     assert years == [2021, 2025]
     ed2025 = next(e for e in editions if e["year"] == 2025)

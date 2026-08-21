@@ -2333,42 +2333,52 @@
  "n_caf": 53,
  "caf_top10": [
   {
+   "rank": 10,
    "team": "Morocco",
    "elo": 2027.2
   },
   {
+   "rank": 26,
    "team": "Nigeria",
    "elo": 1881.5
   },
   {
+   "rank": 27,
    "team": "Senegal",
    "elo": 1879.6
   },
   {
+   "rank": 28,
    "team": "Egypt",
    "elo": 1858.5
   },
   {
+   "rank": 29,
    "team": "Algeria",
    "elo": 1857.3
   },
   {
+   "rank": 32,
    "team": "Ivory Coast",
    "elo": 1841.5
   },
   {
+   "rank": 38,
    "team": "DR Congo",
    "elo": 1808.4
   },
   {
+   "rank": 58,
    "team": "Cameroon",
    "elo": 1723.7
   },
   {
+   "rank": 62,
    "team": "Mali",
    "elo": 1707.9
   },
   {
+   "rank": 66,
    "team": "Cape Verde",
    "elo": 1698.0
   }
