@@ -127,6 +127,10 @@ python -m http.server 8123 --directory site
 - [x] Goal timelines & substitutions from the incidents endpoint
 - [x] Player importance profiles (gated components, no composite index)
 - [x] Bench impact
+- [ ] Team playing style (possession, directness, big chances, duels — from the match
+      statistics endpoint, 1st/2nd-half splits) and style vs opponent strength
+- [ ] Resilience: deficit ladder, reply time after conceding, output by game state,
+      clutch scorers (equalizers / go-ahead goals)
 - [ ] Qualifier-window squad lists (curated seed)
 - [ ] Player detail pages
 - [ ] xG (no free CAF source today), Transfermarkt values (blocked)
