@@ -305,6 +305,54 @@ function renderLeagueBar() {
     LEAGUE_ORDER.filter(g => byG[g]).map(g => [t("lg_" + g), byG[g]]));
 }
 
+// ---------- formations ----------
+
+const ST_GOOD = "#0ca30c", ST_CRIT = "#d03b3b";
+
+function formationLabel(r) {
+  if (r.formation !== "others") { return r.formation; }
+  const n = (r.pooled_from || "").split(";").filter(Boolean).length;
+  return t("forms_other", { n });
+}
+
+function renderFormsChart() {
+  const rows = DATA.team.formations;
+  const cats = rows.map(formationLabel);
+  const tip = r => `<b>${formationLabel(r)}</b><br/>` + t("forms_tip", {
+    n: r.matches, ppg: fmt(r.ppg, 2), gf: r.gf, gfpm: fmt(r.gf_pm, 2),
+    ga: r.ga, gapm: fmt(r.ga_pm, 2),
+    elo: r.opp_elo_avg ? fmt(r.opp_elo_avg) : "–", nelo: r.n_elo,
+  });
+  const seg = (name, key, color, labelColor, radius) => ({
+    name, type: "bar", stack: "wdl",
+    data: rows.map(r => num(r[key])),
+    barMaxWidth: 18,
+    itemStyle: { color, borderColor: SURFACE, borderWidth: 1,
+      borderRadius: radius || 0 },
+    label: { show: true, color: labelColor, fontSize: 11,
+      formatter: p => (p.value > 0 ? p.value : "") },
+  });
+  mkChart("c_forms", {
+    grid: { left: 8, right: 30, top: 8, bottom: 28, containLabel: true },
+    tooltip: tooltip({ trigger: "axis", axisPointer: { type: "shadow" },
+      formatter: params => tip(rows[params[0].dataIndex]) }),
+    legend: legend(),
+    xAxis: axisX({ type: "value", show: false }),
+    yAxis: axisY({ type: "category", inverse: true, splitLine: { show: false },
+      data: cats, axisLabel: { color: INK2, fontSize: 12 } }),
+    series: [
+      seg(t("legend_w"), "w", ST_GOOD, "#fff"),
+      seg(t("legend_d"), "d", BASELINE, INK2),
+      seg(t("legend_l"), "l", ST_CRIT, "#fff", [0, 4, 4, 0]),
+    ],
+  });
+  tableView("card_forms",
+    ["", "Pld", t("legend_w"), t("legend_d"), t("legend_l"), "BM/GF", "BE/GA",
+     "Pts/m", "Elo adv.", "n Elo"],
+    rows.map(r => [formationLabel(r), r.matches, r.w, r.d, r.l, r.gf, r.ga,
+      fmt(r.ppg, 2), r.opp_elo_avg ? fmt(r.opp_elo_avg) : "–", r.n_elo]));
+}
+
 // ---------- history ----------
 
 function renderDecadeChart() {
@@ -599,6 +647,7 @@ function renderAll() {
   renderPoolTable();
   renderClubChart();
   renderLeagueBar();
+  renderFormsChart();
   renderDecadeChart();
   renderFormChart();
   renderAfconChart();
@@ -610,7 +659,7 @@ function renderAll() {
 window.renderAll = renderAll;
 
 async function boot() {
-  const names = ["squad", "pool", "history", "elo", "meta"];
+  const names = ["squad", "pool", "history", "elo", "team", "meta"];
   const res = await Promise.all(names.map(n => fetch(`data/${n}.json`).then(r => r.json())));
   DATA = Object.fromEntries(names.map((n, i) => [n, res[i]]));
   document.querySelectorAll(".lang button").forEach(b => {
