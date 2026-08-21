@@ -125,6 +125,43 @@ def _check_goal_events(report):
                    f"{len(bf_goals)} BF goals, {unattributed} scorers not matched to registry"))
 
 
+def _check_timeline(report):
+    path = STAGING / "match_states.csv"
+    if not path.exists():
+        report.append(("match_states: staged", "FAIL", "missing"))
+        return
+    states = read_csv(path)
+    bad_len = [s for s in states
+               if not (85 <= float(s["effective_length"]) <= 135)]
+    report.append(("match_states: effective length sane", "FAIL" if bad_len else "PASS",
+                   f"{len(states)} matches, {len(bad_len)} outside [85,135]"))
+    bad_sum = []
+    for s in states:
+        total = (float(s["min_leading"]) + float(s["min_level"])
+                 + float(s["min_trailing"]))
+        if abs(total - float(s["effective_length"])) > 0.5:
+            bad_sum.append(s["event_id"])
+    report.append(("match_states: state minutes sum to length",
+                   "FAIL" if bad_sum else "PASS",
+                   f"{len(bad_sum)} mismatches"))
+    eff_by_event = {s["event_id"]: float(s["effective_length"]) for s in states}
+    apps = read_csv(STAGING / "appearances.csv")
+    played = [a for a in apps if a["played"] == "1" and a.get("entry_min") != ""]
+    off = []
+    for a in played:
+        # minutesPlayed is capped at 90/120 while the clock includes stoppage,
+        # so allow each match's own stoppage plus a small margin
+        eff = eff_by_event.get(a["event_id"], 95)
+        reg = 120 if eff > 110 else 90
+        allowance = max(eff - reg, 0) + 3
+        delta = abs((float(a["exit_min"]) - float(a["entry_min"])) - int(a["minutes"]))
+        if delta > allowance:
+            off.append(a)
+    pct = round(100 * len(off) / len(played), 1) if played else 0
+    report.append(("appearances: presence vs minutes", "WARN" if pct > 10 else "PASS",
+                   f"{pct}% of {len(played)} presences deviate beyond stoppage allowance"))
+
+
 def _check_events(report):
     events = read_csv(STAGING / "events.csv")
     if not events:
@@ -153,6 +190,7 @@ def run():
     _check_appearances(report, ids)
     _check_events(report)
     _check_goal_events(report)
+    _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
     fails = 0

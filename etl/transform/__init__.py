@@ -1,4 +1,4 @@
-from . import appearances, elo, incidents, matches, players
+from . import appearances, elo, incidents, matches, players, timeline
 
 
 def run():
@@ -7,5 +7,6 @@ def run():
     registry, callups = players.build()
     appearances.run(registry)
     incidents.run(registry)
+    timeline.run()
     players.enrich(registry)
     players.write(registry, callups)
