@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étalons Analytics — Burkina Faso</title>
+<meta name="description" content="Analyse de données de l'équipe nationale senior du Burkina Faso : effectif, performances des joueurs depuis la CAN 2021, histoire, Elo et projections.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="star">★</span> Étalons Analytics</div>
+    <nav>
+      <a href="#effectif" data-i18n="nav_squad"></a>
+      <a href="#joueurs" data-i18n="nav_pool"></a>
+      <a href="#repartitions" data-i18n="nav_breakdowns"></a>
+      <a href="#histoire" data-i18n="nav_history"></a>
+      <a href="#elo" data-i18n="nav_elo"></a>
+      <a href="#projections" data-i18n="nav_proj"></a>
+      <a href="#methodo" data-i18n="nav_method"></a>
+    </nav>
+    <div class="lang">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1><span aria-hidden="true">🇧🇫</span> Les Étalons — Burkina Faso</h1>
+    <p class="tagline" data-i18n="tagline"></p>
+  </div>
+  <div class="tiles" id="tiles"></div>
+
+  <section id="effectif">
+    <h2 data-i18n="s_squad"></h2>
+    <p class="lead" id="lead_squad"></p>
+    <div class="grid">
+      <div class="card" id="card_pos">
+        <h3 data-i18n="c_pos"></h3>
+        <p class="sub" data-i18n="c_pos_sub"></p>
+        <div class="chart short" id="c_pos"></div>
+      </div>
+      <div class="card" id="card_age">
+        <h3 data-i18n="c_age"></h3>
+        <p class="sub" data-i18n="c_age_sub"></p>
+        <div class="chart short" id="c_age"></div>
+      </div>
+      <div class="card w12">
+        <h3 data-i18n="t_squad"></h3>
+        <div class="tablewrap"><table id="squad_table"></table></div>
+        <details class="tv"><summary data-i18n="t_callups"></summary>
+          <div class="tablewrap"><table id="callups_table"></table></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="joueurs">
+    <h2 data-i18n="s_pool"></h2>
+    <p class="lead" data-i18n="s_pool_lead"></p>
+    <div class="grid">
+      <div class="card" id="card_minutes">
+        <h3 data-i18n="c_minutes"></h3>
+        <p class="sub" data-i18n="c_minutes_sub"></p>
+        <div class="chart tall" id="c_minutes"></div>
+      </div>
+      <div class="card" id="card_goals">
+        <h3 data-i18n="c_goals"></h3>
+        <p class="sub" data-i18n="c_goals_sub"></p>
+        <div class="chart tall" id="c_goals"></div>
+      </div>
+      <div class="card w12">
+        <input type="search" id="pool_search" class="search">
+        <div class="tablewrap pool"><table id="pool_table"></table></div>
+        <p class="sub" id="pool_note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="repartitions">
+    <h2 data-i18n="s_break"></h2>
+    <p class="lead" data-i18n="s_break_lead"></p>
+    <div class="grid">
+      <div class="card" id="card_clubs">
+        <h3 data-i18n="c_clubs"></h3>
+        <p class="sub" data-i18n="c_clubs_sub"></p>
+        <div class="chart tall" id="c_clubs"></div>
+      </div>
+      <div class="card" id="card_leagues">
+        <h3 data-i18n="c_leagues"></h3>
+        <p class="sub" data-i18n="c_leagues_sub"></p>
+        <div class="league-bar" id="league_bar"></div>
+        <div class="league-legend" id="league_legend"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="histoire">
+    <h2 id="title_history"></h2>
+    <p class="lead" id="lead_history"></p>
+    <div class="grid">
+      <div class="card" id="card_decades">
+        <h3 data-i18n="c_decades"></h3>
+        <p class="sub" data-i18n="c_decades_sub"></p>
+        <div class="chart short" id="c_decades"></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="c_form"></h3>
+        <p class="sub" data-i18n="c_form_sub"></p>
+        <div class="chart short" id="c_form"></div>
+      </div>
+      <div class="card w12" id="card_afcon">
+        <h3 data-i18n="c_afcon"></h3>
+        <p class="sub" data-i18n="c_afcon_sub"></p>
+        <div class="chart" id="c_afcon"></div>
+      </div>
+      <div class="card w4">
+        <h3 data-i18n="t_capped"></h3>
+        <div class="tablewrap"><table id="capped_table"></table></div>
+      </div>
+      <div class="card w4">
+        <h3 data-i18n="t_scorers"></h3>
+        <div class="tablewrap"><table id="scorers_table"></table></div>
+      </div>
+      <div class="card w4">
+        <h3 data-i18n="t_last10"></h3>
+        <div class="tablewrap"><table id="last10_table"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="elo">
+    <h2 data-i18n="s_elo"></h2>
+    <p class="lead" data-i18n="s_elo_lead"></p>
+    <div class="grid">
+      <div class="card w8" id="card_elo">
+        <h3 data-i18n="c_elo_tl"></h3>
+        <p class="sub" data-i18n="c_elo_tl_sub"></p>
+        <div class="chart tall" id="c_elo_tl"></div>
+      </div>
+      <div class="card w4">
+        <h3 data-i18n="c_winexp"></h3>
+        <p class="sub" data-i18n="c_winexp_sub"></p>
+        <div class="chart tall" id="c_winexp"></div>
+        <p class="sub" id="winexp_note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projections">
+    <h2 data-i18n="s_proj"></h2>
+    <p class="lead" data-i18n="s_proj_lead"></p>
+    <div class="grid">
+      <div class="card w12" id="card_proj">
+        <h3 data-i18n="c_proj_age"></h3>
+        <p class="sub" data-i18n="c_proj_age_sub"></p>
+        <div class="chart" id="c_proj_age"></div>
+        <p class="core" id="core_box"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="methodo">
+    <h2 data-i18n="s_method"></h2>
+    <div class="methodo" id="methodo"></div>
+  </section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
