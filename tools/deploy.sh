@@ -13,6 +13,7 @@ cd "$(dirname "$0")/.."
 python -m etl load
 python tools/build_site.py
 python tools/check_links.py
+python tools/check_seo.py
 
 git add site data
 git diff --cached --quiet || git commit -m "Rebuild site data and pages"

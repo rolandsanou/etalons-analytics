@@ -8,6 +8,8 @@ the /etalons-analytics/ subpath on GitHub Pages.
 
 import posixpath
 
+from .seo import canonical_url
+
 LANGS = ("fr", "en")
 
 ROUTES = {
@@ -63,11 +65,16 @@ class Ctx:
         self.route = route
         self.slug = slug
         self.self_path = path_for(lang, route, slug)
+        self.canonical = canonical_url(self.self_path)
         self.t = translator(lang)
         self.result_letter = RESULT_LETTER[lang]
 
     def url(self, route, slug=None):
         return rel(self.self_path, path_for(self.lang, route, slug))
+
+    def abs_url(self, route, slug=None):
+        """Absolute URL — for structured data, which cannot use relative paths."""
+        return canonical_url(path_for(self.lang, route, slug))
 
     def asset(self, path):
         return rel(self.self_path, path)

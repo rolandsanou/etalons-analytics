@@ -90,8 +90,12 @@ site/
   assets/boot.js     per-page data fetch, renderer dispatch, scroll motion
 tools/
   build_site.py      generates every page (python -m etl pages)
-  site_builder/      layout.py (shell), hubs.py, detail.py, data.py
+  site_builder/      layout.py (shell), hubs.py, detail.py, data.py,
+                     routes.py (URLs), strings.py (EN copy), seo.py (metadata)
   check_links.py     fails if any internal link is broken
+  check_seo.py       fails on a wrong canonical, missing hreflang, broken
+                     og:image or unparseable structured data
+  make_og_image.py   redraws the social cards (needs pillow; output committed)
   gen_data_model.py  regenerates docs/DATA_MODEL.md from the field constants
 ```
 
@@ -124,7 +128,18 @@ Three rules that are easy to break:
   and press photos from the stats providers are deliberately never used.
 
 After changing a page template, run `python -m etl pages` then
-`python tools/check_links.py` — CI runs both.
+`python tools/check_links.py` and `python tools/check_seo.py` — CI runs all three.
+
+- **Structured data must not outrun the data.** The JSON-LD in `seo.py` asserts
+  only what the tables support. A match is described with `competitor` and no
+  `homeTeam`/`awayTeam`, because the `venue` column holds just H/A and marks the
+  nominal designation at a tournament — AFCON 2022 group games played in Cameroon
+  appear under both letters. Machine-readable claims are held to the same
+  standard as the ones on the page.
+- **The charting library is loaded only where a chart exists.** `layout.page()`
+  looks for a chart container in the body it was handed; the match and player
+  pages have none, so 383 of 393 pages skip a megabyte of JavaScript. The check
+  is made against the markup rather than a flag so it cannot fall out of step.
 
 ## Adding an analysis (the four-step recipe)
 

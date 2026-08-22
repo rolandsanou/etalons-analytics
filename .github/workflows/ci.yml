@@ -36,6 +36,9 @@ jobs:
       - name: No broken internal links
         run: python tools/check_links.py
 
+      - name: Search metadata is complete
+        run: python tools/check_seo.py
+
       - name: Data dictionary is up to date
         run: |
           python tools/gen_data_model.py

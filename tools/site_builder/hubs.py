@@ -9,6 +9,7 @@ import unicodedata
 
 from .detail import (POS_LABEL_KEY, POS_ORDER, match_slug, ordinal,
                      _fmt, _int)
+from . import seo
 from .layout import avatar, card, esc, hero, page, section
 
 CAMPAIGNS = [
@@ -139,8 +140,9 @@ def home_page(d, ctx):
     <div class="grid">{nav_cards}</div>
   </section>
 </main>"""
-    return page(ctx, title=t("Accueil"),
-                description=t("Analyse de données de l'équipe nationale du Burkina Faso : effectif, performances individuelles, style de jeu, histoire et projections."),
+    description = t("Analyse de données de l'équipe nationale du Burkina Faso : effectif, performances individuelles, style de jeu, histoire et projections.")
+    return page(ctx, title=t("Accueil"), description=description,
+                structured=(seo.website(ctx.lang, description),),
                 body=body, needs=("meta",))
 
 
@@ -462,4 +464,7 @@ def methodology_page(d, ctx):
 </main>"""
     return page(ctx, title=t("Méthodologie"),
                 description=t("Sources, formules, seuils et limites du projet Étalons Analytics."),
+                # the marts are openly licensed, so declare them as a Dataset —
+                # this is the page that documents what they contain
+                structured=(seo.dataset(ctx.lang, ctx.canonical),),
                 body=body, needs=("meta",))

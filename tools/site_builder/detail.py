@@ -9,6 +9,7 @@ gets a real, crawlable page.
 import re
 import unicodedata
 
+from . import seo
 from .layout import avatar, card, esc, page
 
 # French source strings double as the translation keys (see strings.py)
@@ -249,14 +250,26 @@ def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
   </div>
   <div class="pager">{pager_prev}{pager_next}</div>
 </main>"""
+    scoreline = f"Burkina Faso {gf}–{ga} {event['opponent']}"
+    spelled_date = seo.long_date(event["date"], ctx.lang)
     return page(ctx,
-                title=f"Burkina Faso {gf}–{ga} {event['opponent']}",
+                title=scoreline,
+                full_title=f"{scoreline} — {spelled_date}",
                 description=t("{result} {gf}-{ga} contre {opponent} le {date} "
                               "({tournament}) : composition, statistiques et "
                               "chronologie des buts.",
                               result=result, gf=gf, ga=ga,
-                              opponent=event["opponent"], date=event["date"],
+                              opponent=event["opponent"], date=spelled_date,
                               tournament=event["tournament"]),
+                structured=(
+                    seo.sports_event(ctx.lang, event, ctx.canonical,
+                                     f"{scoreline} ({spelled_date})",
+                                     t("Burkina Faso")),
+                    seo.breadcrumbs([
+                        (t("Accueil"), ctx.abs_url("home")),
+                        (t("Matchs"), ctx.abs_url("matches")),
+                        (scoreline, None)]),
+                ),
                 body=body, page_class="match-page")
 
 
@@ -362,7 +375,7 @@ def player_page(d, ctx, profile, players_with_pages):
 
     head = f"""<div class="hero-band"><div class="inner">
   <div class="entity">
-    {avatar(ctx.asset(photo) if photo else None, name, "photo")}
+    {avatar(ctx.asset(photo) if photo else None, name, "photo", eager=True)}
     <div class="meta">
       <p class="eyebrow">{esc(status)}</p>
       <h1>{esc(name)}</h1>
@@ -389,8 +402,35 @@ def player_page(d, ctx, profile, players_with_pages):
     {card(width="w12", title_html=f'<h3>{esc(t("Match par match"))}</h3>', extra=table)}
   </div>
 </main>"""
+    # A description carrying this player's actual figures is unique per page and
+    # tells a searcher something; the generic sentence is only the fallback for
+    # players with no appearances in the window.
+    if _int(profile.get("apps")):
+        description = t("{name} ({pos}, {club}) avec le Burkina Faso depuis 2022 : "
+                        "{apps} apparitions, {minutes} minutes, {goals} buts. "
+                        "Fiche complète, match par match.",
+                        name=name, pos=pos, club=club,
+                        apps=profile["apps"], minutes=_fmt(profile.get("minutes")),
+                        goals=_int(profile.get("goals")))
+    else:
+        description = t("{name} ({pos}, {club}) : sélections, minutes, buts "
+                        "et performances avec les Étalons du Burkina Faso "
+                        "depuis 2022.", name=name, pos=pos, club=club)
+
     return page(ctx, title=name,
-                description=t("{name} ({pos}, {club}) : sélections, minutes, buts "
-                              "et performances avec les Étalons du Burkina Faso "
-                              "depuis 2022.", name=name, pos=pos, club=club),
+                full_title=t("{name} — statistiques Burkina Faso", name=name),
+                description=description,
+                og_type="profile",
+                # a portrait is tall: the square card crops to the face, where
+                # the wide card would letterbox it
+                og_image=photo,
+                og_card="summary" if photo else "summary_large_image",
+                structured=(
+                    seo.person(ctx.lang, profile, ctx.canonical,
+                               seo.absolute(photo) if photo else None),
+                    seo.breadcrumbs([
+                        (t("Accueil"), ctx.abs_url("home")),
+                        (t("Joueurs"), ctx.abs_url("players")),
+                        (name, None)]),
+                ),
                 body=body, page_class="player-page")

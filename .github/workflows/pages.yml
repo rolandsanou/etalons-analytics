@@ -39,6 +39,7 @@ jobs:
           python -m etl load
           python tools/build_site.py
           python tools/check_links.py
+          python tools/check_seo.py
 
       - uses: actions/configure-pages@v5
 

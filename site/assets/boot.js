@@ -70,15 +70,9 @@ function renderStatic() {
   if (search) { search.placeholder = t("pool_search"); }
   const methodo = $("methodo");
   if (methodo) { methodo.innerHTML = t("method_html"); }
-  if (DATA.meta) {
-    const footer = $("footer_text");
-    if (footer) {
-      footer.innerHTML = t("footer", {
-        date: DATA.meta.updated_on || DATA.meta.generated_at.slice(0, 10),
-        mail: DATA.meta.contact,
-      });
-    }
-  }
+  // the footer is written into the HTML at build time — it is identical on every
+  // page, and filling it from meta.json here left it blank on the detail pages,
+  // which do not load that document
 }
 
 // ---------- theme ----------

@@ -256,6 +256,11 @@ EN = {
     "Étalons du Burkina Faso depuis 2022.":
         "{name} ({pos}, {club}): caps, minutes, goals and performance for "
         "Burkina Faso since 2022.",
+    "{name} ({pos}, {club}) avec le Burkina Faso depuis 2022 : {apps} apparitions, "
+    "{minutes} minutes, {goals} buts. Fiche complète, match par match.":
+        "{name} ({pos}, {club}) for Burkina Faso since 2022: {apps} appearances, "
+        "{minutes} minutes, {goals} goals. Full match-by-match record.",
+    "{name} — statistiques Burkina Faso": "{name} — Burkina Faso stats",
 
     # --- shared -----------------------------------------------------------
     "Burkina Faso": "Burkina Faso",
