@@ -73,3 +73,18 @@ function tableView(cardId, headers, rows) {
     <tr>${headers.map((h, i) => `<th class="${i > 0 ? "num" : ""}">${h}</th>`).join("")}</tr>${body}</table></div>`;
 }
 
+// --- shared across sections (kept here so every page has them) ---
+
+const ST_GOOD = "#0ca30c", ST_CRIT = "#d03b3b";
+
+function signed(v, dec = 2) {
+  if (v === "" || v === null || v === undefined) { return "–"; }
+  return (v > 0 ? "+" : "") + fmt(v, dec);
+}
+
+function rgba(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+}
+
+function posLabel(p) { return t("pos_" + p); }

@@ -2,10 +2,6 @@
 
 let impSelected = null;
 
-function signed(v, dec = 2) {
-  if (v === "" || v === null || v === undefined) { return "–"; }
-  return (v > 0 ? "+" : "") + fmt(v, dec);
-}
 
 function tierChip(tier) {
   if (!tier) { return "–"; }

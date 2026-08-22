@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyse de jeu — Étalons Analytics</title>
+<meta name="description" content="Style de jeu du Burkina Faso, résilience, temps forts, systèmes et importance des joueurs — chaque métrique avec son échantillon.">
+<meta property="og:title" content="Analyse de jeu — Étalons Analytics">
+<meta property="og:description" content="Style de jeu du Burkina Faso, résilience, temps forts, systèmes et importance des joueurs — chaque métrique avec son échantillon.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="" data-needs="team,pool,meta" data-base="">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis" class="on"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
+    <div class="lang">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Analyse</p>
+  <h1>Comment cette équipe joue</h1>
+  <p>Style de jeu comparé aux adversaires rencontrés, capacité à renverser une situation, temps forts, systèmes et importance des joueurs.</p>
+</div></div>
+<main>
+  <section id="style">
+  <h2 data-i18n="s_style"></h2>
+  <p class="lead" id="lead_style"></p>
+  <div class="grid"><div class="card" id="card_style_pct"><h3 data-i18n="c_style_pct"></h3><p class="sub" data-i18n="c_style_pct_sub"></p><div class="chart tall" id="c_style_pct"></div></div><div class="card" id="card_style_vol"><h3 data-i18n="c_style_vol"></h3><p class="sub" data-i18n="c_style_vol_sub"></p><div class="chart tall" id="c_style_vol"></div></div><div class="card w8" id="card_style_terc"><h3 data-i18n="c_style_terc"></h3><p class="sub" data-i18n="c_style_terc_sub"></p><div class="chart short" id="c_style_terc"></div></div><div class="card w4" id="card_style_half"><h3 data-i18n="c_style_half"></h3><p class="sub" data-i18n="c_style_half_sub"></p><div class="tablewrap"><table id="half_table"></table></div></div></div>
+</section>
+  <section id="resilience">
+  <h2 data-i18n="s_res"></h2>
+  <p class="lead" id="lead_res"></p>
+  <div class="grid"><div class="card w4" id="card_deficit"><h3 data-i18n="c_deficit"></h3><p class="sub" data-i18n="c_deficit_sub"></p><div class="mini-tiles" id="deficit_tiles"></div><p class="sub" id="late_swing_note"></p></div><div class="card w4" id="card_reply"><h3 data-i18n="c_reply"></h3><p class="sub" id="reply_sub"></p><div class="chart short" id="c_reply"></div><p class="sub" id="reply_median"></p></div><div class="card w4" id="card_state_out"><h3 data-i18n="c_state_out"></h3><p class="sub" data-i18n="c_state_out_sub"></p><div class="chart short" id="c_state_out"></div></div><div class="card w12" id="card_clutch"><h3 data-i18n="c_clutch"></h3><p class="sub" data-i18n="c_clutch_sub"></p><div class="tablewrap"><table id="clutch_table"></table></div></div></div>
+</section>
+  <section id="tempo">
+  <h2 data-i18n="s_tempo"></h2>
+  <p class="lead" id="lead_tempo"></p>
+  <div class="grid"><div class="card w8" id="card_bins"><h3 data-i18n="c_bins"></h3><p class="sub" data-i18n="c_bins_sub"></p><div class="chart " id="c_bins"></div><p class="sub" id="chi_note"></p></div><div class="card w4" id="card_gamestate"><h3 data-i18n="c_gamestate"></h3><p class="sub" data-i18n="c_gamestate_sub"></p><div class="mini-tiles" id="tempo_tiles"></div><div class="league-bar" id="state_bar"></div><div class="league-legend" id="state_legend"></div></div></div>
+</section>
+  <section id="systemes">
+  <h2 data-i18n="s_forms"></h2>
+  <p class="lead" data-i18n="s_forms_lead"></p>
+  <div class="grid"><div class="card w12" id="card_forms"><h3 data-i18n="c_forms"></h3><p class="sub" data-i18n="c_forms_sub"></p><div class="chart short" id="c_forms"></div></div></div>
+</section>
+  <section id="importance">
+  <h2 data-i18n="s_imp"></h2>
+  <p class="lead" data-i18n="s_imp_lead"></p>
+  <div class="grid"><div class="card w12" id="card_imp"><h3 data-i18n="c_imp_table"></h3><p class="sub" data-i18n="c_imp_table_sub"></p><div class="tablewrap"><table id="imp_table"></table></div><p class="sub" id="pilier_note"></p></div><div class="card" id="card_prof"><h3 data-i18n="c_imp_prof"></h3><p class="sub" data-i18n="c_imp_prof_sub"></p><div class="chart short" id="c_prof"></div><div class="pickrow"><label for="imp_picker" data-i18n="imp_picker"></label><select id="imp_picker"></select></div></div><div class="card" id="card_bench"><h3 data-i18n="c_bench"></h3><p class="sub" data-i18n="c_bench_sub"></p><div class="chart short" id="c_bench"></div><p class="sub" id="bench_note"></p></div></div>
+</section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/sections/style.js"></script>
+<script src="assets/sections/tempo.js"></script>
+<script src="assets/sections/importance.js"></script>
+<script src="assets/sections/breakdowns.js"></script>
+<script src="assets/boot.js"></script>
+</body>
+</html>

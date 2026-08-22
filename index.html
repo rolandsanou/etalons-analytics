@@ -3,29 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Étalons Analytics — Burkina Faso</title>
-<meta name="description" content="Analyse de données de l'équipe nationale senior du Burkina Faso : effectif, performances des joueurs depuis la CAN 2021, histoire, Elo et projections.">
+<title>Accueil — Étalons Analytics</title>
+<meta name="description" content="Analyse de données de l&#x27;équipe nationale du Burkina Faso : effectif, performances individuelles, style de jeu, histoire et projections.">
+<meta property="og:title" content="Accueil — Étalons Analytics">
+<meta property="og:description" content="Analyse de données de l&#x27;équipe nationale du Burkina Faso : effectif, performances individuelles, style de jeu, histoire et projections.">
+<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
 </head>
-<body>
+<body class="" data-needs="meta" data-base="">
 
 <header class="top">
   <div class="top-inner">
-    <div class="brand"><span class="star">★</span> Étalons Analytics</div>
-    <nav>
-      <a href="#effectif" data-i18n="nav_squad"></a>
-      <a href="#joueurs" data-i18n="nav_pool"></a>
-      <a href="#repartitions" data-i18n="nav_breakdowns"></a>
-      <a href="#systemes" data-i18n="nav_forms"></a>
-      <a href="#style" data-i18n="nav_style"></a>
-      <a href="#tempo" data-i18n="nav_tempo"></a>
-      <a href="#importance" data-i18n="nav_imp"></a>
-      <a href="#histoire" data-i18n="nav_history"></a>
-      <a href="#elo" data-i18n="nav_elo"></a>
-      <a href="#projections" data-i18n="nav_proj"></a>
-      <a href="#methodo" data-i18n="nav_method"></a>
-    </nav>
+    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <nav><a href="index.html" data-i18n="nav_home" class="on"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
     <div class="lang">
       <button data-lang="fr">FR</button>
       <button data-lang="en">EN</button>
@@ -33,304 +25,94 @@
   </div>
 </header>
 
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Analyse de données · Burkina Faso</p>
+  <h1>Les Étalons, chiffres à l'appui</h1>
+  <p>Un projet ouvert qui suit chaque joueur appelé en sélection depuis la CAN 2021 :
+     temps de jeu, performances, style de jeu, résilience et projections — avec les
+     sources et les limites de chaque chiffre affichées.</p>
+</div></div>
 <main>
-  <div class="hero">
-    <h1><span aria-hidden="true">🇧🇫</span> Les Étalons — Burkina Faso</h1>
-    <p class="tagline" data-i18n="tagline"></p>
-  </div>
-  <div class="tiles" id="tiles"></div>
+  <div class="tiles"><div class="tile"><div class="label">Rang Elo CAF</div><div class="value">#14</div><div class="sub">81e mondial · 1 652 pts</div></div><div class="tile"><div class="label">Matchs analysés</div><div class="value">58</div><div class="sub">depuis janv. 2022 · 129 joueurs suivis</div></div><div class="tile"><div class="label">Dernier match</div><div class="value">2-2</div><div class="sub">Belarus · 2026-06-09</div></div><div class="tile"><div class="label">Âge moyen</div><div class="value">25,3</div><div class="sub">74 % en Europe</div></div></div>
 
-  <section id="effectif">
-    <h2 data-i18n="s_squad"></h2>
-    <p class="lead" id="lead_squad"></p>
-    <div class="grid">
-      <div class="card" id="card_pos">
-        <h3 data-i18n="c_pos"></h3>
-        <p class="sub" data-i18n="c_pos_sub"></p>
-        <div class="chart short" id="c_pos"></div>
-      </div>
-      <div class="card" id="card_age">
-        <h3 data-i18n="c_age"></h3>
-        <p class="sub" data-i18n="c_age_sub"></p>
-        <div class="chart short" id="c_age"></div>
-      </div>
-      <div class="card w12">
-        <h3 data-i18n="t_squad"></h3>
-        <div class="tablewrap"><table id="squad_table"></table></div>
-        <details class="tv"><summary data-i18n="t_callups"></summary>
-          <div class="tablewrap"><table id="callups_table"></table></div>
-        </details>
-      </div>
-    </div>
+  <section id="derniers">
+    <h2>Derniers matchs</h2>
+    <p class="lead">Cliquez un match pour la composition, les statistiques et la chronologie.</p>
+    <div class="mlist"><a class="mrow" href="matchs/2026-06-09-belarus.html">
+  <span class="dt">2026-06-09</span>
+  <span class="chip D">N</span>
+  <span class="opp">Belarus</span>
+  <span class="sc">2-2</span>
+  <span class="cmp">Friendly</span></a><a class="mrow" href="matchs/2026-06-05-russia.html">
+  <span class="dt">2026-06-05</span>
+  <span class="chip L">D</span>
+  <span class="opp">Russia</span>
+  <span class="sc">0-3</span>
+  <span class="cmp">Friendly</span></a><a class="mrow" href="matchs/2026-03-31-guinea-bissau.html">
+  <span class="dt">2026-03-31</span>
+  <span class="chip D">N</span>
+  <span class="opp">Guinea-Bissau</span>
+  <span class="sc">1-1</span>
+  <span class="cmp">Friendly</span></a><a class="mrow" href="matchs/2026-03-28-guinea-bissau.html">
+  <span class="dt">2026-03-28</span>
+  <span class="chip W">V</span>
+  <span class="opp">Guinea-Bissau</span>
+  <span class="sc">5-0</span>
+  <span class="cmp">Friendly</span></a><a class="mrow" href="matchs/2025-12-31-sudan.html">
+  <span class="dt">2025-12-31</span>
+  <span class="chip W">V</span>
+  <span class="opp">Sudan</span>
+  <span class="sc">2-0</span>
+  <span class="cmp">African Cup of Nations</span></a></div>
+    <p class="sub" style="margin-top:10px"><a href="matchs.html">Tous les matchs →</a></p>
   </section>
 
-  <section id="joueurs">
-    <h2 data-i18n="s_pool"></h2>
-    <p class="lead" data-i18n="s_pool_lead"></p>
-    <div class="grid">
-      <div class="card" id="card_minutes">
-        <h3 data-i18n="c_minutes"></h3>
-        <p class="sub" data-i18n="c_minutes_sub"></p>
-        <div class="chart tall" id="c_minutes"></div>
-      </div>
-      <div class="card" id="card_goals">
-        <h3 data-i18n="c_goals"></h3>
-        <p class="sub" data-i18n="c_goals_sub"></p>
-        <div class="chart tall" id="c_goals"></div>
-      </div>
-      <div class="card w12">
-        <input type="search" id="pool_search" class="search">
-        <div class="tablewrap pool"><table id="pool_table"></table></div>
-        <p class="sub" id="pool_note"></p>
-      </div>
-      <div class="card w12" id="card_strip">
-        <h3 data-i18n="c_strip"></h3>
-        <p class="sub" data-i18n="c_strip_sub"></p>
-        <div class="chart short" id="c_strip"></div>
-      </div>
-    </div>
+  <section id="cadres">
+    <h2>Les plus utilisés</h2>
+    <p class="lead">Classés par minutes jouées en sélection depuis janvier 2022.</p>
+    <div class="roster"><a class="pcard" href="joueurs/edmond-tapsoba.html">
+  <img class="pic" src="assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async">
+  <div class="nm">Edmond Tapsoba</div>
+  <div class="rl">Défenseur</div>
+  <div class="stat">2 985 min · 3 b · 1 p.d.</div>
+</a><a class="pcard" href="joueurs/issa-kabore.html">
+  <img class="pic" src="assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async">
+  <div class="nm">Issa Kaboré</div>
+  <div class="rl">Défenseur</div>
+  <div class="stat">2 517 min · 0 b · 6 p.d.</div>
+</a><a class="pcard" href="joueurs/issoufou-dayo.html">
+  <img class="pic" src="assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async">
+  <div class="nm">Issoufou Dayo</div>
+  <div class="rl">Défenseur</div>
+  <div class="stat">2 463 min · 2 b · 0 p.d.</div>
+</a><a class="pcard" href="joueurs/herve-koffi.html">
+  <img class="pic" src="assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async">
+  <div class="nm">Hervé Koffi</div>
+  <div class="rl">Gardien</div>
+  <div class="stat">2 355 min · 0 b · 0 p.d.</div>
+</a><a class="pcard" href="joueurs/steeve-yago.html">
+  <img class="pic" src="assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async">
+  <div class="nm">Steeve Yago</div>
+  <div class="rl">Défenseur</div>
+  <div class="stat">2 330 min · 1 b · 0 p.d.</div>
+</a><a class="pcard" href="joueurs/blati-toure.html">
+  <img class="pic" src="assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async">
+  <div class="nm">Blati Touré</div>
+  <div class="rl">Milieu</div>
+  <div class="stat">2 272 min · 2 b · 2 p.d.</div>
+</a></div>
+    <p class="sub" style="margin-top:10px"><a href="joueurs.html">Tous les joueurs →</a></p>
   </section>
 
-  <section id="importance">
-    <h2 data-i18n="s_imp"></h2>
-    <p class="lead" data-i18n="s_imp_lead"></p>
-    <div class="grid">
-      <div class="card w12" id="card_imp">
-        <h3 data-i18n="c_imp_table"></h3>
-        <p class="sub" data-i18n="c_imp_table_sub"></p>
-        <p class="sub" id="pilier_note"></p>
-        <div class="tablewrap"><table id="imp_table"></table></div>
-      </div>
-      <div class="card" id="card_prof">
-        <h3 data-i18n="c_imp_prof"></h3>
-        <p class="sub" data-i18n="c_imp_prof_sub"></p>
-        <div class="pickrow"><label for="imp_picker" data-i18n="imp_picker"></label>
-          <select id="imp_picker"></select></div>
-        <div class="chart short" id="c_prof"></div>
-      </div>
-      <div class="card" id="card_bench">
-        <h3 data-i18n="c_bench"></h3>
-        <p class="sub" data-i18n="c_bench_sub"></p>
-        <div class="chart short" id="c_bench"></div>
-        <p class="sub" id="bench_note"></p>
-      </div>
-      <div class="card" id="card_captains">
-        <h3 data-i18n="c_captains"></h3>
-        <p class="sub" data-i18n="c_captains_sub"></p>
-        <div class="tablewrap"><table id="captains_table"></table></div>
-      </div>
-      <div class="card" id="card_gk">
-        <h3 data-i18n="c_gk"></h3>
-        <p class="sub" data-i18n="c_gk_sub"></p>
-        <div class="tablewrap"><table id="gk_table"></table></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="repartitions">
-    <h2 data-i18n="s_break"></h2>
-    <p class="lead" data-i18n="s_break_lead"></p>
-    <div class="grid">
-      <div class="card" id="card_clubs">
-        <h3 data-i18n="c_clubs"></h3>
-        <p class="sub" data-i18n="c_clubs_sub"></p>
-        <div class="chart tall" id="c_clubs"></div>
-      </div>
-      <div class="card" id="card_leagues">
-        <h3 data-i18n="c_leagues"></h3>
-        <p class="sub" data-i18n="c_leagues_sub"></p>
-        <div class="league-bar" id="league_bar"></div>
-        <div class="league-legend" id="league_legend"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="systemes">
-    <h2 data-i18n="s_forms"></h2>
-    <p class="lead" data-i18n="s_forms_lead"></p>
-    <div class="grid">
-      <div class="card w12" id="card_forms">
-        <h3 data-i18n="c_forms"></h3>
-        <p class="sub" data-i18n="c_forms_sub"></p>
-        <div class="chart short" id="c_forms"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="style">
-    <h2 data-i18n="s_style"></h2>
-    <p class="lead" id="lead_style"></p>
-    <div class="grid">
-      <div class="card" id="card_style_pct">
-        <h3 data-i18n="c_style_pct"></h3>
-        <p class="sub" data-i18n="c_style_pct_sub"></p>
-        <div class="chart tall" id="c_style_pct"></div>
-      </div>
-      <div class="card" id="card_style_vol">
-        <h3 data-i18n="c_style_vol"></h3>
-        <p class="sub" data-i18n="c_style_vol_sub"></p>
-        <div class="chart tall" id="c_style_vol"></div>
-      </div>
-      <div class="card w8" id="card_style_terc">
-        <h3 data-i18n="c_style_terc"></h3>
-        <p class="sub" data-i18n="c_style_terc_sub"></p>
-        <div class="chart short" id="c_style_terc"></div>
-      </div>
-      <div class="card w4" id="card_style_half">
-        <h3 data-i18n="c_style_half"></h3>
-        <p class="sub" data-i18n="c_style_half_sub"></p>
-        <div class="tablewrap"><table id="half_table"></table></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="resilience">
-    <h2 data-i18n="s_res"></h2>
-    <p class="lead" id="lead_res"></p>
-    <div class="grid">
-      <div class="card w4" id="card_deficit">
-        <h3 data-i18n="c_deficit"></h3>
-        <p class="sub" data-i18n="c_deficit_sub"></p>
-        <div class="mini-tiles" id="deficit_tiles"></div>
-        <p class="sub" id="late_swing_note"></p>
-      </div>
-      <div class="card w4" id="card_reply">
-        <h3 data-i18n="c_reply"></h3>
-        <p class="sub" id="reply_sub"></p>
-        <div class="chart short" id="c_reply"></div>
-        <p class="sub" id="reply_median"></p>
-      </div>
-      <div class="card w4" id="card_state_out">
-        <h3 data-i18n="c_state_out"></h3>
-        <p class="sub" data-i18n="c_state_out_sub"></p>
-        <div class="chart short" id="c_state_out"></div>
-      </div>
-      <div class="card w12" id="card_clutch">
-        <h3 data-i18n="c_clutch"></h3>
-        <p class="sub" data-i18n="c_clutch_sub"></p>
-        <div class="tablewrap"><table id="clutch_table"></table></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="tempo">
-    <h2 data-i18n="s_tempo"></h2>
-    <p class="lead" id="lead_tempo"></p>
-    <div class="grid">
-      <div class="card w8" id="card_bins">
-        <h3 data-i18n="c_bins"></h3>
-        <p class="sub" data-i18n="c_bins_sub"></p>
-        <div class="chart" id="c_bins"></div>
-        <p class="sub" id="chi_note"></p>
-      </div>
-      <div class="card w4" id="card_gamestate">
-        <h3 data-i18n="c_gamestate"></h3>
-        <p class="sub" data-i18n="c_gamestate_sub"></p>
-        <div class="mini-tiles" id="tempo_tiles"></div>
-        <div class="league-bar" id="state_bar"></div>
-        <div class="league-legend" id="state_legend"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="histoire">
-    <h2 id="title_history"></h2>
-    <p class="lead" id="lead_history"></p>
-    <div class="grid">
-      <div class="card" id="card_decades">
-        <h3 data-i18n="c_decades"></h3>
-        <p class="sub" data-i18n="c_decades_sub"></p>
-        <div class="chart short" id="c_decades"></div>
-      </div>
-      <div class="card">
-        <h3 data-i18n="c_form"></h3>
-        <p class="sub" data-i18n="c_form_sub"></p>
-        <div class="chart short" id="c_form"></div>
-      </div>
-      <div class="card w12" id="card_afcon">
-        <h3 data-i18n="c_afcon"></h3>
-        <p class="sub" data-i18n="c_afcon_sub"></p>
-        <div class="chart" id="c_afcon"></div>
-      </div>
-      <div class="card w4">
-        <h3 data-i18n="t_capped"></h3>
-        <div class="tablewrap"><table id="capped_table"></table></div>
-      </div>
-      <div class="card w4">
-        <h3 data-i18n="t_scorers"></h3>
-        <div class="tablewrap"><table id="scorers_table"></table></div>
-      </div>
-      <div class="card w4">
-        <h3 data-i18n="t_last10"></h3>
-        <div class="tablewrap"><table id="last10_table"></table></div>
-      </div>
-      <div class="card" id="card_shootouts">
-        <h3 data-i18n="t_shootouts"></h3>
-        <p class="sub" id="shootout_rec"></p>
-        <div class="tablewrap"><table id="shootout_table"></table></div>
-      </div>
-      <div class="card" id="card_pens">
-        <h3 data-i18n="t_pens"></h3>
-        <p class="sub" data-i18n="t_pens_sub"></p>
-        <div class="mini-tiles" id="pens_tiles"></div>
-        <div class="tablewrap"><table id="takers_table"></table></div>
-        <p class="sub" id="pens_gk_note"></p>
-      </div>
-      <div class="card w12" id="card_coaches">
-        <h3 data-i18n="c_coaches"></h3>
-        <p class="sub" data-i18n="c_coaches_sub"></p>
-        <div class="tablewrap"><table id="coaches_table"></table></div>
-      </div>
-      <div class="card w12" id="card_venues">
-        <h3 data-i18n="c_venues"></h3>
-        <p class="sub" data-i18n="c_venues_sub"></p>
-        <div class="chart short" id="c_venues"></div>
-        <p class="sub" id="venues_note"></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="elo">
-    <h2 data-i18n="s_elo"></h2>
-    <p class="lead" data-i18n="s_elo_lead"></p>
-    <div class="grid">
-      <div class="card w8" id="card_elo">
-        <h3 data-i18n="c_elo_tl"></h3>
-        <p class="sub" data-i18n="c_elo_tl_sub"></p>
-        <div class="chart tall" id="c_elo_tl"></div>
-      </div>
-      <div class="card w4">
-        <h3 data-i18n="c_winexp"></h3>
-        <p class="sub" data-i18n="c_winexp_sub"></p>
-        <div class="chart tall" id="c_winexp"></div>
-        <p class="sub" id="winexp_note"></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projections">
-    <h2 data-i18n="s_proj"></h2>
-    <p class="lead" data-i18n="s_proj_lead"></p>
-    <div class="grid">
-      <div class="card w12" id="card_proj">
-        <h3 data-i18n="c_proj_age"></h3>
-        <p class="sub" data-i18n="c_proj_age_sub"></p>
-        <div class="chart" id="c_proj_age"></div>
-        <p class="core" id="core_box"></p>
-        <p class="sub" id="readiness_note"></p>
-      </div>
-      <div class="card w12" id="card_pipeline">
-        <h3 data-i18n="c_pipeline"></h3>
-        <p class="sub" data-i18n="c_pipeline_sub"></p>
-        <div class="tablewrap"><table id="pipeline_table"></table></div>
-        <p class="sub" id="prospects_note"></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="methodo">
-    <h2 data-i18n="s_method"></h2>
-    <div class="methodo" id="methodo"></div>
+  <section id="explorer">
+    <h2>Explorer</h2>
+    <div class="grid"><a class="card w4" href="effectif.html" style="text-decoration:none;color:inherit">
+  <h3>Effectif &amp; répartitions</h3><p class="sub">Qui compose le groupe, où jouent les Étalons, comment l&#x27;effectif se structure.</p></a><a class="card w4" href="analyse.html" style="text-decoration:none;color:inherit">
+  <h3>Analyse de jeu</h3><p class="sub">Style, temps forts, résilience, systèmes et importance des joueurs.</p></a><a class="card w4" href="matchs.html" style="text-decoration:none;color:inherit">
+  <h3>Tous les matchs</h3><p class="sub">58 rencontres détaillées : compositions, statistiques, chronologies.</p></a><a class="card w4" href="histoire.html" style="text-decoration:none;color:inherit">
+  <h3>Histoire &amp; Elo</h3><p class="sub">1960 à aujourd&#x27;hui : CAN, sélectionneurs, lieux, tirs au but, trajectoire Elo.</p></a><a class="card w4" href="projections.html" style="text-decoration:none;color:inherit">
+  <h3>Projections</h3><p class="sub">CAN 2027, vivier des jeunes, attentes Elo face aux rivaux africains.</p></a><a class="card w4" href="joueurs.html" style="text-decoration:none;color:inherit">
+  <h3>Tous les joueurs</h3><p class="sub">129 joueurs appelés depuis 2022, avec leur fiche détaillée.</p></a></div>
   </section>
 </main>
 
@@ -338,21 +120,11 @@
   <p id="footer_text"></p>
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script src="assets/i18n.js"></script>
-<!-- shared chart plumbing, then one file per dashboard section, then boot.
-     Adding a section: create assets/sections/<name>.js, add a <script> below,
-     and call its render function from renderAll() in assets/boot.js. -->
 <script src="assets/core.js"></script>
-<script src="assets/sections/overview.js"></script>
-<script src="assets/sections/players.js"></script>
-<script src="assets/sections/breakdowns.js"></script>
-<script src="assets/sections/style.js"></script>
-<script src="assets/sections/tempo.js"></script>
-<script src="assets/sections/importance.js"></script>
-<script src="assets/sections/history.js"></script>
-<script src="assets/sections/elo.js"></script>
-<script src="assets/sections/outlook.js"></script>
+
 <script src="assets/boot.js"></script>
 </body>
 </html>

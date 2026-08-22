@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://etalons-analytics.pages.dev/sitemap.xml

@@ -19,7 +19,6 @@ function renderTiles() {
 
 // ---------- squad section ----------
 
-function posLabel(p) { return t("pos_" + p); }
 
 function renderPosChart() {
   const byPos = DATA.squad.stats.by_pos;
