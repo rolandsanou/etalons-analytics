@@ -3,39 +3,28 @@
 Plain Python string building — no template engine, no JS toolchain. Each page
 declares which data documents it needs and which section scripts to load; the
 boot script only runs renderers whose anchor element is present on the page.
+
+The site is generated once per language (see routes.py). Because each page is a
+real file in its own language, the copy is in the HTML rather than swapped in by
+JavaScript — so it is readable without JS and indexable, and the FR/EN control is
+a pair of links to the counterpart page rather than a client-side toggle.
 """
 
 import html
 import json
 
+from .routes import NAV, depth_of, path_for
+
 SITE_NAME = "Étalons Analytics"
+
+SITE_URL = "https://rolandsanou.github.io/etalons-analytics"
 
 # Short content hash appended to every stylesheet and script URL so a deploy is
 # visible immediately instead of waiting for the CDN cache to expire. Set by
 # build_site.main() from the actual asset contents.
 ASSET_VERSION = ""
 
-
-def asset(up, path):
-    """Versioned URL for a stylesheet or script."""
-    suffix = f"?v={ASSET_VERSION}" if ASSET_VERSION else ""
-    return f"{up}{path}{suffix}"
-
-# (href, i18n label key, nav id)
-NAV = [
-    ("index.html", "nav_home", "home"),
-    ("effectif.html", "nav_squad", "squad"),
-    ("joueurs.html", "nav_pool", "players"),
-    ("matchs.html", "nav_matches", "matches"),
-    ("analyse.html", "nav_analysis", "analysis"),
-    ("gestion.html", "nav_mgmt", "mgmt"),
-    ("histoire.html", "nav_history", "history"),
-    ("projections.html", "nav_proj", "projections"),
-    ("methodologie.html", "nav_method", "method"),
-]
-
-SECTION_SCRIPTS = ["overview", "players", "breakdowns", "style", "tempo",
-                   "importance", "history", "elo", "outlook", "match", "player"]
+LANG_LABEL = {"fr": "FR", "en": "EN"}
 
 
 def esc(text):
@@ -61,24 +50,38 @@ def avatar(photo, name, cls, size=None):
             f'{esc(initials(name))}</span>')
 
 
-def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
-         inline_data=None, page_class=""):
-    """Render a complete page. `depth` is how many folders deep the file sits."""
-    up = "../" * depth
+def page(ctx, *, title, description, body, needs=(), scripts=(), page_class=""):
+    """Render a complete page for ctx (language + location)."""
+    up = "../" * depth_of(ctx.self_path)
+
+    def asset(path):
+        suffix = f"?v={ASSET_VERSION}" if ASSET_VERSION else ""
+        return f"{up}{path}{suffix}"
+
     nav_items = "".join(
-        '<a href="{u}{h}" data-i18n="{k}"{c}></a>'.format(
-            u=up, h=href, k=key, c=' class="on"' if nav_id == active else "")
-        for href, key, nav_id in NAV)
+        '<a href="{href}"{cls}>{label}</a>'.format(
+            href=ctx.url(route), label=esc(ctx.t(label_fr)),
+            cls=' class="on"' if route == ctx.route else "")
+        for route, label_fr in NAV)
+
+    alternates = ctx.alternates()
+    lang_links = "".join(
+        '<a href="{href}"{cls} hreflang="{lang}" lang="{lang}">{label}</a>'.format(
+            href=href, lang=lang, label=LANG_LABEL[lang],
+            cls=' class="on"' if lang == ctx.lang else "")
+        for lang, href in alternates)
+    hreflang = "\n".join(
+        f'<link rel="alternate" hreflang="{lang}" '
+        f'href="{SITE_URL}/{path_for(lang, ctx.route, ctx.slug)}">'
+        for lang, _ in alternates)
+
     script_tags = "\n".join(
-        f'<script src="{asset(up, f"assets/sections/{name}.js")}"></script>'
+        f'<script src="{asset(f"assets/sections/{name}.js")}"></script>'
         for name in scripts)
     data_attr = f' data-needs="{",".join(needs)}"' if needs else ""
-    inline = ""
-    if inline_data is not None:
-        payload = json.dumps(inline_data, ensure_ascii=False, separators=(",", ":"))
-        inline = f'<script id="page-data" type="application/json">{payload}</script>'
+
     return f"""<!DOCTYPE html>
-<html lang="fr">
+<html lang="{ctx.lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,6 +90,8 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 <meta property="og:title" content="{esc(title)} — {SITE_NAME}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="{'fr_FR' if ctx.lang == 'fr' else 'en_GB'}">
+{hreflang}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 <script>/* set the remembered theme before first paint, so an explicit dark choice
    never flashes light. No stored choice: prefers-color-scheme decides in CSS.
@@ -96,19 +101,16 @@ document.documentElement.setAttribute("data-theme",_t);}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
-<link rel="stylesheet" href="{asset(up, "assets/style.css")}">
-<link rel="stylesheet" href="{asset(up, "assets/pages.css")}">
+<link rel="stylesheet" href="{asset("assets/style.css")}">
+<link rel="stylesheet" href="{asset("assets/pages.css")}">
 </head>
 <body class="{esc(page_class)}"{data_attr} data-base="{up}">
 
 <header class="top">
   <div class="top-inner">
-    <a class="brand" href="{up}index.html">{SITE_NAME}</a>
+    <a class="brand" href="{ctx.url('home')}">{SITE_NAME}</a>
     <nav>{nav_items}</nav>
-    <div class="lang">
-      <button data-lang="fr">FR</button>
-      <button data-lang="en">EN</button>
-    </div>
+    <div class="lang">{lang_links}</div>
     <button class="theme" id="theme_toggle" type="button"
             aria-pressed="false"><span aria-hidden="true"></span></button>
   </div>
@@ -120,12 +122,11 @@ document.documentElement.setAttribute("data-theme",_t);}}catch(e){{}}</script>
   <p id="footer_text"></p>
 </footer>
 
-{inline}
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-<script src="{asset(up, "assets/i18n.js")}"></script>
-<script src="{asset(up, "assets/core.js")}"></script>
+<script src="{asset("assets/i18n.js")}"></script>
+<script src="{asset("assets/core.js")}"></script>
 {script_tags}
-<script src="{asset(up, "assets/boot.js")}"></script>
+<script src="{asset("assets/boot.js")}"></script>
 </body>
 </html>
 """

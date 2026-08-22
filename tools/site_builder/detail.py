@@ -1,7 +1,9 @@
 """Match and player detail pages.
 
-Rendered as static HTML — tables, timelines and CSS comparison bars — so they
-are readable without JavaScript and indexable by search engines.
+Rendered as static HTML — tables, timelines and CSS comparison bars — so they are
+readable without JavaScript and indexable by search engines. That is also why the
+copy is translated here at build time rather than swapped in by JS: each language
+gets a real, crawlable page.
 """
 
 import re
@@ -9,9 +11,34 @@ import unicodedata
 
 from .layout import avatar, card, esc, page
 
-POS_LABEL = {"GK": "Gardien", "DF": "Défenseur", "MF": "Milieu", "FW": "Attaquant"}
+# French source strings double as the translation keys (see strings.py)
+POS_LABEL_KEY = {"GK": "Gardien", "DF": "Défenseur", "MF": "Milieu", "FW": "Attaquant"}
+POS_LABEL = POS_LABEL_KEY          # kept for callers that only need French
 POS_ORDER = {"GK": 0, "DF": 1, "MF": 2, "FW": 3}
 RESULT_WORD = {"W": "Victoire", "D": "Match nul", "L": "Défaite"}
+
+STATUS_WORD = {
+    "active": "International actif",
+    "fringe": "En marge du groupe",
+    "out": "Hors du groupe",
+    "retired_int": "Retraité international",
+    "retired_career": "Retraité",
+}
+
+# (column, French label, unit)
+STAT_ROWS = [
+    ("possession_pct", "Possession", "%"),
+    ("shots", "Tirs", ""),
+    ("shots_on_target", "Tirs cadrés", ""),
+    ("big_chances", "Grosses occasions", ""),
+    ("passes", "Passes", ""),
+    ("passes_accurate", "Passes réussies", ""),
+    ("corners", "Corners", ""),
+    ("fouls", "Fautes", ""),
+    ("tackles", "Tacles", ""),
+    ("interceptions", "Interceptions", ""),
+    ("saves", "Arrêts", ""),
+]
 
 
 def slugify(text):
@@ -35,33 +62,48 @@ def _int(x, default=0):
     return int(_num(x, default))
 
 
+# Number formatting differs by language: French groups with a space and uses a
+# comma for decimals, English groups with a comma and uses a point. The build
+# renders one language at a time, so a module-level locale is safe and keeps the
+# call sites (_fmt is used in dozens of f-strings) unchanged.
+_LOCALE = "fr"
+
+
+def set_locale(lang):
+    global _LOCALE
+    _LOCALE = lang
+
+
 def _fmt(x, dec=0):
     if x in ("", None):
         return "–"
-    v = _num(x)
-    return f"{v:,.{dec}f}".replace(",", " ").replace(".", ",")
+    grouped = f"{_num(x):,.{dec}f}"
+    if _LOCALE == "en":
+        return grouped
+    return grouped.replace(",", " ").replace(".", ",")
+
+
+def ordinal(n, lang):
+    """81 -> "81st" in English, "81e" in French."""
+    n = int(n)
+    if lang != "en":
+        return f"{n}e"
+    if n % 100 in (11, 12, 13):
+        return f"{n}th"
+    return f"{n}{ {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th') }"
+
+
+def _kv(pairs):
+    return "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in pairs)
 
 
 # ---------------------------------------------------------------- match page
 
-STAT_ROWS = [
-    ("possession_pct", "Possession", "%"),
-    ("shots", "Tirs", ""),
-    ("shots_on_target", "Tirs cadrés", ""),
-    ("big_chances", "Grosses occasions", ""),
-    ("passes", "Passes", ""),
-    ("passes_accurate", "Passes réussies", ""),
-    ("corners", "Corners", ""),
-    ("fouls", "Fautes", ""),
-    ("tackles", "Tacles", ""),
-    ("interceptions", "Interceptions", ""),
-    ("saves", "Arrêts", ""),
-]
-
-
-def stat_bars(bf, opp):
+def stat_bars(ctx, bf, opp):
     if not bf or not opp:
-        return ('<p class="sub">Statistiques détaillées non publiées pour ce match.</p>')
+        return ('<p class="sub">'
+                + esc(ctx.t("Statistiques détaillées non publiées pour ce match."))
+                + "</p>")
     out = []
     for key, label, unit in STAT_ROWS:
         a, b = bf.get(key, ""), opp.get(key, "")
@@ -71,27 +113,26 @@ def stat_bars(bf, opp):
         total = av + bv
         pa = 100 * av / total if total else 50
         out.append(f"""<div class="statrow">
-  <div class="lbl"><span>{_fmt(a, 0)}{unit}</span><span>{esc(label)}</span>
+  <div class="lbl"><span>{_fmt(a, 0)}{unit}</span><span>{esc(ctx.t(label))}</span>
     <span>{_fmt(b, 0)}{unit}</span></div>
   <div class="bar"><i style="width:{pa:.1f}%"></i></div>
 </div>""")
     return '<div class="statbars">' + "".join(out) + "</div>"
 
 
-def goal_timeline(goals, subs, cards, opponent):
+def goal_timeline(ctx, goals, subs, cards, opponent):
+    t = ctx.t
     events = []
     for g in goals:
-        minute = _int(g["minute"])
-        added = _int(g["added_time"])
+        minute, added = _int(g["minute"]), _int(g["added_time"])
         label = f"{minute}'" + (f"+{added}" if added else "")
         kind = "bf" if g["is_bf"] == "1" else "opp"
-        who = g["scorer_name"] or "?"
         extra = {"penalty": " (pen.)", "ownGoal": " (csc)"}.get(g["class"], "")
-        assist = f" · passe {esc(g['assist_name'])}" if g["assist_name"] else ""
-        side = "Burkina Faso" if kind == "bf" else opponent
+        assist = (f" · {esc(g['assist_name'])}" if g["assist_name"] else "")
+        side = t("Burkina Faso") if kind == "bf" else opponent
         events.append((minute + added / 100, f"""<div class="tevent {kind}">
-  <span class="min">{label}</span><span class="mark">BUT</span>
-  <span><span class="who">{esc(who)}</span>{extra}
+  <span class="min">{label}</span><span class="mark">{esc(t("BUT"))}</span>
+  <span><span class="who">{esc(g['scorer_name'] or '?')}</span>{extra}
     <span class="what"> — {esc(side)}{assist}</span></span></div>"""))
     for c in cards:
         if c["card"] not in ("yellow", "red", "yellowRed"):
@@ -102,26 +143,25 @@ def goal_timeline(goals, subs, cards, opponent):
         events.append((minute, f"""<div class="tevent {kind}">
   <span class="min">{minute}'</span><span class="mark">{mark}</span>
   <span><span class="who">{esc(c['name'])}</span>
-    <span class="what"> — {esc(c['reason'] or 'carton')}</span></span></div>"""))
+    <span class="what"> — {esc(c['reason'] or t("carton"))}</span></span></div>"""))
     for s in subs:
         if s["is_bf"] != "1":
             continue
         minute = _int(s["minute"])
+        injury = f' {esc(t("(blessure)"))}' if s["injury"] == "1" else ""
         events.append((minute + 0.5, f"""<div class="tevent bf">
-  <span class="min">{minute}'</span><span class="mark">CHG</span>
+  <span class="min">{minute}'</span><span class="mark">{esc(t("CHG"))}</span>
   <span><span class="who">{esc(s['in_name'])}</span>
-    <span class="what"> pour {esc(s['out_name'])}
-    {'(blessure)' if s['injury'] == '1' else ''}</span></span></div>"""))
+    <span class="what"> ← {esc(s['out_name'])}{injury}</span></span></div>"""))
     if not events:
-        return '<p class="sub">Aucun événement enregistré pour ce match.</p>'
+        return ('<p class="sub">'
+                + esc(ctx.t("Aucun événement enregistré pour ce match.")) + "</p>")
     events.sort(key=lambda e: e[0])
     return '<div class="timeline">' + "".join(html for _, html in events) + "</div>"
 
 
-def lineup_block(apps, players_with_pages):
-    starters = [a for a in apps if a["started"] == "1"]
-    subs = [a for a in apps if a["started"] != "1" and a["played"] == "1"]
-    unused = [a for a in apps if a["played"] != "1"]
+def lineup_block(ctx, apps, players_with_pages):
+    t = ctx.t
 
     def rows(entries):
         entries = sorted(entries, key=lambda a: (POS_ORDER.get(a["pos"], 9),
@@ -130,204 +170,201 @@ def lineup_block(apps, players_with_pages):
         for a in entries:
             name = esc(a["name"])
             if a["player_id"] in players_with_pages:
-                name = (f'<a href="../joueurs/{esc(a["player_id"])}.html">{name}</a>')
+                name = f'<a href="{ctx.url("player", a["player_id"])}">{name}</a>'
             bits = []
             if _int(a["goals"]):
-                bits.append(f"{_int(a['goals'])} but" + ("s" if _int(a["goals"]) > 1 else ""))
+                n = _int(a["goals"])
+                bits.append(t("{n} but" if n == 1 else "{n} buts", n=n))
             if _int(a["assists"]):
-                bits.append(f"{_int(a['assists'])} p.d.")
-            marks = (f' <span class="what">({", ".join(bits)})</span>' if bits else "")
+                bits.append(t("{n} p.d.", n=_int(a["assists"])))
+            marks = f' <span class="what">({", ".join(bits)})</span>' if bits else ""
             rating = _num(a["rating"])
-            rat = (f'<span class="mins">{_fmt(rating, 2)}</span>' if rating else
-                   '<span class="mins">–</span>')
-            mins = _int(a["minutes"])
             out.append(f"""<div class="lrow"><span class="pos">{esc(a['pos'])}</span>
-  <span>{name}{marks}</span><span class="mins">{mins}'</span>{rat}</div>""")
+  <span>{name}{marks}</span><span class="mins">{_int(a['minutes'])}'</span>
+  <span class="mins">{_fmt(rating, 2) if rating else '–'}</span></div>""")
         return '<div class="lineup">' + "".join(out) + "</div>"
 
-    blocks = [f"<h4>Titulaires ({len(starters)})</h4>{rows(starters)}"]
+    starters = [a for a in apps if a["started"] == "1" and a["played"] == "1"]
+    subs = [a for a in apps if a["started"] != "1" and a["played"] == "1"]
+    unused = [a for a in apps if a["played"] != "1"]
+    blocks = [f'<h4>{esc(t("Titulaires ({n})", n=len(starters)))}</h4>{rows(starters)}']
     if subs:
-        blocks.append(f"<h4>Entrés en jeu ({len(subs)})</h4>{rows(subs)}")
+        blocks.append(f'<h4>{esc(t("Entrés en jeu ({n})", n=len(subs)))}</h4>{rows(subs)}')
     if unused:
         names = ", ".join(esc(a["name"]) for a in unused)
-        blocks.append(f'<h4>Non entrés ({len(unused)})</h4><p class="sub">{names}</p>')
+        blocks.append(f'<h4>{esc(t("Non entrés ({n})", n=len(unused)))}</h4>'
+                      f'<p class="sub">{names}</p>')
     return "".join(blocks)
 
 
-def match_page(d, event, prev_event, next_event, players_with_pages):
+def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
+    t = ctx.t
     eid = event["event_id"]
     gf, ga = _int(event["gf"]), _int(event["ga"])
-    result = RESULT_WORD[event["result"]]
-    venue = {"H": "à domicile", "A": "à l'extérieur"}.get(event["venue"], "")
+    result = t(RESULT_WORD[event["result"]])
+    venue = t({"H": "à domicile", "A": "à l'extérieur"}.get(event["venue"], ""))
     state = d.state_by.get(eid, {})
     stats = d.stats_for_event(eid)
-    apps = d.apps_for_event(eid)
-    goals = d.goals_for_event(eid)
     pens = event.get("pens")
     score = f"{gf} – {ga}" + (f" ({pens} t.a.b.)" if pens else "")
 
-    title = f"Burkina Faso {gf}–{ga} {event['opponent']}"
-    desc = (f"{result} {gf}-{ga} contre {event['opponent']} le {event['date']} "
-            f"({event['tournament']}) : composition, statistiques et chronologie des buts.")
+    facts = [(t("Compétition"), event["tournament"]), (t("Date"), event["date"]),
+             (t("Lieu"), t({"H": "Domicile", "A": "Extérieur"}.get(event["venue"], "–"))),
+             (t("Système"), event.get("bf_formation") or "–"),
+             (t("Système adverse"), event.get("opp_formation") or "–")]
+    if state:
+        facts += [(t("Durée effective"), f"{_fmt(state['effective_length'])} min"),
+                  (t("Minutes en tête"), _fmt(state["min_leading"], 0)),
+                  (t("Minutes menés"), _fmt(state["min_trailing"], 0))]
 
+    formation = (t(", formation {f}", f=event["bf_formation"])
+                 if event.get("bf_formation") else "")
     head = f"""<div class="hero-band"><div class="inner">
   <p class="eyebrow">{esc(event['tournament'])} · {esc(event['date'])}</p>
-  <h1>Burkina Faso <span style="color:var(--muted)">{esc(score)}</span> {esc(event['opponent'])}</h1>
-  <p>{esc(result)} {esc(venue)}{', formation ' + esc(event['bf_formation']) if event.get('bf_formation') else ''}.</p>
+  <h1>{esc(t("Burkina Faso"))} <span>{esc(score)}</span> {esc(event['opponent'])}</h1>
+  <p>{esc(t("{result} {venue}{formation}.", result=result, venue=venue, formation=formation))}</p>
 </div></div>"""
 
-    facts = [("Compétition", event["tournament"]), ("Date", event["date"]),
-             ("Lieu", {"H": "Domicile", "A": "Extérieur"}.get(event["venue"], "–")),
-             ("Système", event.get("bf_formation") or "–"),
-             ("Système adverse", event.get("opp_formation") or "–")]
-    if state:
-        facts += [("Durée effective", f"{_fmt(state['effective_length'])} min"),
-                  ("Minutes en tête", f"{_fmt(state['min_leading'], 0)}"),
-                  ("Minutes menés", f"{_fmt(state['min_trailing'], 0)}")]
-    kv = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in facts)
+    pager_prev = (f'<a href="{ctx.url("match", match_slug(prev_event))}">← '
+                  f'{esc(prev_event["opponent"])} ({prev_event["date"]})</a>'
+                  if prev_event else "<span></span>")
+    pager_next = (f'<a href="{ctx.url("match", match_slug(next_event))}">'
+                  f'{esc(next_event["opponent"])} ({next_event["date"]}) →</a>'
+                  if next_event else "<span></span>")
 
     body = f"""{head}
 <main>
-  <p class="crumb"><a href="../index.html">Accueil</a> ›
-     <a href="../matchs.html">Matchs</a> › {esc(event['date'])}</p>
+  <p class="crumb"><a href="{ctx.url('home')}">{esc(t("Accueil"))}</a> ›
+     <a href="{ctx.url('matches')}">{esc(t("Matchs"))}</a> › {esc(event['date'])}</p>
   <div class="grid">
-    {card(width="w8", title_html="<h3>Chronologie</h3>",
-          extra=goal_timeline(goals, d.subs_for_event(eid), d.cards_for_event(eid),
-                              event["opponent"]))}
-    {card(width="w4", title_html="<h3>Fiche du match</h3>",
-          extra=f'<dl class="kv">{kv}</dl>')}
-    {card(width="w6", title_html="<h3>Statistiques d'équipe</h3>",
-          extra=stat_bars(stats.get("bf"), stats.get("opp")))}
-    {card(width="w6", title_html="<h3>Composition</h3>",
-          extra=lineup_block(apps, players_with_pages))}
+    {card(width="w8", title_html=f'<h3>{esc(t("Chronologie"))}</h3>',
+          extra=goal_timeline(ctx, d.goals_for_event(eid), d.subs_for_event(eid),
+                              d.cards_for_event(eid), event["opponent"]))}
+    {card(width="w4", title_html=f'<h3>{esc(t("Fiche du match"))}</h3>',
+          extra=f'<dl class="kv">{_kv(facts)}</dl>')}
+    {card(width="w6", title_html=f'<h3>{esc(t("Statistiques d\'équipe"))}</h3>',
+          extra=stat_bars(ctx, stats.get("bf"), stats.get("opp")))}
+    {card(width="w6", title_html=f'<h3>{esc(t("Composition"))}</h3>',
+          extra=lineup_block(ctx, d.apps_for_event(eid), players_with_pages))}
   </div>
-  <div class="pager">
-    {f'<a href="{match_slug(prev_event)}.html">← {esc(prev_event["opponent"])} ({prev_event["date"]})</a>' if prev_event else '<span></span>'}
-    {f'<a href="{match_slug(next_event)}.html">{esc(next_event["opponent"])} ({next_event["date"]}) →</a>' if next_event else '<span></span>'}
-  </div>
+  <div class="pager">{pager_prev}{pager_next}</div>
 </main>"""
-    return page(title=title, description=desc, body=body, depth=1,
-                active="matches", page_class="match-page")
+    return page(ctx,
+                title=f"Burkina Faso {gf}–{ga} {event['opponent']}",
+                description=t("{result} {gf}-{ga} contre {opponent} le {date} "
+                              "({tournament}) : composition, statistiques et "
+                              "chronologie des buts.",
+                              result=result, gf=gf, ga=ga,
+                              opponent=event["opponent"], date=event["date"],
+                              tournament=event["tournament"]),
+                body=body, page_class="match-page")
 
 
 # --------------------------------------------------------------- player page
 
-def player_page(d, profile, players_with_pages):
+def player_page(d, ctx, profile, players_with_pages):
+    t = ctx.t
     pid = profile["player_id"]
     imp = d.importance_by.get(pid, {})
     bench = d.bench_by.get(pid, {})
     apps = sorted(d.apps_for_player(pid), key=lambda a: a["date"], reverse=True)
     photo = d.photo("player", pid)
-    if photo:
-        photo = "../" + photo  # detail pages live one folder deep
     credit = d.photo_credit("player", pid)
     name = profile["name"]
 
     club = profile.get("club_v") or profile.get("club") or "–"
     league = profile.get("league_v") or ""
-    pos = POS_LABEL.get(profile["pos"], profile["pos"] or "–")
-    status_word = {"active": "International actif", "fringe": "En marge du groupe",
-                   "out": "Hors du groupe", "retired_int": "Retraité international",
-                   "retired_career": "Retraité"}.get(profile.get("status"), "")
-
-    desc = (f"{name} ({pos}, {club}) : sélections, minutes, buts et performances "
-            f"avec les Étalons du Burkina Faso depuis 2022.")
+    pos = t(POS_LABEL_KEY.get(profile["pos"], profile["pos"] or "–"))
+    status = t(STATUS_WORD.get(profile.get("status"), "")) if profile.get("status") else ""
 
     facts = [
-        ("Poste", pos),
-        ("Âge", f"{_fmt(profile.get('age'), 1)} ans" if profile.get("age") else "–"),
-        ("Club", club + (f" · {league}" if league else "")),
-        ("Sélections (carrière)", profile.get("caps") or "–"),
-        ("Buts (carrière)", profile.get("goals_career") or "–"),
-        ("Valeur estimée", (f"{_fmt(_num(profile['market_value_eur']) / 1e6, 1)} M€"
-                            if profile.get("market_value_eur") else "–")),
-        ("Taille", f"{profile['height']} cm" if profile.get("height") else "–"),
-        ("Pied", profile.get("foot") or "–"),
-        ("Dernière apparition", profile.get("last_seen") or "–"),
+        (t("Poste"), pos),
+        (t("Âge"), t("{n} ans", n=_fmt(profile.get("age"), 1))
+         if profile.get("age") else "–"),
+        (t("Club"), club + (f" · {league}" if league else "")),
+        (t("Sélections (carrière)"), profile.get("caps") or "–"),
+        (t("Buts (carrière)"), profile.get("goals_career") or "–"),
+        (t("Valeur estimée"),
+         f"{_fmt(_num(profile['market_value_eur']) / 1e6, 1)} M€"
+         if profile.get("market_value_eur") else "–"),
+        (t("Taille"), t("{n} cm", n=profile["height"]) if profile.get("height") else "–"),
+        (t("Pied"), profile.get("foot") or "–"),
+        (t("Dernière apparition"), profile.get("last_seen") or "–"),
     ]
-    kv = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in facts)
 
     window = [
-        ("Matchs dans le groupe", profile.get("matchday_squads")),
-        ("Apparitions", profile.get("apps")),
-        ("Titularisations", profile.get("starts")),
-        ("Minutes", _fmt(profile.get("minutes"))),
-        ("Buts", profile.get("goals")),
-        ("Passes décisives", profile.get("assists")),
-        ("Passes réussies", (f"{_fmt(profile['pass_pct'], 1)} %"
-                             if profile.get("pass_pct") else "–")),
-        ("Dribbles réussis", f"{profile.get('dribbles_won') or 0}/"
-                             f"{profile.get('dribbles_attempted') or 0}"),
-        ("Note moyenne", _fmt(profile.get("rating_avg"), 2)
-                         if profile.get("rating_avg") else "–"),
+        (t("Matchs dans le groupe"), profile.get("matchday_squads")),
+        (t("Apparitions"), profile.get("apps")),
+        (t("Titularisations"), profile.get("starts")),
+        (t("Minutes"), _fmt(profile.get("minutes"))),
+        (t("Buts"), profile.get("goals")),
+        (t("Passes décisives"), profile.get("assists")),
+        (t("Passes réussies"), f"{_fmt(profile['pass_pct'], 1)} %"
+         if profile.get("pass_pct") else "–"),
+        (t("Dribbles réussis"), f"{profile.get('dribbles_won') or 0}/"
+                                f"{profile.get('dribbles_attempted') or 0}"),
+        (t("Note moyenne"), _fmt(profile.get("rating_avg"), 2)
+         if profile.get("rating_avg") else "–"),
     ]
     if profile["pos"] == "GK":
-        window.append(("Arrêts", profile.get("saves")))
-    wkv = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in window)
+        window.append((t("Arrêts"), profile.get("saves")))
 
-    role = {"pilier": "Pilier", "rotation": "Rotation",
-            "marge": "Marge"}.get(imp.get("tier", ""), "")
+    gated = t("– (échantillon insuffisant)")
     imp_rows = []
     if imp:
-        share = _num(imp.get("minutes_share")) * 100
         imp_rows = [
-            ("Rôle", role or "–"),
-            ("Part des minutes", f"{_fmt(share, 0)} %"),
-            ("Titularisations", f"{imp.get('starts')}/{imp.get('squad_matches')}"),
-            ("On/Off ±/90", imp.get("onoff_diff") or "– (échantillon insuffisant)"),
-            ("PPM titulaire − remplaçant",
-             imp.get("ppg_diff") or "– (échantillon insuffisant)"),
-            ("Buts+passes /90", imp.get("ga90") or "– (échantillon insuffisant)"),
+            (t("Rôle"), t({"pilier": "Pilier", "rotation": "Rotation",
+                           "marge": "Marge"}.get(imp.get("tier", ""), "–"))),
+            (t("Part des minutes"),
+             f"{_fmt(_num(imp.get('minutes_share')) * 100, 0)} %"),
+            (t("Titularisations"), f"{imp.get('starts')}/{imp.get('squad_matches')}"),
+            (t("On/Off ±/90"), imp.get("onoff_diff") or gated),
+            (t("PPM titulaire − remplaçant"), imp.get("ppg_diff") or gated),
+            (t("Buts+passes /90"), imp.get("ga90") or gated),
         ]
-    ikv = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in imp_rows)
 
     rows = []
     for a in apps[:60]:
         ev = d.event_by.get(a["event_id"], {})
-        link = (f'<a href="../matchs/{match_slug(ev)}.html">'
-                f'{esc(a["opponent"])}</a>' if ev else esc(a["opponent"]))
-        res = a["gf"] and (
-            "W" if _int(a["gf"]) > _int(a["ga"]) else
-            ("D" if _int(a["gf"]) == _int(a["ga"]) else "L"))
-        chip = f'<span class="chip {res}">{ {"W": "V", "D": "N", "L": "D"}[res] }</span>' if res else ""
+        link = (f'<a href="{ctx.url("match", match_slug(ev))}">{esc(a["opponent"])}</a>'
+                if ev else esc(a["opponent"]))
+        res = ("W" if _int(a["gf"]) > _int(a["ga"])
+               else ("D" if _int(a["gf"]) == _int(a["ga"]) else "L"))
+        chip = f'<span class="chip {res}">{ctx.result_letter[res]}</span>'
         played = a["played"] == "1"
-        # never claim a start for a player who logged no minutes
-        status = ("Tit." if played and a["started"] == "1"
-                  else ("Rempl." if played else "Non entré"))
+        st = (t("Tit.") if played and a["started"] == "1"
+              else (t("Rempl.") if played else t("Non entré")))
         rows.append(f"""<tr><td>{esc(a['date'])}</td><td>{chip}</td><td>{link}</td>
-  <td class="num">{esc(a['gf'])}-{esc(a['ga'])}</td>
-  <td class="num">{status}</td>
+  <td class="num">{esc(a['gf'])}-{esc(a['ga'])}</td><td class="num">{esc(st)}</td>
   <td class="num">{str(_int(a['minutes'])) + "'" if played else '–'}</td>
   <td class="num">{_int(a['goals']) or '–'}</td>
   <td class="num">{_int(a['assists']) or '–'}</td>
   <td class="num">{_fmt(a['rating'], 2) if _num(a['rating']) else '–'}</td></tr>""")
     table = f"""<div class="tablewrap"><table>
-  <tr><th>Date</th><th></th><th>Adversaire</th><th class="num">Score</th>
-      <th class="num">Statut</th><th class="num">Min</th><th class="num">Buts</th>
-      <th class="num">P. déc.</th><th class="num">Note</th></tr>
+  <tr><th>{esc(t("Date"))}</th><th></th><th>{esc(t("Adversaire"))}</th>
+      <th class="num">{esc(t("Score"))}</th><th class="num">{esc(t("Statut"))}</th>
+      <th class="num">{esc(t("Min"))}</th><th class="num">{esc(t("Buts"))}</th>
+      <th class="num">{esc(t("P. déc."))}</th>
+      <th class="num">{esc(t("Note"))}</th></tr>
   {''.join(rows)}</table></div>"""
 
     bench_block = ""
     if bench and _int(bench.get("sub_apps")) >= 3:
-        bench_block = card(width="w4", title_html="<h3>En sortie de banc</h3>", extra=f"""
-  <dl class="kv">
-    <dt>Entrées</dt><dd>{bench['sub_apps']}</dd>
-    <dt>Minutes</dt><dd>{_fmt(bench['sub_min'])}</dd>
-    <dt>Buts + passes</dt><dd>{bench['sub_ga']}</dd>
-    <dt>Entrée moyenne</dt><dd>{_fmt(bench['entry_avg'], 0)}'</dd>
-  </dl>""")
+        bench_block = card(
+            width="w4", title_html=f'<h3>{esc(t("En sortie de banc"))}</h3>',
+            extra=f'<dl class="kv">{_kv([(t("Entrées"), bench["sub_apps"]), (t("Minutes"), _fmt(bench["sub_min"])), (t("Buts + passes"), bench["sub_ga"]), (t("Entrée moyenne"), _fmt(bench["entry_avg"], 0) + "'")])}</dl>')
 
     credit_html = ""
     if credit:
-        credit_html = (f'<p class="photo-credit">Photo : {esc(credit["author"])} · '
-                       f'{esc(credit["licence"])} · '
+        credit_html = (f'<p class="photo-credit">'
+                       f'{esc(t("Photo : {author} · {licence} · ", author=credit["author"], licence=credit["licence"]))}'
                        f'<a href="{esc(credit["credit_url"])}" rel="nofollow">Commons</a></p>')
 
     head = f"""<div class="hero-band"><div class="inner">
   <div class="entity">
-    {avatar(photo, name, "photo")}
+    {avatar(ctx.asset(photo) if photo else None, name, "photo")}
     <div class="meta">
-      <p class="eyebrow">{esc(status_word)}</p>
+      <p class="eyebrow">{esc(status)}</p>
       <h1>{esc(name)}</h1>
       <p class="sub">{esc(pos)} · {esc(club)}{' · ' + esc(league) if league else ''}</p>
       {credit_html}
@@ -337,18 +374,23 @@ def player_page(d, profile, players_with_pages):
 
     body = f"""{head}
 <main>
-  <p class="crumb"><a href="../index.html">Accueil</a> ›
-     <a href="../joueurs.html">Joueurs</a> › {esc(name)}</p>
+  <p class="crumb"><a href="{ctx.url('home')}">{esc(t("Accueil"))}</a> ›
+     <a href="{ctx.url('players')}">{esc(t("Joueurs"))}</a> › {esc(name)}</p>
   <div class="grid">
-    {card(width="w4", title_html="<h3>Identité</h3>", extra=f'<dl class="kv">{kv}</dl>')}
-    {card(width="w4", title_html="<h3>Bilan depuis janv. 2022</h3>",
-          extra=f'<dl class="kv">{wkv}</dl>')}
-    {card(width="w4", title_html="<h3>Importance</h3>",
-          extra=(f'<dl class="kv">{ikv}</dl>' if ikv else
-                 '<p class="sub">Pas encore assez de matchs pour situer ce joueur.</p>'))}
+    {card(width="w4", title_html=f'<h3>{esc(t("Identité"))}</h3>',
+          extra=f'<dl class="kv">{_kv(facts)}</dl>')}
+    {card(width="w4", title_html=f'<h3>{esc(t("Bilan depuis janv. 2022"))}</h3>',
+          extra=f'<dl class="kv">{_kv(window)}</dl>')}
+    {card(width="w4", title_html=f'<h3>{esc(t("Importance"))}</h3>',
+          extra=(f'<dl class="kv">{_kv(imp_rows)}</dl>' if imp_rows else
+                 '<p class="sub">'
+                 + esc(t("Pas encore assez de matchs pour situer ce joueur.")) + '</p>'))}
     {bench_block}
-    {card(width="w12", title_html="<h3>Match par match</h3>", extra=table)}
+    {card(width="w12", title_html=f'<h3>{esc(t("Match par match"))}</h3>', extra=table)}
   </div>
 </main>"""
-    return page(title=name, description=desc, body=body, depth=1,
-                active="players", page_class="player-page")
+    return page(ctx, title=name,
+                description=t("{name} ({pos}, {club}) : sélections, minutes, buts "
+                              "et performances avec les Étalons du Burkina Faso "
+                              "depuis 2022.", name=name, pos=pos, club=club),
+                body=body, page_class="player-page")

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Étalons Analytics</title>
+<meta name="description" content="Sources, formulas, thresholds and limits of the Étalons Analytics project.">
+<meta property="og:title" content="Methodology — Étalons Analytics">
+<meta property="og:description" content="Sources, formulas, thresholds and limits of the Étalons Analytics project.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<link rel="alternate" hreflang="fr" href="https://rolandsanou.github.io/etalons-analytics/methodologie.html">
+<link rel="alternate" hreflang="en" href="https://rolandsanou.github.io/etalons-analytics/en/methodology.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<script>/* set the remembered theme before first paint, so an explicit dark choice
+   never flashes light. No stored choice: prefers-color-scheme decides in CSS.
+   Braces are doubled because this block sits inside a Python f-string. */
+try{var _t=localStorage.getItem("ea_theme");if(_t==="dark"||_t==="light")
+document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=9b0eca08">
+<link rel="stylesheet" href="../assets/pages.css?v=9b0eca08">
+</head>
+<body class="" data-needs="meta" data-base="../">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">Étalons Analytics</a>
+    <nav><a href="index.html">Home</a><a href="squad.html">Squad</a><a href="players.html">Players</a><a href="matches.html">Matches</a><a href="analysis.html">Analysis</a><a href="management.html">Management</a><a href="history.html">History</a><a href="projections.html">Projections</a><a href="methodology.html" class="on">Methodology</a></nav>
+    <div class="lang"><a href="../methodologie.html" hreflang="fr" lang="fr">FR</a><a href="methodology.html" class="on" hreflang="en" lang="en">EN</a></div>
+    <button class="theme" id="theme_toggle" type="button"
+            aria-pressed="false"><span aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Methodology</p>
+  <h1>How these numbers are produced</h1>
+  <p>Sources, formulas, thresholds and limits. All of it is reproducible: the code and the intermediate data are public.</p>
+</div></div>
+<main>
+  <section id="methodologie">
+    <div class="methodo" id="methodo"></div>
+  </section>
+  <section id="credits">
+    <h2>Photo credits</h2>
+    <p class="lead">Portraits come from Wikimedia Commons under a free licence. No copyrighted press photography is republished here.</p>
+    <div class="credits"><div>Amir Abdou — Bhmkinder,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:AMIR_MTN.jpg" rel="nofollow">Commons</a>)</div><div>Bernard Simondi — Doha Stadium Plus Qatar from Doha, Qatar,
+  CC BY 2.0 (<a href="https://commons.wikimedia.org/wiki/File:Simondi_Bernard_(6426679887).jpg" rel="nofollow">Commons</a>)</div><div>Gernot Rohr — Кирилл Венедиктов,
+  CC BY-SA 3.0 (<a href="https://commons.wikimedia.org/wiki/File:Gernot_Rohr_2018.jpg" rel="nofollow">Commons</a>)</div><div>Hubert Velud — Mickael Denet,
+  CC BY-SA 3.0 (<a href="https://commons.wikimedia.org/wiki/File:Hubert-velud.jpg" rel="nofollow">Commons</a>)</div><div>Oscar Fulloné — Badrlhs,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Oscar_Fullon%C3%A9.jpg" rel="nofollow">Commons</a>)</div><div>Otto Pfister — 14. Internationale Sportnacht Davos from Davos, Schweiz,
+  CC BY-SA 2.0 (<a href="https://commons.wikimedia.org/wiki/File:Otto_Pfister_2013.jpg" rel="nofollow">Commons</a>)</div><div>Philippe Troussier — Thplam2004,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Philippe_Troussier_in_2023.png" rel="nofollow">Commons</a>)</div><div>Abdoul Guiebre — Amir Hossein Yeganeh,
+  CC BY 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Abdoul_Guiebre_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Abdoul Tapsoba — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Tapsoba_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Adama Guira — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Guira_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Adamo Nagalo — Amir Hossein Yeganeh,
+  CC BY 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Adamo_Nagalo_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Arthur Zagré — Sandro Halank, Wikimedia Commons,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93133_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Bertrand Traoré — Effathéophile105,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Capitain_du_bourkina_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Blati Touré — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Blati_Toure_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Cedric Badolo — Fcstmani,
+  CC0 (<a href="https://commons.wikimedia.org/wiki/File:Cedric_Badolo.jpg" rel="nofollow">Commons</a>)</div><div>Cyrille Bayala — Supporterhéninois,
+  CC0 (<a href="https://commons.wikimedia.org/wiki/File:Cyrille_Bayala_-_Entra%C3%AEnement_RC_Lens_-_19_juin_2018_11_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Dango Ouattara — Timmy96,
+  CC0 (<a href="https://commons.wikimedia.org/wiki/File:Dango_Ouattara_29112025_(1).jpg" rel="nofollow">Commons</a>)</div><div>Dramane Salou — FC Olympic Donetsk,
+  CC BY 3.0 (<a href="https://commons.wikimedia.org/wiki/File:Dramane_Salou.png" rel="nofollow">Commons</a>)</div><div>Edmond Tapsoba — Pyaet,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Edmond_Tapsoba,_2022-07-31,_Saisoner%C3%B6ffnung_Bayer_04,_Leverkusen_(1)_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Georgi Minoungou — SounderBruce,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Georgi_Minoungou_at_2025_Sounders_Fan_Fest_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Gustavo Sangaré — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Sangare_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Hervé Koffi — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Koffi_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Hillel Konaté — Supporterhéninois,
+  CC0 (<a href="https://commons.wikimedia.org/wiki/File:Valenciennes_FC_-_RC_Lens_(10-11-2018)_56.jpg" rel="nofollow">Commons</a>)</div><div>Issa Kaboré — ESTAC Troyes,
+  CC BY 3.0 (<a href="https://commons.wikimedia.org/wiki/File:Issa_Kabor%C3%A9_(2021).jpg" rel="nofollow">Commons</a>)</div><div>Issoufou Dayo — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Dayo_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Lassina Traoré — Mykola Tys,
+  CC BY 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Lassina_Traor%C3%A9.jpg" rel="nofollow">Commons</a>)</div><div>Mamady Bangré — Gaillac,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:TFC-FC_Metz_(2023-10-01)_Mamady_Bangr%C3%A9_3_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Nasser Djiga — Fexedyte,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Nasser_Djiga.jpg" rel="nofollow">Commons</a>)</div><div>Ousseni Bouda — ECTran71,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Ousseni_Bouda_SJPL_2026.jpg" rel="nofollow">Commons</a>)</div><div>Patrick Malo — Happiraphael,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Malo_Burkina_Faso_(cropped).jpg" rel="nofollow">Commons</a>)</div><div>Steeve Yago — Effathéophile105,
+  CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Conscentration_du_joueur.jpg" rel="nofollow">Commons</a>)</div><div>Stephane Aziz Ki — Amir Hossein Yeganeh,
+  CC BY 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Stephane_Aziz_Ki_(cropped).jpg" rel="nofollow">Commons</a>)</div></div>
+  </section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="../assets/i18n.js?v=9b0eca08"></script>
+<script src="../assets/core.js?v=9b0eca08"></script>
+
+<script src="../assets/boot.js?v=9b0eca08"></script>
+</body>
+</html>

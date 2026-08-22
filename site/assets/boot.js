@@ -192,10 +192,8 @@ async function boot() {
       fetch(`${base}data/${name}.json`).then(r => r.json()).catch(() => null)));
     needs.forEach((name, i) => { DATA[name] = loaded[i]; });
   }
-  document.querySelectorAll(".lang button").forEach(b => {
-    b.addEventListener("click", () => setLang(b.dataset.lang));
-    b.classList.toggle("on", b.dataset.lang === LANG);
-  });
+  // the FR/EN control is a pair of links to the counterpart page; the active
+  // one is already marked by the generator, so there is nothing to wire here
   const search = $("pool_search");
   if (search) { search.addEventListener("input", renderPoolTable); }
   document.documentElement.lang = LANG;
