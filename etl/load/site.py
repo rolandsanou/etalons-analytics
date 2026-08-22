@@ -3,15 +3,22 @@ from datetime import date, datetime
 import pandas as pd
 
 from .. import analytics
-from ..config import RAW, SITE_DATA, STAGING, STATS_SINCE, TEAM, WIKI_TEAM_URL
-from ..extract.wikipedia import squad_windows
-from ..parsers.wikipedia import parse_afcon_record, parse_as_of, parse_leaders
+from ..config import SEED, SITE_DATA, STAGING, STATS_SINCE, TEAM, WIKI_TEAM_URL
 from ..transform import matches as matches_mod
-from ..util import read_csv, write_json
+from ..util import read_csv, read_json, write_json
 from .formations import build_formations
 from .profiles import build_profiles
 from .registry import site_fragments
 from .style import full_feed_events
+
+
+def reference():
+    """Wikipedia-derived reference tables, staged by transform/records.py."""
+    return read_json(STAGING / "reference.json")
+
+
+def squad_windows():
+    return read_csv(SEED / "wiki_squads.csv")
 
 
 def _callup_to_player(c):
@@ -48,9 +55,8 @@ def build_squad_json(today):
     squad = analytics.enrich_players(current, today)
     pool = analytics.enrich_players(recent, today)
     seen = {p["name"] for p in squad}
-    team_html = (RAW / "wikipedia" / "team_page.html").read_text(encoding="utf-8")
     return {
-        "as_of": parse_as_of(team_html),
+        "as_of": reference()["as_of"],
         "players": squad,
         "callups": pool,
         "stats": analytics.squad_stats(squad),
@@ -120,13 +126,12 @@ def build_penalties_json():
 def build_history_json():
     m = matches_mod.load_staged()
     hist = matches_mod.history_stats(m)
-    team_html = (RAW / "wikipedia" / "team_page.html").read_text(encoding="utf-8")
-    capped, scorers = parse_leaders(team_html)
+    ref = reference()
     return {
         **hist,
-        "most_capped": capped,
-        "top_scorers": scorers,
-        "afcon_record": parse_afcon_record(team_html),
+        "most_capped": ref["most_capped"],
+        "top_scorers": ref["top_scorers"],
+        "afcon_record": ref["afcon_record"],
         "shootouts": build_shootouts_json(),
     }
 

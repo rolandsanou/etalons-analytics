@@ -1,10 +1,11 @@
 from . import (appearances, clubform, elo, incidents, matches, penalties,
-               players, teamstats, timeline, youth)
+               players, records, teamstats, timeline, youth)
 
 
 def run():
     matches.run()
     elo.run()
+    records.run()
     registry, callups = players.build()
     appearances.run(registry)
     incidents.run(registry)

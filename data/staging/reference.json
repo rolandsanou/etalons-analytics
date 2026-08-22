@@ -1,0 +1,339 @@
+{
+ "as_of": "Caps and goals correct as of 9 June 2026, after the match against Belarus .",
+ "most_capped": [
+  {
+   "rank": 1,
+   "name": "Charles Kaboré",
+   "caps": 102,
+   "goals": 4,
+   "career": "2006–2021"
+  },
+  {
+   "rank": 2,
+   "name": "Steeve Yago",
+   "caps": 96,
+   "goals": 1,
+   "career": "2013–present"
+  },
+  {
+   "rank": 3,
+   "name": "Issoufou Dayo",
+   "caps": 92,
+   "goals": 9,
+   "career": "2012–present"
+  },
+  {
+   "rank": 4,
+   "name": "Bertrand Traoré",
+   "caps": 91,
+   "goals": 22,
+   "career": "2011–present"
+  },
+  {
+   "rank": 5,
+   "name": "Jonathan Pitroipa",
+   "caps": 84,
+   "goals": 19,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 6,
+   "name": "Moumouni Dagano",
+   "caps": 83,
+   "goals": 34,
+   "career": "1998–2013"
+  },
+  {
+   "rank": 7,
+   "name": "Bakary Koné",
+   "caps": 83,
+   "goals": 0,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 8,
+   "name": "Aristide Bancé",
+   "caps": 79,
+   "goals": 24,
+   "career": "2003–2019"
+  },
+  {
+   "rank": 9,
+   "name": "Hervé Koffi",
+   "caps": 72,
+   "goals": 0,
+   "career": "2016–present"
+  },
+  {
+   "rank": 10,
+   "name": "Saïdou Panandétiguiri",
+   "caps": 66,
+   "goals": 2,
+   "career": "2002–2013"
+  }
+ ],
+ "top_scorers": [
+  {
+   "rank": 1,
+   "name": "Moumouni Dagano",
+   "caps": 83,
+   "goals": 34,
+   "career": "1998–2013"
+  },
+  {
+   "rank": 2,
+   "name": "Aristide Bancé",
+   "caps": 79,
+   "goals": 24,
+   "career": "2003–2019"
+  },
+  {
+   "rank": 3,
+   "name": "Bertrand Traoré",
+   "caps": 91,
+   "goals": 22,
+   "career": "2011–present"
+  },
+  {
+   "rank": 4,
+   "name": "Alain Traoré",
+   "caps": 65,
+   "goals": 21,
+   "career": "2006–2021"
+  },
+  {
+   "rank": 5,
+   "name": "Jonathan Pitroipa",
+   "caps": 84,
+   "goals": 19,
+   "career": "2006–2019"
+  },
+  {
+   "rank": 6,
+   "name": "Lassina Traoré",
+   "caps": 34,
+   "goals": 15,
+   "career": "2017–present"
+  },
+  {
+   "rank": 7,
+   "name": "Mamadou Zongo",
+   "caps": 30,
+   "goals": 13,
+   "career": "1996–2013"
+  },
+  {
+   "rank": 8,
+   "name": "Préjuce Nakoulma",
+   "caps": 53,
+   "goals": 13,
+   "career": "2012–2019"
+  },
+  {
+   "rank": 9,
+   "name": "Dango Ouattara",
+   "caps": 40,
+   "goals": 12,
+   "career": "2021–present"
+  },
+  {
+   "rank": 10,
+   "name": "Amadou Touré",
+   "caps": 30,
+   "goals": 10,
+   "career": "1998–2006"
+  },
+  {
+   "rank": 11,
+   "name": "Oumar Barro",
+   "caps": 48,
+   "goals": 10,
+   "career": "1996–2003"
+  }
+ ],
+ "afcon_record": [
+  {
+   "year": 1978,
+   "round": "Group stage"
+  },
+  {
+   "year": 1996,
+   "round": "Group stage"
+  },
+  {
+   "year": 1998,
+   "round": "Fourth place"
+  },
+  {
+   "year": 2000,
+   "round": "Group stage"
+  },
+  {
+   "year": 2002,
+   "round": "Group stage"
+  },
+  {
+   "year": 2004,
+   "round": "Group stage"
+  },
+  {
+   "year": 2010,
+   "round": "Group stage"
+  },
+  {
+   "year": 2012,
+   "round": "Group stage"
+  },
+  {
+   "year": 2013,
+   "round": "Runners-up"
+  },
+  {
+   "year": 2015,
+   "round": "Group stage"
+  },
+  {
+   "year": 2017,
+   "round": "Third place"
+  },
+  {
+   "year": 2021,
+   "round": "Fourth place"
+  },
+  {
+   "year": 2023,
+   "round": "Round of 16"
+  },
+  {
+   "year": 2025,
+   "round": "Round of 16"
+  }
+ ],
+ "coaching_history": [
+  {
+   "coach": "Otto Pfister",
+   "start_year": 1976,
+   "end_year": 1978
+  },
+  {
+   "coach": "Heinz-Peter Überjahn",
+   "start_year": 1988,
+   "end_year": 1990
+  },
+  {
+   "coach": "Idrissa Traoré",
+   "start_year": 1992,
+   "end_year": 1996
+  },
+  {
+   "coach": "Calixte Zagre",
+   "start_year": 1996,
+   "end_year": 1996
+  },
+  {
+   "coach": "Ivan Vutov",
+   "start_year": 1996,
+   "end_year": 1997
+  },
+  {
+   "coach": "Malik Jabir",
+   "start_year": 1997,
+   "end_year": 1997
+  },
+  {
+   "coach": "Philippe Troussier",
+   "start_year": 1997,
+   "end_year": 1998
+  },
+  {
+   "coach": "Didier Notheaux",
+   "start_year": 1998,
+   "end_year": 1999
+  },
+  {
+   "coach": "René Taelman",
+   "start_year": 2000,
+   "end_year": 2000
+  },
+  {
+   "coach": "Sidiki Diarra",
+   "start_year": 2000,
+   "end_year": 2001
+  },
+  {
+   "coach": "Oscar Fulloné",
+   "start_year": 2001,
+   "end_year": 2002
+  },
+  {
+   "coach": "Jacques Yaméogo & Pihouri Weboanga",
+   "start_year": 2002,
+   "end_year": 2002
+  },
+  {
+   "coach": "Jean-Paul Rabier",
+   "start_year": 2002,
+   "end_year": 2004
+  },
+  {
+   "coach": "Ivica Todorov",
+   "start_year": 2004,
+   "end_year": 2005
+  },
+  {
+   "coach": "Bernard Simondi",
+   "start_year": 2005,
+   "end_year": 2006
+  },
+  {
+   "coach": "Idrissa Traoré",
+   "start_year": 2006,
+   "end_year": 2007
+  },
+  {
+   "coach": "Didier Notheaux & Sidiki Diarra",
+   "start_year": 2007,
+   "end_year": 2007
+  },
+  {
+   "coach": "Paulo Jorge Rebelo Duarte",
+   "start_year": 2008,
+   "end_year": 2012
+  },
+  {
+   "coach": "Paul Put",
+   "start_year": 2012,
+   "end_year": 2015
+  },
+  {
+   "coach": "Gernot Rohr",
+   "start_year": 2015,
+   "end_year": 2015
+  },
+  {
+   "coach": "Paulo Duarte",
+   "start_year": 2015,
+   "end_year": 2019
+  },
+  {
+   "coach": "Kamou Malo",
+   "start_year": 2019,
+   "end_year": 2022
+  },
+  {
+   "coach": "Hubert Velud",
+   "start_year": 2022,
+   "end_year": 2024
+  },
+  {
+   "coach": "Brama Traoré",
+   "start_year": 2024,
+   "end_year": 2026
+  },
+  {
+   "coach": "Amir Abdou",
+   "start_year": 2026,
+   "end_year": null
+  }
+ ]
+}
