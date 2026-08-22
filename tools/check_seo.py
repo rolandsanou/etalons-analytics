@@ -110,6 +110,29 @@ def audit(page):
     return out
 
 
+def asset_faults():
+    """Control characters and replacement chars in the stylesheets and scripts.
+
+    Twice now a non-ASCII escape has been mangled on its way into an asset: a
+    combining-mark range became a raw U+0300 and silently killed all of core.js,
+    and a `\\25D1` escape became byte 0x15 followed by the literal text "D1",
+    which is what the theme toggle rendered. Neither shows up as a broken link or
+    a failed request, so nothing else would catch it.
+    """
+    faults = []
+    for path in sorted((SITE / "assets").rglob("*.css")) + \
+            sorted((SITE / "assets").rglob("*.js")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for n, line in enumerate(text.splitlines(), 1):
+            bad = {c for c in line if (ord(c) < 32 and c != "\t") or ord(c) == 127
+                   or c == "�"}
+            if bad:
+                names = ", ".join(f"U+{ord(c):04X}" for c in sorted(bad))
+                faults.append(f"{path.relative_to(SITE).as_posix()}:{n}: "
+                              f"stray control/replacement char ({names})")
+    return faults
+
+
 def main():
     pages = sorted(SITE.rglob("*.html"))
     if not pages:
@@ -120,6 +143,8 @@ def main():
         for level, message in audit(page):
             line = f"{page.relative_to(SITE).as_posix()}: {message}"
             (fails if level == "FAIL" else warns).append(line)
+
+    fails += asset_faults()
 
     sitemap = SITE / "sitemap.xml"
     if not sitemap.exists():

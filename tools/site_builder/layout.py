@@ -198,8 +198,12 @@ document.documentElement.setAttribute("data-theme",_t);}}catch(e){{}}</script>
     <a class="brand" href="{ctx.url('home')}">{SITE_NAME}</a>
     <nav>{nav_items}</nav>
     <div class="lang">{lang_links}</div>
-    <button class="theme" id="theme_toggle" type="button"
-            aria-pressed="false"><span aria-hidden="true"></span></button>
+    <button class="theme" id="theme_toggle" type="button" aria-pressed="false">
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"
+           focusable="false"><circle cx="8" cy="8" r="6.6" fill="none"
+           stroke="currentColor" stroke-width="1.4"/><path
+           d="M8 1.4a6.6 6.6 0 0 1 0 13.2z"/></svg>
+    </button>
   </div>
 </header>
 

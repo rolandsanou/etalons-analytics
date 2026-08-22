@@ -242,6 +242,32 @@ a.pcard:hover { background: var(--tint); box-shadow: inset 2px 0 0 var(--red); }
 a.pcard:hover .nm { text-decoration: underline; text-decoration-thickness: 1px; }
 a.pcard:focus-visible { outline-offset: -2px; }
 
+/* -----------------------------------------------------------------------------
+   the home page's top six
+   -----------------------------------------------------------------------------
+   A fixed column count, unlike auto-fill, guarantees six cards fill their rows
+   exactly: 3x2, 2x3 or 6x1. Auto-fill sized the columns to the viewport instead,
+   so a wide screen got five across and left the sixth alone beside four empty
+   cells showing the grid's own background. Being a short, prominent list it also
+   carries a larger portrait than the 129-card index.
+   -------------------------------------------------------------------------- */
+
+.roster.feature { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.roster.feature .pcard { padding: 15px 16px; column-gap: 14px; }
+.roster.feature .pic { width: 58px; height: 58px; }
+.roster.feature .nm { font-size: 15px; }
+.roster.feature .rl { font-size: 12px; }
+.roster.feature .stat { font-size: 12.5px; }
+
+@media (max-width: 900px) {
+  .roster.feature { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .roster.feature { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* =============================================================================
    match list
    ========================================================================== */
@@ -637,11 +663,14 @@ main > section#methodo code {
 
 button.theme {
   appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: transparent;
   color: var(--masthead-ink);
   border-radius: 3px;
-  padding: 3px 8px;
+  padding: 5px 8px;
   font: inherit;
   font-size: 12px;
   line-height: 1.5;
@@ -659,8 +688,12 @@ button.theme:focus-visible {
   outline-offset: 2px;
 }
 
-/* the glyph is drawn from the label so it stays in sync with aria-pressed */
-button.theme span::before { content: "D1"; font-size: 13px; }
+/* The half-disc is drawn as inline SVG in layout.py rather than a font glyph.
+   It was a CSS `content` escape for U+25D1, but the backslash sequence was
+   mangled on the way into this file and rendered as a control character plus
+   the literal text "D1" -- and even written correctly it would have depended on
+   the reader having a font that carries that codepoint. */
+button.theme svg { display: block; fill: currentColor; }
 
 /* =============================================================================
    motion

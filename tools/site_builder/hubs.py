@@ -131,7 +131,7 @@ def home_page(d, ctx):
   <section id="cadres">
     <h2>{esc(t("Les plus utilisés"))}</h2>
     <p class="lead">{esc(t("Classés par minutes jouées en sélection depuis janvier 2022."))}</p>
-    <div class="roster">{cards_html}</div>
+    <div class="roster feature">{cards_html}</div>
     <p class="sub"><a href="{ctx.url('players')}">{esc(t("Tous les joueurs →"))}</a></p>
   </section>
 

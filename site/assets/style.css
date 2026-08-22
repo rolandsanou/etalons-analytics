@@ -229,14 +229,21 @@ nav a:focus-visible { outline-color: #fff; }
   cursor: pointer;
 }
 
-.lang button, .lang a:hover { color: #fff; }
+/* Each of these needs the state on BOTH element types. Written as
+   `.lang button, .lang a:hover` the first half is an unconditional selector, so
+   every button took the active and focus styling permanently. */
+.lang button:hover, .lang a:hover { color: #fff; }
 
-.lang button, .lang a.on {
-  background: #fff;
-  color: var(--ink);
+/* The masthead is dark in both themes, so its own pair is the only safe source
+   here. This used to read `background: #fff; color: var(--ink)`, and --ink
+   inverts to near-white in dark mode — the selected language came out white on
+   white. */
+.lang button.on, .lang a.on {
+  background: var(--masthead-ink);
+  color: var(--masthead);
 }
 
-.lang button, .lang a:focus-visible {
+.lang button:focus-visible, .lang a:focus-visible {
   outline: 2px solid #fff;
   outline-offset: -2px;
   border-radius: 0;
