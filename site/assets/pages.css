@@ -1,204 +1,129 @@
-/* Page shell for the multi-page site.
-   Reference-work styling: hairline rules, square corners, dense tabular data,
-   no gradients, no drop shadows, no decorative colour. Colour is reserved for
-   charts and for result/status meaning. */
+/* =============================================================================
+   Étalons Analytics — page components
+   -----------------------------------------------------------------------------
+   Everything below sits on the tokens and primitives defined in style.css:
+   the page header band, the player and match entity heads, the roster / match
+   list / timeline / lineup / stat-bar components, the long-form methodology
+   page, and motion.
+   ========================================================================== */
 
-:root {
-  --radius: 3px;
-  --ease: ease;
-  --rule: 1px solid var(--border);
+/* =============================================================================
+   page header band
+   ========================================================================== */
+
+.hero-band {
+  background: var(--surface);
+  border-bottom: 1px solid var(--hair);
 }
 
-/* ---------- typographic rhythm ---------- */
+.hero-band .inner { padding-block: 30px 28px; }
 
-main {
-  padding-top: 4px;
+.eyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--red);
+  margin: 0 0 9px;
 }
 
-main section {
-  margin-top: 40px;
-}
-
-main section > h2 {
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: -0.01em;
-  margin: 0 0 3px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid var(--ink);
-}
-
-main section > p.lead {
-  color: var(--ink-2);
-  font-size: 13.5px;
-  margin: 9px 0 14px;
-  max-width: 88ch;
-}
-
-.card {
-  padding: 13px 15px 11px;
-}
-
-.card h3 {
-  font-size: 13.5px;
-  font-weight: 650;
-  letter-spacing: -0.005em;
-}
-
-.card p.sub {
-  margin: 3px 0 9px;
-  line-height: 1.45;
-}
-
-.tile {
-  padding: 11px 13px 12px;
-}
-
-.tile .label {
-  font-size: 11.5px;
-  color: var(--muted);
-}
-
-.tile .value {
-  font-size: 26px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-  margin-top: 1px;
-}
-
-.tile .sub {
-  font-size: 11.5px;
-  margin-top: 2px;
-}
-
-/* numbers are the content here, so let them read as data */
-table td.num,
-table th.num {
-  font-variant-numeric: tabular-nums;
-}
-
-th {
-  border-bottom: 1px solid var(--baseline);
-}
-
-tbody tr:hover,
-table tr:hover {
-  background: #f7f6f2;
-}
-
-/* ---------- header / nav ---------- */
-
-.top-inner {
-  padding: 8px 20px;
-}
-
-nav {
-  gap: 16px;
-  font-size: 13px;
-}
-
-nav a.on {
-  color: var(--ink);
+.hero-band h1 {
+  font-family: var(--serif);
+  font-size: clamp(27px, 2.1vw + 18px, 37px);
   font-weight: 600;
-  box-shadow: inset 0 -2px 0 var(--bf-red);
+  line-height: 1.13;
+  letter-spacing: -0.016em;
+  margin: 0;
+  max-width: 26ch;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0;
-  text-decoration: none;
-  color: inherit;
-  font-size: 15.5px;
+.hero-band > .inner > p:not(.eyebrow) {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 11px 0 0;
+  max-width: 74ch;
+}
+
+/* match pages: "Burkina Faso 0 – 3 Côte d'Ivoire" */
+.match-page .hero-band h1 { max-width: none; }
+
+.match-page .hero-band h1 span {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.82em;
   letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding: 0 0.12em;
 }
 
-/* ---------- breadcrumb ---------- */
+/* =============================================================================
+   breadcrumb
+   ========================================================================== */
 
 .crumb {
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--muted);
-  margin: 14px 0 4px;
+  margin: 20px 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
 }
 
 .crumb a {
   color: var(--ink-2);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
-.crumb a:hover {
-  text-decoration: underline;
-}
+.crumb a:hover { border-bottom-color: var(--rule); }
 
-/* ---------- page head ---------- */
-
-.hero-band {
-  background: var(--surface);
-  border-bottom: var(--rule);
-}
-
-.hero-band .inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 22px 20px 18px;
-}
-
-.hero-band h1 {
-  font-size: 25px;
-  line-height: 1.2;
-  margin: 0 0 5px;
-  letter-spacing: -0.012em;
-  font-weight: 650;
-}
-
-.hero-band p {
-  color: var(--ink-2);
-  margin: 0;
-  max-width: 84ch;
-  font-size: 14px;
-}
-
-.eyebrow {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--muted);
-  margin: 0 0 5px;
-  letter-spacing: 0.02em;
-}
-
-/* ---------- entity head (player / match) ---------- */
+/* =============================================================================
+   entity head — player and coach identity inside the band
+   ========================================================================== */
 
 .entity {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .entity .photo {
-  width: 84px;
-  height: 84px;
-  border-radius: var(--radius);
+  flex: none;
+  width: 96px;
+  height: 96px;
+  border-radius: var(--r-s);
   object-fit: cover;
   object-position: center top;
   background: var(--neutral-bg);
-  border: var(--rule);
-  flex: none;
+  border: 1px solid var(--hair);
 }
 
 .entity .meta {
-  min-width: 240px;
-  flex: 1;
+  flex: 1 1 260px;
+  min-width: 0;
 }
 
-.entity h1 {
-  margin: 0 0 3px;
-}
+.entity h1 { margin: 0; }
 
 .entity .sub {
   color: var(--ink-2);
-  font-size: 13.5px;
+  font-size: 14px;
+  margin: 8px 0 0;
 }
+
+.photo-credit {
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1.45;
+  margin: 10px 0 0;
+  max-width: 62ch;
+}
+
+.photo-credit a { color: var(--muted); text-underline-offset: 2px; }
+.photo-credit a:hover { color: var(--ink-2); }
 
 .avatar {
   display: inline-flex;
@@ -206,414 +131,546 @@ nav a.on {
   justify-content: center;
   background: var(--neutral-bg);
   color: var(--muted);
+  font-size: 11.5px;
   font-weight: 600;
-  font-size: 13px;
-  border: var(--rule);
+  letter-spacing: 0.03em;
+  border: 1px solid var(--hair);
+  user-select: none;
 }
 
-.photo-credit {
-  color: var(--muted);
-  font-size: 11px;
-  margin-top: 5px;
-}
-
-.photo-credit a {
-  color: var(--muted);
-}
-
-/* ---------- player index ---------- */
+/* =============================================================================
+   roster — the person card
+   -----------------------------------------------------------------------------
+   Two markup shapes exist in the generated HTML: three block children after the
+   picture (index, coach lists) and a single wrapper element holding three spans
+   (players index). Explicit grid placement makes both stack identically, which
+   a flex row would not.
+   ========================================================================== */
 
 .roster {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(202px, 1fr));
   gap: 1px;
-  background: var(--grid);
-  border: var(--rule);
+  background: var(--hair);
+  border: 1px solid var(--hair);
+  border-radius: var(--r);
+  overflow: hidden;
 }
 
 .pcard {
-  display: flex;
-  gap: 11px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
   align-items: center;
-  text-decoration: none;
-  color: inherit;
+  column-gap: 12px;
   background: var(--surface);
   padding: 11px 13px;
   min-width: 0;
-}
-
-.pcard:hover {
-  background: #f3f2ee;
-}
-
-.pcard > span {
-  min-width: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .pcard .pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-s);
   object-fit: cover;
   object-position: center top;
   background: var(--neutral-bg);
   flex: none;
-  font-size: 12px;
 }
 
-/* the three lines stack: they are spans, so this display rule is load-bearing */
 .pcard .nm,
 .pcard .rl,
 .pcard .stat {
+  grid-column: 2;
   display: block;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.pcard .nm { grid-row: 1; }
+.pcard .rl { grid-row: 2; }
+.pcard .stat { grid-row: 3; }
+
+/* the wrapper-element variant: it owns rows 1–3 and stacks its own spans */
+.pcard > span:not([class]),
+.pcard > div:not([class]) {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  min-width: 0;
+}
+
+.pcard > span:not([class]) > .nm,
+.pcard > span:not([class]) > .rl,
+.pcard > span:not([class]) > .stat { grid-column: auto; grid-row: auto; }
+
 .pcard .nm {
-  font-weight: 600;
   font-size: 13.5px;
-  line-height: 1.25;
+  font-weight: 600;
+  line-height: 1.3;
   letter-spacing: -0.005em;
 }
 
 .pcard .rl {
-  color: var(--muted);
   font-size: 11.5px;
-  margin-top: 2px;
+  line-height: 1.35;
+  color: var(--muted);
 }
 
 .pcard .stat {
-  color: var(--ink-2);
   font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--ink-2);
   font-variant-numeric: tabular-nums;
-  margin-top: 1px;
 }
 
-/* ---------- match list ---------- */
+.pcard .rl .pill { margin-left: 4px; }
+
+a.pcard { transition: background-color 0.15s var(--ease); }
+a.pcard:hover { background: var(--tint); }
+a.pcard:hover .nm { text-decoration: underline; text-decoration-thickness: 1px; }
+a.pcard:focus-visible { outline-offset: -2px; }
+
+/* =============================================================================
+   match list
+   ========================================================================== */
 
 .mlist {
-  border: var(--rule);
-  background: var(--grid);
   display: flex;
   flex-direction: column;
   gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+  border-radius: var(--r);
+  overflow: hidden;
 }
 
 .mrow {
   display: grid;
-  grid-template-columns: 88px 22px 1fr 54px 150px;
-  gap: 10px;
+  grid-template-columns: 92px 21px minmax(0, 1fr) 50px minmax(0, 170px);
+  gap: 0 12px;
   align-items: center;
   background: var(--surface);
-  padding: 6px 12px;
+  padding: 8px 13px;
+  font-size: 13.5px;
   text-decoration: none;
   color: inherit;
-  font-size: 13px;
+  transition: background-color 0.15s var(--ease);
 }
 
-.mrow:hover {
-  background: #f4f3ef;
-}
+.mrow:hover { background: var(--tint); }
+.mrow:hover .opp { text-decoration: underline; text-decoration-thickness: 1px; }
+.mrow:focus-visible { outline-offset: -2px; }
 
 .mrow .dt {
+  font-size: 11.5px;
   color: var(--muted);
-  font-size: 12px;
   font-variant-numeric: tabular-nums;
 }
 
 .mrow .opp {
   font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .mrow .sc {
-  font-variant-numeric: tabular-nums;
   font-weight: 600;
   text-align: right;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
 }
 
 .mrow .cmp {
+  font-size: 10.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
-  font-size: 11.5px;
   text-align: right;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-/* ---------- match timeline ---------- */
+/* =============================================================================
+   match timeline — minute column, spine, event
+   ========================================================================== */
 
 .timeline {
-  border-top: var(--rule);
-  margin: 4px 0 2px;
+  position: relative;
+  border-top: 1px solid var(--hair);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 43px;
+  width: 1px;
+  background: var(--hair);
 }
 
 .tevent {
   display: grid;
-  grid-template-columns: 44px 16px 1fr;
-  gap: 8px;
+  grid-template-columns: 36px 42px minmax(0, 1fr);
+  gap: 0 14px;
   align-items: baseline;
-  padding: 5px 0;
-  border-bottom: 1px solid var(--grid);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--row);
   font-size: 13px;
 }
 
+.tevent:last-child { border-bottom: 0; }
+
 .tevent .min {
+  text-align: right;
+  font-size: 11.5px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-  font-size: 12px;
-  text-align: right;
 }
 
 .tevent .mark {
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
-  text-align: center;
 }
 
-.tevent.bf .mark { color: var(--s1); }
-.tevent.opp .mark { color: var(--s2); }
+.tevent.bf .mark { color: var(--red); }
+.tevent.opp .mark { color: var(--ink-2); }
 
-.tevent .who {
-  font-weight: 600;
-}
+.tevent .who { font-weight: 600; }
+.tevent .what { color: var(--ink-2); font-weight: 400; }
 
-.tevent .what {
-  color: var(--ink-2);
-  font-weight: 400;
-}
-
-/* ---------- lineup ---------- */
+/* =============================================================================
+   lineup
+   ========================================================================== */
 
 .lineup {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0 20px;
-}
-
-h4 {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  margin: 12px 0 3px;
-  font-weight: 600;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0 26px;
 }
 
 .lrow {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   align-items: baseline;
-  padding: 3px 0;
-  border-bottom: 1px solid var(--grid);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--row);
   font-size: 13px;
 }
 
 .lrow .pos {
+  flex: none;
+  min-width: 22px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
-  font-size: 11px;
-  min-width: 20px;
+}
+
+.lrow > span:not([class]) {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .lrow .mins {
-  margin-left: auto;
-  color: var(--muted);
+  flex: none;
+  min-width: 30px;
+  text-align: right;
   font-size: 11.5px;
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
 .lrow a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--grid);
+  border-bottom: 1px solid var(--hair);
 }
 
-.lrow a:hover {
-  border-bottom-color: var(--ink-2);
-}
+.lrow a:hover { border-bottom-color: var(--red); }
 
-/* ---------- index cards / pager ---------- */
-
-.tiles a.tile {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.tiles a.tile:hover {
-  border-color: var(--baseline);
-}
-
-a.card:hover {
-  border-color: var(--baseline);
-}
-
-.pager {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 18px 0 4px;
-  font-size: 13px;
-  border-top: var(--rule);
-  padding-top: 12px;
-}
-
-.pager a {
-  color: var(--ink-2);
-  text-decoration: none;
-}
-
-.pager a:hover {
-  color: var(--ink);
-  text-decoration: underline;
-}
+/* =============================================================================
+   definition list — identity / record / match card panels
+   ========================================================================== */
 
 .kv {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 14px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0;
+  margin: 0;
   font-size: 13px;
-  margin: 2px 0 4px;
+}
+
+.kv dt,
+.kv dd {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--row);
+  min-width: 0;
 }
 
 .kv dt {
   color: var(--muted);
-  padding: 2px 0;
-  border-bottom: 1px solid var(--grid);
+  font-size: 12px;
+  padding-right: 14px;
 }
 
 .kv dd {
   margin: 0;
-  padding: 2px 0;
-  border-bottom: 1px solid var(--grid);
-  font-variant-numeric: tabular-nums;
   text-align: right;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
 }
 
-/* ---------- match stat comparison ---------- */
+.kv dt:last-of-type,
+.kv dd:last-of-type { border-bottom: 0; }
+
+/* =============================================================================
+   team stat comparison
+   ========================================================================== */
 
 .statbars {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin: 4px 0 8px;
+  gap: 11px;
 }
 
 .statrow .lbl {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
   align-items: baseline;
-  font-size: 12.5px;
-  color: var(--ink-2);
-  margin-bottom: 3px;
+  gap: 0 6px;
+  margin-bottom: 5px;
 }
 
-.statrow .lbl span:first-child,
-.statrow .lbl span:last-child {
-  font-variant-numeric: tabular-nums;
+.statrow .lbl span:first-child {
+  font-size: 13px;
   font-weight: 600;
   color: var(--ink);
-  min-width: 42px;
+  font-variant-numeric: tabular-nums;
+}
+
+.statrow .lbl span:nth-child(2) {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .statrow .lbl span:last-child {
   text-align: right;
-}
-
-.statrow .lbl span:nth-child(2) {
-  color: var(--muted);
-  font-weight: 400;
-  font-size: 12px;
-  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
 }
 
 .statrow .bar {
-  height: 5px;
-  background: var(--baseline);
+  height: 6px;
+  background: var(--bar-track);
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .statrow .bar i {
   display: block;
   height: 100%;
-  background: var(--s1);
+  background: var(--red);
   border-right: 2px solid var(--surface);
 }
 
-/* ---------- filter bar ---------- */
+/* =============================================================================
+   filter toolbar
+   ========================================================================== */
 
 .filters {
   display: flex;
-  gap: 8px;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 0 12px;
-  padding-bottom: 10px;
-  border-bottom: var(--rule);
+  gap: 10px 14px;
+  margin: 24px 0 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hair);
 }
 
-.filters select,
-.filters input {
-  font: inherit;
-  font-size: 13px;
-  padding: 4px 7px;
-  border: var(--rule);
-  border-radius: 2px;
-  background: var(--surface);
-  color: var(--ink);
+.filters label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  cursor: pointer;
 }
 
 .filters .count {
-  color: var(--muted);
-  font-size: 12.5px;
   margin-left: auto;
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
-/* ---------- credits ---------- */
+/* =============================================================================
+   prev / next
+   ========================================================================== */
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 30px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--ink);
+  font-size: 13px;
+}
+
+.pager a {
+  color: var(--ink-2);
+  text-decoration: none;
+  max-width: 46%;
+}
+
+.pager a:last-child { text-align: right; }
+.pager a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* =============================================================================
+   methodology — the one long-form page, set as an article
+   ========================================================================== */
+
+.methodo {
+  max-width: 76ch;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.methodo h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 30px 0 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hair);
+}
+
+.methodo h3:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.methodo p { margin: 0 0 4px; }
+
+.methodo code {
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.contact { font-size: 13.5px; color: var(--ink-2); }
+
+/* =============================================================================
+   photo credits
+   ========================================================================== */
 
 .credits {
-  columns: 2 250px;
-  column-gap: 24px;
-  font-size: 12px;
-  color: var(--ink-2);
+  columns: 3 240px;
+  column-gap: 30px;
+  column-rule: 1px solid var(--hair);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 .credits div {
   break-inside: avoid;
-  padding: 1px 0;
+  padding: 3px 0;
 }
 
-.contact {
-  font-size: 13.5px;
-}
+.credits a { color: var(--ink-2); text-underline-offset: 2px; }
 
-/* ---------- motion: a single restrained fade, never gating content ---------- */
+/* =============================================================================
+   motion
+   -----------------------------------------------------------------------------
+   Transitions only, never keyframes: the end state is a plain declaration, so
+   content is visible even if the transition never runs. boot.js adds .in via an
+   IntersectionObserver plus a 1.2s catch-all.
+   ========================================================================== */
 
 html.js-anim .reveal {
   opacity: 0;
-  transition: opacity 0.3s var(--ease);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
 }
+
+html.js-anim .card.reveal { transform: translateY(6px); }
 
 html.js-anim .reveal.in {
   opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
     transition-duration: 0.001s !important;
+    transition-delay: 0s !important;
   }
-  html.js-anim .reveal { opacity: 1; }
+  html.js-anim .reveal { opacity: 1; transform: none; }
 }
 
-/* ---------- responsive ---------- */
+/* =============================================================================
+   responsive
+   ========================================================================== */
 
-@media (max-width: 780px) {
-  .mrow {
-    grid-template-columns: 76px 20px 1fr 48px;
-  }
+@media (max-width: 860px) {
+  .credits { columns: 2 220px; }
+}
+
+@media (max-width: 720px) {
+  .hero-band .inner { padding-block: 24px 22px; }
+  .hero-band h1 { max-width: none; }
+  .entity { gap: 16px; }
+  .entity .photo { width: 72px; height: 72px; }
+  .crumb { margin: 16px 0 14px; }
+  .mrow { grid-template-columns: 84px 20px minmax(0, 1fr) 46px; gap: 0 10px; }
   .mrow .cmp { display: none; }
-  .entity .photo { width: 64px; height: 64px; }
-  .credits { columns: 1; }
+  .lineup { grid-template-columns: 1fr; }
   .filters .count { margin-left: 0; }
+  .credits { columns: 1; column-rule: 0; }
+  .methodo { font-size: 14px; }
+}
+
+@media (max-width: 420px) {
+  .mrow { grid-template-columns: 74px 19px minmax(0, 1fr) 42px; gap: 0 8px; padding: 8px 11px; }
+  .mrow .dt { font-size: 11px; }
+  .tevent { grid-template-columns: 30px 40px minmax(0, 1fr); gap: 0 11px; }
+  .timeline::before { left: 35px; }
+  .pcard { column-gap: 10px; padding: 10px 11px; }
+  .pcard .pic { width: 38px; height: 38px; }
+  .statrow .lbl { grid-template-columns: 40px minmax(0, 1fr) 40px; }
 }

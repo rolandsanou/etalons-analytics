@@ -1,6 +1,6 @@
-const S1 = "#2a78d6", S2 = "#eb6834", S3 = "#1baf7a", S4 = "#eda100", S5 = "#e87ba4";
-const INK = "#0b0b0b", INK2 = "#52514e", MUTED = "#898781";
-const GRID = "#e1e0d9", BASELINE = "#c3c2b7", SURFACE = "#fcfcfb", NEUTRAL = "#f0efec";
+const S1 = "#c0142b", S2 = "#2e6da4", S3 = "#0e8a5f", S4 = "#d6a00a", S5 = "#7b4e7f";
+const INK = "#1b1a17", INK2 = "#55534d", MUTED = "#6e6b64";
+const GRID = "#e5e2db", BASELINE = "#cfcac0", SURFACE = "#ffffff", NEUTRAL = "#f0ede7";
 const POS_ORDER = ["GK", "DF", "MF", "FW"];
 const PEAK = { GK: [26, 33], DF: [25, 30], MF: [24, 29], FW: [24, 29] };
 const LEAGUE_ORDER = ["top5", "europe_other", "africa", "home", "world_other"];
