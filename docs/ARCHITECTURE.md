@@ -139,6 +139,28 @@ Three rules that are easy to break:
 After changing a page template, run `python -m etl pages` then
 `python tools/check_links.py` and `python tools/check_seo.py` — CI runs all three.
 
+- **Club form carries two seasons, and every figure names its own.** Leagues
+  restart on different dates, so from mid-August the latest season is a fortnight
+  old for one player and complete for another — six seasons were live at once in
+  August 2026, from 18/19 to 26/27. A single "minutes this season" column put a
+  finished Bundesliga campaign directly above one Premier League appearance. So
+  `club_form.csv` holds the latest season *and* the most recent completed one,
+  the table shows both, and each cell labels its season.
+
+  The baseline is searched across **every** club competition, not just the
+  current one (`pick_baseline_season`). That is the whole point: a player in
+  their first season at a new club has nothing behind them there, while their
+  last real campaign sits in the league they left — restricting the search to one
+  competition left exactly the fresh transfers blank, and gave one goalkeeper a
+  23/24 baseline when he had played 25/26 elsewhere. Only seasons starting
+  strictly earlier qualify, which is what makes them completed; within a year a
+  league outranks a cup. The baseline carries its own competition name, since it
+  may be a different league from the current row.
+
+  A player with no earlier season gets a blank, never a zero — zero would read as
+  a season spent unused. The cached file carries a `schema` number so adding a
+  field re-reads old files once, instead of leaving them incomplete until the
+  30-day clock happens to expire.
 - **Structured data must not outrun the data.** The JSON-LD in `seo.py` asserts
   only what the tables support. A match is described with `competitor` and no
   `homeTeam`/`awayTeam`, because the `venue` column holds just H/A and marks the

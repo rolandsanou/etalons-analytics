@@ -18,6 +18,7 @@ def _forces_seen(**kwargs):
     with mock.patch.object(sofascore, "OUT", mock.MagicMock()), \
          mock.patch.object(sofascore, "LINEUPS", mock.MagicMock()), \
          mock.patch.object(sofascore, "fetch_events_index", return_value=[]), \
+         mock.patch.object(sofascore, "fetch_fixtures", return_value=0), \
          mock.patch.object(sofascore, "fetch_incidents", return_value=0), \
          mock.patch.object(sofascore, "fetch_statistics", return_value=0), \
          mock.patch.object(sofascore, "resolve_sofa_ids", return_value=set()), \

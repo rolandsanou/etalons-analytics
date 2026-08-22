@@ -138,6 +138,7 @@ python -m http.server 8123 --directory site
 | `data/seed/int_retirements.csv` | verified international-retirement announcements |
 | `data/seed/coach_tenures.csv` | head-coach tenures (year precision; refine dates freely) |
 | `data/seed/youth_squads.csv` | youth tournament squad pages (U-17/U-20 AFCON editions) |
+| `data/seed/fixtures.csv` | upcoming matches, for when CAF has announced a calendar the stats source has not listed yet (`date,opponent,venue,tournament`; venue `H`/`A`/`N`) |
 
 - **Goal timing & game states** — a per-match timeline rebuilt from incidents
   (stoppage time included; extra time detected even when the source logs ET events as
@@ -219,6 +220,57 @@ python -m http.server 8123 --directory site
 - [ ] Player detail pages, match detail pages
 - [ ] Automation: scheduled ETL refresh + deploy
 - [ ] xG (no free CAF source today), Transfermarkt values (blocked)
+
+## Contributing
+
+Contributions are welcome, and the most useful ones need no Python at all. The
+pipeline can compute plenty; what it cannot do is know things. Most of what is
+still missing is knowledge, not code.
+
+**Add knowledge (no coding).** Every hand-maintained file in `data/seed/` is a
+plain CSV — edit it, run the pipeline, open a pull request. In rough order of how
+much they would improve the site today:
+
+| what | where | why it matters |
+|---|---|---|
+| Call-up lists per qualifier window | `wiki_squads.csv` | the largest gap: 58 matches are covered but only a handful of squad announcements, so "called up but did not play" is mostly invisible |
+| Announced fixtures | `fixtures.csv` | the stats source publishes a calendar late; a seeded row appears on the site immediately |
+| Head-coach tenure dates | `coach_tenures.csv` | currently year-precision in places, which blurs the boundary between eras |
+| Verified international retirements | `int_retirements.csv` | only announcements with a public source — a player being uncalled is not a retirement |
+| Player ↔ Sofascore id links | `sofa_ids.csv` | two players are absent from the source's index and are deliberately left unlinked rather than guessed |
+| Freely-licensed portraits | Wikimedia Commons | 104 of 129 players have none. Upload under a free licence there and the extractor picks it up; press photos are never used |
+
+**Report a wrong number.** Open an issue with the page, the figure, and what you
+believe it should be. Include a source if you have one. Numbers here are derived,
+so a wrong one usually means a bug worth fixing rather than a typo to patch.
+
+**Contribute code.** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) has a four-step
+recipe for adding an analysis, and [docs/DATA_MODEL.md](docs/DATA_MODEL.md) is a
+generated dictionary of every table and column. Two structural rules matter most:
+
+- Each layer reads only from the layer above. In particular **`etl/load/` must
+  never read `data/raw/`** — that is what lets the site rebuild from committed
+  data, in CI and without network access.
+- An analysis registers itself once, in `etl/load/registry.py`, declaring its
+  marts and site fragments. No editing three files to add one chart.
+
+Before opening a pull request:
+
+```bash
+python -m etl all && python -m pytest -q && python tools/check_links.py && python tools/check_seo.py
+```
+
+The data-quality gate fails the build on a real problem, so a red run is a
+finding, not an obstacle to route around.
+
+**How numbers are presented here** — the rules in
+[Metric definitions & gates](#metric-definitions--gates) are not stylistic. A
+contribution that shows a rate without its denominator, averages percentages
+instead of pooling them, hides a small sample instead of gating it, or introduces
+a composite index will be asked to change. The point of the project is that every
+figure can be argued with.
+
+Questions, or a data set you would like to see used: <rolandS01@outlook.fr>.
 
 ## Sources & licensing
 

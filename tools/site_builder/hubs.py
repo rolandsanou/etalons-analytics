@@ -56,6 +56,27 @@ def _match_row(ctx, event, score):
 
 # ------------------------------------------------------------------ home
 
+def next_match(d, ctx):
+    """The next scheduled match, or a plain statement that none is published.
+
+    Written into the HTML rather than fetched, so it reads without JavaScript and
+    is the first thing a search result can show. Nothing is invented: as of
+    August 2026 the source carried no 2027 qualifying calendar at all, so the
+    honest output is the note, and the line appears by itself once a fixture
+    lands in data/staging/fixtures.csv — whether fetched or seeded by hand.
+    """
+    t = ctx.t
+    nxt = d.fixtures[0] if d.fixtures else None
+    if not nxt:
+        return (f'<p class="nextmatch none">'
+                f'{esc(t("Aucun match programmé dans les sources pour l\'instant."))}</p>')
+    where = {"H": t("à domicile"), "A": t("à l'extérieur")}.get(nxt["venue"], t("terrain neutre"))
+    detail = " · ".join(x for x in (nxt.get("tournament"), where) if x)
+    return (f'<p class="nextmatch"><span class="lbl">{esc(t("Prochain match"))}</span> '
+            f'<strong>{esc(nxt["opponent"])}</strong> · '
+            f'{esc(seo.long_date(nxt["date"], ctx.lang))} · {esc(detail)}</p>')
+
+
 def home_page(d, ctx):
     t = ctx.t
     elo, hist, team = d.elo, d.history, d.team
@@ -113,10 +134,13 @@ def home_page(d, ctx):
   <h3>{esc(title)}</h3><p class="sub">{esc(sub)}</p></a>"""
         for route, title, sub in tiles_nav)
 
+    # Rendered from the data, so it is right in the HTML rather than filled in by
+    # script, and simply absent when nothing is scheduled — see next_match().
     body = f"""<div class="hero-band"><div class="inner">
   <p class="eyebrow">{esc(t("Analyse de données · Burkina Faso"))}</p>
   <h1>{esc(t("Les Étalons, chiffres à l'appui"))}</h1>
   <p>{esc(t("Un projet ouvert qui suit chaque joueur appelé en sélection depuis la CAN 2021 : temps de jeu, performances, style de jeu, résilience et projections — avec les sources et les limites de chaque chiffre affichées."))}</p>
+  {next_match(d, ctx)}
 </div></div>
 <main>
   <div class="tiles">{tile_html}</div>

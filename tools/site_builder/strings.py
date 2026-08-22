@@ -187,6 +187,8 @@ EN = {
     # --- match page -------------------------------------------------------
     "Victoire": "Win", "Match nul": "Draw", "Défaite": "Defeat",
     "à domicile": "at home", "à l'extérieur": "away",
+    "terrain neutre": "neutral ground",
+    "Prochain match": "Next match",
     ", formation {f}": ", {f} formation",
     "{result} {venue}{formation}.": "{result} {venue}{formation}.",
     "Chronologie": "Timeline",
@@ -250,6 +252,8 @@ EN = {
     "Entrée moyenne": "Average entry",
     "Adversaire": "Opponent", "Score": "Score", "Statut": "Status",
     "Min": "Min", "P. déc.": "Assists", "Note": "Rating",
+    "Aucun match programmé dans les sources pour l'instant.":
+        "No match scheduled in the sources yet.",
     "Tit.": "Start", "Rempl.": "Sub", "Non entré": "Unused",
     "Photo : {author} · {licence} · ": "Photo: {author} · {licence} · ",
     "{name} ({pos}, {club}) : sélections, minutes, buts et performances avec les "

@@ -1,50 +1,50 @@
-player_id,sofa_id,tournament,season_year,apps,starts,minutes,rating,as_of
-abdoul-ayinde,2399613,Challenger Pro League,26/27,1,1,65,5.9,2026-08-23
-abdoul-tapsoba,1000129,Ekstraklasa,26/27,4,3,247,6.47,2026-08-23
-abdoul-yoda,1065760,Moldovan Super Liga,25/26,30,24,2259,6.75,2026-08-23
-aboubacar-bassinga,1636036,LaLiga,24/25,1,0,11,6.4,2026-08-23
-adamo-nagalo,1108094,Trendyol Süper Lig,25/26,8,6,606,7.1,2026-08-23
-arsene-kouassi,1855502,Ligue 1,26/27,1,1,90,6.5,2026-08-23
-arthur-zagre,910053,VriendenLoterij Eredivisie,26/27,3,3,260,6.3,2026-08-23
-bertrand-traore,218160,Premier League,25/26,12,9,638,6.75,2026-08-23
-blati-toure,806244,Premier League,25/26,10,6,628,,2026-08-23
-cedric-badolo,989361,Misli Premier League,25/26,13,7,694,6.58,2026-08-23
-cyriaque-irie,1508537,Bundesliga,25/26,10,3,343,6.66,2026-08-23
-dango-ouattara,1106451,Premier League,26/27,1,1,67,6.4,2026-08-23
-dao-cyrille,2008836,Egyptian Premier League,26/27,1,1,90,6.9,2026-08-23
-dramane-salou,924861,Uzbekistan Super League,2026,8,1,204,6.51,2026-08-23
-dylan-ouedraogo,899011,Cyprus League by Stoiximan,25/26,3,1,112,6.8,2026-08-23
-edmond-tapsoba,883262,Bundesliga,25/26,29,29,2576,7.2,2026-08-23
-farid-ouedraogo,1006190,CAF Champions League,25/26,8,8,720,6.84,2026-08-23
-faycal-konate,2058080,FNL,26/27,3,1,105,6.47,2026-08-23
-georgi-minoungou,1492520,MLS,2026,17,11,1070,6.84,2026-08-23
-gustavo-sangare,1019038,Armenian Premier League,25/26,19,11,1092,7.04,2026-08-23
-hassane-bande,886227,Pro League,25/26,7,0,82,6.55,2026-08-23
-herve-koffi,867299,Pro League,26/27,1,1,90,8.3,2026-08-23
-hillel-konate,580180,Ligue 2,25/26,23,22,2032,6.82,2026-08-23
-ibrahim-bance,973796,South African Premier Division,25/26,12,10,772,6.7,2026-08-23
-ismaelo-ganiou,1408080,Ligue 1,26/27,1,1,79,7.8,2026-08-23
-ismahila-ouedraogo,1099259,Danish Superliga,26/27,4,4,360,7.2,2026-08-23
-issa-kabore,1006189,Championship,25/26,30,26,2271,6.9,2026-08-23
-issoufou-dayo,364758,Stars League,25/26,7,5,520,6.04,2026-08-22
-jack-diarra,1542760,CAF Champions League,25/26,8,4,355,6.74,2026-08-23
-josue-tiendrebeogo,1897363,Mozzart Bet Superliga,26/27,6,5,429,6.65,2026-08-23
-kalifa-nikiema,1102864,CAF Confederations Cup,20/21,2,0,11,6.5,2026-08-23
-kilian-nikiema,1149858,VriendenLoterij Eredivisie,26/27,2,2,180,8.3,2026-08-23
-lassina-traore,911719,Ukrainian Premier League,26/27,1,1,85,6.3,2026-08-23
-lohann-doucet,1170523,Liga Portugal Betclic,26/27,2,0,46,6.8,2026-08-23
-mohamed-ali-yabre,1499155,CAF Confederations Cup,24/25,7,5,469,6.98,2026-08-23
-mohamed-konate,850011,Russian Premier League,25/26,21,7,662,6.61,2026-08-23
-mohamed-ouedraogo,1506773,Ligue 1,26/27,1,1,90,7.1,2026-08-23
-mohamed-zougrana,1183551,CAF Champions League,25/26,5,3,287,6.6,2026-08-23
-moise-kabore,1490960,Pro League,26/27,2,0,36,6.5,2026-08-23
-nasser-djiga,1127169,Championship,26/27,1,1,90,6.9,2026-08-23
-ousseni-bouda,983282,MLS,2026,20,17,1553,6.87,2026-08-23
-patrick-malo,867239,CAF Champions League,18/19,3,3,248,6.53,2026-08-23
-pierre-landry-kabore,1102857,Scottish Premiership,26/27,2,0,56,6.35,2026-08-23
-rachide-gnanou,2045370,Veikkausliiga,2026,20,20,1800,7.03,2026-08-23
-saidou-simpore,785883,Egyptian Premier League,25/26,24,12,1265,6.91,2026-08-23
-souleymane-sangare,2201046,Premier League,25/26,14,7,735,,2026-08-23
-steeve-yago,174911,Cyprus League by Stoiximan,25/26,29,22,2290,6.74,2026-08-22
-stephane-aziz-ki,865473,Premier League,25/26,11,4,473,,2026-08-23
-trova-boni,919990,Premier League,25/26,19,19,1687,,2026-08-23
+player_id,sofa_id,tournament,season_year,apps,starts,minutes,rating,prev_tournament,prev_season_year,prev_apps,prev_starts,prev_minutes,prev_rating,as_of
+abdoul-ayinde,2399613,Challenger Pro League,26/27,1,1,65,5.9,Challenger Pro League,25/26,15,15,1283,6.6,2026-08-23
+abdoul-tapsoba,1000129,Ekstraklasa,26/27,4,3,247,6.47,Ekstraklasa,25/26,31,12,1219,6.68,2026-08-23
+abdoul-yoda,1065760,Moldovan Super Liga,25/26,30,24,2259,6.75,Moldovan Super Liga,24/25,8,8,704,7.04,2026-08-23
+aboubacar-bassinga,1636036,LaLiga,24/25,1,0,11,6.4,,,,,,,2026-08-23
+adamo-nagalo,1108094,Trendyol Süper Lig,25/26,8,6,606,7.1,Eerste Divisie,24/25,3,3,149,6.67,2026-08-23
+arsene-kouassi,1855502,Ligue 1,26/27,1,1,90,6.5,Ligue 1,25/26,31,30,2612,6.92,2026-08-23
+arthur-zagre,910053,VriendenLoterij Eredivisie,26/27,3,3,260,6.3,VriendenLoterij Eredivisie,25/26,30,27,2386,6.7,2026-08-23
+bertrand-traore,218160,Premier League,25/26,12,9,638,6.75,VriendenLoterij Eredivisie,24/25,32,20,1724,7.07,2026-08-23
+blati-toure,806244,Premier League,25/26,10,6,628,,Egyptian Premier League,24/25,20,18,1546,6.8,2026-08-23
+cedric-badolo,989361,Misli Premier League,25/26,13,7,694,6.58,Niké Liga,24/25,9,4,369,6.54,2026-08-23
+cyriaque-irie,1508537,Bundesliga,25/26,10,3,343,6.66,Ligue 2,24/25,33,31,2604,7.12,2026-08-23
+dango-ouattara,1106451,Premier League,26/27,1,1,67,6.4,Premier League,25/26,32,25,2279,6.87,2026-08-23
+dao-cyrille,2008836,Egyptian Premier League,26/27,1,1,90,6.9,Egyptian Premier League,25/26,15,15,1320,6.96,2026-08-23
+dramane-salou,924861,Uzbekistan Super League,2026,8,1,204,6.51,Israeli Premier League,24/25,33,26,2299,6.66,2026-08-23
+dylan-ouedraogo,899011,Cyprus League by Stoiximan,25/26,3,1,112,6.8,Cyprus League by Stoiximan,24/25,26,25,2340,6.8,2026-08-23
+edmond-tapsoba,883262,Bundesliga,25/26,29,29,2576,7.2,Bundesliga,24/25,29,29,2511,6.88,2026-08-23
+farid-ouedraogo,1006190,CAF Champions League,25/26,8,8,720,6.84,CAF Champions League,22/23,5,5,450,7.22,2026-08-23
+faycal-konate,2058080,FNL,26/27,3,1,105,6.47,Czech First League,25/26,3,0,47,6.6,2026-08-23
+georgi-minoungou,1492520,MLS,2026,17,11,1070,6.84,MLS,2025,23,6,749,6.95,2026-08-23
+gustavo-sangare,1019038,Armenian Premier League,25/26,19,11,1092,7.04,Armenian Premier League,24/25,18,13,1302,6.93,2026-08-23
+hassane-bande,886227,Pro League,25/26,7,0,82,6.55,Veikkausliiga,2024,21,17,1526,6.97,2026-08-23
+herve-koffi,867299,Pro League,26/27,1,1,90,8.3,Ligue 1,25/26,30,30,2659,7.35,2026-08-23
+hillel-konate,580180,Ligue 2,25/26,23,22,2032,6.82,Ligue 3,24/25,26,26,2340,7.04,2026-08-23
+ibrahim-bance,973796,South African Premier Division,25/26,12,10,772,6.7,USL Championship,2021,24,18,1582,6.72,2026-08-23
+ismaelo-ganiou,1408080,Ligue 1,26/27,1,1,79,7.8,Ligue 1,25/26,23,22,2014,7.07,2026-08-23
+ismahila-ouedraogo,1099259,Danish Superliga,26/27,4,4,360,7.2,Danish Superliga,25/26,25,25,2077,7.1,2026-08-23
+issa-kabore,1006189,Championship,25/26,30,26,2271,6.9,Bundesliga,24/25,9,3,312,6.71,2026-08-23
+issoufou-dayo,364758,Stars League,25/26,7,5,520,6.04,,,,,,,2026-08-22
+jack-diarra,1542760,CAF Champions League,25/26,8,4,355,6.74,,,,,,,2026-08-23
+josue-tiendrebeogo,1897363,Mozzart Bet Superliga,26/27,6,5,429,6.65,Mozzart Bet Superliga,25/26,13,9,868,6.67,2026-08-23
+kalifa-nikiema,1102864,CAF Confederations Cup,20/21,2,0,11,6.5,,,,,,,2026-08-23
+kilian-nikiema,1149858,VriendenLoterij Eredivisie,26/27,2,2,180,8.3,Eerste Divisie,25/26,36,36,3240,7.0,2026-08-23
+lassina-traore,911719,Ukrainian Premier League,26/27,1,1,85,6.3,Ukrainian Premier League,25/26,13,10,919,7.42,2026-08-23
+lohann-doucet,1170523,Liga Portugal Betclic,26/27,2,0,46,6.8,Ligue 1,25/26,5,1,127,6.58,2026-08-23
+mohamed-ali-yabre,1499155,CAF Confederations Cup,24/25,7,5,469,6.98,,,,,,,2026-08-23
+mohamed-konate,850011,Russian Premier League,25/26,21,7,662,6.61,Saudi Pro League,24/25,27,19,1705,6.6,2026-08-23
+mohamed-ouedraogo,1506773,Ligue 1,26/27,1,1,90,7.1,Austrian Bundesliga,25/26,29,29,2486,7.09,2026-08-23
+mohamed-zougrana,1183551,CAF Champions League,25/26,5,3,287,6.6,Algerian Ligue 1,24/25,0,0,0,,2026-08-23
+moise-kabore,1490960,Pro League,26/27,2,0,36,6.5,Allsvenskan,2025,14,3,317,6.83,2026-08-23
+nasser-djiga,1127169,Championship,26/27,1,1,90,6.9,Scottish Premiership,25/26,25,23,1949,6.9,2026-08-23
+ousseni-bouda,983282,MLS,2026,20,17,1553,6.87,MLS,2025,34,13,1342,6.78,2026-08-23
+patrick-malo,867239,CAF Champions League,18/19,3,3,248,6.53,,,,,,,2026-08-23
+pierre-landry-kabore,1102857,Scottish Premiership,26/27,2,0,56,6.35,Scottish Premiership,25/26,25,14,1186,6.62,2026-08-23
+rachide-gnanou,2045370,Veikkausliiga,2026,20,20,1800,7.03,Veikkausliiga,2025,26,26,2340,7.05,2026-08-23
+saidou-simpore,785883,Egyptian Premier League,25/26,24,12,1265,6.91,Egyptian Premier League,24/25,24,24,2119,6.89,2026-08-23
+souleymane-sangare,2201046,Premier League,25/26,14,7,735,,,,,,,,2026-08-23
+steeve-yago,174911,Cyprus League by Stoiximan,25/26,29,22,2290,6.74,,,,,,,2026-08-22
+stephane-aziz-ki,865473,Premier League,25/26,11,4,473,,CAF Champions League,24/25,6,5,429,7.35,2026-08-23
+trova-boni,919990,Premier League,25/26,19,19,1687,,Premier League,24/25,20,18,1632,,2026-08-23

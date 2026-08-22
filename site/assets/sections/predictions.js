@@ -47,7 +47,13 @@ function renderPredictions() {
       peak: fmt(100 * c.draw_peak, 1), n: c.n_close_matches, total: c.n_samples,
     })}</p><p class="sub">${t("pred_caveat")}</p>` +
       (p.fixtures && p.fixtures.length
-        ? ""
+        // list them rather than only noting their absence: the whole point of
+        // the calibration above is to read the next matches against it
+        ? `<p class="sub">${t("pred_fixtures")}</p><ul class="fixlist">` +
+          p.fixtures.map(f => `<li><strong>${f.opponent}</strong> · ${f.date}` +
+            `${f.tournament ? " · " + f.tournament : ""}` +
+            ` <span class="season">${t("venue_" + (f.venue || "N"))}</span></li>`).join("") +
+          "</ul>"
         : `<p class="sub">${t("pred_no_fixtures")}</p>`);
   }
 }

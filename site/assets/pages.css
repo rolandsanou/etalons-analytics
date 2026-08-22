@@ -45,6 +45,36 @@
   max-width: 74ch;
 }
 
+/* The next scheduled match, under the home-page lead. Present as a statement
+   either way: a fixture, or a note that none is published.
+   Selectors are qualified past `.hero-band > .inner > p:not(.eyebrow)` above,
+   which otherwise sets the size and colour of every paragraph in the band. */
+.hero-band > .inner > p.nextmatch {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--hair);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: none;
+}
+
+.nextmatch .lbl {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--red);
+  margin-right: 7px;
+}
+
+.nextmatch strong { color: var(--ink); font-weight: 600; }
+
+.hero-band > .inner > p.nextmatch.none {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
 /* match pages: "Burkina Faso 0 – 3 Côte d'Ivoire" */
 .match-page .hero-band h1 { max-width: none; }
 

@@ -17,7 +17,9 @@ PROFILE_FIELDS = (["player_id", "name", "pos", "dob", "age", "club", "club_count
                    "club_v", "club_country_v", "league_v", "club_source", "status",
                    "last_seen", "market_value_eur", "contract_until", "height", "foot",
                    "club_apps_season", "club_minutes_season", "club_rating_season",
-                   "club_season", "club_season_year", "club_form_as_of",
+                   "club_season", "club_season_year", "club_tournament",
+                   "club_apps_prev", "club_minutes_prev", "club_rating_prev",
+                   "club_prev_season_year", "club_prev_tournament", "club_form_as_of",
                    "league_group", "caps", "goals_career", "n_windows", "windows",
                    "matchday_squads", "apps", "starts", "detailed_apps", "rating_avg",
                    "pass_pct", "dribble_pct", "minutes_per_app", "goals_per90",
@@ -101,6 +103,17 @@ def build_profiles(today):
             # different dates, so the column holds several seasons at once and each
             # figure has to say which one it is rather than leave them comparable
             "club_season_year": club_form.get(p["player_id"], {}).get("season_year", ""),
+            # the competition on its own, so the view can label either season
+            # without unpicking the concatenation in club_season
+            "club_tournament": club_form.get(p["player_id"], {}).get("tournament", ""),
+            # the most recent completed season, wherever it was played — the
+            # settled baseline a two-week-old figure means nothing without
+            "club_apps_prev": club_form.get(p["player_id"], {}).get("prev_apps", ""),
+            "club_minutes_prev": club_form.get(p["player_id"], {}).get("prev_minutes", ""),
+            "club_rating_prev": club_form.get(p["player_id"], {}).get("prev_rating", ""),
+            "club_prev_season_year": club_form.get(p["player_id"], {}).get("prev_season_year", ""),
+            # its own competition: a transfer puts the baseline in the old league
+            "club_prev_tournament": club_form.get(p["player_id"], {}).get("prev_tournament", ""),
             "club_form_as_of": club_form.get(p["player_id"], {}).get("as_of", ""),
             "league_group": league_group(p.get("club_country_v") or p["club_country"] or None),
             "caps": p["caps"],

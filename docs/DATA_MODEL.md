@@ -114,7 +114,7 @@ U-17/U-20 squad lists linked to the senior registry.
 Latest club season per active player (apps, minutes, rating).
 
 - **Grain**: one row per player
-- **Columns** (9): `player_id`, `sofa_id`, `tournament`, `season_year`, `apps`, `starts`, `minutes`, `rating`, `as_of`
+- **Columns** (15): `player_id`, `sofa_id`, `tournament`, `season_year`, `apps`, `starts`, `minutes`, `rating`, `prev_tournament`, `prev_season_year`, `prev_apps`, `prev_starts`, `prev_minutes`, `prev_rating`, `as_of`
 
 ## Marts
 
@@ -123,7 +123,7 @@ Latest club season per active player (apps, minutes, rating).
 Per-player aggregates over the study window plus identity and club form.
 
 - **Grain**: one row per player
-- **Columns** (69): `player_id`, `name`, `pos`, `dob`, `age`, `club`, `club_country`, `club_v`, `club_country_v`, `league_v`, `club_source`, `status`, `last_seen`, `market_value_eur`, `contract_until`, `height`, `foot`, `club_apps_season`, `club_minutes_season`, `club_rating_season`, `club_season`, `club_season_year`, `club_form_as_of`, `league_group`, `caps`, `goals_career`, `n_windows`, `windows`, `matchday_squads`, `apps`, `starts`, `detailed_apps`, `rating_avg`, `pass_pct`, `dribble_pct`, `minutes_per_app`, `goals_per90`, `chan_only`, `sofa_id`, `source`, `minutes`, `goals`, `assists`, `shots`, `shots_on_target`, `passes`, `passes_accurate`, `key_passes`, `crosses`, `crosses_accurate`, `dribbles_attempted`, `dribbles_won`, `tackles`, `tackles_won`, `interceptions`, `clearances`, `recoveries`, `duels_won`, `duels_lost`, `aerials_won`, `aerials_lost`, `fouls`, `fouled`, `dispossessed`, `touches`, `saves`, `saves_inside_box`, `punches`, `high_claims`
+- **Columns** (75): `player_id`, `name`, `pos`, `dob`, `age`, `club`, `club_country`, `club_v`, `club_country_v`, `league_v`, `club_source`, `status`, `last_seen`, `market_value_eur`, `contract_until`, `height`, `foot`, `club_apps_season`, `club_minutes_season`, `club_rating_season`, `club_season`, `club_season_year`, `club_tournament`, `club_apps_prev`, `club_minutes_prev`, `club_rating_prev`, `club_prev_season_year`, `club_prev_tournament`, `club_form_as_of`, `league_group`, `caps`, `goals_career`, `n_windows`, `windows`, `matchday_squads`, `apps`, `starts`, `detailed_apps`, `rating_avg`, `pass_pct`, `dribble_pct`, `minutes_per_app`, `goals_per90`, `chan_only`, `sofa_id`, `source`, `minutes`, `goals`, `assists`, `shots`, `shots_on_target`, `passes`, `passes_accurate`, `key_passes`, `crosses`, `crosses_accurate`, `dribbles_attempted`, `dribbles_won`, `tackles`, `tackles_won`, `interceptions`, `clearances`, `recoveries`, `duels_won`, `duels_lost`, `aerials_won`, `aerials_lost`, `fouls`, `fouled`, `dispossessed`, `touches`, `saves`, `saves_inside_box`, `punches`, `high_claims`
 
 ### `player_importance.csv`
 

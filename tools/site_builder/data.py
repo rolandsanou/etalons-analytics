@@ -33,6 +33,10 @@ class Data:
         self.states = rows(STAGING / "match_states.csv")
         self.team_stats = rows(STAGING / "team_match_stats.csv")
         self.photos = rows(STAGING / "photos.csv")
+        # may legitimately be empty, and is absent on a tree built before the
+        # fixtures step existed
+        fx = STAGING / "fixtures.csv"
+        self.fixtures = rows(fx) if fx.exists() else []
         self.profiles = rows(MARTS / "player_profile.csv")
         self.importance = rows(MARTS / "player_importance.csv")
         self.bench = rows(MARTS / "bench_impact.csv")
