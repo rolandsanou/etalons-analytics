@@ -82,7 +82,8 @@ function searchKey(text) {
 
 // --- shared across sections (kept here so every page has them) ---
 
-const ST_GOOD = "#0ca30c", ST_CRIT = "#d03b3b";
+// status colours, tuned to the same palette as the categorical series above
+const ST_GOOD = "#0e8a5f", ST_CRIT = "#c0142b";
 
 function signed(v, dec = 2) {
   if (v === "" || v === null || v === undefined) { return "–"; }
