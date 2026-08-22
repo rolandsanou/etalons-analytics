@@ -187,6 +187,17 @@ def player_status(retired_int, career_retired, last_seen, today):
     return "out"
 
 
+def goal_impact(diff_before, is_first_goal):
+    """Classify a goal by what it changed, from the scoring side's view."""
+    if diff_before == 0:
+        return "opener" if is_first_goal else "go_ahead"
+    if diff_before == -1:
+        return "equalizer"
+    if diff_before > 0:
+        return "extender"
+    return "consolation"
+
+
 CHI2_CRIT_DF5 = 11.070  # p = 0.05, df = 5
 
 

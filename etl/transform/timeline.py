@@ -1,8 +1,15 @@
 from collections import defaultdict
 
-from ..config import STAGING
-from ..util import read_csv, write_csv
+from ..analytics import goal_impact
+from ..config import RAW, SOFA_TEAM_ID, STAGING
+from ..util import read_csv, read_json, write_csv
 from .appearances import APPEARANCE_FIELDS
+from .incidents import GOAL_FIELDS
+
+GOAL_EXTRA_FIELDS = ["pos", "diff_before", "impact"]
+
+CONCESSION_FIELDS = ["event_id", "date", "pos", "half", "deficit_after",
+                     "reply_pos", "reply_minutes", "replied_within_10", "result"]
 
 BIN_LABELS = ["1_15", "16_30", "31_45", "46_60", "61_75", "76_90"]
 
@@ -130,8 +137,57 @@ def presence(app_row, ins, outs, reds, effective):
     return entry, max(exit_, entry)
 
 
+def annotate_goals(positioned):
+    """positioned: [(pos, is_bf, row)] sorted. Adds pos/diff_before/impact in place."""
+    diff = 0
+    for i, (pos, is_bf, row) in enumerate(positioned):
+        before = diff if is_bf else -diff
+        row["pos"] = round(pos, 1)
+        row["diff_before"] = before
+        row["impact"] = goal_impact(before, i == 0)
+        diff += 1 if is_bf else -1
+
+
+def concessions(positioned):
+    """One row per conceded goal with the reply that followed (if any)."""
+    rows = []
+    diff = 0
+    for i, (pos, is_bf, row) in enumerate(positioned):
+        diff += 1 if is_bf else -1
+        if is_bf:
+            continue
+        reply = next((p for p, b, _ in positioned[i + 1:] if b), None)
+        rows.append({
+            "pos": round(pos, 1),
+            "half": 1 if _num(row.get("minute")) <= 45 else 2,
+            "deficit_after": -diff if diff < 0 else 0,
+            "reply_pos": round(reply, 1) if reply is not None else "",
+            "reply_minutes": round(reply - pos, 1) if reply is not None else "",
+            "replied_within_10": (1 if reply is not None and reply - pos <= 10 else 0),
+        })
+    return rows
+
+
+def _match_dimension():
+    """Every finished match in the window, whether or not lineups were published."""
+    rows = []
+    for ev in read_json(RAW / "sofascore" / "events_index.json"):
+        bf_home = ev["home_id"] == SOFA_TEAM_ID
+        gf = ev["home_score"] if bf_home else ev["away_score"]
+        ga = ev["away_score"] if bf_home else ev["home_score"]
+        bf_pens = ev.get("home_pens" if bf_home else "away_pens", 0)
+        opp_pens = ev.get("away_pens" if bf_home else "home_pens", 0)
+        rows.append({
+            "event_id": str(ev["event_id"]), "date": ev["date"],
+            "result": "W" if gf > ga else ("D" if gf == ga else "L"),
+            "pens": f"{bf_pens}-{opp_pens}" if (bf_pens or opp_pens) else "",
+        })
+    rows.sort(key=lambda r: r["date"])
+    return rows
+
+
 def run():
-    events = read_csv(STAGING / "events.csv")
+    events = _match_dimension()
     goals = read_csv(STAGING / "goal_events.csv")
     subs = read_csv(STAGING / "substitutions.csv")
     cards = read_csv(STAGING / "cards.csv")
@@ -142,7 +198,7 @@ def run():
     goals_e, subs_e, cards_e, inj_e, apps_e = (by_event(goals), by_event(subs),
                                                by_event(cards), by_event(injuries),
                                                by_event(apps))
-    state_rows = []
+    state_rows, concession_rows = [], []
     for ev in events:
         eid = ev["event_id"]
         ev_goals = goals_e.get(eid, [])
@@ -160,6 +216,10 @@ def run():
         positioned = sorted(
             ((clock_pos(g["minute"], g["added_time"], inj), g["is_bf"] == "1", g)
              for g in ev_goals), key=lambda x: x[0])
+        annotate_goals(positioned)
+        for c in concessions(positioned):
+            concession_rows.append({"event_id": eid, "date": ev["date"],
+                                    "result": ev["result"], **c})
         st = state_minutes([(p, b) for p, b, _ in positioned], eff)
 
         row = {"event_id": eid, "date": ev["date"], "result": ev["result"],
@@ -208,6 +268,9 @@ def run():
 
     write_csv(STAGING / "match_states.csv", state_rows, STATE_FIELDS)
     write_csv(STAGING / "appearances.csv", apps, APPEARANCE_FIELDS + PRESENCE_FIELDS)
+    write_csv(STAGING / "goal_events.csv", goals, GOAL_FIELDS + GOAL_EXTRA_FIELDS)
+    concession_rows.sort(key=lambda r: (r["date"], r["pos"]))
+    write_csv(STAGING / "concessions.csv", concession_rows, CONCESSION_FIELDS)
 
 
 def _group(rows, key):

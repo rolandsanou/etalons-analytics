@@ -1,5 +1,5 @@
 from . import (appearances, clubform, elo, incidents, matches, penalties,
-               players, timeline, youth)
+               players, teamstats, timeline, youth)
 
 
 def run():
@@ -10,6 +10,7 @@ def run():
     incidents.run(registry)
     penalties.run(registry)
     timeline.run()
+    teamstats.run()
     players.enrich(registry)
     players.write(registry, callups)
     youth.run(registry)

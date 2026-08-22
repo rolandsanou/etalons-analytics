@@ -10,6 +10,7 @@ from ..util import norm_name, read_csv, read_json, write_json
 OUT = RAW / "sofascore"
 LINEUPS = OUT / "lineups"
 INCIDENTS = OUT / "incidents"
+STATISTICS = OUT / "statistics"
 PLAYERS_DIR = OUT / "players"
 SEARCH_DIR = OUT / "search"
 CLUB_FORM_DIR = OUT / "club_form"
@@ -184,6 +185,23 @@ def fetch_incidents(index):
     return fetched
 
 
+def fetch_statistics(index):
+    """Team match statistics per event (immutable once played)."""
+    STATISTICS.mkdir(parents=True, exist_ok=True)
+    fetched = 0
+    for ev in index:
+        dest = STATISTICS / f"{ev['event_id']}.json"
+        if dest.exists():
+            continue
+        try:
+            data = get_sofa_json(f"{SOFA_BASE}/event/{ev['event_id']}/statistics")
+        except Exception as e:
+            data = {"error": str(e)}
+        write_json(dest, data)
+        fetched += 1
+    return fetched
+
+
 def fetch_club_form(force=False):
     CLUB_FORM_DIR.mkdir(parents=True, exist_ok=True)
     players_path = STAGING / "players.csv"
@@ -248,7 +266,8 @@ def run(force=False):
         write_json(dest, data)
         fetched += 1
     n_inc = fetch_incidents(index)
-    print(f"sofascore: {n_inc} incident files fetched")
+    n_stats = fetch_statistics(index)
+    print(f"sofascore: {n_inc} incident files, {n_stats} statistics files fetched")
     ids, unlinked = _profile_targets()
     ids |= resolve_sofa_ids(unlinked, force=force)
     n_profiles = fetch_player_profiles(ids, force=False)
