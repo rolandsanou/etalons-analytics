@@ -250,7 +250,7 @@ def fetch_club_form(force=False):
     return fetched
 
 
-def run(force=False):
+def run(force=False, force_profiles=False):
     OUT.mkdir(parents=True, exist_ok=True)
     LINEUPS.mkdir(parents=True, exist_ok=True)
     index = fetch_events_index(force=force)
@@ -270,8 +270,17 @@ def run(force=False):
     print(f"sofascore: {n_inc} incident files, {n_stats} statistics files fetched")
     ids, unlinked = _profile_targets()
     ids |= resolve_sofa_ids(unlinked, force=force)
-    n_profiles = fetch_player_profiles(ids, force=False)
-    n_club = fetch_club_form(force=False)
+
+    # A played match never changes, so lineups, incidents and statistics stay
+    # cached whatever is asked of them. Profiles and club form DO change — a
+    # transfer moves a player mid-window, and club, market value and contract
+    # come from the profile — so they are the only caches a force flag reaches.
+    # Both calls used to pass force=False outright, which is why --force could
+    # never refresh a club.
+    refresh = force or force_profiles
+    n_profiles = fetch_player_profiles(ids, force=refresh)
+    n_club = fetch_club_form(force=refresh)
+    forced = " (forced)" if refresh else f" (cache kept under {PROFILE_MAX_AGE_DAYS}d)"
     print(f"sofascore: {len(index)} events in window, {fetched} lineups fetched, "
-          f"{n_profiles} player profiles fetched/refreshed, "
+          f"{n_profiles} player profiles fetched/refreshed{forced}, "
           f"{len(unlinked)} players searched, {n_club} club-form files fetched/refreshed")

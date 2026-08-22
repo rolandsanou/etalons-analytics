@@ -32,7 +32,16 @@ python -m etl transform    # just re-derive staging from the raw snapshots
 python -m etl load         # just rebuild marts + site JSONs from staging
 python -m etl quality      # just the checks
 python -m etl all --force  # re-download the volatile sources
+python -m etl all --force-profiles   # only what a transfer changes (see below)
 ```
+
+The two force flags differ by blast radius. A played match is settled, so its
+lineups, incidents and statistics are never re-downloaded by either flag — that
+is 192 requests neither flag will spend. A player's club, league, market value
+and contract are not settled; they live on the profile, and `--force-profiles`
+re-reads exactly those plus club form (~200 requests). Reach for it when a
+transfer window closes. `--force` adds Wikipedia, the results dataset and
+Commons on top.
 
 ## Why the layers exist
 

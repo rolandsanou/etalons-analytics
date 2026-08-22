@@ -39,15 +39,19 @@ repository settings and the script becomes unnecessary.
 ```
 
 ```
-python -m etl all            # extract -> transform -> load -> quality
-python -m etl all --force    # refresh volatile sources (new matches, new call-ups)
-python -m etl quality        # data-quality report only
+python -m etl all                    # extract -> transform -> load -> quality
+python -m etl all --force            # refresh volatile sources (new matches, new call-ups)
+python -m etl all --force-profiles   # clubs only: after a transfer window
+python -m etl quality                # data-quality report only
 ```
 
 - **Extract** (`etl/extract/`) — one module per source. Finished matches never change,
-  so Sofascore lineups and incidents are fetched once and cached forever; player
-  profiles refresh when older than 30 days; Wikipedia pages and the results dataset
-  refresh with `--force`.
+  so Sofascore lineups, incidents and statistics are fetched once and cached forever —
+  no flag re-downloads them. What *does* move is a player's club, league, market value
+  and contract, all of which come from the profile: those refresh when the cache is
+  older than 30 days, or immediately with `--force-profiles` (~200 requests) or
+  `--force` (which also re-reads Wikipedia, the results dataset and Commons).
+  Nothing is scheduled — a refresh happens when you run it.
 - **Transform** (`etl/transform/`) — parses raw snapshots into typed staging tables
   (schemas below). Player identity is resolved here: normalized names + homonym
   splitting by date of birth + manual overrides.
