@@ -164,6 +164,69 @@
    }
   }
  },
+ "penalties": {
+  "ingame_for": {
+   "scored": 12,
+   "missed": 3
+  },
+  "ingame_against": {
+   "scored": 9,
+   "missed": 1
+  },
+  "takers": [
+   {
+    "name": "Bertrand Traoré",
+    "player_id": "bertrand-traore",
+    "scored": 6,
+    "missed": 1
+   },
+   {
+    "name": "Lassina Traoré",
+    "player_id": "lassina-traore",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Hassane Bandé",
+    "player_id": "hassane-bande",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Patrick Malo",
+    "player_id": "patrick-malo",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Abdoul Abass Guiro",
+    "player_id": "abdoul-abass-guiro",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Edmond Tapsoba",
+    "player_id": "edmond-tapsoba",
+    "scored": 1,
+    "missed": 1
+   },
+   {
+    "name": "Dango Ouattara",
+    "player_id": "dango-ouattara",
+    "scored": 1,
+    "missed": 1
+   }
+  ],
+  "shootout_for": {
+   "scored": 10,
+   "missed": 3
+  },
+  "shootout_against": {
+   "scored": 11,
+   "missed": 3
+  },
+  "gk_shootout_saves": 1
+ },
  "coverage": {
   "events": 58,
   "with_formation": 58
