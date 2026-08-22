@@ -252,6 +252,7 @@ const POOL_COLS = [
   { key: "club_v", label: "h_club", numFmt: null },
   { key: "league_v", label: "h_league", numFmt: null },
   { key: "market_value_eur", label: "h_mv", numFmt: null },
+  { key: "club_minutes_season", label: "h_club_min", numFmt: null },
 ];
 let poolSort = { key: "minutes", dir: -1 };
 
@@ -275,6 +276,11 @@ function renderPoolTable() {
     if (c.key === "club_v") { return `<td>${clubCell(p)}</td>`; }
     if (c.key === "league_v") { return `<td>${p.league_v || "–"}</td>`; }
     if (c.key === "market_value_eur") { return `<td class="num">${mvCell(p.market_value_eur)}</td>`; }
+    if (c.key === "club_minutes_season") {
+      const v = p.club_minutes_season;
+      const title = p.club_season ? ` title="${p.club_season} · ${p.club_form_as_of}"` : "";
+      return `<td class="num"${title}>${v === "" || v === undefined ? "–" : fmt(v)}</td>`;
+    }
     if (c.key === "dribbles_won") {
       const won = num(p.dribbles_won), att = num(p.dribbles_attempted);
       return `<td class="num">${att ? `${won}/${att}` : "–"}</td>`;
@@ -1002,6 +1008,15 @@ function renderProjChart() {
   tableView("card_proj", [t("h_player"), t("h_pos"), t("h_age27"), ""],
     [...players].sort((a, b) => a.age_afcon27 - b.age_afcon27)
       .map(p => [p.name, p.pos, fmt(p.age_afcon27, 1), t("phase_" + p.phase_afcon27)]));
+  // a just-started season legitimately has 0 apps; only flag finished seasons
+  const y = new Date(DATA.meta.generated_at).getFullYear();
+  const current = new RegExp(`${y % 100}/${(y + 1) % 100}|\\b${y}\\b`);
+  const idle = DATA.pool.profiles.filter(p =>
+    p.status === "active" && p.club_form_as_of
+    && num(p.club_apps_season) === 0 && !current.test(p.club_season || ""));
+  $("readiness_note").textContent = idle.length
+    ? t("readiness_note", { list: idle.map(p => p.name).join(", ") })
+    : t("readiness_all_ok");
 }
 
 // ---------- youth pipeline ----------
