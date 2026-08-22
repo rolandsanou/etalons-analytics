@@ -1,173 +1,173 @@
-event_id,date,minute,added_time,class,is_bf,scorer_sofa_id,scorer_name,scorer_player_id,assist_sofa_id,assist_name,assist_player_id,bf_score_after,opp_score_after
-9786529,2022-01-09,24,0,regular,1,1019038,Gustavo Sangaré,gustavo-sangare,218160,Bertrand Traoré,bertrand-traore,1,0
-9786529,2022-01-09,40,0,penalty,0,116869,Vincent Aboubakar,,,,,1,1
-9786529,2022-01-09,45,3,penalty,0,116869,Vincent Aboubakar,,,,,1,2
-9737692,2022-01-13,39,0,regular,1,886227,Hassane Bandé,hassane-bande,1006189,Issa Kaboré,issa-kabore,1,0
-9737943,2022-01-17,24,0,regular,1,785876,Cyrille Bayala,cyrille-bayala,139357,Adama Guira,adama-guira,1,0
-9737943,2022-01-17,52,0,penalty,0,199538,Getaneh Kebede,,,,,1,1
-10054216,2022-01-23,28,0,regular,1,218160,Bertrand Traoré,bertrand-traore,1106451,Dango Ouattara,dango-ouattara,1,0
-10054216,2022-01-23,90,1,ownGoal,0,139357,Adama Guira,adama-guira,,,,1,1
-10083099,2022-01-29,45,3,regular,1,1106451,Dango Ouattara,dango-ouattara,806244,Ibrahim Blati Tourè,blati-toure,1,0
-10083102,2022-02-02,70,0,regular,0,280435,Abdou Diallo,,126071,Kalidou Koulibaly,,0,1
-10083102,2022-02-02,76,0,regular,0,1102503,Ahmadou Bamba Dieng,,217704,Sadio Mané,,0,2
-10083102,2022-02-02,82,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,1006189,Issa Kaboré,issa-kabore,1,2
-10083102,2022-02-02,87,0,regular,0,217704,Sadio Mané,,845286,Ismaïla Sarr,,1,3
-10083104,2022-02-05,24,0,regular,1,174911,Steeve Yago,steeve-yago,1006189,Issa Kaboré,issa-kabore,1,0
-10083104,2022-02-05,43,0,ownGoal,1,787498,André Onana,,,,,2,0
-10083104,2022-02-05,49,0,regular,1,971036,Djibril Ouattara,djibril-ouattara,218160,Bertrand Traoré,bertrand-traore,3,0
-10083104,2022-02-05,71,0,regular,0,153220,Stéphane Bahoken,,,,,3,1
-10083104,2022-02-05,85,0,regular,0,116869,Vincent Aboubakar,,846154,Nicolas Moumie Ngamaleu,,3,2
-10083104,2022-02-05,87,0,regular,0,116869,Vincent Aboubakar,,,,,3,3
-10151732,2022-03-24,4,0,regular,0,385296,Fidan Aliti,,887766,Edon Zhegrova,,0,1
-10151732,2022-03-24,23,0,regular,0,833255,Astrit Selmani,,800411,Milot Rashica,,0,2
-10151732,2022-03-24,53,0,regular,0,798147,Mërgim Vojvoda,,800411,Milot Rashica,,0,3
-10151732,2022-03-24,68,0,regular,0,800411,Milot Rashica,,817987,Ibrahim Drešević,,0,4
-10151732,2022-03-24,74,0,regular,0,858226,Toni Domgjoni,,226784,Zymer Bytyqi,,0,5
-10152235,2022-03-29,16,0,regular,0,118085,Hans Vanaken,,135666,Leandro Trossard,,0,1
-10152235,2022-03-29,18,0,regular,0,135666,Leandro Trossard,,147745,Michy Batshuayi,,0,2
-10152235,2022-03-29,75,0,regular,0,45970,Christian Benteke,,135666,Leandro Trossard,,0,3
-10339110,2022-06-03,58,0,regular,1,886227,Hassane Bandé,hassane-bande,1106451,Dango Ouattara,dango-ouattara,1,0
-10339110,2022-06-03,88,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1006189,Issa Kaboré,issa-kabore,2,0
-10339120,2022-06-07,64,0,regular,0,933007,Sabelo Ndzinisa,,1218853,Kwakhe Thwala,,0,1
-10339120,2022-06-07,69,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1019038,Gustavo Sangaré,gustavo-sangare,1,1
-10339120,2022-06-07,75,0,regular,1,1106451,Dango Ouattara,dango-ouattara,806244,Ibrahim Blati Tourè,blati-toure,2,1
-10339120,2022-06-07,85,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,989361,Cédric Badolo,cedric-badolo,3,1
-10711032,2022-09-23,57,0,regular,1,218160,Bertrand Traoré,bertrand-traore,,,,1,0
-10718435,2022-09-27,61,0,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,1,0
-10718435,2022-09-27,73,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0
-10718435,2022-09-27,90,3,regular,0,842745,Faïz Selemani,,,,,2,1
-10891794,2022-11-19,11,0,regular,1,1106451,Dango Ouattara,dango-ouattara,218160,Bertrand Traoré,bertrand-traore,1,0
-10891794,2022-11-19,20,0,regular,0,843754,Ibrahim Sangaré,,,,,1,1
-10891794,2022-11-19,42,0,penalty,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,1
-11092139,2023-03-24,87,0,regular,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,,,,1,0
-10339159,2023-03-28,12,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,1,0
-10339159,2023-03-28,26,0,regular,0,865839,Kodjo Fo Doh Laba,,,,,1,1
-10339183,2023-06-18,7,0,regular,0,124950,Bebé,,,,,0,1
-10339183,2023-06-18,45,3,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,1,1
-10339183,2023-06-18,67,0,regular,0,1001675,João Paulo,,59609,Stopira,,1,2
-10339183,2023-06-18,90,4,regular,0,1151076,Clé,,,,,1,3
-11612976,2023-09-12,37,0,regular,0,991421,Azzedine Ounahi,,991478,Amine Adli,,0,1
-11735406,2023-10-17,21,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,1,0
-11735406,2023-10-17,49,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,,,,2,0
-11735406,2023-10-17,65,0,regular,0,1016053,Pape Ibnou Ba,,,,,2,1
-11797997,2023-11-17,20,0,regular,0,1091675,Manuel Baldé,,887343,Alfa Semedo,,0,1
-11797997,2023-11-17,61,0,regular,1,218160,Bertrand Traoré,bertrand-traore,,,,1,1
-11798005,2023-11-21,69,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,218160,Bertrand Traoré,bertrand-traore,1,0
-11798005,2023-11-21,78,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0
-11798005,2023-11-21,90,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,3,0
-11940049,2024-01-05,16,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,1,0
-11940049,2024-01-05,45,0,regular,0,812533,Mehdi Taremi,,,,,1,1
-11940049,2024-01-05,70,0,regular,0,150993,Omid Ebrahimi,,,,,1,2
-11961075,2024-01-10,36,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,,,,1,0
-11961075,2024-01-10,41,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,2,0
-11961075,2024-01-10,56,0,regular,0,238612,Chancel Mbemba,,,,,2,1
-11761878,2024-01-16,90,6,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,1,0
-11761889,2024-01-20,45,3,regular,1,850011,Mohamed Konaté,mohamed-konate,1000129,Abdoul Tapsoba,abdoul-tapsoba,1,0
-11761889,2024-01-20,51,0,regular,0,785926,Baghdad Bounedjah,,,,,1,1
-11761889,2024-01-20,71,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,1
-11761889,2024-01-20,90,5,regular,0,785926,Baghdad Bounedjah,,818440,Adam Ounas,,2,2
-11761902,2024-01-23,36,0,regular,0,333341,Mabululu,,845281,Fredy,,0,1
-11761902,2024-01-23,90,2,regular,0,1002334,Zini,,,,,0,2
-11940715,2024-01-30,3,0,ownGoal,0,883262,Edmond Tapsoba,edmond-tapsoba,,,,0,1
-11940715,2024-01-30,47,0,regular,0,927005,Lassine Sinayoko,,362014,Hamari Traoré,,0,2
-11940715,2024-01-30,57,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,1,2
-12177417,2024-03-22,35,0,regular,0,,,,,,,1,1
-12177417,2024-03-22,37,0,regular,1,983282,Ousseni Bouda,ousseni-bouda,,,,1,0
-12177417,2024-03-22,50,0,regular,0,1111820,Omar Al Khoja,,,,,1,2
-12183516,2024-06-06,3,0,regular,0,295361,Mahmoud Trézéguet,,159665,Mohamed Salah,,0,1
-12183516,2024-06-06,7,0,regular,0,295361,Mahmoud Trézéguet,,,,,0,2
-12183516,2024-06-06,56,0,regular,1,911719,Lassina Traoré,lassina-traore,,,,1,2
-12183524,2024-06-10,41,0,regular,1,1106451,Dango Ouattara,dango-ouattara,865473,Stephane Aziz Ki,stephane-aziz-ki,1,0
-12183524,2024-06-10,45,2,penalty,1,911719,Lassina Traoré,lassina-traore,,,,2,0
-12183524,2024-06-10,58,0,regular,0,917327,Augustus Kargbo,,1089936,Emmanuel Samadiya,,2,1
-12183524,2024-06-10,87,0,regular,0,548704,Amadou Bakayoko,,1126032,Rodney Michael,,2,2
-12526616,2024-09-06,16,0,regular,0,217704,Sadio Mané,,,,,0,1
-12526616,2024-09-06,90,5,regular,1,983282,Ousseni Bouda,ousseni-bouda,,,,1,1
-12526614,2024-09-10,35,0,regular,1,911719,Lassina Traoré,lassina-traore,785883,Saidou Simporé,saidou-simpore,1,0
-12526614,2024-09-10,38,0,regular,1,911719,Lassina Traoré,lassina-traore,989361,Cédric Badolo,cedric-badolo,2,0
-12526614,2024-09-10,60,0,penalty,1,886227,Hassane Bandé,hassane-bande,,,,3,0
-12526614,2024-09-10,80,0,regular,0,1868761,Zeliat Nkhoma,,1023552,Chawanangwa Kawonga,,3,1
-12526613,2024-10-10,4,0,regular,0,994630,Bienvenue Kanakimana,,,,,0,1
-12526613,2024-10-10,33,0,regular,1,1106451,Dango Ouattara,dango-ouattara,218160,Bertrand Traoré,bertrand-traore,1,1
-12526613,2024-10-10,34,0,regular,1,1126690,Sacha Banse,sacha-banse,1006189,Issa Kaboré,issa-kabore,2,1
-12526613,2024-10-10,44,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1006189,Issa Kaboré,issa-kabore,3,1
-12526613,2024-10-10,49,0,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,4,1
-12526608,2024-10-13,5,0,regular,1,850011,Mohamed Konaté,mohamed-konate,989361,Cédric Badolo,cedric-badolo,1,0
-12526608,2024-10-13,90,4,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0
-12526607,2024-11-14,83,0,regular,0,1128532,Habib Diarra,,879694,Pape Gueye,,0,1
-12526738,2024-11-18,28,0,regular,0,894789,Gabadinho Mhango,,1387908,Patrick Mwaungulu,,0,1
-12526738,2024-11-18,57,0,regular,0,991031,Richard Mbulu,,1502239,Lloyd Aaron,,0,2
-12526738,2024-11-18,62,0,regular,0,1502239,Lloyd Aaron,,,,,0,3
-13257543,2024-12-22,17,0,regular,0,,,,,,,0,1
-13257543,2024-12-22,51,0,regular,0,,,,,,,0,2
-13299042,2025-01-04,45,1,regular,0,,,,,,,0,1
-13299042,2025-01-04,90,3,regular,1,,,,,,,1,1
-13304266,2025-01-06,74,0,regular,1,2025852,Hanaby Sagne,hanaby-hadalou-sagne,,,,1,0
-13315144,2025-01-09,30,0,regular,1,1407646,Clément Pitroipa,clement-pitroipa,,,,1,0
-13315144,2025-01-09,40,0,regular,1,1407646,Clément Pitroipa,clement-pitroipa,,,,2,0
-12183513,2025-03-21,12,0,regular,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,,,,1,0
-12183513,2025-03-21,33,0,regular,1,218160,Bertrand Traoré,bertrand-traore,911719,Lassina Traoré,lassina-traore,2,0
-12183513,2025-03-21,47,0,regular,1,1183551,Mohamed Zougrana,mohamed-zougrana,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,3,0
-12183513,2025-03-21,67,0,regular,1,911719,Lassina Traoré,lassina-traore,1106451,Dango Ouattara,dango-ouattara,4,0
-12183513,2025-03-21,88,0,penalty,0,1138139,Samuel Akinbinu,,,,,4,1
-12183510,2025-03-24,6,0,regular,1,911719,Lassina Traoré,lassina-traore,1106451,Dango Ouattara,dango-ouattara,1,0
-12183510,2025-03-24,36,0,regular,0,878384,Zidane Banjaqui,,887343,Alfa Semedo,,1,1
-12183510,2025-03-24,73,0,regular,1,911719,Lassina Traoré,lassina-traore,1108094,Adamo Nagalo,adamo-nagalo,2,1
-13961689,2025-06-02,60,0,ownGoal,0,883262,Edmond Tapsoba,edmond-tapsoba,,,,0,1
-13961689,2025-06-02,90,0,regular,0,1991585,Hazem Mastouri,,,,,0,2
-13975674,2025-06-06,22,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,,,,1,0
-13975674,2025-06-06,29,0,regular,1,1508537,Cyriaque Irié,cyriaque-irie,,,,2,0
-14085001,2025-08-02,45,3,penalty,0,1103596,Abdul Suleiman Sopu,,,,,0,1
-14085001,2025-08-02,71,0,regular,0,973053,Mohamed Hussein,,985960,Mudathir Yahya,,0,2
-14085010,2025-08-06,11,0,regular,1,2201056,Papus Ouattara,papus-ouattara,,,,1,0
-14085010,2025-08-06,15,0,regular,0,2172115,Sydney Tchibinda,,,,,1,1
-14085010,2025-08-06,61,0,penalty,1,1009908,Abdoul Abass Guiro,abdoul-abass-guiro,,,,2,1
-14085010,2025-08-06,78,0,penalty,1,867239,Patrick Malo,patrick-malo,,,,3,1
-14085010,2025-08-06,84,0,regular,1,1099246,Abdoul Baguian,abdoul-baguian,2201040,Yves Koutiama,yves-koutiama,4,1
-14085010,2025-08-06,90,5,regular,0,2200968,Ange Zoumara,,2201060,Nelson Ngaro,,4,2
-14085026,2025-08-13,45,9,penalty,0,881023,Alassane Diop,,,,,0,1
-14085032,2025-08-16,7,0,regular,0,1389706,Fenohasina Gilles Razafimaro,,1218861,Lalaina Rafanomezantsoa,,0,1
-14085032,2025-08-16,25,0,regular,1,2201046,Souleymane Sangaré,souleymane-sangare,2025852,Hanaby Sagne,hanaby-hadalou-sagne,1,1
-14085032,2025-08-16,58,0,penalty,0,1218861,Lalaina Rafanomezantsoa,,,,,1,2
-12183532,2025-09-05,16,0,regular,1,1508537,Cyriaque Irié,cyriaque-irie,883262,Edmond Tapsoba,edmond-tapsoba,1,0
-12183532,2025-09-05,25,0,regular,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,2399613,Abdul Ayinde,abdoul-ayinde,2,0
-12183532,2025-09-05,36,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,850011,Mohamed Konaté,mohamed-konate,3,0
-12183532,2025-09-05,42,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,1508537,Cyriaque Irié,cyriaque-irie,4,0
-12183532,2025-09-05,59,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,5,0
-12183532,2025-09-05,86,0,penalty,1,1106451,Dango Ouattara,dango-ouattara,,,,6,0
-12183427,2025-10-08,42,0,regular,1,1183551,Mohamed Zougrana,mohamed-zougrana,218160,Bertrand Traoré,bertrand-traore,1,0
-12183405,2025-10-12,65,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,0
-12183405,2025-10-12,82,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,2,0
-12183405,2025-10-12,84,0,regular,0,1867181,Biniam Ayten,,,,,2,1
-12183405,2025-10-12,90,6,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,3,1
-15032911,2025-11-14,24,0,regular,0,1099412,Ousseni Badamassi,,,,,0,1
-15032911,2025-11-14,34,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,1
-15032911,2025-11-14,45,3,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,2,1
-15032911,2025-11-14,56,0,penalty,0,1130110,Daniel Sosah,,,,,2,2
-15032911,2025-11-14,57,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,3,2
-15033101,2025-11-18,26,0,regular,1,1492520,Georgi Minoungou,georgi-minoungou,,,,1,0
-15033101,2025-11-18,45,1,regular,1,1492520,Georgi Minoungou,georgi-minoungou,,,,2,0
-15033101,2025-11-18,90,4,regular,1,785883,Saidou Simporé,saidou-simpore,,,,3,0
-13424942,2025-12-24,85,0,regular,0,949472,Marvin Anieboh,,284179,Carlos Akapo,,0,1
-13424942,2025-12-24,90,5,regular,1,1492520,Georgi Minoungou,georgi-minoungou,1106451,Dango Ouattara,dango-ouattara,1,1
-13424942,2025-12-24,90,8,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,1
-13424954,2025-12-28,23,0,penalty,0,158213,Riyad Mahrez,,,,,0,1
-13424968,2025-12-31,16,0,regular,1,911719,Lassina Traoré,lassina-traore,865473,Stephane Aziz Ki,stephane-aziz-ki,1,0
-13424968,2025-12-31,85,0,regular,1,1855502,Arsène Kouassi,arsene-kouassi,1106451,Dango Ouattara,dango-ouattara,2,0
-14058095,2026-01-06,20,0,regular,0,971037,Amad Diallo,,,,,0,1
-14058095,2026-01-06,32,0,regular,0,2087085,Yan Diomande,,971037,Amad Diallo,,0,2
-14058095,2026-01-06,87,0,regular,0,1568123,Bazoumana Touré,,,,,0,3
-15883802,2026-03-28,26,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,0
-15883802,2026-03-28,41,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,2,0
-15883802,2026-03-28,61,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,3,0
-15883802,2026-03-28,74,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,4,0
-15883802,2026-03-28,89,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,5,0
-15910597,2026-03-31,85,0,regular,1,1108094,Adamo Nagalo,adamo-nagalo,,,,1,0
-15910597,2026-03-31,90,7,regular,0,2461419,Fuscano Gomes,,,,,1,1
-16189861,2026-06-05,14,0,regular,0,966520,Lechi Sadulaev,,1004394,Evgeniy Morozov,,0,1
-16189861,2026-06-05,20,0,regular,0,324353,Aleksey Miranchuk,,358746,Anton Miranchuk,,0,2
-16189861,2026-06-05,73,0,regular,0,996969,Ilya Vakhaniya,,919370,Maksim Petrov,,0,3
-16205035,2026-06-09,56,0,regular,0,856293,Vladislav Malkevich,,,,,0,1
-16205035,2026-06-09,67,0,regular,0,1088702,Karen Vardanyan,,,,,0,2
-16205035,2026-06-09,73,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,1,2
-16205035,2026-06-09,85,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,2
+event_id,date,minute,added_time,class,is_bf,scorer_sofa_id,scorer_name,scorer_player_id,assist_sofa_id,assist_name,assist_player_id,bf_score_after,opp_score_after,pos,diff_before,impact
+9786529,2022-01-09,24,0,regular,1,1019038,Gustavo Sangaré,gustavo-sangare,218160,Bertrand Traoré,bertrand-traore,1,0,24,0,opener
+9786529,2022-01-09,40,0,penalty,0,116869,Vincent Aboubakar,,,,,1,1,40,-1,equalizer
+9786529,2022-01-09,45,3,penalty,0,116869,Vincent Aboubakar,,,,,1,2,48,0,go_ahead
+9737692,2022-01-13,39,0,regular,1,886227,Hassane Bandé,hassane-bande,1006189,Issa Kaboré,issa-kabore,1,0,39,0,opener
+9737943,2022-01-17,24,0,regular,1,785876,Cyrille Bayala,cyrille-bayala,139357,Adama Guira,adama-guira,1,0,24,0,opener
+9737943,2022-01-17,52,0,penalty,0,199538,Getaneh Kebede,,,,,1,1,53,-1,equalizer
+10054216,2022-01-23,28,0,regular,1,218160,Bertrand Traoré,bertrand-traore,1106451,Dango Ouattara,dango-ouattara,1,0,28,0,opener
+10054216,2022-01-23,90,1,ownGoal,0,139357,Adama Guira,adama-guira,,,,1,1,93,-1,equalizer
+10083099,2022-01-29,45,3,regular,1,1106451,Dango Ouattara,dango-ouattara,806244,Ibrahim Blati Tourè,blati-toure,1,0,48,0,opener
+10083102,2022-02-02,70,0,regular,0,280435,Abdou Diallo,,126071,Kalidou Koulibaly,,0,1,76,0,opener
+10083102,2022-02-02,76,0,regular,0,1102503,Ahmadou Bamba Dieng,,217704,Sadio Mané,,0,2,82,1,extender
+10083102,2022-02-02,82,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,1006189,Issa Kaboré,issa-kabore,1,2,88,-2,consolation
+10083102,2022-02-02,87,0,regular,0,217704,Sadio Mané,,845286,Ismaïla Sarr,,1,3,93,1,extender
+10083104,2022-02-05,24,0,regular,1,174911,Steeve Yago,steeve-yago,1006189,Issa Kaboré,issa-kabore,1,0,24,0,opener
+10083104,2022-02-05,43,0,ownGoal,1,787498,André Onana,,,,,2,0,43,1,extender
+10083104,2022-02-05,49,0,regular,1,971036,Djibril Ouattara,djibril-ouattara,218160,Bertrand Traoré,bertrand-traore,3,0,53,2,extender
+10083104,2022-02-05,71,0,regular,0,153220,Stéphane Bahoken,,,,,3,1,75,-3,consolation
+10083104,2022-02-05,85,0,regular,0,116869,Vincent Aboubakar,,846154,Nicolas Moumie Ngamaleu,,3,2,89,-2,consolation
+10083104,2022-02-05,87,0,regular,0,116869,Vincent Aboubakar,,,,,3,3,91,-1,equalizer
+10151732,2022-03-24,4,0,regular,0,385296,Fidan Aliti,,887766,Edon Zhegrova,,0,1,4,0,opener
+10151732,2022-03-24,23,0,regular,0,833255,Astrit Selmani,,800411,Milot Rashica,,0,2,23,1,extender
+10151732,2022-03-24,53,0,regular,0,798147,Mërgim Vojvoda,,800411,Milot Rashica,,0,3,54,2,extender
+10151732,2022-03-24,68,0,regular,0,800411,Milot Rashica,,817987,Ibrahim Drešević,,0,4,69,3,extender
+10151732,2022-03-24,74,0,regular,0,858226,Toni Domgjoni,,226784,Zymer Bytyqi,,0,5,75,4,extender
+10152235,2022-03-29,16,0,regular,0,118085,Hans Vanaken,,135666,Leandro Trossard,,0,1,16,0,opener
+10152235,2022-03-29,18,0,regular,0,135666,Leandro Trossard,,147745,Michy Batshuayi,,0,2,18,1,extender
+10152235,2022-03-29,75,0,regular,0,45970,Christian Benteke,,135666,Leandro Trossard,,0,3,75,2,extender
+10339110,2022-06-03,58,0,regular,1,886227,Hassane Bandé,hassane-bande,1106451,Dango Ouattara,dango-ouattara,1,0,59,0,opener
+10339110,2022-06-03,88,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1006189,Issa Kaboré,issa-kabore,2,0,89,1,extender
+10339120,2022-06-07,64,0,regular,0,933007,Sabelo Ndzinisa,,1218853,Kwakhe Thwala,,0,1,65,0,opener
+10339120,2022-06-07,69,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1019038,Gustavo Sangaré,gustavo-sangare,1,1,70,-1,equalizer
+10339120,2022-06-07,75,0,regular,1,1106451,Dango Ouattara,dango-ouattara,806244,Ibrahim Blati Tourè,blati-toure,2,1,76,0,go_ahead
+10339120,2022-06-07,85,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,989361,Cédric Badolo,cedric-badolo,3,1,86,1,extender
+10711032,2022-09-23,57,0,regular,1,218160,Bertrand Traoré,bertrand-traore,,,,1,0,59,0,opener
+10718435,2022-09-27,61,0,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,1,0,61,0,opener
+10718435,2022-09-27,73,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0,73,1,extender
+10718435,2022-09-27,90,3,regular,0,842745,Faïz Selemani,,,,,2,1,93,-2,consolation
+10891794,2022-11-19,11,0,regular,1,1106451,Dango Ouattara,dango-ouattara,218160,Bertrand Traoré,bertrand-traore,1,0,11,0,opener
+10891794,2022-11-19,20,0,regular,0,843754,Ibrahim Sangaré,,,,,1,1,20,-1,equalizer
+10891794,2022-11-19,42,0,penalty,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,1,42,0,go_ahead
+11092139,2023-03-24,87,0,regular,1,1000129,Abdoul Tapsoba,abdoul-tapsoba,,,,1,0,88,0,opener
+10339159,2023-03-28,12,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,1,0,12,0,opener
+10339159,2023-03-28,26,0,regular,0,865839,Kodjo Fo Doh Laba,,,,,1,1,26,-1,equalizer
+10339183,2023-06-18,7,0,regular,0,124950,Bebé,,,,,0,1,7,0,opener
+10339183,2023-06-18,45,3,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,1,1,48,-1,equalizer
+10339183,2023-06-18,67,0,regular,0,1001675,João Paulo,,59609,Stopira,,1,2,70,0,go_ahead
+10339183,2023-06-18,90,4,regular,0,1151076,Clé,,,,,1,3,97,1,extender
+11612976,2023-09-12,37,0,regular,0,991421,Azzedine Ounahi,,991478,Amine Adli,,0,1,37,0,opener
+11735406,2023-10-17,21,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,1,0,21,0,opener
+11735406,2023-10-17,49,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,,,,2,0,52,1,extender
+11735406,2023-10-17,65,0,regular,0,1016053,Pape Ibnou Ba,,,,,2,1,68,-2,consolation
+11797997,2023-11-17,20,0,regular,0,1091675,Manuel Baldé,,887343,Alfa Semedo,,0,1,20,0,opener
+11797997,2023-11-17,61,0,regular,1,218160,Bertrand Traoré,bertrand-traore,,,,1,1,67,-1,equalizer
+11798005,2023-11-21,69,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,218160,Bertrand Traoré,bertrand-traore,1,0,69,0,opener
+11798005,2023-11-21,78,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0,78,1,extender
+11798005,2023-11-21,90,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,3,0,90,2,extender
+11940049,2024-01-05,16,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,1,0,16,0,opener
+11940049,2024-01-05,45,0,regular,0,812533,Mehdi Taremi,,,,,1,1,45,-1,equalizer
+11940049,2024-01-05,70,0,regular,0,150993,Omid Ebrahimi,,,,,1,2,72,0,go_ahead
+11961075,2024-01-10,36,0,regular,1,806244,Ibrahim Blati Tourè,blati-toure,,,,1,0,36,0,opener
+11961075,2024-01-10,41,0,regular,1,850011,Mohamed Konaté,mohamed-konate,,,,2,0,41,1,extender
+11961075,2024-01-10,56,0,regular,0,238612,Chancel Mbemba,,,,,2,1,58,-2,consolation
+11761878,2024-01-16,90,6,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,1,0,100,0,opener
+11761889,2024-01-20,45,3,regular,1,850011,Mohamed Konaté,mohamed-konate,1000129,Abdoul Tapsoba,abdoul-tapsoba,1,0,48,0,opener
+11761889,2024-01-20,51,0,regular,0,785926,Baghdad Bounedjah,,,,,1,1,55,-1,equalizer
+11761889,2024-01-20,71,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,1,75,0,go_ahead
+11761889,2024-01-20,90,5,regular,0,785926,Baghdad Bounedjah,,818440,Adam Ounas,,2,2,99,-1,equalizer
+11761902,2024-01-23,36,0,regular,0,333341,Mabululu,,845281,Fredy,,0,1,36,0,opener
+11761902,2024-01-23,90,2,regular,0,1002334,Zini,,,,,0,2,97,1,extender
+11940715,2024-01-30,3,0,ownGoal,0,883262,Edmond Tapsoba,edmond-tapsoba,,,,0,1,3,0,opener
+11940715,2024-01-30,47,0,regular,0,927005,Lassine Sinayoko,,362014,Hamari Traoré,,0,2,51,1,extender
+11940715,2024-01-30,57,0,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,1,2,61,-2,consolation
+12177417,2024-03-22,35,0,regular,0,,,,,,,1,1,35,0,opener
+12177417,2024-03-22,37,0,regular,1,983282,Ousseni Bouda,ousseni-bouda,,,,1,0,37,-1,equalizer
+12177417,2024-03-22,50,0,regular,0,1111820,Omar Al Khoja,,,,,1,2,52,0,go_ahead
+12183516,2024-06-06,3,0,regular,0,295361,Mahmoud Trézéguet,,159665,Mohamed Salah,,0,1,3,0,opener
+12183516,2024-06-06,7,0,regular,0,295361,Mahmoud Trézéguet,,,,,0,2,7,1,extender
+12183516,2024-06-06,56,0,regular,1,911719,Lassina Traoré,lassina-traore,,,,1,2,56,-2,consolation
+12183524,2024-06-10,41,0,regular,1,1106451,Dango Ouattara,dango-ouattara,865473,Stephane Aziz Ki,stephane-aziz-ki,1,0,41,0,opener
+12183524,2024-06-10,45,2,penalty,1,911719,Lassina Traoré,lassina-traore,,,,2,0,47,1,extender
+12183524,2024-06-10,58,0,regular,0,917327,Augustus Kargbo,,1089936,Emmanuel Samadiya,,2,1,60,-2,consolation
+12183524,2024-06-10,87,0,regular,0,548704,Amadou Bakayoko,,1126032,Rodney Michael,,2,2,89,-1,equalizer
+12526616,2024-09-06,16,0,regular,0,217704,Sadio Mané,,,,,0,1,16,0,opener
+12526616,2024-09-06,90,5,regular,1,983282,Ousseni Bouda,ousseni-bouda,,,,1,1,99,-1,equalizer
+12526614,2024-09-10,35,0,regular,1,911719,Lassina Traoré,lassina-traore,785883,Saidou Simporé,saidou-simpore,1,0,35,0,opener
+12526614,2024-09-10,38,0,regular,1,911719,Lassina Traoré,lassina-traore,989361,Cédric Badolo,cedric-badolo,2,0,38,1,extender
+12526614,2024-09-10,60,0,penalty,1,886227,Hassane Bandé,hassane-bande,,,,3,0,63,2,extender
+12526614,2024-09-10,80,0,regular,0,1868761,Zeliat Nkhoma,,1023552,Chawanangwa Kawonga,,3,1,83,-3,consolation
+12526613,2024-10-10,4,0,regular,0,994630,Bienvenue Kanakimana,,,,,0,1,4,0,opener
+12526613,2024-10-10,33,0,regular,1,1106451,Dango Ouattara,dango-ouattara,218160,Bertrand Traoré,bertrand-traore,1,1,33,-1,equalizer
+12526613,2024-10-10,34,0,regular,1,1126690,Sacha Banse,sacha-banse,1006189,Issa Kaboré,issa-kabore,2,1,34,0,go_ahead
+12526613,2024-10-10,44,0,regular,1,1106451,Dango Ouattara,dango-ouattara,1006189,Issa Kaboré,issa-kabore,3,1,44,1,extender
+12526613,2024-10-10,49,0,regular,1,364758,Issoufou Dayo,issoufou-dayo,,,,4,1,51,2,extender
+12526608,2024-10-13,5,0,regular,1,850011,Mohamed Konaté,mohamed-konate,989361,Cédric Badolo,cedric-badolo,1,0,5,0,opener
+12526608,2024-10-13,90,4,penalty,1,218160,Bertrand Traoré,bertrand-traore,,,,2,0,97,1,extender
+12526607,2024-11-14,83,0,regular,0,1128532,Habib Diarra,,879694,Pape Gueye,,0,1,85,0,opener
+12526738,2024-11-18,28,0,regular,0,894789,Gabadinho Mhango,,1387908,Patrick Mwaungulu,,0,1,28,0,opener
+12526738,2024-11-18,57,0,regular,0,991031,Richard Mbulu,,1502239,Lloyd Aaron,,0,2,58,1,extender
+12526738,2024-11-18,62,0,regular,0,1502239,Lloyd Aaron,,,,,0,3,63,2,extender
+13257543,2024-12-22,17,0,regular,0,,,,,,,0,1,17,0,opener
+13257543,2024-12-22,51,0,regular,0,,,,,,,0,2,53,1,extender
+13299042,2025-01-04,45,1,regular,0,,,,,,,0,1,46,0,opener
+13299042,2025-01-04,90,3,regular,1,,,,,,,1,1,94,-1,equalizer
+13304266,2025-01-06,74,0,regular,1,2025852,Hanaby Sagne,hanaby-hadalou-sagne,,,,1,0,76,0,opener
+13315144,2025-01-09,30,0,regular,1,1407646,Clément Pitroipa,clement-pitroipa,,,,1,0,30,0,opener
+13315144,2025-01-09,40,0,regular,1,1407646,Clément Pitroipa,clement-pitroipa,,,,2,0,40,1,extender
+12183513,2025-03-21,12,0,regular,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,,,,1,0,12,0,opener
+12183513,2025-03-21,33,0,regular,1,218160,Bertrand Traoré,bertrand-traore,911719,Lassina Traoré,lassina-traore,2,0,33,1,extender
+12183513,2025-03-21,47,0,regular,1,1183551,Mohamed Zougrana,mohamed-zougrana,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,3,0,49,2,extender
+12183513,2025-03-21,67,0,regular,1,911719,Lassina Traoré,lassina-traore,1106451,Dango Ouattara,dango-ouattara,4,0,69,3,extender
+12183513,2025-03-21,88,0,penalty,0,1138139,Samuel Akinbinu,,,,,4,1,90,-4,consolation
+12183510,2025-03-24,6,0,regular,1,911719,Lassina Traoré,lassina-traore,1106451,Dango Ouattara,dango-ouattara,1,0,6,0,opener
+12183510,2025-03-24,36,0,regular,0,878384,Zidane Banjaqui,,887343,Alfa Semedo,,1,1,36,-1,equalizer
+12183510,2025-03-24,73,0,regular,1,911719,Lassina Traoré,lassina-traore,1108094,Adamo Nagalo,adamo-nagalo,2,1,75,0,go_ahead
+13961689,2025-06-02,60,0,ownGoal,0,883262,Edmond Tapsoba,edmond-tapsoba,,,,0,1,61,0,opener
+13961689,2025-06-02,90,0,regular,0,1991585,Hazem Mastouri,,,,,0,2,91,1,extender
+13975674,2025-06-06,22,0,regular,1,865473,Stephane Aziz Ki,stephane-aziz-ki,,,,1,0,22,0,opener
+13975674,2025-06-06,29,0,regular,1,1508537,Cyriaque Irié,cyriaque-irie,,,,2,0,29,1,extender
+14085001,2025-08-02,45,3,penalty,0,1103596,Abdul Suleiman Sopu,,,,,0,1,48,0,opener
+14085001,2025-08-02,71,0,regular,0,973053,Mohamed Hussein,,985960,Mudathir Yahya,,0,2,74,1,extender
+14085010,2025-08-06,11,0,regular,1,2201056,Papus Ouattara,papus-ouattara,,,,1,0,11,0,opener
+14085010,2025-08-06,15,0,regular,0,2172115,Sydney Tchibinda,,,,,1,1,15,-1,equalizer
+14085010,2025-08-06,61,0,penalty,1,1009908,Abdoul Abass Guiro,abdoul-abass-guiro,,,,2,1,66,0,go_ahead
+14085010,2025-08-06,78,0,penalty,1,867239,Patrick Malo,patrick-malo,,,,3,1,83,1,extender
+14085010,2025-08-06,84,0,regular,1,1099246,Abdoul Baguian,abdoul-baguian,2201040,Yves Koutiama,yves-koutiama,4,1,89,2,extender
+14085010,2025-08-06,90,5,regular,0,2200968,Ange Zoumara,,2201060,Nelson Ngaro,,4,2,100,-3,consolation
+14085026,2025-08-13,45,9,penalty,0,881023,Alassane Diop,,,,,0,1,54,0,opener
+14085032,2025-08-16,7,0,regular,0,1389706,Fenohasina Gilles Razafimaro,,1218861,Lalaina Rafanomezantsoa,,0,1,7,0,opener
+14085032,2025-08-16,25,0,regular,1,2201046,Souleymane Sangaré,souleymane-sangare,2025852,Hanaby Sagne,hanaby-hadalou-sagne,1,1,25,-1,equalizer
+14085032,2025-08-16,58,0,penalty,0,1218861,Lalaina Rafanomezantsoa,,,,,1,2,61,0,go_ahead
+12183532,2025-09-05,16,0,regular,1,1508537,Cyriaque Irié,cyriaque-irie,883262,Edmond Tapsoba,edmond-tapsoba,1,0,16,0,opener
+12183532,2025-09-05,25,0,regular,1,1897363,Josué Tiendrebeogo,josue-tiendrebeogo,2399613,Abdul Ayinde,abdoul-ayinde,2,0,25,1,extender
+12183532,2025-09-05,36,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,850011,Mohamed Konaté,mohamed-konate,3,0,36,2,extender
+12183532,2025-09-05,42,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,1508537,Cyriaque Irié,cyriaque-irie,4,0,42,3,extender
+12183532,2025-09-05,59,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,5,0,61,4,extender
+12183532,2025-09-05,86,0,penalty,1,1106451,Dango Ouattara,dango-ouattara,,,,6,0,88,5,extender
+12183427,2025-10-08,42,0,regular,1,1183551,Mohamed Zougrana,mohamed-zougrana,218160,Bertrand Traoré,bertrand-traore,1,0,42,0,opener
+12183405,2025-10-12,65,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,0,65,0,opener
+12183405,2025-10-12,82,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,2,0,82,1,extender
+12183405,2025-10-12,84,0,regular,0,1867181,Biniam Ayten,,,,,2,1,84,-2,consolation
+12183405,2025-10-12,90,6,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,3,1,96,1,extender
+15032911,2025-11-14,24,0,regular,0,1099412,Ousseni Badamassi,,,,,0,1,24,0,opener
+15032911,2025-11-14,34,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,1,34,-1,equalizer
+15032911,2025-11-14,45,3,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,2,1,48,0,go_ahead
+15032911,2025-11-14,56,0,penalty,0,1130110,Daniel Sosah,,,,,2,2,59,-1,equalizer
+15032911,2025-11-14,57,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,3,2,60,0,go_ahead
+15033101,2025-11-18,26,0,regular,1,1492520,Georgi Minoungou,georgi-minoungou,,,,1,0,26,0,opener
+15033101,2025-11-18,45,1,regular,1,1492520,Georgi Minoungou,georgi-minoungou,,,,2,0,46,1,extender
+15033101,2025-11-18,90,4,regular,1,785883,Saidou Simporé,saidou-simpore,,,,3,0,95,2,extender
+13424942,2025-12-24,85,0,regular,0,949472,Marvin Anieboh,,284179,Carlos Akapo,,0,1,88,0,opener
+13424942,2025-12-24,90,5,regular,1,1492520,Georgi Minoungou,georgi-minoungou,1106451,Dango Ouattara,dango-ouattara,1,1,98,-1,equalizer
+13424942,2025-12-24,90,8,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,1,101,0,go_ahead
+13424954,2025-12-28,23,0,penalty,0,158213,Riyad Mahrez,,,,,0,1,23,0,opener
+13424968,2025-12-31,16,0,regular,1,911719,Lassina Traoré,lassina-traore,865473,Stephane Aziz Ki,stephane-aziz-ki,1,0,16,0,opener
+13424968,2025-12-31,85,0,regular,1,1855502,Arsène Kouassi,arsene-kouassi,1106451,Dango Ouattara,dango-ouattara,2,0,90,1,extender
+14058095,2026-01-06,20,0,regular,0,971037,Amad Diallo,,,,,0,1,20,0,opener
+14058095,2026-01-06,32,0,regular,0,2087085,Yan Diomande,,971037,Amad Diallo,,0,2,32,1,extender
+14058095,2026-01-06,87,0,regular,0,1568123,Bazoumana Touré,,,,,0,3,90,2,extender
+15883802,2026-03-28,26,0,regular,1,1102857,Pierre Landry Kaboré,pierre-landry-kabore,,,,1,0,26,0,opener
+15883802,2026-03-28,41,0,regular,1,1106451,Dango Ouattara,dango-ouattara,,,,2,0,41,1,extender
+15883802,2026-03-28,61,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,3,0,63,2,extender
+15883802,2026-03-28,74,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,4,0,76,3,extender
+15883802,2026-03-28,89,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,5,0,91,4,extender
+15910597,2026-03-31,85,0,regular,1,1108094,Adamo Nagalo,adamo-nagalo,,,,1,0,85,0,opener
+15910597,2026-03-31,90,7,regular,0,2461419,Fuscano Gomes,,,,,1,1,97,-1,equalizer
+16189861,2026-06-05,14,0,regular,0,966520,Lechi Sadulaev,,1004394,Evgeniy Morozov,,0,1,14,0,opener
+16189861,2026-06-05,20,0,regular,0,324353,Aleksey Miranchuk,,358746,Anton Miranchuk,,0,2,20,1,extender
+16189861,2026-06-05,73,0,regular,0,996969,Ilya Vakhaniya,,919370,Maksim Petrov,,0,3,76,2,extender
+16205035,2026-06-09,56,0,regular,0,856293,Vladislav Malkevich,,,,,0,1,57,0,opener
+16205035,2026-06-09,67,0,regular,0,1088702,Karen Vardanyan,,,,,0,2,68,1,extender
+16205035,2026-06-09,73,0,regular,1,1490960,Moise Kaboré,moise-kabore,,,,1,2,74,-2,consolation
+16205035,2026-06-09,85,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,2,86,-1,equalizer
