@@ -48,11 +48,17 @@ Staging (`data/staging/`, committed):
 | `callups.csv` | player × window | squad lists (AFCON 2021/2023/2025, current, recent) with club/caps at the time |
 | `appearances.csv` | player × match | minutes, goals, assists, shots, passes (total/accurate), key passes, crosses, long balls, dribbles won/attempted, tackles, interceptions, clearances, recoveries, duels, aerials, fouls, touches, GK saves, rating |
 | `events.csv` | match | opponent, score, result, competition, **starting formations (both teams)**, stats coverage |
-| `matches.csv` | match (1960→) | all-time results with competition classification |
+| `matches.csv` | match (1960→) | all-time results with competition classification, **venue class** (home / delocalized home / neutral / away) and **head coach** |
 | `elo_timeline.csv` / `elo_rankings.csv` | match / team | BF Elo after every match (+ opponent pre-match Elo), current world ratings |
+| `goal_events.csv` / `substitutions.csv` / `cards.csv` / `injury_times.csv` | incident | goal timings with running scores, subs, cards, stoppage lengths |
+| `match_states.csv` | match | effective length, goal bins, minutes leading/level/trailing, comeback flags |
+| `penalties.csv` / `shootouts_alltime.csv` | attempt / shootout | in-game and shootout penalty attempts per taker; all-time shootout record |
+| `youth_callups.csv` | player × youth squad | U-17/U-20 AFCON squads linked to the senior registry (name + DOB) |
+| `club_form.csv` | player | latest club season: apps, starts, minutes, rating (30-day refresh) |
 
-Marts (`data/marts/`, committed): `player_profile.csv` (per-player aggregates over the
-study window + identity/status/verified club), `formations.csv`, `team_form_yearly.csv`,
+Marts (`data/marts/`, committed): `player_profile.csv`, `player_importance.csv`,
+`bench_impact.csv`, `formations.csv`, `team_timeline.csv`, `captains.csv`,
+`goalkeepers.csv`, `coach_eras.csv`, `pipeline.csv`, `team_form_yearly.csv`,
 `afcon_editions.csv`, `elo_yearly.csv`.
 
 ## Metric definitions & gates
@@ -105,6 +111,8 @@ python -m http.server 8123 --directory site
 | `data/seed/name_overrides.csv` | name variant → canonical (the quality report suggests candidates) |
 | `data/seed/sofa_ids.csv` | manual player ↔ Sofascore id links when auto-search can't |
 | `data/seed/int_retirements.csv` | verified international-retirement announcements |
+| `data/seed/coach_tenures.csv` | head-coach tenures (year precision; refine dates freely) |
+| `data/seed/youth_squads.csv` | youth tournament squad pages (U-17/U-20 AFCON editions) |
 
 - **Goal timing & game states** — a per-match timeline rebuilt from incidents
   (stoppage time included; extra time detected even when the source logs ET events as
@@ -121,6 +129,23 @@ python -m http.server 8123 --directory site
   Percentiles are computed among qualified peers only.
 - **Bench impact** — raw sub G+A with minutes; per-90 gated (≥5 sub apps, ≥150');
   GD after entry (≥8 sub apps) read against the team's own post-60' baseline.
+- **Venue classes** — "delocalized home" = BF designated host but playing abroad
+  (stadium homologation), classified by listing + host country because the source
+  flags the Marrakech-era homes as neutral; final tournaments count as neutral.
+- **Coach eras** — tenures from a hand-verifiable seed (year precision, initially
+  parsed from Wikipedia); records per tenure of ≥10 matches, rest pooled; Elo Δ =
+  first to last match of the tenure.
+- **Captains & goalkeepers** — kick-off captain from lineups; GK save% =
+  saves / (saves + goals conceded while on pitch), clean sheet = full presence with
+  zero conceded, rates gated at 270'.
+- **Penalties & shootouts** — per-taker in-game conversion and per-attempt shootout
+  record from incidents (cross-checked against recorded shootout scores);
+  all-time shootout list from martj42.
+- **Youth pipeline** — youth squads linked to the senior registry only on
+  name + date-of-birth agreement; "graduated" means appearing on a senior matchday
+  sheet; prospects = not yet called up, aged ≤21.
+- **Club readiness** — latest club season (apps, minutes, rating) per active/fringe
+  player, refreshed every 30 days and stamped with its as-of date.
 
 ## Roadmap
 
@@ -130,8 +155,10 @@ python -m http.server 8123 --directory site
 - [ ] **v3** — team playing style (possession, directness, big chances, duels; 1st/2nd-half
       splits; style vs opponent strength) and resilience (deficit ladder, reply time
       after conceding, output by game state, clutch scorers)
-- [ ] **v4** — coach eras, penalties & shootouts, captains & GK deep-dive, the
+- [x] **v4** — coach eras, penalties & shootouts, captains & GK deep-dive, the
       "home away from home" cost, club-readiness indicator, youth pipeline (U17/U20 → senior)
+- [ ] U-20 AFCON 2027 squads (Ghana; qualifiers run through 2026 — add the squad list
+      to `data/seed/youth_squads.csv` when published)
 - [ ] Qualifier-window squad lists (curated seed)
 - [ ] Player detail pages, match detail pages
 - [ ] Automation: scheduled ETL refresh + deploy

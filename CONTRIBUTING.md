@@ -32,6 +32,12 @@ name override").
 - `data/seed/int_retirements.csv` — international retirements
   (`player_id,date,source,note`). Only add entries backed by a public announcement;
   the pipeline never infers retirement, it only labels long absences "out of the group".
+- `data/seed/coach_tenures.csv` — head-coach tenures at year precision (generated
+  from Wikipedia's coaching history, then hand-verified). Refining a start/end to the
+  real month/day improves match attribution around coaching changes.
+- `data/seed/youth_squads.csv` — youth tournament squad pages (same format as
+  `wiki_squads.csv` plus a `level` column). Add a row when a new U-17/U-20 squad
+  list is published (next expected: U-20 AFCON 2027, qualifiers through 2026).
 
 ## Layering rules
 
