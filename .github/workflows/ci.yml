@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest -q
+
+      # data/staging is committed, so the whole analysis layer rebuilds with no
+      # network access, no credentials and no scraping.
+      - name: Rebuild marts and dashboard data from committed staging
+        run: python -m etl load
+
+      - name: Data-quality gate
+        run: python -m etl quality
+
+      - name: Data dictionary is up to date
+        run: |
+          python tools/gen_data_model.py
+          git diff --exit-code -- docs/DATA_MODEL.md \
+            || { echo "::error::docs/DATA_MODEL.md is stale - run: python tools/gen_data_model.py"; exit 1; }
+
+      - name: Dashboard data is valid JSON and complete
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          expected = {
+              "team.json": ["formations", "timeline", "style", "resilience",
+                             "captains", "goalkeepers", "pipeline", "penalties"],
+              "squad.json": ["players", "stats"],
+              "pool.json": ["profiles", "importance", "bench"],
+              "history.json": ["all_time", "coaches", "venues", "shootouts"],
+              "elo.json": ["timeline", "caf_rank"],
+              "meta.json": ["generated_at", "sources"],
+          }
+          bad = []
+          for name, keys in expected.items():
+              path = pathlib.Path("site/data") / name
+              data = json.loads(path.read_text(encoding="utf-8"))
+              missing = [k for k in keys if k not in data]
+              if missing:
+                  bad.append(f"{name}: missing {missing}")
+          if bad:
+              print("::error::" + "; ".join(bad))
+              sys.exit(1)
+          print("dashboard data OK")
+          PY

@@ -1,19 +1,56 @@
 # Contributing
 
 Contributions are welcome — data fixes, new sources, new analyses, translations.
+Start with [ROADMAP.md](ROADMAP.md) for what needs doing (items tagged
+**good first issue** need no prior knowledge of the codebase) and
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the pieces fit.
 
 ## Quick start
 
 ```
 python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\python -m etl all
+.venv\Scripts\python -m etl load       # rebuilds everything from committed data
 .venv\Scripts\python -m pytest -q
+python -m http.server 8123 --directory site
 ```
 
-Work on a branch, never on `main`. Run `python -m etl quality` and the tests before
-every commit. Keep commits short, English, imperative ("Add WCQ window", "Fix Yago
-name override").
+**You do not need to download anything to contribute.** `data/staging/` is
+committed, so `etl load` rebuilds every mart and the whole dashboard offline.
+Run the full `etl all` only when you are refreshing the sources themselves.
+
+Work on a branch, never on `main`. Run `python -m etl quality` (0 failures) and
+the tests before every commit. Keep commits short, English, imperative ("Add WCQ
+window", "Fix Yago name override").
+
+## Where things live
+
+| I want to… | Go to |
+|---|---|
+| fix a name, club, coach date, retirement | `data/seed/*.csv` — no code needed |
+| add a call-up window or youth squad | `data/seed/wiki_squads.csv`, `data/seed/youth_squads.csv` |
+| add a metric or analysis | one new module in `etl/load/` + one entry in `etl/load/registry.py` |
+| change a formula or threshold | `etl/analytics.py` (pure functions, unit-tested) |
+| add a chart or section | `site/index.html` + `site/assets/sections/` + `site/assets/i18n.js` |
+| add a data-quality check | `etl/quality.py` |
+| understand a column | [docs/DATA_MODEL.md](docs/DATA_MODEL.md) (generated) |
+
+The four-step recipe for adding an analysis is in
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#adding-an-analysis-the-four-step-recipe).
+
+## The rules that keep numbers defensible
+
+Burkina Faso plays roughly 15 matches a year, so samples are small by nature:
+
+- show the raw numerator and denominator beside every rate;
+- gate small samples (render `–`, grey the row) instead of hiding them;
+- no composite indexes — show components side by side;
+- pool ratios (`sum/sum`), never average percentages;
+- compare like with like (style vs opponents faced, formations vs opponent Elo);
+- stay descriptive, never causal.
+
+Never hand-edit anything under `data/staging/`, `data/marts/` or `site/data/` —
+they are generated. Hand-maintained data lives in `data/seed/`.
 
 ## The easiest contributions: seed files
 
@@ -43,18 +80,16 @@ name override").
 
 - `extract` only downloads and snapshots into `data/raw/` (immutable; gitignored).
 - `transform` reads only `data/raw/` + `data/seed/`, writes only `data/staging/`.
-- `load` reads only `data/staging/` (+ raw HTML for record tables), writes
-  `data/marts/` and `site/data/`.
-- Never hand-edit anything under `data/staging/`, `data/marts/` or `site/data/` —
-  they are generated. Hand-maintained data lives in `data/seed/`.
+- `load` reads only `data/staging/` + `data/seed/`, writes `data/marts/` and
+  `site/data/`. It must never touch `data/raw/` — that is what keeps CI and
+  offline contribution possible.
 
-## Ideas / roadmap
+Each layer reads only from the layer above. If a transform wants to read a mart,
+the logic belongs in `load` instead.
 
-- FBref per-tournament tables as a second stats source (blocked for plain HTTP
-  clients; needs a browser-assisted or Playwright extractor).
-- Cards and substitution timelines from Sofascore incidents endpoint.
-- Player detail pages on the dashboard.
-- WCQ 2023–2025 squad lists (no Wikipedia squad pages; needs a curated seed).
+## Ideas and open work
+
+See [ROADMAP.md](ROADMAP.md).
 
 ## Licensing
 

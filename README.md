@@ -10,6 +10,9 @@ The analysis is designed to evolve with time and contributions: sources are snap
 transforms are deterministic, every metric is gated by sample size, and hand-maintained
 knowledge lives in small seed files anyone can extend — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+**Docs:** [Architecture](docs/ARCHITECTURE.md) · [Data model](docs/DATA_MODEL.md) ·
+[Contributing](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
+
 ## Architecture
 
 ```
