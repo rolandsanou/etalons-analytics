@@ -573,6 +573,37 @@ function renderBench() {
     { gd90: signed(b.gd90), gf: b.gf, ga: b.ga, min: fmt(b.minutes) });
 }
 
+// ---------- captains & goalkeepers ----------
+
+function renderCaptains() {
+  const rows = DATA.team.captains.filter(r => num(r.matches) >= 2);
+  $("captains_table").innerHTML = `<tr><th>${t("h_player")}</th>
+    <th class="num">${t("h_matches_c")}</th><th class="num">V-N-D</th>
+    <th class="num">Pts/m</th><th>${t("h_period")}</th></tr>` +
+    rows.map(r => `<tr><td>${r.name}</td><td class="num">${r.matches}</td>
+      <td class="num">${r.w}-${r.d}-${r.l}</td><td class="num">${fmt(r.ppg, 2)}</td>
+      <td>${r.first_date.slice(0, 4)}–${r.last_date.slice(0, 4)}</td></tr>`).join("");
+}
+
+function renderGoalkeepers() {
+  const rows = DATA.team.goalkeepers;
+  $("gk_table").innerHTML = `<tr><th>${t("h_player")}</th>
+    <th class="num">${t("h_apps")}</th><th class="num">${t("h_min")}</th>
+    <th class="num">${t("h_gk_ga")}</th><th class="num">${t("h_gk_ga90")}</th>
+    <th class="num">${t("h_saves")}</th><th class="num">${t("h_savepct")}</th>
+    <th class="num">${t("h_cs")}</th><th class="num">${t("h_claims")}</th>
+    <th class="num">${t("h_rating")}</th></tr>` +
+    rows.map(r => `<tr${r.gated === 1 ? "" : ' style="color:var(--muted)"'}>
+      <td>${r.name}</td><td class="num">${r.apps}</td>
+      <td class="num">${fmt(r.minutes)}</td><td class="num">${r.ga_on}</td>
+      <td class="num">${r.ga90 === "" ? "–" : fmt(r.ga90, 2)}</td>
+      <td class="num">${r.saves}</td>
+      <td class="num">${r.save_pct === "" ? "–" : fmt(r.save_pct, 1) + " %"}</td>
+      <td class="num">${r.clean_sheets}</td>
+      <td class="num">${num(r.high_claims) + num(r.punches)}</td>
+      <td class="num">${r.rating_avg === "" ? "–" : fmt(r.rating_avg, 2)}</td></tr>`).join("");
+}
+
 // ---------- status strip ----------
 
 const STRIP_STATUSES = [
@@ -939,6 +970,8 @@ function renderAll() {
   renderTempo();
   renderImportance();
   renderBench();
+  renderCaptains();
+  renderGoalkeepers();
   renderStatusStrip();
   renderDecadeChart();
   renderFormChart();
