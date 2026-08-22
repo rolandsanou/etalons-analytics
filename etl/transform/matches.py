@@ -13,6 +13,7 @@ def load_results():
     mapping = dict(zip(fn["former"], fn["current"]))
     df["home_team"] = df["home_team"].replace(mapping)
     df["away_team"] = df["away_team"].replace(mapping)
+    df["country"] = df["country"].replace(mapping)
     return df.sort_values("date").reset_index(drop=True)
 
 
@@ -23,11 +24,15 @@ def team_matches(df, team):
     m["ga"] = np.where(m.is_home, m.away_score, m.home_score)
     m["opponent"] = np.where(m.is_home, m.away_team, m.home_team)
     m["venue"] = np.where(m.neutral, "N", np.where(m.is_home, "H", "A"))
-    # delocalized homes (e.g. the Marrakech era) are often flagged neutral,
-    # so classify by listing + host country, not by the neutral flag
+    m["comp"] = m.tournament.map(classify_tournament)
+    # delocalized homes (e.g. the Marrakech era) are often flagged neutral, so
+    # classify by listing + host country — but at final tournaments (afcon/wc)
+    # a "home" listing abroad is administrative, not a delocalized home
+    final_tournament = m.comp.isin(["afcon", "wc"])
     m["venue_class"] = np.select(
-        [m.is_home & (m.country == team), m.is_home & (m.country != team),
-         ~m.is_home & m.neutral.astype(bool)],
+        [m.is_home & (m.country == team),
+         m.is_home & ~final_tournament,
+         m.is_home | m.neutral.astype(bool)],
         ["home_bf", "home_delocalized", "neutral"], default="away")
     m["result"] = np.select([m.gf > m.ga, m.gf == m.ga], ["W", "D"], default="L")
     return m
@@ -110,11 +115,31 @@ def history_stats(m):
     for row, r in zip(last10, m.tail(10).iloc[::-1].itertuples()):
         row["result"] = r.result
 
+    def venue_rows(g):
+        rows = [{"venue_class": v, **_record(gg),
+                 "ppg": round((3 * (gg.result == "W").sum() + (gg.result == "D").sum()) / len(gg), 2)}
+                for v, gg in g.groupby("venue_class")]
+        order = {"home_bf": 0, "home_delocalized": 1, "neutral": 2, "away": 3}
+        rows.sort(key=lambda r: order.get(r["venue_class"], 9))
+        return rows
+
+    delocalized = m[m.venue_class == "home_delocalized"]
+    host_cities = [{"city": f"{c} ({co})", "n": int(n)} for (c, co), n in
+                   delocalized.groupby(["city", "country"]).size()
+                   .sort_values(ascending=False).head(6).items()]
+
+    venues = {
+        "all_time": venue_rows(m),
+        "since_2015": venue_rows(m[m.year >= 2015]),
+        "delocalized_hosts": host_cities,
+    }
+
     return {
         "all_time": _record(m),
         "by_decade": by_decade,
         "by_year": by_year,
         "by_comp": by_comp,
+        "venues": venues,
         "biggest_wins": biggest_wins,
         "heaviest_losses": heaviest_losses,
         "top_opponents": opp[:8],
@@ -128,8 +153,7 @@ def history_stats(m):
 def run():
     df = load_results()
     m = team_matches(df, TEAM)
-    m["comp"] = m.tournament.map(classify_tournament)
-    out = m[["date", "opponent", "venue", "gf", "ga", "result",
+    out = m[["date", "opponent", "venue", "venue_class", "gf", "ga", "result",
              "tournament", "comp", "neutral", "city", "country"]].copy()
     out["date"] = out.date.dt.strftime("%Y-%m-%d")
     STAGING.mkdir(parents=True, exist_ok=True)

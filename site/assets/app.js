@@ -756,6 +756,43 @@ function renderLegendsTables() {
        <td>${m.opponent}</td><td class="num">${m.score}</td><td>${m.tournament}</td></tr>`).join("");
 }
 
+// ---------- venues ----------
+
+function renderVenues() {
+  const v = DATA.history.venues;
+  const classes = ["home_bf", "home_delocalized", "neutral", "away"];
+  const byClass = period => classes.map(c =>
+    (v[period].find(r => r.venue_class === c) || {}));
+  const all = byClass("all_time"), recent = byClass("since_2015");
+  const mk = (name, rows, color) => ({
+    name, type: "bar", data: rows.map(r => r.ppg ?? 0), barMaxWidth: 20,
+    itemStyle: { color, borderRadius: [4, 4, 0, 0] },
+    label: { show: true, position: "top", color: INK2, fontSize: 11,
+      formatter: p => fmt(p.value, 2) },
+  });
+  mkChart("c_venues", {
+    grid: { left: 8, right: 8, top: 24, bottom: 30, containLabel: true },
+    tooltip: tooltip({
+      trigger: "axis", axisPointer: { type: "shadow" },
+      formatter: params => {
+        const i = params[0].dataIndex;
+        const line = (label, r) => `${label}: ${fmt(r.ppg, 2)} pts/m — ${r.w}V-${r.d}N-${r.l}D (${r.pld} m)`;
+        return `<b>${t("vc_" + classes[i])}</b><br/>${line(t("venues_alltime"), all[i])}<br/>${line(t("venues_2015"), recent[i])}`;
+      },
+    }),
+    legend: legend(),
+    xAxis: axisX({ type: "category", data: classes.map(c => t("vc_" + c)) }),
+    yAxis: axisY({ type: "value" }),
+    series: [mk(t("venues_alltime"), all, S1), mk(t("venues_2015"), recent, S2)],
+  });
+  $("venues_note").textContent = t("venues_note", {
+    hosts: v.delocalized_hosts.map(h => `${h.city} (${h.n})`).join(", "),
+  });
+  tableView("card_venues", ["", "Pld", "V/W", "N/D", "D/L", "Pts/m", "BM/GF", "BE/GA"],
+    v.all_time.map(r => [t("vc_" + r.venue_class), r.pld, r.w, r.d, r.l,
+                         fmt(r.ppg, 2), r.gf, r.ga]));
+}
+
 // ---------- penalties & shootouts ----------
 
 function renderShootouts() {
@@ -979,6 +1016,7 @@ function renderAll() {
   renderLegendsTables();
   renderShootouts();
   renderPenalties();
+  renderVenues();
   renderEloChart();
   renderWinexpChart();
   renderProjChart();

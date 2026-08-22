@@ -699,6 +699,126 @@
    "win_pct": 46.1
   }
  },
+ "venues": {
+  "all_time": [
+   {
+    "venue_class": "home_bf",
+    "pld": 144,
+    "w": 79,
+    "d": 41,
+    "l": 24,
+    "gf": 241,
+    "ga": 140,
+    "win_pct": 54.9,
+    "ppg": 1.93
+   },
+   {
+    "venue_class": "home_delocalized",
+    "pld": 46,
+    "w": 24,
+    "d": 13,
+    "l": 9,
+    "gf": 86,
+    "ga": 53,
+    "win_pct": 52.2,
+    "ppg": 1.85
+   },
+   {
+    "venue_class": "neutral",
+    "pld": 94,
+    "w": 35,
+    "d": 18,
+    "l": 41,
+    "gf": 113,
+    "ga": 117,
+    "win_pct": 37.2,
+    "ppg": 1.31
+   },
+   {
+    "venue_class": "away",
+    "pld": 180,
+    "w": 26,
+    "d": 51,
+    "l": 103,
+    "gf": 140,
+    "ga": 307,
+    "win_pct": 14.4,
+    "ppg": 0.72
+   }
+  ],
+  "since_2015": [
+   {
+    "venue_class": "home_bf",
+    "pld": 18,
+    "w": 12,
+    "d": 6,
+    "l": 0,
+    "gf": 35,
+    "ga": 9,
+    "win_pct": 66.7,
+    "ppg": 2.33
+   },
+   {
+    "venue_class": "home_delocalized",
+    "pld": 25,
+    "w": 14,
+    "d": 7,
+    "l": 4,
+    "gf": 50,
+    "ga": 29,
+    "win_pct": 56.0,
+    "ppg": 1.96
+   },
+   {
+    "venue_class": "neutral",
+    "pld": 43,
+    "w": 26,
+    "d": 7,
+    "l": 10,
+    "gf": 63,
+    "ga": 30,
+    "win_pct": 60.5,
+    "ppg": 1.98
+   },
+   {
+    "venue_class": "away",
+    "pld": 43,
+    "w": 4,
+    "d": 17,
+    "l": 22,
+    "gf": 28,
+    "ga": 63,
+    "win_pct": 9.3,
+    "ppg": 0.67
+   }
+  ],
+  "delocalized_hosts": [
+   {
+    "city": "Marrakesh (Morocco)",
+    "n": 8
+   },
+   {
+    "city": "Accra (Ghana)",
+    "n": 3
+   },
+   {
+    "city": "Casablanca (Morocco)",
+    "n": 3
+   },
+   {
+    "city": "Bamako (Mali)",
+    "n": 3
+   },
+   {
+    "city": "El Jadida (Morocco)",
+    "n": 2
+   },
+   {
+    "city": "Monrovia (Liberia)",
+    "n": 2
+   }
+  ]
+ },
  "biggest_wins": [
   {
    "date": "2025-09-05",
