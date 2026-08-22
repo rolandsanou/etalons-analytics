@@ -23,7 +23,37 @@ const I18N = {
     c_goals: "Buteurs & passeurs", c_goals_sub: "Buts + passes décisives depuis janv. 2022",
     c_clubs: "Pays des clubs", c_clubs_sub: "Effectif actuel",
     c_leagues: "Type de championnat", c_leagues_sub: "Effectif actuel",
-    nav_tempo: "Temps forts", nav_imp: "Importance",
+    nav_tempo: "Temps forts", nav_imp: "Importance", nav_style: "Style de jeu",
+    s_style: "Style de jeu", s_style_lead: "Profil de jeu depuis janv. 2022, mesuré sur les {n} matchs dont les statistiques détaillées sont publiées (sur {tot}). Comparaison systématique avec les adversaires rencontrés — cela neutralise le niveau d'opposition. Descriptif, sans causalité.",
+    c_style_pct: "Profil en pourcentages", c_style_pct_sub: "Burkina Faso vs adversaires rencontrés · même échantillon de matchs",
+    c_style_vol: "Volume par match, indexé", c_style_vol_sub: "Adversaires rencontrés = 100 · au-dessus de 100 = les Étalons en font plus",
+    c_style_terc: "Le style change-t-il selon l'adversaire ?", c_style_terc_sub: "Matchs répartis en trois groupes selon l'Elo de l'adversaire avant match",
+    c_style_half: "Première vs seconde période", c_style_half_sub: "Moyennes par match sur le même échantillon",
+    ax_possession: "Possession", ax_pass_accuracy: "Passes réussies",
+    ax_shots_on_target_share: "Tirs cadrés (part)", ax_shots_inside_box_share: "Tirs dans la surface (part)",
+    ax_dribble_success: "Dribbles réussis", ax_aerial_win: "Duels aériens gagnés",
+    ax_ground_duel_win: "Duels au sol gagnés", ax_long_ball_share: "Jeu long (part des passes)",
+    ax_long_ball_accuracy: "Longs ballons réussis",
+    ax_shots_per_match: "Tirs", ax_passes_per_match: "Passes", ax_big_chances_per_match: "Grosses occasions",
+    ax_dribbles_per_match: "Dribbles tentés", ax_crosses_per_match: "Centres",
+    ax_corners_per_match: "Corners", ax_tackles_per_match: "Tacles",
+    ax_interceptions_per_match: "Interceptions", ax_clearances_per_match: "Dégagements",
+    ax_fouls_per_match: "Fautes", ax_recoveries_per_match: "Ballons récupérés",
+    terc_weak: "Les plus faibles", terc_mid: "Intermédiaires",
+    terc_strong: "Les plus forts",
+    half_first: "1re période", half_second: "2e période",
+    legend_bf: "Burkina Faso", legend_opp: "Adversaires rencontrés",
+    s_res: "Renverser une situation défavorable", s_res_lead: "Ce que devient un match quand les Étalons encaissent : profondeur du retard, délai de réaction, production selon la physionomie. Comptages bruts sur {n} matchs.",
+    c_deficit: "Échelle du retard", c_deficit_sub: "Bilan selon le retard maximal concédé dans le match",
+    def_never: "Jamais menés", def_1: "Menés d'un but", def_2: "Menés de 2 buts ou plus",
+    c_reply: "Délai de réaction après un but encaissé", c_reply_sub: "Sur les {n} buts encaissés · « jamais » = aucun but marqué ensuite dans le match",
+    rep_within_10: "Réponse ≤ 10 min", rep_11_20: "11–20 min", rep_21_plus: "21 min et +", rep_never: "Aucune réponse",
+    reply_median: "Délai médian de réponse : {v} min (sur {n} réponses).",
+    c_state_out: "Production selon la physionomie", c_state_out_sub: "Buts pour 90 minutes passées dans chaque état de score (minutes d'exposition dans l'infobulle)",
+    late_swing_note: "Buts après la 75e : {gained} match(s) améliorés, {lost} dégradés.",
+    c_clutch: "Joueurs décisifs", c_clutch_sub: "Buts classés par ce qu'ils changent · comptages bruts, sans indice",
+    h_open: "Ouverture", h_eq: "Égalisation", h_go: "But du break", h_late: "Après 75e",
+    h_trailing: "En étant menés", h_sub_goals: "Entré en jeu",
     s_tempo: "Temps forts, temps faibles", s_tempo_lead: "Quand les Étalons marquent et encaissent depuis janv. 2022, et ce que devient un match selon qui ouvre le score. Comptages bruts — {n} matchs.",
     c_bins: "Buts par période de jeu", c_bins_sub: "Segments clairs = part inscrite dans les arrêts de jeu (45+ / 90+) · Prol. à part",
     c_gamestate: "Physionomie des matchs", c_gamestate_sub: "Minutes passées en tête, à égalité, menés — et l'impact du premier but",
@@ -136,6 +166,10 @@ const I18N = {
       <p>Chronologie reconstruite match par match à partir des incidents (arrêts de jeu inclus ; prolongations détectées, y compris via la présence d'une séance de tirs au but). Les buts sont classés en 6 périodes de 15 minutes — ceux du temps additionnel restent dans 31–45+ / 76–90+, leur part est affichée séparément ; la prolongation est comptée à part. Une période n'est déclarée atypique que si le χ² sur les 6 périodes réglementaires est significatif (p &lt; 0,05). Les minutes en tête / à égalité / menés découlent de la même chronologie.</p>
       <h3>Importance des joueurs</h3>
       <p>Pas d'indice composite. Chaque composante est affichée séparément, avec son seuil : part des minutes (fenêtre = depuis la première convocation du joueur) ; on/off ±/90 (≥ 900 min sur le terrain ET ≥ 450 min hors terrain en étant dans le groupe) ; points par match titulaire vs remplaçant (≥ 10 titularisations ET ≥ 8 matchs dans le groupe sans titularisation) ; buts+passes /90 (≥ 450 min) ; note pondérée par les minutes (≥ 5 matchs notés ET ≥ 300 min). Rôles : Pilier ≥ 60 % des minutes ET ≥ 66 % de titularisations ; Rotation ≥ 25 % ; sinon Marge. Percentiles calculés parmi les seuls joueurs qualifiés pour chaque composante. Lecture descriptive, jamais causale.</p>
+      <h3>Style de jeu</h3>
+      <p>Statistiques d'équipe match par match (possession, grosses occasions, tirs, passes, duels, dribbles…). Toutes les moyennes sont calculées sur les seuls matchs dont le flux détaillé inclut les passes — les rencontres au flux réduit (possession et tirs seulement) sont exclues plutôt que de fausser le dénominateur. Un axe n'est affiché qu'au-delà de 75 % de couverture sur cet échantillon, et toujours en regard des adversaires réellement rencontrés : cela neutralise le niveau d'opposition. Les ratios sont agrégés (somme/somme), jamais des moyennes de pourcentages. Le volume par match est indexé (adversaires = 100) pour comparer des grandeurs d'échelles différentes sur un seul axe. Terciles construits sur l'Elo de l'adversaire avant match. Les xG ne sont pas exploitables sur les matchs CAF (valeurs nulles à la source) et sont donc absents.</p>
+      <h3>Renverser une situation défavorable</h3>
+      <p>Chaque but est classé par ce qu'il change pour l'équipe qui le marque : ouverture, égalisation, but du break, but d'écart supplémentaire, but d'honneur (les csc sont attribués au camp bénéficiaire). L'échelle du retard compare les matchs selon le retard maximal concédé. Le délai de réaction mesure l'écart, en minutes de jeu réelles (arrêts de jeu compris), entre un but encaissé et le but burkinabè suivant dans le même match. La production par état de score est normalisée par les minutes réellement passées dans cet état, pas par match. Le « swing » tardif compare les points qu'aurait donnés le score à la 75e à ceux du score final.</p>
       <h3>Impact du banc</h3>
       <p>Buts + passes en sortie de banc en valeurs brutes ; /90 uniquement à partir de 5 entrées et 150 minutes ; différence de buts après entrée (≥ 8 entrées) à comparer à la référence de l'équipe après la 60e minute, affichée à côté.</p>
       <h3>Limites connues</h3>
@@ -165,7 +199,36 @@ const I18N = {
     c_goals: "Scorers & creators", c_goals_sub: "Goals + assists since Jan 2022",
     c_clubs: "Club countries", c_clubs_sub: "Current squad",
     c_leagues: "League type", c_leagues_sub: "Current squad",
-    nav_tempo: "Timing", nav_imp: "Importance",
+    nav_tempo: "Timing", nav_imp: "Importance", nav_style: "Style",
+    s_style: "Playing style", s_style_lead: "Style profile since Jan 2022, measured on the {n} matches with detailed statistics published (of {tot}). Always compared with the opponents actually faced — that neutralizes the level of opposition. Descriptive, not causal.",
+    c_style_pct: "Percentage profile", c_style_pct_sub: "Burkina Faso vs opponents faced · same match sample",
+    c_style_vol: "Per-match volume, indexed", c_style_vol_sub: "Opponents faced = 100 · above 100 means the Étalons do more of it",
+    c_style_terc: "Does the style change with the opponent?", c_style_terc_sub: "Matches split into three groups by the opponent's pre-match Elo",
+    c_style_half: "First half vs second", c_style_half_sub: "Per-match averages on the same sample",
+    ax_possession: "Possession", ax_pass_accuracy: "Pass accuracy",
+    ax_shots_on_target_share: "Shots on target (share)", ax_shots_inside_box_share: "Shots inside box (share)",
+    ax_dribble_success: "Dribble success", ax_aerial_win: "Aerial duels won",
+    ax_ground_duel_win: "Ground duels won", ax_long_ball_share: "Long balls (share of passes)",
+    ax_long_ball_accuracy: "Long-ball accuracy",
+    ax_shots_per_match: "Shots", ax_passes_per_match: "Passes", ax_big_chances_per_match: "Big chances",
+    ax_dribbles_per_match: "Dribbles attempted", ax_crosses_per_match: "Crosses",
+    ax_corners_per_match: "Corners", ax_tackles_per_match: "Tackles",
+    ax_interceptions_per_match: "Interceptions", ax_clearances_per_match: "Clearances",
+    ax_fouls_per_match: "Fouls", ax_recoveries_per_match: "Recoveries",
+    terc_weak: "Weakest", terc_mid: "Mid-tier", terc_strong: "Strongest",
+    half_first: "1st half", half_second: "2nd half",
+    legend_bf: "Burkina Faso", legend_opp: "Opponents faced",
+    s_res: "Turning around a losing position", s_res_lead: "What happens once the Étalons concede: how deep the deficit goes, how fast they respond, what they produce in each game state. Raw counts over {n} matches.",
+    c_deficit: "Deficit ladder", c_deficit_sub: "Record by the deepest deficit faced in the match",
+    def_never: "Never trailed", def_1: "Trailed by one", def_2: "Trailed by two or more",
+    c_reply: "Response time after conceding", c_reply_sub: "Across {n} goals conceded · \"none\" = no goal scored afterwards in that match",
+    rep_within_10: "Reply ≤ 10 min", rep_11_20: "11–20 min", rep_21_plus: "21 min or more", rep_never: "No reply",
+    reply_median: "Median response time: {v} min (over {n} replies).",
+    c_state_out: "Output by game state", c_state_out_sub: "Goals per 90 minutes spent in each score state (exposure minutes in the tooltip)",
+    late_swing_note: "Goals after 75': {gained} match(es) improved, {lost} worsened.",
+    c_clutch: "Decisive players", c_clutch_sub: "Goals classified by what they changed · raw counts, no index",
+    h_open: "Opener", h_eq: "Equalizer", h_go: "Go-ahead", h_late: "After 75'",
+    h_trailing: "While trailing", h_sub_goals: "As a sub",
     s_tempo: "Strong and weak periods", s_tempo_lead: "When the Étalons score and concede since Jan 2022, and what a match becomes depending on who scores first. Raw counts — {n} matches.",
     c_bins: "Goals by period of play", c_bins_sub: "Lighter caps = share scored in stoppage time (45+ / 90+) · ET counted apart",
     c_gamestate: "Game states", c_gamestate_sub: "Minutes spent leading, level, trailing — and what the first goal does",
@@ -278,6 +341,10 @@ const I18N = {
       <p>A per-match timeline is rebuilt from incident data (stoppage time included; extra time detected, including via the presence of a shootout). Goals fall into six 15-minute periods — stoppage-time goals stay in 31–45+ / 76–90+ with their share shown separately; extra time is counted apart. A period is flagged as unusual only when the χ² across the six regulation periods is significant (p &lt; 0.05). Minutes leading / level / trailing come from the same timeline.</p>
       <h3>Player importance</h3>
       <p>No composite index. Each component is shown separately with its own gate: minutes share (window = since the player's first call-up); on/off goal difference per 90 (≥ 900 min on pitch AND ≥ 450 min off pitch while in the squad); points per game started vs not started (≥ 10 starts AND ≥ 8 squad matches without starting); goals+assists per 90 (≥ 450 min); minutes-weighted rating (≥ 5 rated matches AND ≥ 300 min). Roles: Pillar ≥ 60% of minutes AND ≥ 66% of squad matches started; Rotation ≥ 25%; otherwise Fringe. Percentiles are computed only among players qualified for each component. Descriptive reading only, never causal.</p>
+      <h3>Playing style</h3>
+      <p>Per-match team statistics (possession, big chances, shots, passes, duels, dribbles…). Every average is computed only over matches whose detailed feed includes passing data — matches with a reduced feed (possession and shots only) are excluded rather than allowed to distort the denominator. An axis is shown only above 75% coverage of that sample, and always beside the opponents actually faced, which neutralizes the level of opposition. Ratios are pooled (sum/sum), never averages of percentages. Per-match volume is indexed (opponents = 100) so measures of different scale share one axis. Terciles are built on the opponent's pre-match Elo. xG is unusable on CAF matches (null at source) and is therefore absent.</p>
+      <h3>Turning around a losing position</h3>
+      <p>Every goal is classified by what it changed for the scoring side: opener, equalizer, go-ahead, extender, consolation (own goals are attributed to the benefiting side). The deficit ladder groups matches by the deepest deficit conceded. Response time measures the gap, in real playing minutes (stoppage included), between a goal conceded and Burkina Faso's next goal in the same match. Output by game state is normalized by the minutes actually spent in that state, not per match. The late swing compares the points the score at 75' would have yielded with the final result.</p>
       <h3>Bench impact</h3>
       <p>Goals + assists off the bench are raw counts; per-90 only with ≥ 5 sub appearances and ≥ 150 minutes; goal difference after entry (≥ 8 sub apps) should be read against the team's own post-60' baseline, shown alongside.</p>
       <h3>Known limitations</h3>
