@@ -92,6 +92,7 @@ const POOL_COLS = [
   { key: "league_v", label: "h_league", numFmt: null },
   { key: "market_value_eur", label: "h_mv", numFmt: null },
   { key: "club_minutes_season", label: "h_club_min", numFmt: null },
+  { key: "club_minutes_prev", label: "h_club_min_prev", numFmt: null },
 ];
 let poolSort = { key: "minutes", dir: -1 };
 
@@ -115,16 +116,22 @@ function renderPoolTable() {
     if (c.key === "club_v") { return `<td>${clubCell(p)}</td>`; }
     if (c.key === "league_v") { return `<td>${p.league_v || "–"}</td>`; }
     if (c.key === "market_value_eur") { return `<td class="num">${mvCell(p.market_value_eur)}</td>`; }
-    if (c.key === "club_minutes_season") {
-      const v = p.club_minutes_season;
-      if (v === "" || v === undefined) { return `<td class="num">–</td>`; }
-      const title = p.club_season ? ` title="${p.club_season} · ${p.club_form_as_of}"` : "";
-      // Club leagues restart on different dates, so this column holds several
-      // seasons at once — a complete campaign next to a fortnight of a new one.
-      // Naming the season in the cell keeps the two from reading as comparable.
-      const yr = p.club_season_year
-        ? ` <span class="season">${p.club_season_year}</span>` : "";
-      return `<td class="num"${title}>${fmt(v)}${yr}</td>`;
+    // Club minutes, latest season and the one before it. Leagues restart on
+    // different dates, so the latest-season column holds a complete campaign for
+    // one player and a fortnight for the next; each figure names its own season,
+    // and the previous column is the settled baseline to read it against.
+    if (c.key === "club_minutes_season" || c.key === "club_minutes_prev") {
+      const isPrev = c.key === "club_minutes_prev";
+      const v = isPrev ? p.club_minutes_prev : p.club_minutes_season;
+      if (v === "" || v === undefined || v === null) { return `<td class="num">–</td>`; }
+      const yr = isPrev ? p.club_prev_season_year : p.club_season_year;
+      const label = yr ? ` <span class="season">${yr}</span>` : "";
+      // the baseline can sit in a different league from the current season, so
+      // each column names its own competition
+      const comp = isPrev ? p.club_prev_tournament : p.club_tournament;
+      const named = [comp, yr].filter(Boolean).join(" ");
+      const title = named ? ` title="${named} · ${p.club_form_as_of}"` : "";
+      return `<td class="num"${title}>${fmt(v)}${label}</td>`;
     }
     if (c.key === "dribbles_won") {
       const won = num(p.dribbles_won), att = num(p.dribbles_attempted);
