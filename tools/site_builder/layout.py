@@ -130,12 +130,17 @@ def page(ctx, *, title, description, body, needs=(), scripts=(), page_class="",
     title_tag = full_title or seo.TITLES.get(ctx.route, {}).get(ctx.lang) \
         or f"{title} — {SITE_NAME}"
     image = seo.absolute(og_image or f"assets/og-{ctx.lang}.png")
+    # the branded card is a known 1200x630; a portrait's dimensions vary, so they
+    # are only declared when they are actually known
+    dims = "" if og_image else f"""
+<meta property="og:image:width" content="{seo.CARD_W}">
+<meta property="og:image:height" content="{seo.CARD_H}">"""
     robots = ('<meta name="robots" content="noindex, follow">' if noindex
               else '<meta name="robots" content="index, follow, '
                    'max-image-preview:large">')
     social = f"""<meta property="og:site_name" content="{SITE_NAME}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{image}">
+<meta property="og:image" content="{image}">{dims}
 <meta property="og:image:alt" content="{esc(title_tag)}">
 <meta name="twitter:card" content="{og_card}">
 <meta name="twitter:title" content="{esc(title_tag)}">
@@ -172,6 +177,8 @@ def page(ctx, *, title, description, body, needs=(), scripts=(), page_class="",
 {social}
 {hreflang}
 {seo.jsonld(*structured)}
+<meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 <script>/* set the remembered theme before first paint, so an explicit dark choice
    never flashes light. No stored choice: prefers-color-scheme decides in CSS.

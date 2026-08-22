@@ -9,6 +9,9 @@ it sits on — structured data that overstates the content is worse than none.
 import json
 
 SITE_URL = "https://rolandsanou.github.io/etalons-analytics"
+
+# social card size, matching tools/make_og_image.py
+CARD_W, CARD_H = 1200, 630
 TEAM_NAME = "Burkina Faso national football team"
 TEAM_NAME_FR = "Équipe du Burkina Faso de football"
 REPO_URL = "https://github.com/rolandsanou/etalons-analytics"
