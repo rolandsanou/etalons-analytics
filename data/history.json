@@ -1495,21 +1495,40 @@
  },
  "coaches": [
   {
+   "coach": "Amir Abdou",
+   "tenure_start": "2026-01-07",
+   "first_match": "2026-03-28",
+   "last_match": "2026-06-09",
+   "matches": 4,
+   "w": 1,
+   "d": 2,
+   "l": 1,
+   "ppg": 1.25,
+   "gf_pm": 2.0,
+   "ga_pm": 1.5,
+   "elo_first": 1664.8,
+   "elo_last": 1651.6,
+   "elo_delta": -13.0,
+   "pooled": 0,
+   "current": 1
+  },
+  {
    "coach": "Brama Traoré",
    "tenure_start": "2024-01-01",
    "first_match": "2024-01-05",
-   "last_match": "2025-12-31",
-   "matches": 32,
+   "last_match": "2026-01-06",
+   "matches": 33,
    "w": 17,
    "d": 5,
-   "l": 10,
-   "ppg": 1.75,
-   "gf_pm": 1.69,
-   "ga_pm": 1.06,
+   "l": 11,
+   "ppg": 1.7,
+   "gf_pm": 1.64,
+   "ga_pm": 1.12,
    "elo_first": 1671.8,
-   "elo_last": 1698.9,
-   "elo_delta": 27.0,
-   "pooled": 0
+   "elo_last": 1661.3,
+   "elo_delta": -10.0,
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Hubert Velud",
@@ -1526,7 +1545,8 @@
    "elo_first": 1679.6,
    "elo_last": 1674.5,
    "elo_delta": -5.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Kamou Malo",
@@ -1543,7 +1563,8 @@
    "elo_first": 1633.8,
    "elo_last": 1669.3,
    "elo_delta": 36.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Paulo Duarte",
@@ -1560,7 +1581,8 @@
    "elo_first": 1639.7,
    "elo_last": 1626.0,
    "elo_delta": -14.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Paul Put",
@@ -1577,7 +1599,8 @@
    "elo_first": 1637.6,
    "elo_last": 1636.4,
    "elo_delta": -1.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Paulo Duarte",
@@ -1594,7 +1617,8 @@
    "elo_first": 1426.3,
    "elo_last": 1634.1,
    "elo_delta": 208.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Ivica Todorov",
@@ -1611,7 +1635,8 @@
    "elo_first": 1560.5,
    "elo_last": 1496.4,
    "elo_delta": -64.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Jean-Paul Rabier",
@@ -1628,7 +1653,8 @@
    "elo_first": 1504.9,
    "elo_last": 1553.1,
    "elo_delta": 48.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Oscar Fulloné",
@@ -1645,7 +1671,8 @@
    "elo_first": 1535.7,
    "elo_last": 1512.7,
    "elo_delta": -23.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Sidiki Diarra",
@@ -1662,7 +1689,8 @@
    "elo_first": 1526.6,
    "elo_last": 1532.7,
    "elo_delta": 6.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Didier Notheaux",
@@ -1679,7 +1707,8 @@
    "elo_first": 1434.5,
    "elo_last": 1527.7,
    "elo_delta": 93.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Philippe Troussier",
@@ -1696,7 +1725,8 @@
    "elo_first": 1448.4,
    "elo_last": 1424.2,
    "elo_delta": -24.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Ivan Vutov",
@@ -1713,7 +1743,8 @@
    "elo_first": 1520.1,
    "elo_last": 1487.5,
    "elo_delta": -33.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Idrissa Traoré",
@@ -1730,7 +1761,8 @@
    "elo_first": 1532.7,
    "elo_last": 1538.2,
    "elo_delta": 6.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Heinz-Peter Überjahn",
@@ -1747,7 +1779,8 @@
    "elo_first": 1415.2,
    "elo_last": 1515.8,
    "elo_delta": 101.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "Otto Pfister",
@@ -1764,24 +1797,26 @@
    "elo_first": 1374.5,
    "elo_last": 1405.3,
    "elo_delta": 31.0,
-   "pooled": 0
+   "pooled": 0,
+   "current": 0
   },
   {
    "coach": "others",
    "tenure_start": "",
    "first_match": "2005-02-09",
-   "last_match": "2026-06-09",
-   "matches": 26,
-   "w": 5,
-   "d": 7,
-   "l": 14,
-   "ppg": 0.85,
-   "gf_pm": 1.0,
-   "ga_pm": 1.54,
+   "last_match": "2007-09-08",
+   "matches": 21,
+   "w": 4,
+   "d": 5,
+   "l": 12,
+   "ppg": 0.81,
+   "gf_pm": 0.86,
+   "ga_pm": 1.48,
    "elo_first": 1485.6,
-   "elo_last": 1651.6,
-   "elo_delta": 166.0,
-   "pooled": 1
+   "elo_last": 1437.2,
+   "elo_delta": -48.0,
+   "pooled": 1,
+   "current": 0
   }
  ]
 }

@@ -1012,12 +1012,18 @@ function renderCoaches() {
     <th class="num">Pld</th><th class="num">V-N-D</th><th class="num">Pts/m</th>
     <th class="num">BM/m</th><th class="num">BE/m</th><th class="num">${t("h_elo_delta")}</th></tr>` +
     rows.map(r => {
-      const name = r.pooled ? t("coaches_pooled") : r.coach;
+      const small = !r.pooled && r.matches < 10;
+      const name = r.pooled ? t("coaches_pooled")
+        : r.coach + (r.current ? ` <span class="pill st active">${t("coach_current")}</span>` : "");
       const style = r.pooled ? ' style="color:var(--muted)"' : "";
       const delta = r.elo_delta === "" || r.pooled ? "–" : signed(r.elo_delta, 0);
+      const span = r.first_match.slice(0, 4) === r.last_match.slice(0, 4)
+        ? r.first_match.slice(0, 4)
+        : `${r.first_match.slice(0, 4)}–${r.last_match.slice(0, 4)}`;
+      const note = small ? ` <span class="pill">${t("small_sample")}</span>` : "";
       return `<tr${style}><td>${name}</td>
-        <td>${r.first_match.slice(0, 4)}–${r.last_match.slice(0, 4)}</td>
-        <td class="num">${r.matches}</td><td class="num">${r.w}-${r.d}-${r.l}</td>
+        <td>${span}${r.current ? "–" : ""}</td>
+        <td class="num">${r.matches}${note}</td><td class="num">${r.w}-${r.d}-${r.l}</td>
         <td class="num">${fmt(r.ppg, 2)}</td><td class="num">${fmt(r.gf_pm, 2)}</td>
         <td class="num">${fmt(r.ga_pm, 2)}</td><td class="num">${delta}</td></tr>`;
     }).join("");
