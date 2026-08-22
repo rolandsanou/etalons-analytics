@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap');
-
 /* =============================================================================
    Étalons Analytics — design system
    -----------------------------------------------------------------------------
@@ -46,16 +44,17 @@
   --hair: #e5e2db;    /* panel borders, hairline gaps, chart gridlines */
   --rule: #cfcac0;    /* table head underline, axis baselines, bar tracks */
   --row: rgba(27, 26, 23, 0.075);
+  --bar-track: #ddd9d0;
+
+  /* aliases kept for the older token names, in case a generated inline style
+     still reaches for one */
   --border: var(--hair);
   --grid: var(--hair);
   --baseline: var(--rule);
-  --bar-track: #ddd9d0;
 
   /* --- accent & semantics ----------------------------------------------- */
   --red: #c0142b;         /* Étalon red — the one accent */
-  --red-soft: rgba(192, 20, 43, 0.10);
-  --green: #0e8a5f;
-  --gold: #d6a00a;
+  --red-soft: rgba(192, 20, 43, 0.15);
   --focus: #1a5fd0;
 
   --good-bg: #e8f3ec;  --good-tx: #0c6b45;  --good-bd: rgba(14, 138, 95, 0.26);
@@ -103,7 +102,6 @@ body {
   font-family: var(--sans);
   font-size: 14px;
   line-height: 1.55;
-  font-synthesis-weight: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -119,7 +117,7 @@ a { color: inherit; }
   border-radius: 2px;
 }
 
-::selection { background: rgba(192, 20, 43, 0.16); }
+::selection { background: var(--red-soft); }
 
 img { max-width: 100%; }
 

@@ -88,6 +88,9 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
 <link rel="stylesheet" href="{asset(up, "assets/style.css")}">
 <link rel="stylesheet" href="{asset(up, "assets/pages.css")}">
 </head>
