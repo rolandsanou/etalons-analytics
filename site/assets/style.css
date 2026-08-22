@@ -74,6 +74,12 @@
   --bf-green: #009e49;
   --bf-gold: #fcd116;
 
+  /* --- chrome & chart-facing tokens ------------------------------------- */
+  --masthead: #1b1a17;
+  --masthead-ink: #ffffff;
+  --chart-border: rgba(27, 26, 23, 0.10);
+  --on-fill: #ffffff;   /* text drawn inside a saturated chart fill */
+
   /* --- metrics ---------------------------------------------------------- */
   --wrap: 1200px;
   --gut: clamp(16px, 3.2vw, 30px);
@@ -148,9 +154,9 @@ header.top {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #1b1a17;
+  background: var(--masthead);
   border-top: 3px solid var(--red);
-  color: #fff;
+  color: var(--masthead-ink);
 }
 
 .top-inner {
@@ -936,4 +942,118 @@ footer a:hover { color: var(--ink); text-decoration-color: var(--red); }
   main section { break-before: auto; }
   .tablewrap, .tablewrap.pool { overflow: visible; max-height: none; }
   th, td { white-space: normal; }
+}
+
+/* =============================================================================
+   dark theme
+   -----------------------------------------------------------------------------
+   The same token contract, re-valued for a dark ground: ink and paper swap
+   roles, hairlines lighten, and the chart series brighten so they clear 3:1 on
+   the dark panel. core.js reads these same custom properties at render time, so
+   every chart repaints from here — nothing about the palette lives in JS.
+
+   Two selectors, deliberately: the media query follows the operating system
+   (guarded so an explicit light choice still wins), the attribute selector
+   follows the in-page toggle. Keep the two blocks in sync.
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --paper: #161513;
+    --surface: #201f1c;
+    --inset: #262521;
+    --tint: #2a2925;
+    --neutral-bg: #2b2a26;
+
+    --ink: #f3f1ec;
+    --ink-2: #bdb9b1;
+    --muted: #98938a;
+
+    --hair: #332f2a;
+    --rule: #47423b;
+    --row: rgba(255, 255, 255, 0.055);
+    --bar-track: #3b3730;
+
+    --red: #f2617a;
+    --red-soft: rgba(242, 97, 122, 0.18);
+    --focus: #7ab0e6;
+
+    --good-bg: rgba(53, 185, 138, 0.16);  --good-tx: #6fd8ad;
+    --good-bd: rgba(53, 185, 138, 0.34);
+    --bad-bg: rgba(242, 97, 122, 0.16);   --bad-tx: #ff93a3;
+    --bad-bd: rgba(242, 97, 122, 0.34);
+    --warn-bg: rgba(224, 171, 58, 0.16);  --warn-tx: #e8c46e;
+    --warn-bd: rgba(224, 171, 58, 0.32);
+    --info-bg: rgba(107, 163, 221, 0.16); --info-tx: #9cc4ea;
+    --info-bd: rgba(107, 163, 221, 0.32);
+
+    --s1: #f2617a;
+    --s2: #6ba3dd;
+    --s3: #35b98a;
+    --s4: #e0ab3a;
+    --s5: #b58ac0;
+
+    --masthead: #100f0e;
+    --masthead-ink: #f3f1ec;
+    --chart-border: rgba(255, 255, 255, 0.13);
+    --on-fill: #14130f;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #161513;
+  --surface: #201f1c;
+  --inset: #262521;
+  --tint: #2a2925;
+  --neutral-bg: #2b2a26;
+
+  --ink: #f3f1ec;
+  --ink-2: #bdb9b1;
+  --muted: #98938a;
+
+  --hair: #332f2a;
+  --rule: #47423b;
+  --row: rgba(255, 255, 255, 0.055);
+  --bar-track: #3b3730;
+
+  --red: #f2617a;
+  --red-soft: rgba(242, 97, 122, 0.18);
+  --focus: #7ab0e6;
+
+  --good-bg: rgba(53, 185, 138, 0.16);  --good-tx: #6fd8ad;
+  --good-bd: rgba(53, 185, 138, 0.34);
+  --bad-bg: rgba(242, 97, 122, 0.16);   --bad-tx: #ff93a3;
+  --bad-bd: rgba(242, 97, 122, 0.34);
+  --warn-bg: rgba(224, 171, 58, 0.16);  --warn-tx: #e8c46e;
+  --warn-bd: rgba(224, 171, 58, 0.32);
+  --info-bg: rgba(107, 163, 221, 0.16); --info-tx: #9cc4ea;
+  --info-bd: rgba(107, 163, 221, 0.32);
+
+  --s1: #f2617a;
+  --s2: #6ba3dd;
+  --s3: #35b98a;
+  --s4: #e0ab3a;
+  --s5: #b58ac0;
+
+  --masthead: #100f0e;
+  --masthead-ink: #f3f1ec;
+  --chart-border: rgba(255, 255, 255, 0.13);
+  --on-fill: #14130f;
+}
+
+/* photographs and the flag-free avatars sit a touch calmer on a dark ground */
+:root[data-theme="dark"] .entity .photo,
+:root[data-theme="dark"] .pcard .pic {
+  filter: brightness(0.94) saturate(0.96);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .entity .photo,
+  :root:not([data-theme="light"]) .pcard .pic {
+    filter: brightness(0.94) saturate(0.96);
+  }
 }

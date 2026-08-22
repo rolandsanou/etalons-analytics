@@ -632,6 +632,36 @@ main > section#methodo code {
 
 .credits a { color: var(--ink-2); text-underline-offset: 2px; }
 
+
+/* --- theme toggle, sits beside the language switch in the masthead ------- */
+
+button.theme {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: var(--masthead-ink);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+button.theme:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+button.theme:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* the glyph is drawn from the label so it stays in sync with aria-pressed */
+button.theme span::before { content: "D1"; font-size: 13px; }
+
 /* =============================================================================
    motion
    -----------------------------------------------------------------------------

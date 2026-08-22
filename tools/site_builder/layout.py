@@ -88,6 +88,11 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<script>/* set the remembered theme before first paint, so an explicit dark choice
+   never flashes light. No stored choice: prefers-color-scheme decides in CSS.
+   Braces are doubled because this block sits inside a Python f-string. */
+try{{var _t=localStorage.getItem("ea_theme");if(_t==="dark"||_t==="light")
+document.documentElement.setAttribute("data-theme",_t);}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
@@ -104,6 +109,8 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
       <button data-lang="fr">FR</button>
       <button data-lang="en">EN</button>
     </div>
+    <button class="theme" id="theme_toggle" type="button"
+            aria-pressed="false"><span aria-hidden="true"></span></button>
   </div>
 </header>
 

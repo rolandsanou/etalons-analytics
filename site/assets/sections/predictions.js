@@ -9,7 +9,7 @@ function renderPredictions() {
     data: rows.map(r => Math.round(100 * r[key])),
     barMaxWidth: 15,
     itemStyle: { color, borderColor: SURFACE, borderWidth: 1, borderRadius: radius || 0 },
-    label: { show: true, color: key === "draw" ? INK2 : "#fff", fontSize: 10.5,
+    label: { show: true, color: key === "draw" ? INK2 : ON_FILL, fontSize: 10.5,
       formatter: q => (q.value >= 8 ? q.value + " %" : "") },
   });
   mkChart("c_pred", {

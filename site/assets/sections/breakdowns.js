@@ -69,9 +69,9 @@ function renderFormsChart() {
     yAxis: axisY({ type: "category", inverse: true, splitLine: { show: false },
       data: cats, axisLabel: { color: INK2, fontSize: 12 } }),
     series: [
-      seg(t("legend_w"), "w", ST_GOOD, "#fff"),
+      seg(t("legend_w"), "w", ST_GOOD, ON_FILL),
       seg(t("legend_d"), "d", BASELINE, INK2),
-      seg(t("legend_l"), "l", ST_CRIT, "#fff", [0, 4, 4, 0]),
+      seg(t("legend_l"), "l", ST_CRIT, ON_FILL, [0, 4, 4, 0]),
     ],
   });
   tableView("card_forms",

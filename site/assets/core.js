@@ -1,10 +1,37 @@
-const S1 = "#c0142b", S2 = "#2e6da4", S3 = "#0e8a5f", S4 = "#d6a00a", S5 = "#7b4e7f";
-const INK = "#1b1a17", INK2 = "#55534d", MUTED = "#6e6b64";
-const GRID = "#e5e2db", BASELINE = "#cfcac0", SURFACE = "#ffffff", NEUTRAL = "#f0ede7";
+// Chart colours are read from the CSS custom properties rather than hardcoded,
+// so a theme switch repaints every chart from the same tokens the page uses.
+// They stay mutable globals because every section file references them directly.
+let S1, S2, S3, S4, S5, INK, INK2, MUTED, GRID, BASELINE, SURFACE, NEUTRAL;
+let ST_GOOD, ST_CRIT, CHART_LINE, ON_FILL;
+
+function readThemeTokens() {
+  const cs = getComputedStyle(document.documentElement);
+  const token = (name, fallback) => cs.getPropertyValue(name).trim() || fallback;
+  S1 = token("--s1", "#c0142b");
+  S2 = token("--s2", "#2e6da4");
+  S3 = token("--s3", "#0e8a5f");
+  S4 = token("--s4", "#d6a00a");
+  S5 = token("--s5", "#7b4e7f");
+  INK = token("--ink", "#1b1a17");
+  INK2 = token("--ink-2", "#55534d");
+  MUTED = token("--muted", "#6e6b64");
+  GRID = token("--hair", "#e5e2db");
+  BASELINE = token("--rule", "#cfcac0");
+  SURFACE = token("--surface", "#ffffff");
+  NEUTRAL = token("--neutral-bg", "#f0ede7");
+  ST_GOOD = token("--s3", "#0e8a5f");
+  ST_CRIT = token("--s1", "#c0142b");
+  CHART_LINE = token("--chart-border", "rgba(27,26,23,0.10)");
+  // text drawn inside a coloured fill needs to stay legible in both themes
+  ON_FILL = token("--on-fill", "#ffffff");
+  LEAGUE_COLOR = { top5: S1, europe_other: S2, africa: S3, home: S4,
+                   world_other: S5 };
+}
+
 const POS_ORDER = ["GK", "DF", "MF", "FW"];
 const PEAK = { GK: [26, 33], DF: [25, 30], MF: [24, 29], FW: [24, 29] };
 const LEAGUE_ORDER = ["top5", "europe_other", "africa", "home", "world_other"];
-const LEAGUE_COLOR = { top5: S1, europe_other: S2, africa: S3, home: S4, world_other: S5 };
+let LEAGUE_COLOR = {};
 
 let DATA = null;
 const CHARTS = [];
@@ -33,7 +60,7 @@ function axisY(extra) {
 function tooltip(extra) {
   return Object.assign({
     backgroundColor: SURFACE,
-    borderColor: "rgba(11,11,11,0.10)",
+    borderColor: CHART_LINE,
     borderWidth: 1,
     textStyle: { color: INK, fontSize: 12 },
     confine: true,
@@ -82,8 +109,6 @@ function searchKey(text) {
 
 // --- shared across sections (kept here so every page has them) ---
 
-// status colours, tuned to the same palette as the categorical series above
-const ST_GOOD = "#0e8a5f", ST_CRIT = "#c0142b";
 
 function signed(v, dec = 2) {
   if (v === "" || v === null || v === undefined) { return "–"; }
