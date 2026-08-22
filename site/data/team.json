@@ -4382,6 +4382,47 @@
    }
   ]
  },
+ "stability": [
+  {
+   "coach": "Amir Abdou",
+   "first_match": "2026-03-28",
+   "last_match": "2026-06-09",
+   "matches": 4,
+   "matches_with_xi": 1,
+   "players_used": 17,
+   "avg_changes": "",
+   "churn_pct": "",
+   "top11_share": "",
+   "unique_xis": 1,
+   "gated": 0
+  },
+  {
+   "coach": "Brama Traoré",
+   "first_match": "2024-01-05",
+   "last_match": "2026-01-06",
+   "matches": 29,
+   "matches_with_xi": 23,
+   "players_used": 48,
+   "avg_changes": 4.37,
+   "churn_pct": 39.7,
+   "top11_share": 58.0,
+   "unique_xis": 23,
+   "gated": 1
+  },
+  {
+   "coach": "Hubert Velud",
+   "first_match": "2022-01-09",
+   "last_match": "2023-11-21",
+   "matches": 21,
+   "matches_with_xi": 15,
+   "players_used": 36,
+   "avg_changes": 3.55,
+   "churn_pct": 32.2,
+   "top11_share": 69.4,
+   "unique_xis": 15,
+   "gated": 1
+  }
+ ],
  "resilience": {
   "metrics": [
    {

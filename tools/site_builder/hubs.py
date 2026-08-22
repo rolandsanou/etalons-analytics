@@ -5,6 +5,13 @@ section scripts; the generator only emits the shell and the static parts."""
 from .detail import POS_LABEL, POS_ORDER, match_slug, _fmt, _int, _num
 from .layout import avatar, card, esc, hero, page, section
 
+
+def search_key(text):
+    """Accent-stripped key so "traore" finds "Traoré"."""
+    import unicodedata
+    s = unicodedata.normalize('NFD', str(text))
+    return ''.join(c for c in s if not unicodedata.combining(c)).lower()
+
 CAMPAIGNS = [
     ("CAN 2025", "2025-12-01", "2026-01-31"),
     ("Éliminatoires CM 2026 & amicaux 2025", "2025-02-01", "2025-11-30"),
@@ -128,23 +135,50 @@ def players_index(d):
     blocks = []
     for pos in order:
         entries = sorted(groups[pos], key=lambda p: -_int(p["minutes"]))
-        cards_html = "".join(f"""<a class="pcard" href="joueurs/{esc(p['player_id'])}.html">
+        cards_html = "".join(f"""<a class="pcard" href="joueurs/{esc(p['player_id'])}.html"
+   data-name="{esc(search_key(p['name']))}" data-chan="{p.get('chan_only', '0')}">
   {avatar(d.photo('player', p['player_id']), p['name'], 'pic')}
-  <div class="nm">{esc(p['name'])}</div>
-  <div class="rl">{esc((p.get('club_v') or p.get('club') or '')[:22])}</div>
-  <div class="stat">{p['apps']} m · {_fmt(p['minutes'])} min</div>
+  <span><span class="nm">{esc(p['name'])}</span>
+    <span class="rl">{esc((p.get('club_v') or p.get('club') or '—')[:20])}</span>
+    <span class="stat">{p['apps']} m · {_fmt(p['minutes'])} min</span></span>
 </a>""" for p in entries)
-        blocks.append(f"""<section>
-  <h2>{esc(POS_LABEL.get(pos, pos))} <span style="color:var(--muted);font-size:15px">
-    ({len(entries)})</span></h2>
+        blocks.append(f"""<section data-pos="{esc(pos)}">
+  <h2>{esc(POS_LABEL.get(pos, pos))}
+    <span style="color:var(--muted);font-weight:400">{len(entries)}</span></h2>
   <div class="roster">{cards_html}</div>
 </section>""")
+
+    a_team = sum(1 for p in d.profiles if p.get("chan_only") != "1")
+    chan_only = len(d.profiles) - a_team
+    filters = f"""<div class="filters">
+  <input type="search" id="roster_search" placeholder="Filtrer par nom…">
+  <label><input type="checkbox" id="hide_chan"> Masquer les joueurs vus uniquement en CHAN
+    ({chan_only})</label>
+  <span class="count" id="roster_count"></span>
+</div>"""
+
+    table_note = ("Tableau complet, triable colonne par colonne : minutes, buts, "
+                  "passes, dribbles, arrêts, note moyenne, club et valeur estimée.")
     body = f"""{hero("Effectif élargi", "Tous les joueurs depuis 2022",
-        f"{len(d.profiles)} joueurs appelés ou apparus sur une feuille de match depuis la CAN 2021. Chaque fiche détaille le temps de jeu, les performances et l'importance dans le groupe.")}
-<main>{''.join(blocks)}</main>"""
+        f"{len(d.profiles)} joueurs appelés ou apparus sur une feuille de match depuis la CAN 2021, dont {a_team} avec l'équipe A. Chaque fiche détaille le temps de jeu, les performances et l'importance dans le groupe.")}
+<main>
+  {filters}
+  {''.join(blocks)}
+  <section id="tableau">
+    <h2>Tableau détaillé</h2>
+    <p class="lead">{table_note}</p>
+    <div class="grid">
+      {card(width="w12", extra='<input type="search" id="pool_search" class="search">'
+            '<div class="tablewrap pool"><table id="pool_table"></table></div>'
+            '<p class="sub" id="pool_note"></p>')}
+    </div>
+  </section>
+</main>"""
     return page(title="Joueurs", description=(
         f"Les {len(d.profiles)} joueurs appelés en sélection du Burkina Faso depuis 2022, "
-        "avec leur fiche individuelle."), body=body, active="players", needs=("meta",))
+        "avec leur fiche individuelle et un tableau détaillé triable."),
+        body=body, active="players", needs=("pool", "meta"),
+        scripts=("players", "roster"))
 
 
 # ------------------------------------------------------------------ matches index
@@ -244,6 +278,9 @@ def analysis_page(d):
   {section("systemes", "s_forms", "s_forms_lead",
     cards=card(width="w12", chart="c_forms", title_key="c_forms", sub_key="c_forms_sub",
                card_id="card_forms", height="short"))}
+  {section("stabilite", "s_stab", "s_stab_lead",
+    cards=card(width="w12", title_key="c_stab", sub_key="c_stab_sub",
+               card_id="card_stab", table_id="stability_table"))}
   {section("importance", "s_imp", "s_imp_lead",
     cards=(card(width="w12", title_key="c_imp_table", sub_key="c_imp_table_sub",
                 card_id="card_imp", table_id="imp_table",
@@ -260,7 +297,7 @@ def analysis_page(d):
         "Style de jeu du Burkina Faso, résilience, temps forts, systèmes et "
         "importance des joueurs — chaque métrique avec son échantillon."),
         body=body, active="analysis", needs=("team", "pool", "meta"),
-        scripts=("style", "tempo", "importance", "breakdowns"))
+        scripts=("style", "tempo", "importance", "breakdowns", "model"))
 
 
 # ------------------------------------------------------------------ history
@@ -344,12 +381,21 @@ def projections_page(d):
                 card_id="card_pred", height="tall")
            + card(width="w4", title_key="c_pred_note", card_id="card_pred_note",
                   extra='<div id="pred_note"></div>')))}
+  {section("modele", "s_model", "s_model_lead",
+    extra_head='<p class="sub" id="bt_scope"></p>',
+    cards=(card(width="w4", title_key="c_bt", sub_key="c_bt_sub",
+                card_id="card_bt", table_id="backtest_table")
+           + card(width="w5", chart="c_calibration", title_key="c_calibration",
+                  sub_key="c_calibration_sub", card_id="card_calibration",
+                  height="short")
+           + card(width="w3", title_key="c_bt_surprises", sub_key="c_bt_surprises_sub",
+                  extra='<div class="tablewrap"><table id="bt_surprises"></table></div>')))}
 </main>"""
     return page(title="Projections", description=(
         "Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, "
-        "vivier des jeunes et attentes Elo."),
+        "vivier des jeunes, attentes Elo et vérification du modèle."),
         body=body, active="projections", needs=("squad", "pool", "team", "elo", "meta"),
-        scripts=("outlook", "predictions"))
+        scripts=("outlook", "predictions", "model"))
 
 
 # ------------------------------------------------------------------ methodology

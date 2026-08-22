@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joueurs — Étalons Analytics</title>
-<meta name="description" content="Les 129 joueurs appelés en sélection du Burkina Faso depuis 2022, avec leur fiche individuelle.">
+<meta name="description" content="Les 129 joueurs appelés en sélection du Burkina Faso depuis 2022, avec leur fiche individuelle et un tableau détaillé triable.">
 <meta property="og:title" content="Joueurs — Étalons Analytics">
-<meta property="og:description" content="Les 129 joueurs appelés en sélection du Burkina Faso depuis 2022, avec leur fiche individuelle.">
+<meta property="og:description" content="Les 129 joueurs appelés en sélection du Burkina Faso depuis 2022, avec leur fiche individuelle et un tableau détaillé triable.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/pages.css">
 </head>
-<body class="" data-needs="meta" data-base="">
+<body class="" data-needs="pool,meta" data-base="">
 
 <header class="top">
   <div class="top-inner">
-    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <a class="brand" href="index.html">Étalons Analytics</a>
     <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool" class="on"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
     <div class="lang">
       <button data-lang="fr">FR</button>
@@ -28,674 +28,818 @@
 <div class="hero-band"><div class="inner">
   <p class="eyebrow">Effectif élargi</p>
   <h1>Tous les joueurs depuis 2022</h1>
-  <p>129 joueurs appelés ou apparus sur une feuille de match depuis la CAN 2021. Chaque fiche détaille le temps de jeu, les performances et l&#x27;importance dans le groupe.</p>
+  <p>129 joueurs appelés ou apparus sur une feuille de match depuis la CAN 2021, dont 112 avec l&#x27;équipe A. Chaque fiche détaille le temps de jeu, les performances et l&#x27;importance dans le groupe.</p>
 </div></div>
-<main><section>
-  <h2>Gardien <span style="color:var(--muted);font-size:15px">
-    (15)</span></h2>
-  <div class="roster"><a class="pcard" href="joueurs/herve-koffi.html">
+<main>
+  <div class="filters">
+  <input type="search" id="roster_search" placeholder="Filtrer par nom…">
+  <label><input type="checkbox" id="hide_chan"> Masquer les joueurs vus uniquement en CHAN
+    (17)</label>
+  <span class="count" id="roster_count"></span>
+</div>
+  <section data-pos="GK">
+  <h2>Gardien
+    <span style="color:var(--muted);font-weight:400">15</span></h2>
+  <div class="roster"><a class="pcard" href="joueurs/herve-koffi.html"
+   data-name="herve koffi" data-chan="0">
   <img class="pic" src="assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async">
-  <div class="nm">Hervé Koffi</div>
-  <div class="rl">Royale Union Saint-Gil</div>
-  <div class="stat">27 m · 2 355 min</div>
-</a><a class="pcard" href="joueurs/farid-ouedraogo.html">
+  <span><span class="nm">Hervé Koffi</span>
+    <span class="rl">Royale Union Saint-G</span>
+    <span class="stat">27 m · 2 355 min</span></span>
+</a><a class="pcard" href="joueurs/farid-ouedraogo.html"
+   data-name="farid ouedraogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">FO</span>
-  <div class="nm">Farid Ouédraogo</div>
-  <div class="rl">Al-Hilal Omdurman</div>
-  <div class="stat">7 m · 594 min</div>
-</a><a class="pcard" href="joueurs/kilian-nikiema.html">
+  <span><span class="nm">Farid Ouédraogo</span>
+    <span class="rl">Al-Hilal Omdurman</span>
+    <span class="stat">7 m · 594 min</span></span>
+</a><a class="pcard" href="joueurs/kilian-nikiema.html"
+   data-name="kilian nikiema" data-chan="0">
   <span class="pic avatar" aria-hidden="true">KN</span>
-  <div class="nm">Kilian Nikiema</div>
-  <div class="rl">ADO Den Haag</div>
-  <div class="stat">7 m · 585 min</div>
-</a><a class="pcard" href="joueurs/ladji-brahima-sanou.html">
+  <span><span class="nm">Kilian Nikiema</span>
+    <span class="rl">ADO Den Haag</span>
+    <span class="stat">7 m · 585 min</span></span>
+</a><a class="pcard" href="joueurs/ladji-brahima-sanou.html"
+   data-name="ladji brahima sanou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">LS</span>
-  <div class="nm">Ladji Brahima Sanou</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">3 m · 270 min</div>
-</a><a class="pcard" href="joueurs/moussa-traore.html">
+  <span><span class="nm">Ladji Brahima Sanou</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">3 m · 270 min</span></span>
+</a><a class="pcard" href="joueurs/moussa-traore.html"
+   data-name="moussa traore" data-chan="1">
   <span class="pic avatar" aria-hidden="true">MT</span>
-  <div class="nm">Moussa Traoré</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">1 m · 90 min</div>
-</a><a class="pcard" href="joueurs/aboubacar-sawadogo.html">
+  <span><span class="nm">Moussa Traoré</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">1 m · 90 min</span></span>
+</a><a class="pcard" href="joueurs/aboubacar-sawadogo.html"
+   data-name="aboubacar sawadogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AS</span>
-  <div class="nm">Aboubacar Sawadogo</div>
-  <div class="rl">Rail Club de Kadiogo</div>
-  <div class="stat">1 m · 16 min</div>
-</a><a class="pcard" href="joueurs/clovis-bazemo.html">
+  <span><span class="nm">Aboubacar Sawadogo</span>
+    <span class="rl">Rail Club de Kadiogo</span>
+    <span class="stat">1 m · 16 min</span></span>
+</a><a class="pcard" href="joueurs/clovis-bazemo.html"
+   data-name="clovis bazemo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CB</span>
-  <div class="nm">Clovis Bazemo</div>
-  <div class="rl">Africa Sports National</div>
-  <div class="stat">1 m · 6 min</div>
-</a><a class="pcard" href="joueurs/hillel-konate.html">
+  <span><span class="nm">Clovis Bazemo</span>
+    <span class="rl">Africa Sports Nation</span>
+    <span class="stat">1 m · 6 min</span></span>
+</a><a class="pcard" href="joueurs/hillel-konate.html"
+   data-name="hillel konate" data-chan="0">
   <img class="pic" src="assets/photos/player-hillel-konate.jpg" alt="Hillel Konaté" loading="lazy" decoding="async">
-  <div class="nm">Hillel Konaté</div>
-  <div class="rl">Troyes</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/koula-sebastien-tou.html">
+  <span><span class="nm">Hillel Konaté</span>
+    <span class="rl">Troyes</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/koula-sebastien-tou.html"
+   data-name="koula sebastien tou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">KT</span>
-  <div class="nm">Koula Sébastien Tou</div>
-  <div class="rl">USL Dunkerque 2</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/mathieu-konvelbo.html">
+  <span><span class="nm">Koula Sébastien Tou</span>
+    <span class="rl">USL Dunkerque 2</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/mathieu-konvelbo.html"
+   data-name="mathieu konvelbo" data-chan="1">
   <span class="pic avatar" aria-hidden="true">MK</span>
-  <div class="nm">Mathieu Konvelbo</div>
-  <div class="rl">Rahimo FC</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/mohamed-zegue-traore.html">
+  <span><span class="nm">Mathieu Konvelbo</span>
+    <span class="rl">Rahimo FC</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-zegue-traore.html"
+   data-name="mohamed zegue traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MT</span>
-  <div class="nm">Mohamed Zegue Traore</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/nampe-salifou-coulibaly.html">
+  <span><span class="nm">Mohamed Zegue Traore</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/nampe-salifou-coulibaly.html"
+   data-name="nampe salifou coulibaly" data-chan="0">
   <span class="pic avatar" aria-hidden="true">NC</span>
-  <div class="nm">Nampe Salifou Coulibaly</div>
-  <div class="rl">Salitas FC</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/nourdine-balora.html">
+  <span><span class="nm">Nampe Salifou Coulibaly</span>
+    <span class="rl">Salitas FC</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/nourdine-balora.html"
+   data-name="nourdine balora" data-chan="0">
   <span class="pic avatar" aria-hidden="true">NB</span>
-  <div class="nm">Nourdine Balora</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/philippe-mare.html">
+  <span><span class="nm">Nourdine Balora</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/philippe-mare.html"
+   data-name="philippe mare" data-chan="0">
   <span class="pic avatar" aria-hidden="true">PM</span>
-  <div class="nm">Philippe Mare</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/sebas-koula.html">
+  <span><span class="nm">Philippe Mare</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/sebas-koula.html"
+   data-name="sebas koula" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SK</span>
-  <div class="nm">Sebas Koula</div>
-  <div class="rl">USL Dunkerque 2</div>
-  <div class="stat">0 m · 0 min</div>
+  <span><span class="nm">Sebas Koula</span>
+    <span class="rl">USL Dunkerque 2</span>
+    <span class="stat">0 m · 0 min</span></span>
 </a></div>
-</section><section>
-  <h2>Défenseur <span style="color:var(--muted);font-size:15px">
-    (39)</span></h2>
-  <div class="roster"><a class="pcard" href="joueurs/edmond-tapsoba.html">
+</section><section data-pos="DF">
+  <h2>Défenseur
+    <span style="color:var(--muted);font-weight:400">39</span></h2>
+  <div class="roster"><a class="pcard" href="joueurs/edmond-tapsoba.html"
+   data-name="edmond tapsoba" data-chan="0">
   <img class="pic" src="assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async">
-  <div class="nm">Edmond Tapsoba</div>
-  <div class="rl">Bayer 04 Leverkusen</div>
-  <div class="stat">33 m · 2 985 min</div>
-</a><a class="pcard" href="joueurs/issa-kabore.html">
+  <span><span class="nm">Edmond Tapsoba</span>
+    <span class="rl">Bayer 04 Leverkusen</span>
+    <span class="stat">33 m · 2 985 min</span></span>
+</a><a class="pcard" href="joueurs/issa-kabore.html"
+   data-name="issa kabore" data-chan="0">
   <img class="pic" src="assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async">
-  <div class="nm">Issa Kaboré</div>
-  <div class="rl">Manchester City</div>
-  <div class="stat">29 m · 2 517 min</div>
-</a><a class="pcard" href="joueurs/issoufou-dayo.html">
+  <span><span class="nm">Issa Kaboré</span>
+    <span class="rl">Manchester City</span>
+    <span class="stat">29 m · 2 517 min</span></span>
+</a><a class="pcard" href="joueurs/issoufou-dayo.html"
+   data-name="issoufou dayo" data-chan="0">
   <img class="pic" src="assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async">
-  <div class="nm">Issoufou Dayo</div>
-  <div class="rl">Umm-Salal SC</div>
-  <div class="stat">28 m · 2 463 min</div>
-</a><a class="pcard" href="joueurs/steeve-yago.html">
+  <span><span class="nm">Issoufou Dayo</span>
+    <span class="rl">Umm-Salal SC</span>
+    <span class="stat">28 m · 2 463 min</span></span>
+</a><a class="pcard" href="joueurs/steeve-yago.html"
+   data-name="steeve yago" data-chan="0">
   <img class="pic" src="assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async">
-  <div class="nm">Steeve Yago</div>
-  <div class="rl">Aris Limassol</div>
-  <div class="stat">29 m · 2 330 min</div>
-</a><a class="pcard" href="joueurs/saidou-simpore.html">
+  <span><span class="nm">Steeve Yago</span>
+    <span class="rl">Aris Limassol</span>
+    <span class="stat">29 m · 2 330 min</span></span>
+</a><a class="pcard" href="joueurs/saidou-simpore.html"
+   data-name="saidou simpore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SS</span>
-  <div class="nm">Saïdou Simporé</div>
-  <div class="rl">Al Faisaly SC</div>
-  <div class="stat">19 m · 1 105 min</div>
-</a><a class="pcard" href="joueurs/adamo-nagalo.html">
+  <span><span class="nm">Saïdou Simporé</span>
+    <span class="rl">Al Faisaly SC</span>
+    <span class="stat">19 m · 1 105 min</span></span>
+</a><a class="pcard" href="joueurs/adamo-nagalo.html"
+   data-name="adamo nagalo" data-chan="0">
   <img class="pic" src="assets/photos/player-adamo-nagalo.jpg" alt="Adamo Nagalo" loading="lazy" decoding="async">
-  <div class="nm">Adamo Nagalo</div>
-  <div class="rl">PSV Eindhoven</div>
-  <div class="stat">14 m · 953 min</div>
-</a><a class="pcard" href="joueurs/abdoul-guiebre.html">
+  <span><span class="nm">Adamo Nagalo</span>
+    <span class="rl">PSV Eindhoven</span>
+    <span class="stat">14 m · 953 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-guiebre.html"
+   data-name="abdoul guiebre" data-chan="0">
   <img class="pic" src="assets/photos/player-abdoul-guiebre.jpg" alt="Abdoul Guiebre" loading="lazy" decoding="async">
-  <div class="nm">Abdoul Guiebre</div>
-  <div class="rl">Ascoli</div>
-  <div class="stat">7 m · 602 min</div>
-</a><a class="pcard" href="joueurs/arsene-kouassi.html">
+  <span><span class="nm">Abdoul Guiebre</span>
+    <span class="rl">Ascoli</span>
+    <span class="stat">7 m · 602 min</span></span>
+</a><a class="pcard" href="joueurs/arsene-kouassi.html"
+   data-name="arsene kouassi" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AK</span>
-  <div class="nm">Arsène Kouassi</div>
-  <div class="rl">Lorient</div>
-  <div class="stat">6 m · 538 min</div>
-</a><a class="pcard" href="joueurs/mohamed-ouedraogo.html">
+  <span><span class="nm">Arsène Kouassi</span>
+    <span class="rl">Lorient</span>
+    <span class="stat">6 m · 538 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-ouedraogo.html"
+   data-name="mohamed ouedraogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MO</span>
-  <div class="nm">Mohamed Ouédraogo</div>
-  <div class="rl">Olympique Lyonnais</div>
-  <div class="stat">8 m · 525 min</div>
-</a><a class="pcard" href="joueurs/nasser-djiga.html">
+  <span><span class="nm">Mohamed Ouédraogo</span>
+    <span class="rl">Olympique Lyonnais</span>
+    <span class="stat">8 m · 525 min</span></span>
+</a><a class="pcard" href="joueurs/nasser-djiga.html"
+   data-name="nasser djiga" data-chan="0">
   <img class="pic" src="assets/photos/player-nasser-djiga.jpg" alt="Nasser Djiga" loading="lazy" decoding="async">
-  <div class="nm">Nasser Djiga</div>
-  <div class="rl">Wolverhampton</div>
-  <div class="stat">7 m · 478 min</div>
-</a><a class="pcard" href="joueurs/patrick-malo.html">
+  <span><span class="nm">Nasser Djiga</span>
+    <span class="rl">Wolverhampton</span>
+    <span class="stat">7 m · 478 min</span></span>
+</a><a class="pcard" href="joueurs/patrick-malo.html"
+   data-name="patrick malo" data-chan="0">
   <img class="pic" src="assets/photos/player-patrick-malo.jpg" alt="Patrick Malo" loading="lazy" decoding="async">
-  <div class="nm">Patrick Malo</div>
-  <div class="rl">Hassania Agadir</div>
-  <div class="stat">4 m · 315 min</div>
-</a><a class="pcard" href="joueurs/soumaila-ouattara.html">
+  <span><span class="nm">Patrick Malo</span>
+    <span class="rl">Hassania Agadir</span>
+    <span class="stat">4 m · 315 min</span></span>
+</a><a class="pcard" href="joueurs/soumaila-ouattara.html"
+   data-name="soumaila ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SO</span>
-  <div class="nm">Soumaïla Ouattara</div>
-  <div class="rl">Raja Club Athletic</div>
-  <div class="stat">3 m · 302 min</div>
-</a><a class="pcard" href="joueurs/moumoune-diallo.html">
+  <span><span class="nm">Soumaïla Ouattara</span>
+    <span class="rl">Raja Club Athletic</span>
+    <span class="stat">3 m · 302 min</span></span>
+</a><a class="pcard" href="joueurs/moumoune-diallo.html"
+   data-name="moumoune diallo" data-chan="1">
   <span class="pic avatar" aria-hidden="true">MD</span>
-  <div class="nm">Moumoune Diallo</div>
-  <div class="rl"></div>
-  <div class="stat">3 m · 225 min</div>
-</a><a class="pcard" href="joueurs/mohamed-guira.html">
+  <span><span class="nm">Moumoune Diallo</span>
+    <span class="rl">—</span>
+    <span class="stat">3 m · 225 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-guira.html"
+   data-name="mohamed guira" data-chan="1">
   <span class="pic avatar" aria-hidden="true">MG</span>
-  <div class="nm">Mohamed Guira</div>
-  <div class="rl">AS Sonabel</div>
-  <div class="stat">2 m · 180 min</div>
-</a><a class="pcard" href="joueurs/frank-tologo.html">
+  <span><span class="nm">Mohamed Guira</span>
+    <span class="rl">AS Sonabel</span>
+    <span class="stat">2 m · 180 min</span></span>
+</a><a class="pcard" href="joueurs/frank-tologo.html"
+   data-name="frank tologo" data-chan="1">
   <span class="pic avatar" aria-hidden="true">FT</span>
-  <div class="nm">Frank Tologo</div>
-  <div class="rl"></div>
-  <div class="stat">2 m · 167 min</div>
-</a><a class="pcard" href="joueurs/abdoul-ayinde.html">
+  <span><span class="nm">Frank Tologo</span>
+    <span class="rl">—</span>
+    <span class="stat">2 m · 167 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-ayinde.html"
+   data-name="abdoul ayinde" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AA</span>
-  <div class="nm">Abdoul Ayinde</div>
-  <div class="rl">KAA Gent Reserve U23</div>
-  <div class="stat">2 m · 164 min</div>
-</a><a class="pcard" href="joueurs/hanaby-hadalou-sagne.html">
+  <span><span class="nm">Abdoul Ayinde</span>
+    <span class="rl">KAA Gent Reserve U23</span>
+    <span class="stat">2 m · 164 min</span></span>
+</a><a class="pcard" href="joueurs/hanaby-hadalou-sagne.html"
+   data-name="hanaby hadalou sagne" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HS</span>
-  <div class="nm">Hanaby Hadalou Sagne</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">2 m · 135 min</div>
-</a><a class="pcard" href="joueurs/trova-boni.html">
+  <span><span class="nm">Hanaby Hadalou Sagne</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">2 m · 135 min</span></span>
+</a><a class="pcard" href="joueurs/trova-boni.html"
+   data-name="trova boni" data-chan="0">
   <span class="pic avatar" aria-hidden="true">TB</span>
-  <div class="nm">Trova Boni</div>
-  <div class="rl">Al Ahly Benghazi</div>
-  <div class="stat">5 m · 129 min</div>
-</a><a class="pcard" href="joueurs/valentin-nouma.html">
+  <span><span class="nm">Trova Boni</span>
+    <span class="rl">Al Ahly Benghazi</span>
+    <span class="stat">5 m · 129 min</span></span>
+</a><a class="pcard" href="joueurs/valentin-nouma.html"
+   data-name="valentin nouma" data-chan="0">
   <span class="pic avatar" aria-hidden="true">VN</span>
-  <div class="nm">Valentin Nouma</div>
-  <div class="rl">TRA United SC</div>
-  <div class="stat">3 m · 99 min</div>
-</a><a class="pcard" href="joueurs/arthur-zagre.html">
+  <span><span class="nm">Valentin Nouma</span>
+    <span class="rl">TRA United SC</span>
+    <span class="stat">3 m · 99 min</span></span>
+</a><a class="pcard" href="joueurs/arthur-zagre.html"
+   data-name="arthur zagre" data-chan="0">
   <img class="pic" src="assets/photos/player-arthur-zagre.jpg" alt="Arthur Zagré" loading="lazy" decoding="async">
-  <div class="nm">Arthur Zagré</div>
-  <div class="rl">FC Utrecht</div>
-  <div class="stat">1 m · 90 min</div>
-</a><a class="pcard" href="joueurs/christophe-ouattara.html">
+  <span><span class="nm">Arthur Zagré</span>
+    <span class="rl">FC Utrecht</span>
+    <span class="stat">1 m · 90 min</span></span>
+</a><a class="pcard" href="joueurs/christophe-ouattara.html"
+   data-name="christophe ouattara" data-chan="1">
   <span class="pic avatar" aria-hidden="true">CO</span>
-  <div class="nm">Christophe Ouattara</div>
-  <div class="rl">Rahimo FC</div>
-  <div class="stat">1 m · 90 min</div>
-</a><a class="pcard" href="joueurs/pakwo-gnanou.html">
+  <span><span class="nm">Christophe Ouattara</span>
+    <span class="rl">Rahimo FC</span>
+    <span class="stat">1 m · 90 min</span></span>
+</a><a class="pcard" href="joueurs/pakwo-gnanou.html"
+   data-name="pakwo gnanou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">PG</span>
-  <div class="nm">Pakwo Gnanou</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">1 m · 45 min</div>
-</a><a class="pcard" href="joueurs/mohamed-ali-yabre.html">
+  <span><span class="nm">Pakwo Gnanou</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">1 m · 45 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-ali-yabre.html"
+   data-name="mohamed ali yabre" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MY</span>
-  <div class="nm">Mohamed Ali Yabré</div>
-  <div class="rl">ASEC Mimosas</div>
-  <div class="stat">1 m · 12 min</div>
-</a><a class="pcard" href="joueurs/cheick-omar-ouedraogo.html">
+  <span><span class="nm">Mohamed Ali Yabré</span>
+    <span class="rl">ASEC Mimosas</span>
+    <span class="stat">1 m · 12 min</span></span>
+</a><a class="pcard" href="joueurs/cheick-omar-ouedraogo.html"
+   data-name="cheick omar ouedraogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CO</span>
-  <div class="nm">Cheick Omar Ouedraogo</div>
-  <div class="rl">Stade d&#x27;Abidjan</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/cyril-dao.html">
+  <span><span class="nm">Cheick Omar Ouedraogo</span>
+    <span class="rl">Stade d&#x27;Abidjan</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/cyril-dao.html"
+   data-name="cyril dao" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CD</span>
-  <div class="nm">Cyril Dao</div>
-  <div class="rl">National Bank of Egypt</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/dao-cyrille.html">
+  <span><span class="nm">Cyril Dao</span>
+    <span class="rl">National Bank of Egy</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/dao-cyrille.html"
+   data-name="dao cyrille" data-chan="0">
   <span class="pic avatar" aria-hidden="true">DC</span>
-  <div class="nm">Dao Cyrille</div>
-  <div class="rl">National Bank of Egypt</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/dylan-ouedraogo.html">
+  <span><span class="nm">Dao Cyrille</span>
+    <span class="rl">National Bank of Egy</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/dylan-ouedraogo.html"
+   data-name="dylan ouedraogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">DO</span>
-  <div class="nm">Dylan Ouédraogo</div>
-  <div class="rl">Krasava ENY</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/enock-belem.html">
+  <span><span class="nm">Dylan Ouédraogo</span>
+    <span class="rl">Krasava ENY</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/enock-belem.html"
+   data-name="enock belem" data-chan="1">
   <span class="pic avatar" aria-hidden="true">EB</span>
-  <div class="nm">Enock Belem</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/hassane-rachid-traore.html">
+  <span><span class="nm">Enock Belem</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/hassane-rachid-traore.html"
+   data-name="hassane rachid traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HT</span>
-  <div class="nm">Hassane Rachid Traoré</div>
-  <div class="rl">USFA</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/hassane-traore.html">
+  <span><span class="nm">Hassane Rachid Traoré</span>
+    <span class="rl">USFA</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/hassane-traore.html"
+   data-name="hassane traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HT</span>
-  <div class="nm">Hassane Traoré</div>
-  <div class="rl">FCV Farul Constanța</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/hermann-nikiema.html">
+  <span><span class="nm">Hassane Traoré</span>
+    <span class="rl">FCV Farul Constanța</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/hermann-nikiema.html"
+   data-name="hermann nikiema" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HN</span>
-  <div class="nm">Hermann Nikiema</div>
-  <div class="rl">Rail Club de Kadiogo</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/ismaelo-ganiou.html">
+  <span><span class="nm">Hermann Nikiema</span>
+    <span class="rl">Rail Club de Kadiogo</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/ismaelo-ganiou.html"
+   data-name="ismaelo ganiou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">IG</span>
-  <div class="nm">Ismaëlo Ganiou</div>
-  <div class="rl">RC Lens</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/issouf-sosso.html">
+  <span><span class="nm">Ismaëlo Ganiou</span>
+    <span class="rl">RC Lens</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/issouf-sosso.html"
+   data-name="issouf sosso" data-chan="0">
   <span class="pic avatar" aria-hidden="true">IS</span>
-  <div class="nm">Issouf Sosso</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/nassim-innocenti.html">
+  <span><span class="nm">Issouf Sosso</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/nassim-innocenti.html"
+   data-name="nassim innocenti" data-chan="0">
   <span class="pic avatar" aria-hidden="true">NI</span>
-  <div class="nm">Nassim Innocenti</div>
-  <div class="rl">FK Jablonec</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/oula-abass-traore.html">
+  <span><span class="nm">Nassim Innocenti</span>
+    <span class="rl">FK Jablonec</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/oula-abass-traore.html"
+   data-name="oula abass traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">OT</span>
-  <div class="nm">Oula Abass Traoré</div>
-  <div class="rl">Horoya</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/oula-traore.html">
+  <span><span class="nm">Oula Abass Traoré</span>
+    <span class="rl">Horoya</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/oula-traore.html"
+   data-name="oula traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">OT</span>
-  <div class="nm">Oula Traoré</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/rachide-gnanou.html">
+  <span><span class="nm">Oula Traoré</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/rachide-gnanou.html"
+   data-name="rachide gnanou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">RG</span>
-  <div class="nm">Rachide Gnanou</div>
-  <div class="rl">IF Gnistan</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/somgogna-hermann-nikiema.html">
+  <span><span class="nm">Rachide Gnanou</span>
+    <span class="rl">IF Gnistan</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/somgogna-hermann-nikiema.html"
+   data-name="somgogna hermann nikiema" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SN</span>
-  <div class="nm">Somgogna Hermann Nikiema</div>
-  <div class="rl">Rail Club de Kadiogo</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/souleymane-massa-ouattara.html">
+  <span><span class="nm">Somgogna Hermann Nikiema</span>
+    <span class="rl">Rail Club de Kadiogo</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/souleymane-massa-ouattara.html"
+   data-name="souleymane massa ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SO</span>
-  <div class="nm">Souleymane Massa Ouattara</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
+  <span><span class="nm">Souleymane Massa Ouattara</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
 </a></div>
-</section><section>
-  <h2>Milieu <span style="color:var(--muted);font-size:15px">
-    (33)</span></h2>
-  <div class="roster"><a class="pcard" href="joueurs/blati-toure.html">
+</section><section data-pos="MF">
+  <h2>Milieu
+    <span style="color:var(--muted);font-weight:400">33</span></h2>
+  <div class="roster"><a class="pcard" href="joueurs/blati-toure.html"
+   data-name="blati toure" data-chan="0">
   <img class="pic" src="assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async">
-  <div class="nm">Blati Touré</div>
-  <div class="rl">Al Ahli Tripoli</div>
-  <div class="stat">29 m · 2 272 min</div>
-</a><a class="pcard" href="joueurs/gustavo-sangare.html">
+  <span><span class="nm">Blati Touré</span>
+    <span class="rl">Al Ahli Tripoli</span>
+    <span class="stat">29 m · 2 272 min</span></span>
+</a><a class="pcard" href="joueurs/gustavo-sangare.html"
+   data-name="gustavo sangare" data-chan="0">
   <img class="pic" src="assets/photos/player-gustavo-sangare.jpg" alt="Gustavo Sangaré" loading="lazy" decoding="async">
-  <div class="nm">Gustavo Sangaré</div>
-  <div class="rl">FC Noah</div>
-  <div class="stat">22 m · 1 595 min</div>
-</a><a class="pcard" href="joueurs/cedric-badolo.html">
+  <span><span class="nm">Gustavo Sangaré</span>
+    <span class="rl">FC Noah</span>
+    <span class="stat">22 m · 1 595 min</span></span>
+</a><a class="pcard" href="joueurs/cedric-badolo.html"
+   data-name="cedric badolo" data-chan="0">
   <img class="pic" src="assets/photos/player-cedric-badolo.jpg" alt="Cedric Badolo" loading="lazy" decoding="async">
-  <div class="nm">Cedric Badolo</div>
-  <div class="rl">Sumqayıt FK</div>
-  <div class="stat">21 m · 1 167 min</div>
-</a><a class="pcard" href="joueurs/adama-guira.html">
+  <span><span class="nm">Cedric Badolo</span>
+    <span class="rl">Sumqayıt FK</span>
+    <span class="stat">21 m · 1 167 min</span></span>
+</a><a class="pcard" href="joueurs/adama-guira.html"
+   data-name="adama guira" data-chan="0">
   <img class="pic" src="assets/photos/player-adama-guira.jpg" alt="Adama Guira" loading="lazy" decoding="async">
-  <div class="nm">Adama Guira</div>
-  <div class="rl">Racing Rioja</div>
-  <div class="stat">12 m · 1 049 min</div>
-</a><a class="pcard" href="joueurs/ismahila-ouedraogo.html">
+  <span><span class="nm">Adama Guira</span>
+    <span class="rl">Racing Rioja</span>
+    <span class="stat">12 m · 1 049 min</span></span>
+</a><a class="pcard" href="joueurs/ismahila-ouedraogo.html"
+   data-name="ismahila ouedraogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">IO</span>
-  <div class="nm">Ismahila Ouédraogo</div>
-  <div class="rl">Odense Boldklub</div>
-  <div class="stat">15 m · 955 min</div>
-</a><a class="pcard" href="joueurs/stephane-aziz-ki.html">
+  <span><span class="nm">Ismahila Ouédraogo</span>
+    <span class="rl">Odense Boldklub</span>
+    <span class="stat">15 m · 955 min</span></span>
+</a><a class="pcard" href="joueurs/stephane-aziz-ki.html"
+   data-name="stephane aziz ki" data-chan="0">
   <img class="pic" src="assets/photos/player-stephane-aziz-ki.jpg" alt="Stephane Aziz Ki" loading="lazy" decoding="async">
-  <div class="nm">Stephane Aziz Ki</div>
-  <div class="rl">Al Ittihad SC</div>
-  <div class="stat">14 m · 675 min</div>
-</a><a class="pcard" href="joueurs/sacha-banse.html">
+  <span><span class="nm">Stephane Aziz Ki</span>
+    <span class="rl">Al Ittihad SC</span>
+    <span class="stat">14 m · 675 min</span></span>
+</a><a class="pcard" href="joueurs/sacha-banse.html"
+   data-name="sacha banse" data-chan="0">
   <span class="pic avatar" aria-hidden="true">SB</span>
-  <div class="nm">Sacha Bansé</div>
-  <div class="rl">SpVgg Greuther Fürth</div>
-  <div class="stat">9 m · 607 min</div>
-</a><a class="pcard" href="joueurs/josue-tiendrebeogo.html">
+  <span><span class="nm">Sacha Bansé</span>
+    <span class="rl">SpVgg Greuther Fürth</span>
+    <span class="stat">9 m · 607 min</span></span>
+</a><a class="pcard" href="joueurs/josue-tiendrebeogo.html"
+   data-name="josue tiendrebeogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">JT</span>
-  <div class="nm">Josué Tiendrébéogo</div>
-  <div class="rl">FK IMT Beograd</div>
-  <div class="stat">9 m · 483 min</div>
-</a><a class="pcard" href="joueurs/mohamed-zougrana.html">
+  <span><span class="nm">Josué Tiendrébéogo</span>
+    <span class="rl">FK IMT Beograd</span>
+    <span class="stat">9 m · 483 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-zougrana.html"
+   data-name="mohamed zougrana" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MZ</span>
-  <div class="nm">Mohamed Zougrana</div>
-  <div class="rl">MC Alger</div>
-  <div class="stat">7 m · 434 min</div>
-</a><a class="pcard" href="joueurs/kalifa-nikiema.html">
+  <span><span class="nm">Mohamed Zougrana</span>
+    <span class="rl">MC Alger</span>
+    <span class="stat">7 m · 434 min</span></span>
+</a><a class="pcard" href="joueurs/kalifa-nikiema.html"
+   data-name="kalifa nikiema" data-chan="0">
   <span class="pic avatar" aria-hidden="true">KN</span>
-  <div class="nm">Kalifa Nikiema</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">3 m · 225 min</div>
-</a><a class="pcard" href="joueurs/tertius-bagre.html">
+  <span><span class="nm">Kalifa Nikiema</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">3 m · 225 min</span></span>
+</a><a class="pcard" href="joueurs/tertius-bagre.html"
+   data-name="tertius bagre" data-chan="1">
   <span class="pic avatar" aria-hidden="true">TB</span>
-  <div class="nm">Tertius Bagré</div>
-  <div class="rl">CS Sfaxien</div>
-  <div class="stat">4 m · 210 min</div>
-</a><a class="pcard" href="joueurs/abdoul-bandaogo.html">
+  <span><span class="nm">Tertius Bagré</span>
+    <span class="rl">CS Sfaxien</span>
+    <span class="stat">4 m · 210 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-bandaogo.html"
+   data-name="abdoul bandaogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AB</span>
-  <div class="nm">Abdoul Bandaogo</div>
-  <div class="rl">UD Yugo Socuéllamos</div>
-  <div class="stat">2 m · 180 min</div>
-</a><a class="pcard" href="joueurs/josaphat-ouattara.html">
+  <span><span class="nm">Abdoul Bandaogo</span>
+    <span class="rl">UD Yugo Socuéllamos</span>
+    <span class="stat">2 m · 180 min</span></span>
+</a><a class="pcard" href="joueurs/josaphat-ouattara.html"
+   data-name="josaphat ouattara" data-chan="1">
   <span class="pic avatar" aria-hidden="true">JO</span>
-  <div class="nm">Josaphat Ouattara</div>
-  <div class="rl"></div>
-  <div class="stat">2 m · 179 min</div>
-</a><a class="pcard" href="joueurs/ousmane-siry.html">
+  <span><span class="nm">Josaphat Ouattara</span>
+    <span class="rl">—</span>
+    <span class="stat">2 m · 179 min</span></span>
+</a><a class="pcard" href="joueurs/ousmane-siry.html"
+   data-name="ousmane siry" data-chan="1">
   <span class="pic avatar" aria-hidden="true">OS</span>
-  <div class="nm">Ousmane Siry</div>
-  <div class="rl">ASF Bobo Dioulasso</div>
-  <div class="stat">3 m · 168 min</div>
-</a><a class="pcard" href="joueurs/aliou-chitou-adjibade.html">
+  <span><span class="nm">Ousmane Siry</span>
+    <span class="rl">ASF Bobo Dioulasso</span>
+    <span class="stat">3 m · 168 min</span></span>
+</a><a class="pcard" href="joueurs/aliou-chitou-adjibade.html"
+   data-name="aliou chitou adjibade" data-chan="1">
   <span class="pic avatar" aria-hidden="true">AA</span>
-  <div class="nm">Aliou Chitou Adjibadé</div>
-  <div class="rl"></div>
-  <div class="stat">3 m · 142 min</div>
-</a><a class="pcard" href="joueurs/dramane-salou.html">
+  <span><span class="nm">Aliou Chitou Adjibadé</span>
+    <span class="rl">—</span>
+    <span class="stat">3 m · 142 min</span></span>
+</a><a class="pcard" href="joueurs/dramane-salou.html"
+   data-name="dramane salou" data-chan="0">
   <img class="pic" src="assets/photos/player-dramane-salou.jpg" alt="Dramane Salou" loading="lazy" decoding="async">
-  <div class="nm">Dramane Salou</div>
-  <div class="rl">Urartu</div>
-  <div class="stat">5 m · 141 min</div>
-</a><a class="pcard" href="joueurs/souleymane-sangare.html">
+  <span><span class="nm">Dramane Salou</span>
+    <span class="rl">Urartu</span>
+    <span class="stat">5 m · 141 min</span></span>
+</a><a class="pcard" href="joueurs/souleymane-sangare.html"
+   data-name="souleymane sangare" data-chan="1">
   <span class="pic avatar" aria-hidden="true">SS</span>
-  <div class="nm">Souleymane Sangaré</div>
-  <div class="rl">Al Taawon Ajdabiya SC</div>
-  <div class="stat">4 m · 137 min</div>
-</a><a class="pcard" href="joueurs/raouf-memel-dao.html">
+  <span><span class="nm">Souleymane Sangaré</span>
+    <span class="rl">Al Taawon Ajdabiya S</span>
+    <span class="stat">4 m · 137 min</span></span>
+</a><a class="pcard" href="joueurs/raouf-memel-dao.html"
+   data-name="raouf memel dao" data-chan="0">
   <span class="pic avatar" aria-hidden="true">RD</span>
-  <div class="nm">Raouf Memel Dao</div>
-  <div class="rl">APR FC</div>
-  <div class="stat">1 m · 90 min</div>
-</a><a class="pcard" href="joueurs/cedric-barro.html">
+  <span><span class="nm">Raouf Memel Dao</span>
+    <span class="rl">APR FC</span>
+    <span class="stat">1 m · 90 min</span></span>
+</a><a class="pcard" href="joueurs/cedric-barro.html"
+   data-name="cedric barro" data-chan="1">
   <span class="pic avatar" aria-hidden="true">CB</span>
-  <div class="nm">Cédric Barro</div>
-  <div class="rl"></div>
-  <div class="stat">1 m · 74 min</div>
-</a><a class="pcard" href="joueurs/lohann-doucet.html">
+  <span><span class="nm">Cédric Barro</span>
+    <span class="rl">—</span>
+    <span class="stat">1 m · 74 min</span></span>
+</a><a class="pcard" href="joueurs/lohann-doucet.html"
+   data-name="lohann doucet" data-chan="0">
   <span class="pic avatar" aria-hidden="true">LD</span>
-  <div class="nm">Lohann Doucet</div>
-  <div class="rl">Vitória SC</div>
-  <div class="stat">1 m · 70 min</div>
-</a><a class="pcard" href="joueurs/abdoul-yoda.html">
+  <span><span class="nm">Lohann Doucet</span>
+    <span class="rl">Vitória SC</span>
+    <span class="stat">1 m · 70 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-yoda.html"
+   data-name="abdoul yoda" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AY</span>
-  <div class="nm">Abdoul Yoda</div>
-  <div class="rl">Milsami Orhei</div>
-  <div class="stat">1 m · 44 min</div>
-</a><a class="pcard" href="joueurs/clement-pitroipa.html">
+  <span><span class="nm">Abdoul Yoda</span>
+    <span class="rl">Milsami Orhei</span>
+    <span class="stat">1 m · 44 min</span></span>
+</a><a class="pcard" href="joueurs/clement-pitroipa.html"
+   data-name="clement pitroipa" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CP</span>
-  <div class="nm">Clement Pitroipa</div>
-  <div class="rl">Maniema Union</div>
-  <div class="stat">1 m · 15 min</div>
-</a><a class="pcard" href="joueurs/aboubacar-bassinga.html">
+  <span><span class="nm">Clement Pitroipa</span>
+    <span class="rl">Maniema Union</span>
+    <span class="stat">1 m · 15 min</span></span>
+</a><a class="pcard" href="joueurs/aboubacar-bassinga.html"
+   data-name="aboubacar bassinga" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AB</span>
-  <div class="nm">Aboubacar Bassinga</div>
-  <div class="rl">UD Las Palmas</div>
-  <div class="stat">1 m · 2 min</div>
-</a><a class="pcard" href="joueurs/dramane-nikiema.html">
+  <span><span class="nm">Aboubacar Bassinga</span>
+    <span class="rl">UD Las Palmas</span>
+    <span class="stat">1 m · 2 min</span></span>
+</a><a class="pcard" href="joueurs/dramane-nikiema.html"
+   data-name="dramane nikiema" data-chan="0">
   <span class="pic avatar" aria-hidden="true">DN</span>
-  <div class="nm">Dramane Nikièma</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">1 m · 1 min</div>
-</a><a class="pcard" href="joueurs/abdul-meyker-yabre.html">
+  <span><span class="nm">Dramane Nikièma</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">1 m · 1 min</span></span>
+</a><a class="pcard" href="joueurs/abdul-meyker-yabre.html"
+   data-name="abdul meyker yabre" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AY</span>
-  <div class="nm">Abdul Meyker Yabre</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/abou-ouattara.html">
+  <span><span class="nm">Abdul Meyker Yabre</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/abou-ouattara.html"
+   data-name="abou ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AO</span>
-  <div class="nm">Abou Ouattara</div>
-  <div class="rl">Džiugas Telšiai</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/aboubacar-sidiki-traore.html">
+  <span><span class="nm">Abou Ouattara</span>
+    <span class="rl">Džiugas Telšiai</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/aboubacar-sidiki-traore.html"
+   data-name="aboubacar sidiki traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AT</span>
-  <div class="nm">Aboubacar Sidiki Traore</div>
-  <div class="rl">CF Mounana</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/alla-franck-alain-kante.html">
+  <span><span class="nm">Aboubacar Sidiki Traore</span>
+    <span class="rl">CF Mounana</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/alla-franck-alain-kante.html"
+   data-name="alla franck alain kante" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AK</span>
-  <div class="nm">Alla Franck Alain Kanté</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/bryan-dabo.html">
+  <span><span class="nm">Alla Franck Alain Kanté</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/bryan-dabo.html"
+   data-name="bryan dabo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">BD</span>
-  <div class="nm">Bryan Dabo</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/dramane-kambou.html">
+  <span><span class="nm">Bryan Dabo</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/dramane-kambou.html"
+   data-name="dramane kambou" data-chan="0">
   <span class="pic avatar" aria-hidden="true">DK</span>
-  <div class="nm">Dramane Kambou</div>
-  <div class="rl">FC Saint-Éloi Lupopo</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/ibrahim-bance.html">
+  <span><span class="nm">Dramane Kambou</span>
+    <span class="rl">FC Saint-Éloi Lupopo</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/ibrahim-bance.html"
+   data-name="ibrahim bance" data-chan="0">
   <span class="pic avatar" aria-hidden="true">IB</span>
-  <div class="nm">Ibrahim Bancé</div>
-  <div class="rl">Marumo Gallants FC</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/jean-fiacre-kouame-botue.html">
+  <span><span class="nm">Ibrahim Bancé</span>
+    <span class="rl">Marumo Gallants FC</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/jean-fiacre-kouame-botue.html"
+   data-name="jean fiacre kouame botue" data-chan="0">
   <span class="pic avatar" aria-hidden="true">JB</span>
-  <div class="nm">Jean Fiacre Kouamé Botué</div>
-  <div class="rl">Inter Turku</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/ridouanou-maiga.html">
+  <span><span class="nm">Jean Fiacre Kouamé Botué</span>
+    <span class="rl">Inter Turku</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/ridouanou-maiga.html"
+   data-name="ridouanou maiga" data-chan="0">
   <span class="pic avatar" aria-hidden="true">RM</span>
-  <div class="nm">Ridouanou Maiga</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
+  <span><span class="nm">Ridouanou Maiga</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
 </a></div>
-</section><section>
-  <h2>Attaquant <span style="color:var(--muted);font-size:15px">
-    (39)</span></h2>
-  <div class="roster"><a class="pcard" href="joueurs/dango-ouattara.html">
+</section><section data-pos="FW">
+  <h2>Attaquant
+    <span style="color:var(--muted);font-weight:400">39</span></h2>
+  <div class="roster"><a class="pcard" href="joueurs/dango-ouattara.html"
+   data-name="dango ouattara" data-chan="0">
   <img class="pic" src="assets/photos/player-dango-ouattara.jpg" alt="Dango Ouattara" loading="lazy" decoding="async">
-  <div class="nm">Dango Ouattara</div>
-  <div class="rl">Brentford</div>
-  <div class="stat">28 m · 2 120 min</div>
-</a><a class="pcard" href="joueurs/bertrand-traore.html">
+  <span><span class="nm">Dango Ouattara</span>
+    <span class="rl">Brentford</span>
+    <span class="stat">28 m · 2 120 min</span></span>
+</a><a class="pcard" href="joueurs/bertrand-traore.html"
+   data-name="bertrand traore" data-chan="0">
   <img class="pic" src="assets/photos/player-bertrand-traore.jpg" alt="Bertrand Traoré" loading="lazy" decoding="async">
-  <div class="nm">Bertrand Traoré</div>
-  <div class="rl">Unattached</div>
-  <div class="stat">25 m · 1 663 min</div>
-</a><a class="pcard" href="joueurs/hassane-bande.html">
+  <span><span class="nm">Bertrand Traoré</span>
+    <span class="rl">Unattached</span>
+    <span class="stat">25 m · 1 663 min</span></span>
+</a><a class="pcard" href="joueurs/hassane-bande.html"
+   data-name="hassane bande" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HB</span>
-  <div class="nm">Hassane Bandé</div>
-  <div class="rl">Mechelen</div>
-  <div class="stat">23 m · 1 226 min</div>
-</a><a class="pcard" href="joueurs/mohamed-konate.html">
+  <span><span class="nm">Hassane Bandé</span>
+    <span class="rl">Mechelen</span>
+    <span class="stat">23 m · 1 226 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-konate.html"
+   data-name="mohamed konate" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MK</span>
-  <div class="nm">Mohamed Konaté</div>
-  <div class="rl">Akhmat Grozny</div>
-  <div class="stat">24 m · 1 119 min</div>
-</a><a class="pcard" href="joueurs/lassina-traore.html">
+  <span><span class="nm">Mohamed Konaté</span>
+    <span class="rl">Akhmat Grozny</span>
+    <span class="stat">24 m · 1 119 min</span></span>
+</a><a class="pcard" href="joueurs/lassina-traore.html"
+   data-name="lassina traore" data-chan="0">
   <img class="pic" src="assets/photos/player-lassina-traore.jpg" alt="Lassina Traoré" loading="lazy" decoding="async">
-  <div class="nm">Lassina Traoré</div>
-  <div class="rl">Shakhtar Donetsk</div>
-  <div class="stat">15 m · 924 min</div>
-</a><a class="pcard" href="joueurs/abdoul-tapsoba.html">
+  <span><span class="nm">Lassina Traoré</span>
+    <span class="rl">Shakhtar Donetsk</span>
+    <span class="stat">15 m · 924 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-tapsoba.html"
+   data-name="abdoul tapsoba" data-chan="0">
   <img class="pic" src="assets/photos/player-abdoul-tapsoba.jpg" alt="Abdoul Tapsoba" loading="lazy" decoding="async">
-  <div class="nm">Abdoul Tapsoba</div>
-  <div class="rl">Radomiak Radom</div>
-  <div class="stat">15 m · 587 min</div>
-</a><a class="pcard" href="joueurs/cyrille-bayala.html">
+  <span><span class="nm">Abdoul Tapsoba</span>
+    <span class="rl">Radomiak Radom</span>
+    <span class="stat">15 m · 587 min</span></span>
+</a><a class="pcard" href="joueurs/cyrille-bayala.html"
+   data-name="cyrille bayala" data-chan="0">
   <img class="pic" src="assets/photos/player-cyrille-bayala.jpg" alt="Cyrille Bayala" loading="lazy" decoding="async">
-  <div class="nm">Cyrille Bayala</div>
-  <div class="rl">Dalian Kuncheng City</div>
-  <div class="stat">9 m · 586 min</div>
-</a><a class="pcard" href="joueurs/cyriaque-irie.html">
+  <span><span class="nm">Cyrille Bayala</span>
+    <span class="rl">Dalian Kuncheng City</span>
+    <span class="stat">9 m · 586 min</span></span>
+</a><a class="pcard" href="joueurs/cyriaque-irie.html"
+   data-name="cyriaque irie" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CI</span>
-  <div class="nm">Cyriaque Irié</div>
-  <div class="rl">SC Freiburg</div>
-  <div class="stat">7 m · 354 min</div>
-</a><a class="pcard" href="joueurs/georgi-minoungou.html">
+  <span><span class="nm">Cyriaque Irié</span>
+    <span class="rl">SC Freiburg</span>
+    <span class="stat">7 m · 354 min</span></span>
+</a><a class="pcard" href="joueurs/georgi-minoungou.html"
+   data-name="georgi minoungou" data-chan="0">
   <img class="pic" src="assets/photos/player-georgi-minoungou.jpg" alt="Georgi Minoungou" loading="lazy" decoding="async">
-  <div class="nm">Georgi Minoungou</div>
-  <div class="rl">Colorado Rapids</div>
-  <div class="stat">9 m · 334 min</div>
-</a><a class="pcard" href="joueurs/ousseni-bouda.html">
+  <span><span class="nm">Georgi Minoungou</span>
+    <span class="rl">Colorado Rapids</span>
+    <span class="stat">9 m · 334 min</span></span>
+</a><a class="pcard" href="joueurs/ousseni-bouda.html"
+   data-name="ousseni bouda" data-chan="0">
   <img class="pic" src="assets/photos/player-ousseni-bouda.jpg" alt="Ousseni Bouda" loading="lazy" decoding="async">
-  <div class="nm">Ousseni Bouda</div>
-  <div class="rl">San Jose Earthquakes</div>
-  <div class="stat">10 m · 279 min</div>
-</a><a class="pcard" href="joueurs/papus-ouattara.html">
+  <span><span class="nm">Ousseni Bouda</span>
+    <span class="rl">San Jose Earthquakes</span>
+    <span class="stat">10 m · 279 min</span></span>
+</a><a class="pcard" href="joueurs/papus-ouattara.html"
+   data-name="papus ouattara" data-chan="1">
   <span class="pic avatar" aria-hidden="true">PO</span>
-  <div class="nm">Papus Ouattara</div>
-  <div class="rl">Vitesse FC</div>
-  <div class="stat">4 m · 268 min</div>
-</a><a class="pcard" href="joueurs/abdoul-baguian.html">
+  <span><span class="nm">Papus Ouattara</span>
+    <span class="rl">Vitesse FC</span>
+    <span class="stat">4 m · 268 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-baguian.html"
+   data-name="abdoul baguian" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AB</span>
-  <div class="nm">Abdoul Baguian</div>
-  <div class="rl"></div>
-  <div class="stat">4 m · 237 min</div>
-</a><a class="pcard" href="joueurs/pierre-landry-kabore.html">
+  <span><span class="nm">Abdoul Baguian</span>
+    <span class="rl">—</span>
+    <span class="stat">4 m · 237 min</span></span>
+</a><a class="pcard" href="joueurs/pierre-landry-kabore.html"
+   data-name="pierre landry kabore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">PK</span>
-  <div class="nm">Pierre Landry Kaboré</div>
-  <div class="rl">Heart of Midlothian</div>
-  <div class="stat">8 m · 232 min</div>
-</a><a class="pcard" href="joueurs/djibril-ouattara.html">
+  <span><span class="nm">Pierre Landry Kaboré</span>
+    <span class="rl">Heart of Midlothian</span>
+    <span class="stat">8 m · 232 min</span></span>
+</a><a class="pcard" href="joueurs/djibril-ouattara.html"
+   data-name="djibril ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">DO</span>
-  <div class="nm">Djibril Ouattara</div>
-  <div class="rl">APR FC</div>
-  <div class="stat">5 m · 230 min</div>
-</a><a class="pcard" href="joueurs/yves-koutiama.html">
+  <span><span class="nm">Djibril Ouattara</span>
+    <span class="rl">APR FC</span>
+    <span class="stat">5 m · 230 min</span></span>
+</a><a class="pcard" href="joueurs/yves-koutiama.html"
+   data-name="yves koutiama" data-chan="1">
   <span class="pic avatar" aria-hidden="true">YK</span>
-  <div class="nm">Yves Koutiama</div>
-  <div class="rl">Kenya Police</div>
-  <div class="stat">4 m · 198 min</div>
-</a><a class="pcard" href="joueurs/mamady-bangre.html">
+  <span><span class="nm">Yves Koutiama</span>
+    <span class="rl">Kenya Police</span>
+    <span class="stat">4 m · 198 min</span></span>
+</a><a class="pcard" href="joueurs/mamady-bangre.html"
+   data-name="mamady bangre" data-chan="0">
   <img class="pic" src="assets/photos/player-mamady-bangre.jpg" alt="Mamady Bangré" loading="lazy" decoding="async">
-  <div class="nm">Mamady Bangré</div>
-  <div class="rl">Grenoble Foot 38</div>
-  <div class="stat">4 m · 163 min</div>
-</a><a class="pcard" href="joueurs/ousmane-camara.html">
+  <span><span class="nm">Mamady Bangré</span>
+    <span class="rl">Grenoble Foot 38</span>
+    <span class="stat">4 m · 163 min</span></span>
+</a><a class="pcard" href="joueurs/ousmane-camara.html"
+   data-name="ousmane camara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">OC</span>
-  <div class="nm">Ousmane Camara</div>
-  <div class="rl">RFC Liège</div>
-  <div class="stat">5 m · 162 min</div>
-</a><a class="pcard" href="joueurs/abdoul-kader-ouattara.html">
+  <span><span class="nm">Ousmane Camara</span>
+    <span class="rl">RFC Liège</span>
+    <span class="stat">5 m · 162 min</span></span>
+</a><a class="pcard" href="joueurs/abdoul-kader-ouattara.html"
+   data-name="abdoul kader ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AO</span>
-  <div class="nm">Abdoul Kader Ouattara</div>
-  <div class="rl">Cercle Brugge</div>
-  <div class="stat">3 m · 149 min</div>
-</a><a class="pcard" href="joueurs/issouf-kabore.html">
+  <span><span class="nm">Abdoul Kader Ouattara</span>
+    <span class="rl">Cercle Brugge</span>
+    <span class="stat">3 m · 149 min</span></span>
+</a><a class="pcard" href="joueurs/issouf-kabore.html"
+   data-name="issouf kabore" data-chan="1">
   <span class="pic avatar" aria-hidden="true">IK</span>
-  <div class="nm">Issouf Kaboré</div>
-  <div class="rl">Al-Hilal Omdurman</div>
-  <div class="stat">3 m · 132 min</div>
-</a><a class="pcard" href="joueurs/abdoulaye-toure.html">
+  <span><span class="nm">Issouf Kaboré</span>
+    <span class="rl">Al-Hilal Omdurman</span>
+    <span class="stat">3 m · 132 min</span></span>
+</a><a class="pcard" href="joueurs/abdoulaye-toure.html"
+   data-name="abdoulaye toure" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AT</span>
-  <div class="nm">Abdoulaye Toure</div>
-  <div class="rl"></div>
-  <div class="stat">2 m · 131 min</div>
-</a><a class="pcard" href="joueurs/romain-lougoutiogue.html">
+  <span><span class="nm">Abdoulaye Toure</span>
+    <span class="rl">—</span>
+    <span class="stat">2 m · 131 min</span></span>
+</a><a class="pcard" href="joueurs/romain-lougoutiogue.html"
+   data-name="romain lougoutiogue" data-chan="0">
   <span class="pic avatar" aria-hidden="true">RL</span>
-  <div class="nm">Romain Lougoutiogue</div>
-  <div class="rl">AS Sonabel</div>
-  <div class="stat">2 m · 131 min</div>
-</a><a class="pcard" href="joueurs/zakaria-sanogo.html">
+  <span><span class="nm">Romain Lougoutiogue</span>
+    <span class="rl">AS Sonabel</span>
+    <span class="stat">2 m · 131 min</span></span>
+</a><a class="pcard" href="joueurs/zakaria-sanogo.html"
+   data-name="zakaria sanogo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">ZS</span>
-  <div class="nm">Zakaria Sanogo</div>
-  <div class="rl">AS Douanes</div>
-  <div class="stat">5 m · 131 min</div>
-</a><a class="pcard" href="joueurs/damassi-konate.html">
+  <span><span class="nm">Zakaria Sanogo</span>
+    <span class="rl">AS Douanes</span>
+    <span class="stat">5 m · 131 min</span></span>
+</a><a class="pcard" href="joueurs/damassi-konate.html"
+   data-name="damassi konate" data-chan="1">
   <span class="pic avatar" aria-hidden="true">DK</span>
-  <div class="nm">Damassi Konaté</div>
-  <div class="rl">AS Mangasport</div>
-  <div class="stat">1 m · 47 min</div>
-</a><a class="pcard" href="joueurs/eric-traore.html">
+  <span><span class="nm">Damassi Konaté</span>
+    <span class="rl">AS Mangasport</span>
+    <span class="stat">1 m · 47 min</span></span>
+</a><a class="pcard" href="joueurs/eric-traore.html"
+   data-name="eric traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">ET</span>
-  <div class="nm">Eric Traoré</div>
-  <div class="rl">Pyramids</div>
-  <div class="stat">1 m · 23 min</div>
-</a><a class="pcard" href="joueurs/hamed-blakiss-ouattara.html">
+  <span><span class="nm">Eric Traoré</span>
+    <span class="rl">Pyramids</span>
+    <span class="stat">1 m · 23 min</span></span>
+</a><a class="pcard" href="joueurs/hamed-blakiss-ouattara.html"
+   data-name="hamed blakiss ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HO</span>
-  <div class="nm">Hamed Blakiss Ouattara</div>
-  <div class="rl"></div>
-  <div class="stat">1 m · 11 min</div>
-</a><a class="pcard" href="joueurs/hassim-traore.html">
+  <span><span class="nm">Hamed Blakiss Ouattara</span>
+    <span class="rl">—</span>
+    <span class="stat">1 m · 11 min</span></span>
+</a><a class="pcard" href="joueurs/hassim-traore.html"
+   data-name="hassim traore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HT</span>
-  <div class="nm">Hassim Traore</div>
-  <div class="rl"></div>
-  <div class="stat">1 m · 10 min</div>
-</a><a class="pcard" href="joueurs/jack-diarra.html">
+  <span><span class="nm">Hassim Traore</span>
+    <span class="rl">—</span>
+    <span class="stat">1 m · 10 min</span></span>
+</a><a class="pcard" href="joueurs/jack-diarra.html"
+   data-name="jack diarra" data-chan="0">
   <span class="pic avatar" aria-hidden="true">JD</span>
-  <div class="nm">Jack Diarra</div>
-  <div class="rl">Espérance Sportive De </div>
-  <div class="stat">1 m · 7 min</div>
-</a><a class="pcard" href="joueurs/abdel-rachid-zagre.html">
+  <span><span class="nm">Jack Diarra</span>
+    <span class="rl">Espérance Sportive D</span>
+    <span class="stat">1 m · 7 min</span></span>
+</a><a class="pcard" href="joueurs/abdel-rachid-zagre.html"
+   data-name="abdel rachid zagre" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AZ</span>
-  <div class="nm">Abdel Rachid Zagré</div>
-  <div class="rl">Ravenna</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/adolphe-belem.html">
+  <span><span class="nm">Abdel Rachid Zagré</span>
+    <span class="rl">Ravenna</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/adolphe-belem.html"
+   data-name="adolphe belem" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AB</span>
-  <div class="nm">Adolphe Belem</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/elohim-kabore.html">
+  <span><span class="nm">Adolphe Belem</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/elohim-kabore.html"
+   data-name="elohim kabore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">EK</span>
-  <div class="nm">Elohim Kaboré</div>
-  <div class="rl">Hammarby</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/faissal-zangre.html">
+  <span><span class="nm">Elohim Kaboré</span>
+    <span class="rl">Hammarby</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/faissal-zangre.html"
+   data-name="faissal zangre" data-chan="0">
   <span class="pic avatar" aria-hidden="true">FZ</span>
-  <div class="nm">Faissal Zangre</div>
-  <div class="rl">Amarante FC</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/faycal-konate.html">
+  <span><span class="nm">Faissal Zangre</span>
+    <span class="rl">Amarante FC</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/faycal-konate.html"
+   data-name="faycal konate" data-chan="0">
   <span class="pic avatar" aria-hidden="true">FK</span>
-  <div class="nm">Fayçal Konaté</div>
-  <div class="rl">MFK Karviná</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/honore-ye.html">
+  <span><span class="nm">Fayçal Konaté</span>
+    <span class="rl">MFK Karviná</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/honore-ye.html"
+   data-name="honore ye" data-chan="0">
   <span class="pic avatar" aria-hidden="true">HY</span>
-  <div class="nm">Honoré Ye</div>
-  <div class="rl">Andranik</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/ismael-seone.html">
+  <span><span class="nm">Honoré Ye</span>
+    <span class="rl">Andranik</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/ismael-seone.html"
+   data-name="ismael seone" data-chan="0">
   <span class="pic avatar" aria-hidden="true">IS</span>
-  <div class="nm">Ismaël Seone</div>
-  <div class="rl">Haugesund</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/joffrey-bazie.html">
+  <span><span class="nm">Ismaël Seone</span>
+    <span class="rl">Haugesund</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/joffrey-bazie.html"
+   data-name="joffrey bazie" data-chan="0">
   <span class="pic avatar" aria-hidden="true">JB</span>
-  <div class="nm">Joffrey Bazié</div>
-  <div class="rl">Bastia 2</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/kouame-botue.html">
+  <span><span class="nm">Joffrey Bazié</span>
+    <span class="rl">Bastia 2</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/kouame-botue.html"
+   data-name="kouame botue" data-chan="0">
   <span class="pic avatar" aria-hidden="true">KB</span>
-  <div class="nm">Kouamé Botué</div>
-  <div class="rl">Inter Turku</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/mohamed-ouattara.html">
+  <span><span class="nm">Kouamé Botué</span>
+    <span class="rl">Inter Turku</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/mohamed-ouattara.html"
+   data-name="mohamed ouattara" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MO</span>
-  <div class="nm">Mohamed Ouattara</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/moise-kabore.html">
+  <span><span class="nm">Mohamed Ouattara</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/moise-kabore.html"
+   data-name="moise kabore" data-chan="0">
   <span class="pic avatar" aria-hidden="true">MK</span>
-  <div class="nm">Moise Kaboré</div>
-  <div class="rl">SK Beveren</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/regis-ndo.html">
+  <span><span class="nm">Moise Kaboré</span>
+    <span class="rl">SK Beveren</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/regis-ndo.html"
+   data-name="regis ndo" data-chan="0">
   <span class="pic avatar" aria-hidden="true">RN</span>
-  <div class="nm">Regis Ndo</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
+  <span><span class="nm">Regis Ndo</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
 </a></div>
-</section><section>
-  <h2>? <span style="color:var(--muted);font-size:15px">
-    (3)</span></h2>
-  <div class="roster"><a class="pcard" href="joueurs/abdoul-abass-guiro.html">
+</section><section data-pos="?">
+  <h2>?
+    <span style="color:var(--muted);font-weight:400">3</span></h2>
+  <div class="roster"><a class="pcard" href="joueurs/abdoul-abass-guiro.html"
+   data-name="abdoul abass guiro" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AG</span>
-  <div class="nm">Abdoul Abass Guiro</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">3 m · 270 min</div>
-</a><a class="pcard" href="joueurs/amadou-kone.html">
+  <span><span class="nm">Abdoul Abass Guiro</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">3 m · 270 min</span></span>
+</a><a class="pcard" href="joueurs/amadou-kone.html"
+   data-name="amadou kone" data-chan="0">
   <span class="pic avatar" aria-hidden="true">AK</span>
-  <div class="nm">Amadou Koné</div>
-  <div class="rl">Burkina Faso</div>
-  <div class="stat">0 m · 0 min</div>
-</a><a class="pcard" href="joueurs/cheick-guel.html">
+  <span><span class="nm">Amadou Koné</span>
+    <span class="rl">Burkina Faso</span>
+    <span class="stat">0 m · 0 min</span></span>
+</a><a class="pcard" href="joueurs/cheick-guel.html"
+   data-name="cheick guel" data-chan="0">
   <span class="pic avatar" aria-hidden="true">CG</span>
-  <div class="nm">Cheick Guel</div>
-  <div class="rl"></div>
-  <div class="stat">0 m · 0 min</div>
+  <span><span class="nm">Cheick Guel</span>
+    <span class="rl">—</span>
+    <span class="stat">0 m · 0 min</span></span>
 </a></div>
-</section></main>
+</section>
+  <section id="tableau">
+    <h2>Tableau détaillé</h2>
+    <p class="lead">Tableau complet, triable colonne par colonne : minutes, buts, passes, dribbles, arrêts, note moyenne, club et valeur estimée.</p>
+    <div class="grid">
+      <div class="card w12"><input type="search" id="pool_search" class="search"><div class="tablewrap pool"><table id="pool_table"></table></div><p class="sub" id="pool_note"></p></div>
+    </div>
+  </section>
+</main>
 
 <footer>
   <p id="footer_text"></p>
@@ -705,7 +849,8 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script src="assets/i18n.js"></script>
 <script src="assets/core.js"></script>
-
+<script src="assets/sections/players.js"></script>
+<script src="assets/sections/roster.js"></script>
 <script src="assets/boot.js"></script>
 </body>
 </html>

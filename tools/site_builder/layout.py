@@ -83,7 +83,7 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 
 <header class="top">
   <div class="top-inner">
-    <a class="brand" href="{up}index.html"><span class="star">★</span> {SITE_NAME}</a>
+    <a class="brand" href="{up}index.html">{SITE_NAME}</a>
     <nav>{nav_items}</nav>
     <div class="lang">
       <button data-lang="fr">FR</button>

@@ -90,28 +90,28 @@ def goal_timeline(goals, subs, cards, opponent):
         assist = f" · passe {esc(g['assist_name'])}" if g["assist_name"] else ""
         side = "Burkina Faso" if kind == "bf" else opponent
         events.append((minute + added / 100, f"""<div class="tevent {kind}">
-  <span class="dot"></span><span class="min">{label}</span>
-  <span class="who">⚽ {esc(who)}{extra}</span>
-  <span class="what"> — {esc(side)}{assist}</span></div>"""))
+  <span class="min">{label}</span><span class="mark">BUT</span>
+  <span><span class="who">{esc(who)}</span>{extra}
+    <span class="what"> — {esc(side)}{assist}</span></span></div>"""))
     for c in cards:
         if c["card"] not in ("yellow", "red", "yellowRed"):
             continue
         minute = _int(c["minute"])
-        icon = "🟨" if c["card"] == "yellow" else "🟥"
+        mark = "J" if c["card"] == "yellow" else "R"
         kind = "bf" if c["is_bf"] == "1" else "opp"
         events.append((minute, f"""<div class="tevent {kind}">
-  <span class="dot"></span><span class="min">{minute}'</span>
-  <span class="who">{icon} {esc(c['name'])}</span>
-  <span class="what"> — {esc(c['reason'] or 'carton')}</span></div>"""))
+  <span class="min">{minute}'</span><span class="mark">{mark}</span>
+  <span><span class="who">{esc(c['name'])}</span>
+    <span class="what"> — {esc(c['reason'] or 'carton')}</span></span></div>"""))
     for s in subs:
         if s["is_bf"] != "1":
             continue
         minute = _int(s["minute"])
         events.append((minute + 0.5, f"""<div class="tevent bf">
-  <span class="dot"></span><span class="min">{minute}'</span>
-  <span class="who">↔ {esc(s['in_name'])}</span>
-  <span class="what"> remplace {esc(s['out_name'])}
-    {'(blessure)' if s['injury'] == '1' else ''}</span></div>"""))
+  <span class="min">{minute}'</span><span class="mark">CHG</span>
+  <span><span class="who">{esc(s['in_name'])}</span>
+    <span class="what"> pour {esc(s['out_name'])}
+    {'(blessure)' if s['injury'] == '1' else ''}</span></span></div>"""))
     if not events:
         return '<p class="sub">Aucun événement enregistré pour ce match.</p>'
     events.sort(key=lambda e: e[0])
@@ -131,11 +131,12 @@ def lineup_block(apps, players_with_pages):
             name = esc(a["name"])
             if a["player_id"] in players_with_pages:
                 name = (f'<a href="../joueurs/{esc(a["player_id"])}.html">{name}</a>')
-            marks = ""
+            bits = []
             if _int(a["goals"]):
-                marks += " ⚽" * _int(a["goals"])
+                bits.append(f"{_int(a['goals'])} but" + ("s" if _int(a["goals"]) > 1 else ""))
             if _int(a["assists"]):
-                marks += " 🅰" * _int(a["assists"])
+                bits.append(f"{_int(a['assists'])} p.d.")
+            marks = (f' <span class="what">({", ".join(bits)})</span>' if bits else "")
             rating = _num(a["rating"])
             rat = (f'<span class="mins">{_fmt(rating, 2)}</span>' if rating else
                    '<span class="mins">–</span>')

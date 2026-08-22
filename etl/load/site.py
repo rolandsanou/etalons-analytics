@@ -3,7 +3,8 @@ from datetime import date, datetime
 import pandas as pd
 
 from .. import analytics
-from ..config import SEED, SITE_DATA, STAGING, STATS_SINCE, TEAM, WIKI_TEAM_URL
+from ..config import (CONTACT_EMAIL, SEED, SITE_DATA, STAGING, STATS_SINCE, TEAM,
+                      WIKI_TEAM_URL)
 from ..transform import matches as matches_mod
 from ..util import read_csv, read_json, write_json
 from .formations import build_formations
@@ -184,7 +185,9 @@ def run():
                _with_fragments("history", build_history_json()))
     write_json(SITE_DATA / "elo.json", _with_fragments("elo", build_elo_json()))
     write_json(SITE_DATA / "meta.json", {
+        "updated_on": date.today().isoformat(),
         "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "contact": CONTACT_EMAIL,
         "team": TEAM,
         "stats_since": STATS_SINCE.isoformat(),
         "sources": {

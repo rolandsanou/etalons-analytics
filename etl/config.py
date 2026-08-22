@@ -31,6 +31,9 @@ WC_2030 = date(2030, 6, 15)
 
 USER_AGENT = "etalons-analytics/0.2 (open-source data pipeline)"
 
+# published on the site so readers can report an error or offer data
+CONTACT_EMAIL = "rolandS01@outlook.fr"
+
 TOP5_LEAGUES = {"England", "Spain", "Italy", "Germany", "France"}
 
 # rough peak-age windows by position, inclusive

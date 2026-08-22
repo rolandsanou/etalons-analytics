@@ -52,8 +52,15 @@ APPEARANCE_FIELDS = (["event_id", "date", "tournament", "opponent", "venue", "gf
                      + sorted(set(STATS_MAP.values())))
 
 EVENT_FIELDS = ["event_id", "date", "tournament", "opponent", "venue", "gf", "ga",
-                "pens", "result", "n_lineup", "n_with_stats",
+                "pens", "result", "comp_class", "n_lineup", "n_with_stats",
                 "bf_formation", "opp_formation"]
+
+
+def comp_class(tournament):
+    """'chan' for the African Nations Championship — a competition for
+    home-based players, fielded by a different squad and not counted as a full
+    senior international. Everything else is the senior A team."""
+    return "chan" if "nations championship" in str(tournament).lower() else "a"
 
 
 def _dob_from_ts(ts):
@@ -172,6 +179,7 @@ def run(registry):
             **base,
             "pens": f"{bf_pens}-{opp_pens}" if (bf_pens or opp_pens) else "",
             "result": "W" if gf > ga else ("D" if gf == ga else "L"),
+            "comp_class": comp_class(ev["tournament"]),
             "n_lineup": len(side.get("players", [])),
             "n_with_stats": n_with_stats,
             "bf_formation": side.get("formation") or "",

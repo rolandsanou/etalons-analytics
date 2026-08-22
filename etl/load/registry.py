@@ -12,8 +12,8 @@ Each entry:
     doc       one line describing what the analysis answers (used by the docs)
 """
 
-from . import (coaches, leadership, performance, pipeline, predictions,
-               resilience, style)
+from . import (backtest, coaches, leadership, performance, pipeline, predictions,
+               resilience, stability, style)
 
 ANALYSES = [
     {
@@ -61,7 +61,15 @@ ANALYSES = [
         "name": "predictions",
         "doc": "Elo expectations vs CAF rivals with a calibrated draw rate.",
         "marts": [],
-        "site": {"elo": {"predictions": predictions.predictions_json}},
+        "site": {"elo": {"predictions": predictions.predictions_json,
+                         "backtest": backtest.backtest_json}},
+    },
+    {
+        "name": "stability",
+        "doc": "Starting-eleven churn and minutes concentration per coach era.",
+        "marts": [("squad_stability.csv", stability.STABILITY_FIELDS,
+                   stability.build_stability)],
+        "site": {"team": {"stability": stability.stability_json}},
     },
     {
         "name": "resilience",

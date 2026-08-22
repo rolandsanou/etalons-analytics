@@ -37,7 +37,7 @@ Per-match performance, plus the reconstructed presence window.
 Match dimension for player analysis: score, formations, stats coverage.
 
 - **Grain**: one row per match (with lineups)
-- **Columns** (13): `event_id`, `date`, `tournament`, `opponent`, `venue`, `gf`, `ga`, `pens`, `result`, `n_lineup`, `n_with_stats`, `bf_formation`, `opp_formation`
+- **Columns** (14): `event_id`, `date`, `tournament`, `opponent`, `venue`, `gf`, `ga`, `pens`, `result`, `comp_class`, `n_lineup`, `n_with_stats`, `bf_formation`, `opp_formation`
 
 ### `match_states.csv`
 
@@ -123,7 +123,7 @@ Latest club season per active player (apps, minutes, rating).
 Per-player aggregates over the study window plus identity and club form.
 
 - **Grain**: one row per player
-- **Columns** (67): `player_id`, `name`, `pos`, `dob`, `age`, `club`, `club_country`, `club_v`, `club_country_v`, `league_v`, `club_source`, `status`, `last_seen`, `market_value_eur`, `contract_until`, `height`, `foot`, `club_apps_season`, `club_minutes_season`, `club_rating_season`, `club_season`, `club_form_as_of`, `league_group`, `caps`, `goals_career`, `n_windows`, `windows`, `matchday_squads`, `apps`, `starts`, `detailed_apps`, `rating_avg`, `pass_pct`, `dribble_pct`, `minutes_per_app`, `goals_per90`, `sofa_id`, `source`, `minutes`, `goals`, `assists`, `shots`, `shots_on_target`, `passes`, `passes_accurate`, `key_passes`, `crosses`, `crosses_accurate`, `dribbles_attempted`, `dribbles_won`, `tackles`, `tackles_won`, `interceptions`, `clearances`, `recoveries`, `duels_won`, `duels_lost`, `aerials_won`, `aerials_lost`, `fouls`, `fouled`, `dispossessed`, `touches`, `saves`, `saves_inside_box`, `punches`, `high_claims`
+- **Columns** (68): `player_id`, `name`, `pos`, `dob`, `age`, `club`, `club_country`, `club_v`, `club_country_v`, `league_v`, `club_source`, `status`, `last_seen`, `market_value_eur`, `contract_until`, `height`, `foot`, `club_apps_season`, `club_minutes_season`, `club_rating_season`, `club_season`, `club_form_as_of`, `league_group`, `caps`, `goals_career`, `n_windows`, `windows`, `matchday_squads`, `apps`, `starts`, `detailed_apps`, `rating_avg`, `pass_pct`, `dribble_pct`, `minutes_per_app`, `goals_per90`, `chan_only`, `sofa_id`, `source`, `minutes`, `goals`, `assists`, `shots`, `shots_on_target`, `passes`, `passes_accurate`, `key_passes`, `crosses`, `crosses_accurate`, `dribbles_attempted`, `dribbles_won`, `tackles`, `tackles_won`, `interceptions`, `clearances`, `recoveries`, `duels_won`, `duels_lost`, `aerials_won`, `aerials_lost`, `fouls`, `fouled`, `dispossessed`, `touches`, `saves`, `saves_inside_box`, `punches`, `high_claims`
 
 ### `player_importance.csv`
 

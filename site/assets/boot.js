@@ -12,6 +12,9 @@ const RENDERERS = [
   ["renderMinutesChart", "c_minutes"],
   ["renderGoalsChart", "c_goals"],
   ["renderPoolTable", "pool_table"],
+  ["renderRoster", "roster_search"],
+  ["renderBacktest", "backtest_table"],
+  ["renderStability", "stability_table"],
   ["renderClubChart", "c_clubs"],
   ["renderLeagueBar", "league_bar"],
   ["renderFormsChart", "c_forms"],
@@ -66,7 +69,10 @@ function renderStatic() {
   if (DATA.meta) {
     const footer = $("footer_text");
     if (footer) {
-      footer.innerHTML = t("footer", { date: DATA.meta.generated_at.slice(0, 10) });
+      footer.innerHTML = t("footer", {
+        date: DATA.meta.updated_on || DATA.meta.generated_at.slice(0, 10),
+        mail: DATA.meta.contact,
+      });
     }
   }
 }

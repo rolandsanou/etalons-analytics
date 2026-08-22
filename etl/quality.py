@@ -325,6 +325,23 @@ def _check_timeline(report):
                    f"{pct}% of {len(played)} presences deviate beyond stoppage allowance"))
 
 
+def _check_comp_class(report):
+    events = read_csv(STAGING / "events.csv")
+    if not events or "comp_class" not in events[0]:
+        report.append(("events: competition class", "FAIL", "comp_class column missing"))
+        return
+    chan = [e for e in events if e["comp_class"] == "chan"]
+    unset = [e for e in events if not e["comp_class"]]
+    report.append(("events: competition class set", "FAIL" if unset else "PASS",
+                   f"{len(chan)} CHAN matches (home-based squad) separated from "
+                   f"{len(events) - len(chan)} senior A matches"))
+    profiles = read_csv(MARTS / "player_profile.csv") if (MARTS / "player_profile.csv").exists() else []
+    chan_only = [p for p in profiles if p.get("chan_only") == "1"]
+    report.append(("players: CHAN-only", "INFO",
+                   f"{len(chan_only)} players have never appeared for the senior A team "
+                   "(CHAN appearances only) — excluded from A-team squad stability"))
+
+
 def _check_events(report):
     events = read_csv(STAGING / "events.csv")
     if not events:
@@ -352,6 +369,7 @@ def run():
     _check_callups(report, ids)
     _check_appearances(report, ids)
     _check_events(report)
+    _check_comp_class(report)
     _check_goal_events(report)
     _check_penalties(report)
     _check_captains(report)

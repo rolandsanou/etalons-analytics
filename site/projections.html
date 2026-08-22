@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projections — Étalons Analytics</title>
-<meta name="description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes et attentes Elo.">
+<meta name="description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes, attentes Elo et vérification du modèle.">
 <meta property="og:title" content="Projections — Étalons Analytics">
-<meta property="og:description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes et attentes Elo.">
+<meta property="og:description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes, attentes Elo et vérification du modèle.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 <link rel="stylesheet" href="assets/style.css">
@@ -16,7 +16,7 @@
 
 <header class="top">
   <div class="top-inner">
-    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <a class="brand" href="index.html">Étalons Analytics</a>
     <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj" class="on"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
     <div class="lang">
       <button data-lang="fr">FR</button>
@@ -41,6 +41,11 @@
   <p class="lead" data-i18n="s_pred_lead"></p>
   <div class="grid"><div class="card w8" id="card_pred"><h3 data-i18n="c_pred"></h3><p class="sub" data-i18n="c_pred_sub"></p><div class="chart tall" id="c_pred"></div></div><div class="card w4" id="card_pred_note"><h3 data-i18n="c_pred_note"></h3><div id="pred_note"></div></div></div>
 </section>
+  <section id="modele">
+  <h2 data-i18n="s_model"></h2>
+  <p class="lead" data-i18n="s_model_lead"></p><p class="sub" id="bt_scope"></p>
+  <div class="grid"><div class="card w4" id="card_bt"><h3 data-i18n="c_bt"></h3><p class="sub" data-i18n="c_bt_sub"></p><div class="tablewrap"><table id="backtest_table"></table></div></div><div class="card w5" id="card_calibration"><h3 data-i18n="c_calibration"></h3><p class="sub" data-i18n="c_calibration_sub"></p><div class="chart short" id="c_calibration"></div></div><div class="card w3"><h3 data-i18n="c_bt_surprises"></h3><p class="sub" data-i18n="c_bt_surprises_sub"></p><div class="tablewrap"><table id="bt_surprises"></table></div></div></div>
+</section>
 </main>
 
 <footer>
@@ -53,6 +58,7 @@
 <script src="assets/core.js"></script>
 <script src="assets/sections/outlook.js"></script>
 <script src="assets/sections/predictions.js"></script>
+<script src="assets/sections/model.js"></script>
 <script src="assets/boot.js"></script>
 </body>
 </html>

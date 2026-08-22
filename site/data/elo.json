@@ -2623,11 +2623,162 @@
     "opponent": "Morocco",
     "opp_elo": 2027,
     "diff": -376,
-    "win": 0.0,
-    "draw": 0.206,
-    "loss": 0.794
+    "win": 0.026,
+    "draw": 0.155,
+    "loss": 0.819
    }
   ],
   "fixtures": []
+ },
+ "backtest": {
+  "available": true,
+  "train": {
+   "matches": 387,
+   "until": "2022-01-01",
+   "draw_peak": 0.278,
+   "draw_width": 511.5,
+   "n_close": 108
+  },
+  "test": {
+   "matches": 61,
+   "from": "2022-01-01"
+  },
+  "brier": {
+   "model": 0.519,
+   "base_rates": 0.662,
+   "uniform": 0.667,
+   "skill_vs_base": 21.6
+  },
+  "accuracy": {
+   "hits": 39,
+   "n": 61,
+   "pct": 63.9
+  },
+  "calibration": [
+   {
+    "band": "0–20 %",
+    "n": 11,
+    "predicted": 13.1,
+    "observed": 0.0
+   },
+   {
+    "band": "20–40 %",
+    "n": 7,
+    "predicted": 26.2,
+    "observed": 28.6
+   },
+   {
+    "band": "40–60 %",
+    "n": 23,
+    "predicted": 52.6,
+    "observed": 56.5
+   },
+   {
+    "band": "60–80 %",
+    "n": 18,
+    "predicted": 68.7,
+    "observed": 66.7
+   },
+   {
+    "band": "80–100 %",
+    "n": 2,
+    "predicted": 92.1,
+    "observed": 100.0
+   }
+  ],
+  "biggest_surprises": [
+   {
+    "date": "2024-11-18",
+    "opponent": "Malawi",
+    "result": "L",
+    "win": 0.687,
+    "draw": 0.223,
+    "loss": 0.089,
+    "brier": 1.352
+   },
+   {
+    "date": "2026-03-31",
+    "opponent": "Guinea-Bissau",
+    "result": "D",
+    "win": 0.762,
+    "draw": 0.191,
+    "loss": 0.046,
+    "brier": 1.237
+   },
+   {
+    "date": "2023-09-08",
+    "opponent": "Eswatini",
+    "result": "D",
+    "win": 0.751,
+    "draw": 0.197,
+    "loss": 0.052,
+    "brier": 1.212
+   },
+   {
+    "date": "2023-03-28",
+    "opponent": "Togo",
+    "result": "D",
+    "win": 0.735,
+    "draw": 0.204,
+    "loss": 0.061,
+    "brier": 1.178
+   },
+   {
+    "date": "2024-09-06",
+    "opponent": "Senegal",
+    "result": "D",
+    "win": 0.066,
+    "draw": 0.208,
+    "loss": 0.726,
+    "brier": 1.159
+   }
+  ],
+  "best_calls": [
+   {
+    "date": "2025-09-05",
+    "opponent": "Djibouti",
+    "result": "W",
+    "win": 0.928,
+    "draw": 0.062,
+    "loss": 0.01,
+    "brier": 0.009
+   },
+   {
+    "date": "2025-03-21",
+    "opponent": "Djibouti",
+    "result": "W",
+    "win": 0.913,
+    "draw": 0.075,
+    "loss": 0.012,
+    "brier": 0.013
+   },
+   {
+    "date": "2022-03-29",
+    "opponent": "Belgium",
+    "result": "L",
+    "win": 0.015,
+    "draw": 0.09,
+    "loss": 0.895,
+    "brier": 0.019
+   },
+   {
+    "date": "2022-06-07",
+    "opponent": "Eswatini",
+    "result": "W",
+    "win": 0.761,
+    "draw": 0.192,
+    "loss": 0.047,
+    "brier": 0.096
+   },
+   {
+    "date": "2022-09-27",
+    "opponent": "Comoros",
+    "result": "W",
+    "win": 0.758,
+    "draw": 0.193,
+    "loss": 0.048,
+    "brier": 0.098
+   }
+  ]
  }
 }

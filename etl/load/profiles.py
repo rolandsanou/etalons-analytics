@@ -21,7 +21,7 @@ PROFILE_FIELDS = (["player_id", "name", "pos", "dob", "age", "club", "club_count
                    "league_group", "caps", "goals_career", "n_windows", "windows",
                    "matchday_squads", "apps", "starts", "detailed_apps", "rating_avg",
                    "pass_pct", "dribble_pct", "minutes_per_app", "goals_per90",
-                   "sofa_id", "source"] + SUM_COLS)
+                   "chan_only", "sofa_id", "source"] + SUM_COLS)
 
 
 def _num(x, cast=int, default=0):
@@ -35,6 +35,12 @@ def build_profiles(today):
     players = read_csv(STAGING / "players.csv")
     callups = read_csv(STAGING / "callups.csv")
     apps = read_csv(STAGING / "appearances.csv")
+    # CHAN is a home-based-players competition with its own squad: track which
+    # players have never appeared for the senior A team
+    chan_events = {e["event_id"] for e in read_csv(STAGING / "events.csv")
+                   if e.get("comp_class") == "chan"}
+    a_team_players = {a["player_id"] for a in apps
+                      if a["event_id"] not in chan_events}
     cf_path = STAGING / "club_form.csv"
     club_form = ({r["player_id"]: r for r in read_csv(cf_path)}
                  if cf_path.exists() else {})
@@ -107,6 +113,7 @@ def build_profiles(today):
             "dribble_pct": round(100 * g.get("dribbles_won", 0) / dr_att, 1) if dr_att else "",
             "minutes_per_app": round(minutes / apps_n, 1) if apps_n else "",
             "goals_per90": round(90 * g.get("goals", 0) / minutes, 2) if minutes >= 180 else "",
+            "chan_only": int(bool(g) and p["player_id"] not in a_team_players),
             "sofa_id": p["sofa_id"],
             "source": p["source"],
         }
