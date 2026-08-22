@@ -196,6 +196,25 @@ def _check_penalties(report):
                    + ("; MISMATCH: " + "; ".join(mismatch) if mismatch else "")))
 
 
+def _check_club_form(report):
+    path = STAGING / "club_form.csv"
+    if not path.exists():
+        return
+    form = read_csv(path)
+    players = read_csv(STAGING / "players.csv")
+    targets = [p for p in players if p.get("status") in ("active", "fringe") and p.get("sofa_id")]
+    covered = {r["player_id"] for r in form}
+    pct = round(100 * sum(1 for p in targets if p["player_id"] in covered)
+                / len(targets), 1) if targets else 0
+    report.append(("club form: coverage of active pool", "WARN" if pct < 70 else "PASS",
+                   f"{pct}% of {len(targets)} active/fringe players have a club season"))
+    seasons = {}
+    for r in form:
+        seasons[r["season_year"]] = seasons.get(r["season_year"], 0) + 1
+    report.append(("club form: season labels", "INFO",
+                   ", ".join(f"{k or '?'}={v}" for k, v in sorted(seasons.items(), reverse=True))))
+
+
 def _check_youth(report):
     path = STAGING / "youth_callups.csv"
     if not path.exists():
@@ -283,6 +302,7 @@ def run():
     _check_captains(report)
     _check_coaches(report)
     _check_youth(report)
+    _check_club_form(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)

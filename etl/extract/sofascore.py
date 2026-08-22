@@ -1,3 +1,4 @@
+import re
 from datetime import date, datetime, timezone
 from urllib.parse import quote
 
@@ -11,6 +12,33 @@ LINEUPS = OUT / "lineups"
 INCIDENTS = OUT / "incidents"
 PLAYERS_DIR = OUT / "players"
 SEARCH_DIR = OUT / "search"
+CLUB_FORM_DIR = OUT / "club_form"
+
+NT_COMP_RE = re.compile(r"africa cup|world cup|friendl|wafu|cosafa|african nations"
+                        r"|olympic|nations league|world championship"
+                        r"|\bu-?1[5-9]\b|\bu-?2[0-3]\b", re.I)
+CUP_RE = re.compile(r"cup|kupa|coupe|pokal|beker|ta[cç]a|copa|champions league"
+                    r"|europa|conference", re.I)
+
+
+def pick_club_seasons(seasons_data, limit=3):
+    """Latest season of club tournaments, leagues before cups, listed order kept."""
+    cands = []
+    for ut in seasons_data.get("uniqueTournamentSeasons", []):
+        name = (ut.get("uniqueTournament") or {}).get("name", "")
+        if NT_COMP_RE.search(name):
+            continue
+        seasons = ut.get("seasons") or []
+        if not seasons:
+            continue
+        cands.append({
+            "tournament": name,
+            "ut_id": ut["uniqueTournament"]["id"],
+            "season_id": seasons[0]["id"],
+            "year": seasons[0].get("year", ""),
+        })
+    cands.sort(key=lambda c: bool(CUP_RE.search(c["tournament"])))
+    return cands[:limit]
 
 
 def _real_score(score):
@@ -156,6 +184,54 @@ def fetch_incidents(index):
     return fetched
 
 
+def fetch_club_form(force=False):
+    CLUB_FORM_DIR.mkdir(parents=True, exist_ok=True)
+    players_path = STAGING / "players.csv"
+    if not players_path.exists():
+        return 0
+    targets = [p for p in read_csv(players_path)
+               if p.get("sofa_id") and p.get("status") in ("active", "fringe")]
+    today = date.today()
+    fetched = 0
+    for p in targets:
+        sid = str(p["sofa_id"])
+        dest = CLUB_FORM_DIR / f"{sid}.json"
+        if dest.exists() and not force:
+            cached = read_json(dest)
+            stamp = cached.get("fetched_at", "")[:10]
+            fresh = False
+            try:
+                fresh = (today - date.fromisoformat(stamp)).days <= PROFILE_MAX_AGE_DAYS
+            except ValueError:
+                pass
+            # a cached zero-minute pick may just be the wrong competition — retry
+            if fresh and (cached.get("statistics") or {}).get("minutesPlayed"):
+                continue
+            if fresh and cached.get("pick") is None and "error" not in cached:
+                continue
+        payload = {"fetched_at": datetime.now().isoformat(timespec="seconds")}
+        try:
+            seasons = get_sofa_json(f"{SOFA_BASE}/player/{sid}/statistics/seasons")
+            best = None
+            for pick in pick_club_seasons(seasons):
+                st = get_sofa_json(
+                    f"{SOFA_BASE}/player/{sid}/unique-tournament/{pick['ut_id']}"
+                    f"/season/{pick['season_id']}/statistics/overall").get("statistics", {})
+                if best is None:
+                    best = (pick, st)
+                if st.get("minutesPlayed"):
+                    best = (pick, st)
+                    break
+            payload["pick"] = best[0] if best else None
+            if best:
+                payload["statistics"] = best[1]
+        except Exception as e:
+            payload["error"] = str(e)
+        write_json(dest, payload)
+        fetched += 1
+    return fetched
+
+
 def run(force=False):
     OUT.mkdir(parents=True, exist_ok=True)
     LINEUPS.mkdir(parents=True, exist_ok=True)
@@ -176,6 +252,7 @@ def run(force=False):
     ids, unlinked = _profile_targets()
     ids |= resolve_sofa_ids(unlinked, force=force)
     n_profiles = fetch_player_profiles(ids, force=False)
+    n_club = fetch_club_form(force=False)
     print(f"sofascore: {len(index)} events in window, {fetched} lineups fetched, "
           f"{n_profiles} player profiles fetched/refreshed, "
-          f"{len(unlinked)} players searched")
+          f"{len(unlinked)} players searched, {n_club} club-form files fetched/refreshed")

@@ -18,6 +18,8 @@ SUM_COLS = ["minutes", "goals", "assists", "shots", "shots_on_target", "passes",
 PROFILE_FIELDS = (["player_id", "name", "pos", "dob", "age", "club", "club_country",
                    "club_v", "club_country_v", "league_v", "club_source", "status",
                    "last_seen", "market_value_eur", "contract_until", "height", "foot",
+                   "club_apps_season", "club_minutes_season", "club_rating_season",
+                   "club_season", "club_form_as_of",
                    "league_group", "caps", "goals_career", "n_windows", "windows",
                    "matchday_squads", "apps", "starts", "detailed_apps", "rating_avg",
                    "pass_pct", "dribble_pct", "minutes_per_app", "goals_per90",
@@ -35,6 +37,9 @@ def build_profiles(today):
     players = read_csv(STAGING / "players.csv")
     callups = read_csv(STAGING / "callups.csv")
     apps = read_csv(STAGING / "appearances.csv")
+    cf_path = STAGING / "club_form.csv"
+    club_form = ({r["player_id"]: r for r in read_csv(cf_path)}
+                 if cf_path.exists() else {})
 
     windows_by_player = defaultdict(set)
     for c in callups:
@@ -82,6 +87,13 @@ def build_profiles(today):
             "contract_until": p.get("contract_until", ""),
             "height": p.get("height", ""),
             "foot": p.get("foot", ""),
+            "club_apps_season": club_form.get(p["player_id"], {}).get("apps", ""),
+            "club_minutes_season": club_form.get(p["player_id"], {}).get("minutes", ""),
+            "club_rating_season": club_form.get(p["player_id"], {}).get("rating", ""),
+            "club_season": (club_form.get(p["player_id"], {}).get("tournament", "")
+                            + " " + str(club_form.get(p["player_id"], {}).get("season_year", ""))
+                            ).strip(),
+            "club_form_as_of": club_form.get(p["player_id"], {}).get("as_of", ""),
             "league_group": league_group(p.get("club_country_v") or p["club_country"] or None),
             "caps": p["caps"],
             "goals_career": p["goals"],
