@@ -10,8 +10,24 @@ The analysis is designed to evolve with time and contributions: sources are snap
 transforms are deterministic, every metric is gated by sample size, and hand-maintained
 knowledge lives in small seed files anyone can extend — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+**Live site: https://rolandsanou.github.io/etalons-analytics/**
+
 **Docs:** [Architecture](docs/ARCHITECTURE.md) · [Data model](docs/DATA_MODEL.md) ·
 [Contributing](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
+
+## Deploying
+
+The site is served from the `gh-pages` branch (the contents of `site/` at its
+root). To publish an update:
+
+```bash
+bash tools/deploy.sh
+```
+
+`.github/workflows/pages.yml` does the same job automatically on every push to
+`main`; it is in place but idle while GitHub Actions is unavailable on the
+account. When Actions runs again, set Pages back to "GitHub Actions" in the
+repository settings and the script becomes unnecessary.
 
 ## Architecture
 
