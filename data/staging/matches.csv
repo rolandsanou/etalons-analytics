@@ -1,465 +1,465 @@
-date,opponent,venue,venue_class,gf,ga,result,tournament,comp,neutral,city,country
-1960-04-14,Gabon,N,home_delocalized,5,4,W,African Friendship Games,other,True,Tananarive,Madagascar
-1960-04-15,Madagascar,A,away,1,6,L,African Friendship Games,other,False,Tananarive,Madagascar
-1961-12-25,Ivory Coast,A,away,1,2,L,African Friendship Games,other,False,Abidjan,Ivory Coast
-1961-12-27,Liberia,N,home_delocalized,5,1,W,African Friendship Games,other,True,Abidjan,Ivory Coast
-1963-02-01,Mali,A,away,0,1,L,Friendly,friendly,False,Bamako,Mali
-1963-04-12,Gabon,N,neutral,0,4,L,African Friendship Games,other,True,Dakar,Senegal
-1963-04-14,Gambia,N,neutral,2,2,D,African Friendship Games,other,True,Dakar,Senegal
-1963-04-16,France,N,neutral,0,1,L,African Friendship Games,other,True,Dakar,Senegal
-1967-01-29,Niger,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1967-02-12,Algeria,H,home_bf,1,2,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1967-04-09,Algeria,A,away,1,3,L,African Cup of Nations qualification,afcon_qual,False,Algiers,Algeria
-1967-08-01,Niger,A,away,3,2,W,Friendly,friendly,False,Niamey,Niger
-1967-09-27,Mali,A,away,0,4,L,African Cup of Nations qualification,afcon_qual,False,Bamako,Mali
-1967-10-01,Ghana,A,away,2,5,L,Friendly,friendly,False,Accra,Ghana
-1967-11-15,Mali,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1967-11-26,Ivory Coast,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1968-02-25,Guinea,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1968-03-31,Guinea,A,away,1,3,L,Friendly,friendly,False,Conakry,Guinea
-1968-04-02,Guinea,A,away,3,1,W,Friendly,friendly,False,Conakry,Guinea
-1970-03-22,Niger,H,home_bf,3,3,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1971-11-27,Nigeria,A,away,0,4,L,Friendly,friendly,False,Lagos,Nigeria
-1971-11-30,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo
-1971-12-12,Togo,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1972-01-09,Nigeria,H,home_bf,3,3,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1973-01-08,Congo,N,neutral,0,3,L,All-African Games,other,True,Ibadan,Nigeria
-1973-01-10,Guinea,N,neutral,2,3,L,All-African Games,other,True,Ibadan,Nigeria
-1973-01-12,Egypt,N,neutral,2,4,L,All-African Games,other,True,Ibadan,Nigeria
-1973-04-15,DR Congo,H,home_bf,0,5,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1973-04-22,DR Congo,A,away,1,4,L,African Cup of Nations qualification,afcon_qual,False,Kinshasa,DR Congo
-1975-02-23,Niger,H,home_bf,4,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1975-03-23,Ghana,A,away,1,3,L,Friendly,friendly,False,Accra,Ghana
-1976-03-13,Mauritania,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso
-1976-03-28,Mauritania,A,away,2,0,W,FIFA World Cup qualification,wc_qual,False,Nouakchott,Mauritania
-1976-09-04,Ivory Coast,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso
-1976-09-26,Ivory Coast,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Abidjan,Ivory Coast
-1976-11-24,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali
-1977-03-20,Ivory Coast,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1977-03-27,Ivory Coast,A,away,1,4,L,African Cup of Nations qualification,afcon_qual,False,Abidjan,Ivory Coast
-1978-02-12,Benin,A,away,2,0,W,Friendly,friendly,False,Porto-Novo,Benin
-1978-02-19,Gabon,A,away,2,2,D,Friendly,friendly,False,Libreville,Gabon
-1978-02-26,Benin,H,home_bf,3,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1978-03-05,Nigeria,N,neutral,2,4,L,African Cup of Nations,afcon,True,Accra,Ghana
-1978-03-08,Zambia,N,neutral,0,2,L,African Cup of Nations,afcon,True,Accra,Ghana
-1978-03-10,Ghana,A,away,0,3,L,African Cup of Nations,afcon,False,Accra,Ghana
-1978-11-11,Mali,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1979-10-21,Benin,N,neutral,2,3,L,Friendly,friendly,True,Abidjan,Ivory Coast
-1979-10-23,Togo,N,neutral,3,5,L,Friendly,friendly,True,Abidjan,Ivory Coast
-1981-07-18,Nigeria,A,away,0,1,L,Friendly,friendly,False,Lagos,Nigeria
-1981-08-30,Algeria,A,away,0,7,L,African Cup of Nations qualification,afcon_qual,False,Oran,Algeria
-1981-09-06,Niger,A,away,1,2,L,Friendly,friendly,False,Niamey,Niger
-1981-09-20,Algeria,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1982-01-24,Senegal,H,home_bf,0,0,D,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso
-1982-02-15,Liberia,N,neutral,2,1,W,West African Cup,other,True,Cotonou,Benin
-1982-02-17,Togo,N,neutral,1,2,L,West African Cup,other,True,Cotonou,Benin
-1982-02-19,Ghana,N,neutral,0,1,L,West African Cup,other,True,Cotonou,Benin
-1982-02-22,Ivory Coast,N,neutral,1,1,D,West African Cup,other,True,Cotonou,Benin
-1982-10-03,Niger,H,home_bf,1,1,D,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso
-1984-08-01,Benin,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1984-08-03,Ghana,H,home_bf,0,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1984-11-11,Mali,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1984-11-17,Togo,H,home_bf,1,1,D,West African Cup,other,False,Ouagadougou,Burkina Faso
-1984-11-20,Ivory Coast,H,home_bf,2,2,D,West African Cup,other,False,Ouagadougou,Burkina Faso
-1984-11-22,Benin,H,home_bf,2,1,W,West African Cup,other,False,Ouagadougou,Burkina Faso
-1984-11-24,Ghana,H,home_bf,1,1,D,West African Cup,other,False,Ouagadougou,Burkina Faso
-1984-11-28,Ivory Coast,H,home_bf,0,2,L,West African Cup,other,False,Ouagadougou,Burkina Faso
-1986-02-23,Liberia,N,neutral,1,0,W,West African Cup,other,True,Accra,Ghana
-1986-02-24,Togo,N,home_delocalized,0,1,L,West African Cup,other,True,Accra,Ghana
-1986-02-26,Niger,N,home_delocalized,0,0,D,West African Cup,other,True,Accra,Ghana
-1986-02-27,Ghana,A,away,0,2,L,West African Cup,other,False,Accra,Ghana
-1986-03-01,Ghana,A,away,0,2,L,West African Cup,other,False,Accra,Ghana
-1986-03-02,Niger,N,home_delocalized,1,2,L,West African Cup,other,True,Accra,Ghana
-1987-01-17,Mali,A,away,0,2,L,Friendly,friendly,False,Bamako,Mali
-1987-02-01,Liberia,A,away,0,2,L,West African Cup,other,False,Monrovia,Liberia
-1987-02-05,Benin,N,home_delocalized,3,2,W,West African Cup,other,True,Monrovia,Liberia
-1987-05-21,Mauritania,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1987-11-22,Nigeria,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1987-12-06,Mali,A,away,2,1,W,Friendly,friendly,False,Bamako,Mali
-1987-12-10,Mali,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1987-12-13,Mali,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1987-12-20,Liberia,A,away,0,1,L,Friendly,friendly,False,Monrovia,Liberia
-1987-12-22,Senegal,N,home_delocalized,0,1,L,Friendly,friendly,True,Monrovia,Liberia
-1988-05-25,Ghana,H,home_bf,3,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1988-06-03,Libya,A,away,0,3,L,FIFA World Cup qualification,wc_qual,False,Tripoli,Libya
-1988-07-03,Libya,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-1988-07-24,Niger,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso
-1988-07-27,Ghana,H,home_bf,3,1,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso
-1988-07-31,Benin,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso
-1988-08-02,Mali,H,home_bf,2,1,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso
-1988-08-04,Niger,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso
-1988-10-09,Gabon,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Libreville,Gabon
-1988-10-23,Gabon,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1990-05-26,Gambia,A,away,0,0,D,Friendly,friendly,False,Banjul,Gambia
-1990-05-30,Ghana,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1990-08-19,Benin,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1990-08-27,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali
-1990-09-02,Togo,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1990-10-14,Ghana,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Accra,Ghana
-1991-01-06,Mali,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1991-01-09,Niger,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1991-01-13,Nigeria,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1991-01-27,Benin,A,away,2,1,W,African Cup of Nations qualification,afcon_qual,False,Cotonou,Benin
-1991-04-07,Mali,A,away,1,5,L,Friendly,friendly,False,Bamako,Mali
-1991-04-21,Togo,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Lomé,Togo
-1991-07-13,Ghana,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1991-07-27,Nigeria,A,away,1,7,L,African Cup of Nations qualification,afcon_qual,False,Lagos,Nigeria
-1992-12-26,Mali,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1993-01-02,Gabon,A,away,1,1,D,Friendly,friendly,False,Libreville,Gabon
-1993-01-03,Mali,N,home_delocalized,1,0,W,Friendly,friendly,True,Libreville,Gabon
-1993-05-22,Guadeloupe,N,home_delocalized,2,0,W,Friendly,friendly,True,Créteil,France
-1994-01-05,Mali,A,away,1,1,D,Friendly,friendly,False,Bamako,Mali
-1994-01-29,Guinea,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1994-01-30,Ivory Coast,H,home_bf,0,1,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1994-08-23,Niger,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1994-09-04,Morocco,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1994-12-04,Togo,A,away,0,2,L,Friendly,friendly,False,Lomé,Togo
-1995-01-22,Ivory Coast,A,away,2,2,D,African Cup of Nations qualification,afcon_qual,False,Abidjan,Ivory Coast
-1995-04-09,Morocco,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Casablanca,Morocco
-1995-07-30,Ivory Coast,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1995-10-22,Tunisia,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1995-11-29,Tunisia,A,away,0,3,L,Friendly,friendly,False,Tunis,Tunisia
-1995-12-22,Gabon,H,home_bf,2,5,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1996-01-15,Sierra Leone,N,neutral,1,2,L,African Cup of Nations,afcon,True,Bloemfontein,South Africa
-1996-01-20,Zambia,N,neutral,1,5,L,African Cup of Nations,afcon,True,Bloemfontein,South Africa
-1996-01-24,Algeria,N,neutral,1,2,L,African Cup of Nations,afcon,True,Port Elizabeth,South Africa
-1996-05-12,Niger,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1996-05-31,Mauritania,A,away,0,0,D,FIFA World Cup qualification,wc_qual,False,Nouakchott,Mauritania
-1996-06-09,Ivory Coast,A,away,1,1,D,Friendly,friendly,False,Abidjan,Ivory Coast
-1996-06-16,Mauritania,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-1996-10-19,Gabon,A,away,0,2,L,Friendly,friendly,False,Libreville,Gabon
-1996-11-09,Nigeria,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Lagos,Nigeria
-1996-11-24,Mali,A,away,0,2,L,Friendly,friendly,False,Bamako,Mali
-1996-12-20,Gabon,N,home_delocalized,1,1,D,Friendly,friendly,True,Cotonou,Benin
-1996-12-22,Ghana,N,home_delocalized,2,1,W,Friendly,friendly,True,Cotonou,Benin
-1996-12-25,Benin,A,away,1,1,D,Friendly,friendly,False,Cotonou,Benin
-1996-12-27,Benin,A,away,0,0,D,Friendly,friendly,False,Cotonou,Benin
-1997-01-12,Guinea,H,home_bf,0,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-1997-03-29,Tanzania,A,away,2,3,L,Friendly,friendly,False,Arusha,Tanzania
-1997-04-06,Kenya,A,away,3,4,L,FIFA World Cup qualification,wc_qual,False,Nairobi,Kenya
-1997-04-27,Nigeria,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-1997-05-31,Mali,H,home_bf,2,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso
-1997-06-04,Togo,A,away,0,0,D,Friendly,friendly,False,Lomé,Togo
-1997-06-08,Guinea,A,away,1,3,L,FIFA World Cup qualification,wc_qual,False,Conakry,Guinea
-1997-08-16,Kenya,H,home_bf,2,4,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-1997-11-02,Ivory Coast,A,away,0,0,D,Friendly,friendly,False,Bouaké,Ivory Coast
-1997-12-27,Ivory Coast,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-01-04,Mozambique,H,home_bf,1,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso
-1998-01-07,Mozambique,H,home_bf,4,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-01-11,Mali,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-01-27,Liberia,A,away,2,1,W,Friendly,friendly,False,Monrovia,Liberia
-1998-02-01,Namibia,N,home_delocalized,3,1,W,Friendly,friendly,True,Niamey,Niger
-1998-02-07,Cameroon,H,home_bf,0,1,L,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso
-1998-02-11,Algeria,H,home_bf,2,1,W,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso
-1998-02-15,Guinea,H,home_bf,1,0,W,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso
-1998-02-21,Tunisia,H,home_bf,1,1,D,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso
-1998-02-25,Egypt,H,home_bf,0,2,L,African Cup of Nations,afcon,False,Bobo Dioulasso,Burkina Faso
-1998-02-27,DR Congo,H,home_bf,4,4,D,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso
-1998-05-19,Cameroon,A,away,0,2,L,Friendly,friendly,False,Yaoundé,Cameroon
-1998-07-24,Niger,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-08-23,Togo,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-08-30,Ivory Coast,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-08-31,Senegal,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1998-09-27,Mali,A,away,0,1,L,Friendly,friendly,False,Bamako,Mali
-1998-10-17,Qatar,A,away,2,2,D,Friendly,friendly,False,Doha,Qatar
-1998-10-19,Oman,A,away,2,4,L,Friendly,friendly,False,Muscat,Oman
-1998-10-21,Oman,A,away,0,0,D,Friendly,friendly,False,Muscat,Oman
-1998-10-23,Bahrain,A,away,1,2,L,Friendly,friendly,False,Manama,Bahrain
-1999-01-04,Gabon,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1999-01-10,Mali,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1999-01-15,Mali,H,home_bf,4,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1999-01-23,Senegal,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Dakar,Senegal
-1999-02-20,Gabon,A,away,1,1,D,Friendly,friendly,False,Libreville,Gabon
-1999-02-28,Burundi,A,away,2,1,W,African Cup of Nations qualification,afcon_qual,False,Bujumbura,Burundi
-1999-04-03,Mali,A,away,2,5,L,Friendly,friendly,False,Bamako,Mali
-1999-04-11,Burundi,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1999-06-06,Senegal,H,home_bf,2,2,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-1999-11-07,Togo,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1999-11-10,Togo,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-1999-11-27,Congo,N,neutral,1,2,L,Friendly,friendly,True,Libreville,Gabon
-1999-11-28,Gabon,A,away,2,3,L,Friendly,friendly,False,Libreville,Gabon
-1999-12-29,Ivory Coast,A,away,1,3,L,Friendly,friendly,False,Abidjan,Ivory Coast
-2000-01-09,Gabon,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2000-01-11,Cameroon,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2000-01-20,Algeria,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2000-01-25,Senegal,N,neutral,1,3,L,African Cup of Nations,afcon,True,Kano,Nigeria
-2000-01-29,Zambia,N,neutral,1,1,D,African Cup of Nations,afcon,True,Kano,Nigeria
-2000-02-01,Egypt,N,neutral,2,4,L,African Cup of Nations,afcon,True,Kano,Nigeria
-2000-04-09,Ethiopia,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Addis Ababa,Ethiopia
-2000-04-19,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali
-2000-04-23,Ethiopia,H,home_bf,3,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2000-05-26,Algeria,A,away,0,2,L,Friendly,friendly,False,Algiers,Algeria
-2000-06-14,Kenya,A,away,1,0,W,Friendly,friendly,False,Nairobi,Kenya
-2000-06-17,Malawi,A,away,1,1,D,FIFA World Cup qualification,wc_qual,False,Blantyre,Malawi
-2000-09-03,Algeria,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Algiers,Algeria
-2000-10-07,Burundi,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2001-01-07,Togo,A,away,1,1,D,Friendly,friendly,False,Lomé,Togo
-2001-01-13,Angola,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2001-01-23,Mali,H,home_bf,0,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2001-01-27,South Africa,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Rustenburg,South Africa
-2001-02-24,Zimbabwe,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Bobo Dioulasso,Burkina Faso
-2001-03-25,Angola,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola
-2001-04-21,Malawi,H,home_bf,4,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2001-06-03,Burundi,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Bujumbura,Burundi
-2001-06-17,Algeria,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2001-07-01,South Africa,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2001-07-15,Zimbabwe,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Harare,Zimbabwe
-2001-10-15,Algeria,A,away,0,2,L,Friendly,friendly,False,Annaba,Algeria
-2001-12-16,Togo,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2001-12-22,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo
-2001-12-26,Senegal,A,away,4,2,W,Friendly,friendly,False,Dakar,Senegal
-2001-12-28,Mali,A,away,1,2,L,Friendly,friendly,False,Ségou,Mali
-2002-01-07,Cameroon,H,home_bf,1,3,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2002-01-11,Egypt,A,away,2,2,D,Friendly,friendly,False,Cairo,Egypt
-2002-01-20,South Africa,N,neutral,0,0,D,African Cup of Nations,afcon,True,Ségou,Mali
-2002-01-26,Morocco,N,neutral,1,2,L,African Cup of Nations,afcon,True,Ségou,Mali
-2002-01-30,Ghana,N,neutral,1,2,L,African Cup of Nations,afcon,True,Mopti,Mali
-2002-09-08,Congo,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Brazzaville,Congo
-2002-10-13,Central African Republic,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2002-12-27,Niger,A,away,1,1,D,Friendly,friendly,False,Niamey,Niger
-2003-03-26,Burundi,A,away,0,0,D,Friendly,friendly,False,Bujumbura,Burundi
-2003-03-30,Mozambique,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Maputo,Mozambique
-2003-05-29,Algeria,N,neutral,1,0,W,Friendly,friendly,True,Amiens,France
-2003-06-07,Mozambique,H,home_bf,4,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2003-06-21,Congo,H,home_bf,3,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2003-07-06,Central African Republic,A,away,3,0,W,African Cup of Nations qualification,afcon_qual,False,Bangui,Central African Republic
-2003-09-24,Benin,N,neutral,1,0,W,Friendly,friendly,True,Algiers,Algeria
-2003-09-26,Algeria,A,away,0,0,D,Friendly,friendly,False,Algiers,Algeria
-2003-10-23,Zimbabwe,N,home_delocalized,1,4,L,Afro-Asian Games,other,True,Hyderabad,India
-2003-11-08,Gabon,A,away,0,0,D,Friendly,friendly,False,Moanda,Gabon
-2003-11-15,Morocco,A,away,0,1,L,Friendly,friendly,False,Meknes,Morocco
-2004-01-17,Egypt,A,away,1,1,D,Friendly,friendly,False,Port Said,Egypt
-2004-01-20,Guinea,N,neutral,0,1,L,Friendly,friendly,True,Toulon,France
-2004-01-26,Senegal,N,neutral,0,0,D,African Cup of Nations,afcon,True,Tunis,Tunisia
-2004-01-30,Mali,N,neutral,1,3,L,African Cup of Nations,afcon,True,Tunis,Tunisia
-2004-02-02,Kenya,N,neutral,0,3,L,African Cup of Nations,afcon,True,Bizerte,Tunisia
-2004-05-26,Benin,A,away,0,1,L,Friendly,friendly,False,Cotonou,Benin
-2004-05-30,Libya,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2004-06-05,Ghana,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2004-06-13,Benin,H,home_bf,4,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2004-06-20,DR Congo,A,away,2,3,L,FIFA World Cup qualification,wc_qual,False,Kinshasa,DR Congo
-2004-07-03,South Africa,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Johannesburg,South Africa
-2004-08-17,Algeria,A,away,2,2,D,Friendly,friendly,False,Blida,Algeria
-2004-09-04,Uganda,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2004-10-09,Cape Verde,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Praia,Cape Verde
-2004-11-17,Morocco,A,away,0,4,L,Friendly,friendly,False,Rabat,Morocco
-2005-02-09,Algeria,A,away,0,3,L,Friendly,friendly,False,Algiers,Algeria
-2005-03-20,South Korea,N,neutral,0,1,L,Friendly,friendly,True,Dubai,United Arab Emirates
-2005-03-26,Cape Verde,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2005-05-29,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo
-2005-06-05,Ghana,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Kumasi,Ghana
-2005-06-18,DR Congo,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2005-09-03,South Africa,H,home_bf,3,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2005-10-08,Uganda,A,away,2,2,D,FIFA World Cup qualification,wc_qual,False,Kampala,Uganda
-2006-02-28,Algeria,N,neutral,0,0,D,Friendly,friendly,True,Rouen,France
-2006-08-16,Morocco,A,away,0,1,L,Friendly,friendly,False,Rabat,Morocco
-2006-08-29,Uganda,A,away,0,0,D,Friendly,friendly,False,Kampala,Uganda
-2006-09-02,Tanzania,A,away,1,2,L,African Cup of Nations qualification,afcon_qual,False,Dar es Salaam,Tanzania
-2006-10-07,Senegal,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2006-11-15,Algeria,N,neutral,2,1,W,Friendly,friendly,True,Aix-en-Provence,France
-2007-03-24,Mozambique,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2007-05-29,Zimbabwe,A,away,1,1,D,Friendly,friendly,False,Masvingo,Zimbabwe
-2007-06-03,Mozambique,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Maputo,Mozambique
-2007-06-09,Mali,H,home_bf,0,1,L,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2007-06-16,Tanzania,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2007-08-22,Mali,N,neutral,2,3,L,Friendly,friendly,True,Paris,France
-2007-09-08,Senegal,A,away,1,5,L,African Cup of Nations qualification,afcon_qual,False,Dakar,Senegal
-2008-05-24,Cape Verde,N,home_delocalized,0,1,L,Friendly,friendly,True,Alcochete,Portugal
-2008-06-01,Tunisia,A,away,2,1,W,FIFA World Cup qualification,wc_qual,False,Radès,Tunisia
-2008-06-07,Burundi,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2008-06-14,Seychelles,A,away,3,2,W,FIFA World Cup qualification,wc_qual,False,Victoria,Seychelles
-2008-06-21,Seychelles,H,home_bf,4,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2008-08-20,Bahrain,A,away,1,3,L,Friendly,friendly,False,Manama,Bahrain
-2008-09-06,Tunisia,H,home_bf,0,0,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2008-10-12,Burundi,A,away,3,1,W,FIFA World Cup qualification,wc_qual,False,Bujumbura,Burundi
-2009-02-11,Togo,N,home_delocalized,1,1,D,Friendly,friendly,True,Le Petit-Quevilly,France
-2009-03-28,Guinea,H,home_bf,4,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2009-06-06,Malawi,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Blantyre,Malawi
-2009-06-20,Ivory Coast,H,home_bf,2,3,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2009-08-12,Mali,N,neutral,0,3,L,Friendly,friendly,True,Le Petit-Quevilly,France
-2009-09-05,Ivory Coast,A,away,0,5,L,FIFA World Cup qualification,wc_qual,False,Abidjan,Ivory Coast
-2009-10-11,Guinea,N,neutral,2,1,W,FIFA World Cup qualification,wc_qual,True,Accra,Ghana
-2009-11-14,Malawi,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2010-01-11,Ivory Coast,N,neutral,0,0,D,African Cup of Nations,afcon,True,Cabinda,Angola
-2010-01-19,Ghana,N,neutral,0,1,L,African Cup of Nations,afcon,True,Luanda,Angola
-2010-08-11,Congo,N,home_delocalized,3,0,W,Friendly,friendly,True,Senlis,France
-2010-09-06,Gabon,N,home_delocalized,1,1,D,Friendly,friendly,True,Cannes,France
-2010-10-09,Gambia,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2010-11-17,Guinea,N,home_delocalized,2,1,W,Friendly,friendly,True,Mantes-la-Ville,France
-2011-02-09,Cape Verde,N,neutral,0,1,L,Friendly,friendly,True,Óbidos,Portugal
-2011-03-26,Namibia,H,home_bf,4,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2011-06-04,Namibia,A,away,4,1,W,African Cup of Nations qualification,afcon_qual,False,Windhoek,Namibia
-2011-08-10,South Africa,A,away,0,3,L,Friendly,friendly,False,Johannesburg,South Africa
-2011-09-03,Equatorial Guinea,H,home_bf,1,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso
-2011-10-08,Gambia,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Bakau,Gambia
-2011-11-11,Mali,N,home_delocalized,1,1,D,Friendly,friendly,True,Saint-Leu-la-Forêt,France
-2011-11-15,Guinea,N,neutral,1,1,D,Friendly,friendly,True,Viry-Châtillon,France
-2012-01-09,Gabon,A,away,0,0,D,Friendly,friendly,False,Bitam,Gabon
-2012-01-22,Angola,N,neutral,1,2,L,African Cup of Nations,afcon,True,Malabo,Equatorial Guinea
-2012-01-26,Ivory Coast,N,neutral,0,2,L,African Cup of Nations,afcon,True,Malabo,Equatorial Guinea
-2012-01-30,Sudan,N,neutral,1,2,L,African Cup of Nations,afcon,True,Bata,Equatorial Guinea
-2012-02-29,Morocco,A,away,0,2,L,Friendly,friendly,False,Marrakesh,Morocco
-2012-05-26,Benin,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2012-06-02,Congo,H,home_bf,0,3,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2012-06-09,Gabon,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Libreville,Gabon
-2012-08-14,Togo,N,home_delocalized,3,0,W,Friendly,friendly,True,Saint-Leu-la-Forêt,France
-2012-09-08,Central African Republic,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Bangui,Central African Republic
-2012-10-14,Central African Republic,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2012-11-14,DR Congo,A,away,1,0,W,Friendly,friendly,False,Kinshasa,DR Congo
-2012-12-26,Bahrain,A,away,0,0,D,Friendly,friendly,False,Riffa,Bahrain
-2013-01-17,Eswatini,N,neutral,3,0,W,Friendly,friendly,True,Nelspruit,South Africa
-2013-01-21,Nigeria,N,neutral,1,1,D,African Cup of Nations,afcon,True,Nelspruit,South Africa
-2013-01-25,Ethiopia,N,neutral,4,0,W,African Cup of Nations,afcon,True,Nelspruit,South Africa
-2013-01-29,Zambia,N,neutral,0,0,D,African Cup of Nations,afcon,True,Nelspruit,South Africa
-2013-02-03,Togo,N,neutral,1,0,W,African Cup of Nations,afcon,True,Nelspruit,South Africa
-2013-02-06,Ghana,N,neutral,1,1,D,African Cup of Nations,afcon,True,Nelspruit,South Africa
-2013-02-10,Nigeria,N,neutral,0,1,L,African Cup of Nations,afcon,True,Johannesburg,South Africa
-2013-03-23,Niger,H,home_bf,4,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2013-06-02,Algeria,A,away,0,2,L,Friendly,friendly,False,Blida,Algeria
-2013-06-09,Niger,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Niamey,Niger
-2013-06-15,Congo,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Pointe-Noire,Congo
-2013-06-29,Libya,A,away,1,2,L,Friendly,friendly,False,Misrata,Libya
-2013-08-14,Morocco,A,away,2,1,W,Friendly,friendly,False,Tangier,Morocco
-2013-08-17,South Africa,A,away,0,2,L,Friendly,friendly,False,Johannesburg,South Africa
-2013-09-07,Gabon,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2013-09-10,Nigeria,A,away,1,4,L,Friendly,friendly,False,Kaduna,Nigeria
-2013-09-30,Botswana,A,away,0,1,L,Friendly,friendly,False,Gaborone,Botswana
-2013-10-12,Algeria,H,home_bf,3,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2013-11-19,Algeria,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Blida,Algeria
-2014-03-05,Comoros,N,home_delocalized,1,1,D,Friendly,friendly,True,Martigues,France
-2014-05-21,Senegal,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2014-09-06,Lesotho,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2014-09-10,Angola,A,away,3,0,W,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola
-2014-10-11,Gabon,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Libreville,Gabon
-2014-10-15,Gabon,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2014-11-15,Lesotho,A,away,1,0,W,African Cup of Nations qualification,afcon_qual,False,Maseru,Lesotho
-2014-11-19,Angola,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2015-01-10,Eswatini,N,home_delocalized,5,1,W,Friendly,friendly,True,Nelspruit,South Africa
-2015-01-13,Botswana,N,neutral,2,0,W,Friendly,friendly,True,Nelspruit,South Africa
-2015-01-17,Gabon,N,neutral,0,2,L,African Cup of Nations,afcon,True,Bata,Equatorial Guinea
-2015-01-21,Equatorial Guinea,A,away,0,0,D,African Cup of Nations,afcon,False,Bata,Equatorial Guinea
-2015-01-25,Congo,N,neutral,1,2,L,African Cup of Nations,afcon,True,Ebebiyín,Equatorial Guinea
-2015-05-12,Kazakhstan,A,away,0,0,D,Friendly,friendly,False,Almaty,Kazakhstan
-2015-05-29,Corsica,A,away,0,1,L,Friendly,friendly,False,Bastia,France
-2015-06-06,Cameroon,N,home_delocalized,2,3,L,Friendly,friendly,True,Colombes,France
-2015-06-13,Comoros,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2015-08-30,Niger,A,away,0,0,D,Friendly,friendly,False,Niamey,Niger
-2015-09-05,Botswana,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Francistown,Botswana
-2015-10-09,Mali,N,home_delocalized,1,4,L,Friendly,friendly,True,Troyes,France
-2015-11-12,Benin,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Cotonou,Benin
-2015-11-17,Benin,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2016-02-27,Egypt,A,away,0,2,L,Friendly,friendly,False,Alexandria,Egypt
-2016-03-26,Uganda,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2016-03-29,Uganda,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Kampala,Uganda
-2016-06-05,Comoros,A,away,1,0,W,African Cup of Nations qualification,afcon_qual,False,Moroni,Comoros
-2016-08-24,Uzbekistan,A,away,0,1,L,Friendly,friendly,False,Tashkent,Uzbekistan
-2016-09-04,Botswana,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2016-10-08,South Africa,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2016-11-12,Cape Verde,A,away,2,0,W,FIFA World Cup qualification,wc_qual,False,Praia,Cape Verde
-2017-01-07,Mali,N,home_delocalized,2,1,W,Friendly,friendly,True,Marrakesh,Morocco
-2017-01-14,Cameroon,N,neutral,1,1,D,African Cup of Nations,afcon,True,Libreville,Gabon
-2017-01-18,Gabon,A,away,1,1,D,African Cup of Nations,afcon,False,Libreville,Gabon
-2017-01-22,Guinea-Bissau,N,neutral,2,0,W,African Cup of Nations,afcon,True,Franceville,Gabon
-2017-01-28,Tunisia,N,neutral,2,0,W,African Cup of Nations,afcon,True,Libreville,Gabon
-2017-02-01,Egypt,N,neutral,1,1,D,African Cup of Nations,afcon,True,Libreville,Gabon
-2017-02-04,Ghana,N,neutral,1,0,W,African Cup of Nations,afcon,True,Port-Gentil,Gabon
-2017-03-24,Morocco,A,away,0,2,L,Friendly,friendly,False,Marrakesh,Morocco
-2017-05-04,Benin,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2017-05-21,Benin,A,away,2,2,D,Friendly,friendly,False,Cotonou,Benin
-2017-06-02,Chile,A,away,0,3,L,Friendly,friendly,False,Santiago,Chile
-2017-06-10,Angola,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2017-07-16,North Korea,N,home_delocalized,3,3,D,King's Cup,other,True,Bangkok,Thailand
-2017-09-02,Senegal,A,away,0,0,D,FIFA World Cup qualification,wc_qual,False,Dakar,Senegal
-2017-09-05,Senegal,H,home_bf,2,2,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2017-10-07,South Africa,A,away,1,3,L,FIFA World Cup qualification,wc_qual,False,Johannesburg,South Africa
-2017-11-14,Cape Verde,H,home_bf,4,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2018-03-22,Guinea-Bissau,N,home_delocalized,2,0,W,Friendly,friendly,True,Limeil-Brévannes,France
-2018-03-27,Kosovo,N,neutral,0,2,L,Friendly,friendly,True,Franconville,France
-2018-05-27,Cameroon,N,neutral,1,0,W,Friendly,friendly,True,Beauvais,France
-2018-09-08,Mauritania,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Nouakchott,Mauritania
-2018-10-13,Botswana,H,home_bf,3,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2018-10-16,Botswana,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Francistown,Botswana
-2018-11-18,Angola,A,away,1,2,L,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola
-2019-03-22,Mauritania,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2019-06-09,DR Congo,N,neutral,0,0,D,Friendly,friendly,True,Marbella,Spain
-2019-09-04,Libya,N,neutral,1,0,W,Friendly,friendly,True,Marrakesh,Morocco
-2019-09-06,Morocco,A,away,1,1,D,Friendly,friendly,False,Marrakesh,Morocco
-2019-10-10,Gabon,N,neutral,0,1,L,Friendly,friendly,True,Paris,France
-2019-11-13,Uganda,H,home_bf,0,0,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2019-11-17,South Sudan,N,neutral,2,1,W,African Cup of Nations qualification,afcon_qual,True,Khartoum,Sudan
-2020-10-09,DR Congo,N,home_delocalized,3,0,W,Friendly,friendly,True,Mohammedia,Morocco
-2020-10-12,Madagascar,N,home_delocalized,2,1,W,Friendly,friendly,True,El Jadida,Morocco
-2020-11-12,Malawi,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2020-11-16,Malawi,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Blantyre,Malawi
-2021-03-24,Uganda,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Kampala,Uganda
-2021-03-29,South Sudan,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso
-2021-06-05,Ivory Coast,A,away,1,2,L,Friendly,friendly,False,Abidjan,Ivory Coast
-2021-06-12,Morocco,A,away,0,1,L,Friendly,friendly,False,Rabat,Morocco
-2021-09-02,Niger,N,neutral,2,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2021-09-07,Algeria,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2021-10-08,Djibouti,N,neutral,4,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2021-10-11,Djibouti,N,home_delocalized,2,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2021-11-12,Niger,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2021-11-16,Algeria,A,away,2,2,D,FIFA World Cup qualification,wc_qual,False,Blida,Algeria
-2021-12-30,Mauritania,N,neutral,0,0,D,Friendly,friendly,True,Abu Dhabi,United Arab Emirates
-2022-01-02,Gabon,N,neutral,3,0,W,Friendly,friendly,True,Dubai,United Arab Emirates
-2022-01-09,Cameroon,A,away,1,2,L,African Cup of Nations,afcon,False,Yaoundé,Cameroon
-2022-01-13,Cape Verde,N,neutral,1,0,W,African Cup of Nations,afcon,True,Yaoundé,Cameroon
-2022-01-17,Ethiopia,N,neutral,1,1,D,African Cup of Nations,afcon,True,Bafoussam,Cameroon
-2022-01-23,Gabon,N,neutral,1,1,D,African Cup of Nations,afcon,True,Limbé,Cameroon
-2022-01-29,Tunisia,N,neutral,1,0,W,African Cup of Nations,afcon,True,Garoua,Cameroon
-2022-02-02,Senegal,N,neutral,1,3,L,African Cup of Nations,afcon,True,Yaoundé,Cameroon
-2022-02-05,Cameroon,A,away,3,3,D,African Cup of Nations,afcon,False,Yaoundé,Cameroon
-2022-03-24,Kosovo,A,away,0,5,L,Friendly,friendly,False,Pristina,Kosovo
-2022-03-29,Belgium,A,away,0,3,L,Friendly,friendly,False,Anderlecht,Belgium
-2022-06-03,Cape Verde,N,home_delocalized,2,0,W,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco
-2022-06-07,Eswatini,N,neutral,3,1,W,African Cup of Nations qualification,afcon_qual,True,Johannesburg,South Africa
-2022-09-23,DR Congo,N,neutral,1,0,W,Friendly,friendly,True,Casablanca,Morocco
-2022-09-27,Comoros,N,home_delocalized,2,1,W,Friendly,friendly,True,Casablanca,Morocco
-2022-11-19,Ivory Coast,N,neutral,2,1,W,Friendly,friendly,True,Marrakesh,Morocco
-2023-03-24,Togo,N,home_delocalized,1,0,W,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco
-2023-03-28,Togo,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Lomé,Togo
-2023-06-18,Cape Verde,A,away,1,3,L,African Cup of Nations qualification,afcon_qual,False,Praia,Cape Verde
-2023-09-08,Eswatini,N,home_delocalized,0,0,D,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco
-2023-09-12,Morocco,N,neutral,0,1,L,Friendly,friendly,True,Lens,France
-2023-10-13,Equatorial Guinea,A,away,0,0,D,Friendly,friendly,False,Malabo,Equatorial Guinea
-2023-10-17,Mauritania,N,home_delocalized,2,1,W,Friendly,friendly,True,Casablanca,Morocco
-2023-11-17,Guinea-Bissau,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco
-2023-11-21,Ethiopia,N,neutral,3,0,W,FIFA World Cup qualification,wc_qual,True,El Jadida,Morocco
-2024-01-05,Iran,A,away,1,2,L,Friendly,friendly,False,Kish,Iran
-2024-01-10,DR Congo,N,neutral,2,1,W,Friendly,friendly,True,Abu Dhabi,United Arab Emirates
-2024-01-16,Mauritania,N,neutral,1,0,W,African Cup of Nations,afcon,True,Bouaké,Ivory Coast
-2024-01-20,Algeria,N,neutral,2,2,D,African Cup of Nations,afcon,True,Bouaké,Ivory Coast
-2024-01-23,Angola,N,neutral,0,2,L,African Cup of Nations,afcon,True,Yamoussoukro,Ivory Coast
-2024-01-30,Mali,N,neutral,1,2,L,African Cup of Nations,afcon,True,Korhogo,Ivory Coast
-2024-03-22,Libya,N,home_delocalized,1,2,L,Friendly,friendly,True,Casablanca,Morocco
-2024-06-06,Egypt,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Cairo,Egypt
-2024-06-10,Sierra Leone,N,home_delocalized,2,2,D,FIFA World Cup qualification,wc_qual,True,Bamako,Mali
-2024-09-06,Senegal,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Diamniadio,Senegal
-2024-09-10,Malawi,N,home_delocalized,3,1,W,African Cup of Nations qualification,afcon_qual,True,Bamako,Mali
-2024-10-10,Burundi,N,home_delocalized,4,1,W,African Cup of Nations qualification,afcon_qual,True,Ebimpé,Ivory Coast
-2024-10-13,Burundi,N,neutral,2,0,W,African Cup of Nations qualification,afcon_qual,True,Abidjan,Ivory Coast
-2024-11-14,Senegal,N,home_delocalized,0,1,L,African Cup of Nations qualification,afcon_qual,True,Bamako,Mali
-2024-11-18,Malawi,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Lilongwe,Malawi
-2025-01-04,Kenya,N,home_delocalized,1,1,D,Mapinduzi Cup,other,True,Gombani,Zanzibar
-2025-01-06,Zanzibar,A,away,1,0,W,Mapinduzi Cup,other,False,Gombani,Zanzibar
-2025-01-09,Tanzania,N,neutral,2,0,W,Mapinduzi Cup,other,True,Gombani,Zanzibar
-2025-01-13,Zanzibar,A,away,1,2,L,Mapinduzi Cup,other,False,Gombani,Zanzibar
-2025-03-21,Djibouti,N,home_delocalized,4,1,W,FIFA World Cup qualification,wc_qual,True,El Jadida,Morocco
-2025-03-24,Guinea-Bissau,A,away,2,1,W,FIFA World Cup qualification,wc_qual,False,Bissau,Guinea-Bissau
-2025-06-02,Tunisia,A,away,0,2,L,Friendly,friendly,False,Radès,Tunisia
-2025-06-06,Zimbabwe,N,neutral,2,0,W,Friendly,friendly,True,Mohammedia,Morocco
-2025-09-05,Djibouti,N,neutral,6,0,W,FIFA World Cup qualification,wc_qual,True,Bissau,Guinea-Bissau
-2025-09-09,Egypt,H,home_bf,0,0,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2025-10-08,Sierra Leone,N,neutral,1,0,W,FIFA World Cup qualification,wc_qual,True,Monrovia,Liberia
-2025-10-12,Ethiopia,H,home_bf,3,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso
-2025-11-14,Niger,N,home_delocalized,3,2,W,Friendly,friendly,True,Mohammedia,Morocco
-2025-11-18,Benin,N,neutral,3,0,W,Friendly,friendly,True,Mohammedia,Morocco
-2025-12-24,Equatorial Guinea,N,neutral,2,1,W,African Cup of Nations,afcon,True,Casablanca,Morocco
-2025-12-28,Algeria,N,neutral,0,1,L,African Cup of Nations,afcon,True,Rabat,Morocco
-2025-12-31,Sudan,N,neutral,2,0,W,African Cup of Nations,afcon,True,Casablanca,Morocco
-2026-01-06,Ivory Coast,N,neutral,0,3,L,African Cup of Nations,afcon,True,Marrakesh,Morocco
-2026-03-28,Guinea-Bissau,H,home_bf,5,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2026-03-31,Guinea-Bissau,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso
-2026-06-05,Russia,A,away,0,3,L,Friendly,friendly,False,Volgograd,Russia
-2026-06-09,Belarus,A,away,2,2,D,Friendly,friendly,False,Minsk,Belarus
+date,opponent,venue,venue_class,gf,ga,result,tournament,comp,neutral,city,country,coach,coach_since
+1960-04-14,Gabon,N,home_delocalized,5,4,W,African Friendship Games,other,True,Tananarive,Madagascar,,
+1960-04-15,Madagascar,A,away,1,6,L,African Friendship Games,other,False,Tananarive,Madagascar,,
+1961-12-25,Ivory Coast,A,away,1,2,L,African Friendship Games,other,False,Abidjan,Ivory Coast,,
+1961-12-27,Liberia,N,home_delocalized,5,1,W,African Friendship Games,other,True,Abidjan,Ivory Coast,,
+1963-02-01,Mali,A,away,0,1,L,Friendly,friendly,False,Bamako,Mali,,
+1963-04-12,Gabon,N,neutral,0,4,L,African Friendship Games,other,True,Dakar,Senegal,,
+1963-04-14,Gambia,N,neutral,2,2,D,African Friendship Games,other,True,Dakar,Senegal,,
+1963-04-16,France,N,neutral,0,1,L,African Friendship Games,other,True,Dakar,Senegal,,
+1967-01-29,Niger,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1967-02-12,Algeria,H,home_bf,1,2,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1967-04-09,Algeria,A,away,1,3,L,African Cup of Nations qualification,afcon_qual,False,Algiers,Algeria,,
+1967-08-01,Niger,A,away,3,2,W,Friendly,friendly,False,Niamey,Niger,,
+1967-09-27,Mali,A,away,0,4,L,African Cup of Nations qualification,afcon_qual,False,Bamako,Mali,,
+1967-10-01,Ghana,A,away,2,5,L,Friendly,friendly,False,Accra,Ghana,,
+1967-11-15,Mali,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1967-11-26,Ivory Coast,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1968-02-25,Guinea,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1968-03-31,Guinea,A,away,1,3,L,Friendly,friendly,False,Conakry,Guinea,,
+1968-04-02,Guinea,A,away,3,1,W,Friendly,friendly,False,Conakry,Guinea,,
+1970-03-22,Niger,H,home_bf,3,3,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1971-11-27,Nigeria,A,away,0,4,L,Friendly,friendly,False,Lagos,Nigeria,,
+1971-11-30,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo,,
+1971-12-12,Togo,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1972-01-09,Nigeria,H,home_bf,3,3,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1973-01-08,Congo,N,neutral,0,3,L,All-African Games,other,True,Ibadan,Nigeria,,
+1973-01-10,Guinea,N,neutral,2,3,L,All-African Games,other,True,Ibadan,Nigeria,,
+1973-01-12,Egypt,N,neutral,2,4,L,All-African Games,other,True,Ibadan,Nigeria,,
+1973-04-15,DR Congo,H,home_bf,0,5,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1973-04-22,DR Congo,A,away,1,4,L,African Cup of Nations qualification,afcon_qual,False,Kinshasa,DR Congo,,
+1975-02-23,Niger,H,home_bf,4,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1975-03-23,Ghana,A,away,1,3,L,Friendly,friendly,False,Accra,Ghana,,
+1976-03-13,Mauritania,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1976-03-28,Mauritania,A,away,2,0,W,FIFA World Cup qualification,wc_qual,False,Nouakchott,Mauritania,Otto Pfister,1976-01-01
+1976-09-04,Ivory Coast,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1976-09-26,Ivory Coast,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Abidjan,Ivory Coast,Otto Pfister,1976-01-01
+1976-11-24,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali,Otto Pfister,1976-01-01
+1977-03-20,Ivory Coast,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1977-03-27,Ivory Coast,A,away,1,4,L,African Cup of Nations qualification,afcon_qual,False,Abidjan,Ivory Coast,Otto Pfister,1976-01-01
+1978-02-12,Benin,A,away,2,0,W,Friendly,friendly,False,Porto-Novo,Benin,Otto Pfister,1976-01-01
+1978-02-19,Gabon,A,away,2,2,D,Friendly,friendly,False,Libreville,Gabon,Otto Pfister,1976-01-01
+1978-02-26,Benin,H,home_bf,3,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1978-03-05,Nigeria,N,neutral,2,4,L,African Cup of Nations,afcon,True,Accra,Ghana,Otto Pfister,1976-01-01
+1978-03-08,Zambia,N,neutral,0,2,L,African Cup of Nations,afcon,True,Accra,Ghana,Otto Pfister,1976-01-01
+1978-03-10,Ghana,A,away,0,3,L,African Cup of Nations,afcon,False,Accra,Ghana,Otto Pfister,1976-01-01
+1978-11-11,Mali,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1979-10-21,Benin,N,neutral,2,3,L,Friendly,friendly,True,Abidjan,Ivory Coast,,
+1979-10-23,Togo,N,neutral,3,5,L,Friendly,friendly,True,Abidjan,Ivory Coast,,
+1981-07-18,Nigeria,A,away,0,1,L,Friendly,friendly,False,Lagos,Nigeria,,
+1981-08-30,Algeria,A,away,0,7,L,African Cup of Nations qualification,afcon_qual,False,Oran,Algeria,,
+1981-09-06,Niger,A,away,1,2,L,Friendly,friendly,False,Niamey,Niger,,
+1981-09-20,Algeria,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1982-01-24,Senegal,H,home_bf,0,0,D,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso,,
+1982-02-15,Liberia,N,neutral,2,1,W,West African Cup,other,True,Cotonou,Benin,,
+1982-02-17,Togo,N,neutral,1,2,L,West African Cup,other,True,Cotonou,Benin,,
+1982-02-19,Ghana,N,neutral,0,1,L,West African Cup,other,True,Cotonou,Benin,,
+1982-02-22,Ivory Coast,N,neutral,1,1,D,West African Cup,other,True,Cotonou,Benin,,
+1982-10-03,Niger,H,home_bf,1,1,D,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso,,
+1984-08-01,Benin,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1984-08-03,Ghana,H,home_bf,0,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1984-11-11,Mali,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1984-11-17,Togo,H,home_bf,1,1,D,West African Cup,other,False,Ouagadougou,Burkina Faso,,
+1984-11-20,Ivory Coast,H,home_bf,2,2,D,West African Cup,other,False,Ouagadougou,Burkina Faso,,
+1984-11-22,Benin,H,home_bf,2,1,W,West African Cup,other,False,Ouagadougou,Burkina Faso,,
+1984-11-24,Ghana,H,home_bf,1,1,D,West African Cup,other,False,Ouagadougou,Burkina Faso,,
+1984-11-28,Ivory Coast,H,home_bf,0,2,L,West African Cup,other,False,Ouagadougou,Burkina Faso,,
+1986-02-23,Liberia,N,neutral,1,0,W,West African Cup,other,True,Accra,Ghana,,
+1986-02-24,Togo,N,home_delocalized,0,1,L,West African Cup,other,True,Accra,Ghana,,
+1986-02-26,Niger,N,home_delocalized,0,0,D,West African Cup,other,True,Accra,Ghana,,
+1986-02-27,Ghana,A,away,0,2,L,West African Cup,other,False,Accra,Ghana,,
+1986-03-01,Ghana,A,away,0,2,L,West African Cup,other,False,Accra,Ghana,,
+1986-03-02,Niger,N,home_delocalized,1,2,L,West African Cup,other,True,Accra,Ghana,,
+1987-01-17,Mali,A,away,0,2,L,Friendly,friendly,False,Bamako,Mali,,
+1987-02-01,Liberia,A,away,0,2,L,West African Cup,other,False,Monrovia,Liberia,,
+1987-02-05,Benin,N,home_delocalized,3,2,W,West African Cup,other,True,Monrovia,Liberia,,
+1987-05-21,Mauritania,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1987-11-22,Nigeria,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1987-12-06,Mali,A,away,2,1,W,Friendly,friendly,False,Bamako,Mali,,
+1987-12-10,Mali,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1987-12-13,Mali,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1987-12-20,Liberia,A,away,0,1,L,Friendly,friendly,False,Monrovia,Liberia,,
+1987-12-22,Senegal,N,home_delocalized,0,1,L,Friendly,friendly,True,Monrovia,Liberia,,
+1988-05-25,Ghana,H,home_bf,3,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-06-03,Libya,A,away,0,3,L,FIFA World Cup qualification,wc_qual,False,Tripoli,Libya,Heinz-Peter Überjahn,1988-01-01
+1988-07-03,Libya,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-07-24,Niger,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-07-27,Ghana,H,home_bf,3,1,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-07-31,Benin,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-08-02,Mali,H,home_bf,2,1,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-08-04,Niger,H,home_bf,1,0,W,Tournament Burkina Faso,other,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1988-10-09,Gabon,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Libreville,Gabon,Heinz-Peter Überjahn,1988-01-01
+1988-10-23,Gabon,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1990-05-26,Gambia,A,away,0,0,D,Friendly,friendly,False,Banjul,Gambia,Heinz-Peter Überjahn,1988-01-01
+1990-05-30,Ghana,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1990-08-19,Benin,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1990-08-27,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali,Heinz-Peter Überjahn,1988-01-01
+1990-09-02,Togo,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Heinz-Peter Überjahn,1988-01-01
+1990-10-14,Ghana,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Accra,Ghana,Heinz-Peter Überjahn,1988-01-01
+1991-01-06,Mali,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1991-01-09,Niger,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
+1991-01-13,Nigeria,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1991-01-27,Benin,A,away,2,1,W,African Cup of Nations qualification,afcon_qual,False,Cotonou,Benin,,
+1991-04-07,Mali,A,away,1,5,L,Friendly,friendly,False,Bamako,Mali,,
+1991-04-21,Togo,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Lomé,Togo,,
+1991-07-13,Ghana,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,,
+1991-07-27,Nigeria,A,away,1,7,L,African Cup of Nations qualification,afcon_qual,False,Lagos,Nigeria,,
+1992-12-26,Mali,H,home_bf,3,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1993-01-02,Gabon,A,away,1,1,D,Friendly,friendly,False,Libreville,Gabon,Idrissa Traoré,1992-01-01
+1993-01-03,Mali,N,home_delocalized,1,0,W,Friendly,friendly,True,Libreville,Gabon,Idrissa Traoré,1992-01-01
+1993-05-22,Guadeloupe,N,home_delocalized,2,0,W,Friendly,friendly,True,Créteil,France,Idrissa Traoré,1992-01-01
+1994-01-05,Mali,A,away,1,1,D,Friendly,friendly,False,Bamako,Mali,Idrissa Traoré,1992-01-01
+1994-01-29,Guinea,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1994-01-30,Ivory Coast,H,home_bf,0,1,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1994-08-23,Niger,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1994-09-04,Morocco,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1994-12-04,Togo,A,away,0,2,L,Friendly,friendly,False,Lomé,Togo,Idrissa Traoré,1992-01-01
+1995-01-22,Ivory Coast,A,away,2,2,D,African Cup of Nations qualification,afcon_qual,False,Abidjan,Ivory Coast,Idrissa Traoré,1992-01-01
+1995-04-09,Morocco,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Casablanca,Morocco,Idrissa Traoré,1992-01-01
+1995-07-30,Ivory Coast,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1995-10-22,Tunisia,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1995-11-29,Tunisia,A,away,0,3,L,Friendly,friendly,False,Tunis,Tunisia,Idrissa Traoré,1992-01-01
+1995-12-22,Gabon,H,home_bf,2,5,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Idrissa Traoré,1992-01-01
+1996-01-15,Sierra Leone,N,neutral,1,2,L,African Cup of Nations,afcon,True,Bloemfontein,South Africa,Ivan Vutov,1996-01-01
+1996-01-20,Zambia,N,neutral,1,5,L,African Cup of Nations,afcon,True,Bloemfontein,South Africa,Ivan Vutov,1996-01-01
+1996-01-24,Algeria,N,neutral,1,2,L,African Cup of Nations,afcon,True,Port Elizabeth,South Africa,Ivan Vutov,1996-01-01
+1996-05-12,Niger,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Ivan Vutov,1996-01-01
+1996-05-31,Mauritania,A,away,0,0,D,FIFA World Cup qualification,wc_qual,False,Nouakchott,Mauritania,Ivan Vutov,1996-01-01
+1996-06-09,Ivory Coast,A,away,1,1,D,Friendly,friendly,False,Abidjan,Ivory Coast,Ivan Vutov,1996-01-01
+1996-06-16,Mauritania,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Ivan Vutov,1996-01-01
+1996-10-19,Gabon,A,away,0,2,L,Friendly,friendly,False,Libreville,Gabon,Ivan Vutov,1996-01-01
+1996-11-09,Nigeria,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Lagos,Nigeria,Ivan Vutov,1996-01-01
+1996-11-24,Mali,A,away,0,2,L,Friendly,friendly,False,Bamako,Mali,Ivan Vutov,1996-01-01
+1996-12-20,Gabon,N,home_delocalized,1,1,D,Friendly,friendly,True,Cotonou,Benin,Ivan Vutov,1996-01-01
+1996-12-22,Ghana,N,home_delocalized,2,1,W,Friendly,friendly,True,Cotonou,Benin,Ivan Vutov,1996-01-01
+1996-12-25,Benin,A,away,1,1,D,Friendly,friendly,False,Cotonou,Benin,Ivan Vutov,1996-01-01
+1996-12-27,Benin,A,away,0,0,D,Friendly,friendly,False,Cotonou,Benin,Ivan Vutov,1996-01-01
+1997-01-12,Guinea,H,home_bf,0,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Philippe Troussier,1997-01-01
+1997-03-29,Tanzania,A,away,2,3,L,Friendly,friendly,False,Arusha,Tanzania,Philippe Troussier,1997-01-01
+1997-04-06,Kenya,A,away,3,4,L,FIFA World Cup qualification,wc_qual,False,Nairobi,Kenya,Philippe Troussier,1997-01-01
+1997-04-27,Nigeria,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Philippe Troussier,1997-01-01
+1997-05-31,Mali,H,home_bf,2,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso,Philippe Troussier,1997-01-01
+1997-06-04,Togo,A,away,0,0,D,Friendly,friendly,False,Lomé,Togo,Philippe Troussier,1997-01-01
+1997-06-08,Guinea,A,away,1,3,L,FIFA World Cup qualification,wc_qual,False,Conakry,Guinea,Philippe Troussier,1997-01-01
+1997-08-16,Kenya,H,home_bf,2,4,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Philippe Troussier,1997-01-01
+1997-11-02,Ivory Coast,A,away,0,0,D,Friendly,friendly,False,Bouaké,Ivory Coast,Philippe Troussier,1997-01-01
+1997-12-27,Ivory Coast,H,home_bf,2,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Philippe Troussier,1997-01-01
+1998-01-04,Mozambique,H,home_bf,1,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso,Didier Notheaux,1998-01-01
+1998-01-07,Mozambique,H,home_bf,4,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-01-11,Mali,H,home_bf,0,0,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-01-27,Liberia,A,away,2,1,W,Friendly,friendly,False,Monrovia,Liberia,Didier Notheaux,1998-01-01
+1998-02-01,Namibia,N,home_delocalized,3,1,W,Friendly,friendly,True,Niamey,Niger,Didier Notheaux,1998-01-01
+1998-02-07,Cameroon,H,home_bf,0,1,L,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-02-11,Algeria,H,home_bf,2,1,W,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-02-15,Guinea,H,home_bf,1,0,W,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-02-21,Tunisia,H,home_bf,1,1,D,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-02-25,Egypt,H,home_bf,0,2,L,African Cup of Nations,afcon,False,Bobo Dioulasso,Burkina Faso,Didier Notheaux,1998-01-01
+1998-02-27,DR Congo,H,home_bf,4,4,D,African Cup of Nations,afcon,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-05-19,Cameroon,A,away,0,2,L,Friendly,friendly,False,Yaoundé,Cameroon,Didier Notheaux,1998-01-01
+1998-07-24,Niger,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-08-23,Togo,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-08-30,Ivory Coast,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-08-31,Senegal,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1998-09-27,Mali,A,away,0,1,L,Friendly,friendly,False,Bamako,Mali,Didier Notheaux,1998-01-01
+1998-10-17,Qatar,A,away,2,2,D,Friendly,friendly,False,Doha,Qatar,Didier Notheaux,1998-01-01
+1998-10-19,Oman,A,away,2,4,L,Friendly,friendly,False,Muscat,Oman,Didier Notheaux,1998-01-01
+1998-10-21,Oman,A,away,0,0,D,Friendly,friendly,False,Muscat,Oman,Didier Notheaux,1998-01-01
+1998-10-23,Bahrain,A,away,1,2,L,Friendly,friendly,False,Manama,Bahrain,Didier Notheaux,1998-01-01
+1999-01-04,Gabon,H,home_bf,2,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-01-10,Mali,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-01-15,Mali,H,home_bf,4,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-01-23,Senegal,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Dakar,Senegal,Didier Notheaux,1998-01-01
+1999-02-20,Gabon,A,away,1,1,D,Friendly,friendly,False,Libreville,Gabon,Didier Notheaux,1998-01-01
+1999-02-28,Burundi,A,away,2,1,W,African Cup of Nations qualification,afcon_qual,False,Bujumbura,Burundi,Didier Notheaux,1998-01-01
+1999-04-03,Mali,A,away,2,5,L,Friendly,friendly,False,Bamako,Mali,Didier Notheaux,1998-01-01
+1999-04-11,Burundi,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-06-06,Senegal,H,home_bf,2,2,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-11-07,Togo,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-11-10,Togo,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux,1998-01-01
+1999-11-27,Congo,N,neutral,1,2,L,Friendly,friendly,True,Libreville,Gabon,Didier Notheaux,1998-01-01
+1999-11-28,Gabon,A,away,2,3,L,Friendly,friendly,False,Libreville,Gabon,Didier Notheaux,1998-01-01
+1999-12-29,Ivory Coast,A,away,1,3,L,Friendly,friendly,False,Abidjan,Ivory Coast,Didier Notheaux,1998-01-01
+2000-01-09,Gabon,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Sidiki Diarra,2000-01-01
+2000-01-11,Cameroon,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Sidiki Diarra,2000-01-01
+2000-01-20,Algeria,H,home_bf,1,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Sidiki Diarra,2000-01-01
+2000-01-25,Senegal,N,neutral,1,3,L,African Cup of Nations,afcon,True,Kano,Nigeria,Sidiki Diarra,2000-01-01
+2000-01-29,Zambia,N,neutral,1,1,D,African Cup of Nations,afcon,True,Kano,Nigeria,Sidiki Diarra,2000-01-01
+2000-02-01,Egypt,N,neutral,2,4,L,African Cup of Nations,afcon,True,Kano,Nigeria,Sidiki Diarra,2000-01-01
+2000-04-09,Ethiopia,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Addis Ababa,Ethiopia,Sidiki Diarra,2000-01-01
+2000-04-19,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali,Sidiki Diarra,2000-01-01
+2000-04-23,Ethiopia,H,home_bf,3,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Sidiki Diarra,2000-01-01
+2000-05-26,Algeria,A,away,0,2,L,Friendly,friendly,False,Algiers,Algeria,Sidiki Diarra,2000-01-01
+2000-06-14,Kenya,A,away,1,0,W,Friendly,friendly,False,Nairobi,Kenya,Sidiki Diarra,2000-01-01
+2000-06-17,Malawi,A,away,1,1,D,FIFA World Cup qualification,wc_qual,False,Blantyre,Malawi,Sidiki Diarra,2000-01-01
+2000-09-03,Algeria,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Algiers,Algeria,Sidiki Diarra,2000-01-01
+2000-10-07,Burundi,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Sidiki Diarra,2000-01-01
+2001-01-07,Togo,A,away,1,1,D,Friendly,friendly,False,Lomé,Togo,Oscar Fulloné,2001-01-01
+2001-01-13,Angola,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-01-23,Mali,H,home_bf,0,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-01-27,South Africa,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Rustenburg,South Africa,Oscar Fulloné,2001-01-01
+2001-02-24,Zimbabwe,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Bobo Dioulasso,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-03-25,Angola,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola,Oscar Fulloné,2001-01-01
+2001-04-21,Malawi,H,home_bf,4,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-06-03,Burundi,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Bujumbura,Burundi,Oscar Fulloné,2001-01-01
+2001-06-17,Algeria,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-07-01,South Africa,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-07-15,Zimbabwe,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Harare,Zimbabwe,Oscar Fulloné,2001-01-01
+2001-10-15,Algeria,A,away,0,2,L,Friendly,friendly,False,Annaba,Algeria,Oscar Fulloné,2001-01-01
+2001-12-16,Togo,H,home_bf,1,2,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Oscar Fulloné,2001-01-01
+2001-12-22,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo,Oscar Fulloné,2001-01-01
+2001-12-26,Senegal,A,away,4,2,W,Friendly,friendly,False,Dakar,Senegal,Oscar Fulloné,2001-01-01
+2001-12-28,Mali,A,away,1,2,L,Friendly,friendly,False,Ségou,Mali,Oscar Fulloné,2001-01-01
+2002-01-07,Cameroon,H,home_bf,1,3,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Jean-Paul Rabier,2002-01-01
+2002-01-11,Egypt,A,away,2,2,D,Friendly,friendly,False,Cairo,Egypt,Jean-Paul Rabier,2002-01-01
+2002-01-20,South Africa,N,neutral,0,0,D,African Cup of Nations,afcon,True,Ségou,Mali,Jean-Paul Rabier,2002-01-01
+2002-01-26,Morocco,N,neutral,1,2,L,African Cup of Nations,afcon,True,Ségou,Mali,Jean-Paul Rabier,2002-01-01
+2002-01-30,Ghana,N,neutral,1,2,L,African Cup of Nations,afcon,True,Mopti,Mali,Jean-Paul Rabier,2002-01-01
+2002-09-08,Congo,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Brazzaville,Congo,Jean-Paul Rabier,2002-01-01
+2002-10-13,Central African Republic,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Jean-Paul Rabier,2002-01-01
+2002-12-27,Niger,A,away,1,1,D,Friendly,friendly,False,Niamey,Niger,Jean-Paul Rabier,2002-01-01
+2003-03-26,Burundi,A,away,0,0,D,Friendly,friendly,False,Bujumbura,Burundi,Jean-Paul Rabier,2002-01-01
+2003-03-30,Mozambique,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Maputo,Mozambique,Jean-Paul Rabier,2002-01-01
+2003-05-29,Algeria,N,neutral,1,0,W,Friendly,friendly,True,Amiens,France,Jean-Paul Rabier,2002-01-01
+2003-06-07,Mozambique,H,home_bf,4,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Jean-Paul Rabier,2002-01-01
+2003-06-21,Congo,H,home_bf,3,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Jean-Paul Rabier,2002-01-01
+2003-07-06,Central African Republic,A,away,3,0,W,African Cup of Nations qualification,afcon_qual,False,Bangui,Central African Republic,Jean-Paul Rabier,2002-01-01
+2003-09-24,Benin,N,neutral,1,0,W,Friendly,friendly,True,Algiers,Algeria,Jean-Paul Rabier,2002-01-01
+2003-09-26,Algeria,A,away,0,0,D,Friendly,friendly,False,Algiers,Algeria,Jean-Paul Rabier,2002-01-01
+2003-10-23,Zimbabwe,N,home_delocalized,1,4,L,Afro-Asian Games,other,True,Hyderabad,India,Jean-Paul Rabier,2002-01-01
+2003-11-08,Gabon,A,away,0,0,D,Friendly,friendly,False,Moanda,Gabon,Jean-Paul Rabier,2002-01-01
+2003-11-15,Morocco,A,away,0,1,L,Friendly,friendly,False,Meknes,Morocco,Jean-Paul Rabier,2002-01-01
+2004-01-17,Egypt,A,away,1,1,D,Friendly,friendly,False,Port Said,Egypt,Ivica Todorov,2004-01-01
+2004-01-20,Guinea,N,neutral,0,1,L,Friendly,friendly,True,Toulon,France,Ivica Todorov,2004-01-01
+2004-01-26,Senegal,N,neutral,0,0,D,African Cup of Nations,afcon,True,Tunis,Tunisia,Ivica Todorov,2004-01-01
+2004-01-30,Mali,N,neutral,1,3,L,African Cup of Nations,afcon,True,Tunis,Tunisia,Ivica Todorov,2004-01-01
+2004-02-02,Kenya,N,neutral,0,3,L,African Cup of Nations,afcon,True,Bizerte,Tunisia,Ivica Todorov,2004-01-01
+2004-05-26,Benin,A,away,0,1,L,Friendly,friendly,False,Cotonou,Benin,Ivica Todorov,2004-01-01
+2004-05-30,Libya,H,home_bf,3,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Ivica Todorov,2004-01-01
+2004-06-05,Ghana,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Ivica Todorov,2004-01-01
+2004-06-13,Benin,H,home_bf,4,2,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Ivica Todorov,2004-01-01
+2004-06-20,DR Congo,A,away,2,3,L,FIFA World Cup qualification,wc_qual,False,Kinshasa,DR Congo,Ivica Todorov,2004-01-01
+2004-07-03,South Africa,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Johannesburg,South Africa,Ivica Todorov,2004-01-01
+2004-08-17,Algeria,A,away,2,2,D,Friendly,friendly,False,Blida,Algeria,Ivica Todorov,2004-01-01
+2004-09-04,Uganda,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Ivica Todorov,2004-01-01
+2004-10-09,Cape Verde,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Praia,Cape Verde,Ivica Todorov,2004-01-01
+2004-11-17,Morocco,A,away,0,4,L,Friendly,friendly,False,Rabat,Morocco,Ivica Todorov,2004-01-01
+2005-02-09,Algeria,A,away,0,3,L,Friendly,friendly,False,Algiers,Algeria,Bernard Simondi,2005-01-01
+2005-03-20,South Korea,N,neutral,0,1,L,Friendly,friendly,True,Dubai,United Arab Emirates,Bernard Simondi,2005-01-01
+2005-03-26,Cape Verde,H,home_bf,1,2,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Bernard Simondi,2005-01-01
+2005-05-29,Togo,A,away,0,1,L,Friendly,friendly,False,Lomé,Togo,Bernard Simondi,2005-01-01
+2005-06-05,Ghana,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Kumasi,Ghana,Bernard Simondi,2005-01-01
+2005-06-18,DR Congo,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Bernard Simondi,2005-01-01
+2005-09-03,South Africa,H,home_bf,3,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Bernard Simondi,2005-01-01
+2005-10-08,Uganda,A,away,2,2,D,FIFA World Cup qualification,wc_qual,False,Kampala,Uganda,Bernard Simondi,2005-01-01
+2006-02-28,Algeria,N,neutral,0,0,D,Friendly,friendly,True,Rouen,France,Idrissa Traoré,2006-01-01
+2006-08-16,Morocco,A,away,0,1,L,Friendly,friendly,False,Rabat,Morocco,Idrissa Traoré,2006-01-01
+2006-08-29,Uganda,A,away,0,0,D,Friendly,friendly,False,Kampala,Uganda,Idrissa Traoré,2006-01-01
+2006-09-02,Tanzania,A,away,1,2,L,African Cup of Nations qualification,afcon_qual,False,Dar es Salaam,Tanzania,Idrissa Traoré,2006-01-01
+2006-10-07,Senegal,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Idrissa Traoré,2006-01-01
+2006-11-15,Algeria,N,neutral,2,1,W,Friendly,friendly,True,Aix-en-Provence,France,Idrissa Traoré,2006-01-01
+2007-03-24,Mozambique,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-05-29,Zimbabwe,A,away,1,1,D,Friendly,friendly,False,Masvingo,Zimbabwe,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-06-03,Mozambique,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Maputo,Mozambique,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-06-09,Mali,H,home_bf,0,1,L,Friendly,friendly,False,Ouagadougou,Burkina Faso,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-06-16,Tanzania,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-08-22,Mali,N,neutral,2,3,L,Friendly,friendly,True,Paris,France,Didier Notheaux & Sidiki Diarra,2007-01-01
+2007-09-08,Senegal,A,away,1,5,L,African Cup of Nations qualification,afcon_qual,False,Dakar,Senegal,Didier Notheaux & Sidiki Diarra,2007-01-01
+2008-05-24,Cape Verde,N,home_delocalized,0,1,L,Friendly,friendly,True,Alcochete,Portugal,Paulo Duarte,2008-01-01
+2008-06-01,Tunisia,A,away,2,1,W,FIFA World Cup qualification,wc_qual,False,Radès,Tunisia,Paulo Duarte,2008-01-01
+2008-06-07,Burundi,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2008-06-14,Seychelles,A,away,3,2,W,FIFA World Cup qualification,wc_qual,False,Victoria,Seychelles,Paulo Duarte,2008-01-01
+2008-06-21,Seychelles,H,home_bf,4,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2008-08-20,Bahrain,A,away,1,3,L,Friendly,friendly,False,Manama,Bahrain,Paulo Duarte,2008-01-01
+2008-09-06,Tunisia,H,home_bf,0,0,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2008-10-12,Burundi,A,away,3,1,W,FIFA World Cup qualification,wc_qual,False,Bujumbura,Burundi,Paulo Duarte,2008-01-01
+2009-02-11,Togo,N,home_delocalized,1,1,D,Friendly,friendly,True,Le Petit-Quevilly,France,Paulo Duarte,2008-01-01
+2009-03-28,Guinea,H,home_bf,4,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2009-06-06,Malawi,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Blantyre,Malawi,Paulo Duarte,2008-01-01
+2009-06-20,Ivory Coast,H,home_bf,2,3,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2009-08-12,Mali,N,neutral,0,3,L,Friendly,friendly,True,Le Petit-Quevilly,France,Paulo Duarte,2008-01-01
+2009-09-05,Ivory Coast,A,away,0,5,L,FIFA World Cup qualification,wc_qual,False,Abidjan,Ivory Coast,Paulo Duarte,2008-01-01
+2009-10-11,Guinea,N,neutral,2,1,W,FIFA World Cup qualification,wc_qual,True,Accra,Ghana,Paulo Duarte,2008-01-01
+2009-11-14,Malawi,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2010-01-11,Ivory Coast,N,neutral,0,0,D,African Cup of Nations,afcon,True,Cabinda,Angola,Paulo Duarte,2008-01-01
+2010-01-19,Ghana,N,neutral,0,1,L,African Cup of Nations,afcon,True,Luanda,Angola,Paulo Duarte,2008-01-01
+2010-08-11,Congo,N,home_delocalized,3,0,W,Friendly,friendly,True,Senlis,France,Paulo Duarte,2008-01-01
+2010-09-06,Gabon,N,home_delocalized,1,1,D,Friendly,friendly,True,Cannes,France,Paulo Duarte,2008-01-01
+2010-10-09,Gambia,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2010-11-17,Guinea,N,home_delocalized,2,1,W,Friendly,friendly,True,Mantes-la-Ville,France,Paulo Duarte,2008-01-01
+2011-02-09,Cape Verde,N,neutral,0,1,L,Friendly,friendly,True,Óbidos,Portugal,Paulo Duarte,2008-01-01
+2011-03-26,Namibia,H,home_bf,4,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2008-01-01
+2011-06-04,Namibia,A,away,4,1,W,African Cup of Nations qualification,afcon_qual,False,Windhoek,Namibia,Paulo Duarte,2008-01-01
+2011-08-10,South Africa,A,away,0,3,L,Friendly,friendly,False,Johannesburg,South Africa,Paulo Duarte,2008-01-01
+2011-09-03,Equatorial Guinea,H,home_bf,1,0,W,Friendly,friendly,False,Bobo Dioulasso,Burkina Faso,Paulo Duarte,2008-01-01
+2011-10-08,Gambia,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Bakau,Gambia,Paulo Duarte,2008-01-01
+2011-11-11,Mali,N,home_delocalized,1,1,D,Friendly,friendly,True,Saint-Leu-la-Forêt,France,Paulo Duarte,2008-01-01
+2011-11-15,Guinea,N,neutral,1,1,D,Friendly,friendly,True,Viry-Châtillon,France,Paulo Duarte,2008-01-01
+2012-01-09,Gabon,A,away,0,0,D,Friendly,friendly,False,Bitam,Gabon,Paul Put,2012-01-01
+2012-01-22,Angola,N,neutral,1,2,L,African Cup of Nations,afcon,True,Malabo,Equatorial Guinea,Paul Put,2012-01-01
+2012-01-26,Ivory Coast,N,neutral,0,2,L,African Cup of Nations,afcon,True,Malabo,Equatorial Guinea,Paul Put,2012-01-01
+2012-01-30,Sudan,N,neutral,1,2,L,African Cup of Nations,afcon,True,Bata,Equatorial Guinea,Paul Put,2012-01-01
+2012-02-29,Morocco,A,away,0,2,L,Friendly,friendly,False,Marrakesh,Morocco,Paul Put,2012-01-01
+2012-05-26,Benin,H,home_bf,2,2,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2012-06-02,Congo,H,home_bf,0,3,L,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2012-06-09,Gabon,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Libreville,Gabon,Paul Put,2012-01-01
+2012-08-14,Togo,N,home_delocalized,3,0,W,Friendly,friendly,True,Saint-Leu-la-Forêt,France,Paul Put,2012-01-01
+2012-09-08,Central African Republic,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Bangui,Central African Republic,Paul Put,2012-01-01
+2012-10-14,Central African Republic,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2012-11-14,DR Congo,A,away,1,0,W,Friendly,friendly,False,Kinshasa,DR Congo,Paul Put,2012-01-01
+2012-12-26,Bahrain,A,away,0,0,D,Friendly,friendly,False,Riffa,Bahrain,Paul Put,2012-01-01
+2013-01-17,Eswatini,N,neutral,3,0,W,Friendly,friendly,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-01-21,Nigeria,N,neutral,1,1,D,African Cup of Nations,afcon,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-01-25,Ethiopia,N,neutral,4,0,W,African Cup of Nations,afcon,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-01-29,Zambia,N,neutral,0,0,D,African Cup of Nations,afcon,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-02-03,Togo,N,neutral,1,0,W,African Cup of Nations,afcon,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-02-06,Ghana,N,neutral,1,1,D,African Cup of Nations,afcon,True,Nelspruit,South Africa,Paul Put,2012-01-01
+2013-02-10,Nigeria,N,neutral,0,1,L,African Cup of Nations,afcon,True,Johannesburg,South Africa,Paul Put,2012-01-01
+2013-03-23,Niger,H,home_bf,4,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2013-06-02,Algeria,A,away,0,2,L,Friendly,friendly,False,Blida,Algeria,Paul Put,2012-01-01
+2013-06-09,Niger,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Niamey,Niger,Paul Put,2012-01-01
+2013-06-15,Congo,A,away,1,0,W,FIFA World Cup qualification,wc_qual,False,Pointe-Noire,Congo,Paul Put,2012-01-01
+2013-06-29,Libya,A,away,1,2,L,Friendly,friendly,False,Misrata,Libya,Paul Put,2012-01-01
+2013-08-14,Morocco,A,away,2,1,W,Friendly,friendly,False,Tangier,Morocco,Paul Put,2012-01-01
+2013-08-17,South Africa,A,away,0,2,L,Friendly,friendly,False,Johannesburg,South Africa,Paul Put,2012-01-01
+2013-09-07,Gabon,H,home_bf,1,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2013-09-10,Nigeria,A,away,1,4,L,Friendly,friendly,False,Kaduna,Nigeria,Paul Put,2012-01-01
+2013-09-30,Botswana,A,away,0,1,L,Friendly,friendly,False,Gaborone,Botswana,Paul Put,2012-01-01
+2013-10-12,Algeria,H,home_bf,3,2,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2013-11-19,Algeria,A,away,0,1,L,FIFA World Cup qualification,wc_qual,False,Blida,Algeria,Paul Put,2012-01-01
+2014-03-05,Comoros,N,home_delocalized,1,1,D,Friendly,friendly,True,Martigues,France,Paul Put,2012-01-01
+2014-05-21,Senegal,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2014-09-06,Lesotho,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2014-09-10,Angola,A,away,3,0,W,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola,Paul Put,2012-01-01
+2014-10-11,Gabon,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Libreville,Gabon,Paul Put,2012-01-01
+2014-10-15,Gabon,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2014-11-15,Lesotho,A,away,1,0,W,African Cup of Nations qualification,afcon_qual,False,Maseru,Lesotho,Paul Put,2012-01-01
+2014-11-19,Angola,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paul Put,2012-01-01
+2015-01-10,Eswatini,N,home_delocalized,5,1,W,Friendly,friendly,True,Nelspruit,South Africa,Paulo Duarte,2015-01-01
+2015-01-13,Botswana,N,neutral,2,0,W,Friendly,friendly,True,Nelspruit,South Africa,Paulo Duarte,2015-01-01
+2015-01-17,Gabon,N,neutral,0,2,L,African Cup of Nations,afcon,True,Bata,Equatorial Guinea,Paulo Duarte,2015-01-01
+2015-01-21,Equatorial Guinea,A,away,0,0,D,African Cup of Nations,afcon,False,Bata,Equatorial Guinea,Paulo Duarte,2015-01-01
+2015-01-25,Congo,N,neutral,1,2,L,African Cup of Nations,afcon,True,Ebebiyín,Equatorial Guinea,Paulo Duarte,2015-01-01
+2015-05-12,Kazakhstan,A,away,0,0,D,Friendly,friendly,False,Almaty,Kazakhstan,Paulo Duarte,2015-01-01
+2015-05-29,Corsica,A,away,0,1,L,Friendly,friendly,False,Bastia,France,Paulo Duarte,2015-01-01
+2015-06-06,Cameroon,N,home_delocalized,2,3,L,Friendly,friendly,True,Colombes,France,Paulo Duarte,2015-01-01
+2015-06-13,Comoros,H,home_bf,2,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2015-08-30,Niger,A,away,0,0,D,Friendly,friendly,False,Niamey,Niger,Paulo Duarte,2015-01-01
+2015-09-05,Botswana,A,away,0,1,L,African Cup of Nations qualification,afcon_qual,False,Francistown,Botswana,Paulo Duarte,2015-01-01
+2015-10-09,Mali,N,home_delocalized,1,4,L,Friendly,friendly,True,Troyes,France,Paulo Duarte,2015-01-01
+2015-11-12,Benin,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Cotonou,Benin,Paulo Duarte,2015-01-01
+2015-11-17,Benin,H,home_bf,2,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2016-02-27,Egypt,A,away,0,2,L,Friendly,friendly,False,Alexandria,Egypt,Paulo Duarte,2015-01-01
+2016-03-26,Uganda,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2016-03-29,Uganda,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Kampala,Uganda,Paulo Duarte,2015-01-01
+2016-06-05,Comoros,A,away,1,0,W,African Cup of Nations qualification,afcon_qual,False,Moroni,Comoros,Paulo Duarte,2015-01-01
+2016-08-24,Uzbekistan,A,away,0,1,L,Friendly,friendly,False,Tashkent,Uzbekistan,Paulo Duarte,2015-01-01
+2016-09-04,Botswana,H,home_bf,2,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2016-10-08,South Africa,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2016-11-12,Cape Verde,A,away,2,0,W,FIFA World Cup qualification,wc_qual,False,Praia,Cape Verde,Paulo Duarte,2015-01-01
+2017-01-07,Mali,N,home_delocalized,2,1,W,Friendly,friendly,True,Marrakesh,Morocco,Paulo Duarte,2015-01-01
+2017-01-14,Cameroon,N,neutral,1,1,D,African Cup of Nations,afcon,True,Libreville,Gabon,Paulo Duarte,2015-01-01
+2017-01-18,Gabon,A,away,1,1,D,African Cup of Nations,afcon,False,Libreville,Gabon,Paulo Duarte,2015-01-01
+2017-01-22,Guinea-Bissau,N,neutral,2,0,W,African Cup of Nations,afcon,True,Franceville,Gabon,Paulo Duarte,2015-01-01
+2017-01-28,Tunisia,N,neutral,2,0,W,African Cup of Nations,afcon,True,Libreville,Gabon,Paulo Duarte,2015-01-01
+2017-02-01,Egypt,N,neutral,1,1,D,African Cup of Nations,afcon,True,Libreville,Gabon,Paulo Duarte,2015-01-01
+2017-02-04,Ghana,N,neutral,1,0,W,African Cup of Nations,afcon,True,Port-Gentil,Gabon,Paulo Duarte,2015-01-01
+2017-03-24,Morocco,A,away,0,2,L,Friendly,friendly,False,Marrakesh,Morocco,Paulo Duarte,2015-01-01
+2017-05-04,Benin,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2017-05-21,Benin,A,away,2,2,D,Friendly,friendly,False,Cotonou,Benin,Paulo Duarte,2015-01-01
+2017-06-02,Chile,A,away,0,3,L,Friendly,friendly,False,Santiago,Chile,Paulo Duarte,2015-01-01
+2017-06-10,Angola,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2017-07-16,North Korea,N,home_delocalized,3,3,D,King's Cup,other,True,Bangkok,Thailand,Paulo Duarte,2015-01-01
+2017-09-02,Senegal,A,away,0,0,D,FIFA World Cup qualification,wc_qual,False,Dakar,Senegal,Paulo Duarte,2015-01-01
+2017-09-05,Senegal,H,home_bf,2,2,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2017-10-07,South Africa,A,away,1,3,L,FIFA World Cup qualification,wc_qual,False,Johannesburg,South Africa,Paulo Duarte,2015-01-01
+2017-11-14,Cape Verde,H,home_bf,4,0,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2018-03-22,Guinea-Bissau,N,home_delocalized,2,0,W,Friendly,friendly,True,Limeil-Brévannes,France,Paulo Duarte,2015-01-01
+2018-03-27,Kosovo,N,neutral,0,2,L,Friendly,friendly,True,Franconville,France,Paulo Duarte,2015-01-01
+2018-05-27,Cameroon,N,neutral,1,0,W,Friendly,friendly,True,Beauvais,France,Paulo Duarte,2015-01-01
+2018-09-08,Mauritania,A,away,0,2,L,African Cup of Nations qualification,afcon_qual,False,Nouakchott,Mauritania,Paulo Duarte,2015-01-01
+2018-10-13,Botswana,H,home_bf,3,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Paulo Duarte,2015-01-01
+2018-10-16,Botswana,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Francistown,Botswana,Paulo Duarte,2015-01-01
+2018-11-18,Angola,A,away,1,2,L,African Cup of Nations qualification,afcon_qual,False,Luanda,Angola,Paulo Duarte,2015-01-01
+2019-03-22,Mauritania,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Kamou Malo,2019-01-01
+2019-06-09,DR Congo,N,neutral,0,0,D,Friendly,friendly,True,Marbella,Spain,Kamou Malo,2019-01-01
+2019-09-04,Libya,N,neutral,1,0,W,Friendly,friendly,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2019-09-06,Morocco,A,away,1,1,D,Friendly,friendly,False,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2019-10-10,Gabon,N,neutral,0,1,L,Friendly,friendly,True,Paris,France,Kamou Malo,2019-01-01
+2019-11-13,Uganda,H,home_bf,0,0,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Kamou Malo,2019-01-01
+2019-11-17,South Sudan,N,neutral,2,1,W,African Cup of Nations qualification,afcon_qual,True,Khartoum,Sudan,Kamou Malo,2019-01-01
+2020-10-09,DR Congo,N,home_delocalized,3,0,W,Friendly,friendly,True,Mohammedia,Morocco,Kamou Malo,2019-01-01
+2020-10-12,Madagascar,N,home_delocalized,2,1,W,Friendly,friendly,True,El Jadida,Morocco,Kamou Malo,2019-01-01
+2020-11-12,Malawi,H,home_bf,3,1,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Kamou Malo,2019-01-01
+2020-11-16,Malawi,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Blantyre,Malawi,Kamou Malo,2019-01-01
+2021-03-24,Uganda,A,away,0,0,D,African Cup of Nations qualification,afcon_qual,False,Kampala,Uganda,Kamou Malo,2019-01-01
+2021-03-29,South Sudan,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Kamou Malo,2019-01-01
+2021-06-05,Ivory Coast,A,away,1,2,L,Friendly,friendly,False,Abidjan,Ivory Coast,Kamou Malo,2019-01-01
+2021-06-12,Morocco,A,away,0,1,L,Friendly,friendly,False,Rabat,Morocco,Kamou Malo,2019-01-01
+2021-09-02,Niger,N,neutral,2,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2021-09-07,Algeria,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2021-10-08,Djibouti,N,neutral,4,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2021-10-11,Djibouti,N,home_delocalized,2,0,W,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2021-11-12,Niger,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Kamou Malo,2019-01-01
+2021-11-16,Algeria,A,away,2,2,D,FIFA World Cup qualification,wc_qual,False,Blida,Algeria,Kamou Malo,2019-01-01
+2021-12-30,Mauritania,N,neutral,0,0,D,Friendly,friendly,True,Abu Dhabi,United Arab Emirates,Kamou Malo,2019-01-01
+2022-01-02,Gabon,N,neutral,3,0,W,Friendly,friendly,True,Dubai,United Arab Emirates,Hubert Velud,2022-01-01
+2022-01-09,Cameroon,A,away,1,2,L,African Cup of Nations,afcon,False,Yaoundé,Cameroon,Hubert Velud,2022-01-01
+2022-01-13,Cape Verde,N,neutral,1,0,W,African Cup of Nations,afcon,True,Yaoundé,Cameroon,Hubert Velud,2022-01-01
+2022-01-17,Ethiopia,N,neutral,1,1,D,African Cup of Nations,afcon,True,Bafoussam,Cameroon,Hubert Velud,2022-01-01
+2022-01-23,Gabon,N,neutral,1,1,D,African Cup of Nations,afcon,True,Limbé,Cameroon,Hubert Velud,2022-01-01
+2022-01-29,Tunisia,N,neutral,1,0,W,African Cup of Nations,afcon,True,Garoua,Cameroon,Hubert Velud,2022-01-01
+2022-02-02,Senegal,N,neutral,1,3,L,African Cup of Nations,afcon,True,Yaoundé,Cameroon,Hubert Velud,2022-01-01
+2022-02-05,Cameroon,A,away,3,3,D,African Cup of Nations,afcon,False,Yaoundé,Cameroon,Hubert Velud,2022-01-01
+2022-03-24,Kosovo,A,away,0,5,L,Friendly,friendly,False,Pristina,Kosovo,Hubert Velud,2022-01-01
+2022-03-29,Belgium,A,away,0,3,L,Friendly,friendly,False,Anderlecht,Belgium,Hubert Velud,2022-01-01
+2022-06-03,Cape Verde,N,home_delocalized,2,0,W,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco,Hubert Velud,2022-01-01
+2022-06-07,Eswatini,N,neutral,3,1,W,African Cup of Nations qualification,afcon_qual,True,Johannesburg,South Africa,Hubert Velud,2022-01-01
+2022-09-23,DR Congo,N,neutral,1,0,W,Friendly,friendly,True,Casablanca,Morocco,Hubert Velud,2022-01-01
+2022-09-27,Comoros,N,home_delocalized,2,1,W,Friendly,friendly,True,Casablanca,Morocco,Hubert Velud,2022-01-01
+2022-11-19,Ivory Coast,N,neutral,2,1,W,Friendly,friendly,True,Marrakesh,Morocco,Hubert Velud,2022-01-01
+2023-03-24,Togo,N,home_delocalized,1,0,W,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco,Hubert Velud,2022-01-01
+2023-03-28,Togo,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Lomé,Togo,Hubert Velud,2022-01-01
+2023-06-18,Cape Verde,A,away,1,3,L,African Cup of Nations qualification,afcon_qual,False,Praia,Cape Verde,Hubert Velud,2022-01-01
+2023-09-08,Eswatini,N,home_delocalized,0,0,D,African Cup of Nations qualification,afcon_qual,True,Marrakesh,Morocco,Hubert Velud,2022-01-01
+2023-09-12,Morocco,N,neutral,0,1,L,Friendly,friendly,True,Lens,France,Hubert Velud,2022-01-01
+2023-10-13,Equatorial Guinea,A,away,0,0,D,Friendly,friendly,False,Malabo,Equatorial Guinea,Hubert Velud,2022-01-01
+2023-10-17,Mauritania,N,home_delocalized,2,1,W,Friendly,friendly,True,Casablanca,Morocco,Hubert Velud,2022-01-01
+2023-11-17,Guinea-Bissau,N,home_delocalized,1,1,D,FIFA World Cup qualification,wc_qual,True,Marrakesh,Morocco,Hubert Velud,2022-01-01
+2023-11-21,Ethiopia,N,neutral,3,0,W,FIFA World Cup qualification,wc_qual,True,El Jadida,Morocco,Hubert Velud,2022-01-01
+2024-01-05,Iran,A,away,1,2,L,Friendly,friendly,False,Kish,Iran,Brama Traoré,2024-01-01
+2024-01-10,DR Congo,N,neutral,2,1,W,Friendly,friendly,True,Abu Dhabi,United Arab Emirates,Brama Traoré,2024-01-01
+2024-01-16,Mauritania,N,neutral,1,0,W,African Cup of Nations,afcon,True,Bouaké,Ivory Coast,Brama Traoré,2024-01-01
+2024-01-20,Algeria,N,neutral,2,2,D,African Cup of Nations,afcon,True,Bouaké,Ivory Coast,Brama Traoré,2024-01-01
+2024-01-23,Angola,N,neutral,0,2,L,African Cup of Nations,afcon,True,Yamoussoukro,Ivory Coast,Brama Traoré,2024-01-01
+2024-01-30,Mali,N,neutral,1,2,L,African Cup of Nations,afcon,True,Korhogo,Ivory Coast,Brama Traoré,2024-01-01
+2024-03-22,Libya,N,home_delocalized,1,2,L,Friendly,friendly,True,Casablanca,Morocco,Brama Traoré,2024-01-01
+2024-06-06,Egypt,A,away,1,2,L,FIFA World Cup qualification,wc_qual,False,Cairo,Egypt,Brama Traoré,2024-01-01
+2024-06-10,Sierra Leone,N,home_delocalized,2,2,D,FIFA World Cup qualification,wc_qual,True,Bamako,Mali,Brama Traoré,2024-01-01
+2024-09-06,Senegal,A,away,1,1,D,African Cup of Nations qualification,afcon_qual,False,Diamniadio,Senegal,Brama Traoré,2024-01-01
+2024-09-10,Malawi,N,home_delocalized,3,1,W,African Cup of Nations qualification,afcon_qual,True,Bamako,Mali,Brama Traoré,2024-01-01
+2024-10-10,Burundi,N,home_delocalized,4,1,W,African Cup of Nations qualification,afcon_qual,True,Ebimpé,Ivory Coast,Brama Traoré,2024-01-01
+2024-10-13,Burundi,N,neutral,2,0,W,African Cup of Nations qualification,afcon_qual,True,Abidjan,Ivory Coast,Brama Traoré,2024-01-01
+2024-11-14,Senegal,N,home_delocalized,0,1,L,African Cup of Nations qualification,afcon_qual,True,Bamako,Mali,Brama Traoré,2024-01-01
+2024-11-18,Malawi,A,away,0,3,L,African Cup of Nations qualification,afcon_qual,False,Lilongwe,Malawi,Brama Traoré,2024-01-01
+2025-01-04,Kenya,N,home_delocalized,1,1,D,Mapinduzi Cup,other,True,Gombani,Zanzibar,Brama Traoré,2024-01-01
+2025-01-06,Zanzibar,A,away,1,0,W,Mapinduzi Cup,other,False,Gombani,Zanzibar,Brama Traoré,2024-01-01
+2025-01-09,Tanzania,N,neutral,2,0,W,Mapinduzi Cup,other,True,Gombani,Zanzibar,Brama Traoré,2024-01-01
+2025-01-13,Zanzibar,A,away,1,2,L,Mapinduzi Cup,other,False,Gombani,Zanzibar,Brama Traoré,2024-01-01
+2025-03-21,Djibouti,N,home_delocalized,4,1,W,FIFA World Cup qualification,wc_qual,True,El Jadida,Morocco,Brama Traoré,2024-01-01
+2025-03-24,Guinea-Bissau,A,away,2,1,W,FIFA World Cup qualification,wc_qual,False,Bissau,Guinea-Bissau,Brama Traoré,2024-01-01
+2025-06-02,Tunisia,A,away,0,2,L,Friendly,friendly,False,Radès,Tunisia,Brama Traoré,2024-01-01
+2025-06-06,Zimbabwe,N,neutral,2,0,W,Friendly,friendly,True,Mohammedia,Morocco,Brama Traoré,2024-01-01
+2025-09-05,Djibouti,N,neutral,6,0,W,FIFA World Cup qualification,wc_qual,True,Bissau,Guinea-Bissau,Brama Traoré,2024-01-01
+2025-09-09,Egypt,H,home_bf,0,0,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Brama Traoré,2024-01-01
+2025-10-08,Sierra Leone,N,neutral,1,0,W,FIFA World Cup qualification,wc_qual,True,Monrovia,Liberia,Brama Traoré,2024-01-01
+2025-10-12,Ethiopia,H,home_bf,3,1,W,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Brama Traoré,2024-01-01
+2025-11-14,Niger,N,home_delocalized,3,2,W,Friendly,friendly,True,Mohammedia,Morocco,Brama Traoré,2024-01-01
+2025-11-18,Benin,N,neutral,3,0,W,Friendly,friendly,True,Mohammedia,Morocco,Brama Traoré,2024-01-01
+2025-12-24,Equatorial Guinea,N,neutral,2,1,W,African Cup of Nations,afcon,True,Casablanca,Morocco,Brama Traoré,2024-01-01
+2025-12-28,Algeria,N,neutral,0,1,L,African Cup of Nations,afcon,True,Rabat,Morocco,Brama Traoré,2024-01-01
+2025-12-31,Sudan,N,neutral,2,0,W,African Cup of Nations,afcon,True,Casablanca,Morocco,Brama Traoré,2024-01-01
+2026-01-06,Ivory Coast,N,neutral,0,3,L,African Cup of Nations,afcon,True,Marrakesh,Morocco,Amir Abdou,2026-01-01
+2026-03-28,Guinea-Bissau,H,home_bf,5,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-01
+2026-03-31,Guinea-Bissau,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-01
+2026-06-05,Russia,A,away,0,3,L,Friendly,friendly,False,Volgograd,Russia,Amir Abdou,2026-01-01
+2026-06-09,Belarus,A,away,2,2,D,Friendly,friendly,False,Minsk,Belarus,Amir Abdou,2026-01-01

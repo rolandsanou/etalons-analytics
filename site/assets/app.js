@@ -756,6 +756,25 @@ function renderLegendsTables() {
        <td>${m.opponent}</td><td class="num">${m.score}</td><td>${m.tournament}</td></tr>`).join("");
 }
 
+// ---------- coaches ----------
+
+function renderCoaches() {
+  const rows = DATA.history.coaches;
+  $("coaches_table").innerHTML = `<tr><th>${t("h_coach")}</th><th>${t("h_period")}</th>
+    <th class="num">Pld</th><th class="num">V-N-D</th><th class="num">Pts/m</th>
+    <th class="num">BM/m</th><th class="num">BE/m</th><th class="num">${t("h_elo_delta")}</th></tr>` +
+    rows.map(r => {
+      const name = r.pooled ? t("coaches_pooled") : r.coach;
+      const style = r.pooled ? ' style="color:var(--muted)"' : "";
+      const delta = r.elo_delta === "" || r.pooled ? "–" : signed(r.elo_delta, 0);
+      return `<tr${style}><td>${name}</td>
+        <td>${r.first_match.slice(0, 4)}–${r.last_match.slice(0, 4)}</td>
+        <td class="num">${r.matches}</td><td class="num">${r.w}-${r.d}-${r.l}</td>
+        <td class="num">${fmt(r.ppg, 2)}</td><td class="num">${fmt(r.gf_pm, 2)}</td>
+        <td class="num">${fmt(r.ga_pm, 2)}</td><td class="num">${delta}</td></tr>`;
+    }).join("");
+}
+
 // ---------- venues ----------
 
 function renderVenues() {
@@ -837,9 +856,22 @@ function renderEloChart() {
   const peak = DATA.elo.peak;
   const fc = DATA.elo.forecast;
   const last = tl[tl.length - 1];
+  const eras = (DATA.history.coaches || [])
+    .filter(r => !r.pooled && r.first_match >= "2008")
+    .sort((a, b) => a.first_match.localeCompare(b.first_match));
   const series = [{
     name: t("elo_hist"), type: "line", data: hist, showSymbol: false,
     lineStyle: { color: S1, width: 2 }, itemStyle: { color: S1 },
+    markArea: {
+      silent: true,
+      data: eras.map((r, i) => [
+        { xAxis: r.first_match,
+          itemStyle: { color: NEUTRAL, opacity: i % 2 ? 0.55 : 0.28 },
+          label: { show: true, position: "insideTop", color: MUTED, fontSize: 10,
+            formatter: r.coach.split(" ").pop() } },
+        { xAxis: r.last_match },
+      ]),
+    },
     markPoint: {
       symbol: "circle", symbolSize: 9,
       itemStyle: { color: S1, borderColor: SURFACE, borderWidth: 2 },
@@ -1016,6 +1048,7 @@ function renderAll() {
   renderLegendsTables();
   renderShootouts();
   renderPenalties();
+  renderCoaches();
   renderVenues();
   renderEloChart();
   renderWinexpChart();

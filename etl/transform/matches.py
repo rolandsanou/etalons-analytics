@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from ..config import RAW, STAGING, TEAM
+from ..config import RAW, SEED, STAGING, TEAM
 
 
 def load_results():
@@ -150,12 +150,37 @@ def history_stats(m):
     }
 
 
+def load_tenures():
+    path = SEED / "coach_tenures.csv"
+    if not path.exists():
+        return []
+    t = pd.read_csv(path)
+    return [{"coach": r.coach, "start": r.start,
+             "end": r.end if isinstance(r.end, str) and r.end else "9999-12-31",
+             "idx": i}
+            for i, r in enumerate(t.itertuples())]
+
+
+def assign_coach(date_str, tenures):
+    """Latest-starting (then latest-listed) tenure covering the date."""
+    best = None
+    for t in tenures:
+        if t["start"] <= date_str <= t["end"]:
+            if best is None or (t["start"], t["idx"]) > (best["start"], best["idx"]):
+                best = t
+    return (best["coach"], best["start"]) if best else ("", "")
+
+
 def run():
     df = load_results()
     m = team_matches(df, TEAM)
     out = m[["date", "opponent", "venue", "venue_class", "gf", "ga", "result",
              "tournament", "comp", "neutral", "city", "country"]].copy()
     out["date"] = out.date.dt.strftime("%Y-%m-%d")
+    tenures = load_tenures()
+    assigned = [assign_coach(d, tenures) for d in out.date]
+    out["coach"] = [a[0] for a in assigned]
+    out["coach_since"] = [a[1] for a in assigned]
     STAGING.mkdir(parents=True, exist_ok=True)
     out.to_csv(STAGING / "matches.csv", index=False)
     print(f"wrote {STAGING / 'matches.csv'} ({len(out)} rows)")

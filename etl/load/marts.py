@@ -147,9 +147,10 @@ def run():
     profiles = build_profiles(today)
     write_csv(MARTS / "player_profile.csv", profiles, PROFILE_FIELDS)
     write_csv(MARTS / "formations.csv", build_formations(), FORMATION_FIELDS)
-    from . import leadership, performance
+    from . import coaches, leadership, performance
     performance.run(read_csv(STAGING / "players.csv"))
     leadership.run()
+    coaches.run()
 
     m = matches_mod.load_staged()
     hist = matches_mod.history_stats(m)

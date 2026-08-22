@@ -183,6 +183,30 @@ def parse_afcon_record(html):
     return editions
 
 
+TENURE_RE = re.compile(r"^(.*?)\s*\(\s*(\d{4})\s*(?:[–\-—]\s*(\d{4})?)?\s*\)\s*$")
+
+
+def parse_coaching_history(html):
+    soup = _soup(html)
+    el = _heading(soup, "Coaching_history")
+    ul = el.find_next("ul") if el else None
+    if ul is None:
+        return []
+    rows = []
+    for li in ul.find_all("li"):
+        m = TENURE_RE.match(li.get_text(" ", strip=True))
+        if not m:
+            continue
+        name, start, end = m.group(1).strip(), m.group(2), m.group(3)
+        has_dash = "–" in li.get_text() or "-" in li.get_text().split("(")[-1]
+        rows.append({
+            "coach": name,
+            "start_year": int(start),
+            "end_year": (int(end) if end else (None if has_dash else int(start))),
+        })
+    return rows
+
+
 def parse_as_of(html):
     soup = _soup(html)
     m = soup.find(string=re.compile(r"Caps and goals (?:are )?correct as of", re.I))

@@ -123,12 +123,14 @@ def build_history_json():
     hist = matches_mod.history_stats(m)
     team_html = (RAW / "wikipedia" / "team_page.html").read_text(encoding="utf-8")
     capped, scorers = parse_leaders(team_html)
+    from .coaches import build_coach_eras
     return {
         **hist,
         "most_capped": capped,
         "top_scorers": scorers,
         "afcon_record": parse_afcon_record(team_html),
         "shootouts": build_shootouts_json(),
+        "coaches": build_coach_eras(),
     }
 
 

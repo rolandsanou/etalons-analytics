@@ -1,6 +1,6 @@
 import json
 
-from .config import MARTS, SITE_DATA, STAGING
+from .config import MARTS, SEED, SITE_DATA, STAGING
 from .util import read_csv
 
 
@@ -125,6 +125,32 @@ def _check_goal_events(report):
                    f"{len(bf_goals)} BF goals, {unattributed} scorers not matched to registry"))
 
 
+def _check_coaches(report):
+    from datetime import date, timedelta
+    matches = read_csv(STAGING / "matches.csv")
+    modern = [m for m in matches if m["date"] >= "2000-01-01"]
+    with_coach = sum(1 for m in modern if m.get("coach"))
+    pct = round(100 * with_coach / len(modern), 1) if modern else 0
+    report.append(("matches: coach coverage since 2000", "WARN" if pct < 90 else "PASS",
+                   f"{pct}% assigned ({with_coach}/{len(modern)})"))
+    seed = read_csv(SEED / "coach_tenures.csv") if (SEED / "coach_tenures.csv").exists() else []
+    spans = []
+    for r in seed:
+        start = date.fromisoformat(r["start"])
+        end = date.fromisoformat(r["end"]) if r["end"] else date.today()
+        spans.append((r["coach"], start, end))
+    bad = []
+    for i in range(len(spans)):
+        for j in range(i + 1, len(spans)):
+            a, b = spans[i], spans[j]
+            overlap = (min(a[2], b[2]) - max(a[1], b[1])).days
+            if overlap > 366:
+                bad.append(f"{a[0]} / {b[0]}")
+    report.append(("seed: coach tenures non-conflicting", "FAIL" if bad else "PASS",
+                   f"{len(spans)} tenures"
+                   + ("; >1y overlap: " + "; ".join(bad[:3]) if bad else "")))
+
+
 def _check_captains(report):
     apps = read_csv(STAGING / "appearances.csv")
     per_event = {}
@@ -237,6 +263,7 @@ def run():
     _check_goal_events(report)
     _check_penalties(report)
     _check_captains(report)
+    _check_coaches(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
