@@ -55,6 +55,8 @@ Staging (`data/staging/`, committed):
 | `penalties.csv` / `shootouts_alltime.csv` | attempt / shootout | in-game and shootout penalty attempts per taker; all-time shootout record |
 | `youth_callups.csv` | player × youth squad | U-17/U-20 AFCON squads linked to the senior registry (name + DOB) |
 | `club_form.csv` | player | latest club season: apps, starts, minutes, rating (30-day refresh) |
+| `team_match_stats.csv` | match × period × side | possession, big chances, shots, passes, duels, dribbles, defensive actions (ALL / 1st / 2nd half, BF and opponent) |
+| `concessions.csv` | goal conceded | deficit depth, reply time, replied-within-10 flag |
 
 Marts (`data/marts/`, committed): `player_profile.csv`, `player_importance.csv`,
 `bench_impact.csv`, `formations.csv`, `team_timeline.csv`, `captains.csv`,
@@ -146,13 +148,24 @@ python -m http.server 8123 --directory site
   sheet; prospects = not yet called up, aged ≤21.
 - **Club readiness** — latest club season (apps, minutes, rating) per active/fringe
   player, refreshed every 30 days and stamped with its as-of date.
+- **Playing style** — averages computed only over matches whose feed includes passing
+  data (a reduced feed would distort the denominator); an axis appears only above 75%
+  coverage of that sample, always beside the opponents actually faced. Ratios are
+  pooled (sum/sum), never averages of percentages; per-match volume is indexed with
+  opponents = 100 so different scales share one axis. Terciles use the opponent's
+  pre-match Elo. xG is null at source for CAF matches and is excluded.
+- **Resilience** — every goal is classified by what it changed (opener / equalizer /
+  go-ahead / extender / consolation; own goals credited to the benefiting side).
+  Response time is measured in real playing minutes including stoppage; output by
+  game state is normalized by minutes actually spent in that state; the late swing
+  compares the points implied by the score at 75' with the final result.
 
 ## Roadmap
 
 - [x] Goal timelines & substitutions from the incidents endpoint
 - [x] Player importance profiles (gated components, no composite index)
 - [x] Bench impact
-- [ ] **v3** — team playing style (possession, directness, big chances, duels; 1st/2nd-half
+- [x] **v3** — team playing style (possession, directness, big chances, duels; 1st/2nd-half
       splits; style vs opponent strength) and resilience (deficit ladder, reply time
       after conceding, output by game state, clutch scorers)
 - [x] **v4** — coach eras, penalties & shootouts, captains & GK deep-dive, the

@@ -18,6 +18,7 @@
       <a href="#joueurs" data-i18n="nav_pool"></a>
       <a href="#repartitions" data-i18n="nav_breakdowns"></a>
       <a href="#systemes" data-i18n="nav_forms"></a>
+      <a href="#style" data-i18n="nav_style"></a>
       <a href="#tempo" data-i18n="nav_tempo"></a>
       <a href="#importance" data-i18n="nav_imp"></a>
       <a href="#histoire" data-i18n="nav_history"></a>
@@ -152,6 +153,62 @@
         <h3 data-i18n="c_forms"></h3>
         <p class="sub" data-i18n="c_forms_sub"></p>
         <div class="chart short" id="c_forms"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="style">
+    <h2 data-i18n="s_style"></h2>
+    <p class="lead" id="lead_style"></p>
+    <div class="grid">
+      <div class="card" id="card_style_pct">
+        <h3 data-i18n="c_style_pct"></h3>
+        <p class="sub" data-i18n="c_style_pct_sub"></p>
+        <div class="chart tall" id="c_style_pct"></div>
+      </div>
+      <div class="card" id="card_style_vol">
+        <h3 data-i18n="c_style_vol"></h3>
+        <p class="sub" data-i18n="c_style_vol_sub"></p>
+        <div class="chart tall" id="c_style_vol"></div>
+      </div>
+      <div class="card w8" id="card_style_terc">
+        <h3 data-i18n="c_style_terc"></h3>
+        <p class="sub" data-i18n="c_style_terc_sub"></p>
+        <div class="chart short" id="c_style_terc"></div>
+      </div>
+      <div class="card w4" id="card_style_half">
+        <h3 data-i18n="c_style_half"></h3>
+        <p class="sub" data-i18n="c_style_half_sub"></p>
+        <div class="tablewrap"><table id="half_table"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resilience">
+    <h2 data-i18n="s_res"></h2>
+    <p class="lead" id="lead_res"></p>
+    <div class="grid">
+      <div class="card w4" id="card_deficit">
+        <h3 data-i18n="c_deficit"></h3>
+        <p class="sub" data-i18n="c_deficit_sub"></p>
+        <div class="mini-tiles" id="deficit_tiles"></div>
+        <p class="sub" id="late_swing_note"></p>
+      </div>
+      <div class="card w4" id="card_reply">
+        <h3 data-i18n="c_reply"></h3>
+        <p class="sub" id="reply_sub"></p>
+        <div class="chart short" id="c_reply"></div>
+        <p class="sub" id="reply_median"></p>
+      </div>
+      <div class="card w4" id="card_state_out">
+        <h3 data-i18n="c_state_out"></h3>
+        <p class="sub" data-i18n="c_state_out_sub"></p>
+        <div class="chart short" id="c_state_out"></div>
+      </div>
+      <div class="card w12" id="card_clutch">
+        <h3 data-i18n="c_clutch"></h3>
+        <p class="sub" data-i18n="c_clutch_sub"></p>
+        <div class="tablewrap"><table id="clutch_table"></table></div>
       </div>
     </div>
   </section>

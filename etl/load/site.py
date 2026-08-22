@@ -144,6 +144,16 @@ def build_elo_json():
     return analytics.elo_summary(timeline, ranked)
 
 
+def _stats_coverage():
+    path = STAGING / "team_match_stats.csv"
+    if not path.exists():
+        return {"with_stats": 0, "with_full_stats": 0}
+    from .style import full_feed_events
+    rows = read_csv(path)
+    return {"with_stats": len({r["event_id"] for r in rows}),
+            "with_full_stats": len(full_feed_events(rows))}
+
+
 def build_team_json():
     from .performance import build_team_timeline
     events = read_csv(STAGING / "events.csv")
@@ -152,6 +162,8 @@ def build_team_json():
     from .leadership import build_captains, build_goalkeepers
     from .performance import _f
     from .pipeline import build_pipeline
+    from .resilience import build_clutch, build_resilience
+    from .style import build_style, half_split
     cohorts, prospects = build_pipeline(date.today())
     apps = read_csv(STAGING / "appearances.csv")
     eff = {s["event_id"]: _f(s["effective_length"], 95)
@@ -163,7 +175,10 @@ def build_team_json():
         "timeline": {"bins": bins, "summary": summary},
         "penalties": build_penalties_json(),
         "pipeline": {"cohorts": cohorts, "prospects": prospects},
-        "coverage": {"events": len(events), "with_formation": with_formation},
+        "style": {"axes": build_style(), "halves": half_split()},
+        "resilience": {"metrics": build_resilience(), "clutch": build_clutch()},
+        "coverage": {"events": len(events), "with_formation": with_formation,
+                     **_stats_coverage()},
     }
 
 

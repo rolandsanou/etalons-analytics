@@ -196,6 +196,61 @@ def _check_penalties(report):
                    + ("; MISMATCH: " + "; ".join(mismatch) if mismatch else "")))
 
 
+def _check_team_stats(report):
+    path = STAGING / "team_match_stats.csv"
+    if not path.exists():
+        report.append(("team stats: staged", "WARN", "missing"))
+        return
+    rows = read_csv(path)
+    events = {e["event_id"] for e in read_csv(STAGING / "events.csv")}
+    covered = {r["event_id"] for r in rows}
+    pct = round(100 * len(covered & events) / len(events), 1) if events else 0
+    report.append(("team stats: match coverage", "WARN" if pct < 70 else "PASS",
+                   f"{pct}% of {len(events)} matches have a statistics block"))
+    full = {r["event_id"] for r in rows
+            if r["period"] == "ALL" and r["side"] == "bf" and r.get("passes")}
+    report.append(("team stats: full feed (style universe)", "INFO",
+                   f"{len(full)} matches carry passing data — the style analysis sample"))
+    bad_poss, bad_shots = [], []
+    for r in rows:
+        if r["period"] != "ALL":
+            continue
+        if r["side"] == "bf" and r.get("possession_pct"):
+            opp = next((x for x in rows if x["event_id"] == r["event_id"]
+                        and x["period"] == "ALL" and x["side"] == "opp"), None)
+            if opp and opp.get("possession_pct"):
+                tot = float(r["possession_pct"]) + float(opp["possession_pct"])
+                if abs(tot - 100) > 2:
+                    bad_poss.append(r["event_id"])
+        if r.get("shots") and r.get("shots_on_target"):
+            if float(r["shots_on_target"]) > float(r["shots"]):
+                bad_shots.append(r["event_id"])
+    report.append(("team stats: possession sums to 100", "FAIL" if bad_poss else "PASS",
+                   f"{len(bad_poss)} events off by more than 2 points"))
+    report.append(("team stats: shots on target <= shots", "FAIL" if bad_shots else "PASS",
+                   f"{len(bad_shots)} violations"))
+
+
+def _check_resilience(report):
+    goals = read_csv(STAGING / "goal_events.csv")
+    unclassified = [g for g in goals if not g.get("impact")]
+    report.append(("goal_events: impact classified", "FAIL" if unclassified else "PASS",
+                   f"{len(goals)} goals, {len(unclassified)} without an impact class"))
+    path = STAGING / "concessions.csv"
+    if not path.exists():
+        report.append(("concessions: staged", "FAIL", "missing"))
+        return
+    conc = read_csv(path)
+    conceded = sum(1 for g in goals if g["is_bf"] != "1")
+    report.append(("concessions: one row per goal conceded",
+                   "FAIL" if len(conc) != conceded else "PASS",
+                   f"{len(conc)} rows vs {conceded} goals conceded"))
+    bad = [c for c in conc if c["reply_minutes"] not in ("", None)
+           and float(c["reply_minutes"]) < 0]
+    report.append(("concessions: reply time non-negative", "FAIL" if bad else "PASS",
+                   f"{len(bad)} negative reply times"))
+
+
 def _check_club_form(report):
     path = STAGING / "club_form.csv"
     if not path.exists():
@@ -303,6 +358,8 @@ def run():
     _check_coaches(report)
     _check_youth(report)
     _check_club_form(report)
+    _check_team_stats(report)
+    _check_resilience(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
