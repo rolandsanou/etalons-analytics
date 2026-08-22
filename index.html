@@ -340,6 +340,19 @@
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script src="assets/i18n.js"></script>
-<script src="assets/app.js"></script>
+<!-- shared chart plumbing, then one file per dashboard section, then boot.
+     Adding a section: create assets/sections/<name>.js, add a <script> below,
+     and call its render function from renderAll() in assets/boot.js. -->
+<script src="assets/core.js"></script>
+<script src="assets/sections/overview.js"></script>
+<script src="assets/sections/players.js"></script>
+<script src="assets/sections/breakdowns.js"></script>
+<script src="assets/sections/style.js"></script>
+<script src="assets/sections/tempo.js"></script>
+<script src="assets/sections/importance.js"></script>
+<script src="assets/sections/history.js"></script>
+<script src="assets/sections/elo.js"></script>
+<script src="assets/sections/outlook.js"></script>
+<script src="assets/boot.js"></script>
 </body>
 </html>
