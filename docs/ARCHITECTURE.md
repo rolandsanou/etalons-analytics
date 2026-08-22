@@ -105,6 +105,7 @@ tools/
   check_seo.py       fails on a wrong canonical, missing hreflang, broken
                      og:image or unparseable structured data
   make_og_image.py   redraws the social cards (needs pillow; output committed)
+  make_icons.py      redraws the favicon set (needs pillow; output committed)
   gen_data_model.py  regenerates docs/DATA_MODEL.md from the field constants
 ```
 

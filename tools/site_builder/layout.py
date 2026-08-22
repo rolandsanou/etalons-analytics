@@ -179,7 +179,9 @@ def page(ctx, *, title, description, body, needs=(), scripts=(), page_class="",
 {seo.jsonld(*structured)}
 <meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="icon" href="{asset("assets/favicon.svg")}" type="image/svg+xml">
+<link rel="icon" href="{asset("assets/favicon.ico")}" sizes="32x32">
+<link rel="apple-touch-icon" href="{asset("assets/apple-touch-icon.png")}">
 <script>/* set the remembered theme before first paint, so an explicit dark choice
    never flashes light. No stored choice: prefers-color-scheme decides in CSS.
    Braces are doubled because this block sits inside a Python f-string. */
