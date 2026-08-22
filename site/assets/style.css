@@ -278,6 +278,17 @@ main section > p.sub {
   max-width: 84ch;
 }
 
+/* "all the matches →" style continuation links */
+main section > p.sub a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+main section > p.sub a:hover { text-decoration-color: var(--red); }
+
 h4 {
   font-size: 10.5px;
   font-weight: 600;
@@ -388,14 +399,17 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; }
   line-height: 1.35;
 }
 
-.card > h3:not(:has(+ p.sub)) {
+/* the rule only earns its place when something follows it */
+.card > h3:not(:last-child):not(:has(+ p.sub)) {
   padding-bottom: 10px;
   margin-bottom: 12px;
   border-bottom: 1px solid var(--hair);
 }
 
-.card > h3 + p.sub {
-  margin: 3px 0 12px;
+.card > h3 + p.sub { margin: 3px 0 0; }
+
+.card > h3 + p.sub:not(:last-child) {
+  margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--hair);
 }
@@ -904,6 +918,8 @@ footer a:hover { color: var(--ink); text-decoration-color: var(--red); }
   }
   nav::-webkit-scrollbar { display: none; }
   nav a { padding-bottom: 8px; }
+  html { scroll-padding-top: 96px; }
+  main section { scroll-margin-top: 96px; }
 }
 
 @media (max-width: 420px) {

@@ -16,6 +16,10 @@ def main():
         for href in HREF.findall(text):
             if href.startswith(("http", "//", "data:", "mailto:")):
                 continue
+            # assets carry a ?v=<hash> cache-busting suffix
+            href = href.split("?", 1)[0]
+            if not href:
+                continue
             target = (page.parent / href).resolve()
             if not target.exists():
                 missing.append(f"{page.relative_to(SITE)} -> {href}")

@@ -7,13 +7,14 @@ player (site/joueurs/). Charts stay client-side; detail pages are static HTML so
 they work without JavaScript and can be indexed.
 """
 
+import hashlib
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from tools.site_builder import hubs  # noqa: E402
+from tools.site_builder import hubs, layout  # noqa: E402
 from tools.site_builder.data import Data  # noqa: E402
 from tools.site_builder.detail import match_page, match_slug, player_page  # noqa: E402
 
@@ -25,8 +26,19 @@ def write(path, html):
     path.write_text(html, encoding="utf-8")
 
 
+def asset_version():
+    """Short hash of every stylesheet and script, so a deploy busts the cache."""
+    digest = hashlib.md5()
+    assets = sorted((SITE / "assets").rglob("*.css")) + \
+        sorted((SITE / "assets").rglob("*.js"))
+    for path in assets:
+        digest.update(path.read_bytes())
+    return digest.hexdigest()[:8]
+
+
 def main():
     d = Data()
+    layout.ASSET_VERSION = asset_version()
     pages = 0
 
     for name, builder in [

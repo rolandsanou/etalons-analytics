@@ -10,6 +10,17 @@ import json
 
 SITE_NAME = "Étalons Analytics"
 
+# Short content hash appended to every stylesheet and script URL so a deploy is
+# visible immediately instead of waiting for the CDN cache to expire. Set by
+# build_site.main() from the actual asset contents.
+ASSET_VERSION = ""
+
+
+def asset(up, path):
+    """Versioned URL for a stylesheet or script."""
+    suffix = f"?v={ASSET_VERSION}" if ASSET_VERSION else ""
+    return f"{up}{path}{suffix}"
+
 # (href, i18n label key, nav id)
 NAV = [
     ("index.html", "nav_home", "home"),
@@ -59,7 +70,7 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
             u=up, h=href, k=key, c=' class="on"' if nav_id == active else "")
         for href, key, nav_id in NAV)
     script_tags = "\n".join(
-        f'<script src="{up}assets/sections/{name}.js"></script>'
+        f'<script src="{asset(up, f"assets/sections/{name}.js")}"></script>'
         for name in scripts)
     data_attr = f' data-needs="{",".join(needs)}"' if needs else ""
     inline = ""
@@ -77,8 +88,8 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
-<link rel="stylesheet" href="{up}assets/style.css">
-<link rel="stylesheet" href="{up}assets/pages.css">
+<link rel="stylesheet" href="{asset(up, "assets/style.css")}">
+<link rel="stylesheet" href="{asset(up, "assets/pages.css")}">
 </head>
 <body class="{esc(page_class)}"{data_attr} data-base="{up}">
 
@@ -101,10 +112,10 @@ def page(*, title, description, body, depth=0, active="", needs=(), scripts=(),
 
 {inline}
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-<script src="{up}assets/i18n.js"></script>
-<script src="{up}assets/core.js"></script>
+<script src="{asset(up, "assets/i18n.js")}"></script>
+<script src="{asset(up, "assets/core.js")}"></script>
 {script_tags}
-<script src="{up}assets/boot.js"></script>
+<script src="{asset(up, "assets/boot.js")}"></script>
 </body>
 </html>
 """
