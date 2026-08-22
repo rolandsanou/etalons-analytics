@@ -37,6 +37,13 @@ STATS_MAP = {
     "savedShotsFromInsideTheBox": "saves_inside_box",
     "punches": "punches",
     "goodHighClaim": "high_claims",
+    "penaltyWon": "pens_won",
+    "penaltyConceded": "pens_conceded",
+    "penaltyMiss": "pens_missed",
+    "penaltyFaced": "pens_faced",
+    "penaltyShootoutGoal": "shootout_goals",
+    "penaltyShootoutMiss": "shootout_misses",
+    "penaltyShootoutSave": "shootout_saves",
 }
 
 APPEARANCE_FIELDS = (["event_id", "date", "tournament", "opponent", "venue", "gf", "ga",

@@ -14,6 +14,7 @@ TEAM = "Burkina Faso"
 WIKI_TEAM_URL = "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team"
 RESULTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
 FORMER_NAMES_URL = "https://raw.githubusercontent.com/martj42/international_results/master/former_names.csv"
+SHOOTOUTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv"
 
 SOFA_BASE = "https://www.sofascore.com/api/v1"
 SOFA_TEAM_ID = 4749

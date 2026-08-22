@@ -125,6 +125,37 @@ def _check_goal_events(report):
                    f"{len(bf_goals)} BF goals, {unattributed} scorers not matched to registry"))
 
 
+def _check_penalties(report):
+    path = STAGING / "penalties.csv"
+    if not path.exists():
+        report.append(("penalties: staged", "FAIL", "missing"))
+        return
+    pens = read_csv(path)
+    odd = [p for p in pens if p["outcome"] not in ("scored", "missed")]
+    report.append(("penalties: outcomes classified", "WARN" if odd else "PASS",
+                   f"{len(pens)} rows, {len(odd)} with unexpected outcome"))
+    events = {e["event_id"]: e for e in read_csv(STAGING / "events.csv") if e.get("pens")}
+    so = {}
+    for p in pens:
+        if p["kind"] != "shootout":
+            continue
+        s = so.setdefault(p["event_id"], {"bf": 0, "opp": 0})
+        if p["outcome"] == "scored":
+            s["bf" if p["is_bf"] == "1" else "opp"] += 1
+    mismatch, no_cov = [], 0
+    for eid, ev in events.items():
+        bf_p, opp_p = ev["pens"].split("-")
+        if eid not in so:
+            no_cov += 1
+            continue
+        if (str(so[eid]["bf"]), str(so[eid]["opp"])) != (bf_p, opp_p):
+            mismatch.append(f"{ev['date']} vs {ev['opponent']}")
+    report.append(("penalties: shootout attempts == recorded pens",
+                   "FAIL" if mismatch else "PASS",
+                   f"{len(events)} shootout matches, {no_cov} without attempt incidents"
+                   + ("; MISMATCH: " + "; ".join(mismatch) if mismatch else "")))
+
+
 def _check_timeline(report):
     path = STAGING / "match_states.csv"
     if not path.exists():
@@ -190,6 +221,7 @@ def run():
     _check_appearances(report, ids)
     _check_events(report)
     _check_goal_events(report)
+    _check_penalties(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)

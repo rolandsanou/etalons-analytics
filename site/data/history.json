@@ -1289,5 +1289,88 @@
    "year": 2025,
    "round": "Round of 16"
   }
- ]
+ ],
+ "shootouts": {
+  "w": 6,
+  "l": 5,
+  "matches": [
+   {
+    "date": "1982-02-22",
+    "opponent": "Ivory Coast",
+    "venue": "A",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": ""
+   },
+   {
+    "date": "1994-01-29",
+    "opponent": "Guinea",
+    "venue": "H",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": ""
+   },
+   {
+    "date": "1996-12-27",
+    "opponent": "Benin",
+    "venue": "A",
+    "winner_is_bf": "0",
+    "first_shooter_is_bf": ""
+   },
+   {
+    "date": "1998-02-21",
+    "opponent": "Tunisia",
+    "venue": "H",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": "1"
+   },
+   {
+    "date": "1998-02-27",
+    "opponent": "DR Congo",
+    "venue": "H",
+    "winner_is_bf": "0",
+    "first_shooter_is_bf": "0"
+   },
+   {
+    "date": "2002-12-27",
+    "opponent": "Niger",
+    "venue": "A",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": ""
+   },
+   {
+    "date": "2003-09-26",
+    "opponent": "Algeria",
+    "venue": "A",
+    "winner_is_bf": "0",
+    "first_shooter_is_bf": ""
+   },
+   {
+    "date": "2013-02-06",
+    "opponent": "Ghana",
+    "venue": "H",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": "0"
+   },
+   {
+    "date": "2017-02-01",
+    "opponent": "Egypt",
+    "venue": "H",
+    "winner_is_bf": "0",
+    "first_shooter_is_bf": "0"
+   },
+   {
+    "date": "2022-01-23",
+    "opponent": "Gabon",
+    "venue": "H",
+    "winner_is_bf": "1",
+    "first_shooter_is_bf": "0"
+   },
+   {
+    "date": "2022-02-05",
+    "opponent": "Cameroon",
+    "venue": "A",
+    "winner_is_bf": "0",
+    "first_shooter_is_bf": "0"
+   }
+  ]
+ }
 }

@@ -1,0 +1,53 @@
+event_id,date,kind,minute,added_time,is_bf,outcome,sofa_id,name,player_id
+9786529,2022-01-09,ingame,45,3,0,scored,116869,Vincent Aboubakar,
+9786529,2022-01-09,ingame,40,0,0,scored,116869,Vincent Aboubakar,
+9737943,2022-01-17,ingame,52,0,0,scored,199538,Getaneh Kebede,
+10054216,2022-01-23,ingame,18,0,1,missed,218160,Bertrand Traoré,bertrand-traore
+10054216,2022-01-23,shootout,,0,1,scored,1099259,Ismahila Ouédraogo,ismahila-ouedraogo
+10054216,2022-01-23,shootout,,0,0,missed,146683,Lloyd Palun,
+10054216,2022-01-23,shootout,,0,1,missed,1000129,Abdoul Tapsoba,abdoul-tapsoba
+10054216,2022-01-23,shootout,,0,0,missed,873051,Yannis N'Gakoutou-Yapende,
+10054216,2022-01-23,shootout,,0,1,scored,850011,Mohamed Konaté,mohamed-konate
+10054216,2022-01-23,shootout,,0,0,scored,898964,Louis Ameka Autchanga,
+10054216,2022-01-23,shootout,,0,1,scored,139357,Adama Guira,adama-guira
+10054216,2022-01-23,shootout,,0,0,scored,31993,Bruno Ecuele Manga,
+10054216,2022-01-23,shootout,,0,1,scored,174911,Steeve Yago,steeve-yago
+10054216,2022-01-23,shootout,,0,0,scored,177103,André Poko,
+10054216,2022-01-23,shootout,,0,1,missed,785883,Saidou Simporé,saidou-simpore
+10054216,2022-01-23,shootout,,0,0,missed,311696,Guélor Kanga,
+10054216,2022-01-23,shootout,,0,1,scored,883262,Edmond Tapsoba,edmond-tapsoba
+10054216,2022-01-23,shootout,,0,0,scored,891419,Aaron-Salem Boupendza,
+10054216,2022-01-23,shootout,,0,1,scored,1083202,Soumaila Ouattara,soumaila-ouattara
+10054216,2022-01-23,shootout,,0,0,scored,242537,Axel Meye,
+10054216,2022-01-23,shootout,,0,1,scored,1006189,Issa Kaboré,issa-kabore
+10054216,2022-01-23,shootout,,0,0,scored,760618,Denis Bouanga,
+10083104,2022-02-05,shootout,,0,0,scored,159739,Ambroise Oyongo,
+10083104,2022-02-05,shootout,,0,1,scored,174911,Steeve Yago,steeve-yago
+10083104,2022-02-05,shootout,,0,0,scored,788352,Pierre Kunde,
+10083104,2022-02-05,shootout,,0,1,missed,806244,Ibrahim Blati Tourè,blati-toure
+10083104,2022-02-05,shootout,,0,0,scored,842931,Karl Toko Ekambi,
+10083104,2022-02-05,shootout,,0,1,scored,1083202,Soumaila Ouattara,soumaila-ouattara
+10083104,2022-02-05,shootout,,0,0,scored,846154,Nicolas Moumie Ngamaleu,
+10083104,2022-02-05,shootout,,0,1,scored,1006189,Issa Kaboré,issa-kabore
+10083104,2022-02-05,shootout,,0,0,scored,116869,Vincent Aboubakar,
+10151732,2022-03-24,ingame,65,0,1,missed,883262,Edmond Tapsoba,edmond-tapsoba
+10718435,2022-09-27,ingame,73,0,1,scored,218160,Bertrand Traoré,bertrand-traore
+10891794,2022-11-19,ingame,42,0,1,scored,883262,Edmond Tapsoba,edmond-tapsoba
+11798005,2023-11-21,ingame,78,0,1,scored,218160,Bertrand Traoré,bertrand-traore
+11761878,2024-01-16,ingame,90,6,1,scored,218160,Bertrand Traoré,bertrand-traore
+11761889,2024-01-20,ingame,71,0,1,scored,218160,Bertrand Traoré,bertrand-traore
+11940715,2024-01-30,ingame,57,0,1,scored,218160,Bertrand Traoré,bertrand-traore
+12183524,2024-06-10,ingame,45,2,1,scored,911719,Lassina Traoré,lassina-traore
+12526614,2024-09-10,ingame,60,0,1,scored,886227,Hassane Bandé,hassane-bande
+12526608,2024-10-13,ingame,90,4,1,scored,218160,Bertrand Traoré,bertrand-traore
+12183513,2025-03-21,ingame,88,0,0,scored,1138139,Samuel Akinbinu,
+14085001,2025-08-02,ingame,45,3,0,scored,1103596,Abdul Suleiman Sopu,
+14085010,2025-08-06,ingame,78,0,1,scored,867239,Patrick Malo,patrick-malo
+14085010,2025-08-06,ingame,61,0,1,scored,1009908,Abdoul Abass Guiro,abdoul-abass-guiro
+14085026,2025-08-13,ingame,45,9,0,scored,881023,Alassane Diop,
+14085032,2025-08-16,ingame,58,0,0,scored,1218861,Lalaina Rafanomezantsoa,
+12183532,2025-09-05,ingame,86,0,1,scored,1106451,Dango Ouattara,dango-ouattara
+12183532,2025-09-05,ingame,13,0,1,missed,1106451,Dango Ouattara,dango-ouattara
+15032911,2025-11-14,ingame,56,0,0,scored,1130110,Daniel Sosah,
+13424954,2025-12-28,ingame,23,0,0,scored,158213,Riyad Mahrez,
+13424968,2025-12-31,ingame,24,0,0,missed,1104515,Al-Gozoli Nooh,

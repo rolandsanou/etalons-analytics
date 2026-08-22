@@ -79,6 +79,45 @@ def build_pool_json(today):
     }
 
 
+def build_shootouts_json():
+    rows = read_csv(STAGING / "shootouts_alltime.csv")
+    return {
+        "w": sum(1 for r in rows if r["winner_is_bf"] == "1"),
+        "l": sum(1 for r in rows if r["winner_is_bf"] != "1"),
+        "matches": rows,
+    }
+
+
+def build_penalties_json():
+    pens = read_csv(STAGING / "penalties.csv")
+    apps = read_csv(STAGING / "appearances.csv")
+    ingame = [p for p in pens if p["kind"] == "ingame"]
+    shootout = [p for p in pens if p["kind"] == "shootout"]
+
+    def _split(rows):
+        return {"scored": sum(1 for r in rows if r["outcome"] == "scored"),
+                "missed": sum(1 for r in rows if r["outcome"] != "scored")}
+
+    takers = {}
+    for p in ingame:
+        if p["is_bf"] != "1":
+            continue
+        key = p["player_id"] or p["name"]
+        tk = takers.setdefault(key, {"name": p["name"], "player_id": p["player_id"],
+                                     "scored": 0, "missed": 0})
+        tk["scored" if p["outcome"] == "scored" else "missed"] += 1
+    takers = sorted(takers.values(), key=lambda x: (-x["scored"], x["missed"]))
+
+    return {
+        "ingame_for": _split([p for p in ingame if p["is_bf"] == "1"]),
+        "ingame_against": _split([p for p in ingame if p["is_bf"] != "1"]),
+        "takers": takers,
+        "shootout_for": _split([p for p in shootout if p["is_bf"] == "1"]),
+        "shootout_against": _split([p for p in shootout if p["is_bf"] != "1"]),
+        "gk_shootout_saves": sum(int(a["shootout_saves"] or 0) for a in apps),
+    }
+
+
 def build_history_json():
     m = matches_mod.load_staged()
     hist = matches_mod.history_stats(m)
@@ -89,6 +128,7 @@ def build_history_json():
         "most_capped": capped,
         "top_scorers": scorers,
         "afcon_record": parse_afcon_record(team_html),
+        "shootouts": build_shootouts_json(),
     }
 
 
@@ -110,6 +150,7 @@ def build_team_json():
     return {
         "formations": build_formations(),
         "timeline": {"bins": bins, "summary": summary},
+        "penalties": build_penalties_json(),
         "coverage": {"events": len(events), "with_formation": with_formation},
     }
 

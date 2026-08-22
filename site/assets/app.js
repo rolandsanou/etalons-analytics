@@ -725,6 +725,42 @@ function renderLegendsTables() {
        <td>${m.opponent}</td><td class="num">${m.score}</td><td>${m.tournament}</td></tr>`).join("");
 }
 
+// ---------- penalties & shootouts ----------
+
+function renderShootouts() {
+  const so = DATA.history.shootouts;
+  if (!so || !so.matches.length) { return; }
+  const res = { "1": t("win_result"), "0": t("loss_result") };
+  $("shootout_rec").textContent = t("shootout_rec",
+    { w: so.w, l: so.l, y: so.matches[0].date.slice(0, 4) });
+  $("shootout_table").innerHTML = `<tr><th>${t("h_date")}</th><th></th>
+    <th>${t("h_opp")}</th></tr>` +
+    [...so.matches].reverse().map(m =>
+      `<tr><td>${m.date}</td>
+       <td><span class="chip ${m.winner_is_bf === "1" ? "W" : "L"}">${res[m.winner_is_bf] || res["0"]}</span></td>
+       <td>${m.opponent}</td></tr>`).join("");
+}
+
+function renderPenalties() {
+  const p = DATA.team.penalties;
+  const mt = (label, s, m) => {
+    const n = s + m;
+    return `<div class="mt"><div class="label">${label}</div>
+      <div class="value">${t("pens_conv", { s, n })}</div>
+      <div class="sub">${t("pens_scored_sub", { s, m })}</div></div>`;
+  };
+  $("pens_tiles").innerHTML =
+    mt(t("pens_for"), p.ingame_for.scored, p.ingame_for.missed) +
+    mt(t("pens_against"), p.ingame_against.scored, p.ingame_against.missed) +
+    mt(t("pens_so_for"), p.shootout_for.scored, p.shootout_for.missed) +
+    mt(t("pens_so_against"), p.shootout_against.scored, p.shootout_against.missed);
+  $("takers_table").innerHTML = `<tr><th>${t("h_taker")}</th>
+    <th class="num">${t("h_scored")}</th><th class="num">${t("h_missed")}</th></tr>` +
+    p.takers.map(x => `<tr><td>${x.name}</td><td class="num">${x.scored}</td>
+      <td class="num">${x.missed || "–"}</td></tr>`).join("");
+  $("pens_gk_note").textContent = t("pens_gk_note", { n: p.gk_shootout_saves });
+}
+
 // ---------- elo ----------
 
 function renderEloChart() {
@@ -908,6 +944,8 @@ function renderAll() {
   renderFormChart();
   renderAfconChart();
   renderLegendsTables();
+  renderShootouts();
+  renderPenalties();
   renderEloChart();
   renderWinexpChart();
   renderProjChart();
