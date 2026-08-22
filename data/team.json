@@ -461,6 +461,407 @@
   },
   "gk_shootout_saves": 1
  },
+ "pipeline": {
+  "cohorts": [
+   {
+    "window_id": "u20-2021",
+    "level": "U20",
+    "window_date": "2021-02-14",
+    "squad_size": 31,
+    "linked": 6,
+    "with_senior_apps": 4,
+    "median_days_to_debut": 1569
+   },
+   {
+    "window_id": "u17-2023",
+    "level": "U17",
+    "window_date": "2023-04-29",
+    "squad_size": 25,
+    "linked": 2,
+    "with_senior_apps": 2,
+    "median_days_to_debut": 621
+   },
+   {
+    "window_id": "u17-2025",
+    "level": "U17",
+    "window_date": "2025-03-30",
+    "squad_size": 23,
+    "linked": 0,
+    "with_senior_apps": 0,
+    "median_days_to_debut": ""
+   }
+  ],
+  "prospects": [
+   {
+    "name": "Adriana Dambre",
+    "pos": "DF",
+    "age": 15.8,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Al-Sadd"
+   },
+   {
+    "name": "Comi Ouattara",
+    "pos": "DF",
+    "age": 15.8,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Bilhack Konaté",
+    "pos": "MF",
+    "age": 16.0,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Basga JO"
+   },
+   {
+    "name": "Alassane Traoré",
+    "pos": "GK",
+    "age": 16.2,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Asharaf Tapsoba",
+    "pos": "FW",
+    "age": 16.4,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Adesina Ramanou",
+    "pos": "MF",
+    "age": 16.5,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "New Stars"
+   },
+   {
+    "name": "Abdoul Ouédraogo",
+    "pos": "DF",
+    "age": 16.6,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "USO"
+   },
+   {
+    "name": "Assifou Koné",
+    "pos": "MF",
+    "age": 16.6,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Sporting"
+   },
+   {
+    "name": "Prince Ouédraogo",
+    "pos": "GK",
+    "age": 16.6,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Halidou Diakité",
+    "pos": "MF",
+    "age": 17.2,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Champi"
+   },
+   {
+    "name": "Issouf Dabo",
+    "pos": "DF",
+    "age": 17.2,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "New Stars"
+   },
+   {
+    "name": "Ali Koné",
+    "pos": "DF",
+    "age": 17.3,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "New Stars"
+   },
+   {
+    "name": "Issouf Bara",
+    "pos": "FW",
+    "age": 17.4,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Oumar Sanogo",
+    "pos": "DF",
+    "age": 17.4,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Mohamed Sako",
+    "pos": "MF",
+    "age": 17.6,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Basga JO"
+   },
+   {
+    "name": "Ismaila Sawadogo",
+    "pos": "GK",
+    "age": 17.7,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Cheetah FC"
+   },
+   {
+    "name": "Alassana Bagayogo",
+    "pos": "FW",
+    "age": 17.7,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "AJEB"
+   },
+   {
+    "name": "Abdoulaye Diaby",
+    "pos": "FW",
+    "age": 17.8,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "AD DUHA"
+   },
+   {
+    "name": "Kassoum Nana",
+    "pos": "MF",
+    "age": 17.8,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Basga JO"
+   },
+   {
+    "name": "Mikael Coulibaly",
+    "pos": "DF",
+    "age": 17.8,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Soungalo Konaté",
+    "pos": "GK",
+    "age": 18.0,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Majestic"
+   },
+   {
+    "name": "Gustavo Yaro",
+    "pos": "MF",
+    "age": 18.2,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "AD DUHA"
+   },
+   {
+    "name": "Mohamed Fofana",
+    "pos": "MF",
+    "age": 18.3,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "New Stars"
+   },
+   {
+    "name": "Fadil Barro",
+    "pos": "DF",
+    "age": 18.4,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "Vitesse"
+   },
+   {
+    "name": "Amine Compaoré",
+    "pos": "MF",
+    "age": 18.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "KOZAF"
+   },
+   {
+    "name": "Farouz Ouedraogo",
+    "pos": "FW",
+    "age": 18.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Emmanuel Ouédraogo",
+    "pos": "MF",
+    "age": 18.7,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Aboubacar Zoromé",
+    "pos": "MF",
+    "age": 19.0,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": ""
+   },
+   {
+    "name": "Hamzah Traoré",
+    "pos": "DF",
+    "age": 19.4,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Idrissa Sore",
+    "pos": "MF",
+    "age": 19.5,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Appolinaire Bougma",
+    "pos": "FW",
+    "age": 19.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "AS ECO"
+   },
+   {
+    "name": "Landry Yaméogo",
+    "pos": "DF",
+    "age": 19.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Lassina Traoré",
+    "pos": "DF",
+    "age": 19.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Arouna Ouattara",
+    "pos": "MF",
+    "age": 19.7,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Vitesse"
+   },
+   {
+    "name": "Aly Sory",
+    "pos": "DF",
+    "age": 19.8,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Réal du Faso"
+   },
+   {
+    "name": "Souleymane Alio",
+    "pos": "FW",
+    "age": 19.8,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "New Stars"
+   },
+   {
+    "name": "Aboubacar Camara",
+    "pos": "FW",
+    "age": 19.9,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Rahimo"
+   },
+   {
+    "name": "Erwinn Nikiéma",
+    "pos": "DF",
+    "age": 19.9,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Red Star FC"
+   },
+   {
+    "name": "Drissa Traoré",
+    "pos": "DF",
+    "age": 20.0,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Tenakourou"
+   },
+   {
+    "name": "Mohamed Traoré",
+    "pos": "GK",
+    "age": 20.0,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Shamuel"
+   },
+   {
+    "name": "Nouhoun Bamba",
+    "pos": "DF",
+    "age": 20.2,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Tenakourou"
+   },
+   {
+    "name": "Abdoulaye Traoré",
+    "pos": "GK",
+    "age": 20.4,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Association Nassara FC"
+   },
+   {
+    "name": "Junior Traore",
+    "pos": "DF",
+    "age": 20.5,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "News Stars FC"
+   },
+   {
+    "name": "Baldé Bah",
+    "pos": "MF",
+    "age": 20.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "News Stars FC"
+   },
+   {
+    "name": "Bougasse Pouabizan",
+    "pos": "FW",
+    "age": 20.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Salitas"
+   },
+   {
+    "name": "Cheick Camara",
+    "pos": "MF",
+    "age": 20.6,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Vitesse"
+   }
+  ]
+ },
  "coverage": {
   "events": 58,
   "with_formation": 58
