@@ -34,6 +34,35 @@ def _flag_country(cell):
     return None
 
 
+def _generic_squad_rows(table):
+    """Older squad tables: no nat-fs-player class, columns No/Pos/Player/DOB/Club."""
+    players = []
+    for tr in table.find_all("tr"):
+        cells = tr.find_all(["td", "th"])
+        texts = [c.get_text(" ", strip=True) for c in cells]
+        dob_idx = next((i for i, t in enumerate(texts) if DOB_RE.search(t)), None)
+        if dob_idx is None or dob_idx < 2:
+            continue
+        name = texts[dob_idx - 1]
+        pos_cell = texts[dob_idx - 2]
+        pos = (re.sub(r"[^A-Z]", "", pos_cell.upper()) or pos_cell)[:2]
+        club_cell = cells[dob_idx + 1] if len(cells) > dob_idx + 1 else None
+        club_links = ([a for a in club_cell.find_all("a") if a.get_text(strip=True)]
+                      if club_cell is not None else [])
+        club = (club_links[-1].get_text(strip=True) if club_links
+                else (club_cell.get_text(strip=True) if club_cell is not None else ""))
+        if not name or pos not in ("GK", "DF", "MF", "FW"):
+            continue
+        players.append({
+            "name": name, "pos": pos,
+            "dob": DOB_RE.search(texts[dob_idx]).group(1),
+            "caps": 0, "goals": 0, "club": club,
+            "club_country": _flag_country(club_cell) if club_cell is not None else None,
+            "note": None,
+        })
+    return players
+
+
 def parse_players(html, section_id):
     table = _next_table(_heading(_soup(html), section_id))
     players = []
@@ -70,6 +99,8 @@ def parse_players(html, section_id):
             "club_country": _flag_country(club_cell),
             "note": tds[dob_idx + 4].get_text(" ", strip=True) if len(tds) > dob_idx + 4 else None,
         })
+    if not players:
+        players = _generic_squad_rows(table)
     return players
 
 

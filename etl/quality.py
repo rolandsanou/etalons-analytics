@@ -196,6 +196,24 @@ def _check_penalties(report):
                    + ("; MISMATCH: " + "; ".join(mismatch) if mismatch else "")))
 
 
+def _check_youth(report):
+    path = STAGING / "youth_callups.csv"
+    if not path.exists():
+        return
+    youth = read_csv(path)
+    if not youth:
+        report.append(("youth: rows", "WARN", "no youth call-ups staged"))
+        return
+    no_dob = sum(1 for y in youth if not y["dob"])
+    pct = round(100 * (len(youth) - no_dob) / len(youth), 1)
+    report.append(("youth: DOB coverage", "WARN" if pct < 80 else "PASS",
+                   f"{pct}% of {len(youth)} youth call-ups have a DOB"))
+    weak = [y["name"] for y in youth if y["link_quality"] == "name_only"]
+    report.append(("youth: senior links", "INFO",
+                   f"{sum(1 for y in youth if y['senior_player_id'])} linked to the senior pool"
+                   + (f"; name-only (verify): {', '.join(weak[:4])}" if weak else "")))
+
+
 def _check_timeline(report):
     path = STAGING / "match_states.csv"
     if not path.exists():
@@ -264,6 +282,7 @@ def run():
     _check_penalties(report)
     _check_captains(report)
     _check_coaches(report)
+    _check_youth(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)

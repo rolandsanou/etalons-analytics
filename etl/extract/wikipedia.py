@@ -11,6 +11,11 @@ def squad_windows():
     return read_csv(SEED / "wiki_squads.csv")
 
 
+def youth_windows():
+    path = SEED / "youth_squads.csv"
+    return read_csv(path) if path.exists() else []
+
+
 def raw_path(window):
     if window["url"] == "TEAM_PAGE":
         return OUT / "team_page.html"
@@ -21,7 +26,7 @@ def run(force=False):
     OUT.mkdir(parents=True, exist_ok=True)
     fetched = {}
     manifest = []
-    for w in squad_windows():
+    for w in squad_windows() + youth_windows():
         url = WIKI_TEAM_URL if w["url"] == "TEAM_PAGE" else w["url"]
         dest = raw_path(w)
         if dest.exists() and not force:

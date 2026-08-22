@@ -151,6 +151,8 @@ def build_team_json():
     bins, summary = build_team_timeline()
     from .leadership import build_captains, build_goalkeepers
     from .performance import _f
+    from .pipeline import build_pipeline
+    cohorts, prospects = build_pipeline(date.today())
     apps = read_csv(STAGING / "appearances.csv")
     eff = {s["event_id"]: _f(s["effective_length"], 95)
            for s in read_csv(STAGING / "match_states.csv")}
@@ -160,6 +162,7 @@ def build_team_json():
         "formations": build_formations(),
         "timeline": {"bins": bins, "summary": summary},
         "penalties": build_penalties_json(),
+        "pipeline": {"cohorts": cohorts, "prospects": prospects},
         "coverage": {"events": len(events), "with_formation": with_formation},
     }
 

@@ -31,6 +31,26 @@ def test_squad_table_with_shirt_numbers():
     assert p["club_country"] == "France"
 
 
+GENERIC = """
+<h3 id="Burkina_Faso">Burkina Faso</h3>
+<table><tr><th>No.</th><th>Pos.</th><th>Player</th><th>Date of birth (age)</th><th>Club</th></tr>
+<tr><td>1</td><td>1 GK</td><td>Sidi Diawara</td>
+<td>( 2001-03-18 ) 18 March 2001 (aged 19)</td>
+<td><img src="/x/Flag_of_Burkina_Faso.svg"/><a>AS Douanes</a></td></tr></table>
+"""
+
+
+def test_generic_squad_table_fallback():
+    rows = parse_players(GENERIC, "Burkina_Faso")
+    assert len(rows) == 1
+    p = rows[0]
+    assert p["name"] == "Sidi Diawara"
+    assert p["pos"] == "GK"
+    assert p["dob"] == "2001-03-18"
+    assert p["club"] == "AS Douanes"
+    assert p["club_country"] == "Burkina Faso"
+
+
 def test_callup_table_without_shirt_numbers():
     rows = parse_players(WITHOUT_NUMBER, "Recent_call-ups")
     assert len(rows) == 1

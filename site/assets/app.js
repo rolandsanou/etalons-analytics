@@ -1004,6 +1004,27 @@ function renderProjChart() {
       .map(p => [p.name, p.pos, fmt(p.age_afcon27, 1), t("phase_" + p.phase_afcon27)]));
 }
 
+// ---------- youth pipeline ----------
+
+function renderPipeline() {
+  const p = DATA.team.pipeline;
+  const label = LANG === "fr"
+    ? { u17: "CAN U-17", u20: "CAN U-20" } : { u17: "U-17 AFCON", u20: "U-20 AFCON" };
+  $("pipeline_table").innerHTML = `<tr><th>${t("h_cohort")}</th>
+    <th class="num">${t("h_squad_size")}</th><th class="num">${t("h_linked")}</th>
+    <th class="num">${t("h_with_apps")}</th><th class="num">${t("h_debut_days")}</th></tr>` +
+    p.cohorts.map(c => `<tr>
+      <td>${label[c.level.toLowerCase()] || c.level} ${c.window_date.slice(0, 4)}</td>
+      <td class="num">${c.squad_size}</td><td class="num">${c.linked}</td>
+      <td class="num">${c.with_senior_apps}</td>
+      <td class="num">${c.median_days_to_debut === "" ? "–" : fmt(c.median_days_to_debut)}</td></tr>`).join("");
+  const top = p.prospects.slice(0, 8);
+  $("prospects_note").textContent = t("prospects_note", {
+    n: p.prospects.length,
+    list: top.map(x => `${x.name} (${x.level}, ${fmt(x.age, 0)}${x.club ? ", " + x.club : ""})`).join(" · "),
+  });
+}
+
 // ---------- static text & boot ----------
 
 function renderStatic() {
@@ -1053,6 +1074,7 @@ function renderAll() {
   renderEloChart();
   renderWinexpChart();
   renderProjChart();
+  renderPipeline();
 }
 window.renderAll = renderAll;
 
