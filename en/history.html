@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>History — Étalons Analytics</title>
+<meta name="description" content="Burkina Faso&#x27;s history since 1960: records, AFCON runs, head coaches, venues, shootouts and Elo rating.">
+<meta property="og:title" content="History — Étalons Analytics">
+<meta property="og:description" content="Burkina Faso&#x27;s history since 1960: records, AFCON runs, head coaches, venues, shootouts and Elo rating.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<link rel="alternate" hreflang="fr" href="https://rolandsanou.github.io/etalons-analytics/histoire.html">
+<link rel="alternate" hreflang="en" href="https://rolandsanou.github.io/etalons-analytics/en/history.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<script>/* set the remembered theme before first paint, so an explicit dark choice
+   never flashes light. No stored choice: prefers-color-scheme decides in CSS.
+   Braces are doubled because this block sits inside a Python f-string. */
+try{var _t=localStorage.getItem("ea_theme");if(_t==="dark"||_t==="light")
+document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=9b0eca08">
+<link rel="stylesheet" href="../assets/pages.css?v=9b0eca08">
+</head>
+<body class="" data-needs="history,elo,team,meta" data-base="../">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">Étalons Analytics</a>
+    <nav><a href="index.html">Home</a><a href="squad.html">Squad</a><a href="players.html">Players</a><a href="matches.html">Matches</a><a href="analysis.html">Analysis</a><a href="management.html">Management</a><a href="history.html" class="on">History</a><a href="projections.html">Projections</a><a href="methodology.html">Methodology</a></nav>
+    <div class="lang"><a href="../histoire.html" hreflang="fr" lang="fr">FR</a><a href="history.html" class="on" hreflang="en" lang="en">EN</a></div>
+    <button class="theme" id="theme_toggle" type="button"
+            aria-pressed="false"><span aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">History</p>
+  <h1>1960 to today</h1>
+  <p>Every official match since independence: trends, AFCON runs, head coaches, venues, shootouts and the Elo trajectory.</p>
+</div></div>
+<main>
+  <section id="histoire">
+  <h2 data-i18n="s_history"></h2>
+  <p class="lead" id="lead_history"></p>
+  <div class="grid"><div class="card" id="card_decades"><h3 data-i18n="c_decades"></h3><p class="sub" data-i18n="c_decades_sub"></p><div class="chart short" id="c_decades"></div></div><div class="card"><h3 data-i18n="c_form"></h3><p class="sub" data-i18n="c_form_sub"></p><div class="chart short" id="c_form"></div></div><div class="card w12" id="card_afcon"><h3 data-i18n="c_afcon"></h3><p class="sub" data-i18n="c_afcon_sub"></p><div class="chart " id="c_afcon"></div></div><div class="card w4"><h3 data-i18n="t_capped"></h3><div class="tablewrap"><table id="capped_table"></table></div></div><div class="card w4"><h3 data-i18n="t_scorers"></h3><div class="tablewrap"><table id="scorers_table"></table></div></div><div class="card w4"><h3 data-i18n="t_last10"></h3><div class="tablewrap"><table id="last10_table"></table></div></div><div class="card" id="card_shootouts"><h3 data-i18n="t_shootouts"></h3><p class="sub" id="shootout_rec"></p><div class="tablewrap"><table id="shootout_table"></table></div></div><div class="card" id="card_pens"><h3 data-i18n="t_pens"></h3><p class="sub" data-i18n="t_pens_sub"></p><div class="mini-tiles" id="pens_tiles"></div><div class="tablewrap"><table id="takers_table"></table></div><p class="sub" id="pens_gk_note"></p></div><div class="card w12" id="card_venues"><h3 data-i18n="c_venues"></h3><p class="sub" data-i18n="c_venues_sub"></p><div class="chart short" id="c_venues"></div><p class="sub" id="venues_note"></p></div></div>
+</section>
+  <section id="selectionneurs">
+    <h2 data-i18n="c_coaches"></h2>
+    <p class="lead" data-i18n="c_coaches_sub"></p>
+    <div class="roster" style="margin-bottom:14px"><div class="pcard" style="cursor:default">
+  <img class="pic" src="../assets/photos/coach-amir-abdou.jpg" alt="Amir Abdou" loading="lazy" decoding="async">
+  <span><span class="nm">Amir Abdou</span>
+    <span class="rl">2026–2026
+      <span class="pill st active">in progress</span></span>
+    <span class="stat">4 m · 1-2-1 · 1.25 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">BT</span>
+  <span><span class="nm">Brama Traoré</span>
+    <span class="rl">2024–2026
+      </span>
+    <span class="stat">33 m · 17-5-11 · 1.7 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <img class="pic" src="../assets/photos/coach-hubert-velud.jpg" alt="Hubert Velud" loading="lazy" decoding="async">
+  <span><span class="nm">Hubert Velud</span>
+    <span class="rl">2022–2023
+      </span>
+    <span class="stat">24 m · 11-7-6 · 1.67 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">KM</span>
+  <span><span class="nm">Kamou Malo</span>
+    <span class="rl">2019–2021
+      </span>
+    <span class="stat">22 m · 10-9-3 · 1.77 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">PD</span>
+  <span><span class="nm">Paulo Duarte</span>
+    <span class="rl">2015–2018
+      </span>
+    <span class="stat">46 m · 17-14-15 · 1.41 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">PP</span>
+  <span><span class="nm">Paul Put</span>
+    <span class="rl">2012–2014
+      </span>
+    <span class="stat">40 m · 15-10-15 · 1.38 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">PD</span>
+  <span><span class="nm">Paulo Duarte</span>
+    <span class="rl">2008–2011
+      </span>
+    <span class="stat">30 m · 15-7-8 · 1.73 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">IT</span>
+  <span><span class="nm">Ivica Todorov</span>
+    <span class="rl">2004–2004
+      </span>
+    <span class="stat">15 m · 4-3-8 · 1.0 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">JR</span>
+  <span><span class="nm">Jean-Paul Rabier</span>
+    <span class="rl">2002–2003
+      </span>
+    <span class="stat">19 m · 6-7-6 · 1.32 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">OF</span>
+  <span><span class="nm">Oscar Fulloné</span>
+    <span class="rl">2001–2001
+      </span>
+    <span class="stat">16 m · 4-3-9 · 0.94 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">SD</span>
+  <span><span class="nm">Sidiki Diarra</span>
+    <span class="rl">2000–2000
+      </span>
+    <span class="stat">14 m · 4-5-5 · 1.21 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">DN</span>
+  <span><span class="nm">Didier Notheaux</span>
+    <span class="rl">1998–1999
+      </span>
+    <span class="stat">35 m · 13-12-10 · 1.46 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <img class="pic" src="../assets/photos/coach-philippe-troussier.jpg" alt="Philippe Troussier" loading="lazy" decoding="async">
+  <span><span class="nm">Philippe Troussier</span>
+    <span class="rl">1997–1997
+      </span>
+    <span class="stat">10 m · 2-2-6 · 0.8 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">IV</span>
+  <span><span class="nm">Ivan Vutov</span>
+    <span class="rl">1996–1996
+      </span>
+    <span class="stat">14 m · 2-6-6 · 0.86 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">IT</span>
+  <span><span class="nm">Idrissa Traoré</span>
+    <span class="rl">1992–1995
+      </span>
+    <span class="stat">16 m · 4-8-4 · 1.25 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <span class="pic avatar" aria-hidden="true">HÜ</span>
+  <span><span class="nm">Heinz-Peter Überjahn</span>
+    <span class="rl">1988–1990
+      </span>
+    <span class="stat">16 m · 11-1-4 · 2.12 pts/m</span></span>
+</div><div class="pcard" style="cursor:default">
+  <img class="pic" src="../assets/photos/coach-otto-pfister.jpg" alt="Otto Pfister" loading="lazy" decoding="async">
+  <span><span class="nm">Otto Pfister</span>
+    <span class="rl">1976–1978
+      </span>
+    <span class="stat">14 m · 4-3-7 · 1.07 pts/m</span></span>
+</div></div>
+    <div class="grid"><div class="card w12" id="card_coaches"><div class="tablewrap"><table id="coaches_table"></table></div></div></div>
+  </section>
+  <section id="elo">
+  <h2 data-i18n="s_elo"></h2>
+  <p class="lead" data-i18n="s_elo_lead"></p>
+  <div class="grid"><div class="card w8" id="card_elo"><h3 data-i18n="c_elo_tl"></h3><p class="sub" data-i18n="c_elo_tl_sub"></p><div class="chart tall" id="c_elo_tl"></div></div><div class="card w4"><h3 data-i18n="c_winexp"></h3><p class="sub" data-i18n="c_winexp_sub"></p><div class="chart tall" id="c_winexp"></div><p class="sub" id="winexp_note"></p></div></div>
+</section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="../assets/i18n.js?v=9b0eca08"></script>
+<script src="../assets/core.js?v=9b0eca08"></script>
+<script src="../assets/sections/history.js?v=9b0eca08"></script>
+<script src="../assets/sections/elo.js?v=9b0eca08"></script>
+<script src="../assets/boot.js?v=9b0eca08"></script>
+</body>
+</html>

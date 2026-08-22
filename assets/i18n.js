@@ -473,7 +473,9 @@ const I18N = {
   },
 };
 
-let LANG = localStorage.getItem("ea_lang") || "fr";
+// Each page is generated in one language, so the document is the source of
+// truth; the FR/EN control is a pair of links to the counterpart page.
+let LANG = document.documentElement.lang === "en" ? "en" : "fr";
 
 function t(key, vars) {
   let s = (I18N[LANG] && I18N[LANG][key]) || I18N.fr[key] || key;

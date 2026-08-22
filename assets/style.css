@@ -217,7 +217,7 @@ nav a:focus-visible { outline-color: #fff; }
   overflow: hidden;
 }
 
-.lang button {
+.lang button, .lang a {
   border: 0;
   background: transparent;
   font: inherit;
@@ -229,14 +229,14 @@ nav a:focus-visible { outline-color: #fff; }
   cursor: pointer;
 }
 
-.lang button:hover { color: #fff; }
+.lang button, .lang a:hover { color: #fff; }
 
-.lang button.on {
+.lang button, .lang a.on {
   background: #fff;
   color: var(--ink);
 }
 
-.lang button:focus-visible {
+.lang button, .lang a:focus-visible {
   outline: 2px solid #fff;
   outline-offset: -2px;
   border-radius: 0;
