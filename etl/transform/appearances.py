@@ -48,7 +48,7 @@ STATS_MAP = {
 
 APPEARANCE_FIELDS = (["event_id", "date", "tournament", "opponent", "venue", "gf", "ga",
                       "player_id", "sofa_player_id", "name", "pos", "started", "played",
-                      "minutes", "rating", "has_detailed_stats"]
+                      "captain", "minutes", "rating", "has_detailed_stats"]
                      + sorted(set(STATS_MAP.values())))
 
 EVENT_FIELDS = ["event_id", "date", "tournament", "opponent", "venue", "gf", "ga",
@@ -157,6 +157,7 @@ def run(registry):
                 "name": p["name"],
                 "pos": p["pos"] or POS_MAP.get(entry.get("position", ""), ""),
                 "started": 0 if entry.get("substitute") else 1,
+                "captain": 1 if entry.get("captain") else 0,
                 "played": 1 if minutes > 0 else 0,
                 "minutes": minutes,
                 "rating": st.get("rating", ""),

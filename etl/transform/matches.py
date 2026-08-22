@@ -23,6 +23,12 @@ def team_matches(df, team):
     m["ga"] = np.where(m.is_home, m.away_score, m.home_score)
     m["opponent"] = np.where(m.is_home, m.away_team, m.home_team)
     m["venue"] = np.where(m.neutral, "N", np.where(m.is_home, "H", "A"))
+    # delocalized homes (e.g. the Marrakech era) are often flagged neutral,
+    # so classify by listing + host country, not by the neutral flag
+    m["venue_class"] = np.select(
+        [m.is_home & (m.country == team), m.is_home & (m.country != team),
+         ~m.is_home & m.neutral.astype(bool)],
+        ["home_bf", "home_delocalized", "neutral"], default="away")
     m["result"] = np.select([m.gf > m.ga, m.gf == m.ga], ["W", "D"], default="L")
     return m
 

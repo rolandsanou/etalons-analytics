@@ -147,7 +147,14 @@ def build_team_json():
     events = read_csv(STAGING / "events.csv")
     with_formation = sum(1 for e in events if e.get("bf_formation"))
     bins, summary = build_team_timeline()
+    from .leadership import build_captains, build_goalkeepers
+    from .performance import _f
+    apps = read_csv(STAGING / "appearances.csv")
+    eff = {s["event_id"]: _f(s["effective_length"], 95)
+           for s in read_csv(STAGING / "match_states.csv")}
     return {
+        "captains": build_captains(apps),
+        "goalkeepers": build_goalkeepers(apps, eff),
         "formations": build_formations(),
         "timeline": {"bins": bins, "summary": summary},
         "penalties": build_penalties_json(),

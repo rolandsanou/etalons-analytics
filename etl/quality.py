@@ -125,6 +125,20 @@ def _check_goal_events(report):
                    f"{len(bf_goals)} BF goals, {unattributed} scorers not matched to registry"))
 
 
+def _check_captains(report):
+    apps = read_csv(STAGING / "appearances.csv")
+    per_event = {}
+    for a in apps:
+        if a.get("captain") == "1":
+            per_event[a["event_id"]] = per_event.get(a["event_id"], 0) + 1
+    n_events = len({a["event_id"] for a in apps})
+    odd = [e for e, n in per_event.items() if n != 1]
+    report.append(("appearances: one captain per match",
+                   "WARN" if (odd or len(per_event) < n_events) else "PASS",
+                   f"{len(per_event)}/{n_events} matches with a captain flag, "
+                   f"{len(odd)} with more than one"))
+
+
 def _check_penalties(report):
     path = STAGING / "penalties.csv"
     if not path.exists():
@@ -222,6 +236,7 @@ def run():
     _check_events(report)
     _check_goal_events(report)
     _check_penalties(report)
+    _check_captains(report)
     _check_timeline(report)
     _check_site(report)
     width = max(len(r[0]) for r in report)
