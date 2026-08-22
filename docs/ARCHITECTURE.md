@@ -75,7 +75,8 @@ etl/
   quality.py       the data-quality gate
 site/
   index.html effectif.html joueurs.html matchs.html analyse.html
-  histoire.html projections.html methodologie.html   <- generated hub pages
+  gestion.html histoire.html projections.html
+  methodologie.html                                  <- generated hub pages
   joueurs/<player_id>.html                           <- generated, one per player
   matchs/<date>-<opponent>.html                      <- generated, one per match
   sitemap.xml robots.txt                             <- generated

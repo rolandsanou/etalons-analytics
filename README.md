@@ -173,6 +173,26 @@ python -m http.server 8123 --directory site
   pooled (sum/sum), never averages of percentages; per-match volume is indexed with
   opponents = 100 so different scales share one axis. Terciles use the opponent's
   pre-match Elo. xG is null at source for CAF matches and is excluded.
+- **Model backtest** — the Elo model is scored out of sample: the draw rate is
+  calibrated on matches played before the study window, then evaluated on the
+  window itself against two baselines (historical base rates, and a flat third
+  each). Reported with a calibration curve, because a Brier score alone means
+  nothing without something to beat.
+- **Squad stability** — starting-eleven churn (starters changed between
+  consecutive matches) and minutes concentration (share taken by the eleven
+  most-used players), per coach tenure, gated on matches with a published lineup.
+- **Partnerships** — minutes two players spent on the pitch together, from the
+  presence windows, with goals counted only when they fall inside that overlap.
+  Gated at 270 shared minutes and 4 matches.
+- **Substitutions** — first-change timing, volume, injury-forced changes and the
+  score when each substitute entered, per coach.
+- **Rest days** — record by days since the previous match, always shown beside the
+  average opponent Elo of the band, because tournament fixtures compress the
+  calendar and confound the comparison.
+- **CHAN separation** — the African Nations Championship is a competition for
+  home-based players with a different squad, so those matches carry a distinct
+  competition class and players who only ever appeared there are flagged and
+  excluded from senior A-team aggregates.
 - **Resilience** — every goal is classified by what it changed (opener / equalizer /
   go-ahead / extender / consolation; own goals credited to the benefiting side).
   Response time is measured in real playing minutes including stoppage; output by
