@@ -96,8 +96,8 @@ const POOL_COLS = [
 let poolSort = { key: "minutes", dir: -1 };
 
 function renderPoolTable() {
-  const q = ($("pool_search").value || "").toLowerCase();
-  let rows = DATA.pool.profiles.filter(p => !q || p.name.toLowerCase().includes(q));
+  const q = searchKey($("pool_search").value || "");
+  let rows = DATA.pool.profiles.filter(p => !q || searchKey(p.name).includes(q));
   const k = poolSort.key;
   rows = [...rows].sort((a, b) => {
     if (["name", "pos", "status", "club_v", "league_v"].includes(k)) {

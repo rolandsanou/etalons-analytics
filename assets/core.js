@@ -73,6 +73,13 @@ function tableView(cardId, headers, rows) {
     <tr>${headers.map((h, i) => `<th class="${i > 0 ? "num" : ""}">${h}</th>`).join("")}</tr>${body}</table></div>`;
 }
 
+// Accent-insensitive search key: "Traore" and "Traore" with an accent must
+// match each other, which matters for nearly every name in this dataset.
+function searchKey(text) {
+  return String(text || "").normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "").toLowerCase();
+}
+
 // --- shared across sections (kept here so every page has them) ---
 
 const ST_GOOD = "#0ca30c", ST_CRIT = "#d03b3b";

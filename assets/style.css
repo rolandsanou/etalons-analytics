@@ -36,8 +36,8 @@ body {
   background: var(--page);
   color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 header.top {
@@ -51,7 +51,7 @@ header.top {
 }
 
 .top-inner {
-  max-width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -92,7 +92,7 @@ nav a:hover {
   display: flex;
   gap: 2px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -112,7 +112,7 @@ nav a:hover {
 }
 
 main {
-  max-width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 26px 20px 60px;
 }
@@ -145,7 +145,7 @@ main {
 .tile {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 3px;
   padding: 14px 16px;
 }
 
@@ -191,7 +191,7 @@ section > p.lead {
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 3px;
   padding: 16px 16px 10px;
   grid-column: span 6;
   min-width: 0;
@@ -267,7 +267,7 @@ th {
   display: inline-block;
   min-width: 20px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 2px;
   font-size: 12px;
   font-weight: 600;
   padding: 1px 5px;
@@ -310,7 +310,7 @@ th {
   margin: 2px 0 10px;
   padding: 7px 12px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 3px;
   font: inherit;
   font-size: 13.5px;
   background: var(--surface);
@@ -345,7 +345,7 @@ th.sorted {
 .league-bar {
   display: flex;
   height: 26px;
-  border-radius: 6px;
+  border-radius: 2px;
   overflow: hidden;
   margin: 14px 0 12px;
 }
@@ -386,7 +386,7 @@ th.sorted {
 .mini-tiles .mt {
   background: var(--page);
   border: 1px solid var(--grid);
-  border-radius: 10px;
+  border-radius: 3px;
   padding: 8px 10px;
 }
 
@@ -419,7 +419,7 @@ th.sorted {
   font-size: 13px;
   padding: 4px 8px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 3px;
   background: var(--surface);
   color: var(--ink);
   max-width: 220px;
@@ -445,7 +445,7 @@ th.sorted {
 .methodo {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 3px;
   padding: 18px 20px;
   font-size: 14px;
 }
