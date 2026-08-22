@@ -234,7 +234,6 @@ const I18N = {
       <p>Buts + passes en sortie de banc en valeurs brutes ; /90 uniquement à partir de 5 entrées et 150 minutes ; différence de buts après entrée (≥ 8 entrées) à comparer à la référence de l'équipe après la 60e minute, affichée à côté.</p>
       <h3>Limites connues</h3>
       <p>Sélections/buts « carrière » figés à la dernière mise à jour Wikipedia ; pas de listes complètes pour les fenêtres de qualifications (contributions bienvenues) ; ~24 % des apparitions (amicaux mineurs) sans statistiques détaillées.</p>`,
-    footer: "Étalons Analytics — projet open source (MIT). Données : Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (non affilié), portraits Wikimedia Commons. Mis à jour le {date}. Contact : <a href=\"mailto:{mail}\">{mail}</a> · <a href=\"https://github.com/rolandsanou/etalons-analytics\">code source</a>.",
   },
   en: {
     tagline: "Data analysis of Burkina Faso's senior national football team — squad, individual performances since AFCON 2021, history and projections.",
@@ -469,7 +468,6 @@ const I18N = {
       <p>Goals + assists off the bench are raw counts; per-90 only with ≥ 5 sub appearances and ≥ 150 minutes; goal difference after entry (≥ 8 sub apps) should be read against the team's own post-60' baseline, shown alongside.</p>
       <h3>Known limitations</h3>
       <p>Career caps/goals frozen at the latest Wikipedia update; no complete squad lists for qualifier windows yet (contributions welcome); ~24% of appearances (minor friendlies) lack detailed stats.</p>`,
-    footer: "Étalons Analytics — open-source project (MIT). Data: Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (unaffiliated), portraits from Wikimedia Commons. Updated {date}. Contact: <a href=\"mailto:{mail}\">{mail}</a> · <a href=\"https://github.com/rolandsanou/etalons-analytics\">source code</a>.",
   },
 };
 
