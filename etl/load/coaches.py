@@ -5,7 +5,7 @@ from ..util import write_csv
 
 ERA_FIELDS = ["coach", "tenure_start", "first_match", "last_match", "matches",
               "w", "d", "l", "ppg", "gf_pm", "ga_pm", "elo_first", "elo_last",
-              "elo_delta", "pooled"]
+              "elo_delta", "pooled", "current"]
 
 MIN_MATCHES = 10
 
@@ -16,7 +16,7 @@ def build_coach_eras():
     tl = pd.read_csv(STAGING / "elo_timeline.csv")
     elo_by_date = dict(zip(tl.date, tl.elo))
 
-    def agg(g, coach, tenure_start, pooled):
+    def agg(g, coach, tenure_start, pooled, current=False):
         n = len(g)
         w = int((g.result == "W").sum())
         d = int((g.result == "D").sum())
@@ -33,13 +33,22 @@ def build_coach_eras():
             "elo_delta": (round(elo_by_date[dates[-1]] - elo_by_date[dates[0]], 0)
                           if dates[0] in elo_by_date and dates[-1] in elo_by_date else ""),
             "pooled": int(pooled),
+            "current": int(current),
         }
 
     known = m[m.coach != ""]
+    if known.empty:
+        return []
+    # the tenure covering the most recent match is always shown, however short —
+    # an ongoing spell should never disappear into the pooled row
+    latest = known.sort_values("date").iloc[-1]
+    current_key = (latest.coach, latest.coach_since)
+
     eras, small = [], []
     for (coach, since), g in known.groupby(["coach", "coach_since"]):
-        if len(g) >= MIN_MATCHES:
-            eras.append(agg(g, coach, since, False))
+        is_current = (coach, since) == current_key
+        if len(g) >= MIN_MATCHES or is_current:
+            eras.append(agg(g, coach, since, False, current=is_current))
         else:
             small.append(g)
     eras.sort(key=lambda r: r["first_match"], reverse=True)
@@ -49,7 +58,3 @@ def build_coach_eras():
     return eras
 
 
-def run():
-    eras = build_coach_eras()
-    write_csv(MARTS / "coach_eras.csv", eras, ERA_FIELDS)
-    return eras

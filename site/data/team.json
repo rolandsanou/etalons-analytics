@@ -1,4 +1,238 @@
 {
+ "formations": [
+  {
+   "formation": "4-3-3",
+   "matches": 20,
+   "w": 11,
+   "d": 3,
+   "l": 6,
+   "gf": 37,
+   "ga": 25,
+   "gf_pm": 1.85,
+   "ga_pm": 1.25,
+   "ppg": 1.8,
+   "opp_elo_avg": 1579.0,
+   "n_elo": 20,
+   "comp_afcon": 4,
+   "comp_afcon_qual": 6,
+   "comp_wc_qual": 3,
+   "comp_friendly": 7,
+   "comp_other": 0,
+   "pooled_from": ""
+  },
+  {
+   "formation": "4-2-3-1",
+   "matches": 18,
+   "w": 8,
+   "d": 5,
+   "l": 5,
+   "gf": 26,
+   "ga": 22,
+   "gf_pm": 1.44,
+   "ga_pm": 1.22,
+   "ppg": 1.61,
+   "opp_elo_avg": 1599.0,
+   "n_elo": 17,
+   "comp_afcon": 11,
+   "comp_afcon_qual": 3,
+   "comp_wc_qual": 2,
+   "comp_friendly": 2,
+   "comp_other": 0,
+   "pooled_from": ""
+  },
+  {
+   "formation": "others",
+   "matches": 20,
+   "w": 8,
+   "d": 4,
+   "l": 8,
+   "gf": 27,
+   "ga": 26,
+   "gf_pm": 1.35,
+   "ga_pm": 1.3,
+   "ppg": 1.4,
+   "opp_elo_avg": 1564.0,
+   "n_elo": 17,
+   "comp_afcon": 4,
+   "comp_afcon_qual": 3,
+   "comp_wc_qual": 5,
+   "comp_friendly": 8,
+   "comp_other": 0,
+   "pooled_from": "3-4-2-1;3-4-3;3-5-2;4-1-4-1;4-4-2;4-5-1;5-4-1"
+  }
+ ],
+ "penalties": {
+  "ingame_for": {
+   "scored": 12,
+   "missed": 3
+  },
+  "ingame_against": {
+   "scored": 9,
+   "missed": 1
+  },
+  "takers": [
+   {
+    "name": "Bertrand Traoré",
+    "player_id": "bertrand-traore",
+    "scored": 6,
+    "missed": 1
+   },
+   {
+    "name": "Lassina Traoré",
+    "player_id": "lassina-traore",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Hassane Bandé",
+    "player_id": "hassane-bande",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Patrick Malo",
+    "player_id": "patrick-malo",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Abdoul Abass Guiro",
+    "player_id": "abdoul-abass-guiro",
+    "scored": 1,
+    "missed": 0
+   },
+   {
+    "name": "Edmond Tapsoba",
+    "player_id": "edmond-tapsoba",
+    "scored": 1,
+    "missed": 1
+   },
+   {
+    "name": "Dango Ouattara",
+    "player_id": "dango-ouattara",
+    "scored": 1,
+    "missed": 1
+   }
+  ],
+  "shootout_for": {
+   "scored": 10,
+   "missed": 3
+  },
+  "shootout_against": {
+   "scored": 11,
+   "missed": 3
+  },
+  "gk_shootout_saves": 1
+ },
+ "coverage": {
+  "events": 58,
+  "with_formation": 58,
+  "with_stats": 47,
+  "with_full_stats": 33
+ },
+ "timeline": {
+  "bins": [
+   {
+    "bin": "1_15",
+    "gf": 6,
+    "ga": 9,
+    "gf_stoppage": 0,
+    "ga_stoppage": 0
+   },
+   {
+    "bin": "16_30",
+    "gf": 15,
+    "ga": 13,
+    "gf_stoppage": 0,
+    "ga_stoppage": 0
+   },
+   {
+    "bin": "31_45",
+    "gf": 25,
+    "ga": 11,
+    "gf_stoppage": 6,
+    "ga_stoppage": 4
+   },
+   {
+    "bin": "46_60",
+    "gf": 11,
+    "ga": 13,
+    "gf_stoppage": 0,
+    "ga_stoppage": 0
+   },
+   {
+    "bin": "61_75",
+    "gf": 15,
+    "ga": 13,
+    "gf_stoppage": 0,
+    "ga_stoppage": 0
+   },
+   {
+    "bin": "76_90",
+    "gf": 22,
+    "ga": 19,
+    "gf_stoppage": 8,
+    "ga_stoppage": 7
+   },
+   {
+    "bin": "et",
+    "gf": 0,
+    "ga": 0,
+    "gf_stoppage": 0,
+    "ga_stoppage": 0
+   }
+  ],
+  "summary": {
+   "matches": 64,
+   "minutes": {
+    "leading": 1737,
+    "level": 2953,
+    "trailing": 1535,
+    "pct_leading": 27.9,
+    "pct_level": 47.4,
+    "pct_trailing": 24.7
+   },
+   "scored_first": {
+    "n": 34,
+    "w": 25,
+    "d": 7,
+    "l": 2,
+    "ppg": 2.41
+   },
+   "conceded_first": {
+    "n": 27,
+    "w": 4,
+    "d": 4,
+    "l": 19,
+    "ppg": 0.59
+   },
+   "goalless": 3,
+   "comeback_wins": 4,
+   "rescued_draws": 4,
+   "blown_leads": 2,
+   "dropped_leads": 7,
+   "chi2": {
+    "gf": {
+     "stat": 15.53,
+     "significant": true,
+     "bin": "1_15",
+     "direction": "low"
+    },
+    "ga": {
+     "stat": 4.31,
+     "significant": false,
+     "bin": null,
+     "direction": null
+    }
+   },
+   "post60": {
+    "gf": 37,
+    "ga": 32,
+    "minutes": 2385,
+    "gd90": 0.19
+   }
+  }
+ },
  "captains": [
   {
    "player_id": "bertrand-traore",
@@ -233,234 +467,6 @@
    "gated": 0
   }
  ],
- "formations": [
-  {
-   "formation": "4-3-3",
-   "matches": 20,
-   "w": 11,
-   "d": 3,
-   "l": 6,
-   "gf": 37,
-   "ga": 25,
-   "gf_pm": 1.85,
-   "ga_pm": 1.25,
-   "ppg": 1.8,
-   "opp_elo_avg": 1579.0,
-   "n_elo": 20,
-   "comp_afcon": 4,
-   "comp_afcon_qual": 6,
-   "comp_wc_qual": 3,
-   "comp_friendly": 7,
-   "comp_other": 0,
-   "pooled_from": ""
-  },
-  {
-   "formation": "4-2-3-1",
-   "matches": 18,
-   "w": 8,
-   "d": 5,
-   "l": 5,
-   "gf": 26,
-   "ga": 22,
-   "gf_pm": 1.44,
-   "ga_pm": 1.22,
-   "ppg": 1.61,
-   "opp_elo_avg": 1599.0,
-   "n_elo": 17,
-   "comp_afcon": 11,
-   "comp_afcon_qual": 3,
-   "comp_wc_qual": 2,
-   "comp_friendly": 2,
-   "comp_other": 0,
-   "pooled_from": ""
-  },
-  {
-   "formation": "others",
-   "matches": 20,
-   "w": 8,
-   "d": 4,
-   "l": 8,
-   "gf": 27,
-   "ga": 26,
-   "gf_pm": 1.35,
-   "ga_pm": 1.3,
-   "ppg": 1.4,
-   "opp_elo_avg": 1564.0,
-   "n_elo": 17,
-   "comp_afcon": 4,
-   "comp_afcon_qual": 3,
-   "comp_wc_qual": 5,
-   "comp_friendly": 8,
-   "comp_other": 0,
-   "pooled_from": "3-4-2-1;3-4-3;3-5-2;4-1-4-1;4-4-2;4-5-1;5-4-1"
-  }
- ],
- "timeline": {
-  "bins": [
-   {
-    "bin": "1_15",
-    "gf": 6,
-    "ga": 9,
-    "gf_stoppage": 0,
-    "ga_stoppage": 0
-   },
-   {
-    "bin": "16_30",
-    "gf": 15,
-    "ga": 13,
-    "gf_stoppage": 0,
-    "ga_stoppage": 0
-   },
-   {
-    "bin": "31_45",
-    "gf": 25,
-    "ga": 11,
-    "gf_stoppage": 6,
-    "ga_stoppage": 4
-   },
-   {
-    "bin": "46_60",
-    "gf": 11,
-    "ga": 13,
-    "gf_stoppage": 0,
-    "ga_stoppage": 0
-   },
-   {
-    "bin": "61_75",
-    "gf": 15,
-    "ga": 13,
-    "gf_stoppage": 0,
-    "ga_stoppage": 0
-   },
-   {
-    "bin": "76_90",
-    "gf": 22,
-    "ga": 19,
-    "gf_stoppage": 8,
-    "ga_stoppage": 7
-   },
-   {
-    "bin": "et",
-    "gf": 0,
-    "ga": 0,
-    "gf_stoppage": 0,
-    "ga_stoppage": 0
-   }
-  ],
-  "summary": {
-   "matches": 64,
-   "minutes": {
-    "leading": 1737,
-    "level": 2953,
-    "trailing": 1535,
-    "pct_leading": 27.9,
-    "pct_level": 47.4,
-    "pct_trailing": 24.7
-   },
-   "scored_first": {
-    "n": 34,
-    "w": 25,
-    "d": 7,
-    "l": 2,
-    "ppg": 2.41
-   },
-   "conceded_first": {
-    "n": 27,
-    "w": 4,
-    "d": 4,
-    "l": 19,
-    "ppg": 0.59
-   },
-   "goalless": 3,
-   "comeback_wins": 4,
-   "rescued_draws": 4,
-   "blown_leads": 2,
-   "dropped_leads": 7,
-   "chi2": {
-    "gf": {
-     "stat": 15.53,
-     "significant": true,
-     "bin": "1_15",
-     "direction": "low"
-    },
-    "ga": {
-     "stat": 4.31,
-     "significant": false,
-     "bin": null,
-     "direction": null
-    }
-   },
-   "post60": {
-    "gf": 37,
-    "ga": 32,
-    "minutes": 2385,
-    "gd90": 0.19
-   }
-  }
- },
- "penalties": {
-  "ingame_for": {
-   "scored": 12,
-   "missed": 3
-  },
-  "ingame_against": {
-   "scored": 9,
-   "missed": 1
-  },
-  "takers": [
-   {
-    "name": "Bertrand Traoré",
-    "player_id": "bertrand-traore",
-    "scored": 6,
-    "missed": 1
-   },
-   {
-    "name": "Lassina Traoré",
-    "player_id": "lassina-traore",
-    "scored": 1,
-    "missed": 0
-   },
-   {
-    "name": "Hassane Bandé",
-    "player_id": "hassane-bande",
-    "scored": 1,
-    "missed": 0
-   },
-   {
-    "name": "Patrick Malo",
-    "player_id": "patrick-malo",
-    "scored": 1,
-    "missed": 0
-   },
-   {
-    "name": "Abdoul Abass Guiro",
-    "player_id": "abdoul-abass-guiro",
-    "scored": 1,
-    "missed": 0
-   },
-   {
-    "name": "Edmond Tapsoba",
-    "player_id": "edmond-tapsoba",
-    "scored": 1,
-    "missed": 1
-   },
-   {
-    "name": "Dango Ouattara",
-    "player_id": "dango-ouattara",
-    "scored": 1,
-    "missed": 1
-   }
-  ],
-  "shootout_for": {
-   "scored": 10,
-   "missed": 3
-  },
-  "shootout_against": {
-   "scored": 11,
-   "missed": 3
-  },
-  "gk_shootout_saves": 1
- },
  "pipeline": {
   "cohorts": [
    {
@@ -4988,11 +4994,5 @@
     "as_sub_goals": 0
    }
   ]
- },
- "coverage": {
-  "events": 58,
-  "with_formation": 58,
-  "with_stats": 47,
-  "with_full_stats": 33
  }
 }

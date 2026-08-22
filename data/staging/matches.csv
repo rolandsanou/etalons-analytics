@@ -458,8 +458,8 @@ date,opponent,venue,venue_class,gf,ga,result,tournament,comp,neutral,city,countr
 2025-12-24,Equatorial Guinea,N,neutral,2,1,W,African Cup of Nations,afcon,True,Casablanca,Morocco,Brama Traoré,2024-01-01
 2025-12-28,Algeria,N,neutral,0,1,L,African Cup of Nations,afcon,True,Rabat,Morocco,Brama Traoré,2024-01-01
 2025-12-31,Sudan,N,neutral,2,0,W,African Cup of Nations,afcon,True,Casablanca,Morocco,Brama Traoré,2024-01-01
-2026-01-06,Ivory Coast,N,neutral,0,3,L,African Cup of Nations,afcon,True,Marrakesh,Morocco,Amir Abdou,2026-01-01
-2026-03-28,Guinea-Bissau,H,home_bf,5,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-01
-2026-03-31,Guinea-Bissau,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-01
-2026-06-05,Russia,A,away,0,3,L,Friendly,friendly,False,Volgograd,Russia,Amir Abdou,2026-01-01
-2026-06-09,Belarus,A,away,2,2,D,Friendly,friendly,False,Minsk,Belarus,Amir Abdou,2026-01-01
+2026-01-06,Ivory Coast,N,neutral,0,3,L,African Cup of Nations,afcon,True,Marrakesh,Morocco,Brama Traoré,2024-01-01
+2026-03-28,Guinea-Bissau,H,home_bf,5,0,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-07
+2026-03-31,Guinea-Bissau,H,home_bf,1,1,D,Friendly,friendly,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-07
+2026-06-05,Russia,A,away,0,3,L,Friendly,friendly,False,Volgograd,Russia,Amir Abdou,2026-01-07
+2026-06-09,Belarus,A,away,2,2,D,Friendly,friendly,False,Minsk,Belarus,Amir Abdou,2026-01-07
