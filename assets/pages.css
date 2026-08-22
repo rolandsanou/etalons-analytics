@@ -64,11 +64,9 @@
 
 .crumb {
   font-size: 11.5px;
+  line-height: 1.6;
   color: var(--muted);
   margin: 20px 0 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 6px;
 }
 
 .crumb a {
@@ -136,6 +134,14 @@
   letter-spacing: 0.03em;
   border: 1px solid var(--hair);
   user-select: none;
+}
+
+/* the same initials block, at portrait size */
+.entity .photo.avatar {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
 }
 
 /* =============================================================================
@@ -232,7 +238,7 @@
 .pcard .rl .pill { margin-left: 4px; }
 
 a.pcard { transition: background-color 0.15s var(--ease); }
-a.pcard:hover { background: var(--tint); }
+a.pcard:hover { background: var(--tint); box-shadow: inset 2px 0 0 var(--red); }
 a.pcard:hover .nm { text-decoration: underline; text-decoration-thickness: 1px; }
 a.pcard:focus-visible { outline-offset: -2px; }
 
@@ -263,7 +269,7 @@ a.pcard:focus-visible { outline-offset: -2px; }
   transition: background-color 0.15s var(--ease);
 }
 
-.mrow:hover { background: var(--tint); }
+.mrow:hover { background: var(--tint); box-shadow: inset 2px 0 0 var(--red); }
 .mrow:hover .opp { text-decoration: underline; text-decoration-thickness: 1px; }
 .mrow:focus-visible { outline-offset: -2px; }
 
