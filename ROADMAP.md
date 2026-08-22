@@ -70,6 +70,16 @@ fits together and [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
       games ("BF needs X points"), labelled illustrative.
 - [ ] **Market-value time series** — profiles already refresh every 30 days; append
       each snapshot to a history table so squad value over time becomes visible.
+- [x] **Model backtest** — out-of-sample Brier score, skill against base rates and
+      a calibration curve, on the projections page.
+- [x] **Squad stability** — starting-eleven churn and minutes concentration per
+      coach era.
+- [x] **Partnerships** — minutes played together per pair and goal difference
+      while both were on the pitch.
+- [x] **Substitution patterns** — first-change timing, volume, injury-forced
+      changes and the score at entry, per coach.
+- [x] **Rest days** — record by days since the previous match, reported beside the
+      average opponent Elo of each band.
 - [ ] **Set-piece and cards analysis** — cards are already staged and unused
       (`data/staging/cards.csv`). **good first issue**
 - [ ] **Opponent-formation matrix** — blocked today: sample per pairing is far too

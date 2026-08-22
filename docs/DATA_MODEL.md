@@ -202,6 +202,34 @@ Squad size, graduations and median time to a senior debut.
 - **Grain**: one row per youth cohort
 - **Columns** (7): `window_id`, `level`, `window_date`, `squad_size`, `linked`, `with_senior_apps`, `median_days_to_debut`
 
+### `squad_stability.csv`
+
+Starting-eleven churn and how concentrated playing time is.
+
+- **Grain**: one row per coach tenure
+- **Columns** (11): `coach`, `first_match`, `last_match`, `matches`, `matches_with_xi`, `players_used`, `avg_changes`, `churn_pct`, `top11_share`, `unique_xis`, `gated`
+
+### `partnerships.csv`
+
+Minutes played together and goal difference while both were on the pitch.
+
+- **Grain**: one row per player pair
+- **Columns** (14): `player_a`, `name_a`, `pos_a`, `player_b`, `name_b`, `pos_b`, `pair_type`, `matches`, `minutes`, `gf`, `ga`, `gd`, `gd90`, `gated`
+
+### `substitution_patterns.csv`
+
+Substitution timing and volume, and the score when the substitute entered.
+
+- **Grain**: one row per scope (overall / coach)
+- **Columns** (12): `scope`, `matches`, `subs`, `subs_per_match`, `first_sub_avg`, `first_sub_median`, `injury_subs`, `entries_leading`, `entries_level`, `entries_trailing`, `late_entries`, `gated`
+
+### `rest_days.csv`
+
+Record by days of rest, with the average opponent Elo of each band.
+
+- **Grain**: one row per rest band
+- **Columns** (10): `band`, `matches`, `w`, `d`, `l`, `ppg`, `gf_pm`, `ga_pm`, `opp_elo_avg`, `gated`
+
 ## Statistics value columns
 
 The per-match statistics parser emits these columns for each side (absent when the source omits them):

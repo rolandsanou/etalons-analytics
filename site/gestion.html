@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestion de l&#x27;effectif — Étalons Analytics</title>
+<meta name="description" content="Importance des joueurs du Burkina Faso, rotation du onze, associations sur le terrain, utilisation du banc et effet du calendrier.">
+<meta property="og:title" content="Gestion de l&#x27;effectif — Étalons Analytics">
+<meta property="og:description" content="Importance des joueurs du Burkina Faso, rotation du onze, associations sur le terrain, utilisation du banc et effet du calendrier.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="" data-needs="team,pool,meta" data-base="">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">Étalons Analytics</a>
+    <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="gestion.html" data-i18n="nav_mgmt" class="on"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
+    <div class="lang">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Gestion de l&#x27;effectif</p>
+  <h1>Qui pèse, qui tourne, qui entre</h1>
+  <p>Importance des joueurs, stabilité du onze, associations sur le terrain, utilisation du banc et effet du calendrier. Chaque mesure est affichée avec son échantillon et masquée sous son seuil.</p>
+</div></div>
+<main>
+  <section id="importance">
+  <h2 data-i18n="s_imp"></h2>
+  <p class="lead" data-i18n="s_imp_lead"></p>
+  <div class="grid"><div class="card w12" id="card_imp"><h3 data-i18n="c_imp_table"></h3><p class="sub" data-i18n="c_imp_table_sub"></p><div class="tablewrap"><table id="imp_table"></table></div><p class="sub" id="pilier_note"></p></div><div class="card" id="card_prof"><h3 data-i18n="c_imp_prof"></h3><p class="sub" data-i18n="c_imp_prof_sub"></p><div class="chart short" id="c_prof"></div><div class="pickrow"><label for="imp_picker" data-i18n="imp_picker"></label><select id="imp_picker"></select></div></div><div class="card" id="card_bench"><h3 data-i18n="c_bench"></h3><p class="sub" data-i18n="c_bench_sub"></p><div class="chart short" id="c_bench"></div><p class="sub" id="bench_note"></p></div></div>
+</section>
+  <section id="stabilite">
+  <h2 data-i18n="s_stab"></h2>
+  <p class="lead" data-i18n="s_stab_lead"></p>
+  <div class="grid"><div class="card w12" id="card_stab"><h3 data-i18n="c_stab"></h3><p class="sub" data-i18n="c_stab_sub"></p><div class="tablewrap"><table id="stability_table"></table></div></div></div>
+</section>
+  <section id="associations">
+  <h2 data-i18n="s_pairs"></h2>
+  <p class="lead" data-i18n="s_pairs_lead"></p>
+  <div class="grid"><div class="card w8" id="card_pairs"><h3 data-i18n="c_pairs"></h3><p class="sub" data-i18n="c_pairs_sub"></p><div class="tablewrap"><table id="pairs_table"></table></div><p class="sub" id="pairs_note"></p></div><div class="card w4"><h3 data-i18n="c_pairs_extremes"></h3><p class="sub" data-i18n="c_pairs_extremes_sub"></p><div class="tablewrap"><table id="pairs_extremes"></table></div></div></div>
+</section>
+  <section id="remplacements">
+  <h2 data-i18n="s_subs"></h2>
+  <p class="lead" data-i18n="s_subs_lead"></p>
+  <div class="grid"><div class="card w8" id="card_subs"><h3 data-i18n="c_subs"></h3><p class="sub" data-i18n="c_subs_sub"></p><div class="tablewrap"><table id="subs_table"></table></div></div><div class="card w4" id="card_subs_dist"><h3 data-i18n="c_subs_dist"></h3><p class="sub" data-i18n="c_subs_dist_sub"></p><div class="chart short" id="c_subs_dist"></div></div></div>
+</section>
+  <section id="calendrier">
+  <h2 data-i18n="s_rest"></h2>
+  <p class="lead" data-i18n="s_rest_lead"></p>
+  <div class="grid"><div class="card w12" id="card_rest"><h3 data-i18n="c_rest"></h3><p class="sub" data-i18n="c_rest_sub"></p><div class="tablewrap"><table id="rest_table"></table></div><p class="sub" id="rest_note"></p></div></div>
+</section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/sections/importance.js"></script>
+<script src="assets/sections/model.js"></script>
+<script src="assets/sections/mgmt.js"></script>
+<script src="assets/boot.js"></script>
+</body>
+</html>

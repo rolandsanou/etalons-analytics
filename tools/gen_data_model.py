@@ -15,8 +15,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from etl.load import (coaches, leadership, performance, pipeline,  # noqa: E402
-                      profiles, resilience, style)
+from etl.load import (coaches, leadership, partnerships, performance,  # noqa: E402
+                      pipeline, profiles, resilience, rest, stability,
+                      subpatterns, style)
 from etl.load.formations import FORMATION_FIELDS  # noqa: E402
 from etl.parsers.statistics import VALUE_COLS  # noqa: E402
 from etl.transform import (appearances, incidents, penalties,  # noqa: E402
@@ -81,6 +82,14 @@ MARTS = [
      "Record per head-coach tenure, with the Elo swing."),
     ("pipeline.csv", "youth cohort", pipeline.COHORT_FIELDS,
      "Squad size, graduations and median time to a senior debut."),
+    ("squad_stability.csv", "coach tenure", stability.STABILITY_FIELDS,
+     "Starting-eleven churn and how concentrated playing time is."),
+    ("partnerships.csv", "player pair", partnerships.PAIR_FIELDS,
+     "Minutes played together and goal difference while both were on the pitch."),
+    ("substitution_patterns.csv", "scope (overall / coach)", subpatterns.SUBPATTERN_FIELDS,
+     "Substitution timing and volume, and the score when the substitute entered."),
+    ("rest_days.csv", "rest band", rest.REST_FIELDS,
+     "Record by days of rest, with the average opponent Elo of each band."),
 ]
 
 HEADER = """# Data model

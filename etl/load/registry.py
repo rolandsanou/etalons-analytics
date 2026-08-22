@@ -12,8 +12,8 @@ Each entry:
     doc       one line describing what the analysis answers (used by the docs)
 """
 
-from . import (backtest, coaches, leadership, performance, pipeline, predictions,
-               resilience, stability, style)
+from . import (backtest, coaches, leadership, partnerships, performance, pipeline,
+               predictions, resilience, rest, stability, style, subpatterns)
 
 ANALYSES = [
     {
@@ -70,6 +70,26 @@ ANALYSES = [
         "marts": [("squad_stability.csv", stability.STABILITY_FIELDS,
                    stability.build_stability)],
         "site": {"team": {"stability": stability.stability_json}},
+    },
+    {
+        "name": "partnerships",
+        "doc": "Minutes played together per pair, and goal difference while both on.",
+        "marts": [("partnerships.csv", partnerships.PAIR_FIELDS,
+                   partnerships.build_partnerships)],
+        "site": {"team": {"partnerships": partnerships.partnerships_json}},
+    },
+    {
+        "name": "subpatterns",
+        "doc": "Substitution timing, volume and game state at entry, per coach.",
+        "marts": [("substitution_patterns.csv", subpatterns.SUBPATTERN_FIELDS,
+                   lambda: subpatterns.build_subpatterns()[0])],
+        "site": {"team": {"subpatterns": subpatterns.subpatterns_json}},
+    },
+    {
+        "name": "rest",
+        "doc": "Record by days of rest since the previous match.",
+        "marts": [("rest_days.csv", rest.REST_FIELDS, rest.build_rest)],
+        "site": {"team": {"rest": rest.rest_json}},
     },
     {
         "name": "resilience",

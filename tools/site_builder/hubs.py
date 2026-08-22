@@ -278,9 +278,20 @@ def analysis_page(d):
   {section("systemes", "s_forms", "s_forms_lead",
     cards=card(width="w12", chart="c_forms", title_key="c_forms", sub_key="c_forms_sub",
                card_id="card_forms", height="short"))}
-  {section("stabilite", "s_stab", "s_stab_lead",
-    cards=card(width="w12", title_key="c_stab", sub_key="c_stab_sub",
-               card_id="card_stab", table_id="stability_table"))}
+</main>"""
+    return page(title="Analyse de jeu", description=(
+        "Style de jeu du Burkina Faso, résilience, temps forts et systèmes — "
+        "chaque métrique avec son échantillon."),
+        body=body, active="analysis", needs=("team", "pool", "meta"),
+        scripts=("style", "tempo", "breakdowns"))
+
+
+# ------------------------------------------------------------------ management
+
+def management_page(d):
+    body = f"""{hero("Gestion de l'effectif", "Qui pèse, qui tourne, qui entre",
+        "Importance des joueurs, stabilité du onze, associations sur le terrain, utilisation du banc et effet du calendrier. Chaque mesure est affichée avec son échantillon et masquée sous son seuil.")}
+<main>
   {section("importance", "s_imp", "s_imp_lead",
     cards=(card(width="w12", title_key="c_imp_table", sub_key="c_imp_table_sub",
                 card_id="card_imp", table_id="imp_table",
@@ -292,12 +303,32 @@ def analysis_page(d):
            + card(chart="c_bench", title_key="c_bench", sub_key="c_bench_sub",
                   card_id="card_bench", height="short",
                   extra='<p class="sub" id="bench_note"></p>')))}
+  {section("stabilite", "s_stab", "s_stab_lead",
+    cards=card(width="w12", title_key="c_stab", sub_key="c_stab_sub",
+               card_id="card_stab", table_id="stability_table"))}
+  {section("associations", "s_pairs", "s_pairs_lead",
+    cards=(card(width="w8", title_key="c_pairs", sub_key="c_pairs_sub",
+                card_id="card_pairs", table_id="pairs_table",
+                extra='<p class="sub" id="pairs_note"></p>')
+           + card(width="w4", title_key="c_pairs_extremes",
+                  sub_key="c_pairs_extremes_sub",
+                  extra='<div class="tablewrap"><table id="pairs_extremes"></table></div>')))}
+  {section("remplacements", "s_subs", "s_subs_lead",
+    cards=(card(width="w8", title_key="c_subs", sub_key="c_subs_sub",
+                card_id="card_subs", table_id="subs_table")
+           + card(width="w4", chart="c_subs_dist", title_key="c_subs_dist",
+                  sub_key="c_subs_dist_sub", card_id="card_subs_dist",
+                  height="short")))}
+  {section("calendrier", "s_rest", "s_rest_lead",
+    cards=card(width="w12", title_key="c_rest", sub_key="c_rest_sub",
+               card_id="card_rest", table_id="rest_table",
+               extra='<p class="sub" id="rest_note"></p>'))}
 </main>"""
-    return page(title="Analyse de jeu", description=(
-        "Style de jeu du Burkina Faso, résilience, temps forts, systèmes et "
-        "importance des joueurs — chaque métrique avec son échantillon."),
-        body=body, active="analysis", needs=("team", "pool", "meta"),
-        scripts=("style", "tempo", "importance", "breakdowns", "model"))
+    return page(title="Gestion de l'effectif", description=(
+        "Importance des joueurs du Burkina Faso, rotation du onze, associations "
+        "sur le terrain, utilisation du banc et effet du calendrier."),
+        body=body, active="mgmt", needs=("team", "pool", "meta"),
+        scripts=("importance", "model", "mgmt"))
 
 
 # ------------------------------------------------------------------ history

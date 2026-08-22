@@ -35,6 +35,7 @@ def main():
         ("joueurs.html", hubs.players_index),
         ("matchs.html", hubs.matches_index),
         ("analyse.html", hubs.analysis_page),
+        ("gestion.html", hubs.management_page),
         ("histoire.html", hubs.history_page),
         ("projections.html", hubs.projections_page),
         ("methodologie.html", hubs.methodology_page),
@@ -64,12 +65,13 @@ def main():
 
 def sitemap(d, events, with_pages):
     urls = ["index.html", "effectif.html", "joueurs.html", "matchs.html",
-            "analyse.html", "histoire.html", "projections.html", "methodologie.html"]
+            "analyse.html", "gestion.html", "histoire.html", "projections.html",
+            "methodologie.html"]
     urls += [f"joueurs/{pid}.html" for pid in sorted(with_pages)]
     urls += [f"matchs/{match_slug(e)}.html" for e in events]
     lastmod = d.meta["generated_at"][:10]
     body = "\n".join(
-        f"  <url><loc>https://etalons-analytics.pages.dev/{u}</loc>"
+        f"  <url><loc>https://rolandsanou.github.io/etalons-analytics/{u}</loc>"
         f"<lastmod>{lastmod}</lastmod></url>" for u in urls)
     (SITE / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -77,7 +79,7 @@ def sitemap(d, events, with_pages):
         f"{body}\n</urlset>\n", encoding="utf-8")
     (SITE / "robots.txt").write_text(
         "User-agent: *\nAllow: /\nSitemap: "
-        "https://etalons-analytics.pages.dev/sitemap.xml\n", encoding="utf-8")
+        "https://rolandsanou.github.io/etalons-analytics/sitemap.xml\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

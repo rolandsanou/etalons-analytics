@@ -17,6 +17,7 @@ NAV = [
     ("joueurs.html", "nav_pool", "players"),
     ("matchs.html", "nav_matches", "matches"),
     ("analyse.html", "nav_analysis", "analysis"),
+    ("gestion.html", "nav_mgmt", "mgmt"),
     ("histoire.html", "nav_history", "history"),
     ("projections.html", "nav_proj", "projections"),
     ("methodologie.html", "nav_method", "method"),
