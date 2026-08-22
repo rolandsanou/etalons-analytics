@@ -1,0 +1,118 @@
+"""Per-player aggregates over the study window (the player_profile mart)."""
+
+from collections import defaultdict
+
+from ..analytics import age_on, league_group
+from ..config import STAGING
+from ..util import read_csv
+
+SUM_COLS = ["minutes", "goals", "assists", "shots", "shots_on_target", "passes",
+            "passes_accurate", "key_passes", "crosses", "crosses_accurate",
+            "dribbles_attempted", "dribbles_won", "tackles", "tackles_won",
+            "interceptions", "clearances", "recoveries", "duels_won", "duels_lost",
+            "aerials_won", "aerials_lost", "fouls", "fouled", "dispossessed",
+            "touches", "saves", "saves_inside_box", "punches", "high_claims"]
+
+PROFILE_FIELDS = (["player_id", "name", "pos", "dob", "age", "club", "club_country",
+                   "club_v", "club_country_v", "league_v", "club_source", "status",
+                   "last_seen", "market_value_eur", "contract_until", "height", "foot",
+                   "club_apps_season", "club_minutes_season", "club_rating_season",
+                   "club_season", "club_form_as_of",
+                   "league_group", "caps", "goals_career", "n_windows", "windows",
+                   "matchday_squads", "apps", "starts", "detailed_apps", "rating_avg",
+                   "pass_pct", "dribble_pct", "minutes_per_app", "goals_per90",
+                   "sofa_id", "source"] + SUM_COLS)
+
+
+def _num(x, cast=int, default=0):
+    try:
+        return cast(x)
+    except (TypeError, ValueError):
+        return default
+
+
+def build_profiles(today):
+    players = read_csv(STAGING / "players.csv")
+    callups = read_csv(STAGING / "callups.csv")
+    apps = read_csv(STAGING / "appearances.csv")
+    cf_path = STAGING / "club_form.csv"
+    club_form = ({r["player_id"]: r for r in read_csv(cf_path)}
+                 if cf_path.exists() else {})
+
+    windows_by_player = defaultdict(set)
+    for c in callups:
+        windows_by_player[c["player_id"]].add(c["window_id"])
+
+    agg = defaultdict(lambda: defaultdict(float))
+    for a in apps:
+        pid = a["player_id"]
+        g = agg[pid]
+        g["matchday_squads"] += 1
+        played = _num(a["played"])
+        g["apps"] += played
+        g["starts"] += _num(a["started"]) if played else 0
+        g["detailed_apps"] += _num(a["has_detailed_stats"]) if played else 0
+        minutes = _num(a["minutes"])
+        rating = _num(a["rating"], float, 0.0)
+        if rating > 0 and minutes > 0:
+            g["_rating_x_min"] += rating * minutes
+            g["_rated_min"] += minutes
+        for col in SUM_COLS:
+            g[col] += _num(a[col])
+
+    profiles = []
+    for p in players:
+        g = agg.get(p["player_id"], {})
+        minutes = int(g.get("minutes", 0))
+        apps_n = int(g.get("apps", 0))
+        passes = int(g.get("passes", 0))
+        dr_att = int(g.get("dribbles_attempted", 0))
+        row = {
+            "player_id": p["player_id"],
+            "name": p["name"],
+            "pos": p["pos"],
+            "dob": p["dob"],
+            "age": age_on(p["dob"], today) if p["dob"] else "",
+            "club": p["club"],
+            "club_country": p["club_country"],
+            "club_v": p.get("club_v", ""),
+            "club_country_v": p.get("club_country_v", ""),
+            "league_v": p.get("league_v", ""),
+            "club_source": p.get("club_source", ""),
+            "status": p.get("status", ""),
+            "last_seen": p.get("last_seen", ""),
+            "market_value_eur": p.get("market_value_eur", ""),
+            "contract_until": p.get("contract_until", ""),
+            "height": p.get("height", ""),
+            "foot": p.get("foot", ""),
+            "club_apps_season": club_form.get(p["player_id"], {}).get("apps", ""),
+            "club_minutes_season": club_form.get(p["player_id"], {}).get("minutes", ""),
+            "club_rating_season": club_form.get(p["player_id"], {}).get("rating", ""),
+            "club_season": (club_form.get(p["player_id"], {}).get("tournament", "")
+                            + " " + str(club_form.get(p["player_id"], {}).get("season_year", ""))
+                            ).strip(),
+            "club_form_as_of": club_form.get(p["player_id"], {}).get("as_of", ""),
+            "league_group": league_group(p.get("club_country_v") or p["club_country"] or None),
+            "caps": p["caps"],
+            "goals_career": p["goals"],
+            "n_windows": len(windows_by_player.get(p["player_id"], ())),
+            "windows": ";".join(sorted(windows_by_player.get(p["player_id"], ()))),
+            "matchday_squads": int(g.get("matchday_squads", 0)),
+            "apps": apps_n,
+            "starts": int(g.get("starts", 0)),
+            "detailed_apps": int(g.get("detailed_apps", 0)),
+            "rating_avg": round(g["_rating_x_min"] / g["_rated_min"], 2)
+                          if g.get("_rated_min") else "",
+            "pass_pct": round(100 * g.get("passes_accurate", 0) / passes, 1) if passes else "",
+            "dribble_pct": round(100 * g.get("dribbles_won", 0) / dr_att, 1) if dr_att else "",
+            "minutes_per_app": round(minutes / apps_n, 1) if apps_n else "",
+            "goals_per90": round(90 * g.get("goals", 0) / minutes, 2) if minutes >= 180 else "",
+            "sofa_id": p["sofa_id"],
+            "source": p["source"],
+        }
+        for col in SUM_COLS:
+            row[col] = int(g.get(col, 0))
+        profiles.append(row)
+
+    profiles.sort(key=lambda r: (-r["minutes"], r["name"]))
+    return profiles

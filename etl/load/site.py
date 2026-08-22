@@ -8,7 +8,10 @@ from ..extract.wikipedia import squad_windows
 from ..parsers.wikipedia import parse_afcon_record, parse_as_of, parse_leaders
 from ..transform import matches as matches_mod
 from ..util import read_csv, write_json
-from .marts import build_formations, build_profiles
+from .formations import build_formations
+from .profiles import build_profiles
+from .registry import site_fragments
+from .style import full_feed_events
 
 
 def _callup_to_player(c):
@@ -57,10 +60,8 @@ def build_squad_json(today):
 
 
 def build_pool_json(today):
-    from .performance import build_bench, build_importance
     profiles = build_profiles(today)
     events = read_csv(STAGING / "events.csv")
-    players = read_csv(STAGING / "players.csv")
     n_detailed = sum(1 for e in events if int(e["n_with_stats"] or 0) > 0)
     windows = [{"window_id": w["window_id"], "label_fr": w["label_fr"],
                 "label_en": w["label_en"], "date": w["window_date"]}
@@ -74,8 +75,6 @@ def build_pool_json(today):
             "events_with_stats": n_detailed,
         },
         "profiles": profiles,
-        "importance": build_importance(players),
-        "bench": build_bench(players),
     }
 
 
@@ -123,14 +122,12 @@ def build_history_json():
     hist = matches_mod.history_stats(m)
     team_html = (RAW / "wikipedia" / "team_page.html").read_text(encoding="utf-8")
     capped, scorers = parse_leaders(team_html)
-    from .coaches import build_coach_eras
     return {
         **hist,
         "most_capped": capped,
         "top_scorers": scorers,
         "afcon_record": parse_afcon_record(team_html),
         "shootouts": build_shootouts_json(),
-        "coaches": build_coach_eras(),
     }
 
 
@@ -148,47 +145,39 @@ def _stats_coverage():
     path = STAGING / "team_match_stats.csv"
     if not path.exists():
         return {"with_stats": 0, "with_full_stats": 0}
-    from .style import full_feed_events
     rows = read_csv(path)
     return {"with_stats": len({r["event_id"] for r in rows}),
             "with_full_stats": len(full_feed_events(rows))}
 
 
 def build_team_json():
-    from .performance import build_team_timeline
     events = read_csv(STAGING / "events.csv")
-    with_formation = sum(1 for e in events if e.get("bf_formation"))
-    bins, summary = build_team_timeline()
-    from .leadership import build_captains, build_goalkeepers
-    from .performance import _f
-    from .pipeline import build_pipeline
-    from .resilience import build_clutch, build_resilience
-    from .style import build_style, half_split
-    cohorts, prospects = build_pipeline(date.today())
-    apps = read_csv(STAGING / "appearances.csv")
-    eff = {s["event_id"]: _f(s["effective_length"], 95)
-           for s in read_csv(STAGING / "match_states.csv")}
     return {
-        "captains": build_captains(apps),
-        "goalkeepers": build_goalkeepers(apps, eff),
         "formations": build_formations(),
-        "timeline": {"bins": bins, "summary": summary},
         "penalties": build_penalties_json(),
-        "pipeline": {"cohorts": cohorts, "prospects": prospects},
-        "style": {"axes": build_style(), "halves": half_split()},
-        "resilience": {"metrics": build_resilience(), "clutch": build_clutch()},
-        "coverage": {"events": len(events), "with_formation": with_formation,
-                     **_stats_coverage()},
+        "coverage": {
+            "events": len(events),
+            "with_formation": sum(1 for e in events if e.get("bf_formation")),
+            **_stats_coverage(),
+        },
     }
+
+
+def _with_fragments(document, base):
+    """Merge every registry-declared fragment for this document."""
+    for key, builder in site_fragments(document).items():
+        base[key] = builder()
+    return base
 
 
 def run():
     today = date.today()
-    write_json(SITE_DATA / "team.json", build_team_json())
-    write_json(SITE_DATA / "squad.json", build_squad_json(today))
-    write_json(SITE_DATA / "pool.json", build_pool_json(today))
-    write_json(SITE_DATA / "history.json", build_history_json())
-    write_json(SITE_DATA / "elo.json", build_elo_json())
+    write_json(SITE_DATA / "team.json", _with_fragments("team", build_team_json()))
+    write_json(SITE_DATA / "squad.json", _with_fragments("squad", build_squad_json(today)))
+    write_json(SITE_DATA / "pool.json", _with_fragments("pool", build_pool_json(today)))
+    write_json(SITE_DATA / "history.json",
+               _with_fragments("history", build_history_json()))
+    write_json(SITE_DATA / "elo.json", _with_fragments("elo", build_elo_json()))
     write_json(SITE_DATA / "meta.json", {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "team": TEAM,

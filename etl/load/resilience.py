@@ -2,22 +2,13 @@ from collections import defaultdict
 
 from ..config import MARTS, STAGING
 from ..util import read_csv, write_csv
-from .performance import _f, _i
+from .common import as_float as _f, as_int as _i, record as _record
 
 RESILIENCE_FIELDS = ["metric", "scope", "n", "value", "detail"]
 
 CLUTCH_FIELDS = ["player_id", "name", "pos", "goals", "openers", "equalizers",
                  "go_ahead", "extenders", "consolations", "late_goals",
                  "goals_when_trailing", "assists_when_trailing", "as_sub_goals"]
-
-
-def _record(results):
-    w = results.count("W")
-    d = results.count("D")
-    l = results.count("L")
-    n = len(results)
-    return {"n": n, "w": w, "d": d, "l": l,
-            "ppg": round((3 * w + d) / n, 2) if n else None}
 
 
 def build_resilience():
@@ -162,9 +153,7 @@ def build_clutch():
     return rows
 
 
-def run():
-    res = build_resilience()
-    clutch = build_clutch()
-    write_csv(MARTS / "resilience.csv", res, RESILIENCE_FIELDS)
-    write_csv(MARTS / "clutch_players.csv", clutch, CLUTCH_FIELDS)
-    return res, clutch
+# --- registry entry point ---
+
+def resilience_json():
+    return {"metrics": build_resilience(), "clutch": build_clutch()}

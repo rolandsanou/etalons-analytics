@@ -4,36 +4,11 @@ from ..analytics import chi_square_uniform, importance_tier, percentile_among
 from ..config import MARTS, STAGING
 from ..transform.timeline import BIN_LABELS
 from ..util import read_csv, write_csv
+from .common import as_float, as_int, points_from, presence_minutes, record
 
-PTS = {"W": 3, "D": 1, "L": 0}
-
-
-def _pts(app_row):
-    gf, ga = _i(app_row["gf"]), _i(app_row["ga"])
-    return 3 if gf > ga else (1 if gf == ga else 0)
-
-
-def _f(x, d=0.0):
-    try:
-        return float(x)
-    except (TypeError, ValueError):
-        return d
-
-
-def _i(x, d=0):
-    try:
-        return int(float(x))
-    except (TypeError, ValueError):
-        return d
-
-
-def _record(results):
-    w = sum(1 for r in results if r == "W")
-    d = sum(1 for r in results if r == "D")
-    l = sum(1 for r in results if r == "L")
-    n = len(results)
-    return {"n": n, "w": w, "d": d, "l": l,
-            "ppg": round((3 * w + d) / n, 2) if n else None}
+# short aliases kept for the dense aggregation code below
+_f, _i, _pts, _presence_minutes, _record = (as_float, as_int, points_from,
+                                            presence_minutes, record)
 
 
 # ---------- team timeline ----------
@@ -111,12 +86,6 @@ IMPORTANCE_FIELDS = [
     "rating_avg", "rated_apps", "rated_min", "gate_rating",
     "pct_minutes_share", "pct_onoff", "pct_ppg", "pct_ga90", "pct_rating",
 ]
-
-
-def _presence_minutes(a):
-    if a.get("entry_min") not in ("", None):
-        return max(_f(a["exit_min"]) - _f(a["entry_min"]), 0)
-    return float(_i(a.get("minutes")))
 
 
 def build_importance(players):
@@ -274,11 +243,24 @@ def build_bench(players):
     return rows
 
 
-def run(players):
+# --- registry entry points (zero-arg, load their own inputs) ---
+
+def _players():
+    return read_csv(STAGING / "players.csv")
+
+
+def timeline_bins():
+    return build_team_timeline()[0]
+
+
+def timeline_json():
     bins, summary = build_team_timeline()
-    write_csv(MARTS / "team_timeline.csv", bins, TIMELINE_FIELDS)
-    importance = build_importance(players)
-    write_csv(MARTS / "player_importance.csv", importance, IMPORTANCE_FIELDS)
-    bench = build_bench(players)
-    write_csv(MARTS / "bench_impact.csv", bench, BENCH_FIELDS)
-    return bins, summary, importance, bench
+    return {"bins": bins, "summary": summary}
+
+
+def importance():
+    return build_importance(_players())
+
+
+def bench():
+    return build_bench(_players())

@@ -6,6 +6,22 @@ import unicodedata
 from .config import SEED
 
 
+def as_float(x, default=0.0):
+    """CSV-safe float: '' / None / junk -> default."""
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return default
+
+
+def as_int(x, default=0):
+    """CSV-safe int, tolerant of '12.0'."""
+    try:
+        return int(float(x))
+    except (TypeError, ValueError):
+        return default
+
+
 def norm_name(name):
     s = unicodedata.normalize("NFD", str(name))
     s = "".join(c for c in s if not unicodedata.combining(c))

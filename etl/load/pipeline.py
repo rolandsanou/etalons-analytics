@@ -54,7 +54,12 @@ def build_pipeline(today=None):
     return rows, prospects
 
 
-def run():
-    rows, _ = build_pipeline()
-    write_csv(MARTS / "pipeline.csv", rows, COHORT_FIELDS)
-    return rows
+# --- registry entry points ---
+
+def cohorts():
+    return build_pipeline()[0]
+
+
+def pipeline_json():
+    rows, prospects = build_pipeline()
+    return {"cohorts": rows, "prospects": prospects}

@@ -2,7 +2,7 @@ from collections import defaultdict
 
 from ..config import MARTS, STAGING
 from ..util import read_csv, write_csv
-from .marts import opp_elo_lookup
+from .formations import opp_elo_lookup
 
 MIN_COVERAGE = 0.75
 MIN_MATCHES = 8
@@ -39,6 +39,7 @@ STYLE_FIELDS = ["scope", "scope_value", "side", "matches", "axis", "value",
 
 
 def _f(row, col):
+    """Column as float, or None when the source omitted it (not zero)."""
     v = row.get(col, "")
     if v in ("", None):
         return None
@@ -157,7 +158,7 @@ def half_split():
     return out
 
 
-def run():
-    rows = build_style()
-    write_csv(MARTS / "team_style.csv", rows, STYLE_FIELDS)
-    return rows
+# --- registry entry point ---
+
+def style_json():
+    return {"axes": build_style(), "halves": half_split()}

@@ -2,7 +2,7 @@ from collections import defaultdict
 
 from ..config import MARTS, STAGING
 from ..util import read_csv, write_csv
-from .performance import _f, _i, _presence_minutes, _pts
+from .common import as_float as _f, as_int as _i, points_from as _pts, presence_minutes as _presence_minutes
 
 CAPTAIN_FIELDS = ["player_id", "name", "pos", "matches", "w", "d", "l", "ppg",
                   "minutes", "first_date", "last_date"]
@@ -81,12 +81,13 @@ def build_goalkeepers(apps, eff_by_event):
     return out
 
 
-def run():
-    apps = read_csv(STAGING / "appearances.csv")
+# --- registry entry points ---
+
+def captains():
+    return build_captains(read_csv(STAGING / "appearances.csv"))
+
+
+def goalkeepers():
     eff = {s["event_id"]: _f(s["effective_length"], 95)
            for s in read_csv(STAGING / "match_states.csv")}
-    captains = build_captains(apps)
-    goalkeepers = build_goalkeepers(apps, eff)
-    write_csv(MARTS / "captains.csv", captains, CAPTAIN_FIELDS)
-    write_csv(MARTS / "goalkeepers.csv", goalkeepers, GK_FIELDS)
-    return captains, goalkeepers
+    return build_goalkeepers(read_csv(STAGING / "appearances.csv"), eff)
