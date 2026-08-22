@@ -136,7 +136,7 @@ code, kbd {
 .top-inner,
 .hero-band .inner,
 main,
-footer > * {
+footer p {
   max-width: var(--wrap);
   margin-inline: auto;
   padding-inline: var(--gut);
@@ -425,6 +425,9 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; }
 .chart {
   width: 100%;
   height: 300px;
+  /* safety net: a chart that has not re-measured yet can never widen the page.
+     Every tooltip in core.js is built with confine:true, so nothing gets cut. */
+  overflow: hidden;
 }
 
 .chart.tall { height: 380px; }
@@ -841,10 +844,7 @@ footer {
   padding-block: 26px 46px;
 }
 
-footer p {
-  margin: 0;
-  max-width: 92ch;
-}
+footer p { margin-block: 0; }
 
 footer a {
   color: var(--ink-2);
