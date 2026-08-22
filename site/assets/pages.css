@@ -562,14 +562,19 @@ a.pcard:focus-visible { outline-offset: -2px; }
    methodology — the one long-form page, set as an article
    ========================================================================== */
 
-.methodo {
+/* the generated page ships both a div.methodo and a section#methodo carrying the
+   same id, and boot.js writes the prose into whichever the DOM returns first —
+   so both have to be styled. */
+.methodo,
+main > section#methodo {
   max-width: 76ch;
   font-size: 14.5px;
   line-height: 1.7;
   color: var(--ink-2);
 }
 
-.methodo h3 {
+.methodo h3,
+main > section#methodo h3 {
   font-family: var(--serif);
   font-size: 19px;
   font-weight: 600;
@@ -581,11 +586,18 @@ a.pcard:focus-visible { outline-offset: -2px; }
   border-top: 1px solid var(--hair);
 }
 
-.methodo h3:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.methodo h3:first-child,
+main > section#methodo h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
 
-.methodo p { margin: 0 0 4px; }
+.methodo p,
+main > section#methodo p { margin: 0 0 4px; }
 
-.methodo code {
+.methodo code,
+main > section#methodo code {
   font-size: 12.5px;
   white-space: nowrap;
 }
@@ -662,7 +674,8 @@ html.js-anim .reveal.in {
   .lineup { grid-template-columns: 1fr; }
   .filters .count { margin-left: 0; }
   .credits { columns: 1; column-rule: 0; }
-  .methodo { font-size: 14px; }
+  .methodo,
+  main > section#methodo { font-size: 14px; }
 }
 
 @media (max-width: 420px) {

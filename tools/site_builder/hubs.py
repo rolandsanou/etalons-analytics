@@ -438,7 +438,7 @@ def methodology_page(d):
     body = f"""{hero("Méthodologie", "Comment ces chiffres sont produits",
         "Sources, formules, seuils et limites. Tout est reproductible : le code et les données intermédiaires sont publics.")}
 <main>
-  <section id="methodo">
+  <section id="methodologie">
     <div class="methodo" id="methodo"></div>
   </section>
   <section id="credits">
