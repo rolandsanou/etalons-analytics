@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Effectif — Étalons Analytics</title>
+<meta name="description" content="Effectif du Burkina Faso : postes, âges, clubs et championnats.">
+<meta property="og:title" content="Effectif — Étalons Analytics">
+<meta property="og:description" content="Effectif du Burkina Faso : postes, âges, clubs et championnats.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="" data-needs="squad,meta" data-base="">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad" class="on"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
+    <div class="lang">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Effectif</p>
+  <h1>Le groupe actuel et sa structure</h1>
+  <p>Dernière liste connue, pyramide des âges, pays des clubs et type de championnat.</p>
+</div></div>
+<main>
+  <section id="effectif">
+  <h2 data-i18n="s_squad"></h2>
+  
+  <div class="grid"><div class="card" id="card_pos"><h3 data-i18n="c_pos"></h3><p class="sub" data-i18n="c_pos_sub"></p><div class="chart short" id="c_pos"></div></div><div class="card" id="card_age"><h3 data-i18n="c_age"></h3><p class="sub" data-i18n="c_age_sub"></p><div class="chart short" id="c_age"></div></div><div class="card w12"><h3 data-i18n="t_squad"></h3><div class="tablewrap"><table id="squad_table"></table></div><details class="tv"><summary data-i18n="t_callups"></summary><div class="tablewrap"><table id="callups_table"></table></div></details></div></div>
+</section>
+  <section id="repartitions">
+  <h2 data-i18n="s_break"></h2>
+  <p class="lead" data-i18n="s_break_lead"></p>
+  <div class="grid"><div class="card" id="card_clubs"><h3 data-i18n="c_clubs"></h3><p class="sub" data-i18n="c_clubs_sub"></p><div class="chart tall" id="c_clubs"></div></div><div class="card" id="card_leagues"><h3 data-i18n="c_leagues"></h3><p class="sub" data-i18n="c_leagues_sub"></p><div class="league-bar" id="league_bar"></div><div class="league-legend" id="league_legend"></div></div></div>
+</section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/sections/overview.js"></script>
+<script src="assets/sections/breakdowns.js"></script>
+<script src="assets/boot.js"></script>
+</body>
+</html>

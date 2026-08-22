@@ -1,3 +1,4 @@
+import math
 from datetime import date
 
 import numpy as np
@@ -282,6 +283,43 @@ def formation_table(events, elo_lookup, min_n=8):
         row["pooled_from"] = sorted({f for f in groups if f not in main and f != "?"})
         rows.append(row)
     return rows
+
+
+def wdl_from_elo(diff, draw_peak, draw_width):
+    """Split an Elo expectation into win/draw/loss probabilities.
+
+    The expected score fixes win + draw/2; the draw share is highest between
+    evenly-matched sides and decays with the rating gap. draw_peak and
+    draw_width are calibrated on real CAF matches (see calibrate_draw_rate).
+    """
+    exp = expected(diff)
+    draw = draw_peak * math.exp(-(diff / draw_width) ** 2)
+    # cap the draw share so it can never absorb more than three quarters of the
+    # expected score — a heavy underdog still keeps a small win probability
+    draw = min(draw, 1.5 * min(exp, 1 - exp))
+    win = exp - draw / 2
+    return {"win": round(win, 3), "draw": round(draw, 3),
+            "loss": round(1 - win - draw, 3)}
+
+
+def calibrate_draw_rate(samples):
+    """samples: [(elo_diff, result)] with result in W/D/L, from real matches.
+
+    Returns (draw_peak, draw_width, n) by fitting the observed draw rate in
+    close matches and the width at which draws fall to half that rate.
+    """
+    close = [r for diff, r in samples if abs(diff) <= 50]
+    if len(close) < 30:
+        return 0.27, 380.0, len(close)
+    peak = close.count("D") / len(close)
+    far = [r for diff, r in samples if 250 <= abs(diff) <= 450]
+    width = 380.0
+    if len(far) >= 30:
+        far_rate = far.count("D") / len(far)
+        ratio = max(far_rate / peak, 0.05) if peak else 0.5
+        if 0 < ratio < 1:
+            width = 350 / math.sqrt(-math.log(ratio))
+    return round(peak, 3), round(min(max(width, 150), 800), 1), len(close)
 
 
 def elo_summary(timeline, ranked, team=TEAM):

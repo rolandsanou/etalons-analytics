@@ -36,7 +36,6 @@ function renderLeagueBar() {
 
 // ---------- formations ----------
 
-const ST_GOOD = "#0ca30c", ST_CRIT = "#d03b3b";
 
 function formationLabel(r) {
   if (r.formation !== "others") { return r.formation; }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projections — Étalons Analytics</title>
+<meta name="description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes et attentes Elo.">
+<meta property="og:title" content="Projections — Étalons Analytics">
+<meta property="og:description" content="Projections du Burkina Faso vers la CAN 2027 et le Mondial 2030 : âges, vivier des jeunes et attentes Elo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="" data-needs="squad,pool,team,elo,meta" data-base="">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html"><span class="star">★</span> Étalons Analytics</a>
+    <nav><a href="index.html" data-i18n="nav_home"></a><a href="effectif.html" data-i18n="nav_squad"></a><a href="joueurs.html" data-i18n="nav_pool"></a><a href="matchs.html" data-i18n="nav_matches"></a><a href="analyse.html" data-i18n="nav_analysis"></a><a href="histoire.html" data-i18n="nav_history"></a><a href="projections.html" data-i18n="nav_proj" class="on"></a><a href="methodologie.html" data-i18n="nav_method"></a></nav>
+    <div class="lang">
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-band"><div class="inner">
+  <p class="eyebrow">Projections</p>
+  <h1>CAN 2027, CM 2030 et le vivier</h1>
+  <p>Âge de l&#x27;effectif aux prochaines échéances, attentes face aux rivaux africains et passage des équipes de jeunes vers les A. Modèles simples, explicitement illustratifs.</p>
+</div></div>
+<main>
+  <section id="projections">
+  <h2 data-i18n="s_proj"></h2>
+  <p class="lead" data-i18n="s_proj_lead"></p>
+  <div class="grid"><div class="card w12" id="card_proj"><h3 data-i18n="c_proj_age"></h3><p class="sub" data-i18n="c_proj_age_sub"></p><div class="chart " id="c_proj_age"></div><p class="core" id="core_box"></p><p class="sub" id="readiness_note"></p></div><div class="card w12" id="card_pipeline"><h3 data-i18n="c_pipeline"></h3><p class="sub" data-i18n="c_pipeline_sub"></p><div class="tablewrap"><table id="pipeline_table"></table></div><p class="sub" id="prospects_note"></p></div></div>
+</section>
+  <section id="attentes">
+  <h2 data-i18n="s_pred"></h2>
+  <p class="lead" data-i18n="s_pred_lead"></p>
+  <div class="grid"><div class="card w8" id="card_pred"><h3 data-i18n="c_pred"></h3><p class="sub" data-i18n="c_pred_sub"></p><div class="chart tall" id="c_pred"></div></div><div class="card w4" id="card_pred_note"><h3 data-i18n="c_pred_note"></h3><div id="pred_note"></div></div></div>
+</section>
+</main>
+
+<footer>
+  <p id="footer_text"></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/sections/outlook.js"></script>
+<script src="assets/sections/predictions.js"></script>
+<script src="assets/boot.js"></script>
+</body>
+</html>

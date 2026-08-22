@@ -12,7 +12,8 @@ Each entry:
     doc       one line describing what the analysis answers (used by the docs)
 """
 
-from . import coaches, leadership, performance, pipeline, resilience, style
+from . import (coaches, leadership, performance, pipeline, predictions,
+               resilience, style)
 
 ANALYSES = [
     {
@@ -55,6 +56,12 @@ ANALYSES = [
         "doc": "Playing-style axes vs the opponents faced, by tercile and by half.",
         "marts": [("team_style.csv", style.STYLE_FIELDS, style.build_style)],
         "site": {"team": {"style": style.style_json}},
+    },
+    {
+        "name": "predictions",
+        "doc": "Elo expectations vs CAF rivals with a calibrated draw rate.",
+        "marts": [],
+        "site": {"elo": {"predictions": predictions.predictions_json}},
     },
     {
         "name": "resilience",

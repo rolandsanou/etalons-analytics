@@ -30,6 +30,12 @@ jobs:
       - name: Data-quality gate
         run: python -m etl quality
 
+      - name: Generate every page
+        run: python tools/build_site.py
+
+      - name: No broken internal links
+        run: python tools/check_links.py
+
       - name: Data dictionary is up to date
         run: |
           python tools/gen_data_model.py

@@ -1,5 +1,5 @@
 from . import (appearances, clubform, elo, incidents, matches, penalties,
-               players, records, teamstats, timeline, youth)
+               photos, players, records, teamstats, timeline, youth)
 
 
 def run():
@@ -16,3 +16,4 @@ def run():
     players.write(registry, callups)
     youth.run(registry)
     clubform.run(registry)
+    photos.run()
