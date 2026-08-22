@@ -117,8 +117,14 @@ function renderPoolTable() {
     if (c.key === "market_value_eur") { return `<td class="num">${mvCell(p.market_value_eur)}</td>`; }
     if (c.key === "club_minutes_season") {
       const v = p.club_minutes_season;
+      if (v === "" || v === undefined) { return `<td class="num">–</td>`; }
       const title = p.club_season ? ` title="${p.club_season} · ${p.club_form_as_of}"` : "";
-      return `<td class="num"${title}>${v === "" || v === undefined ? "–" : fmt(v)}</td>`;
+      // Club leagues restart on different dates, so this column holds several
+      // seasons at once — a complete campaign next to a fortnight of a new one.
+      // Naming the season in the cell keeps the two from reading as comparable.
+      const yr = p.club_season_year
+        ? ` <span class="season">${p.club_season_year}</span>` : "";
+      return `<td class="num"${title}>${fmt(v)}${yr}</td>`;
     }
     if (c.key === "dribbles_won") {
       const won = num(p.dribbles_won), att = num(p.dribbles_attempted);
