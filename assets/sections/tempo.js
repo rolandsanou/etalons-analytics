@@ -10,7 +10,7 @@ function renderTempo() {
     name, type: "bar", stack, data, barMaxWidth: 16,
     itemStyle: { color, borderColor: SURFACE, borderWidth: 1 },
     label: label ? { show: true, position: "inside", fontSize: 10.5,
-      color: "#fff", formatter: p => (p.value > 0 ? p.value : "") } : { show: false },
+      color: ON_FILL, formatter: p => (p.value > 0 ? p.value : "") } : { show: false },
   });
   mkChart("c_bins", {
     grid: { left: 8, right: 8, top: 12, bottom: 56, containLabel: true },

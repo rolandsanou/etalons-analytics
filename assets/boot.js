@@ -53,6 +53,7 @@ function renderStatic() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     el.innerHTML = t(el.dataset.i18n);
   });
+  applyTheme(effectiveTheme());   // refresh the toggle's label in this language
   if (DATA.history) {
     const h = DATA.history;
     setText("lead_history", t("s_history_lead",
@@ -80,8 +81,64 @@ function renderStatic() {
   }
 }
 
+// ---------- theme ----------
+//
+// Default is the operating system's preference; an explicit choice is remembered
+// and wins over it. Charts read their colours from the CSS tokens, so switching
+// means re-reading the tokens and re-rendering.
+
+const THEME_KEY = "ea_theme";
+
+function effectiveTheme() {
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored === "dark" || stored === "light") { return stored; }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark" : "light";
+}
+
+function applyTheme(theme, { persist = false } = {}) {
+  const root = document.documentElement;
+  if (persist) {
+    localStorage.setItem(THEME_KEY, theme);
+    root.setAttribute("data-theme", theme);
+  } else if (localStorage.getItem(THEME_KEY)) {
+    root.setAttribute("data-theme", theme);
+  } else {
+    // no explicit choice: let the media query decide, don't pin an attribute
+    root.removeAttribute("data-theme");
+  }
+  const button = $("theme_toggle");
+  if (button) {
+    const dark = theme === "dark";
+    button.setAttribute("aria-pressed", String(dark));
+    button.setAttribute("aria-label", t(dark ? "theme_to_light" : "theme_to_dark"));
+    button.title = t(dark ? "theme_to_light" : "theme_to_dark");
+  }
+}
+
+function initTheme() {
+  applyTheme(effectiveTheme());
+  const button = $("theme_toggle");
+  if (button && !button.dataset.wired) {
+    button.dataset.wired = "1";
+    button.addEventListener("click", () => {
+      applyTheme(effectiveTheme() === "dark" ? "light" : "dark",
+                 { persist: true });
+      renderAll();               // repaint every chart from the new tokens
+    });
+  }
+  // follow the OS while the visitor has not chosen explicitly
+  window.matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (localStorage.getItem(THEME_KEY)) { return; }
+      applyTheme(effectiveTheme());
+      renderAll();
+    });
+}
+
 function renderAll() {
   CHARTS.splice(0).forEach(c => c.dispose());
+  readThemeTokens();
   renderStatic();
   for (const [name, anchor] of RENDERERS) {
     const fn = window[name];
@@ -142,6 +199,7 @@ async function boot() {
   const search = $("pool_search");
   if (search) { search.addEventListener("input", renderPoolTable); }
   document.documentElement.lang = LANG;
+  initTheme();
   renderAll();
   initMotion();
   window.addEventListener("resize", () => CHARTS.forEach(c => c.resize()));
