@@ -55,13 +55,19 @@ fits together and [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
 
 ## Analysis
 
-- [ ] **Match detail pages** — one page per match from data already cached:
-      lineups, statistics, goal timeline. Biggest content win per unit of effort.
-- [ ] **Player detail pages** — per-player career and per-match history.
-- [ ] **AFCON 2027 qualifying tracker** — group standings, remaining fixtures and
-      Elo-based qualification scenarios.
-- [ ] **Fixture predictions** — W/D/L probabilities from current Elo with a
-      CAF-calibrated draw rate.
+- [x] **Match detail pages** — 58 static pages: lineups, statistics comparison,
+      goal/card/substitution timeline, previous-next navigation.
+- [x] **Player detail pages** — 129 pages: identity, window record, importance
+      components, bench output and full match-by-match history.
+- [x] **Fixture predictions** — W/D/L probabilities from Elo with a draw rate
+      calibrated on 441 real CAF matches (27.9% between close sides).
+- [ ] **AFCON 2027 qualifying tracker** — blocked on data, not on code: the source
+      publishes **no 2027 qualifying season and no scheduled fixtures** yet (checked
+      2026-08-22). The fixtures block on `projections.html` already degrades to an
+      explanatory note and will populate automatically once
+      `staging/fixtures.csv` exists. Remaining work when the calendar lands: a
+      fixtures extractor, group standings, and a Monte-Carlo over the remaining
+      games ("BF needs X points"), labelled illustrative.
 - [ ] **Market-value time series** — profiles already refresh every 30 days; append
       each snapshot to a history table so squad value over time becomes visible.
 - [ ] **Set-piece and cards analysis** — cards are already staged and unused
@@ -71,11 +77,20 @@ fits together and [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
 
 ## Platform and quality
 
-- [ ] **Frontend section ordering** — `site/index.html` lists section scripts by
-      hand; a tiny manifest would remove the ordering trap.
+- [x] **Multi-page structure** — 195 generated pages with a shared shell, hero
+      bands, breadcrumbs, sitemap and robots.txt.
+- [x] **Motion** — scroll reveals, staggered entrances and hover states that never
+      gate visibility and collapse under `prefers-reduced-motion`.
+- [x] **Photos** — Wikimedia Commons portraits (25 players, 7 coaches) with
+      per-image licence and author credited; initials avatars otherwise.
+- [ ] **More portraits** — 104 of 129 players have no free portrait. Uploading
+      own photographs to Commons under CC BY-SA is the way to close the gap.
+      **good first issue**
+- [ ] **English pages** — the generated page copy (hero text, table headers on
+      detail pages) is French-only; the charts and hub sections are bilingual.
 - [ ] **Accessibility pass** — keyboard navigation for chart tooltips, contrast
-      audit, `prefers-reduced-motion`.
-- [ ] **Dark mode** — the palette is defined but the dashboard ships light only.
+      audit on photo cards.
+- [ ] **Dark mode** — the palette is defined but the site ships light only.
 - [ ] **Data dictionary descriptions** — `tools/gen_data_model.py` documents every
       column name; per-column descriptions are still missing. **good first issue**
 - [ ] **Second team: Les Étalonnes** — the women's national team, as a parallel

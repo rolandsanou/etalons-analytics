@@ -74,17 +74,56 @@ etl/
     site.py        composes site/data/*.json (+ registry fragments)
   quality.py       the data-quality gate
 site/
-  index.html       markup and the script list
-  assets/i18n.js   FR/EN strings (one dictionary per language)
-  assets/core.js   chart plumbing: axes, tooltips, legends, table views
-  assets/sections/ one file per dashboard section
-  assets/boot.js   renderAll() + data fetch + language wiring
+  index.html effectif.html joueurs.html matchs.html analyse.html
+  histoire.html projections.html methodologie.html   <- generated hub pages
+  joueurs/<player_id>.html                           <- generated, one per player
+  matchs/<date>-<opponent>.html                      <- generated, one per match
+  sitemap.xml robots.txt                             <- generated
+  data/*.json                                        <- written by etl load
+  assets/photos/                                     <- Commons portraits (free licences)
+  assets/style.css   tokens, cards, tables, charts
+  assets/pages.css   page shell, hero, photo cards, timeline, motion
+  assets/i18n.js     FR/EN strings (one dictionary per language)
+  assets/core.js     chart plumbing + helpers shared by every section
+  assets/sections/   one file per dashboard section
+  assets/boot.js     per-page data fetch, renderer dispatch, scroll motion
 tools/
+  build_site.py      generates every page (python -m etl pages)
+  site_builder/      layout.py (shell), hubs.py, detail.py, data.py
+  check_links.py     fails if any internal link is broken
   gen_data_model.py  regenerates docs/DATA_MODEL.md from the field constants
 ```
 
 `analytics.py` and `parsers/` hold **pure functions** — no file or network I/O.
 That is why the test suite runs in under a second and needs no fixtures.
+
+## The web layer
+
+**Pages are generated, charts are not.** `tools/build_site.py` emits the HTML for
+all ~195 pages. Detail pages (match, player) are fully static HTML — tables,
+timelines and CSS comparison bars — so they read without JavaScript and are
+indexable. Hub pages keep their charts client-side: each declares the data
+documents it needs (`body[data-needs]`) and loads only the section scripts it
+uses, and `boot.js` runs a renderer only when its anchor element is present.
+
+Three rules that are easy to break:
+
+- **Shared JS goes in `core.js`.** A constant or helper defined inside one section
+  file is undefined on pages that do not load that section.
+- **Motion never gates visibility.** Reveal-on-scroll uses transitions with an
+  explicit end state, behind an `html.js-anim` flag that JS adds only once it can
+  drive the animation, plus a 1.2 s failsafe that reveals everything anyway. A
+  paused animation, a hidden tab or disabled JS can never leave the page blank.
+  Hero and tile entrances animate `transform` only, never opacity, and all motion
+  collapses under `prefers-reduced-motion`.
+- **Photos must be freely licensed.** Portraits come from Wikimedia Commons only,
+  with licence and author recorded in `data/staging/photos.csv` and credited on
+  the methodology page; players without a free portrait get an initials avatar.
+  `etl/extract/commons.py` refuses any image whose licence is not explicitly free,
+  and press photos from the stats providers are deliberately never used.
+
+After changing a page template, run `python -m etl pages` then
+`python tools/check_links.py` — CI runs both.
 
 ## Adding an analysis (the four-step recipe)
 
