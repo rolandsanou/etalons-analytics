@@ -808,3 +808,71 @@ html.js-anim .reveal.in {
 }
 
 .startline a:hover { border-bottom-color: var(--red); }
+
+/* =============================================================================
+   plain-language note under a figure
+   -----------------------------------------------------------------------------
+   The subtitle above a chart says what is being measured; this says what the
+   figure means to someone who does not read charts for a living, and where it
+   matters, what it does not mean. Set apart by a rule and a label rather than a
+   tint, so it reads as an aside instead of a warning.
+   ========================================================================== */
+
+.plain {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hair);
+}
+
+.plain-lbl {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--red);
+  margin-bottom: 5px;
+}
+
+.plain p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 66ch;
+}
+
+/* =============================================================================
+   computed facts ("Did you know?")
+   -----------------------------------------------------------------------------
+   A list, not cards: these are sentences to be read in order, and each already
+   carries its own numbers. The red rule marks them as assertions the site is
+   willing to stand behind.
+   ========================================================================== */
+
+ul.facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+ul.facts li {
+  background: var(--surface);
+  padding: 15px 18px 15px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  box-shadow: inset 3px 0 0 var(--red);
+}
+
+ul.facts li strong { font-weight: 600; }
+
+@media (min-width: 900px) {
+  ul.facts { grid-template-columns: 1fr 1fr; }
+}
