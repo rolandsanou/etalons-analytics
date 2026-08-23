@@ -7,6 +7,7 @@ from ..config import (CONTACT_EMAIL, SEED, SITE_DATA, STAGING, STATS_SINCE, TEAM
                       WIKI_TEAM_URL)
 from ..transform import matches as matches_mod
 from ..util import read_csv, read_json, write_json
+from .factoids import build_factoids
 from .formations import build_formations
 from .profiles import build_profiles
 from .registry import site_fragments
@@ -178,12 +179,20 @@ def _with_fragments(document, base):
 
 def run():
     today = date.today()
-    write_json(SITE_DATA / "team.json", _with_fragments("team", build_team_json()))
+    team = _with_fragments("team", build_team_json())
+    pool = _with_fragments("pool", build_pool_json(today))
+    history = _with_fragments("history", build_history_json())
+    elo = _with_fragments("elo", build_elo_json())
+
+    write_json(SITE_DATA / "team.json", team)
     write_json(SITE_DATA / "squad.json", _with_fragments("squad", build_squad_json(today)))
-    write_json(SITE_DATA / "pool.json", _with_fragments("pool", build_pool_json(today)))
-    write_json(SITE_DATA / "history.json",
-               _with_fragments("history", build_history_json()))
-    write_json(SITE_DATA / "elo.json", _with_fragments("elo", build_elo_json()))
+    write_json(SITE_DATA / "pool.json", pool)
+    write_json(SITE_DATA / "history.json", history)
+    write_json(SITE_DATA / "elo.json", elo)
+    # composed last: it reads the finished documents rather than the marts, so a
+    # fact can never disagree with the page it sits next to
+    write_json(SITE_DATA / "factoids.json",
+               {"facts": build_factoids(team, history, elo, pool["profiles"])})
     write_json(SITE_DATA / "meta.json", {
         "updated_on": date.today().isoformat(),
         "generated_at": datetime.now().isoformat(timespec="seconds"),

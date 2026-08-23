@@ -170,6 +170,75 @@ EN = {
         "Burkina Faso's projections towards AFCON 2027 and the 2030 World Cup: "
         "ages, youth pipeline, Elo expectations and a model backtest.",
 
+    # --- computed facts ----------------------------------------------------
+    "Le saviez-vous ?": "Did you know?",
+    "Des faits tirés directement des données — recalculés à chaque mise à jour, "
+    "jamais écrits à la main.":
+        "Facts taken straight from the data — recomputed on every update, never "
+        "written by hand.",
+    "Voir l'analyse complète →": "See the full analysis →",
+
+    "Mené de deux buts ou plus, le Burkina Faso n'a encore jamais gagné : "
+    "{w}V-{d}N-{l}D en {n} matchs depuis 2022, soit {ppg} point par match.":
+        "Two goals down, Burkina Faso has never yet won: {w}W-{d}D-{l}L in {n} "
+        "matches since 2022 — {ppg} points per match.",
+    "Mené de deux buts ou plus depuis 2022 : {w}V-{d}N-{l}D en {n} matchs, "
+    "soit {ppg} point par match.":
+        "Two goals down since 2022: {w}W-{d}D-{l}L in {n} matches — {ppg} points "
+        "per match.",
+    "Quand l'équipe ne se fait jamais mener, elle ne perd pratiquement pas : "
+    "{w}V-{d}N-{l}D en {n} matchs, soit {ppg} points par match.":
+        "When the team never falls behind, it barely loses: {w}W-{d}D-{l}L in "
+        "{n} matches — {ppg} points per match.",
+    "Sur {total} buts encaissés depuis 2022, {never} n'ont jamais reçu de "
+    "réponse dans le même match — soit {pct} %.":
+        "Of {total} goals conceded since 2022, {never} were never answered in "
+        "the same match — {pct}%.",
+    "Le premier but décide presque tout : {sf_ppg} points par match en "
+    "marquant d'abord ({sf_n} matchs), {cf_ppg} en encaissant d'abord "
+    "({cf_n} matchs, {cf_w} victoires pour {cf_l} défaites).":
+        "The first goal decides almost everything: {sf_ppg} points per match "
+        "when scoring first ({sf_n} matches), {cf_ppg} when conceding first "
+        "({cf_n} matches, {cf_w} wins against {cf_l} defeats).",
+    "Le Burkina marque nettement moins dans le premier quart d'heure "
+    "({bin} minutes) que dans le reste du match — un écart trop net pour "
+    "être le simple hasard.":
+        "Burkina Faso scores markedly less in the opening quarter-hour "
+        "({bin} minutes) than in the rest of the match — a gap too wide to be "
+        "chance alone.",
+    "Le Burkina marque nettement plus dans la tranche {bin} minutes que "
+    "dans le reste du match — un écart trop net pour être le simple hasard.":
+        "Burkina Faso scores markedly more in the {bin} minute band than in the "
+        "rest of the match — a gap too wide to be chance alone.",
+    "{name} a joué {min} minutes en sélection depuis 2022, l'équivalent de "
+    "{matches} matchs complets.":
+        "{name} has played {min} international minutes since 2022 — the "
+        "equivalent of {matches} full matches.",
+    "{name} a marqué {goals} des {total} buts de l'équipe depuis 2022, "
+    "soit {pct} % à lui seul.":
+        "{name} has scored {goals} of the team's {total} goals since 2022 — "
+        "{pct}% on his own.",
+    "En {best} : {best_ppg} points par match. En {worst} : {worst_ppg}. "
+    "Mais les adversaires n'étaient pas les mêmes — Elo moyen {best_elo} "
+    "contre {worst_elo}.":
+        "In {best}: {best_ppg} points per match. In {worst}: {worst_ppg}. But "
+        "the opponents were not the same — average Elo {best_elo} against "
+        "{worst_elo}.",
+    "Recevoir loin de chez soi coûte peu, mais coûte : {home_ppg} points par "
+    "match au Burkina, {delo_ppg} sur les {delo_n} matchs « à domicile » "
+    "joués à l'étranger.":
+        "Hosting away from home costs little, but it costs: {home_ppg} points "
+        "per match in Burkina Faso, {delo_ppg} across the {delo_n} “home” "
+        "matches played abroad.",
+    "Au classement Elo, le Burkina est {caf} d'Afrique sur {n_caf} nations, "
+    "et {world} au monde, avec {pts} points.":
+        "On Elo, Burkina Faso is {caf} in Africa out of {n_caf} nations, and "
+        "{world} in the world, on {pts} points.",
+    "Depuis 1960 : {pld} matchs, {w} victoires, {d} nuls, {l} défaites — "
+    "{pct} % de victoires.":
+        "Since 1960: {pld} matches, {w} wins, {d} draws, {l} defeats — {pct}% "
+        "won.",
+
     # --- plain-language glossary -------------------------------------------
     "Comment lire ces chiffres": "How to read these numbers",
     "Pas besoin d'être statisticien. Voici ce que veut dire chaque mesure du "

@@ -56,6 +56,93 @@ def _match_row(ctx, event, score):
 
 # ------------------------------------------------------------------ home
 
+# One sentence per computed fact. The numbers arrive from marts/factoids.json, so
+# a sentence can never drift from the data — and a fact whose sample collapses
+# simply stops being emitted rather than sitting here as a stale boast. Where a
+# figure invites a wrong conclusion, the caveat is part of the sentence.
+FACT_TEMPLATES = {
+    "fact_two_down_never_won":
+        "Mené de deux buts ou plus, le Burkina Faso n'a encore jamais gagné : "
+        "{w}V-{d}N-{l}D en {n} matchs depuis 2022, soit {ppg} point par match.",
+    "fact_two_down":
+        "Mené de deux buts ou plus depuis 2022 : {w}V-{d}N-{l}D en {n} matchs, "
+        "soit {ppg} point par match.",
+    "fact_never_trailed":
+        "Quand l'équipe ne se fait jamais mener, elle ne perd pratiquement pas : "
+        "{w}V-{d}N-{l}D en {n} matchs, soit {ppg} points par match.",
+    "fact_no_reply":
+        "Sur {total} buts encaissés depuis 2022, {never} n'ont jamais reçu de "
+        "réponse dans le même match — soit {pct} %.",
+    "fact_first_goal":
+        "Le premier but décide presque tout : {sf_ppg} points par match en "
+        "marquant d'abord ({sf_n} matchs), {cf_ppg} en encaissant d'abord "
+        "({cf_n} matchs, {cf_w} victoires pour {cf_l} défaites).",
+    "fact_bin_low":
+        "Le Burkina marque nettement moins dans le premier quart d'heure "
+        "({bin} minutes) que dans le reste du match — un écart trop net pour "
+        "être le simple hasard.",
+    "fact_bin_high":
+        "Le Burkina marque nettement plus dans la tranche {bin} minutes que "
+        "dans le reste du match — un écart trop net pour être le simple hasard.",
+    "fact_most_minutes":
+        "{name} a joué {min} minutes en sélection depuis 2022, l'équivalent de "
+        "{matches} matchs complets.",
+    "fact_top_scorer_share":
+        "{name} a marqué {goals} des {total} buts de l'équipe depuis 2022, "
+        "soit {pct} % à lui seul.",
+    "fact_formation":
+        "En {best} : {best_ppg} points par match. En {worst} : {worst_ppg}. "
+        "Mais les adversaires n'étaient pas les mêmes — Elo moyen {best_elo} "
+        "contre {worst_elo}.",
+    "fact_delocalized":
+        "Recevoir loin de chez soi coûte peu, mais coûte : {home_ppg} points par "
+        "match au Burkina, {delo_ppg} sur les {delo_n} matchs « à domicile » "
+        "joués à l'étranger.",
+    "fact_elo_rank":
+        "Au classement Elo, le Burkina est {caf} d'Afrique sur {n_caf} nations, "
+        "et {world} au monde, avec {pts} points.",
+    "fact_all_time":
+        "Depuis 1960 : {pld} matchs, {w} victoires, {d} nuls, {l} défaites — "
+        "{pct} % de victoires.",
+}
+
+
+def fun_facts(d, ctx):
+    """Computed facts, rendered into the HTML rather than fetched.
+
+    Reads factoids.json, which is built last in the load step from the finished
+    site documents, so a fact cannot disagree with the chart it sits beside.
+    """
+    t = ctx.t
+    if not d.factoids:
+        return ""
+    items = []
+    for fact in d.factoids:
+        template = FACT_TEMPLATES.get(fact["key"])
+        if not template:
+            continue
+        vals = dict(fact["vals"])
+        # ranks read as ordinals, and long numbers in the reader's own convention
+        for key in ("caf", "world"):
+            if key in vals:
+                vals[key] = ordinal(vals[key], ctx.lang)
+        # points per match always to two decimals, so 1.8 and 1.61 line up
+        for key, value in vals.items():
+            if key.endswith("ppg"):
+                vals[key] = _fmt(value, 2)
+            elif isinstance(value, int) and value >= 1000:
+                vals[key] = _fmt(value)
+        items.append(f'<li>{esc(t(template, **vals))}</li>')
+    if not items:
+        return ""
+    return f"""<section id="saviez-vous">
+    <h2>{esc(t("Le saviez-vous ?"))}</h2>
+    <p class="lead">{esc(t("Des faits tirés directement des données — recalculés à chaque mise à jour, jamais écrits à la main."))}</p>
+    <ul class="facts">{"".join(items)}</ul>
+    <p class="sub"><a href="{ctx.url('analysis')}">{esc(t("Voir l'analyse complète →"))}</a></p>
+  </section>"""
+
+
 def next_match(d, ctx):
     """The next scheduled match, or a plain statement that none is published.
 
@@ -152,6 +239,8 @@ def home_page(d, ctx):
     <div class="mlist">{recent}</div>
     <p class="sub"><a href="{ctx.url('matches')}">{esc(t("Tous les matchs →"))}</a></p>
   </section>
+
+  {fun_facts(d, ctx)}
 
   <section id="cadres">
     <h2>{esc(t("Les plus utilisés"))}</h2>
@@ -259,15 +348,15 @@ def squad_page(d, ctx):
         t("Dernière liste connue, pyramide des âges, pays des clubs et type de championnat."))}
 <main>
   {section("effectif", "s_squad", None, cards=(
-      card(chart="c_pos", title_key="c_pos", sub_key="c_pos_sub", card_id="card_pos",
+      card(chart="c_pos", title_key="c_pos", plain_key="c_pos_plain", sub_key="c_pos_sub", card_id="card_pos",
            height="short")
-      + card(chart="c_age", title_key="c_age", sub_key="c_age_sub", card_id="card_age",
+      + card(chart="c_age", title_key="c_age", plain_key="c_age_plain", sub_key="c_age_sub", card_id="card_age",
              height="short")
-      + card(width="w12", title_key="t_squad", table_id="squad_table",
+      + card(width="w12", title_key="t_squad", plain_key="t_squad_plain", table_id="squad_table",
              extra='<details class="tv"><summary data-i18n="t_callups"></summary>'
                    '<div class="tablewrap"><table id="callups_table"></table></div></details>')))}
   {section("repartitions", "s_break", "s_break_lead", cards=(
-      card(chart="c_clubs", title_key="c_clubs", sub_key="c_clubs_sub",
+      card(chart="c_clubs", title_key="c_clubs", plain_key="c_clubs_plain", sub_key="c_clubs_sub",
            card_id="card_clubs", height="tall")
       + card(title_key="c_leagues", sub_key="c_leagues_sub", card_id="card_leagues",
              extra='<div class="league-bar" id="league_bar"></div>'
@@ -287,14 +376,14 @@ def analysis_page(d, ctx):
         t("Style de jeu comparé aux adversaires rencontrés, capacité à renverser une situation, temps forts, systèmes et importance des joueurs."))}
 <main>
   {section("style", "s_style", None, extra_head='<p class="lead" id="lead_style"></p>',
-    cards=(card(chart="c_style_pct", title_key="c_style_pct", sub_key="c_style_pct_sub",
+    cards=(card(chart="c_style_pct", title_key="c_style_pct", plain_key="c_style_pct_plain", sub_key="c_style_pct_sub",
                 card_id="card_style_pct", height="tall")
-           + card(chart="c_style_vol", title_key="c_style_vol", sub_key="c_style_vol_sub",
+           + card(chart="c_style_vol", title_key="c_style_vol", plain_key="c_style_vol_plain", sub_key="c_style_vol_sub",
                   card_id="card_style_vol", height="tall")
-           + card(chart="c_style_terc", title_key="c_style_terc",
+           + card(chart="c_style_terc", title_key="c_style_terc", plain_key="c_style_terc_plain",
                   sub_key="c_style_terc_sub", card_id="card_style_terc",
                   width="w8", height="short")
-           + card(width="w4", title_key="c_style_half", sub_key="c_style_half_sub",
+           + card(width="w4", title_key="c_style_half", plain_key="c_style_half_plain", sub_key="c_style_half_sub",
                   card_id="card_style_half", table_id="half_table")))}
   {section("resilience", "s_res", None, extra_head='<p class="lead" id="lead_res"></p>',
     cards=(card(width="w4", title_key="c_deficit", sub_key="c_deficit_sub",
@@ -304,12 +393,12 @@ def analysis_page(d, ctx):
            + card(width="w4", chart="c_reply", card_id="card_reply", height="short",
                   extra='<p class="sub" id="reply_median"></p>',
                   title_html='<h3 data-i18n="c_reply"></h3><p class="sub" id="reply_sub"></p>')
-           + card(width="w4", chart="c_state_out", title_key="c_state_out",
+           + card(width="w4", chart="c_state_out", title_key="c_state_out", plain_key="c_state_out_plain",
                   sub_key="c_state_out_sub", card_id="card_state_out", height="short")
-           + card(width="w12", title_key="c_clutch", sub_key="c_clutch_sub",
+           + card(width="w12", title_key="c_clutch", plain_key="c_clutch_plain", sub_key="c_clutch_sub",
                   card_id="card_clutch", table_id="clutch_table")))}
   {section("tempo", "s_tempo", None, extra_head='<p class="lead" id="lead_tempo"></p>',
-    cards=(card(width="w8", chart="c_bins", title_key="c_bins", sub_key="c_bins_sub",
+    cards=(card(width="w8", chart="c_bins", title_key="c_bins", plain_key="c_bins_plain", sub_key="c_bins_sub",
                 card_id="card_bins", extra='<p class="sub" id="chi_note"></p>')
            + card(width="w4", title_key="c_gamestate", sub_key="c_gamestate_sub",
                   card_id="card_gamestate",
@@ -317,7 +406,7 @@ def analysis_page(d, ctx):
                         '<div class="league-bar" id="state_bar"></div>'
                         '<div class="league-legend" id="state_legend"></div>')))}
   {section("systemes", "s_forms", "s_forms_lead",
-    cards=card(width="w12", chart="c_forms", title_key="c_forms", sub_key="c_forms_sub",
+    cards=card(width="w12", chart="c_forms", title_key="c_forms", plain_key="c_forms_plain", sub_key="c_forms_sub",
                card_id="card_forms", height="short"))}
 </main>"""
     return page(ctx, title=t("Analyse de jeu"),
@@ -334,34 +423,34 @@ def management_page(d, ctx):
         t("Importance des joueurs, stabilité du onze, associations sur le terrain, utilisation du banc et effet du calendrier. Chaque mesure est affichée avec son échantillon et masquée sous son seuil."))}
 <main>
   {section("importance", "s_imp", "s_imp_lead",
-    cards=(card(width="w12", title_key="c_imp_table", sub_key="c_imp_table_sub",
+    cards=(card(width="w12", title_key="c_imp_table", plain_key="c_imp_table_plain", sub_key="c_imp_table_sub",
                 card_id="card_imp", table_id="imp_table",
                 extra='<p class="sub" id="pilier_note"></p>')
-           + card(chart="c_prof", title_key="c_imp_prof", sub_key="c_imp_prof_sub",
+           + card(chart="c_prof", title_key="c_imp_prof", plain_key="c_imp_prof_plain", sub_key="c_imp_prof_sub",
                   card_id="card_prof", height="short",
                   extra='<div class="pickrow"><label for="imp_picker" data-i18n="imp_picker">'
                         '</label><select id="imp_picker"></select></div>')
-           + card(chart="c_bench", title_key="c_bench", sub_key="c_bench_sub",
+           + card(chart="c_bench", title_key="c_bench", plain_key="c_bench_plain", sub_key="c_bench_sub",
                   card_id="card_bench", height="short",
                   extra='<p class="sub" id="bench_note"></p>')))}
   {section("stabilite", "s_stab", "s_stab_lead",
-    cards=card(width="w12", title_key="c_stab", sub_key="c_stab_sub",
+    cards=card(width="w12", title_key="c_stab", plain_key="c_stab_plain", sub_key="c_stab_sub",
                card_id="card_stab", table_id="stability_table"))}
   {section("associations", "s_pairs", "s_pairs_lead",
-    cards=(card(width="w8", title_key="c_pairs", sub_key="c_pairs_sub",
+    cards=(card(width="w8", title_key="c_pairs", plain_key="c_pairs_plain", sub_key="c_pairs_sub",
                 card_id="card_pairs", table_id="pairs_table",
                 extra='<p class="sub" id="pairs_note"></p>')
            + card(width="w4", title_key="c_pairs_extremes",
                   sub_key="c_pairs_extremes_sub",
                   extra='<div class="tablewrap"><table id="pairs_extremes"></table></div>')))}
   {section("remplacements", "s_subs", "s_subs_lead",
-    cards=(card(width="w8", title_key="c_subs", sub_key="c_subs_sub",
+    cards=(card(width="w8", title_key="c_subs", plain_key="c_subs_plain", sub_key="c_subs_sub",
                 card_id="card_subs", table_id="subs_table")
-           + card(width="w4", chart="c_subs_dist", title_key="c_subs_dist",
+           + card(width="w4", chart="c_subs_dist", title_key="c_subs_dist", plain_key="c_subs_dist_plain",
                   sub_key="c_subs_dist_sub", card_id="card_subs_dist",
                   height="short")))}
   {section("calendrier", "s_rest", "s_rest_lead",
-    cards=card(width="w12", title_key="c_rest", sub_key="c_rest_sub",
+    cards=card(width="w12", title_key="c_rest", plain_key="c_rest_plain", sub_key="c_rest_sub",
                card_id="card_rest", table_id="rest_table",
                extra='<p class="sub" id="rest_note"></p>'))}
 </main>"""
@@ -394,14 +483,14 @@ def history_page(d, ctx):
 <main>
   {section("histoire", "s_history", None,
     extra_head='<p class="lead" id="lead_history"></p>',
-    cards=(card(chart="c_decades", title_key="c_decades", sub_key="c_decades_sub",
+    cards=(card(chart="c_decades", title_key="c_decades", plain_key="c_decades_plain", sub_key="c_decades_sub",
                 card_id="card_decades", height="short")
-           + card(chart="c_form", title_key="c_form", sub_key="c_form_sub", height="short")
-           + card(width="w12", chart="c_afcon", title_key="c_afcon", sub_key="c_afcon_sub",
+           + card(chart="c_form", title_key="c_form", plain_key="c_form_plain", sub_key="c_form_sub", height="short")
+           + card(width="w12", chart="c_afcon", title_key="c_afcon", plain_key="c_afcon_plain", sub_key="c_afcon_sub",
                   card_id="card_afcon")
-           + card(width="w4", title_key="t_capped", table_id="capped_table")
-           + card(width="w4", title_key="t_scorers", table_id="scorers_table")
-           + card(width="w4", title_key="t_last10", table_id="last10_table")
+           + card(width="w4", title_key="t_capped", plain_key="t_capped_plain", table_id="capped_table")
+           + card(width="w4", title_key="t_scorers", plain_key="t_scorers_plain", table_id="scorers_table")
+           + card(width="w4", title_key="t_last10", plain_key="t_last10_plain", table_id="last10_table")
            + card(card_id="card_shootouts", table_id="shootout_table",
                   title_html='<h3 data-i18n="t_shootouts"></h3>'
                              '<p class="sub" id="shootout_rec"></p>')
@@ -409,7 +498,7 @@ def history_page(d, ctx):
                   extra='<div class="mini-tiles" id="pens_tiles"></div>'
                         '<div class="tablewrap"><table id="takers_table"></table></div>'
                         '<p class="sub" id="pens_gk_note"></p>')
-           + card(width="w12", chart="c_venues", title_key="c_venues",
+           + card(width="w12", chart="c_venues", title_key="c_venues", plain_key="c_venues_plain",
                   sub_key="c_venues_sub", card_id="card_venues", height="short",
                   extra='<p class="sub" id="venues_note"></p>')))}
   <section id="selectionneurs">
@@ -420,9 +509,9 @@ def history_page(d, ctx):
                             card_id="card_coaches")}</div>
   </section>
   {section("elo", "s_elo", "s_elo_lead",
-    cards=(card(width="w8", chart="c_elo_tl", title_key="c_elo_tl",
+    cards=(card(width="w8", chart="c_elo_tl", title_key="c_elo_tl", plain_key="c_elo_tl_plain",
                 sub_key="c_elo_tl_sub", card_id="card_elo", height="tall")
-           + card(width="w4", chart="c_winexp", title_key="c_winexp",
+           + card(width="w4", chart="c_winexp", title_key="c_winexp", plain_key="c_winexp_plain",
                   sub_key="c_winexp_sub", height="tall",
                   extra='<p class="sub" id="winexp_note"></p>')))}
 </main>"""
@@ -440,23 +529,23 @@ def projections_page(d, ctx):
         t("Âge de l'effectif aux prochaines échéances, attentes face aux rivaux africains et passage des équipes de jeunes vers les A. Modèles simples, explicitement illustratifs."))}
 <main>
   {section("projections", "s_proj", "s_proj_lead",
-    cards=(card(width="w12", chart="c_proj_age", title_key="c_proj_age",
+    cards=(card(width="w12", chart="c_proj_age", title_key="c_proj_age", plain_key="c_proj_age_plain",
                 sub_key="c_proj_age_sub", card_id="card_proj",
                 extra='<p class="core" id="core_box"></p>'
                       '<p class="sub" id="readiness_note"></p>')
-           + card(width="w12", title_key="c_pipeline", sub_key="c_pipeline_sub",
+           + card(width="w12", title_key="c_pipeline", plain_key="c_pipeline_plain", sub_key="c_pipeline_sub",
                   card_id="card_pipeline", table_id="pipeline_table",
                   extra='<p class="sub" id="prospects_note"></p>')))}
   {section("attentes", "s_pred", "s_pred_lead",
-    cards=(card(width="w8", chart="c_pred", title_key="c_pred", sub_key="c_pred_sub",
+    cards=(card(width="w8", chart="c_pred", title_key="c_pred", plain_key="c_pred_plain", sub_key="c_pred_sub",
                 card_id="card_pred", height="tall")
            + card(width="w4", title_key="c_pred_note", card_id="card_pred_note",
                   extra='<div id="pred_note"></div>')))}
   {section("modele", "s_model", "s_model_lead",
     extra_head='<p class="sub" id="bt_scope"></p>',
-    cards=(card(width="w4", title_key="c_bt", sub_key="c_bt_sub",
+    cards=(card(width="w4", title_key="c_bt", plain_key="c_bt_plain", sub_key="c_bt_sub",
                 card_id="card_bt", table_id="backtest_table")
-           + card(width="w5", chart="c_calibration", title_key="c_calibration",
+           + card(width="w5", chart="c_calibration", title_key="c_calibration", plain_key="c_calibration_plain",
                   sub_key="c_calibration_sub", card_id="card_calibration",
                   height="short")
            + card(width="w3", title_key="c_bt_surprises", sub_key="c_bt_surprises_sub",

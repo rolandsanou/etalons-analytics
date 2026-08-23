@@ -243,7 +243,11 @@ def section(id_, title_key, lead_key=None, cards="", extra_head=""):
 
 
 def card(*, chart=None, title_key=None, sub_key=None, card_id=None, width="",
-         table_id=None, extra="", height="", title_html=None):
+         table_id=None, extra="", height="", title_html=None, plain_key=None):
+    """One card. `sub_key` sits above the figure and says what it measures;
+    `plain_key` sits below it and says, in ordinary words, what the figure
+    actually tells you — and where it matters, what it does not. A chart is only
+    self-explanatory to someone who already knows the subject."""
     cls = f"card {width}".strip()
     idattr = f' id="{card_id}"' if card_id else ""
     head = ""
@@ -259,4 +263,8 @@ def card(*, chart=None, title_key=None, sub_key=None, card_id=None, width="",
     if table_id:
         inner += f'<div class="tablewrap"><table id="{table_id}"></table></div>'
     inner += extra
+    if plain_key:
+        inner += ('<div class="plain">'
+                  '<span class="plain-lbl" data-i18n="plain_lbl"></span>'
+                  f'<p data-i18n="{plain_key}"></p></div>')
     return f'<div class="{cls}"{idattr}>{inner}</div>'

@@ -47,6 +47,10 @@ class Data:
         self.elo = doc("elo")
         self.squad = doc("squad")
         self.pool = doc("pool")
+        # computed facts; may be absent on an older build
+        fj = SITE_DATA / "factoids.json"
+        self.factoids = (json.loads(fj.read_text(encoding="utf-8"))["facts"]
+                         if fj.exists() else [])
 
         self.photo_by = {(p["kind"], p["slug"]): p for p in self.photos}
         self.profile_by = {p["player_id"]: p for p in self.profiles}

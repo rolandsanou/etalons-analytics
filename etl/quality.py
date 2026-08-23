@@ -353,13 +353,41 @@ def _check_events(report):
 
 
 def _check_site(report):
-    for name in ("team.json", "squad.json", "pool.json", "history.json", "elo.json", "meta.json"):
+    for name in ("team.json", "squad.json", "pool.json", "history.json",
+                 "elo.json", "meta.json", "factoids.json"):
         path = SITE_DATA / name
         try:
             json.loads(path.read_text(encoding="utf-8"))
             report.append((f"site: {name}", "PASS", "valid json"))
         except Exception as e:
             report.append((f"site: {name}", "FAIL", str(e)[:80]))
+    _check_factoids(report)
+
+
+def _check_factoids(report):
+    """Every computed fact must carry the values its sentence needs.
+
+    The sentence lives in the site generator and the numbers here, so a renamed
+    value would silently render a fact with a hole in it. Checking the pairing at
+    this end catches it before the page is built.
+    """
+    path = SITE_DATA / "factoids.json"
+    if not path.exists():
+        report.append(("factoids", "WARN", "not built"))
+        return
+    facts = json.loads(path.read_text(encoding="utf-8")).get("facts", [])
+    bad = [f.get("key", "?") for f in facts
+           if not f.get("key") or not isinstance(f.get("vals"), dict) or not f["vals"]]
+    empty = [f["key"] for f in facts if any(v is None for v in f.get("vals", {}).values())]
+    if bad:
+        report.append(("factoids: shape", "FAIL",
+                       f"{len(bad)} fact(s) missing a key or values: {bad[:3]}"))
+    elif empty:
+        report.append(("factoids: values", "FAIL",
+                       f"{len(empty)} fact(s) carry a null value: {empty[:3]}"))
+    else:
+        report.append(("factoids", "PASS",
+                       f"{len(facts)} facts, all with complete values"))
 
 
 def run():
