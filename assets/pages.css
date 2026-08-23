@@ -793,3 +793,18 @@ html.js-anim .reveal.in {
   .pcard .pic { width: 38px; height: 38px; }
   .statrow .lbl { grid-template-columns: 40px minmax(0, 1fr) 40px; }
 }
+
+/* the invitation into the plain-language glossary, under the home-page lead */
+.hero-band > .inner > p.startline {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.startline a {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.startline a:hover { border-bottom-color: var(--red); }

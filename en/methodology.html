@@ -28,9 +28,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Étalons Analytics — open data on the Burkina Faso national team","description":"Staging tables and analysis marts: call-ups, match-by-match appearances, team statistics, Elo ratings and head-coach records.","url":"https://rolandsanou.github.io/etalons-analytics/en/methodology.html","license":"https://opensource.org/licenses/MIT","creator":{"@type":"Person","name":"Roland Sanou"},"isAccessibleForFree":true,"keywords":["Burkina Faso","football","Étalons","AFCON","Elo","football analytics","open data"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://github.com/rolandsanou/etalons-analytics/tree/main/data/marts"}]}</script>
 <meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="../assets/favicon.svg?v=4dbf4ee6" type="image/svg+xml">
-<link rel="icon" href="../assets/favicon.ico?v=4dbf4ee6" sizes="32x32">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=4dbf4ee6">
+<link rel="icon" href="../assets/favicon.svg?v=bd72150b" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon.ico?v=bd72150b" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=bd72150b">
 <script>/* set the remembered theme before first paint, so an explicit dark choice
    never flashes light. No stored choice: prefers-color-scheme decides in CSS.
    Braces are doubled because this block sits inside a Python f-string. */
@@ -39,8 +39,8 @@ document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=4dbf4ee6">
-<link rel="stylesheet" href="../assets/pages.css?v=4dbf4ee6">
+<link rel="stylesheet" href="../assets/style.css?v=bd72150b">
+<link rel="stylesheet" href="../assets/pages.css?v=bd72150b">
 </head>
 <body class="" data-needs="meta" data-base="../">
 
@@ -64,7 +64,13 @@ document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
   <p>Sources, formulas, thresholds and limits. All of it is reproducible: the code and the intermediate data are public.</p>
 </div></div>
 <main>
+  <section id="comprendre">
+    <h2>How to read these numbers</h2>
+    <p class="lead">You do not need to be a statistician. Here is what each measure on the site means — and, more to the point, what it does not.</p>
+    <div class="grid"><div class="card w4"><h3>Points per match</h3><p class="sub">A win is worth 3 points, a draw 1, a defeat 0. Add them up and divide by matches played. 2.43 means a team winning nearly every time; 0.07 a team that almost never manages it.</p></div><div class="card w4"><h3>Per 90 minutes</h3><p class="sub">A substitute who plays 20 minutes cannot be compared with a starter who plays 90. So everything is scaled to a full match: 2 goals in 180 minutes is 1 goal per 90 minutes.</p></div><div class="card w4"><h3>Minutes played</h3><p class="sub">The most honest measure of a head coach&#x27;s trust. A call-up can be argued about; minutes on the pitch are a choice repeated match after match.</p></div><div class="card w4"><h3>Why a dash instead of a number</h3><p class="sub">Over 4 matches, one lucky game changes everything. When the sample is too small to mean anything we show “–” rather than a number that would mislead.</p></div><div class="card w4"><h3>The Elo rating</h3><p class="sub">A single number placing a team&#x27;s strength, borrowed from chess. Beating a stronger opponent earns a lot; losing to a weaker one costs a lot. It says where a team stands against the rest, not what it has won.</p></div><div class="card w4"><h3>Possession</h3><p class="sub">The share of the time the team had the ball. On its own it says little: you can dominate the ball and lose. That is why every figure sits beside the same figure for the opponents actually faced.</p></div><div class="card w4"><h3>“Descriptive, not causal”</h3><p class="sub">We can observe that two things go together. We cannot say one causes the other. Little rest looks like the best rest — until you notice those matches were played against the weakest opponents.</p></div><div class="card w4"><h3>Why the count is always shown</h3><p class="sub">“67%” can mean 2 out of 3. The raw count is always shown beside the percentage, so you can judge for yourself what it is worth.</p></div></div>
+  </section>
   <section id="methodologie">
+    <h2>The method in detail</h2>
     <div class="methodo" id="methodo"></div>
   </section>
   <section id="credits">
@@ -111,9 +117,9 @@ document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
 </footer>
 
 
-<script src="../assets/i18n.js?v=4dbf4ee6"></script>
-<script src="../assets/core.js?v=4dbf4ee6"></script>
+<script src="../assets/i18n.js?v=bd72150b"></script>
+<script src="../assets/core.js?v=bd72150b"></script>
 
-<script src="../assets/boot.js?v=4dbf4ee6"></script>
+<script src="../assets/boot.js?v=bd72150b"></script>
 </body>
 </html>
