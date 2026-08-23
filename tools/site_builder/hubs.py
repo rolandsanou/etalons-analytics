@@ -392,6 +392,7 @@ def analysis_page(d, ctx):
                       '<p class="sub" id="late_swing_note"></p>')
            + card(width="w4", chart="c_reply", card_id="card_reply", height="short",
                   extra='<p class="sub" id="reply_median"></p>',
+                  plain_key="c_reply_plain",
                   title_html='<h3 data-i18n="c_reply"></h3><p class="sub" id="reply_sub"></p>')
            + card(width="w4", chart="c_state_out", title_key="c_state_out", plain_key="c_state_out_plain",
                   sub_key="c_state_out_sub", card_id="card_state_out", height="short")
@@ -492,6 +493,7 @@ def history_page(d, ctx):
            + card(width="w4", title_key="t_scorers", plain_key="t_scorers_plain", table_id="scorers_table")
            + card(width="w4", title_key="t_last10", plain_key="t_last10_plain", table_id="last10_table")
            + card(card_id="card_shootouts", table_id="shootout_table",
+                  plain_key="t_shootouts_plain",
                   title_html='<h3 data-i18n="t_shootouts"></h3>'
                              '<p class="sub" id="shootout_rec"></p>')
            + card(title_key="t_pens", sub_key="t_pens_sub", card_id="card_pens",
@@ -506,7 +508,8 @@ def history_page(d, ctx):
     <p class="lead" data-i18n="c_coaches_sub"></p>
     <div class="roster" style="margin-bottom:14px">{coach_cards}</div>
     <div class="grid">{card(width="w12", table_id="coaches_table",
-                            card_id="card_coaches")}</div>
+                            card_id="card_coaches",
+                            plain_key="t_coaches_plain")}</div>
   </section>
   {section("elo", "s_elo", "s_elo_lead",
     cards=(card(width="w8", chart="c_elo_tl", title_key="c_elo_tl", plain_key="c_elo_tl_plain",

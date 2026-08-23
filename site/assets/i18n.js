@@ -1,5 +1,8 @@
 const I18N = {
   fr: {
+    c_reply_plain: "Combien de temps l'équipe met à répondre après avoir encaissé. La barre la plus longue est « aucune réponse » : le plus souvent, le but n'est jamais rendu dans le même match.",
+    t_shootouts_plain: "Toutes les séances de tirs au but de l'histoire de la sélection. Une séance se joue à peu de chose près à la loterie : ce bilan dit surtout combien de fois l'équipe est allée jusque-là.",
+    t_coaches_plain: "Le bilan de chaque sélectionneur. À lire avec prudence : certains n'ont dirigé qu'une poignée de matchs, et personne ne choisit son calendrier.",
     // plain-language note under each figure
     plain_lbl: "En clair",
     c_pos_plain: "Combien de gardiens, défenseurs, milieux et attaquants dans la dernière liste. Un déséquilibre annonce souvent le système que le sélectionneur veut jouer.",
@@ -274,6 +277,9 @@ const I18N = {
       <p>Sélections/buts « carrière » figés à la dernière mise à jour Wikipedia ; pas de listes complètes pour les fenêtres de qualifications (contributions bienvenues) ; ~24 % des apparitions (amicaux mineurs) sans statistiques détaillées.</p>`,
   },
   en: {
+    c_reply_plain: "How long the team takes to respond after conceding. The longest bar is “no reply”: most often the goal is never answered in that match.",
+    t_shootouts_plain: "Every penalty shootout in the team's history. A shootout is close to a lottery: this record mostly says how often the team got that far.",
+    t_coaches_plain: "Each head coach's record. Read it with care: some managed only a handful of matches, and nobody picks their own fixture list.",
     // plain-language note under each figure
     plain_lbl: "In plain terms",
     c_pos_plain: "How many goalkeepers, defenders, midfielders and forwards are in the latest squad. An imbalance often signals the formation the coach intends to play.",
