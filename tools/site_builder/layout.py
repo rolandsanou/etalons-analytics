@@ -242,12 +242,35 @@ def section(id_, title_key, lead_key=None, cards="", extra_head=""):
 </section>"""
 
 
+def plain_note(text):
+    """The plain-language note, with its text already resolved.
+
+    Used by the match and player pages, which are static HTML by design: a
+    `data-i18n` placeholder would make the note the one part of those pages that
+    needs JavaScript, on the 374 pages most likely to be someone's first arrival
+    from a search.
+    """
+    return ('<div class="plain">'
+            f'<span class="plain-lbl">{esc(PLAIN_LABEL)}</span>'
+            f'<p>{esc(text)}</p></div>')
+
+
+# set per language by detail.set_locale, since these pages resolve their own copy
+PLAIN_LABEL = "En clair"
+
+
 def card(*, chart=None, title_key=None, sub_key=None, card_id=None, width="",
-         table_id=None, extra="", height="", title_html=None, plain_key=None):
+         table_id=None, extra="", height="", title_html=None, plain_key=None,
+         plain_text=None):
     """One card. `sub_key` sits above the figure and says what it measures;
-    `plain_key` sits below it and says, in ordinary words, what the figure
+    the plain note sits below it and says, in ordinary words, what the figure
     actually tells you — and where it matters, what it does not. A chart is only
-    self-explanatory to someone who already knows the subject."""
+    self-explanatory to someone who already knows the subject.
+
+    `plain_key` defers the text to i18n.js (hub pages, which are already
+    script-driven); `plain_text` writes it straight into the HTML (detail pages,
+    which must read without JavaScript).
+    """
     cls = f"card {width}".strip()
     idattr = f' id="{card_id}"' if card_id else ""
     head = ""
@@ -267,4 +290,6 @@ def card(*, chart=None, title_key=None, sub_key=None, card_id=None, width="",
         inner += ('<div class="plain">'
                   '<span class="plain-lbl" data-i18n="plain_lbl"></span>'
                   f'<p data-i18n="{plain_key}"></p></div>')
+    elif plain_text:
+        inner += plain_note(plain_text)
     return f'<div class="{cls}"{idattr}>{inner}</div>'

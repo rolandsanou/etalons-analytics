@@ -9,7 +9,7 @@ gets a real, crawlable page.
 import re
 import unicodedata
 
-from . import seo
+from . import layout, seo
 from .layout import avatar, card, esc, page
 
 # French source strings double as the translation keys (see strings.py)
@@ -73,6 +73,9 @@ _LOCALE = "fr"
 def set_locale(lang):
     global _LOCALE
     _LOCALE = lang
+    # these pages write their notes into the HTML, so the label is resolved
+    # here rather than left to the i18n script
+    layout.PLAIN_LABEL = "En clair" if lang == "fr" else "In plain terms"
 
 
 def _fmt(x, dec=0):
@@ -240,13 +243,26 @@ def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
   <div class="grid">
     {card(width="w8", title_html=f'<h3>{esc(t("Chronologie"))}</h3>',
           extra=goal_timeline(ctx, d.goals_for_event(eid), d.subs_for_event(eid),
-                              d.cards_for_event(eid), event["opponent"]))}
+                              d.cards_for_event(eid), event["opponent"]),
+          plain_text=t("L'ordre des événements du match : buts, changements, cartons. "
+                       "Les minutes comptent les arrêts de jeu, donc un but à 90+3 "
+                       "apparaît après la 90e."))}
     {card(width="w4", title_html=f'<h3>{esc(t("Fiche du match"))}</h3>',
-          extra=f'<dl class="kv">{_kv(facts)}</dl>')}
+          extra=f'<dl class="kv">{_kv(facts)}</dl>',
+          plain_text=t("« Durée effective » est le temps réellement joué, arrêts de "
+                       "jeu inclus : elle dépasse presque toujours 90 minutes. Les "
+                       "minutes passées en tête ou menés disent comment le match s'est "
+                       "déroulé, pas seulement comment il s'est terminé."))}
     {card(width="w6", title_html=f'<h3>{esc(t("Statistiques d\'équipe"))}</h3>',
-          extra=stat_bars(ctx, stats.get("bf"), stats.get("opp")))}
+          extra=stat_bars(ctx, stats.get("bf"), stats.get("opp")),
+          plain_text=t("Le Burkina à gauche, l'adversaire à droite. Comparez les deux "
+                       "colonnes plutôt qu'un chiffre seul : dominer la possession ou "
+                       "les tirs n'a jamais gagné un match à lui tout seul."))}
     {card(width="w6", title_html=f'<h3>{esc(t("Composition"))}</h3>',
-          extra=lineup_block(ctx, d.apps_for_event(eid), players_with_pages))}
+          extra=lineup_block(ctx, d.apps_for_event(eid), players_with_pages),
+          plain_text=t("Le onze de départ, les entrants, et ceux restés sur le banc. "
+                       "La note est celle du fournisseur de données pour ce match ; "
+                       "elle manque sur les rencontres les moins couvertes."))}
   </div>
   <div class="pager">{pager_prev}{pager_next}</div>
 </main>"""
@@ -365,7 +381,10 @@ def player_page(d, ctx, profile, players_with_pages):
     if bench and _int(bench.get("sub_apps")) >= 3:
         bench_block = card(
             width="w4", title_html=f'<h3>{esc(t("En sortie de banc"))}</h3>',
-            extra=f'<dl class="kv">{_kv([(t("Entrées"), bench["sub_apps"]), (t("Minutes"), _fmt(bench["sub_min"])), (t("Buts + passes"), bench["sub_ga"]), (t("Entrée moyenne"), _fmt(bench["entry_avg"], 0) + "'")])}</dl>')
+            extra=f'<dl class="kv">{_kv([(t("Entrées"), bench["sub_apps"]), (t("Minutes"), _fmt(bench["sub_min"])), (t("Buts + passes"), bench["sub_ga"]), (t("Entrée moyenne"), _fmt(bench["entry_avg"], 0) + "'")])}</dl>',
+            plain_text=t("Ce que le joueur produit en entrant en cours de match. Sur "
+                         "aussi peu de minutes, un seul but change tout : à lire comme "
+                         "une indication, pas comme une preuve."))
 
     credit_html = ""
     if credit:
@@ -391,15 +410,29 @@ def player_page(d, ctx, profile, players_with_pages):
      <a href="{ctx.url('players')}">{esc(t("Joueurs"))}</a> › {esc(name)}</p>
   <div class="grid">
     {card(width="w4", title_html=f'<h3>{esc(t("Identité"))}</h3>',
-          extra=f'<dl class="kv">{_kv(facts)}</dl>')}
+          extra=f'<dl class="kv">{_kv(facts)}</dl>',
+          plain_text=t("Club, valeur et contrat viennent du profil du joueur chez le "
+                       "fournisseur de données et changent avec les transferts. Les "
+                       "sélections et buts de carrière couvrent toute la carrière, pas "
+                       "seulement la période étudiée ici."))}
     {card(width="w4", title_html=f'<h3>{esc(t("Bilan depuis janv. 2022"))}</h3>',
-          extra=f'<dl class="kv">{_kv(window)}</dl>')}
+          extra=f'<dl class="kv">{_kv(window)}</dl>',
+          plain_text=t("Uniquement depuis janvier 2022 : ce n'est pas le bilan d'une "
+                       "carrière. « Matchs dans le groupe » compte les feuilles de "
+                       "match, y compris celles où le joueur n'est pas entré."))}
     {card(width="w4", title_html=f'<h3>{esc(t("Importance"))}</h3>',
           extra=(f'<dl class="kv">{_kv(imp_rows)}</dl>' if imp_rows else
                  '<p class="sub">'
-                 + esc(t("Pas encore assez de matchs pour situer ce joueur.")) + '</p>'))}
+                 + esc(t("Pas encore assez de matchs pour situer ce joueur.")) + '</p>'),
+          plain_text=t("La place du joueur dans le groupe, mesure par mesure, sans "
+                       "note unique : chacune se lit à part. Un tiret veut dire trop "
+                       "peu de matchs pour le situer honnêtement."))}
     {bench_block}
-    {card(width="w12", title_html=f'<h3>{esc(t("Match par match"))}</h3>', extra=table)}
+    {card(width="w12", title_html=f'<h3>{esc(t("Match par match"))}</h3>', extra=table,
+          plain_text=t("Chaque feuille de match depuis 2022. « Non entré » veut dire "
+                       "convoqué mais resté sur le banc, ce qui est aussi une "
+                       "information. Une note absente veut dire que le match n'a pas "
+                       "de statistiques détaillées."))}
   </div>
 </main>"""
     # A description carrying this player's actual figures is unique per page and

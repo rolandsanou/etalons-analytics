@@ -170,6 +170,65 @@ EN = {
         "Burkina Faso's projections towards AFCON 2027 and the 2030 World Cup: "
         "ages, youth pipeline, Elo expectations and a model backtest.",
 
+    # --- plain notes on the detail pages -----------------------------------
+    # Written into the HTML on these pages rather than swapped in by script, so
+    # they read without JavaScript like the rest of a match or player page.
+    "L'ordre des événements du match : buts, changements, cartons. "
+    "Les minutes comptent les arrêts de jeu, donc un but à 90+3 "
+    "apparaît après la 90e.":
+        "The order of what happened: goals, substitutions, cards. Minutes "
+        "include stoppage time, so a goal at 90+3 appears after the 90th.",
+    "« Durée effective » est le temps réellement joué, arrêts de "
+    "jeu inclus : elle dépasse presque toujours 90 minutes. Les "
+    "minutes passées en tête ou menés disent comment le match s'est "
+    "déroulé, pas seulement comment il s'est terminé.":
+        "“Effective length” is the time actually played, stoppage included — it "
+        "almost always exceeds 90 minutes. The minutes spent leading or trailing "
+        "say how the match went, not just how it ended.",
+    "Le Burkina à gauche, l'adversaire à droite. Comparez les deux "
+    "colonnes plutôt qu'un chiffre seul : dominer la possession ou "
+    "les tirs n'a jamais gagné un match à lui tout seul.":
+        "Burkina Faso on the left, the opponent on the right. Compare the two "
+        "columns rather than one figure alone: winning possession or shots has "
+        "never won a match on its own.",
+    "Le onze de départ, les entrants, et ceux restés sur le banc. "
+    "La note est celle du fournisseur de données pour ce match ; "
+    "elle manque sur les rencontres les moins couvertes.":
+        "The starting eleven, who came on, and who stayed on the bench. The "
+        "rating is the data provider's for that match; it is missing on the "
+        "least-covered fixtures.",
+    "Club, valeur et contrat viennent du profil du joueur chez le "
+    "fournisseur de données et changent avec les transferts. Les "
+    "sélections et buts de carrière couvrent toute la carrière, pas "
+    "seulement la période étudiée ici.":
+        "Club, value and contract come from the player's profile at the data "
+        "provider and change with transfers. Career caps and goals cover the "
+        "whole career, not only the window studied here.",
+    "Uniquement depuis janvier 2022 : ce n'est pas le bilan d'une "
+    "carrière. « Matchs dans le groupe » compte les feuilles de "
+    "match, y compris celles où le joueur n'est pas entré.":
+        "Since January 2022 only — this is not a career record. “Matchday "
+        "squads” counts every team sheet, including those where the player did "
+        "not come on.",
+    "La place du joueur dans le groupe, mesure par mesure, sans "
+    "note unique : chacune se lit à part. Un tiret veut dire trop "
+    "peu de matchs pour le situer honnêtement.":
+        "Where the player sits in the group, measure by measure, with no single "
+        "score: each one is read on its own. A dash means too few matches to "
+        "place them honestly.",
+    "Ce que le joueur produit en entrant en cours de match. Sur "
+    "aussi peu de minutes, un seul but change tout : à lire comme "
+    "une indication, pas comme une preuve.":
+        "What the player produces when coming on. Over so few minutes a single "
+        "goal changes everything: read it as an indication, not as proof.",
+    "Chaque feuille de match depuis 2022. « Non entré » veut dire "
+    "convoqué mais resté sur le banc, ce qui est aussi une "
+    "information. Une note absente veut dire que le match n'a pas "
+    "de statistiques détaillées.":
+        "Every team sheet since 2022. “Unused” means named in the squad but left "
+        "on the bench, which is information too. A missing rating means the "
+        "match has no detailed statistics.",
+
     # --- computed facts ----------------------------------------------------
     "Le saviez-vous ?": "Did you know?",
     "Des faits tirés directement des données — recalculés à chaque mise à jour, "
