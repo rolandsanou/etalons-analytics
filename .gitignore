@@ -5,3 +5,7 @@ __pycache__/
 data/raw/
 
 .claude/
+
+# generated social media assets (scripts and copy are committed, media is not)
+social/*.png
+social/*.mp4

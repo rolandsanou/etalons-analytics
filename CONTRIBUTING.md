@@ -1,8 +1,10 @@
 # Contributing
 
 Contributions are welcome — data fixes, new sources, new analyses, translations.
-Start with [ROADMAP.md](ROADMAP.md) for what needs doing (items tagged
-**good first issue** need no prior knowledge of the codebase) and
+Start with **[docs/GUIDE.md](docs/GUIDE.md)** — it walks from a clone to a
+running copy and then through the changes people actually make. Then
+[ROADMAP.md](ROADMAP.md) for what needs doing (items tagged **good first
+issue** need no prior knowledge of the codebase) and
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the pieces fit.
 
 ## Quick start
@@ -19,9 +21,17 @@ python -m http.server 8123 --directory site
 committed, so `etl load` rebuilds every mart and the whole dashboard offline.
 Run the full `etl all` only when you are refreshing the sources themselves.
 
-Work on a branch, never on `main`. Run `python -m etl quality` (0 failures) and
-the tests before every commit. Keep commits short, English, imperative ("Add WCQ
-window", "Fix Yago name override").
+Work on a branch, never on `main`. Before every commit:
+
+```bash
+python -m pytest -q && python -m etl quality && python tools/check_links.py && python tools/check_seo.py
+```
+
+All four must pass. The quality gate exits non-zero on a real problem, so a red
+run is a finding to fix rather than an obstacle to route around.
+
+Keep commits short, English and imperative ("Add WCQ window", "Fix Yago
+name override").
 
 ## Where things live
 
@@ -29,9 +39,11 @@ window", "Fix Yago name override").
 |---|---|
 | fix a name, club, coach date, retirement | `data/seed/*.csv` — no code needed |
 | add a call-up window or youth squad | `data/seed/wiki_squads.csv`, `data/seed/youth_squads.csv` |
+| add an announced fixture | `data/seed/fixtures.csv` — appears on the site at once |
+| change generated copy, or translate it | the call site, then `tools/site_builder/strings.py` |
 | add a metric or analysis | one new module in `etl/load/` + one entry in `etl/load/registry.py` |
 | change a formula or threshold | `etl/analytics.py` (pure functions, unit-tested) |
-| add a chart or section | `site/index.html` + `site/assets/sections/` + `site/assets/i18n.js` |
+| add a chart or section | `tools/site_builder/hubs.py` (the anchor) + `site/assets/sections/` + `site/assets/i18n.js` |
 | add a data-quality check | `etl/quality.py` |
 | understand a column | [docs/DATA_MODEL.md](docs/DATA_MODEL.md) (generated) |
 
@@ -53,6 +65,17 @@ Never hand-edit anything under `data/staging/`, `data/marts/` or `site/data/` �
 they are generated. Hand-maintained data lives in `data/seed/`.
 
 ## The easiest contributions: seed files
+
+Ranked by how much each would improve the site today:
+
+| # | file | why it matters |
+|---|---|---|
+| 1 | `wiki_squads.csv` | the largest gap by far. 58 matches are covered in detail but only a handful of squad announcements, so "called up but did not play" is mostly invisible |
+| 2 | `fixtures.csv` | the stats source publishes a calendar late — as of Aug 2026 it had no 2027 qualifying season at all. A seeded row shows up immediately |
+| 3 | `coach_tenures.csv` | still year-precision in places, which blurs the boundary between coaching eras |
+| 4 | `int_retirements.csv` | only announcements with a public source. A player going uncalled is not a retirement |
+| 5 | `sofa_ids.csv` | two players are absent from the source's index and are deliberately left unlinked rather than guessed |
+| 6 | portraits | 104 of 129 players have none. Upload under a free licence to Wikimedia Commons and the extractor picks it up; press photos are never used |
 
 - `data/seed/name_overrides.csv` — maps a name variant to its canonical form
   (`variant,canonical`). The quality report lists players that exist only via
