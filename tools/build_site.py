@@ -54,6 +54,13 @@ def asset_version():
 
 
 def main():
+    # The report below quotes site copy, which is full of accents, em dashes
+    # and arrows. On a cp1252 console that raises UnicodeEncodeError and takes
+    # the whole build down over a print statement, so widen stdout first.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, OSError):
+        pass
     d = Data()
     layout.ASSET_VERSION = asset_version()
     layout.FOOTER = layout.build_footers(

@@ -141,6 +141,7 @@ def home_page(d, ctx):
   <h1>{esc(t("Les Étalons, chiffres à l'appui"))}</h1>
   <p>{esc(t("Un projet ouvert qui suit chaque joueur appelé en sélection depuis la CAN 2021 : temps de jeu, performances, style de jeu, résilience et projections — avec les sources et les limites de chaque chiffre affichées."))}</p>
   {next_match(d, ctx)}
+  <p class="startline"><a href="{ctx.url('method')}#comprendre">{esc(t("Nouveau sur ces chiffres ? Commencez ici →"))}</a></p>
 </div></div>
 <main>
   <div class="tiles">{tile_html}</div>
@@ -469,6 +470,60 @@ def projections_page(d, ctx):
 
 # ------------------------------------------------------------------ methodology
 
+# Plain-language glossary. Written for someone who follows the team but not
+# statistics — every entry says what the number is, and what it does NOT tell
+# you, because that second half is where these figures get misread.
+def plain_language(ctx):
+    t = ctx.t
+    items = [
+        (t("Points par match"),
+         t("Une victoire vaut 3 points, un nul 1, une défaite 0. On additionne, "
+           "on divise par le nombre de matchs. 2,43 veut dire une équipe qui "
+           "gagne presque à chaque fois ; 0,07 une équipe qui n'y arrive "
+           "pratiquement jamais.")),
+        (t("Par 90 minutes"),
+         t("Un remplaçant qui joue 20 minutes ne peut pas être comparé à un "
+           "titulaire qui joue 90. On ramène donc tout à un match complet : "
+           "2 buts en 180 minutes, c'est 1 but par 90 minutes.")),
+        (t("Minutes jouées"),
+         t("La mesure la plus honnête de la confiance d'un sélectionneur. Une "
+           "sélection peut se discuter ; les minutes sur le terrain sont un "
+           "choix répété match après match.")),
+        (t("Pourquoi un tiret au lieu d'un chiffre"),
+         t("Sur 4 matchs, un seul match chanceux change tout. Quand "
+           "l'échantillon est trop petit pour vouloir dire quelque chose, on "
+           "affiche « – » plutôt qu'un chiffre qui tromperait.")),
+        (t("Le classement Elo"),
+         t("Un seul nombre pour situer la force d'une équipe, emprunté aux "
+           "échecs. Battre un adversaire plus fort en rapporte beaucoup ; "
+           "perdre contre un plus faible en coûte beaucoup. Il dit où en est "
+           "une équipe par rapport aux autres, pas son palmarès.")),
+        (t("La possession"),
+         t("La part du temps où l'équipe a le ballon. Seule, elle ne dit pas "
+           "grand-chose : on peut dominer le ballon et perdre. C'est pourquoi "
+           "chaque chiffre est présenté à côté du même chiffre pour les "
+           "adversaires réellement rencontrés.")),
+        (t("« Descriptif, pas causal »"),
+         t("On peut constater que deux choses vont ensemble. On ne peut pas "
+           "dire que l'une cause l'autre. Peu de repos semble être le meilleur "
+           "repos — jusqu'à ce qu'on voie que ces matchs étaient joués contre "
+           "les adversaires les plus faibles.")),
+        (t("Pourquoi on montre toujours le compte"),
+         t("« 67 % » peut vouloir dire 2 sur 3. Le nombre brut est toujours "
+           "affiché à côté du pourcentage, pour que vous puissiez juger "
+           "vous-même de ce qu'il vaut.")),
+    ]
+    cards = "".join(
+        f'<div class="card w4"><h3>{esc(head)}</h3>'
+        f'<p class="sub">{esc(text)}</p></div>'
+        for head, text in items)
+    return f"""<section id="comprendre">
+    <h2>{esc(t("Comment lire ces chiffres"))}</h2>
+    <p class="lead">{esc(t("Pas besoin d'être statisticien. Voici ce que veut dire chaque mesure du site — et surtout ce qu'elle ne dit pas."))}</p>
+    <div class="grid">{cards}</div>
+  </section>"""
+
+
 def methodology_page(d, ctx):
     t = ctx.t
     credits = "".join(f"""<div>{esc(p['name'])} — {esc(p['author'])},
@@ -477,7 +532,9 @@ def methodology_page(d, ctx):
     body = f"""{hero(t("Méthodologie"), t("Comment ces chiffres sont produits"),
         t("Sources, formules, seuils et limites. Tout est reproductible : le code et les données intermédiaires sont publics."))}
 <main>
+  {plain_language(ctx)}
   <section id="methodologie">
+    <h2>{esc(t("La méthode en détail"))}</h2>
     <div class="methodo" id="methodo"></div>
   </section>
   <section id="credits">

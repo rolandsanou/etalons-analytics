@@ -170,6 +170,83 @@ EN = {
         "Burkina Faso's projections towards AFCON 2027 and the 2030 World Cup: "
         "ages, youth pipeline, Elo expectations and a model backtest.",
 
+    # --- plain-language glossary -------------------------------------------
+    "Comment lire ces chiffres": "How to read these numbers",
+    "Pas besoin d'être statisticien. Voici ce que veut dire chaque mesure du "
+    "site — et surtout ce qu'elle ne dit pas.":
+        "You do not need to be a statistician. Here is what each measure on the "
+        "site means — and, more to the point, what it does not.",
+    "Nouveau sur ces chiffres ? Commencez ici →":
+        "New to these numbers? Start here →",
+    "La méthode en détail": "The method in detail",
+
+    "Points par match": "Points per match",
+    "Une victoire vaut 3 points, un nul 1, une défaite 0. On additionne, "
+    "on divise par le nombre de matchs. 2,43 veut dire une équipe qui "
+    "gagne presque à chaque fois ; 0,07 une équipe qui n'y arrive "
+    "pratiquement jamais.":
+        "A win is worth 3 points, a draw 1, a defeat 0. Add them up and divide "
+        "by matches played. 2.43 means a team winning nearly every time; 0.07 a "
+        "team that almost never manages it.",
+
+    "Par 90 minutes": "Per 90 minutes",
+    "Un remplaçant qui joue 20 minutes ne peut pas être comparé à un "
+    "titulaire qui joue 90. On ramène donc tout à un match complet : "
+    "2 buts en 180 minutes, c'est 1 but par 90 minutes.":
+        "A substitute who plays 20 minutes cannot be compared with a starter who "
+        "plays 90. So everything is scaled to a full match: 2 goals in 180 "
+        "minutes is 1 goal per 90 minutes.",
+
+    "Minutes jouées": "Minutes played",
+    "La mesure la plus honnête de la confiance d'un sélectionneur. Une "
+    "sélection peut se discuter ; les minutes sur le terrain sont un "
+    "choix répété match après match.":
+        "The most honest measure of a head coach's trust. A call-up can be "
+        "argued about; minutes on the pitch are a choice repeated match after "
+        "match.",
+
+    "Pourquoi un tiret au lieu d'un chiffre": "Why a dash instead of a number",
+    "Sur 4 matchs, un seul match chanceux change tout. Quand "
+    "l'échantillon est trop petit pour vouloir dire quelque chose, on "
+    "affiche « – » plutôt qu'un chiffre qui tromperait.":
+        "Over 4 matches, one lucky game changes everything. When the sample is "
+        "too small to mean anything we show “–” rather than a number that would "
+        "mislead.",
+
+    "Le classement Elo": "The Elo rating",
+    "Un seul nombre pour situer la force d'une équipe, emprunté aux "
+    "échecs. Battre un adversaire plus fort en rapporte beaucoup ; "
+    "perdre contre un plus faible en coûte beaucoup. Il dit où en est "
+    "une équipe par rapport aux autres, pas son palmarès.":
+        "A single number placing a team's strength, borrowed from chess. Beating "
+        "a stronger opponent earns a lot; losing to a weaker one costs a lot. It "
+        "says where a team stands against the rest, not what it has won.",
+
+    "La possession": "Possession",
+    "La part du temps où l'équipe a le ballon. Seule, elle ne dit pas "
+    "grand-chose : on peut dominer le ballon et perdre. C'est pourquoi "
+    "chaque chiffre est présenté à côté du même chiffre pour les "
+    "adversaires réellement rencontrés.":
+        "The share of the time the team had the ball. On its own it says little: "
+        "you can dominate the ball and lose. That is why every figure sits "
+        "beside the same figure for the opponents actually faced.",
+
+    "« Descriptif, pas causal »": "“Descriptive, not causal”",
+    "On peut constater que deux choses vont ensemble. On ne peut pas "
+    "dire que l'une cause l'autre. Peu de repos semble être le meilleur "
+    "repos — jusqu'à ce qu'on voie que ces matchs étaient joués contre "
+    "les adversaires les plus faibles.":
+        "We can observe that two things go together. We cannot say one causes "
+        "the other. Little rest looks like the best rest — until you notice "
+        "those matches were played against the weakest opponents.",
+
+    "Pourquoi on montre toujours le compte": "Why the count is always shown",
+    "« 67 % » peut vouloir dire 2 sur 3. Le nombre brut est toujours "
+    "affiché à côté du pourcentage, pour que vous puissiez juger "
+    "vous-même de ce qu'il vaut.":
+        "“67%” can mean 2 out of 3. The raw count is always shown beside the "
+        "percentage, so you can judge for yourself what it is worth.",
+
     # --- methodology ------------------------------------------------------
     "Comment ces chiffres sont produits": "How these numbers are produced",
     "Sources, formules, seuils et limites. Tout est reproductible : le code et "
