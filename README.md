@@ -81,6 +81,7 @@ Staging (`data/staging/`, committed):
 | `club_form.csv` | player | latest club season: apps, starts, minutes, rating (30-day refresh) |
 | `team_match_stats.csv` | match × period × side | possession, big chances, shots, passes, duels, dribbles, defensive actions (ALL / 1st / 2nd half, BF and opponent) |
 | `concessions.csv` | goal conceded | deficit depth, reply time, replied-within-10 flag |
+| `fixtures.csv` | upcoming match | opponent, venue, matchday, competition, and either a confirmed date or the announced window with `date_confirmed=0` — CAF publishes pairings and windows before days |
 
 Marts (`data/marts/`, committed): `player_profile.csv`, `player_importance.csv`,
 `bench_impact.csv`, `formations.csv`, `team_timeline.csv`, `captains.csv`,
@@ -139,7 +140,7 @@ python -m http.server 8123 --directory site
 | `data/seed/int_retirements.csv` | verified international-retirement announcements |
 | `data/seed/coach_tenures.csv` | head-coach tenures (year precision; refine dates freely) |
 | `data/seed/youth_squads.csv` | youth tournament squad pages (U-17/U-20 AFCON editions) |
-| `data/seed/fixtures.csv` | upcoming matches, for when CAF has announced a calendar the stats source has not listed yet (`date,opponent,venue,tournament`; venue `H`/`A`/`N`) |
+| `data/seed/fixtures.csv` | upcoming matches, for when CAF has announced a calendar the stats source has not listed yet. `date,window_start,window_end,matchday,opponent,venue,tournament` — leave `date` blank when only the window is known and the site says "date to be confirmed" rather than inventing one; venue `H`/`A`/`N` |
 
 - **Goal timing & game states** — a per-match timeline rebuilt from incidents
   (stoppage time included; extra time detected even when the source logs ET events as

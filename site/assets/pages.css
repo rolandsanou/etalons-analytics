@@ -876,3 +876,20 @@ ul.facts li strong { font-weight: 600; }
 @media (min-width: 900px) {
   ul.facts { grid-template-columns: 1fr 1fr; }
 }
+
+/* the announced fixture list, on the projections page */
+ul.fixlist {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+ul.fixlist li {
+  padding: 9px 0;
+  border-top: 1px solid var(--hair);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+ul.fixlist li strong { color: var(--ink); font-weight: 600; }

@@ -394,6 +394,10 @@ EN = {
     "à domicile": "at home", "à l'extérieur": "away",
     "terrain neutre": "neutral ground",
     "Prochain match": "Next match",
+    # CAF announces the pairing and the window before the day, so a fixture may
+    # only be able to state a range — see transform/fixtures.py
+    "{start} – {end} (date à confirmer)": "{start} – {end} (date to be confirmed)",
+    "journée {n}": "matchday {n}",
     ", formation {f}": ", {f} formation",
     "{result} {venue}{formation}.": "{result} {venue}{formation}.",
     "Chronologie": "Timeline",

@@ -1,1 +1,7 @@
-date,opponent,venue,tournament
+date,window_start,window_end,matchday,opponent,venue,tournament
+,2026-09-21,2026-10-06,1,Benin,H,"Africa Cup of Nations, Qualification, Group F"
+,2026-09-21,2026-10-06,2,Central African Republic,A,"Africa Cup of Nations, Qualification, Group F"
+,2026-11-09,2026-11-17,3,Mauritania,H,"Africa Cup of Nations, Qualification, Group F"
+,2026-11-09,2026-11-17,4,Mauritania,A,"Africa Cup of Nations, Qualification, Group F"
+,2027-03-22,2027-03-30,5,Benin,A,"Africa Cup of Nations, Qualification, Group F"
+,2027-03-22,2027-03-30,6,Central African Republic,H,"Africa Cup of Nations, Qualification, Group F"

@@ -41,6 +41,7 @@ function renderPredictions() {
                    fmt(100 * r.loss, 0) + " %"]));
 
   const c = p.calibration;
+  let prevComp = "";
   const box = $("pred_note");
   if (box) {
     box.innerHTML = `<p class="sub">${t("pred_calib", {
@@ -49,11 +50,23 @@ function renderPredictions() {
       (p.fixtures && p.fixtures.length
         // list them rather than only noting their absence: the whole point of
         // the calibration above is to read the next matches against it
+        // CAF sets pairings and windows before dates, so a fixture shows
+        // whichever it has. A window is never printed as if it were a date.
         ? `<p class="sub">${t("pred_fixtures")}</p><ul class="fixlist">` +
-          p.fixtures.map(f => `<li><strong>${f.opponent}</strong> · ${f.date}` +
-            `${f.tournament ? " · " + f.tournament : ""}` +
-            ` <span class="season">${t("venue_" + (f.venue || "N"))}</span></li>`).join("") +
-          "</ul>"
+          p.fixtures.map(f => {
+            const when = f.date_confirmed === "1" && f.date
+              ? f.date
+              : t("fx_window", { start: f.window_start, end: f.window_end });
+            const md = f.matchday ? t("fx_md", { n: f.matchday }) + " · " : "";
+            // name the competition only when it changes, so a single-campaign
+            // list does not repeat it on every line
+            const comp = f.tournament && f.tournament !== prevComp
+              ? " · " + f.tournament : "";
+            prevComp = f.tournament;
+            return `<li><strong>${f.opponent}</strong> · ${md}${when}${comp}` +
+              ` <span class="season">${t("venue_" + (f.venue || "N"))}</span></li>`;
+          }).join("") + "</ul>" +
+          `<p class="sub">${t("fx_home_caveat")}</p>`
         : `<p class="sub">${t("pred_no_fixtures")}</p>`);
   }
 }

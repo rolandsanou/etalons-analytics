@@ -147,21 +147,34 @@ def next_match(d, ctx):
     """The next scheduled match, or a plain statement that none is published.
 
     Written into the HTML rather than fetched, so it reads without JavaScript and
-    is the first thing a search result can show. Nothing is invented: as of
-    August 2026 the source carried no 2027 qualifying calendar at all, so the
-    honest output is the note, and the line appears by itself once a fixture
-    lands in data/staging/fixtures.csv — whether fetched or seeded by hand.
+    is the first thing a search result can show. CAF announces a qualifying
+    campaign in stages — pairings and windows first, exact dates later — so a
+    fixture states whichever it actually has. A window is not dressed up as a
+    date: "21 September – 6 October" is the true answer until CAF sets the day.
     """
     t = ctx.t
     nxt = d.fixtures[0] if d.fixtures else None
     if not nxt:
         return (f'<p class="nextmatch none">'
                 f'{esc(t("Aucun match programmé dans les sources pour l\'instant."))}</p>')
-    where = {"H": t("à domicile"), "A": t("à l'extérieur")}.get(nxt["venue"], t("terrain neutre"))
-    detail = " · ".join(x for x in (nxt.get("tournament"), where) if x)
+
+    where = {"H": t("à domicile"), "A": t("à l\'extérieur")}.get(
+        nxt.get("venue"), t("terrain neutre"))
+    if nxt.get("date_confirmed") == "1" and nxt.get("date"):
+        when = seo.long_date(nxt["date"], ctx.lang)
+    else:
+        when = t("{start} – {end} (date à confirmer)",
+                 start=seo.long_date(nxt["window_start"], ctx.lang),
+                 end=seo.long_date(nxt["window_end"], ctx.lang))
+    bits = [when]
+    if nxt.get("matchday"):
+        bits.append(t("journée {n}", n=nxt["matchday"]))
+    if nxt.get("tournament"):
+        bits.append(nxt["tournament"])
+    bits.append(where)
     return (f'<p class="nextmatch"><span class="lbl">{esc(t("Prochain match"))}</span> '
             f'<strong>{esc(nxt["opponent"])}</strong> · '
-            f'{esc(seo.long_date(nxt["date"], ctx.lang))} · {esc(detail)}</p>')
+            f'{esc(" · ".join(bits))}</p>')
 
 
 def home_page(d, ctx):

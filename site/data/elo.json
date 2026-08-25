@@ -2628,7 +2628,74 @@
     "loss": 0.819
    }
   ],
-  "fixtures": []
+  "fixtures": [
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-09-21",
+    "window_end": "2026-10-06",
+    "matchday": "1",
+    "opponent": "Benin",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-09-21",
+    "window_end": "2026-10-06",
+    "matchday": "2",
+    "opponent": "Central African Republic",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-17",
+    "matchday": "3",
+    "opponent": "Mauritania",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-17",
+    "matchday": "4",
+    "opponent": "Mauritania",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2027-03-22",
+    "window_end": "2027-03-30",
+    "matchday": "5",
+    "opponent": "Benin",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2027-03-22",
+    "window_end": "2027-03-30",
+    "matchday": "6",
+    "opponent": "Central African Republic",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "source": "seed"
+   }
+  ]
  },
  "backtest": {
   "available": true,

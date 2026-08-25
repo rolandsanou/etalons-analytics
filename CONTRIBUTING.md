@@ -71,7 +71,7 @@ Ranked by how much each would improve the site today:
 | # | file | why it matters |
 |---|---|---|
 | 1 | `wiki_squads.csv` | the largest gap by far. 58 matches are covered in detail but only a handful of squad announcements, so "called up but did not play" is mostly invisible |
-| 2 | `fixtures.csv` | the stats source publishes a calendar late — as of Aug 2026 it had no 2027 qualifying season at all. A seeded row shows up immediately |
+| 2 | `fixtures.csv` | the stats source publishes a calendar late — it still carried no 2027 qualifying season when the draw was already known. Leave `date` blank and fill `window_start`/`window_end` when CAF has announced the window but not the day |
 | 3 | `coach_tenures.csv` | still year-precision in places, which blurs the boundary between coaching eras |
 | 4 | `int_retirements.csv` | only announcements with a public source. A player going uncalled is not a retirement |
 | 5 | `sofa_ids.csv` | two players are absent from the source's index and are deliberately left unlinked rather than guessed |
