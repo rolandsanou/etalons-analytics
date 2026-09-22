@@ -638,7 +638,7 @@ def callup_windows(d, ctx):
         when = meta.get("window_date", "")
         cards = "".join(f"""<a class="pcard" href="{ctx.url('player', c['player_id'])}">
   {avatar(ctx.asset(d.photo('player', c['player_id'])) if d.photo('player', c['player_id']) else None, c['name'], 'pic')}
-  <span><span class="nm">{esc(c['name'])}</span>
+  <span><span class="nm">{esc(c.get('name_as_called') or c['name'])}</span>
     <span class="rl">{esc(pos_label(ctx, c['pos']))}</span>
     <span class="stat">{esc(c['club_at_time'] or '—')}</span></span>
 </a>""" for c in players if c['player_id'] in {p['player_id'] for p in d.profiles})

@@ -35,7 +35,16 @@ class Data:
         self.team_stats = rows(STAGING / "team_match_stats.csv")
         self.photos = rows(STAGING / "photos.csv")
         self.callups = rows(STAGING / "callups.csv")
+        # window labels come from both seeds: a hand-entered squad is a real
+        # window and needs its label and date like any scraped one
         self.windows = rows(SEED / "wiki_squads.csv")
+        manual = SEED / "manual_squads.csv"
+        if manual.exists():
+            seen = {w["window_id"] for w in self.windows}
+            for r in rows(manual):
+                if r["window_id"] not in seen:
+                    seen.add(r["window_id"])
+                    self.windows.append(r)
         # may legitimately be empty, and is absent on a tree built before the
         # fixtures step existed
         fx = STAGING / "fixtures.csv"

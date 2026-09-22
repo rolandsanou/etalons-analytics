@@ -23,7 +23,7 @@ Registry: one row per player, with identity, verified club and activity status.
 Squad lists: who was named, with their club and caps at that moment.
 
 - **Grain**: one row per player x call-up window
-- **Columns** (12): `player_id`, `window_id`, `window_date`, `name`, `pos`, `dob`, `caps_at_time`, `goals_at_time`, `club_at_time`, `club_country_at_time`, `note`, `source`
+- **Columns** (13): `player_id`, `window_id`, `window_date`, `name`, `name_as_called`, `pos`, `dob`, `caps_at_time`, `goals_at_time`, `club_at_time`, `club_country_at_time`, `note`, `source`
 
 ### `appearances.csv`
 

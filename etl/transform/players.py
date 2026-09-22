@@ -8,7 +8,12 @@ from ..extract.sofascore import search_match
 from ..parsers.wikipedia import parse_players, squad_as_of
 from ..util import canonical_name, load_overrides, norm_name, read_csv, read_json, slugify, write_csv
 
-CALLUP_FIELDS = ["player_id", "window_id", "window_date", "name", "pos", "dob",
+# `name` is the canonical registry name, used for joining. `name_as_called` is
+# the name as the source actually published it — a federation writes "Sofiane
+# Farid Ouedraogo" where the registry holds "Farid Ouedraogo", and a reader
+# comparing the site against the announcement needs to see the published form.
+CALLUP_FIELDS = ["player_id", "window_id", "window_date", "name",
+                 "name_as_called", "pos", "dob",
                  "caps_at_time", "goals_at_time", "club_at_time",
                  "club_country_at_time", "note", "source"]
 
@@ -38,6 +43,7 @@ def _load_callups():
             "window_id": r["window_id"],
             "window_date": r["window_date"],
             "name": canonical_name(r["name"], overrides),
+            "name_as_called": r["name"],
             "pos": r.get("pos", ""),
             "dob": "",
             "caps_at_time": "",
@@ -59,6 +65,7 @@ def _load_callups():
                 "window_id": w["window_id"],
                 "window_date": stated or w["window_date"],
                 "name": canonical_name(r["name"], overrides),
+                "name_as_called": r["name"],
                 "pos": r["pos"],
                 "dob": r["dob"] or "",
                 "caps_at_time": r["caps"],

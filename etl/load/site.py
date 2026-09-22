@@ -27,6 +27,9 @@ def _callup_to_player(c):
     return {
         "player_id": c["player_id"],
         "name": c["name"],
+        # what the announcement actually called him, so a reader comparing the
+        # page against the published list sees the same name on both
+        "name_as_called": c.get("name_as_called") or c["name"],
         "pos": c["pos"],
         "dob": c["dob"] or None,
         "caps": int(c["caps_at_time"] or 0),
@@ -50,15 +53,40 @@ def _overlay_verified(players):
     return players
 
 
+# "recent" is a supplementary list, not an announced squad — see load/squadnews.
+SUPPLEMENTARY_WINDOWS = {"recent"}
+
+
+def latest_squad_window(callups):
+    """The newest announced squad, whatever source it came from.
+
+    This used to be hard-coded to "current", the Wikipedia section. A federation
+    list typed into data/seed/manual_squads.csv is newer than that section for
+    weeks at a time, so the page headline showed an old squad while the sections
+    below it discussed the new one.
+    """
+    dated = {}
+    for c in callups:
+        if c["window_id"] not in SUPPLEMENTARY_WINDOWS:
+            dated.setdefault(c["window_id"], c.get("window_date", ""))
+    return max(dated, key=lambda w: dated[w]) if dated else None
+
+
 def build_squad_json(today):
     callups = read_csv(STAGING / "callups.csv")
-    current = _overlay_verified([_callup_to_player(c) for c in callups if c["window_id"] == "current"])
+    window = latest_squad_window(callups)
+    current = _overlay_verified([_callup_to_player(c) for c in callups
+                                 if c["window_id"] == window])
     recent = _overlay_verified([_callup_to_player(c) for c in callups if c["window_id"] == "recent"])
     squad = analytics.enrich_players(current, today)
     pool = analytics.enrich_players(recent, today)
     seen = {p["name"] for p in squad}
+    label = next((c.get("window_date", "") for c in callups
+                  if c["window_id"] == window), "")
     return {
         "as_of": reference()["as_of"],
+        "window_id": window,
+        "window_date": label,
         "players": squad,
         "callups": pool,
         "stats": analytics.squad_stats(squad),

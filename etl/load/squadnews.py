@@ -104,7 +104,8 @@ def build_squad_news():
         rec = played.get(pid, {})
         return {
             "player_id": pid,
-            "name": row.get("name") or p.get("name", pid),
+            "name": (row.get("name_as_called") or row.get("name")
+                     or p.get("name", pid)),
             "pos": p.get("pos", ""),
             "age": round(age_on(p["dob"], date.today()), 1) if p.get("dob") else None,
             "club": p.get("club_v") or row.get("club_at_time", ""),
