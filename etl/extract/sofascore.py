@@ -184,6 +184,75 @@ def search_match(search_data, name):
     return None
 
 
+# Words that appear in a club's formal name but not in how anyone refers to it.
+# "FC Rapid Bucuresti" and "Rapid Bucuresti" are the same club.
+CLUB_NOISE = {"fc", "sc", "ac", "cf", "sk", "fk", "ss", "as", "us", "if", "bk",
+              "club", "de", "del", "the", "football", "futbol", "calcio"}
+# How many parts of a name must agree exactly before two spellings are taken to
+# be the same person. One is a surname, which half of Burkina shares.
+MIN_SHARED_PARTS = 2
+
+
+def _club_key(club):
+    return {w for w in norm_name(club).split() if w and w not in CLUB_NOISE}
+
+
+def _same_club(a, b):
+    """One club name contains the other, once formal noise is dropped."""
+    ka, kb = _club_key(a), _club_key(b)
+    return bool(ka and kb and (ka <= kb or kb <= ka))
+
+
+def _name_compatible(candidate, known):
+    """Two names share at least two parts exactly, ignoring order and accents.
+
+    Federations publish full civil names; Sofascore carries shorter, reordered
+    and sometimes misspelt ones — "Taonsa Axel" for "Axel Sountonoma Taonsa",
+    "Chec Bebel Doumbia" for "Cheick Bebel Doumbia". Requiring every part to
+    line up rejects both; requiring one part accepts anyone who shares a
+    surname. Two exact parts is the rule that takes the real people and still
+    refuses "Moise Kabore" when the search was for Elohim Kabore.
+    """
+    cand = set(norm_name(candidate).split())
+    mine = set(norm_name(known).split())
+    return len(cand & mine) >= MIN_SHARED_PARTS
+
+
+def club_backed_match(search_data, name, club):
+    """Accept a near-name match only when the club independently agrees.
+
+    Two weak signals that cannot both be coincidence: the search was for a
+    Burkinabe international, and the player it returned is at the exact club the
+    federation listed beside that name. Neither is trusted on its own.
+    """
+    if not club:
+        return None
+    for r in search_data.get("results", []):
+        if r.get("type") != "player":
+            continue
+        ent = r.get("entity", {})
+        if (ent.get("country") or {}).get("alpha2") != "BF":
+            continue
+        if not _same_club((ent.get("team") or {}).get("name", ""), club):
+            continue
+        if _name_compatible(ent.get("name", ""), name):
+            return ent.get("id")
+    return None
+
+
+def name_variants(name):
+    """Shorter forms to try when the full civil name returns nothing."""
+    parts = norm_name(name).split()
+    if len(parts) < 3:
+        return []
+    seen, out = set(), []
+    for v in (f"{parts[0]} {parts[-1]}", " ".join(parts[-2:]), parts[-1]):
+        if v not in seen and v != norm_name(name):
+            seen.add(v)
+            out.append(v)
+    return out
+
+
 def _profile_targets():
     ids, unlinked = set(), []
     players_path = STAGING / "players.csv"
@@ -192,7 +261,9 @@ def _profile_targets():
             if r.get("sofa_id"):
                 ids.add(str(r["sofa_id"]))
             else:
-                unlinked.append((r["player_id"], r["name"]))
+                # the club travels with the name: it is the second, independent
+                # signal that lets a shortened name be accepted safely below
+                unlinked.append((r["player_id"], r["name"], r.get("club", "")))
     seed_path = SEED / "sofa_ids.csv"
     if seed_path.exists():
         for r in read_csv(seed_path):
@@ -201,20 +272,65 @@ def _profile_targets():
     return ids, unlinked
 
 
+def _cached_search(dest, query, force=False):
+    if not dest.exists() or force:
+        try:
+            data = get_sofa_json(f"{SOFA_BASE}/search/all?q={quote(query)}")
+        except Exception as e:
+            data = {"error": str(e)}
+        write_json(dest, {"fetched_at": datetime.now().isoformat(timespec="seconds"),
+                          "data": data})
+    return read_json(dest).get("data", {})
+
+
+def _variant_path(pid, variant):
+    return SEARCH_DIR / f"{pid}--{variant.replace(' ', '-')}.json"
+
+
+def resolve_from_cache(pid, name, club):
+    """The Sofascore id for a player, from searches already on disk.
+
+    Extract and transform have to reach the same verdict — one to know which
+    profile to download, the other to know whose profile it is. When that rule
+    existed in both places they disagreed, and a player the extractor had
+    correctly identified was still written out with no club, no league and no
+    form. So the rule lives here, once, and both call it.
+
+    The full civil name is accepted on its own, because an exact match needs no
+    corroboration. A shortened form is accepted only with the club agreeing as
+    well.
+    """
+    dest = SEARCH_DIR / f"{pid}.json"
+    if dest.exists():
+        sid = search_match(read_json(dest).get("data", {}), name)
+        if sid:
+            return sid
+    for variant in name_variants(name):
+        cached = _variant_path(pid, variant)
+        if cached.exists():
+            sid = club_backed_match(read_json(cached).get("data", {}), name, club)
+            if sid:
+                return sid
+    return None
+
+
 def resolve_sofa_ids(unlinked, force=False):
+    """Search for every unlinked player, then resolve from what came back.
+
+    Anything still unmatched is left unmatched: data/seed/sofa_ids.csv is where
+    a human settles the cases a rule should not guess at.
+    """
     SEARCH_DIR.mkdir(parents=True, exist_ok=True)
     accepted = set()
-    for pid, name in unlinked:
-        dest = SEARCH_DIR / f"{pid}.json"
-        if not dest.exists() or force:
-            try:
-                data = get_sofa_json(f"{SOFA_BASE}/search/all?q={quote(name)}")
-            except Exception as e:
-                data = {"error": str(e)}
-            write_json(dest, {"fetched_at": datetime.now().isoformat(timespec="seconds"),
-                              "data": data})
-        cached = read_json(dest)
-        sid = search_match(cached.get("data", {}), name)
+    for pid, name, club in unlinked:
+        _cached_search(SEARCH_DIR / f"{pid}.json", name, force)
+        if not search_match(read_json(SEARCH_DIR / f"{pid}.json").get("data", {}), name):
+            for variant in name_variants(name):
+                _cached_search(_variant_path(pid, variant), variant, force)
+                if club_backed_match(read_json(_variant_path(pid, variant))
+                                     .get("data", {}), name, club):
+                    break
+        sid = resolve_from_cache(pid, name, club)
         if sid:
             accepted.add(str(sid))
     return accepted
@@ -282,13 +398,21 @@ def fetch_statistics(index):
 CLUB_FORM_SCHEMA = 3
 
 
-def fetch_club_form(force=False):
+def fetch_club_form(force=False, also=()):
+    """Club form for every active linked player, and for `also`.
+
+    players.csv is written by the transform, so a player linked during THIS run
+    is not in it yet and would wait a whole further pass for his club form —
+    which is exactly the data a newly called-up player is on the page for. The
+    ids just resolved are therefore passed in directly.
+    """
     CLUB_FORM_DIR.mkdir(parents=True, exist_ok=True)
     players_path = STAGING / "players.csv"
-    if not players_path.exists():
-        return 0
-    targets = [p for p in read_csv(players_path)
-               if p.get("sofa_id") and p.get("status") in ("active", "fringe")]
+    known = ({p["sofa_id"]: p for p in read_csv(players_path) if p.get("sofa_id")}
+             if players_path.exists() else {})
+    targets = [p for p in known.values() if p.get("status") in ("active", "fringe")]
+    targets += [{"sofa_id": sid} for sid in sorted(set(map(str, also)))
+                if sid not in known]
     today = date.today()
     fetched = 0
     for p in targets:
@@ -373,7 +497,8 @@ def run(force=False, force_profiles=False):
     n_stats = fetch_statistics(index)
     print(f"sofascore: {n_inc} incident files, {n_stats} statistics files fetched")
     ids, unlinked = _profile_targets()
-    ids |= resolve_sofa_ids(unlinked, force=force)
+    linked_now = resolve_sofa_ids(unlinked, force=force)
+    ids |= linked_now
 
     # A played match never changes, so lineups, incidents and statistics stay
     # cached whatever is asked of them. Profiles and club form DO change — a
@@ -383,7 +508,7 @@ def run(force=False, force_profiles=False):
     # never refresh a club.
     refresh = force or force_profiles
     n_profiles = fetch_player_profiles(ids, force=refresh)
-    n_club = fetch_club_form(force=refresh)
+    n_club = fetch_club_form(force=refresh, also=linked_now)
     forced = " (forced)" if refresh else f" (cache kept under {PROFILE_MAX_AGE_DAYS}d)"
     print(f"sofascore: {len(index)} events in window, {fetched} lineups fetched, "
           f"{n_profiles} player profiles fetched/refreshed{forced}, "

@@ -56,7 +56,10 @@ def _generic_squad_rows(table):
         players.append({
             "name": name, "pos": pos,
             "dob": DOB_RE.search(texts[dob_idx]).group(1),
-            "caps": 0, "goals": 0, "club": club,
+            # this table has no caps column at all, so the count is unknown —
+            # writing 0 here asserted that men with 14 matchday sheets behind
+            # them had never been capped
+            "caps": None, "goals": None, "club": club,
             "club_country": _flag_country(club_cell) if club_cell is not None else None,
             "note": None,
         })
@@ -93,8 +96,8 @@ def parse_players(html, section_id):
             "name": name,
             "pos": pos.upper()[:2],
             "dob": dob_m.group(1) if dob_m else None,
-            "caps": int(caps) if caps.isdigit() else 0,
-            "goals": int(goals) if goals.isdigit() else 0,
+            "caps": int(caps) if caps.isdigit() else None,
+            "goals": int(goals) if goals.isdigit() else None,
             "club": club,
             "club_country": _flag_country(club_cell),
             "note": tds[dob_idx + 4].get_text(" ", strip=True) if len(tds) > dob_idx + 4 else None,

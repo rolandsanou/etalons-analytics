@@ -107,7 +107,10 @@ def build_squad_news():
             "club": p.get("club_v") or row.get("club_at_time", ""),
             "league": p.get("league_v", ""),
             "status": p.get("status", ""),
-            "caps": as_int(p.get("caps")),
+            # not every squad list states cap counts, and an unrecorded count
+            # is not a count of zero — keep the difference so the page can say
+            # "not recorded" instead of asserting a 0 that may be badly wrong
+            "caps": as_int(p["caps"]) if (p.get("caps") or "").strip() else None,
             "window_squads": rec.get("squads", 0),
             "window_starts": rec.get("starts", 0),
             "window_minutes": rec.get("minutes", 0),

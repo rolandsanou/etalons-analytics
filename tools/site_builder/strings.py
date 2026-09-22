@@ -558,6 +558,8 @@ EN = {
     "Match par match": "Match by match",
     "Poste": "Position", "Âge": "Age", "Club": "Club",
     "Sélections (carrière)": "Caps (career)", "Buts (carrière)": "Goals (career)",
+    "Sélections (dernière liste)": "Caps (latest list)",
+    "Buts (dernière liste)": "Goals (latest list)",
     "Valeur estimée": "Estimated value", "Taille": "Height", "Pied": "Foot",
     "Dernière apparition": "Last appearance",
     "{n} ans": "{n} yrs", "{n} cm": "{n} cm",

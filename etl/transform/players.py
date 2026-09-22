@@ -4,7 +4,7 @@ from datetime import date, datetime, timezone
 from ..analytics import player_status
 from ..config import RAW, SEED, STAGING
 from ..extract import wikipedia as wiki_extract
-from ..extract.sofascore import search_match
+from ..extract.sofascore import resolve_from_cache
 from ..parsers.wikipedia import parse_players, squad_as_of
 from ..util import canonical_name, load_overrides, norm_name, read_csv, read_json, slugify, write_csv
 
@@ -113,10 +113,10 @@ def build():
                 "name": latest["name"],
                 "pos": latest["pos"],
                 "dob": dob,
-                "club": latest["club_at_time"],
-                "club_country": latest["club_country_at_time"],
-                "caps": latest["caps_at_time"],
-                "goals": latest["goals_at_time"],
+                "club": _latest_known(group, "club_at_time"),
+                "club_country": _latest_known(group, "club_country_at_time"),
+                "caps": _latest_known(group, "caps_at_time"),
+                "goals": _latest_known(group, "goals_at_time"),
                 "first_window": windows[0][1],
                 "last_window": windows[-1][1],
                 "n_windows": len({w for _, w in windows}),
@@ -127,6 +127,23 @@ def build():
             for r in group:
                 r["player_id"] = pid
     return registry, callups
+
+
+def _latest_known(group, field):
+    """The newest value actually recorded for a field, oldest kept if newer rows are silent.
+
+    A squad announcement does not carry every column. A federation publishes
+    names, positions and clubs; it does not republish everyone's cap count. An
+    absent value there means "not stated in this list", never "zero" — so
+    reading the latest row blindly let one such list erase the caps and goals
+    of all 25 players on it, and the page then printed a confident 0 beside a
+    player with 38 matchday sheets behind him.
+    """
+    # a parsed squad table yields ints, a CSV yields strings, and 0 caps is a
+    # real value that must not be mistaken for a missing one
+    return next((r[field] for r in reversed(group)
+                 if str(r.get(field) if r.get(field) is not None else "").strip()),
+                "")
 
 
 def parse_profile(player, fetched_at=""):
@@ -168,11 +185,9 @@ def enrich(registry, today=None):
     for pid, p in registry.items():
         if p["sofa_id"]:
             continue
-        cached = RAW / "sofascore" / "search" / f"{pid}.json"
-        if cached.exists():
-            sid = search_match(read_json(cached).get("data", {}), p["name"])
-            if sid:
-                p["sofa_id"] = sid
+        sid = resolve_from_cache(pid, p["name"], p.get("club", ""))
+        if sid:
+            p["sofa_id"] = sid
     ret_path = SEED / "int_retirements.csv"
     retired_int = ({r["player_id"] for r in read_csv(ret_path)} if ret_path.exists() else set())
     n_verified = 0

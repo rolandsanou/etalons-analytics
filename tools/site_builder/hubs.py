@@ -548,7 +548,10 @@ def _news_card(c, ctx, kind):
         if c.get("status"):
             facts.append((t("Statut"), t(STATUS_WORD.get(c["status"], c["status"]))))
     else:
-        facts.append((t("Sélections (carrière)"), str(c["caps"]) if c["caps"] else "0"))
+        # the figure a squad list stated when it was published, not a live
+        # career total: a player capped since then still shows the old count,
+        # so the label says which it is rather than claiming "career"
+        facts.append((t("Sélections (dernière liste)"), _fmt(c["caps"])))
         if c["window_squads"]:
             facts.append((t("Depuis 2022"),
                           t("{s} feuilles de match · {m} min", s=c["window_squads"],
