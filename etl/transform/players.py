@@ -19,9 +19,35 @@ PLAYER_FIELDS = ["player_id", "name", "pos", "dob", "club", "club_country",
                  "market_value_eur", "career_retired", "sofa_id", "source"]
 
 
+
+def _manual_squads():
+    """Hand-entered squad lists (data/seed/manual_squads.csv), if any."""
+    path = SEED / "manual_squads.csv"
+    return read_csv(path) if path.exists() else []
+
+
 def _load_callups():
     overrides = load_overrides()
     callups = []
+    # A federation list published on social media reaches the public long before
+    # it reaches Wikipedia — and sometimes never does. data/seed/manual_squads.csv
+    # is where such a list is typed in, and it is read on exactly the same footing
+    # as a scraped one so every downstream analysis sees it.
+    for r in _manual_squads():
+        callups.append({
+            "window_id": r["window_id"],
+            "window_date": r["window_date"],
+            "name": canonical_name(r["name"], overrides),
+            "pos": r.get("pos", ""),
+            "dob": "",
+            "caps_at_time": "",
+            "goals_at_time": "",
+            "club_at_time": r.get("club", ""),
+            "club_country_at_time": r.get("club_country", ""),
+            "note": "",
+            "source": "manual:" + r.get("source", "seed"),
+        })
+
     for w in wiki_extract.squad_windows():
         html = wiki_extract.raw_path(w).read_text(encoding="utf-8")
         # The page states which match a list is current to. Preferring that over

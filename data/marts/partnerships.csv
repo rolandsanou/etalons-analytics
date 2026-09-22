@@ -84,7 +84,7 @@ lassina-traore,Lassina Traoré,FW,saidou-simpore,Saïdou Simporé,DF,DF-FW,12,63
 lassina-traore,Lassina Traoré,FW,steeve-yago,Steeve Yago,DF,DF-FW,11,629,11,11,0,0.0,1
 issoufou-dayo,Issoufou Dayo,DF,stephane-aziz-ki,Stephane Aziz Ki,MF,DF-MF,13,626,10,5,5,0.72,1
 adamo-nagalo,Adamo Nagalo,DF,edmond-tapsoba,Edmond Tapsoba,DF,DF-DF,9,613,9,12,-3,-0.44,1
-edmond-tapsoba,Edmond Tapsoba,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,7,612,9,11,-2,-0.29,1
+edmond-tapsoba,Edmond Tapsoba,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,7,612,9,11,-2,-0.29,1
 adama-guira,Adama Guira,MF,bertrand-traore,Bertrand Traoré,FW,MF-FW,8,611,6,7,-1,-0.15,1
 issoufou-dayo,Issoufou Dayo,DF,lassina-traore,Lassina Traoré,FW,DF-FW,10,608,12,8,4,0.59,1
 gustavo-sangare,Gustavo Sangaré,MF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,MF-MF,8,598,9,9,0,0.0,1
@@ -94,7 +94,7 @@ arsene-kouassi,Arsène Kouassi,DF,edmond-tapsoba,Edmond Tapsoba,DF,DF-DF,6,581,4
 blati-toure,Blati Touré,MF,cyrille-bayala,Cyrille Bayala,FW,MF-FW,8,575,5,5,0,0.0,1
 abdoul-tapsoba,Abdoul Tapsoba,FW,issa-kabore,Issa Kaboré,DF,DF-FW,12,574,10,9,1,0.16,1
 ismahila-ouedraogo,Ismahila Ouédraogo,MF,issa-kabore,Issa Kaboré,DF,DF-MF,11,571,8,9,-1,-0.16,1
-dango-ouattara,Dango Ouattara,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,7,571,9,11,-2,-0.32,1
+dango-ouattara,Dango Ouattara,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,7,571,9,11,-2,-0.32,1
 cyrille-bayala,Cyrille Bayala,FW,issa-kabore,Issa Kaboré,DF,DF-FW,8,565,5,3,2,0.32,1
 abdoul-tapsoba,Abdoul Tapsoba,FW,edmond-tapsoba,Edmond Tapsoba,DF,DF-FW,13,565,10,8,2,0.32,1
 adamo-nagalo,Adamo Nagalo,DF,steeve-yago,Steeve Yago,DF,DF-DF,8,556,14,7,7,1.13,1
@@ -160,7 +160,7 @@ adamo-nagalo,Adamo Nagalo,DF,bertrand-traore,Bertrand Traoré,FW,DF-FW,8,391,11,
 adamo-nagalo,Adamo Nagalo,DF,cedric-badolo,Cedric Badolo,MF,DF-MF,8,387,7,5,2,0.47,1
 lassina-traore,Lassina Traoré,FW,nasser-djiga,Nasser Djiga,DF,DF-FW,5,384,7,7,0,0.0,1
 nasser-djiga,Nasser Djiga,DF,steeve-yago,Steeve Yago,DF,DF-DF,5,381,4,8,-4,-0.94,1
-blati-toure,Blati Touré,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,6,379,6,6,0,0.0,1
+blati-toure,Blati Touré,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,6,379,6,6,0,0.0,1
 herve-koffi,Hervé Koffi,GK,josue-tiendrebeogo,Josué Tiendrébéogo,MF,GK-MF,6,378,14,3,11,2.62,1
 mohamed-konate,Mohamed Konaté,FW,saidou-simpore,Saïdou Simporé,DF,DF-FW,13,377,6,5,1,0.24,1
 bertrand-traore,Bertrand Traoré,FW,mohamed-konate,Mohamed Konaté,FW,FW-FW,10,374,3,3,0,0.0,1
@@ -201,14 +201,14 @@ herve-koffi,Hervé Koffi,GK,nasser-djiga,Nasser Djiga,DF,GK-DF,5,322,6,5,1,0.28,
 issa-kabore,Issa Kaboré,DF,nasser-djiga,Nasser Djiga,DF,DF-DF,5,322,6,5,1,0.28,1
 hassane-bande,Hassane Bandé,FW,mohamed-konate,Mohamed Konaté,FW,FW-FW,11,320,1,3,-2,-0.56,1
 bertrand-traore,Bertrand Traoré,FW,saidou-simpore,Saïdou Simporé,DF,DF-FW,9,320,6,2,4,1.12,1
-cedric-badolo,Cedric Badolo,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,5,313,8,6,2,0.58,1
+cedric-badolo,Cedric Badolo,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,5,313,8,6,2,0.58,1
 gustavo-sangare,Gustavo Sangaré,MF,soumaila-ouattara,Soumaïla Ouattara,DF,DF-MF,3,309,5,3,2,,0
 bertrand-traore,Bertrand Traoré,FW,lassina-traore,Lassina Traoré,FW,FW-FW,7,304,10,1,9,2.66,1
 edmond-tapsoba,Edmond Tapsoba,DF,nasser-djiga,Nasser Djiga,DF,DF-DF,4,304,5,5,0,0.0,1
 cedric-badolo,Cedric Badolo,MF,gustavo-sangare,Gustavo Sangaré,MF,MF-MF,7,302,6,5,1,0.3,1
 issoufou-dayo,Issoufou Dayo,DF,sacha-banse,Sacha Bansé,MF,DF-MF,5,301,4,6,-2,-0.6,1
 farid-ouedraogo,Farid Ouédraogo,GK,lassina-traore,Lassina Traoré,FW,GK-FW,4,301,5,5,0,0.0,1
-issoufou-dayo,Issoufou Dayo,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,4,297,5,4,1,0.3,1
+issoufou-dayo,Issoufou Dayo,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,4,297,5,4,1,0.3,1
 issa-kabore,Issa Kaboré,DF,mohamed-zougrana,Mohamed Zougrana,MF,DF-MF,4,297,6,2,4,1.21,1
 issa-kabore,Issa Kaboré,DF,stephane-aziz-ki,Stephane Aziz Ki,MF,DF-MF,6,294,4,2,2,0.61,1
 edmond-tapsoba,Edmond Tapsoba,DF,mohamed-zougrana,Mohamed Zougrana,MF,DF-MF,5,294,4,1,3,0.92,1
@@ -220,7 +220,7 @@ mohamed-ouedraogo,Mohamed Ouédraogo,DF,steeve-yago,Steeve Yago,DF,DF-DF,4,284,6
 cyriaque-irie,Cyriaque Irié,FW,issoufou-dayo,Issoufou Dayo,DF,DF-FW,6,284,7,2,5,1.58,1
 cyrille-bayala,Cyrille Bayala,FW,dango-ouattara,Dango Ouattara,FW,FW-FW,4,280,2,2,0,0.0,1
 nasser-djiga,Nasser Djiga,DF,saidou-simpore,Saïdou Simporé,DF,DF-DF,5,280,7,3,4,1.29,1
-kilian-nikiema,Kilian Nikiema,GK,steeve-yago,Steeve Yago,DF,GK-DF,4,279,5,6,-1,-0.32,1
+kilian-nikiema,Kilian Nikiéma,GK,steeve-yago,Steeve Yago,DF,GK-DF,4,279,5,6,-1,-0.32,1
 abdoul-guiebre,Abdoul Guiebre,DF,bertrand-traore,Bertrand Traoré,FW,DF-FW,4,272,2,2,0,0.0,1
 dango-ouattara,Dango Ouattara,FW,georgi-minoungou,Georgi Minoungou,FW,FW-FW,7,268,5,4,1,,0
 josue-tiendrebeogo,Josué Tiendrébéogo,MF,lassina-traore,Lassina Traoré,FW,MF-FW,4,267,6,5,1,,0
@@ -245,7 +245,7 @@ djibril-ouattara,Djibril Ouattara,FW,issa-kabore,Issa Kaboré,DF,DF-FW,5,248,6,5
 sacha-banse,Sacha Bansé,MF,saidou-simpore,Saïdou Simporé,DF,DF-MF,5,248,4,2,2,,0
 dango-ouattara,Dango Ouattara,FW,nasser-djiga,Nasser Djiga,DF,DF-FW,4,247,3,5,-2,,0
 arsene-kouassi,Arsène Kouassi,DF,cyriaque-irie,Cyriaque Irié,FW,DF-FW,5,247,3,3,0,,0
-kilian-nikiema,Kilian Nikiema,GK,mohamed-ouedraogo,Mohamed Ouédraogo,DF,GK-DF,4,246,3,6,-3,,0
+kilian-nikiema,Kilian Nikiéma,GK,mohamed-ouedraogo,Mohamed Ouédraogo,DF,GK-DF,4,246,3,6,-3,,0
 mohamed-zougrana,Mohamed Zougrana,MF,saidou-simpore,Saïdou Simporé,DF,DF-MF,4,244,6,2,4,,0
 edmond-tapsoba,Edmond Tapsoba,DF,pierre-landry-kabore,Pierre Landry Kaboré,FW,DF-FW,7,241,4,4,0,,0
 hassane-bande,Hassane Bandé,FW,josue-tiendrebeogo,Josué Tiendrébéogo,MF,MF-FW,4,238,1,6,-5,,0
@@ -260,7 +260,7 @@ blati-toure,Blati Touré,MF,cyriaque-irie,Cyriaque Irié,FW,MF-FW,5,226,7,0,7,,0
 farid-ouedraogo,Farid Ouédraogo,GK,gustavo-sangare,Gustavo Sangaré,MF,GK-MF,3,225,5,7,-2,,0
 adamo-nagalo,Adamo Nagalo,DF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,DF-MF,5,225,6,5,1,,0
 cedric-badolo,Cedric Badolo,MF,farid-ouedraogo,Farid Ouédraogo,GK,GK-MF,4,225,1,2,-1,,0
-adamo-nagalo,Adamo Nagalo,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,3,223,3,5,-2,,0
+adamo-nagalo,Adamo Nagalo,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,3,223,3,5,-2,,0
 adama-guira,Adama Guira,MF,soumaila-ouattara,Soumaïla Ouattara,DF,DF-MF,2,222,2,1,1,,0
 herve-koffi,Hervé Koffi,GK,soumaila-ouattara,Soumaïla Ouattara,DF,GK-DF,2,222,2,1,1,,0
 bertrand-traore,Bertrand Traoré,FW,cyrille-bayala,Cyrille Bayala,FW,FW-FW,4,220,2,3,-1,,0
@@ -279,14 +279,14 @@ cyriaque-irie,Cyriaque Irié,FW,issa-kabore,Issa Kaboré,DF,DF-FW,3,205,4,1,3,,0
 arsene-kouassi,Arsène Kouassi,DF,gustavo-sangare,Gustavo Sangaré,MF,DF-MF,3,205,0,3,-3,,0
 mohamed-konate,Mohamed Konaté,FW,stephane-aziz-ki,Stephane Aziz Ki,MF,MF-FW,5,201,0,0,0,,0
 mohamed-ouedraogo,Mohamed Ouédraogo,DF,saidou-simpore,Saïdou Simporé,DF,DF-DF,5,200,4,2,2,,0
-gustavo-sangare,Gustavo Sangaré,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,4,199,2,6,-4,,0
+gustavo-sangare,Gustavo Sangaré,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,4,199,2,6,-4,,0
 herve-koffi,Hervé Koffi,GK,pierre-landry-kabore,Pierre Landry Kaboré,FW,GK-FW,5,199,3,3,0,,0
 herve-koffi,Hervé Koffi,GK,sacha-banse,Sacha Bansé,MF,GK-MF,4,197,3,2,1,,0
 blati-toure,Blati Touré,MF,djibril-ouattara,Djibril Ouattara,FW,MF-FW,4,196,6,4,2,,0
-kilian-nikiema,Kilian Nikiema,GK,mohamed-konate,Mohamed Konaté,FW,GK-FW,4,194,1,3,-2,,0
+kilian-nikiema,Kilian Nikiéma,GK,mohamed-konate,Mohamed Konaté,FW,GK-FW,4,194,1,3,-2,,0
 herve-koffi,Hervé Koffi,GK,mohamed-ouedraogo,Mohamed Ouédraogo,DF,GK-DF,2,194,6,2,4,,0
 cedric-badolo,Cedric Badolo,MF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,MF-MF,5,192,5,3,2,,0
-hassane-bande,Hassane Bandé,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,3,192,3,1,2,,0
+hassane-bande,Hassane Bandé,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,3,192,3,1,2,,0
 abdoul-guiebre,Abdoul Guiebre,DF,adama-guira,Adama Guira,MF,DF-MF,2,192,1,0,1,,0
 abdoul-guiebre,Abdoul Guiebre,DF,adamo-nagalo,Adamo Nagalo,DF,DF-DF,2,192,1,1,0,,0
 abdoul-guiebre,Abdoul Guiebre,DF,mohamed-konate,Mohamed Konaté,FW,DF-FW,2,192,1,1,0,,0
@@ -300,13 +300,13 @@ abdoul-bandaogo,Abdoul Bandaogo,MF,dango-ouattara,Dango Ouattara,FW,MF-FW,2,188,
 abdoul-bandaogo,Abdoul Bandaogo,MF,edmond-tapsoba,Edmond Tapsoba,DF,DF-MF,2,188,5,1,4,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,issoufou-dayo,Issoufou Dayo,DF,DF-MF,2,188,5,1,4,,0
 bertrand-traore,Bertrand Traoré,FW,pierre-landry-kabore,Pierre Landry Kaboré,FW,FW-FW,4,188,3,3,0,,0
-kilian-nikiema,Kilian Nikiema,GK,stephane-aziz-ki,Stephane Aziz Ki,MF,GK-MF,4,187,4,3,1,,0
+kilian-nikiema,Kilian Nikiéma,GK,stephane-aziz-ki,Stephane Aziz Ki,MF,GK-MF,4,187,4,3,1,,0
 abdoul-guiebre,Abdoul Guiebre,DF,cyrille-bayala,Cyrille Bayala,FW,DF-FW,3,185,1,0,1,,0
 bertrand-traore,Bertrand Traoré,FW,mohamed-ouedraogo,Mohamed Ouédraogo,DF,DF-FW,3,185,7,2,5,,0
-kilian-nikiema,Kilian Nikiema,GK,sacha-banse,Sacha Bansé,MF,GK-MF,2,184,3,4,-1,,0
+kilian-nikiema,Kilian Nikiéma,GK,sacha-banse,Sacha Bansé,MF,GK-MF,2,184,3,4,-1,,0
 arsene-kouassi,Arsène Kouassi,DF,lassina-traore,Lassina Traoré,FW,DF-FW,4,184,3,3,0,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,blati-toure,Blati Touré,MF,MF-MF,2,183,5,1,4,,0
-kilian-nikiema,Kilian Nikiema,GK,lassina-traore,Lassina Traoré,FW,GK-FW,3,183,3,3,0,,0
+kilian-nikiema,Kilian Nikiéma,GK,lassina-traore,Lassina Traoré,FW,GK-FW,3,183,3,3,0,,0
 issoufou-dayo,Issoufou Dayo,DF,ousseni-bouda,Ousseni Bouda,FW,DF-FW,5,182,3,4,-1,,0
 abdoul-guiebre,Abdoul Guiebre,DF,hassane-bande,Hassane Bandé,FW,DF-FW,4,181,2,0,2,,0
 adama-guira,Adama Guira,MF,mamady-bangre,Mamady Bangré,FW,MF-FW,4,180,1,2,-1,,0
@@ -320,7 +320,7 @@ abdoul-bandaogo,Abdoul Bandaogo,MF,issa-kabore,Issa Kaboré,DF,DF-MF,2,176,4,1,3
 blati-toure,Blati Touré,MF,mohamed-ouedraogo,Mohamed Ouédraogo,DF,DF-MF,5,175,5,4,1,,0
 abdoul-tapsoba,Abdoul Tapsoba,FW,cyrille-bayala,Cyrille Bayala,FW,FW-FW,3,174,2,2,0,,0
 bertrand-traore,Bertrand Traoré,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,2,174,4,3,1,,0
-issa-kabore,Issa Kaboré,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,2,174,3,1,2,,0
+issa-kabore,Issa Kaboré,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,2,174,3,1,2,,0
 ousseni-bouda,Ousseni Bouda,FW,sacha-banse,Sacha Bansé,MF,MF-FW,5,174,1,4,-3,,0
 djibril-ouattara,Djibril Ouattara,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,2,173,4,3,1,,0
 ousseni-bouda,Ousseni Bouda,FW,steeve-yago,Steeve Yago,DF,DF-FW,6,171,2,4,-2,,0
@@ -346,10 +346,10 @@ issa-kabore,Issa Kaboré,DF,zakaria-sanogo,Zakaria Sanogo,FW,DF-FW,5,148,1,4,-3,
 steeve-yago,Steeve Yago,DF,zakaria-sanogo,Zakaria Sanogo,FW,DF-FW,5,148,1,4,-3,,0
 dramane-salou,Dramane Salou,MF,issa-kabore,Issa Kaboré,DF,DF-MF,5,148,1,2,-1,,0
 blati-toure,Blati Touré,MF,sacha-banse,Sacha Bansé,MF,MF-MF,4,148,4,3,1,,0
-kilian-nikiema,Kilian Nikiema,GK,saidou-simpore,Saïdou Simporé,DF,GK-DF,5,148,2,2,0,,0
+kilian-nikiema,Kilian Nikiéma,GK,saidou-simpore,Saïdou Simporé,DF,GK-DF,5,148,2,2,0,,0
 herve-koffi,Hervé Koffi,GK,mamady-bangre,Mamady Bangré,FW,GK-FW,3,147,1,0,1,,0
 issa-kabore,Issa Kaboré,DF,mamady-bangre,Mamady Bangré,FW,DF-FW,3,147,1,0,1,,0
-bertrand-traore,Bertrand Traoré,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,2,147,2,1,1,,0
+bertrand-traore,Bertrand Traoré,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,2,147,2,1,1,,0
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,cedric-badolo,Cedric Badolo,MF,MF-FW,2,147,4,0,4,,0
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,hassane-bande,Hassane Bandé,FW,FW-FW,2,147,4,0,4,,0
 cyriaque-irie,Cyriaque Irié,FW,steeve-yago,Steeve Yago,DF,DF-FW,2,147,0,2,-2,,0
@@ -369,7 +369,7 @@ nasser-djiga,Nasser Djiga,DF,ousmane-camara,Ousmane Camara,FW,DF-FW,3,140,2,2,0,
 abdoul-tapsoba,Abdoul Tapsoba,FW,dango-ouattara,Dango Ouattara,FW,FW-FW,4,139,2,2,0,,0
 edmond-tapsoba,Edmond Tapsoba,DF,ousmane-camara,Ousmane Camara,FW,DF-FW,4,139,2,2,0,,0
 issa-kabore,Issa Kaboré,DF,ousmane-camara,Ousmane Camara,FW,DF-FW,4,139,2,2,0,,0
-arsene-kouassi,Arsène Kouassi,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,2,139,1,3,-2,,0
+arsene-kouassi,Arsène Kouassi,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,2,139,1,3,-2,,0
 djibril-ouattara,Djibril Ouattara,FW,herve-koffi,Hervé Koffi,GK,GK-FW,3,138,2,1,1,,0
 nasser-djiga,Nasser Djiga,DF,trova-boni,Trova Boni,DF,DF-DF,3,138,0,3,-3,,0
 cyriaque-irie,Cyriaque Irié,FW,lassina-traore,Lassina Traoré,FW,FW-FW,4,138,3,2,1,,0
@@ -397,7 +397,7 @@ georgi-minoungou,Georgi Minoungou,FW,lassina-traore,Lassina Traoré,FW,FW-FW,3,1
 nasser-djiga,Nasser Djiga,DF,ousseni-bouda,Ousseni Bouda,FW,DF-FW,4,125,1,5,-4,,0
 edmond-tapsoba,Edmond Tapsoba,DF,zakaria-sanogo,Zakaria Sanogo,FW,DF-FW,4,124,1,4,-3,,0
 abdoul-tapsoba,Abdoul Tapsoba,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,2,124,3,3,0,,0
-kilian-nikiema,Kilian Nikiema,GK,ousseni-bouda,Ousseni Bouda,FW,GK-FW,4,124,3,4,-1,,0
+kilian-nikiema,Kilian Nikiéma,GK,ousseni-bouda,Ousseni Bouda,FW,GK-FW,4,124,3,4,-1,,0
 steeve-yago,Steeve Yago,DF,trova-boni,Trova Boni,DF,DF-DF,3,124,0,2,-2,,0
 cyriaque-irie,Cyriaque Irié,FW,josue-tiendrebeogo,Josué Tiendrébéogo,MF,MF-FW,3,124,4,1,3,,0
 dramane-salou,Dramane Salou,MF,issoufou-dayo,Issoufou Dayo,DF,DF-MF,3,123,1,1,0,,0
@@ -420,7 +420,7 @@ gustavo-sangare,Gustavo Sangaré,MF,mamady-bangre,Mamady Bangré,FW,MF-FW,3,114,
 farid-ouedraogo,Farid Ouédraogo,GK,ousseni-bouda,Ousseni Bouda,FW,GK-FW,2,114,0,2,-2,,0
 hassane-bande,Hassane Bandé,FW,ousseni-bouda,Ousseni Bouda,FW,FW-FW,2,114,0,2,-2,,0
 cyriaque-irie,Cyriaque Irié,FW,georgi-minoungou,Georgi Minoungou,FW,FW-FW,4,114,3,0,3,,0
-cyrille-bayala,Cyrille Bayala,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,2,113,0,2,-2,,0
+cyrille-bayala,Cyrille Bayala,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,2,113,0,2,-2,,0
 georgi-minoungou,Georgi Minoungou,FW,josue-tiendrebeogo,Josué Tiendrébéogo,MF,MF-FW,4,113,5,1,4,,0
 hassane-bande,Hassane Bandé,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,2,112,1,0,1,,0
 adamo-nagalo,Adamo Nagalo,DF,dramane-salou,Dramane Salou,MF,DF-MF,2,111,0,1,-1,,0
@@ -429,7 +429,7 @@ ousmane-camara,Ousmane Camara,FW,saidou-simpore,Saïdou Simporé,DF,DF-FW,4,111,
 djibril-ouattara,Djibril Ouattara,FW,farid-ouedraogo,Farid Ouédraogo,GK,GK-FW,2,110,4,4,0,,0
 issoufou-dayo,Issoufou Dayo,DF,nasser-djiga,Nasser Djiga,DF,DF-DF,2,110,0,4,-4,,0
 adamo-nagalo,Adamo Nagalo,DF,nasser-djiga,Nasser Djiga,DF,DF-DF,2,110,2,2,0,,0
-georgi-minoungou,Georgi Minoungou,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,3,108,1,2,-1,,0
+georgi-minoungou,Georgi Minoungou,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,3,108,1,2,-1,,0
 blati-toure,Blati Touré,MF,mamady-bangre,Mamady Bangré,FW,MF-FW,3,107,1,2,-1,,0
 edmond-tapsoba,Edmond Tapsoba,DF,mamady-bangre,Mamady Bangré,FW,DF-FW,3,107,1,2,-1,,0
 arsene-kouassi,Arsène Kouassi,DF,stephane-aziz-ki,Stephane Aziz Ki,MF,DF-MF,2,107,3,1,2,,0
@@ -459,22 +459,22 @@ issoufou-dayo,Issoufou Dayo,DF,patrick-malo,Patrick Malo,DF,DF-DF,1,98,1,2,-1,,0
 issoufou-dayo,Issoufou Dayo,DF,zakaria-sanogo,Zakaria Sanogo,FW,DF-FW,4,98,1,3,-2,,0
 patrick-malo,Patrick Malo,DF,steeve-yago,Steeve Yago,DF,DF-DF,1,98,1,2,-1,,0
 farid-ouedraogo,Farid Ouédraogo,GK,soumaila-ouattara,Soumaïla Ouattara,DF,GK-DF,1,98,3,3,0,,0
-adama-guira,Adama Guira,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,1,98,1,3,-2,,0
+adama-guira,Adama Guira,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,1,98,1,3,-2,,0
 cyrille-bayala,Cyrille Bayala,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,1,97,1,0,1,,0
 abdoul-guiebre,Abdoul Guiebre,DF,mamady-bangre,Mamady Bangré,FW,DF-FW,2,97,1,0,1,,0
 abdoul-guiebre,Abdoul Guiebre,DF,dramane-salou,Dramane Salou,MF,DF-MF,1,96,0,0,0,,0
 adama-guira,Adama Guira,MF,dramane-salou,Dramane Salou,MF,MF-MF,1,96,0,0,0,,0
 adamo-nagalo,Adamo Nagalo,DF,arthur-zagre,Arthur Zagré,DF,DF-DF,1,96,0,3,-3,,0
 arthur-zagre,Arthur Zagré,DF,edmond-tapsoba,Edmond Tapsoba,DF,DF-DF,1,96,0,3,-3,,0
-arthur-zagre,Arthur Zagré,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,1,96,0,3,-3,,0
+arthur-zagre,Arthur Zagré,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,1,96,0,3,-3,,0
 farid-ouedraogo,Farid Ouédraogo,GK,nasser-djiga,Nasser Djiga,DF,GK-DF,1,95,0,3,-3,,0
 abdoul-ayinde,Abdoul Ayinde,DF,josue-tiendrebeogo,Josué Tiendrébéogo,MF,DF-MF,1,95,6,0,6,,0
 abdoul-ayinde,Abdoul Ayinde,DF,saidou-simpore,Saïdou Simporé,DF,DF-DF,1,95,6,0,6,,0
 cyrille-bayala,Cyrille Bayala,FW,farid-ouedraogo,Farid Ouédraogo,GK,GK-FW,2,94,1,1,0,,0
 mohamed-konate,Mohamed Konaté,FW,soumaila-ouattara,Soumaïla Ouattara,DF,DF-FW,3,94,0,1,-1,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,herve-koffi,Hervé Koffi,GK,GK-MF,1,94,2,0,2,,0
-abdoul-bandaogo,Abdoul Bandaogo,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,1,94,3,1,2,,0
-abdoul-guiebre,Abdoul Guiebre,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,1,94,3,1,2,,0
+abdoul-bandaogo,Abdoul Bandaogo,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,1,94,3,1,2,,0
+abdoul-guiebre,Abdoul Guiebre,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,1,94,3,1,2,,0
 blati-toure,Blati Touré,MF,nasser-djiga,Nasser Djiga,DF,DF-MF,3,94,1,3,-2,,0
 gustavo-sangare,Gustavo Sangaré,MF,stephane-aziz-ki,Stephane Aziz Ki,MF,MF-MF,1,94,0,1,-1,,0
 adamo-nagalo,Adamo Nagalo,DF,raouf-memel-dao,Raouf Memel Dao,MF,DF-MF,1,94,0,2,-2,,0
@@ -490,11 +490,11 @@ herve-koffi,Hervé Koffi,GK,ousmane-camara,Ousmane Camara,FW,GK-FW,2,93,2,1,1,,0
 ousmane-camara,Ousmane Camara,FW,trova-boni,Trova Boni,DF,DF-FW,3,93,0,2,-2,,0
 farid-ouedraogo,Farid Ouédraogo,GK,ousmane-camara,Ousmane Camara,FW,GK-FW,3,93,0,2,-2,,0
 issoufou-dayo,Issoufou Dayo,DF,ousmane-camara,Ousmane Camara,FW,DF-FW,3,93,0,2,-2,,0
-kilian-nikiema,Kilian Nikiema,GK,mohamed-zougrana,Mohamed Zougrana,MF,GK-MF,2,93,2,0,2,,0
+kilian-nikiema,Kilian Nikiéma,GK,mohamed-zougrana,Mohamed Zougrana,MF,GK-MF,2,93,2,0,2,,0
 blati-toure,Blati Touré,MF,ousseni-bouda,Ousseni Bouda,FW,MF-FW,4,92,3,4,-1,,0
 abdoul-tapsoba,Abdoul Tapsoba,FW,cedric-badolo,Cedric Badolo,MF,MF-FW,3,92,1,1,0,,0
 steeve-yago,Steeve Yago,DF,valentin-nouma,Valentin Nouma,DF,DF-DF,2,92,2,3,-1,,0
-kilian-nikiema,Kilian Nikiema,GK,nasser-djiga,Nasser Djiga,DF,GK-DF,1,92,1,2,-1,,0
+kilian-nikiema,Kilian Nikiéma,GK,nasser-djiga,Nasser Djiga,DF,GK-DF,1,92,1,2,-1,,0
 mohamed-zougrana,Mohamed Zougrana,MF,pierre-landry-kabore,Pierre Landry Kaboré,FW,MF-FW,3,92,3,1,2,,0
 issoufou-dayo,Issoufou Dayo,DF,valentin-nouma,Valentin Nouma,DF,DF-DF,2,91,0,4,-4,,0
 georgi-minoungou,Georgi Minoungou,FW,mohamed-konate,Mohamed Konaté,FW,FW-FW,4,91,1,2,-1,,0
@@ -512,7 +512,7 @@ cyriaque-irie,Cyriaque Irié,FW,raouf-memel-dao,Raouf Memel Dao,MF,MF-FW,1,84,0,
 mohamed-konate,Mohamed Konaté,FW,raouf-memel-dao,Raouf Memel Dao,MF,MF-FW,1,84,0,1,-1,,0
 pierre-landry-kabore,Pierre Landry Kaboré,FW,saidou-simpore,Saïdou Simporé,DF,DF-FW,5,83,2,2,0,,0
 mohamed-ouedraogo,Mohamed Ouédraogo,DF,mohamed-zougrana,Mohamed Zougrana,MF,DF-MF,1,83,2,0,2,,0
-ismahila-ouedraogo,Ismahila Ouédraogo,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,1,82,1,0,1,,0
+ismahila-ouedraogo,Ismahila Ouédraogo,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,1,82,1,0,1,,0
 mohamed-konate,Mohamed Konaté,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,3,81,0,1,-1,,0
 mohamed-konate,Mohamed Konaté,FW,trova-boni,Trova Boni,DF,DF-FW,2,81,0,2,-2,,0
 georgi-minoungou,Georgi Minoungou,FW,gustavo-sangare,Gustavo Sangaré,MF,MF-FW,2,81,0,2,-2,,0
@@ -540,7 +540,7 @@ cyrille-bayala,Cyrille Bayala,FW,patrick-malo,Patrick Malo,DF,DF-FW,1,74,1,2,-1,
 gustavo-sangare,Gustavo Sangaré,MF,sacha-banse,Sacha Bansé,MF,MF-MF,3,74,0,3,-3,,0
 abdoul-ayinde,Abdoul Ayinde,DF,bertrand-traore,Bertrand Traoré,FW,DF-FW,1,74,1,0,1,,0
 abdoul-ayinde,Abdoul Ayinde,DF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,DF-MF,1,74,1,0,1,,0
-abdoul-ayinde,Abdoul Ayinde,DF,kilian-nikiema,Kilian Nikiema,GK,GK-DF,1,74,1,0,1,,0
+abdoul-ayinde,Abdoul Ayinde,DF,kilian-nikiema,Kilian Nikiéma,GK,GK-DF,1,74,1,0,1,,0
 bertrand-traore,Bertrand Traoré,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,4,73,1,3,-2,,0
 adamo-nagalo,Adamo Nagalo,DF,mamady-bangre,Mamady Bangré,FW,DF-FW,1,73,0,0,0,,0
 dramane-salou,Dramane Salou,MF,gustavo-sangare,Gustavo Sangaré,MF,MF-MF,1,73,0,0,0,,0
@@ -554,7 +554,7 @@ arthur-zagre,Arthur Zagré,DF,lohann-doucet,Lohann Doucet,MF,DF-MF,1,73,0,2,-2,,
 arthur-zagre,Arthur Zagré,DF,mohamed-konate,Mohamed Konaté,FW,DF-FW,1,73,0,2,-2,,0
 dango-ouattara,Dango Ouattara,FW,lohann-doucet,Lohann Doucet,MF,MF-FW,1,73,0,2,-2,,0
 edmond-tapsoba,Edmond Tapsoba,DF,lohann-doucet,Lohann Doucet,MF,DF-MF,1,73,0,2,-2,,0
-kilian-nikiema,Kilian Nikiema,GK,lohann-doucet,Lohann Doucet,MF,GK-MF,1,73,0,2,-2,,0
+kilian-nikiema,Kilian Nikiéma,GK,lohann-doucet,Lohann Doucet,MF,GK-MF,1,73,0,2,-2,,0
 lohann-doucet,Lohann Doucet,MF,mohamed-konate,Mohamed Konaté,FW,MF-FW,1,73,0,2,-2,,0
 cedric-badolo,Cedric Badolo,MF,dramane-salou,Dramane Salou,MF,MF-MF,2,72,0,1,-1,,0
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,sacha-banse,Sacha Bansé,MF,MF-FW,2,72,3,0,3,,0
@@ -575,7 +575,7 @@ abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,issoufou-dayo,Issoufou Dayo,DF,DF
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,mohamed-konate,Mohamed Konaté,FW,FW-FW,1,67,1,0,1,,0
 cyriaque-irie,Cyriaque Irié,FW,mohamed-zougrana,Mohamed Zougrana,MF,MF-FW,1,67,0,0,0,,0
 gustavo-sangare,Gustavo Sangaré,MF,zakaria-sanogo,Zakaria Sanogo,FW,MF-FW,3,66,1,3,-2,,0
-abdoul-tapsoba,Abdoul Tapsoba,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,2,65,1,1,0,,0
+abdoul-tapsoba,Abdoul Tapsoba,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,2,65,1,1,0,,0
 mohamed-konate,Mohamed Konaté,FW,ousmane-camara,Ousmane Camara,FW,FW-FW,3,65,0,1,-1,,0
 lassina-traore,Lassina Traoré,FW,trova-boni,Trova Boni,DF,DF-FW,2,65,0,2,-2,,0
 gustavo-sangare,Gustavo Sangaré,MF,ousseni-bouda,Ousseni Bouda,FW,MF-FW,2,64,2,3,-1,,0
@@ -592,7 +592,7 @@ arsene-kouassi,Arsène Kouassi,DF,ousseni-bouda,Ousseni Bouda,FW,DF-FW,2,57,0,2,
 mohamed-konate,Mohamed Konaté,FW,ousseni-bouda,Ousseni Bouda,FW,FW-FW,4,56,0,1,-1,,0
 mohamed-ouedraogo,Mohamed Ouédraogo,DF,ousmane-camara,Ousmane Camara,FW,DF-FW,2,55,1,1,0,,0
 abdoul-guiebre,Abdoul Guiebre,DF,ousseni-bouda,Ousseni Bouda,FW,DF-FW,2,53,3,1,2,,0
-kilian-nikiema,Kilian Nikiema,GK,pierre-landry-kabore,Pierre Landry Kaboré,FW,GK-FW,3,53,1,1,0,,0
+kilian-nikiema,Kilian Nikiéma,GK,pierre-landry-kabore,Pierre Landry Kaboré,FW,GK-FW,3,53,1,1,0,,0
 hassane-bande,Hassane Bandé,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,3,52,0,2,-2,,0
 issoufou-dayo,Issoufou Dayo,DF,trova-boni,Trova Boni,DF,DF-DF,2,52,0,1,-1,,0
 josue-tiendrebeogo,Josué Tiendrébéogo,MF,mohamed-ouedraogo,Mohamed Ouédraogo,DF,DF-MF,2,51,3,1,2,,0
@@ -627,7 +627,7 @@ adamo-nagalo,Adamo Nagalo,DF,pakwo-gnanou,Pakwo Gnanou,DF,DF-DF,1,47,0,1,-1,,0
 arthur-zagre,Arthur Zagré,DF,ousseni-bouda,Ousseni Bouda,FW,DF-FW,1,47,0,1,-1,,0
 arthur-zagre,Arthur Zagré,DF,pakwo-gnanou,Pakwo Gnanou,DF,DF-DF,1,47,0,1,-1,,0
 edmond-tapsoba,Edmond Tapsoba,DF,pakwo-gnanou,Pakwo Gnanou,DF,DF-DF,1,47,0,1,-1,,0
-kilian-nikiema,Kilian Nikiema,GK,pakwo-gnanou,Pakwo Gnanou,DF,GK-DF,1,47,0,1,-1,,0
+kilian-nikiema,Kilian Nikiéma,GK,pakwo-gnanou,Pakwo Gnanou,DF,GK-DF,1,47,0,1,-1,,0
 ousseni-bouda,Ousseni Bouda,FW,pakwo-gnanou,Pakwo Gnanou,DF,DF-FW,1,47,0,1,-1,,0
 abdoul-tapsoba,Abdoul Tapsoba,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,2,46,1,2,-1,,0
 gustavo-sangare,Gustavo Sangaré,MF,nasser-djiga,Nasser Djiga,DF,DF-MF,1,46,0,2,-2,,0
@@ -661,7 +661,7 @@ dramane-salou,Dramane Salou,MF,saidou-simpore,Saïdou Simporé,DF,DF-MF,3,37,1,1
 ousseni-bouda,Ousseni Bouda,FW,stephane-aziz-ki,Stephane Aziz Ki,MF,MF-FW,2,35,1,0,1,,0
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,ousmane-camara,Ousmane Camara,FW,FW-FW,2,34,2,0,2,,0
 dango-ouattara,Dango Ouattara,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,2,33,0,0,0,,0
-kilian-nikiema,Kilian Nikiema,GK,mamady-bangre,Mamady Bangré,FW,GK-FW,1,33,0,2,-2,,0
+kilian-nikiema,Kilian Nikiéma,GK,mamady-bangre,Mamady Bangré,FW,GK-FW,1,33,0,2,-2,,0
 dramane-salou,Dramane Salou,MF,ousseni-bouda,Ousseni Bouda,FW,MF-FW,2,33,0,0,0,,0
 blati-toure,Blati Touré,MF,valentin-nouma,Valentin Nouma,DF,DF-MF,2,31,2,1,1,,0
 dango-ouattara,Dango Ouattara,FW,valentin-nouma,Valentin Nouma,DF,DF-FW,2,31,2,1,1,,0
@@ -729,7 +729,7 @@ clement-pitroipa,Clement Pitroipa,MF,sacha-banse,Sacha Bansé,MF,MF-MF,1,19,0,0,
 mohamed-ouedraogo,Mohamed Ouédraogo,DF,trova-boni,Trova Boni,DF,DF-DF,1,18,0,1,-1,,0
 ousseni-bouda,Ousseni Bouda,FW,trova-boni,Trova Boni,DF,DF-FW,1,18,0,1,-1,,0
 saidou-simpore,Saïdou Simporé,DF,trova-boni,Trova Boni,DF,DF-DF,1,18,0,1,-1,,0
-josue-tiendrebeogo,Josué Tiendrébéogo,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,1,18,0,0,0,,0
+josue-tiendrebeogo,Josué Tiendrébéogo,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,1,18,0,0,0,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,stephane-aziz-ki,Stephane Aziz Ki,MF,MF-MF,2,17,1,0,1,,0
 adamo-nagalo,Adamo Nagalo,DF,valentin-nouma,Valentin Nouma,DF,DF-DF,1,16,2,0,2,,0
 bertrand-traore,Bertrand Traoré,FW,valentin-nouma,Valentin Nouma,DF,DF-FW,1,16,2,0,2,,0
@@ -742,7 +742,7 @@ abdoul-tapsoba,Abdoul Tapsoba,FW,pakwo-gnanou,Pakwo Gnanou,DF,DF-FW,1,16,0,0,0,,
 abdoul-tapsoba,Abdoul Tapsoba,FW,pierre-landry-kabore,Pierre Landry Kaboré,FW,FW-FW,1,16,0,0,0,,0
 adama-guira,Adama Guira,MF,valentin-nouma,Valentin Nouma,DF,DF-MF,1,15,0,1,-1,,0
 cyrille-bayala,Cyrille Bayala,FW,valentin-nouma,Valentin Nouma,DF,DF-FW,1,15,0,1,-1,,0
-kilian-nikiema,Kilian Nikiema,GK,valentin-nouma,Valentin Nouma,DF,GK-DF,1,15,0,1,-1,,0
+kilian-nikiema,Kilian Nikiéma,GK,valentin-nouma,Valentin Nouma,DF,GK-DF,1,15,0,1,-1,,0
 mamady-bangre,Mamady Bangré,FW,valentin-nouma,Valentin Nouma,DF,DF-FW,1,15,0,1,-1,,0
 dramane-salou,Dramane Salou,MF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,MF-MF,1,15,0,1,-1,,0
 ismahila-ouedraogo,Ismahila Ouédraogo,MF,nasser-djiga,Nasser Djiga,DF,DF-MF,1,15,0,1,-1,,0
@@ -771,7 +771,7 @@ mohamed-ali-yabre,Mohamed Ali Yabré,DF,saidou-simpore,Saïdou Simporé,DF,DF-DF
 bertrand-traore,Bertrand Traoré,FW,ousseni-bouda,Ousseni Bouda,FW,FW-FW,1,15,0,1,-1,,0
 georgi-minoungou,Georgi Minoungou,FW,ousseni-bouda,Ousseni Bouda,FW,FW-FW,1,15,0,1,-1,,0
 abdoul-kader-ouattara,Abdoul Kader Ouattara,FW,ousseni-bouda,Ousseni Bouda,FW,FW-FW,1,13,1,0,1,,0
-cyriaque-irie,Cyriaque Irié,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,1,13,0,0,0,,0
+cyriaque-irie,Cyriaque Irié,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,1,13,0,0,0,,0
 djibril-ouattara,Djibril Ouattara,FW,zakaria-sanogo,Zakaria Sanogo,FW,FW-FW,1,12,1,1,0,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,ismahila-ouedraogo,Ismahila Ouédraogo,MF,MF-MF,1,12,1,0,1,,0
 abdoul-bandaogo,Abdoul Bandaogo,MF,steeve-yago,Steeve Yago,DF,DF-MF,1,12,1,0,1,,0
@@ -779,7 +779,7 @@ dramane-salou,Dramane Salou,MF,farid-ouedraogo,Farid Ouédraogo,GK,GK-MF,1,12,1,
 abdoul-tapsoba,Abdoul Tapsoba,FW,arsene-kouassi,Arsène Kouassi,DF,DF-FW,1,11,0,0,0,,0
 adamo-nagalo,Adamo Nagalo,DF,hassim-traore,Hassim Traore,FW,DF-FW,1,10,0,1,-1,,0
 edmond-tapsoba,Edmond Tapsoba,DF,hassim-traore,Hassim Traore,FW,DF-FW,1,10,0,1,-1,,0
-hassim-traore,Hassim Traore,FW,kilian-nikiema,Kilian Nikiema,GK,GK-FW,1,10,0,1,-1,,0
+hassim-traore,Hassim Traore,FW,kilian-nikiema,Kilian Nikiéma,GK,GK-FW,1,10,0,1,-1,,0
 hassim-traore,Hassim Traore,FW,mohamed-konate,Mohamed Konaté,FW,FW-FW,1,10,0,1,-1,,0
 hassim-traore,Hassim Traore,FW,mohamed-ouedraogo,Mohamed Ouédraogo,DF,DF-FW,1,10,0,1,-1,,0
 hassim-traore,Hassim Traore,FW,sacha-banse,Sacha Bansé,MF,MF-FW,1,10,0,1,-1,,0
@@ -828,7 +828,7 @@ abdoul-tapsoba,Abdoul Tapsoba,FW,aboubacar-bassinga,Aboubacar Bassinga,MF,MF-FW,
 aboubacar-bassinga,Aboubacar Bassinga,MF,adamo-nagalo,Adamo Nagalo,DF,DF-MF,1,5,0,0,0,,0
 aboubacar-bassinga,Aboubacar Bassinga,MF,arthur-zagre,Arthur Zagré,DF,DF-MF,1,5,0,0,0,,0
 aboubacar-bassinga,Aboubacar Bassinga,MF,edmond-tapsoba,Edmond Tapsoba,DF,DF-MF,1,5,0,0,0,,0
-aboubacar-bassinga,Aboubacar Bassinga,MF,kilian-nikiema,Kilian Nikiema,GK,GK-MF,1,5,0,0,0,,0
+aboubacar-bassinga,Aboubacar Bassinga,MF,kilian-nikiema,Kilian Nikiéma,GK,GK-MF,1,5,0,0,0,,0
 aboubacar-bassinga,Aboubacar Bassinga,MF,ousseni-bouda,Ousseni Bouda,FW,MF-FW,1,5,0,0,0,,0
 aboubacar-bassinga,Aboubacar Bassinga,MF,pakwo-gnanou,Pakwo Gnanou,DF,DF-MF,1,5,0,0,0,,0
 aboubacar-bassinga,Aboubacar Bassinga,MF,pierre-landry-kabore,Pierre Landry Kaboré,FW,MF-FW,1,5,0,0,0,,0

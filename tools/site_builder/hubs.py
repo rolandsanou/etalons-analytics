@@ -257,7 +257,8 @@ def squad_strength_card(d, ctx):
         <h3>{esc(t("État du groupe convoqué"))}</h3>
         <p class="sub">{esc(t("Part du groupe qui enchaîne les titularisations en club."))}</p>
         <p class="bandline"><span class="band {r['band']}">{esc(t(BAND_WORD[r['band']]))}</span>
-           <strong>{_pct(r['share'])} %</strong></p>
+           <strong>{r['starting']}/{r['rated']}</strong>
+           <span class="bandpct">{_fmt(100 * r['share'], 1)} %</span></p>
         <dl class="kv">{"".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in rows)}</dl>
         {layout.plain_note(note)}
       </div>"""

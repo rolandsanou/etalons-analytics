@@ -22,6 +22,19 @@ from ..util import as_float, as_int, read_csv
 REGULAR_SQUADS = 6
 # ... and has actually started a reasonable share of them.
 REGULAR_STARTS = 3
+# A federation names its squad within about this many days of the match. A list
+# older than that, relative to the next fixture, is from a previous camp.
+ANNOUNCEMENT_DAYS = 30
+
+
+def _from_earlier_camp(as_of, next_match):
+    if not (as_of and next_match):
+        return False
+    try:
+        gap = (date.fromisoformat(next_match) - date.fromisoformat(as_of)).days
+    except ValueError:
+        return False
+    return gap > ANNOUNCEMENT_DAYS
 
 
 # "recent" is not a squad. It is the Wikipedia section listing players called up
@@ -148,9 +161,12 @@ def build_squad_news():
         "compared_with": previous,
         "as_of": as_of,
         "next_match": next_match,
-        # true when the newest list we hold predates the next fixture: the squad
-        # for that match has not been published anywhere we read
-        "predates_next_match": bool(as_of and next_match and as_of < next_match),
+        # A squad is announced days before its window, so simply predating the
+        # next fixture proves nothing — that is the normal case. What marks a
+        # list as belonging to an EARLIER camp is a long gap: beyond
+        # ANNOUNCEMENT_DAYS before the next match, a newer list almost certainly
+        # exists and has not reached us.
+        "predates_next_match": _from_earlier_camp(as_of, next_match),
         "squad": len(now),
         "newcomers": newcomers,
         "recalls": recalls,
