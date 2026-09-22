@@ -94,10 +94,21 @@ def _count(values):
     return counts
 
 
+def _known_caps(p):
+    """A player's cap count for arithmetic, 0 when no list has ever stated one.
+
+    Unknown is not zero, and everywhere a cap count is *shown* the difference is
+    kept. For summing and weighting there is no third option, so an unknown
+    count contributes nothing rather than having a number invented for it — and
+    squad_stats reports how many players that silently applies to.
+    """
+    return p["caps"] or 0
+
+
 def squad_stats(players):
     with_age = [p for p in players if "age" in p]
     ages = [p["age"] for p in with_age]
-    caps = [p["caps"] for p in with_age]
+    caps = [_known_caps(p) for p in with_age]
     total_caps = sum(caps)
     return {
         "n": len(players),
@@ -106,6 +117,8 @@ def squad_stats(players):
         "caps_weighted_age": round(float(np.average(ages, weights=caps)), 1) if total_caps else None,
         "avg_age_afcon27": round(float(np.mean([p["age_afcon27"] for p in with_age])), 1) if ages else None,
         "total_caps": total_caps,
+        # the denominator behind total_caps and caps_weighted_age
+        "caps_unknown": sum(1 for p in players if p["caps"] is None),
         "pct_abroad": round(100 * sum(1 for p in players if p["league_group"] != "home") / len(players), 1) if players else None,
         "pct_europe": round(100 * sum(1 for p in players if p["league_group"] in ("top5", "europe_other")) / len(players), 1) if players else None,
         "by_pos": _count(p["pos"] for p in players),
@@ -117,12 +130,12 @@ def squad_stats(players):
 
 
 def core_generation(players):
-    core = [p for p in players if "age" in p and p["caps"] >= 15]
+    core = [p for p in players if "age" in p and _known_caps(p) >= 15]
     if not core:
         return None
     return {
         "n": len(core),
-        "names": [p["name"] for p in sorted(core, key=lambda x: -x["caps"])],
+        "names": [p["name"] for p in sorted(core, key=lambda x: -_known_caps(x))],
         "avg_age_now": round(float(np.mean([p["age"] for p in core])), 1),
         "avg_age_afcon27": round(float(np.mean([p["age_afcon27"] for p in core])), 1),
         "in_peak_afcon27": sum(1 for p in core if p["phase_afcon27"] == "peak"),

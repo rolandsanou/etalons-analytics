@@ -32,19 +32,34 @@ def _callup_to_player(c):
         # page against the published list sees the same name on both
         "name_as_called": c.get("name_as_called") or c["name"],
         "pos": c["pos"],
+        # a squad announcement states none of these — they are filled from the
+        # registry below, and stay None if nothing ever stated them
         "dob": c["dob"] or None,
-        "caps": int(c["caps_at_time"] or 0),
-        "goals": int(c["goals_at_time"] or 0),
+        "caps": int(c["caps_at_time"]) if c["caps_at_time"] else None,
+        "goals": int(c["goals_at_time"]) if c["goals_at_time"] else None,
         "club": c["club_at_time"],
         "club_country": c["club_country_at_time"] or None,
     }
 
 
-def _overlay_verified(players):
+def _overlay_registry(players):
+    """Fill a squad list out from the player registry.
+
+    A federation announcement is a list of names, positions and clubs. It does
+    not carry birthdates or cap counts, so building the squad from those rows
+    alone published an age column and a caps column that were entirely empty —
+    for a squad whose players the site knows perfectly well. The registry holds
+    what every list ever stated, so it supplies whatever this one did not, and
+    the club it has independently verified takes precedence over the announced
+    one.
+    """
     registry = {r["player_id"]: r for r in read_csv(STAGING / "players.csv")}
     for p in players:
-        r = registry.get(p["player_id"])
-        if r and r.get("club_v"):
+        r = registry.get(p["player_id"]) or {}
+        for field, column in (("dob", "dob"), ("caps", "caps"), ("goals", "goals")):
+            if p[field] is None and (r.get(column) or "").strip():
+                p[field] = r[column] if field == "dob" else int(r[column])
+        if r.get("club_v"):
             p["club"] = r["club_v"]
             p["club_country"] = r["club_country_v"] or p["club_country"]
             p["league"] = r["league_v"]
@@ -57,9 +72,9 @@ def _overlay_verified(players):
 def build_squad_json(today):
     callups = read_csv(STAGING / "callups.csv")
     window = latest_squad_window(callups)
-    current = _overlay_verified([_callup_to_player(c) for c in callups
+    current = _overlay_registry([_callup_to_player(c) for c in callups
                                  if c["window_id"] == window])
-    recent = _overlay_verified([_callup_to_player(c) for c in callups if c["window_id"] == "recent"])
+    recent = _overlay_registry([_callup_to_player(c) for c in callups if c["window_id"] == "recent"])
     squad = analytics.enrich_players(current, today)
     pool = analytics.enrich_players(recent, today)
     seen = {p["name"] for p in squad}

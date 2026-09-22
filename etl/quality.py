@@ -362,6 +362,37 @@ def _check_site(report):
         except Exception as e:
             report.append((f"site: {name}", "FAIL", str(e)[:80]))
     _check_factoids(report)
+    _check_squad_columns(report)
+
+
+def _check_squad_columns(report):
+    """The squad page's own columns must actually have something in them.
+
+    The squad is built from a federation announcement, which states names,
+    positions and clubs and nothing else. When the code that fills the rest in
+    from the registry broke, every age and every cap count on the page went
+    blank and the age distribution emptied — valid JSON throughout, and no gate
+    noticed. These are the columns the page promises, so they are checked.
+    """
+    path = SITE_DATA / "squad.json"
+    if not path.exists():
+        return
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    players = doc.get("players") or []
+    if not players:
+        report.append(("site: squad has players", "FAIL", "no players in squad.json"))
+        return
+    for field in ("dob", "age", "club"):
+        have = sum(1 for p in players if p.get(field) not in (None, ""))
+        report.append((f"site: squad {field}",
+                       "PASS" if have else "FAIL",
+                       f"{have}/{len(players)} players have a {field}"))
+    stats = doc.get("stats") or {}
+    missing = [k for k in ("avg_age", "median_age") if stats.get(k) is None]
+    report.append(("site: squad age distribution",
+                   "FAIL" if (missing or not stats.get("by_bucket")) else "PASS",
+                   f"buckets: {sum((stats.get('by_bucket') or {}).values())} players"
+                   + (f"; {', '.join(missing)} missing" if missing else "")))
 
 
 def _check_factoids(report):

@@ -63,12 +63,12 @@ function phasePill(phase) {
 
 function renderSquadTable() {
   const rows = [...DATA.squad.players].sort((a, b) =>
-    POS_ORDER.indexOf(a.pos) - POS_ORDER.indexOf(b.pos) || b.caps - a.caps);
+    POS_ORDER.indexOf(a.pos) - POS_ORDER.indexOf(b.pos) || (b.caps || 0) - (a.caps || 0));
   $("squad_table").innerHTML = `<tr>
     <th>${t("h_player")}</th><th>${t("h_pos")}</th><th class="num">${t("h_age")}</th>
     <th class="num">${t("h_caps")}</th><th class="num">${t("h_goals")}</th>
     <th>${t("h_club")}</th><th>${t("h_country")}</th><th class="num">${t("h_age27")}</th></tr>` +
-    rows.map(p => `<tr><td>${p.name}</td><td>${p.pos}</td>
+    rows.map(p => `<tr><td>${p.name_as_called || p.name}</td><td>${p.pos}</td>
       <td class="num">${fmt(p.age, 1)}</td><td class="num">${fmt(p.caps)}</td>
       <td class="num">${fmt(p.goals)}</td>
       <td>${p.club ? p.club + (p.club_verified ? ' <span class="vmark" title="' + t("club_verified_tip") + '">✓</span>' : ' <span class="wmark" title="' + t("club_wiki_tip") + '">⚠</span>') : "–"}</td>
@@ -78,7 +78,7 @@ function renderSquadTable() {
   $("callups_table").innerHTML = `<tr>
     <th>${t("h_player")}</th><th>${t("h_pos")}</th><th class="num">${t("h_age")}</th>
     <th class="num">${t("h_caps")}</th><th>${t("h_club")}</th><th>${t("h_country")}</th></tr>` +
-    cu.map(p => `<tr><td>${p.name}</td><td>${p.pos}</td><td class="num">${fmt(p.age, 1)}</td>
+    cu.map(p => `<tr><td>${p.name_as_called || p.name}</td><td>${p.pos}</td><td class="num">${fmt(p.age, 1)}</td>
       <td class="num">${fmt(p.caps)}</td><td>${p.club || "–"}</td>
       <td>${p.club_country || "–"}</td></tr>`).join("");
 }
