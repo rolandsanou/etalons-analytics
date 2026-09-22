@@ -980,3 +980,38 @@ ul.scorelist .pv { text-align: right; font-size: 12px; color: var(--ink-2); }
   margin-left: 6px; vertical-align: middle;
 }
 .windowblock .sub { margin: 0 0 10px; }
+
+/* squad movements: new names, recalls, absentees */
+.newsgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin: 0 0 24px;
+}
+
+.newscard { background: var(--surface); padding: 14px 16px; }
+.newscard a { text-decoration: none; color: inherit; }
+.newscard a:hover strong { text-decoration: underline; text-decoration-thickness: 1px; }
+.newscard strong { font-size: 14.5px; font-weight: 600; }
+.newscard .sub { margin: 2px 0 9px; font-size: 11.5px; }
+.newscard .kv { margin: 0; font-size: 11.5px; }
+/* the three groups read differently at a glance */
+.newscard.new    { box-shadow: inset 3px 0 0 var(--st-good, #0e8a5f); }
+.newscard.recall { box-shadow: inset 3px 0 0 var(--s2); }
+.newscard.absent { box-shadow: inset 3px 0 0 var(--red); }
+
+/* the list we hold is older than the next match: say so, prominently */
+.stalelist {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--red);
+  background: var(--tint);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  border-radius: 0 var(--r-s) var(--r-s) 0;
+}
