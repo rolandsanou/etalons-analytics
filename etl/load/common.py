@@ -26,3 +26,26 @@ def record(results):
     n = len(results)
     return {"n": n, "w": w, "d": d, "l": l,
             "ppg": round((3 * w + d) / n, 2) if n else None}
+
+
+# Wikipedia's "Recent call-ups" section lists players called in the last twelve
+# months who are NOT in the current squad. It is evidence a player was around
+# lately, but it is not an announced squad, and treating it as one makes every
+# current player look like a change.
+SUPPLEMENTARY_WINDOWS = {"recent"}
+
+
+def latest_squad_window(callups):
+    """The newest announced squad, whatever source it came from.
+
+    Nothing may hard-code a window id for this. A federation list typed into
+    data/seed/manual_squads.csv is newer than Wikipedia's section for weeks at a
+    time, and three separate copies of this rule had already been written — which
+    is exactly how a page ends up showing one squad while the section beneath it
+    discusses another.
+    """
+    dated = {}
+    for c in callups:
+        if c["window_id"] not in SUPPLEMENTARY_WINDOWS:
+            dated.setdefault(c["window_id"], c.get("window_date", ""))
+    return max(dated, key=lambda w: dated[w]) if dated else None

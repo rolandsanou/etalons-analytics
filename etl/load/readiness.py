@@ -10,6 +10,7 @@ There is no composite score here. The band is one stated rule over one measure,
 and every component is published beside it so the rule can be argued with.
 """
 
+from .common import latest_squad_window
 from ..util import as_int, read_csv
 from ..config import STAGING
 
@@ -28,28 +29,10 @@ def _band(share):
     return "neutral" if share >= NEUTRAL else "weak"
 
 
-# "recent" is a supplementary Wikipedia list, not a squad — see squadnews.
-SUPPLEMENTARY = {"recent"}
-
-
-def _latest_window(rows):
-    """The newest announced squad, whichever source it came from.
-
-    Not hard-coded to "current": a federation list typed into
-    data/seed/manual_squads.csv is newer than Wikipedia's section and has to win,
-    or the site reports the sharpness of a squad that has been superseded.
-    """
-    dated = {}
-    for r in rows:
-        if r["window_id"] not in SUPPLEMENTARY:
-            dated.setdefault(r["window_id"], r.get("window_date", ""))
-    return max(dated, key=lambda w: dated[w]) if dated else None
-
-
 def build_readiness(window_id=None):
     """Club-match sharpness of the latest called-up squad."""
     rows = read_csv(STAGING / "callups.csv")
-    window_id = window_id or _latest_window(rows)
+    window_id = window_id or latest_squad_window(rows)
     callups = [c for c in rows if c["window_id"] == window_id]
     if not callups:
         return None

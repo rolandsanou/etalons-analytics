@@ -245,16 +245,24 @@ EN = {
     "{gf} marqué · {ga} encaissé": "{gf} scored · {ga} conceded",
     "Elo": "Elo",
     "Un modèle de classement, rien de plus : il ne sait rien des blessures, des "
-    "suspensions, de la forme du moment ni de la composition. Testé sur 61 "
-    "matchs qu'il n'avait pas vus, il fait 21,6 % mieux que le simple taux de "
+    "suspensions, de la forme du moment ni de la composition. Testé sur {n} "
+    "matchs qu'il n'avait pas vus, il fait {skill} % mieux que le simple taux de "
     "base. Les deux dernières lignes ne sont pas des prévisions mais des "
     "comptages : ce qui s'est réellement passé dans des matchs aussi "
     "déséquilibrés.":
         "A rating model, nothing more: it knows nothing about injuries, "
-        "suspensions, current form or team selection. Tested on 61 matches it "
-        "had not seen, it beats the plain base rate by 21.6%. The last two rows "
-        "are not forecasts but counts: what actually happened in matches as "
+        "suspensions, current form or team selection. Tested on {n} matches it "
+        "had not seen, it beats the plain base rate by {skill}%. The last two "
+        "rows are not forecasts but counts: what actually happened in matches as "
         "lopsided as this one.",
+    "Un modèle de classement, rien de plus : il ne sait rien des blessures, des "
+    "suspensions, de la forme du moment ni de la composition. Les deux dernières "
+    "lignes ne sont pas des prévisions mais des comptages : ce qui s'est "
+    "réellement passé dans des matchs aussi déséquilibrés.":
+        "A rating model, nothing more: it knows nothing about injuries, "
+        "suspensions, current form or team selection. The last two rows are not "
+        "forecasts but counts: what actually happened in matches as lopsided as "
+        "this one.",
     # --- squad movements ----------------------------------------------------
     "Cette liste date du {as_of} : c'est la dernière publiée par nos sources. "
     "Le groupe convoqué pour le match du {next} n'y figure pas encore — il "
@@ -328,15 +336,14 @@ EN = {
     "Score exact le plus probable": "Most likely exact score",
     "Buts attendus : {gf} – {ga}": "Expected goals: {gf} – {ga}",
     "Le score le plus probable n'est pas le score attendu : à {p} %, il veut "
-    "dire que dans plus de quatre cas sur cinq le match finit autrement. Les "
-    "buts attendus viennent de {n} matchs comparables, puis la répartition est "
-    "ajustée pour coller à la probabilité de victoire ci-contre — les deux ne "
-    "peuvent pas se contredire.":
-        "The likeliest score is not the expected score: at {p}%, it means that "
-        "more than four times out of five the match ends some other way. The "
-        "expected goals come from {n} comparable matches, then the split is "
-        "fitted to the win probability beside it — the two cannot contradict "
-        "each other.",
+    "dire que {rest} % du temps le match finit autrement. Les buts attendus "
+    "viennent de {n} matchs comparables, puis la répartition est ajustée pour "
+    "coller à la probabilité de victoire ci-contre — les deux ne peuvent pas se "
+    "contredire.":
+        "The likeliest score is not the expected score: at {p}%, it means the "
+        "match ends some other way {rest}% of the time. The expected goals come "
+        "from {n} comparable matches, then the split is fitted to the win "
+        "probability beside it — the two cannot contradict each other.",
 
     # --- computed facts ----------------------------------------------------
     "Le saviez-vous ?": "Did you know?",

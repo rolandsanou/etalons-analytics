@@ -7,6 +7,7 @@ from ..config import (CONTACT_EMAIL, SEED, SITE_DATA, STAGING, STATS_SINCE, TEAM
                       WIKI_TEAM_URL)
 from ..transform import matches as matches_mod
 from ..util import read_csv, read_json, write_json
+from .common import latest_squad_window
 from .factoids import build_factoids
 from .formations import build_formations
 from .profiles import build_profiles
@@ -51,25 +52,6 @@ def _overlay_verified(players):
         else:
             p["club_verified"] = False
     return players
-
-
-# "recent" is a supplementary list, not an announced squad — see load/squadnews.
-SUPPLEMENTARY_WINDOWS = {"recent"}
-
-
-def latest_squad_window(callups):
-    """The newest announced squad, whatever source it came from.
-
-    This used to be hard-coded to "current", the Wikipedia section. A federation
-    list typed into data/seed/manual_squads.csv is newer than that section for
-    weeks at a time, so the page headline showed an old squad while the sections
-    below it discussed the new one.
-    """
-    dated = {}
-    for c in callups:
-        if c["window_id"] not in SUPPLEMENTARY_WINDOWS:
-            dated.setdefault(c["window_id"], c.get("window_date", ""))
-    return max(dated, key=lambda w: dated[w]) if dated else None
 
 
 def build_squad_json(today):

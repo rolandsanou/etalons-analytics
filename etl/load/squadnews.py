@@ -15,6 +15,7 @@ from ..config import STAGING
 from datetime import date
 
 from ..analytics import age_on
+from .common import SUPPLEMENTARY_WINDOWS
 from ..util import as_float, as_int, read_csv
 
 # A player counts as an established regular — and so as news when he is absent —
@@ -37,11 +38,6 @@ def _from_earlier_camp(as_of, next_match):
     return gap > ANNOUNCEMENT_DAYS
 
 
-# "recent" is not a squad. It is the Wikipedia section listing players called up
-# in the last twelve months *who are not in the current squad*, so it is disjoint
-# from it by construction — comparing the two would report every current player
-# as a change. It still counts as evidence a player was around recently.
-SUPPLEMENTARY = {"recent"}
 
 
 def _windows():
@@ -50,7 +46,7 @@ def _windows():
     seen = {}
     for r in rows:
         seen.setdefault(r["window_id"], r.get("window_date", ""))
-    squads = sorted((w for w in seen if w not in SUPPLEMENTARY),
+    squads = sorted((w for w in seen if w not in SUPPLEMENTARY_WINDOWS),
                     key=lambda w: seen[w], reverse=True)
     return squads, rows
 
@@ -83,7 +79,7 @@ def build_squad_news():
     now, before = members.get(latest, {}), members.get(previous, {})
     # every window older than the latest, to tell a debutant from a recall
     ever_before = set()
-    for w in list(order[1:]) + sorted(SUPPLEMENTARY):
+    for w in list(order[1:]) + sorted(SUPPLEMENTARY_WINDOWS):
         ever_before |= set(members.get(w, {}))
 
     profiles = {p["player_id"]: p for p in read_csv(STAGING / "players.csv")}

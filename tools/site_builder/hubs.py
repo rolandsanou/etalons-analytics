@@ -198,12 +198,26 @@ def match_outlook(d, ctx):
                      t("{gf} marqué · {ga} encaissé", gf=_fmt(sim["gf_pm"], 2),
                        ga=_fmt(sim["ga_pm"], 2))))
 
-    note = t("Un modèle de classement, rien de plus : il ne sait rien des "
-             "blessures, des suspensions, de la forme du moment ni de la "
-             "composition. Testé sur 61 matchs qu'il n'avait pas vus, il fait "
-             "21,6 % mieux que le simple taux de base. Les deux dernières "
-             "lignes ne sont pas des prévisions mais des comptages : ce qui "
-             "s'est réellement passé dans des matchs aussi déséquilibrés.")
+    # The backtest figures are read from the data, never written into the copy:
+    # they move every time a match is played, and a sentence that states them
+    # from memory starts lying the moment it is written.
+    bt = d.elo.get("backtest") or {}
+    tested = (bt.get("test") or {}).get("matches")
+    skill = (bt.get("brier") or {}).get("skill_vs_base")
+    if tested and skill is not None:
+        note = t("Un modèle de classement, rien de plus : il ne sait rien des "
+                 "blessures, des suspensions, de la forme du moment ni de la "
+                 "composition. Testé sur {n} matchs qu'il n'avait pas vus, il "
+                 "fait {skill} % mieux que le simple taux de base. Les deux "
+                 "dernières lignes ne sont pas des prévisions mais des "
+                 "comptages : ce qui s'est réellement passé dans des matchs "
+                 "aussi déséquilibrés.", n=tested, skill=_fmt(skill, 1))
+    else:
+        note = t("Un modèle de classement, rien de plus : il ne sait rien des "
+                 "blessures, des suspensions, de la forme du moment ni de la "
+                 "composition. Les deux dernières lignes ne sont pas des "
+                 "prévisions mais des comptages : ce qui s'est réellement passé "
+                 "dans des matchs aussi déséquilibrés.")
 
     return f"""<section id="pronostic">
     <h2>{esc(t("Ce que disent les chiffres"))}</h2>
@@ -283,12 +297,13 @@ def scoreline_card(nxt, ctx):
         f'<span class="track"><i style="width:{round(100 * s["p"] / sc["scores"][0]["p"])}%"></i></span>'
         f'<span class="pv">{_fmt(100 * s["p"], 1)} %</span></li>'
         for s in sc["scores"])
-    note = t("Le score le plus probable n'est pas le score attendu : à "
-             "{p} %, il veut dire que dans plus de quatre cas sur cinq le match "
-             "finit autrement. Les buts attendus viennent de {n} matchs "
-             "comparables, puis la répartition est ajustée pour coller à la "
-             "probabilité de victoire ci-contre — les deux ne peuvent pas se "
-             "contredire.", p=_fmt(100 * top["p"], 1), n=sc["from_n"])
+    note = t("Le score le plus probable n'est pas le score attendu : à {p} %, "
+             "il veut dire que {rest} % du temps le match finit autrement. Les "
+             "buts attendus viennent de {n} matchs comparables, puis la "
+             "répartition est ajustée pour coller à la probabilité de victoire "
+             "ci-contre — les deux ne peuvent pas se contredire.",
+             p=_fmt(100 * top["p"], 1), rest=_fmt(100 * (1 - top["p"]), 1),
+             n=sc["from_n"])
     return f"""<div class="card w6">
         <h3>{esc(t("Score exact le plus probable"))}</h3>
         <p class="sub">{esc(t("Buts attendus : {gf} – {ga}", gf=_fmt(sc["goals_for"], 2), ga=_fmt(sc["goals_against"], 2)))}</p>

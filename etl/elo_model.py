@@ -24,12 +24,18 @@ def gd_multiplier(gd):
     return 1.75 + (gd - 3) / 8.0
 
 
+# Rating points added to the home side. Anything that reasons about a fixture's
+# venue must use this, so an expectation and the rating that produced it cannot
+# drift apart.
+HOME_ADVANTAGE = 100
+
+
 def expected(diff):
     return 1.0 / (1.0 + 10 ** (-diff / 400.0))
 
 
 def update(home_elo, away_elo, home_goals, away_goals, tournament, neutral):
-    diff = home_elo - away_elo + (0 if neutral else 100)
+    diff = home_elo - away_elo + (0 if neutral else HOME_ADVANTAGE)
     e_home = expected(diff)
     if home_goals > away_goals:
         s = 1.0

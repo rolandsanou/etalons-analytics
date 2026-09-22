@@ -6,6 +6,7 @@ accounts for squad availability, venue or form.
 """
 
 from ..config import STAGING, TEAM
+from ..elo_model import HOME_ADVANTAGE
 from ..analytics import (CAF, calibrate_draw_rate, fit_scoreline,
                          likely_scorelines, wdl_from_elo)
 from ..transform.matches import classify_tournament, load_results, team_matches
@@ -56,9 +57,6 @@ def build_predictions():
     }
 
 
-# The Elo model's own home advantage, so a fixture expectation and the rating
-# that produced it cannot disagree.
-HOME_ADVANTAGE = 100
 # Half-width, in Elo points, of the rating gap counted as "a match like this".
 SIMILAR_BAND = 150
 # Below this many comparable matches the base rate is not stated at all.

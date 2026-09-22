@@ -9,6 +9,7 @@ end of the build instead of silently shipping in French.
 """
 
 import hashlib
+import re
 import sys
 from pathlib import Path
 
@@ -53,6 +54,25 @@ def asset_version():
     return digest.hexdigest()[:8]
 
 
+def theme_colors():
+    """The page background for each scheme, read from the stylesheet.
+
+    A <meta name="theme-color"> cannot hold a CSS variable, so the browser
+    chrome is the one place the palette would have to be written out by hand —
+    and the one place a recolour would silently fail to reach. Read --paper
+    instead, so the address bar cannot drift away from the page behind it.
+    """
+    css = (SITE / "assets" / "style.css").read_text(encoding="utf-8")
+    openers = {"light": r":root\s*\{",
+               "dark": r':root\[data-theme="dark"\]\s*\{'}
+    found = {}
+    for scheme, opener in openers.items():
+        m = re.search(opener + r"[^}]*?--paper:\s*([^;]+);", css, re.S)
+        if m:
+            found[scheme] = m.group(1).strip()
+    return found
+
+
 def main():
     # The report below quotes site copy, which is full of accents, em dashes
     # and arrows. On a cp1252 console that raises UnicodeEncodeError and takes
@@ -63,6 +83,7 @@ def main():
         pass
     d = Data()
     layout.ASSET_VERSION = asset_version()
+    layout.THEME_COLOR = theme_colors()
     layout.FOOTER = layout.build_footers(
         d.meta.get("updated_on") or d.meta["generated_at"][:10],
         d.meta["contact"])

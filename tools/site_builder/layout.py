@@ -31,6 +31,20 @@ ASSET_VERSION = ""
 # document showed an empty footer. Set by build_site.main().
 FOOTER = {}
 
+# Page background per colour scheme, for the browser chrome. A meta tag cannot
+# hold a CSS variable, so build_site.main() reads --paper out of the stylesheet
+# rather than have the palette written out a second time here.
+THEME_COLOR = {}
+
+
+def theme_color_meta():
+    """Browser chrome colour per scheme; nothing at all if unknown."""
+    return "\n".join(
+        f'<meta name="theme-color" content="{THEME_COLOR[scheme]}"'
+        f' media="(prefers-color-scheme: {scheme})">'
+        for scheme in ("light", "dark") if THEME_COLOR.get(scheme))
+
+
 FOOTER_TEMPLATE = {
     "fr": ("Étalons Analytics — projet open source (MIT). Données : Wikipedia "
            "(CC BY-SA), martj42/international_results (CC0), Sofascore (non "
@@ -177,8 +191,7 @@ def page(ctx, *, title, description, body, needs=(), scripts=(), page_class="",
 {social}
 {hreflang}
 {seo.jsonld(*structured)}
-<meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+{theme_color_meta()}
 <link rel="icon" href="{asset("assets/favicon.svg")}" type="image/svg+xml">
 <link rel="icon" href="{asset("assets/favicon.ico")}" sizes="32x32">
 <link rel="apple-touch-icon" href="{asset("assets/apple-touch-icon.png")}">
