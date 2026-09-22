@@ -1,3 +1,4 @@
+import pathlib
 """What the force flags are allowed to re-download.
 
 These guard a wiring bug rather than a formula: `fetch_player_profiles` and
@@ -59,3 +60,40 @@ def test_extract_run_passes_the_flag_down():
         extract.run(force_profiles=True)
     assert sofa.call_args.kwargs["force_profiles"] is True
     assert sofa.call_args.kwargs["force"] is False
+
+
+# --- a match fetched too early must not stay broken ------------------------
+
+def test_a_cached_error_is_retried_while_the_match_is_recent():
+    """Run the pipeline at full time and the feed can answer 404 for a match
+    whose statistics appear an hour later. Caching that 404 for good would
+    leave the match page permanently without its report."""
+    import tempfile
+    from datetime import date, timedelta
+    from etl.extract.sofascore import _needs_event_fetch
+    from etl.util import write_json
+
+    dest = pathlib.Path(tempfile.mkdtemp()) / "16205035.json"
+    yesterday = (date.today() - timedelta(days=1)).isoformat()
+    long_ago = (date.today() - timedelta(days=400)).isoformat()
+
+    # nothing cached yet
+    assert _needs_event_fetch(dest, yesterday)
+
+    write_json(dest, {"error": "HTTP 404"})
+    assert _needs_event_fetch(dest, yesterday)        # still worth asking again
+    assert not _needs_event_fetch(dest, long_ago)     # that 404 is settled
+
+    write_json(dest, {"statistics": [{"period": "ALL"}]})
+    assert not _needs_event_fetch(dest, yesterday)    # a real answer is kept
+    assert _needs_event_fetch(dest, yesterday, force=True)
+
+
+def test_an_undated_event_never_loops_on_a_cached_error():
+    import tempfile
+    from etl.extract.sofascore import _needs_event_fetch
+    from etl.util import write_json
+    dest = pathlib.Path(tempfile.mkdtemp()) / "x.json"
+    write_json(dest, {"error": "HTTP 404"})
+    assert not _needs_event_fetch(dest, None)
+    assert not _needs_event_fetch(dest, "not-a-date")

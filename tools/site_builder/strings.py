@@ -595,6 +595,68 @@ EN = {
 
     # --- shared -----------------------------------------------------------
     "Burkina Faso": "Burkina Faso",
+
+    # --- post-match report: how it unfolded, phases of play, player detail ---
+    "Comment le match s'est déroulé": "How the match unfolded",
+    "1re mi-temps": "First half", "2e mi-temps": "Second half",
+    "BF": "BF", "Adv.": "Opp.",
+    "en tête": "ahead", "à égalité": "level", "menés": "behind",
+    "Buts marqués (haut) et encaissés (bas), par tranche de quinze minutes.":
+        "Goals scored (top) and conceded (bottom), in quarter-hour bands.",
+    "Entrées dans le dernier tiers": "Final-third entries",
+    "Le même résultat peut recouvrir deux matchs très différents. La barre dit "
+    "combien de minutes le Burkina a passées devant, à égalité et derrière ; les "
+    "points disent quand les buts sont tombés ; le tableau compare les deux "
+    "mi-temps. Un chiffre absent est un chiffre que le fournisseur n'a pas publié "
+    "pour ce match, pas un zéro.":
+        "One scoreline can cover two completely different matches. The bar shows "
+        "how many minutes Burkina Faso spent ahead, level and behind; the dots "
+        "show when the goals arrived; the table compares the two halves. A "
+        "missing figure is one the data provider did not publish for this match, "
+        "not a zero.",
+
+    "Phases de jeu": "Phases of play",
+    "Construction": "Build-up", "Progression": "Progression",
+    "Finition": "Finishing", "Duels": "Duels",
+    "Longs ballons": "Long balls", "Centres": "Crosses", "Dribbles": "Dribbles",
+    "Jeu dans le dernier tiers": "Final-third play",
+    "Grosses occasions converties": "Big chances converted",
+    "Duels au sol": "Ground duels", "Duels aériens": "Aerial duels",
+    "Chaque ligne est un nombre de tentatives réussies sur le nombre tenté : "
+    "66/95 veut dire 66 réussies sur 95 essayées. Le Burkina à gauche, "
+    "l'adversaire à droite, sur le même match — c'est la seule comparaison qui "
+    "tienne, les deux équipes ayant joué le même terrain le même soir. Réussir "
+    "une phase n'est pas la gagner : on peut réussir ses passes et ne rien créer.":
+        "Each line is attempts completed out of attempts made: 66/95 means 66 "
+        "completed from 95 tried. Burkina Faso on the left, the opponent on the "
+        "right, in the same match — the only comparison that holds, since both "
+        "sides played the same pitch on the same night. Completing a phase is "
+        "not winning it: a team can complete its passes and create nothing.",
+
+    "Ce que les joueurs ont fait": "What the players did",
+    "Joueur": "Player", "Joueurs de champ": "Outfield players",
+    "Ballons touchés": "Touches", "Passes clés": "Key passes",
+    "Duels gagnés": "Duels won", "Ballons récupérés": "Recoveries",
+    "Sorties aériennes": "High claims",
+    "Dégagements du poing": "Punches",
+    "le plus de ballons touchés": "most touches",
+    "le plus de duels gagnés": "most duels won",
+    "le plus de passes clés": "most key passes",
+    "le plus de tacles réussis": "most tackles won",
+    "le plus de ballons récupérés": "most recoveries",
+    "le plus d'interceptions": "most interceptions",
+    "le plus d'arrêts": "most saves",
+    "le plus de tirs": "most shots",
+    "Ce sont des comptes bruts, pas des notes : « 25/30 » veut dire 25 passes "
+    "réussies sur 30 tentées. Il n'y a pas d'homme du match ici, parce "
+    "qu'additionner des tacles et des passes en un seul score reviendrait à "
+    "décider à votre place ce qui compte dans un match. Les joueurs que le "
+    "fournisseur n'a pas détaillés ne figurent pas au tableau.":
+        "These are raw counts, not ratings: “25/30” means 25 passes "
+        "completed from 30 attempted. There is no man of the match here, because "
+        "adding tackles and passes into a single score would decide on your "
+        "behalf what matters in a game. Players the data provider did not cover "
+        "in detail are not in the table.",
 }
 
 # result letters differ per language (Victoire/Nul/Défaite vs Win/Draw/Loss)

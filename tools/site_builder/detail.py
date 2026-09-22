@@ -9,7 +9,7 @@ gets a real, crawlable page.
 import re
 import unicodedata
 
-from . import layout, seo
+from . import layout, matchcards, seo
 from .layout import avatar, card, esc, page
 
 # French source strings double as the translation keys (see strings.py)
@@ -209,6 +209,11 @@ def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
     venue = t({"H": "à domicile", "A": "à l'extérieur"}.get(event["venue"], ""))
     state = d.state_by.get(eid, {})
     stats = d.stats_for_event(eid)
+    apps = d.apps_for_event(eid)
+    unfolding = matchcards.unfolding(ctx, state, d.stats_for_event(eid, "1ST"),
+                                     d.stats_for_event(eid, "2ND"), _fmt)
+    phases = matchcards.phases(ctx, stats.get("bf"), stats.get("opp"), _fmt)
+    player_detail = matchcards.players(ctx, apps, players_with_pages, _fmt)
     pens = event.get("pens")
     score = f"{gf} – {ga}" + (f" ({pens} t.a.b.)" if pens else "")
 
@@ -236,6 +241,41 @@ def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
                   f'{esc(next_event["opponent"])} ({next_event["date"]}) →</a>'
                   if next_event else "<span></span>")
 
+    extras = []
+    if unfolding:
+        extras.append(card(
+            width="w12",
+            title_html=f'<h3>{esc(t("Comment le match s'est déroulé"))}</h3>',
+            extra=unfolding,
+            plain_text=t("Le même résultat peut recouvrir deux matchs très "
+                         "différents. La barre dit combien de minutes le Burkina a "
+                         "passées devant, à égalité et derrière ; les points disent "
+                         "quand les buts sont tombés ; le tableau compare les deux "
+                         "mi-temps. Un chiffre absent est un chiffre que le "
+                         "fournisseur n'a pas publié pour ce match, pas un zéro.")))
+    if phases:
+        extras.append(card(
+            width="w6", title_html=f'<h3>{esc(t("Phases de jeu"))}</h3>',
+            extra=phases,
+            plain_text=t("Chaque ligne est un nombre de tentatives réussies sur le "
+                         "nombre tenté : 66/95 veut dire 66 réussies sur 95 essayées. "
+                         "Le Burkina à gauche, l'adversaire à droite, sur le même "
+                         "match — c'est la seule comparaison qui tienne, les deux "
+                         "équipes ayant joué le même terrain le même soir. Réussir "
+                         "une phase n'est pas la gagner : on peut réussir ses passes "
+                         "et ne rien créer.")))
+    if player_detail:
+        extras.append(card(
+            width="w6", title_html=f'<h3>{esc(t("Ce que les joueurs ont fait"))}</h3>',
+            extra=player_detail,
+            plain_text=t("Ce sont des comptes bruts, pas des notes : « 25/30 » veut "
+                         "dire 25 passes réussies sur 30 tentées. Il n'y a pas "
+                         "d'homme du match ici, parce qu'additionner des tacles et "
+                         "des passes en un seul score reviendrait à décider à votre "
+                         "place ce qui compte dans un match. Les joueurs que le "
+                         "fournisseur n'a pas détaillés ne figurent pas au tableau.")))
+    sections = f'<div class="grid">{"".join(extras)}</div>' if extras else ""
+
     body = f"""{head}
 <main>
   <p class="crumb"><a href="{ctx.url('home')}">{esc(t("Accueil"))}</a> ›
@@ -259,11 +299,12 @@ def match_page(d, ctx, event, prev_event, next_event, players_with_pages):
                        "colonnes plutôt qu'un chiffre seul : dominer la possession ou "
                        "les tirs n'a jamais gagné un match à lui tout seul."))}
     {card(width="w6", title_html=f'<h3>{esc(t("Composition"))}</h3>',
-          extra=lineup_block(ctx, d.apps_for_event(eid), players_with_pages),
+          extra=lineup_block(ctx, apps, players_with_pages),
           plain_text=t("Le onze de départ, les entrants, et ceux restés sur le banc. "
                        "La note est celle du fournisseur de données pour ce match ; "
                        "elle manque sur les rencontres les moins couvertes."))}
   </div>
+  {sections}
   <div class="pager">{pager_prev}{pager_next}</div>
 </main>"""
     scoreline = f"Burkina Faso {gf}–{ga} {event['opponent']}"

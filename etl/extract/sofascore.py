@@ -359,12 +359,35 @@ def fetch_player_profiles(ids, force=False):
     return fetched
 
 
+# A played match never changes, so its lineup, incidents and statistics are
+# fetched once and kept. But "played" and "published" are not the same moment:
+# run the pipeline at full time and the feed may answer 404 for a match whose
+# statistics appear an hour later, and that 404 would then be cached for good.
+# So a failed fetch is retried while the match is still recent, and only settles
+# into a permanent answer once it is not.
+RECENT_EVENT_DAYS = 30
+
+
+def _needs_event_fetch(dest, event_date, force=False):
+    """Fetch when nothing is cached, when the cache is an error and the match is
+    still recent, or when asked to."""
+    if force or not dest.exists():
+        return True
+    if "error" not in read_json(dest):
+        return False
+    try:
+        age = (date.today() - date.fromisoformat(event_date)).days
+    except (TypeError, ValueError):
+        return False
+    return age <= RECENT_EVENT_DAYS
+
+
 def fetch_incidents(index):
     INCIDENTS.mkdir(parents=True, exist_ok=True)
     fetched = 0
     for ev in index:
         dest = INCIDENTS / f"{ev['event_id']}.json"
-        if dest.exists():
+        if not _needs_event_fetch(dest, ev.get("date")):
             continue
         try:
             data = get_sofa_json(f"{SOFA_BASE}/event/{ev['event_id']}/incidents")
@@ -381,7 +404,7 @@ def fetch_statistics(index):
     fetched = 0
     for ev in index:
         dest = STATISTICS / f"{ev['event_id']}.json"
-        if dest.exists():
+        if not _needs_event_fetch(dest, ev.get("date")):
             continue
         try:
             data = get_sofa_json(f"{SOFA_BASE}/event/{ev['event_id']}/statistics")
@@ -485,7 +508,7 @@ def run(force=False, force_profiles=False):
     fetched = 0
     for ev in index:
         dest = LINEUPS / f"{ev['event_id']}.json"
-        if dest.exists():
+        if not _needs_event_fetch(dest, ev.get("date")):
             continue
         try:
             data = get_sofa_json(f"{SOFA_BASE}/event/{ev['event_id']}/lineups")
