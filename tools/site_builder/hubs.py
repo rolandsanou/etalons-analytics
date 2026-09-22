@@ -654,8 +654,11 @@ def callup_windows(d, ctx):
         meta = labels.get(wid, {})
         label = meta.get("label_fr" if ctx.lang == "fr" else "label_en", wid)
         when = meta.get("window_date", "")
+        # the name the federation published, which is not always the name the
+        # registry files him under — the initials and the portrait's alt text
+        # have to follow the label, or a card reads "MK" beside "Élohim Kaboré"
         cards = "".join(f"""<a class="pcard" href="{ctx.url('player', c['player_id'])}">
-  {avatar(ctx.asset(d.photo('player', c['player_id'])) if d.photo('player', c['player_id']) else None, c['name'], 'pic')}
+  {avatar(ctx.asset(d.photo('player', c['player_id'])) if d.photo('player', c['player_id']) else None, c.get('name_as_called') or c['name'], 'pic')}
   <span><span class="nm">{esc(c.get('name_as_called') or c['name'])}</span>
     <span class="rl">{esc(pos_label(ctx, c['pos']))}</span>
     <span class="stat">{esc(c['club_at_time'] or '—')}</span></span>

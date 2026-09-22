@@ -38,10 +38,32 @@ HUBS = [
 ]
 
 
+WRITTEN = set()
+
+
 def write(rel_path, html):
     path = SITE / rel_path
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding="utf-8")
+    WRITTEN.add(path.resolve())
+
+
+def prune(dirs):
+    """Delete pages in `dirs` that this build did not write.
+
+    A player or a match keeps its page under a slug derived from its name, so
+    correcting a name leaves the old page behind — still served, still
+    indexable, and no longer in the sitemap. Two people merged into one left
+    two such orphans. The build owns these directories entirely, so anything in
+    them it did not just write is stale by definition.
+    """
+    removed = []
+    for rel in dirs:
+        for path in sorted((SITE / rel).glob("*.html")):
+            if path.resolve() not in WRITTEN:
+                path.unlink()
+                removed.append(f"{rel}/{path.name}")
+    return removed
 
 
 def asset_version():
@@ -114,12 +136,16 @@ def main():
         counts[lang] = pages
 
     write("404.html", not_found())
+    dropped = prune(["joueurs", "matchs", "en/players", "en/matches"])
     listed = sitemap(d, events, players)
     total = sum(counts.values())
     print(f"built {total} pages ("
           + ", ".join(f"{lang}: {n}" for lang, n in counts.items())
           + f" — {len(players)} players, {len(events)} matches per language)")
     print(f"sitemap lists {listed} URLs with language alternates; 404.html written")
+    if dropped:
+        print(f"removed {len(dropped)} page(s) nothing generates any more: "
+              + ", ".join(dropped[:6]))
     if MISSES:
         print(f"WARNING: {len(MISSES)} strings have no English translation:")
         for source in sorted(MISSES)[:12]:

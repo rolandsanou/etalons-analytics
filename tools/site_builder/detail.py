@@ -312,7 +312,8 @@ def player_page(d, ctx, profile, players_with_pages):
          if profile.get("age") else "–"),
         (t("Club"), club + (f" · {league}" if league else "")),
         (t("Sélections (dernière liste)"), profile.get("caps") or "–"),
-        (t("Buts (carrière)"), profile.get("goals_career") or "–"),
+        # same provenance as the caps beside it: the last list that stated it
+        (t("Buts (dernière liste)"), profile.get("goals_career") or "–"),
         (t("Valeur estimée"),
          f"{_fmt(_num(profile['market_value_eur']) / 1e6, 1)} M€"
          if profile.get("market_value_eur") else "–"),

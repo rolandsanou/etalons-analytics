@@ -1172,7 +1172,7 @@ event_id,date,tournament,opponent,venue,gf,ga,player_id,sofa_player_id,name,pos,
 15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,ismahila-ouedraogo,1099259,Ismahila Ouédraogo,MF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,5,0,level
 15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,issa-kabore,1006189,Issa Kaboré,DF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,5,0,level
 15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,lohann-doucet,1170523,Lohann Doucet,MF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,5,0,level
-15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,moise-kabore,1490960,Moise Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
+15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,moise-elohim-kabore,1490960,Moise Elohim Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
 15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,ousseni-bouda,983282,Ousseni Bouda,FW,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,5,0,level
 15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,pierre-landry-kabore,1102857,Pierre Landry Kaboré,FW,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,5,0,level
 15910597,2026-03-31,Int. Friendly Games,Guinea-Bissau,H,1,1,adamo-nagalo,1108094,Adamo Nagalo,DF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,97,1,1,level
@@ -1206,7 +1206,7 @@ event_id,date,tournament,opponent,venue,gf,ga,player_id,sofa_player_id,name,pos,
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,mohamed-konate,850011,Mohamed Konaté,FW,1,1,0,70,6.3,1,3,3,0,0,0,0,1,1,1,6,4,0,1,0,0,0,1,0,0,14,10,0,0,0,0,0,2,0,0,0,0,0,1,1,0,0,21,0.0,73,0,2,level
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,mohamed-ouedraogo,1506773,Mohamed Ouédraogo,DF,1,1,0,43,5.2,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,4,2,30,26,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,31,0.0,43,0,2,level
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,mohamed-zougrana,1183551,Mohamed Zougrana,MF,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
-16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,moise-kabore,1490960,Moise Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
+16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,moise-elohim-kabore,1490960,Moise Elohim Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,ousseni-bouda,983282,Ousseni Bouda,FW,0,1,0,45,6.6,1,2,0,0,3,2,1,0,0,0,4,2,2,1,0,0,0,1,1,0,17,12,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,25,49,96,0,1,trailing
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,pakwo-gnanou,2618161,Pakwo Gnanou,DF,0,1,0,45,6.4,1,0,0,0,1,0,0,1,0,0,1,1,1,0,0,0,1,0,8,3,22,14,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,33,49,96,0,1,trailing
 16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,pierre-landry-kabore,1102857,Pierre Landry Kaboré,FW,0,1,0,20,6.9,1,2,0,0,1,0,0,0,1,0,3,1,1,0,0,0,1,1,0,0,4,4,0,0,0,0,0,1,0,0,0,0,0,2,1,0,0,11,73,96,0,1,trailing
@@ -1230,7 +1230,7 @@ event_id,date,tournament,opponent,venue,gf,ga,player_id,sofa_player_id,name,pos,
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,lohann-doucet,1170523,Lohann Doucet,MF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,72,0,2,level
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,mohamed-konate,850011,Mohamed Konaté,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,mohamed-zougrana,1183551,Mohamed Zougrana,MF,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,0,
-16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,moise-kabore,1490960,Moise Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,95,2,1,trailing
+16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,moise-elohim-kabore,1490960,Moise Elohim Kaboré,FW,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,95,2,1,trailing
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,ousseni-bouda,983282,Ousseni Bouda,FW,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,61,0,1,level
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,pierre-landry-kabore,1102857,Pierre Landry Kaboré,FW,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,61,0,1,level
 16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,rachide-gnanou,2045370,Rachide Gnanou,DF,1,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,95,2,2,level

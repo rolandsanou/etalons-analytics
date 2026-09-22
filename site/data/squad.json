@@ -270,6 +270,20 @@
    "league_group": "europe_other"
   },
   {
+   "player_id": "moise-elohim-kabore",
+   "name": "Moise Elohim Kaboré",
+   "name_as_called": "Élohim Kaboré",
+   "pos": "FW",
+   "dob": null,
+   "caps": 0,
+   "goals": 0,
+   "club": "SK Beveren",
+   "club_country": "Belgium",
+   "league": "Pro League",
+   "club_verified": true,
+   "league_group": "europe_other"
+  },
+  {
    "player_id": "nasser-djiga",
    "name": "Nasser Djiga",
    "name_as_called": "Nasser Yacouba Djiga",
@@ -337,19 +351,6 @@
    "club_country": "Finland",
    "league": "Veikkausliiga",
    "club_verified": true,
-   "league_group": "europe_other"
-  },
-  {
-   "player_id": "elohim-kabore",
-   "name": "Élohim Kaboré",
-   "name_as_called": "Élohim Kaboré",
-   "pos": "FW",
-   "dob": null,
-   "caps": 0,
-   "goals": 0,
-   "club": "SK Beveren",
-   "club_country": "Belgium",
-   "club_verified": false,
    "league_group": "europe_other"
   }
  ],
@@ -1223,12 +1224,12 @@
  "readiness": {
   "window_id": "sept2026",
   "squad": 25,
-  "rated": 24,
-  "no_club_data": 1,
+  "rated": 25,
+  "no_club_data": 0,
   "starting": 16,
-  "share": 0.667,
-  "band": "strong",
-  "median_per_app": 73.0,
+  "share": 0.64,
+  "band": "neutral",
+  "median_per_app": 72.5,
   "rule": {
    "starter_minutes": 60,
    "min_apps": 3,
@@ -1501,6 +1502,18 @@
     "starting": false
    },
    {
+    "player_id": "moise-elohim-kabore",
+    "name": "Moise Elohim Kaboré",
+    "pos": "FW",
+    "club": "Pro League",
+    "season": "26/27",
+    "apps": 6,
+    "minutes": 236,
+    "per_app": 39.3,
+    "counts": true,
+    "starting": false
+   },
+   {
     "player_id": "dango-ouattara",
     "name": "Dango Ouattara",
     "pos": "FW",
@@ -1522,18 +1535,6 @@
     "minutes": 89,
     "per_app": 29.7,
     "counts": true,
-    "starting": false
-   },
-   {
-    "player_id": "elohim-kabore",
-    "name": "Élohim Kaboré",
-    "pos": "FW",
-    "club": "",
-    "season": "",
-    "apps": 0,
-    "minutes": 0,
-    "per_app": null,
-    "counts": false,
     "starting": false
    }
   ]
