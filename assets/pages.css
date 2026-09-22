@@ -1016,3 +1016,162 @@ ul.scorelist .pv { text-align: right; font-size: 12px; color: var(--ink-2); }
   border-radius: 0 var(--r-s) var(--r-s) 0;
 }
 .bandline .bandpct { font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+/* =============================================================================
+   post-match report — how the match unfolded, phases of play, player detail
+
+   All of it is markup and CSS: match pages ship no JavaScript, so a bar here is
+   a div with a width and arrives with the page rather than after it.
+   ========================================================================== */
+
+.shape { margin-bottom: 18px; }
+
+.shapebar {
+  display: flex;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--bar-track);
+}
+
+.shapebar i { display: block; height: 100%; }
+.shapebar .lead { background: var(--s3); }
+.shapebar .level { background: var(--muted); }
+.shapebar .trail { background: var(--red); }
+
+.shape .sub { margin-top: 7px; }
+
+.shape .sub .lead,
+.shape .sub .level,
+.shape .sub .trail { font-weight: 600; }
+
+.shape .sub .lead { color: var(--s3); }
+.shape .sub .trail { color: var(--red); }
+
+/* goals by quarter-hour: scored above the axis, conceded below */
+.gwins {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.gw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.gw i {
+  display: block;
+  width: 100%;
+  background: var(--bar-track);
+  border-radius: 2px;
+}
+
+.gw .gf, .gw .ga {
+  font-size: 11px;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+}
+
+.gw .gf { color: var(--s3); }
+.gw .ga { color: var(--red); }
+
+.gw em {
+  font-style: normal;
+  font-size: 10px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* half-by-half and per-player tables */
+.halves, .pstats { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+.halves th, .pstats th {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-align: left;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--row);
+  white-space: nowrap;
+}
+
+.halves td, .pstats td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--row);
+  font-variant-numeric: tabular-nums;
+}
+
+.halves .num, .pstats .num { text-align: right; }
+.halves tr:last-child td, .pstats tr:last-child td { border-bottom: 0; }
+
+.pstats .what { color: var(--muted); font-size: 11px; }
+
+/* "66/95" over "69 %": the share never appears without the counts behind it */
+.rr { display: inline-flex; flex-direction: column; align-items: flex-end; }
+.rr b { font-weight: 600; }
+.rr i { font-style: normal; font-size: 10px; color: var(--muted); }
+
+/* phases of play reuse the team-stat comparison bar */
+.phasegrp {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 16px;
+}
+
+.phaserow .lbl {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 62px;
+  align-items: baseline;
+  gap: 0 6px;
+  margin-bottom: 5px;
+}
+
+.phaserow .lbl span:nth-child(2) {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phaserow .lbl span:first-child .rr { align-items: flex-start; }
+
+.phaserow .bar {
+  height: 6px;
+  background: var(--bar-track);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.phaserow .bar i {
+  display: block;
+  height: 100%;
+  background: var(--red);
+  border-right: 2px solid var(--surface);
+}
+
+.standouts {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.standouts li { color: var(--ink-2); }
+.standouts b { color: var(--ink); }
