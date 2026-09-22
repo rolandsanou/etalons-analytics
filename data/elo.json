@@ -137,7 +137,7 @@
   },
   {
    "date": "1973-04-15",
-   "elo": 1372.9,
+   "elo": 1372.8,
    "opponent": "DR Congo"
   },
   {
@@ -182,7 +182,7 @@
   },
   {
    "date": "1977-03-20",
-   "elo": 1391.5,
+   "elo": 1391.6,
    "opponent": "Ivory Coast"
   },
   {
@@ -212,17 +212,17 @@
   },
   {
    "date": "1978-03-08",
-   "elo": 1393.4,
+   "elo": 1393.5,
    "opponent": "Zambia"
   },
   {
    "date": "1978-03-10",
-   "elo": 1384.6,
+   "elo": 1384.7,
    "opponent": "Ghana"
   },
   {
    "date": "1978-11-11",
-   "elo": 1405.3,
+   "elo": 1405.4,
    "opponent": "Mali"
   },
   {
@@ -242,7 +242,7 @@
   },
   {
    "date": "1981-08-30",
-   "elo": 1372.9,
+   "elo": 1373.0,
    "opponent": "Algeria"
   },
   {
@@ -357,12 +357,12 @@
   },
   {
    "date": "1987-01-17",
-   "elo": 1378.2,
+   "elo": 1378.3,
    "opponent": "Mali"
   },
   {
    "date": "1987-02-01",
-   "elo": 1360.4,
+   "elo": 1360.5,
    "opponent": "Liberia"
   },
   {
@@ -392,7 +392,7 @@
   },
   {
    "date": "1987-12-13",
-   "elo": 1401.8,
+   "elo": 1401.9,
    "opponent": "Mali"
   },
   {
@@ -412,7 +412,7 @@
   },
   {
    "date": "1988-06-03",
-   "elo": 1407.7,
+   "elo": 1407.8,
    "opponent": "Libya"
   },
   {
@@ -422,7 +422,7 @@
   },
   {
    "date": "1988-07-24",
-   "elo": 1461.2,
+   "elo": 1461.3,
    "opponent": "Niger"
   },
   {
@@ -437,7 +437,7 @@
   },
   {
    "date": "1988-08-02",
-   "elo": 1506.2,
+   "elo": 1506.3,
    "opponent": "Mali"
   },
   {
@@ -467,7 +467,7 @@
   },
   {
    "date": "1990-08-19",
-   "elo": 1519.5,
+   "elo": 1519.6,
    "opponent": "Benin"
   },
   {
@@ -732,7 +732,7 @@
   },
   {
    "date": "1998-01-07",
-   "elo": 1449.1,
+   "elo": 1449.0,
    "opponent": "Mozambique"
   },
   {
@@ -782,7 +782,7 @@
   },
   {
    "date": "1998-05-19",
-   "elo": 1488.9,
+   "elo": 1488.8,
    "opponent": "Cameroon"
   },
   {
@@ -802,7 +802,7 @@
   },
   {
    "date": "1998-08-31",
-   "elo": 1493.2,
+   "elo": 1493.1,
    "opponent": "Senegal"
   },
   {
@@ -822,7 +822,7 @@
   },
   {
    "date": "1998-10-21",
-   "elo": 1483.1,
+   "elo": 1483.0,
    "opponent": "Oman"
   },
   {
@@ -852,7 +852,7 @@
   },
   {
    "date": "1999-02-20",
-   "elo": 1518.6,
+   "elo": 1518.5,
    "opponent": "Gabon"
   },
   {
@@ -867,7 +867,7 @@
   },
   {
    "date": "1999-04-11",
-   "elo": 1557.8,
+   "elo": 1557.7,
    "opponent": "Burundi"
   },
   {
@@ -922,7 +922,7 @@
   },
   {
    "date": "2000-01-29",
-   "elo": 1518.0,
+   "elo": 1517.9,
    "opponent": "Zambia"
   },
   {
@@ -932,7 +932,7 @@
   },
   {
    "date": "2000-04-09",
-   "elo": 1481.6,
+   "elo": 1481.5,
    "opponent": "Ethiopia"
   },
   {
@@ -997,7 +997,7 @@
   },
   {
    "date": "2001-03-25",
-   "elo": 1484.5,
+   "elo": 1484.4,
    "opponent": "Angola"
   },
   {
@@ -1007,7 +1007,7 @@
   },
   {
    "date": "2001-06-03",
-   "elo": 1502.8,
+   "elo": 1502.7,
    "opponent": "Burundi"
   },
   {
@@ -1072,7 +1072,7 @@
   },
   {
    "date": "2002-01-30",
-   "elo": 1495.0,
+   "elo": 1494.9,
    "opponent": "Ghana"
   },
   {
@@ -1097,7 +1097,7 @@
   },
   {
    "date": "2003-03-30",
-   "elo": 1486.3,
+   "elo": 1486.2,
    "opponent": "Mozambique"
   },
   {
@@ -1107,7 +1107,7 @@
   },
   {
    "date": "2003-06-07",
-   "elo": 1516.4,
+   "elo": 1516.3,
    "opponent": "Mozambique"
   },
   {
@@ -1122,7 +1122,7 @@
   },
   {
    "date": "2003-09-24",
-   "elo": 1573.0,
+   "elo": 1572.9,
    "opponent": "Benin"
   },
   {
@@ -1207,7 +1207,7 @@
   },
   {
    "date": "2004-09-04",
-   "elo": 1518.5,
+   "elo": 1518.4,
    "opponent": "Uganda"
   },
   {
@@ -1337,7 +1337,7 @@
   },
   {
    "date": "2008-06-07",
-   "elo": 1480.4,
+   "elo": 1480.3,
    "opponent": "Burundi"
   },
   {
@@ -1357,7 +1357,7 @@
   },
   {
    "date": "2008-09-06",
-   "elo": 1501.9,
+   "elo": 1501.8,
    "opponent": "Tunisia"
   },
   {
@@ -1377,7 +1377,7 @@
   },
   {
    "date": "2009-06-06",
-   "elo": 1584.4,
+   "elo": 1584.3,
    "opponent": "Malawi"
   },
   {
@@ -1387,7 +1387,7 @@
   },
   {
    "date": "2009-08-12",
-   "elo": 1558.1,
+   "elo": 1558.0,
    "opponent": "Mali"
   },
   {
@@ -1552,7 +1552,7 @@
   },
   {
    "date": "2013-01-25",
-   "elo": 1586.4,
+   "elo": 1586.3,
    "opponent": "Ethiopia"
   },
   {
@@ -1572,7 +1572,7 @@
   },
   {
    "date": "2013-02-10",
-   "elo": 1618.0,
+   "elo": 1617.9,
    "opponent": "Nigeria"
   },
   {
@@ -1607,7 +1607,7 @@
   },
   {
    "date": "2013-08-17",
-   "elo": 1650.9,
+   "elo": 1650.8,
    "opponent": "South Africa"
   },
   {
@@ -1707,7 +1707,7 @@
   },
   {
    "date": "2015-05-29",
-   "elo": 1560.2,
+   "elo": 1560.1,
    "opponent": "Corsica"
   },
   {
@@ -1767,7 +1767,7 @@
   },
   {
    "date": "2016-08-24",
-   "elo": 1557.3,
+   "elo": 1557.2,
    "opponent": "Uzbekistan"
   },
   {
@@ -1837,7 +1837,7 @@
   },
   {
    "date": "2017-06-02",
-   "elo": 1700.6,
+   "elo": 1700.5,
    "opponent": "Chile"
   },
   {
@@ -1852,7 +1852,7 @@
   },
   {
    "date": "2017-09-02",
-   "elo": 1711.9,
+   "elo": 1711.8,
    "opponent": "Senegal"
   },
   {
@@ -1972,7 +1972,7 @@
   },
   {
    "date": "2021-06-05",
-   "elo": 1655.1,
+   "elo": 1655.0,
    "opponent": "Ivory Coast"
   },
   {
@@ -2102,7 +2102,7 @@
   },
   {
    "date": "2023-06-18",
-   "elo": 1677.0,
+   "elo": 1676.9,
    "opponent": "Cape Verde"
   },
   {
@@ -2630,8 +2630,8 @@
   ],
   "fixtures": [
    {
-    "date": "",
-    "date_confirmed": "0",
+    "date": "2026-09-25",
+    "date_confirmed": "1",
     "window_start": "2026-09-21",
     "window_end": "2026-10-06",
     "matchday": "1",
@@ -2641,8 +2641,8 @@
     "source": "seed"
    },
    {
-    "date": "",
-    "date_confirmed": "0",
+    "date": "2026-09-28",
+    "date_confirmed": "1",
     "window_start": "2026-09-21",
     "window_end": "2026-10-06",
     "matchday": "2",
@@ -2694,6 +2694,482 @@
     "venue": "H",
     "tournament": "Africa Cup of Nations, Qualification, Group F",
     "source": "seed"
+   }
+  ],
+  "outlook": [
+   {
+    "date": "2026-09-25",
+    "date_confirmed": "1",
+    "window_start": "2026-09-21",
+    "window_end": "2026-10-06",
+    "matchday": "1",
+    "opponent": "Benin",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 20,
+     "w": 12,
+     "d": 5,
+     "l": 3,
+     "gf": 37,
+     "ga": 19,
+     "last": "2025-11-18"
+    },
+    "opp_elo": 1539,
+    "elo_diff": 213,
+    "venue_swing": 100,
+    "probs": {
+     "win": 0.646,
+     "draw": 0.253,
+     "loss": 0.101
+    },
+    "xpts": 2.19,
+    "similar": {
+     "n": 128,
+     "w": 68,
+     "d": 36,
+     "l": 24,
+     "gf_pm": 1.55,
+     "ga_pm": 0.83,
+     "clean_sheets": 57,
+     "failed_to_score": 29,
+     "band": 150,
+     "from_year": "1986",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.753,
+     "goals_against": 0.627,
+     "total": 2.38,
+     "from_n": 128,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1622
+      },
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.1422
+      },
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.1017
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0926
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0892
+      },
+      {
+       "gf": 3,
+       "ga": 0,
+       "p": 0.0831
+      }
+     ]
+    }
+   },
+   {
+    "date": "2026-09-28",
+    "date_confirmed": "1",
+    "window_start": "2026-09-21",
+    "window_end": "2026-10-06",
+    "matchday": "2",
+    "opponent": "Central African Republic",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 4,
+     "w": 3,
+     "d": 0,
+     "l": 1,
+     "gf": 8,
+     "ga": 3,
+     "last": "2012-10-14"
+    },
+    "opp_elo": 1361,
+    "elo_diff": 190,
+    "venue_swing": -100,
+    "probs": {
+     "win": 0.621,
+     "draw": 0.258,
+     "loss": 0.122
+    },
+    "xpts": 2.12,
+    "similar": {
+     "n": 149,
+     "w": 76,
+     "d": 42,
+     "l": 31,
+     "gf_pm": 1.48,
+     "ga_pm": 0.87,
+     "clean_sheets": 67,
+     "failed_to_score": 38,
+     "band": 150,
+     "from_year": "1963",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.687,
+     "goals_against": 0.663,
+     "total": 2.35,
+     "from_n": 149,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1609
+      },
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.1357
+      },
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.1067
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0954
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.09
+      },
+      {
+       "gf": 3,
+       "ga": 0,
+       "p": 0.0763
+      }
+     ]
+    }
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-17",
+    "matchday": "3",
+    "opponent": "Mauritania",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 5,
+     "last": "2024-01-16"
+    },
+    "opp_elo": 1444,
+    "elo_diff": 307,
+    "venue_swing": 100,
+    "probs": {
+     "win": 0.745,
+     "draw": 0.219,
+     "loss": 0.036
+    },
+    "xpts": 2.45,
+    "similar": {
+     "n": 61,
+     "w": 38,
+     "d": 17,
+     "l": 6,
+     "gf_pm": 1.69,
+     "ga_pm": 0.62,
+     "clean_sheets": 32,
+     "failed_to_score": 12,
+     "band": 150,
+     "from_year": "1990",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.92,
+     "goals_against": 0.39,
+     "total": 2.31,
+     "from_n": 61,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1906
+      },
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.183
+      },
+      {
+       "gf": 3,
+       "ga": 0,
+       "p": 0.1171
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0993
+      },
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.0743
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0714
+      }
+     ]
+    }
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-17",
+    "matchday": "4",
+    "opponent": "Mauritania",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 5,
+     "last": "2024-01-16"
+    },
+    "opp_elo": 1444,
+    "elo_diff": 107,
+    "venue_swing": -100,
+    "probs": {
+     "win": 0.514,
+     "draw": 0.272,
+     "loss": 0.214
+    },
+    "xpts": 1.81,
+    "similar": {
+     "n": 232,
+     "w": 99,
+     "d": 64,
+     "l": 69,
+     "gf_pm": 1.33,
+     "ga_pm": 1.08,
+     "clean_sheets": 88,
+     "failed_to_score": 66,
+     "band": 150,
+     "from_year": "1960",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.508,
+     "goals_against": 0.902,
+     "total": 2.41,
+     "from_n": 232,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1354
+      },
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.1222
+      },
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.1021
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0921
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0898
+      },
+      {
+       "gf": 0,
+       "ga": 1,
+       "p": 0.081
+      }
+     ]
+    }
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2027-03-22",
+    "window_end": "2027-03-30",
+    "matchday": "5",
+    "opponent": "Benin",
+    "venue": "A",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 20,
+     "w": 12,
+     "d": 5,
+     "l": 3,
+     "gf": 37,
+     "ga": 19,
+     "last": "2025-11-18"
+    },
+    "opp_elo": 1539,
+    "elo_diff": 13,
+    "venue_swing": -100,
+    "probs": {
+     "win": 0.379,
+     "draw": 0.279,
+     "loss": 0.342
+    },
+    "xpts": 1.42,
+    "similar": {
+     "n": 287,
+     "w": 108,
+     "d": 72,
+     "l": 107,
+     "gf_pm": 1.25,
+     "ga_pm": 1.27,
+     "clean_sheets": 90,
+     "failed_to_score": 79,
+     "band": 150,
+     "from_year": "1960",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.288,
+     "goals_against": 1.232,
+     "total": 2.52,
+     "from_n": 287,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.1277
+      },
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1036
+      },
+      {
+       "gf": 0,
+       "ga": 1,
+       "p": 0.0991
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0822
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0805
+      },
+      {
+       "gf": 1,
+       "ga": 2,
+       "p": 0.0786
+      }
+     ]
+    }
+   },
+   {
+    "date": "",
+    "date_confirmed": "0",
+    "window_start": "2027-03-22",
+    "window_end": "2027-03-30",
+    "matchday": "6",
+    "opponent": "Central African Republic",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 4,
+     "w": 3,
+     "d": 0,
+     "l": 1,
+     "gf": 8,
+     "ga": 3,
+     "last": "2012-10-14"
+    },
+    "opp_elo": 1361,
+    "elo_diff": 390,
+    "venue_swing": 100,
+    "probs": {
+     "win": 0.833,
+     "draw": 0.143,
+     "loss": 0.024
+    },
+    "xpts": 2.64,
+    "similar": {
+     "n": 25,
+     "w": 19,
+     "d": 5,
+     "l": 1,
+     "gf_pm": 2.04,
+     "ga_pm": 0.56,
+     "clean_sheets": 12,
+     "failed_to_score": 2,
+     "band": 150,
+     "from_year": "2008",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 2.311,
+     "goals_against": 0.289,
+     "total": 2.6,
+     "from_n": 25,
+     "scores": [
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.1983
+      },
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1716
+      },
+      {
+       "gf": 3,
+       "ga": 0,
+       "p": 0.1528
+      },
+      {
+       "gf": 4,
+       "ga": 0,
+       "p": 0.0883
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.0743
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0573
+      }
+     ]
+    }
    }
   ]
  },

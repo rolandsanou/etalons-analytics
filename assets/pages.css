@@ -893,3 +893,90 @@ ul.fixlist li {
 }
 
 ul.fixlist li strong { color: var(--ink); font-weight: 600; }
+
+/* =============================================================================
+   win / draw / loss bar, on the home page outlook
+   -----------------------------------------------------------------------------
+   One bar rather than three numbers, because the three outcomes are exhaustive
+   and the eye should read them as shares of one whole.
+   ========================================================================== */
+
+.wdlbar {
+  display: flex;
+  height: 30px;
+  margin: 14px 0 16px;
+  border-radius: var(--r-s);
+  overflow: hidden;
+  background: var(--neutral-bg);
+  font-variant-numeric: tabular-nums;
+}
+
+.wdlbar .seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--on-fill);
+  transition: width 0.3s var(--ease);
+}
+
+.wdlbar .seg i { font-style: normal; padding: 0 4px; }
+/* a narrow segment cannot hold its own label without overflowing */
+.wdlbar .seg[style*="width:0%"] i,
+.wdlbar .seg[style*="width:1%"] i,
+.wdlbar .seg[style*="width:2%"] i,
+.wdlbar .seg[style*="width:3%"] i { display: none; }
+
+.wdlbar .w { background: var(--st-good, #0e8a5f); }
+.wdlbar .d { background: var(--muted); }
+.wdlbar .l { background: var(--red); }
+
+/* the exact-score distribution: bars relative to the likeliest, so the eye
+   reads how flat the distribution really is */
+ul.scorelist { list-style: none; margin: 12px 0 0; padding: 0; }
+
+ul.scorelist li {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 54px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+ul.scorelist .sl { font-weight: 600; font-size: 13.5px; color: var(--ink); }
+ul.scorelist .track { height: 10px; background: var(--neutral-bg); border-radius: 2px; }
+ul.scorelist .track i { display: block; height: 100%; background: var(--s2); border-radius: 2px; }
+ul.scorelist li:first-child .track i { background: var(--red); }
+ul.scorelist .pv { text-align: right; font-size: 12px; color: var(--ink-2); }
+
+/* squad-strength band */
+.bandline { margin: 12px 0 4px; display: flex; align-items: baseline; gap: 12px; }
+.bandline strong { font-family: var(--serif); font-size: 26px; font-weight: 600; }
+
+.band {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--on-fill);
+}
+
+.band.strong  { background: var(--st-good, #0e8a5f); }
+.band.neutral { background: var(--muted); }
+.band.weak    { background: var(--red); }
+
+/* call-up windows: one roster per announced squad */
+.windowblock { margin-bottom: 26px; }
+.windowblock h3 { margin: 0 0 3px; font-size: 15px; }
+.windowblock .wcount {
+  font-size: 11px; font-weight: 600; color: var(--muted);
+  background: var(--neutral-bg); border-radius: 999px; padding: 2px 8px;
+  margin-left: 6px; vertical-align: middle;
+}
+.windowblock .sub { margin: 0 0 10px; }
