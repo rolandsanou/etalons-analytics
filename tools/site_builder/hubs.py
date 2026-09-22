@@ -7,8 +7,8 @@ through ctx.t so each language gets a real static page. See routes.py."""
 
 import unicodedata
 
-from .detail import (POS_LABEL_KEY, POS_ORDER, match_slug, ordinal,
-                     _fmt, _int)
+from .detail import (POS_LABEL_KEY, POS_ORDER, STATUS_WORD, match_slug,
+                     ordinal, _fmt, _int)
 from . import layout, seo
 from .layout import avatar, card, esc, hero, page, section
 
@@ -510,6 +510,105 @@ def matches_index(d, ctx):
 
 # ------------------------------------------------------------------ squad
 
+def _news_card(c, ctx, kind):
+    """One player, with the evidence that was true of him at the call."""
+    t = ctx.t
+    cf = c.get("club_form") or {}
+    bits = []
+    if c.get("age"):
+        bits.append(t("{n} ans", n=_fmt(c["age"], 1)))
+    if c.get("pos"):
+        bits.append(pos_label(ctx, c["pos"]))
+    if c.get("club"):
+        bits.append(c["club"] + (f" · {c['league']}" if c.get("league") else ""))
+    facts = []
+    if kind == "absent":
+        facts.append((t("Depuis 2022"),
+                      t("{s} feuilles de match · {st} titularisations · {m} min",
+                        s=c["window_squads"], st=c["window_starts"],
+                        m=_fmt(c["window_minutes"]))))
+        if c.get("last_seen"):
+            facts.append((t("Dernière apparition"), c["last_seen"]))
+        if c.get("status"):
+            facts.append((t("Statut"), t(STATUS_WORD.get(c["status"], c["status"]))))
+    else:
+        facts.append((t("Sélections (carrière)"), str(c["caps"]) if c["caps"] else "0"))
+        if c["window_squads"]:
+            facts.append((t("Depuis 2022"),
+                          t("{s} feuilles de match · {m} min", s=c["window_squads"],
+                            m=_fmt(c["window_minutes"]))))
+    if cf.get("apps"):
+        facts.append((t("En club cette saison"),
+                      t("{a} matchs · {m} min · {p} min/match", a=cf["apps"],
+                        m=_fmt(cf["minutes"]), p=_fmt(cf["per_app"], 0))))
+        if cf.get("prev_minutes"):
+            facts.append((t("Saison précédente"),
+                          t("{m} min ({s})", m=_fmt(cf["prev_minutes"]),
+                            s=cf["prev_season"])))
+    elif kind != "absent":
+        facts.append((t("En club cette saison"), t("pas de données de club")))
+    return f"""<div class="newscard {kind}">
+      <a href="{ctx.url('player', c['player_id'])}"><strong>{esc(c['name'])}</strong></a>
+      <p class="sub">{esc(" · ".join(bits))}</p>
+      <dl class="kv">{"".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in facts)}</dl>
+    </div>"""
+
+
+def squad_news(d, ctx):
+    """New names and notable absentees, with evidence instead of a story.
+
+    The site cannot see why anyone was picked or left out — injury, suspension,
+    a rest, a falling-out and a simple preference all look identical in this
+    data. So each name carries what was demonstrably true of him, and the note
+    says outright that the reason is not among it.
+    """
+    t = ctx.t
+    news = (d.squad or {}).get("news")
+    if not news:
+        return ""
+    # Say plainly when the newest list we hold is older than the next fixture:
+    # the squad for that match exists, it just has not reached our sources.
+    stale = ""
+    if news.get("predates_next_match"):
+        stale = (f'<p class="stalelist">'
+                 + esc(t("Cette liste date du {as_of} : c'est la dernière publiée "
+                         "par nos sources. Le groupe convoqué pour le match du "
+                         "{next} n'y figure pas encore — il apparaîtra ici dès "
+                         "qu'une liste plus récente sera publiée.",
+                         as_of=seo.long_date(news["as_of"], ctx.lang),
+                         next=seo.long_date(news["next_match"], ctx.lang)))
+                 + "</p>")
+    groups = [("new", t("Nouveaux venus"), news["newcomers"]),
+              ("recall", t("De retour dans le groupe"), news["recalls"]),
+              ("absent", t("Absents notables"), news["absent"])]
+    blocks = []
+    for kind, title, rows in groups:
+        if not rows:
+            continue
+        cards = "".join(_news_card(c, ctx, kind) for c in rows)
+        blocks.append(f'<h3>{esc(title)} <span class="wcount">{len(rows)}</span></h3>'
+                      f'<div class="newsgrid">{cards}</div>')
+    if not blocks:
+        return ""
+    rule = news["rule"]
+    note = t("Comparaison entre la dernière liste connue et la précédente. Un "
+             "« absent notable » est un joueur présent sur au moins {s} feuilles "
+             "de match depuis 2022 dont {st} titularisations, et qui ne figure "
+             "pas dans cette liste — les retraités internationaux sont exclus. "
+             "Une absence peut être une blessure, une suspension, un repos ou un "
+             "choix : rien dans ces données ne permet de trancher, et le site ne "
+             "le prétend pas. Les chiffres disent ce qui était vrai du joueur, "
+             "pas ce que le sélectionneur avait en tête.",
+             s=rule["regular_squads"], st=rule["regular_starts"])
+    return f"""<section id="mouvements">
+    <h2>{esc(t("Mouvements dans le groupe"))}</h2>
+    <p class="lead">{esc(t("Qui entre, qui revient, qui manque — avec ce que disent les chiffres de chacun."))}</p>
+    {stale}
+    {"".join(blocks)}
+    {layout.plain_note(note)}
+  </section>"""
+
+
 def callup_windows(d, ctx):
     """Every squad list the project holds, newest first.
 
@@ -580,6 +679,7 @@ def squad_page(d, ctx):
       + card(title_key="c_leagues", sub_key="c_leagues_sub", card_id="card_leagues",
              extra='<div class="league-bar" id="league_bar"></div>'
                    '<div class="league-legend" id="league_legend"></div>')))}
+  {squad_news(d, ctx)}
   {callup_windows(d, ctx)}
 </main>"""
     return page(ctx, title=t("Effectif"),

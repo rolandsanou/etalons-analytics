@@ -5,7 +5,7 @@ from ..analytics import player_status
 from ..config import RAW, SEED, STAGING
 from ..extract import wikipedia as wiki_extract
 from ..extract.sofascore import search_match
-from ..parsers.wikipedia import parse_players
+from ..parsers.wikipedia import parse_players, squad_as_of
 from ..util import canonical_name, load_overrides, norm_name, read_csv, read_json, slugify, write_csv
 
 CALLUP_FIELDS = ["player_id", "window_id", "window_date", "name", "pos", "dob",
@@ -24,10 +24,14 @@ def _load_callups():
     callups = []
     for w in wiki_extract.squad_windows():
         html = wiki_extract.raw_path(w).read_text(encoding="utf-8")
+        # The page states which match a list is current to. Preferring that over
+        # the seeded date is what stops a squad that has not been updated for a
+        # new call-up from quietly passing as the latest one.
+        stated = squad_as_of(html, w["section_id"])
         for r in parse_players(html, w["section_id"]):
             callups.append({
                 "window_id": w["window_id"],
-                "window_date": w["window_date"],
+                "window_date": stated or w["window_date"],
                 "name": canonical_name(r["name"], overrides),
                 "pos": r["pos"],
                 "dob": r["dob"] or "",

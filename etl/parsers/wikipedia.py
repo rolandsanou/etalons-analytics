@@ -244,3 +244,37 @@ def parse_as_of(html):
     if m:
         return re.sub(r"\s+", " ", m.find_parent().get_text(" ", strip=True))
     return None
+
+
+# Wikipedia stamps a squad table with the match it is current to, e.g.
+# "Caps and goals correct as of 9 June 2026, after the match against Belarus."
+AS_OF_RE = re.compile(
+    r"correct as of\s+(\d{1,2})\s+([A-Z][a-z]+)\s+(\d{4})", re.I)
+MONTHS = {m: i for i, m in enumerate(
+    ["january", "february", "march", "april", "may", "june", "july", "august",
+     "september", "october", "november", "december"], start=1)}
+
+
+def squad_as_of(html, section_id):
+    """The date a squad list is current to, as the page itself states it.
+
+    Returned as ISO, or None when the page does not say. Reading it from the
+    source rather than hard-coding it in a seed is what keeps the site honest
+    about *which* squad it is showing: a list that has not been updated for a new
+    call-up says so by its own date instead of silently passing for the latest.
+    """
+    soup = _soup(html)
+    if _heading(soup, section_id) is None:
+        return None
+    # The note sits under the squad table, inside the same section. Walking the
+    # tree is fragile across Wikipedia's markup revisions; searching the rendered
+    # text forward from the heading is not.
+    text = soup.get_text(" ", strip=True)
+    anchor = text.find(section_id.replace("_", " "))
+    m = AS_OF_RE.search(text[anchor:] if anchor >= 0 else text)
+    if not m:
+        return None
+    day, month, year = m.group(1), m.group(2).lower(), m.group(3)
+    if month not in MONTHS:
+        return None
+    return f"{year}-{MONTHS[month]:02d}-{int(day):02d}"

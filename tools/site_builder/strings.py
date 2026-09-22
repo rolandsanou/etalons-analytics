@@ -255,6 +255,44 @@ EN = {
         "had not seen, it beats the plain base rate by 21.6%. The last two rows "
         "are not forecasts but counts: what actually happened in matches as "
         "lopsided as this one.",
+    # --- squad movements ----------------------------------------------------
+    "Cette liste date du {as_of} : c'est la dernière publiée par nos sources. "
+    "Le groupe convoqué pour le match du {next} n'y figure pas encore — il "
+    "apparaîtra ici dès qu'une liste plus récente sera publiée.":
+        "This list is dated {as_of} — the most recent our sources have "
+        "published. The squad called up for the match on {next} is not in it "
+        "yet; it will appear here as soon as a newer list is published.",
+    "Mouvements dans le groupe": "Changes in the squad",
+    "Qui entre, qui revient, qui manque — avec ce que disent les chiffres de chacun.":
+        "Who comes in, who returns, who is missing — with what the numbers say "
+        "about each.",
+    "Nouveaux venus": "New names",
+    "De retour dans le groupe": "Back in the squad",
+    "Absents notables": "Notable absentees",
+    "Depuis 2022": "Since 2022",
+    "{s} feuilles de match · {st} titularisations · {m} min":
+        "{s} matchday squads · {st} starts · {m} min",
+    "{s} feuilles de match · {m} min": "{s} matchday squads · {m} min",
+    "En club cette saison": "At club level this season",
+    "{a} matchs · {m} min · {p} min/match": "{a} matches · {m} min · {p} min/match",
+    "Saison précédente": "Previous season",
+    "{m} min ({s})": "{m} min ({s})",
+    "pas de données de club": "no club data",
+    "Comparaison entre la dernière liste connue et la précédente. Un « absent "
+    "notable » est un joueur présent sur au moins {s} feuilles de match depuis "
+    "2022 dont {st} titularisations, et qui ne figure pas dans cette liste — les "
+    "retraités internationaux sont exclus. Une absence peut être une blessure, "
+    "une suspension, un repos ou un choix : rien dans ces données ne permet de "
+    "trancher, et le site ne le prétend pas. Les chiffres disent ce qui était "
+    "vrai du joueur, pas ce que le sélectionneur avait en tête.":
+        "The latest known list compared with the one before it. A “notable "
+        "absentee” is a player named on at least {s} matchday squads since 2022, "
+        "{st} of them as a starter, who is not in this list — international "
+        "retirements are excluded. An absence may be injury, suspension, a rest "
+        "or a decision: nothing in this data can tell them apart, and the site "
+        "does not pretend otherwise. The figures say what was true of the player, "
+        "not what the selector had in mind.",
+
     "Convocations par fenêtre": "Call-ups by window",
     "Qui a été appelé, et pour quelle échéance. Cliquez un joueur pour sa fiche.":
         "Who was called up, and for what. Open a player for their profile.",
