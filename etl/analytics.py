@@ -302,6 +302,67 @@ def wdl_from_elo(diff, draw_peak, draw_width):
             "loss": round(1 - win - draw, 3)}
 
 
+def _poisson(lam, k):
+    return math.exp(-lam) * lam ** k / math.factorial(k)
+
+
+def scoreline_grid(lam_for, lam_against, max_goals=8):
+    """P(exact score) for every plausible scoreline, as {(gf, ga): p}.
+
+    Goals are treated as two independent Poisson counts. That is the standard
+    simplification and it is wrong in a knowable way — real matches correlate,
+    and low-scoring draws in particular come up slightly more often than this
+    says. It is good enough to rank scorelines and honest enough to publish with
+    its probability attached.
+    """
+    home = [_poisson(lam_for, k) for k in range(max_goals + 1)]
+    away = [_poisson(lam_against, k) for k in range(max_goals + 1)]
+    return {(i, j): home[i] * away[j]
+            for i in range(max_goals + 1) for j in range(max_goals + 1)}
+
+
+def wdl_from_grid(grid):
+    """The win/draw/loss split a scoreline grid implies."""
+    win = sum(p for (i, j), p in grid.items() if i > j)
+    draw = sum(p for (i, j), p in grid.items() if i == j)
+    return {"win": win, "draw": draw, "loss": sum(grid.values()) - win - draw}
+
+
+def fit_scoreline(total_goals, win_target, max_goals=8, steps=60):
+    """Split an expected goal total so the implied win rate matches the model.
+
+    Two different things are known: roughly how many goals a match like this
+    contains (a historical rate), and who is likelier to win it (the calibrated
+    Elo model). Neither gives a scoreline on its own. Holding the total fixed and
+    solving for the split is what reconciles them, so the scoreline distribution
+    and the win probability shown beside it cannot contradict each other.
+    """
+    total = max(float(total_goals), 0.2)
+    lo, hi = 0.02, 0.98                      # share of the total going to us
+    for _ in range(steps):
+        mid = (lo + hi) / 2
+        got = wdl_from_grid(scoreline_grid(total * mid, total * (1 - mid),
+                                           max_goals))["win"]
+        if got < win_target:
+            lo = mid
+        else:
+            hi = mid
+    share = (lo + hi) / 2
+    return round(total * share, 3), round(total * (1 - share), 3)
+
+
+def likely_scorelines(lam_for, lam_against, top=5, max_goals=8):
+    """The most likely exact scores, each with its own probability.
+
+    The top scoreline is usually only a little above one chance in eight, which
+    is the point: reporting it without its probability would turn a distribution
+    into a prediction.
+    """
+    grid = scoreline_grid(lam_for, lam_against, max_goals)
+    ranked = sorted(grid.items(), key=lambda kv: -kv[1])[:top]
+    return [{"gf": i, "ga": j, "p": round(p, 4)} for (i, j), p in ranked]
+
+
 def calibrate_draw_rate(samples):
     """samples: [(elo_diff, result)] with result in W/D/L, from real matches.
 

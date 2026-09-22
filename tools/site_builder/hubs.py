@@ -9,7 +9,7 @@ import unicodedata
 
 from .detail import (POS_LABEL_KEY, POS_ORDER, match_slug, ordinal,
                      _fmt, _int)
-from . import seo
+from . import layout, seo
 from .layout import avatar, card, esc, hero, page, section
 
 CAMPAIGNS = [
@@ -143,6 +143,159 @@ def fun_facts(d, ctx):
   </section>"""
 
 
+def _pct(x):
+    return f"{round(100 * float(x))}"
+
+
+def match_outlook(d, ctx):
+    """What the numbers expect from the next match, and what they rest on.
+
+    Three things sit side by side on purpose: a probability from the rating
+    model, the whole head-to-head record, and what actually happened the last
+    time this team met opponents of that strength. The first is a model, the
+    other two are counts — and a reader can weigh them against each other rather
+    than being handed one number to trust.
+    """
+    t = ctx.t
+    outlook = (d.elo.get("predictions") or {}).get("outlook") or []
+    nxt = next((o for o in outlook if o.get("probs")), None)
+    if not nxt:
+        return ""
+
+    p = nxt["probs"]
+    when = (seo.long_date(nxt["date"], ctx.lang)
+            if nxt.get("date_confirmed") == "1" and nxt.get("date")
+            else t("{start} – {end} (date à confirmer)",
+                   start=seo.long_date(nxt["window_start"], ctx.lang),
+                   end=seo.long_date(nxt["window_end"], ctx.lang)))
+    where = {"H": t("à domicile"), "A": t("à l'extérieur")}.get(
+        nxt.get("venue"), t("terrain neutre"))
+
+    bar = "".join(
+        f'<span class="seg {cls}" style="width:{_pct(p[k])}%">'
+        f'<i>{_pct(p[k])} %</i></span>'
+        for k, cls in (("win", "w"), ("draw", "d"), ("loss", "l")))
+    legend = " · ".join(
+        f'{esc(t(label))} {_pct(p[k])} %'
+        for k, label in (("win", "Victoire"), ("draw", "Match nul"), ("loss", "Défaite")))
+
+    rows = [(t("Points attendus"), _fmt(nxt["xpts"], 2)),
+            (t("Elo"), t("{mine} contre {theirs}",
+                         mine=_fmt(d.elo["current"]),
+                         theirs=_fmt(nxt["opp_elo"])))]
+    h2h = nxt.get("h2h")
+    if h2h:
+        rows.append((t("Face à face depuis 1960"),
+                     t("{n} matchs · {w}V {d}N {l}D · {gf}-{ga}",
+                       n=h2h["pld"], w=h2h["w"], d=h2h["d"], l=h2h["l"],
+                       gf=h2h["gf"], ga=h2h["ga"])))
+    sim = nxt.get("similar")
+    if sim:
+        rows.append((t("Dans des matchs aussi déséquilibrés"),
+                     t("{n} matchs · {w}V {d}N {l}D", n=sim["n"], w=sim["w"],
+                       d=sim["d"], l=sim["l"])))
+        rows.append((t("Buts par match, dans ces matchs"),
+                     t("{gf} marqué · {ga} encaissé", gf=_fmt(sim["gf_pm"], 2),
+                       ga=_fmt(sim["ga_pm"], 2))))
+
+    note = t("Un modèle de classement, rien de plus : il ne sait rien des "
+             "blessures, des suspensions, de la forme du moment ni de la "
+             "composition. Testé sur 61 matchs qu'il n'avait pas vus, il fait "
+             "21,6 % mieux que le simple taux de base. Les deux dernières "
+             "lignes ne sont pas des prévisions mais des comptages : ce qui "
+             "s'est réellement passé dans des matchs aussi déséquilibrés.")
+
+    return f"""<section id="pronostic">
+    <h2>{esc(t("Ce que disent les chiffres"))}</h2>
+    <p class="lead">{esc(t("Prochain match : {opponent}, {when}, {where}.", opponent=nxt["opponent"], when=when, where=where))}</p>
+    <div class="grid">
+      <div class="card w6">
+        <h3>{esc(t("Issue attendue"))}</h3>
+        <p class="sub">{legend}</p>
+        <div class="wdlbar">{bar}</div>
+        <dl class="kv">{"".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in rows)}</dl>
+        {layout.plain_note(note)}
+      </div>
+      {scoreline_card(nxt, ctx)}
+      {squad_strength_card(d, ctx)}
+    </div>
+  </section>"""
+
+
+BAND_WORD = {"strong": "en forme", "neutral": "moyen", "weak": "faible"}
+
+
+def squad_strength_card(d, ctx):
+    """Is the called-up squad actually starting for its clubs?
+
+    Deliberately one measure under one printed rule rather than a squad-strength
+    index. Raw club minutes cannot be compared across a squad whose leagues are
+    at different points of their seasons; minutes per appearance can, and it
+    answers the question a selector actually asks — is he playing?
+    """
+    t = ctx.t
+    r = (d.squad or {}).get("readiness")
+    if not r or not r.get("band"):
+        return ""
+    rule = r["rule"]
+    rows = [
+        (t("Titulaires réguliers"),
+         t("{k} sur {n} joueurs jugeables", k=r["starting"], n=r["rated"])),
+        (t("Minutes par match de club (médiane)"), _fmt(r["median_per_app"], 0)),
+        (t("Sans données de club"),
+         t("{n} sur {total} convoqués", n=r["no_club_data"], total=r["squad"])),
+    ]
+    note = t("Un joueur compte comme titulaire régulier s'il a joué en moyenne "
+             "{mins} minutes ou plus par match de club, sur au moins {apps} "
+             "matchs. Le groupe est dit « en forme » au-dessus de {strong} %, "
+             "« faible » en dessous de {weak} %. Une seule mesure sous une règle "
+             "affichée, pas un indice composite — et elle ne dit rien des "
+             "blessures, que seule la liste officielle révèle.",
+             mins=rule["starter_minutes"], apps=rule["min_apps"],
+             strong=round(100 * rule["strong"]), weak=round(100 * rule["neutral"]))
+    return f"""<div class="card w12">
+        <h3>{esc(t("État du groupe convoqué"))}</h3>
+        <p class="sub">{esc(t("Part du groupe qui enchaîne les titularisations en club."))}</p>
+        <p class="bandline"><span class="band {r['band']}">{esc(t(BAND_WORD[r['band']]))}</span>
+           <strong>{_pct(r['share'])} %</strong></p>
+        <dl class="kv">{"".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in rows)}</dl>
+        {layout.plain_note(note)}
+      </div>"""
+
+
+def scoreline_card(nxt, ctx):
+    """The exact-score distribution, with the headline number's own probability.
+
+    A single scoreline is the thing readers want and the thing most easily
+    misread: the likeliest one here sits near one chance in six, which means five
+    times out of six it finishes some other way. Showing the top six together,
+    each with its own figure, is the difference between a distribution and a
+    tip.
+    """
+    t = ctx.t
+    sc = nxt.get("scoreline")
+    if not sc:
+        return ""
+    top = sc["scores"][0]
+    bars = "".join(
+        f'<li><span class="sl">{s["gf"]}–{s["ga"]}</span>'
+        f'<span class="track"><i style="width:{round(100 * s["p"] / sc["scores"][0]["p"])}%"></i></span>'
+        f'<span class="pv">{_fmt(100 * s["p"], 1)} %</span></li>'
+        for s in sc["scores"])
+    note = t("Le score le plus probable n'est pas le score attendu : à "
+             "{p} %, il veut dire que dans plus de quatre cas sur cinq le match "
+             "finit autrement. Les buts attendus viennent de {n} matchs "
+             "comparables, puis la répartition est ajustée pour coller à la "
+             "probabilité de victoire ci-contre — les deux ne peuvent pas se "
+             "contredire.", p=_fmt(100 * top["p"], 1), n=sc["from_n"])
+    return f"""<div class="card w6">
+        <h3>{esc(t("Score exact le plus probable"))}</h3>
+        <p class="sub">{esc(t("Buts attendus : {gf} – {ga}", gf=_fmt(sc["goals_for"], 2), ga=_fmt(sc["goals_against"], 2)))}</p>
+        <ul class="scorelist">{bars}</ul>
+        {layout.plain_note(note)}
+      </div>"""
+
+
 def next_match(d, ctx):
     """The next scheduled match, or a plain statement that none is published.
 
@@ -245,6 +398,8 @@ def home_page(d, ctx):
 </div></div>
 <main>
   <div class="tiles">{tile_html}</div>
+
+  {match_outlook(d, ctx)}
 
   <section id="derniers">
     <h2>{esc(t("Derniers matchs"))}</h2>
@@ -355,6 +510,57 @@ def matches_index(d, ctx):
 
 # ------------------------------------------------------------------ squad
 
+def callup_windows(d, ctx):
+    """Every squad list the project holds, newest first.
+
+    This is the project's largest known gap made visible rather than hidden: the
+    site covers 58 matches in detail but only the handful of squad
+    announcements that have been published in a form it can read. Showing the
+    windows that exist, and saying plainly how many matches fall outside them,
+    is more useful than a page that quietly implies full coverage.
+    """
+    t = ctx.t
+    if not d.callups:
+        return ""
+    labels = {w["window_id"]: w for w in d.windows}
+    by_window = {}
+    for c in d.callups:
+        by_window.setdefault(c["window_id"], []).append(c)
+
+    order = sorted(by_window, key=lambda k: labels.get(k, {}).get("window_date", ""),
+                   reverse=True)
+    blocks = []
+    for wid in order:
+        players = sorted(by_window[wid], key=lambda c: (POS_ORDER.get(c["pos"], 9),
+                                                        c["name"]))
+        meta = labels.get(wid, {})
+        label = meta.get("label_fr" if ctx.lang == "fr" else "label_en", wid)
+        when = meta.get("window_date", "")
+        cards = "".join(f"""<a class="pcard" href="{ctx.url('player', c['player_id'])}">
+  {avatar(ctx.asset(d.photo('player', c['player_id'])) if d.photo('player', c['player_id']) else None, c['name'], 'pic')}
+  <span><span class="nm">{esc(c['name'])}</span>
+    <span class="rl">{esc(pos_label(ctx, c['pos']))}</span>
+    <span class="stat">{esc(c['club_at_time'] or '—')}</span></span>
+</a>""" for c in players if c['player_id'] in {p['player_id'] for p in d.profiles})
+        blocks.append(f"""<div class="windowblock">
+      <h3>{esc(label)} <span class="wcount">{len(players)}</span></h3>
+      <p class="sub">{esc(t("Liste au {date}", date=seo.long_date(when, ctx.lang)) if when else "")}</p>
+      <div class="roster">{cards}</div>
+    </div>""")
+
+    note = t("Une liste par fenêtre de convocation, telle qu'elle a été publiée. "
+             "Les fenêtres d'éliminatoires ne sont pas toutes couvertes : le site "
+             "détaille {n} matchs mais ne dispose que de {w} listes. C'est le "
+             "principal manque du projet, et la contribution la plus utile qu'on "
+             "puisse lui apporter.", n=len(d.events), w=len(order))
+    return f"""<section id="convocations">
+    <h2>{esc(t("Convocations par fenêtre"))}</h2>
+    <p class="lead">{esc(t("Qui a été appelé, et pour quelle échéance. Cliquez un joueur pour sa fiche."))}</p>
+    {"".join(blocks)}
+    {layout.plain_note(note)}
+  </section>"""
+
+
 def squad_page(d, ctx):
     t = ctx.t
     body = f"""{hero(t("Effectif"), t("Le groupe actuel et sa structure"),
@@ -374,6 +580,7 @@ def squad_page(d, ctx):
       + card(title_key="c_leagues", sub_key="c_leagues_sub", card_id="card_leagues",
              extra='<div class="league-bar" id="league_bar"></div>'
                    '<div class="league-legend" id="league_legend"></div>')))}
+  {callup_windows(d, ctx)}
 </main>"""
     return page(ctx, title=t("Effectif"),
                 description=t("Effectif du Burkina Faso : postes, âges, clubs et championnats."),

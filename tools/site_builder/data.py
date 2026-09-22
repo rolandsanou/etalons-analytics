@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent
 STAGING = ROOT / "data" / "staging"
 MARTS = ROOT / "data" / "marts"
+SEED = ROOT / "data" / "seed"
 SITE_DATA = ROOT / "site" / "data"
 
 
@@ -33,6 +34,8 @@ class Data:
         self.states = rows(STAGING / "match_states.csv")
         self.team_stats = rows(STAGING / "team_match_stats.csv")
         self.photos = rows(STAGING / "photos.csv")
+        self.callups = rows(STAGING / "callups.csv")
+        self.windows = rows(SEED / "wiki_squads.csv")
         # may legitimately be empty, and is absent on a tree built before the
         # fixtures step existed
         fx = STAGING / "fixtures.csv"

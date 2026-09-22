@@ -13,9 +13,16 @@ Each entry:
 """
 
 from . import (backtest, coaches, leadership, partnerships, performance, pipeline,
-               predictions, resilience, rest, stability, style, subpatterns)
+               predictions, readiness, resilience, rest, stability, style,
+               subpatterns)
 
 ANALYSES = [
+    {
+        "name": "readiness",
+        "doc": "Whether the called-up squad is starting for its clubs right now.",
+        "marts": [],
+        "site": {"squad": {"readiness": readiness.readiness_json}},
+    },
     {
         "name": "performance",
         "doc": "Team goal timing, player importance components and bench impact.",

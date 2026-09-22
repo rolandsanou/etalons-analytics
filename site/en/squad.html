@@ -28,9 +28,9 @@
 
 <meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="../assets/favicon.svg?v=7be102b2" type="image/svg+xml">
-<link rel="icon" href="../assets/favicon.ico?v=7be102b2" sizes="32x32">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=7be102b2">
+<link rel="icon" href="../assets/favicon.svg?v=c71841b4" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon.ico?v=c71841b4" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=c71841b4">
 <script>/* set the remembered theme before first paint, so an explicit dark choice
    never flashes light. No stored choice: prefers-color-scheme decides in CSS.
    Braces are doubled because this block sits inside a Python f-string. */
@@ -39,8 +39,8 @@ document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&family=Newsreader:opsz,wght@6..72,500..700&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=7be102b2">
-<link rel="stylesheet" href="../assets/pages.css?v=7be102b2">
+<link rel="stylesheet" href="../assets/style.css?v=c71841b4">
+<link rel="stylesheet" href="../assets/pages.css?v=c71841b4">
 </head>
 <body class="" data-needs="squad,meta" data-base="../">
 
@@ -74,18 +74,694 @@ document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
   <p class="lead" data-i18n="s_break_lead"></p>
   <div class="grid"><div class="card" id="card_clubs"><h3 data-i18n="c_clubs"></h3><p class="sub" data-i18n="c_clubs_sub"></p><div class="chart tall" id="c_clubs"></div><div class="plain"><span class="plain-lbl" data-i18n="plain_lbl"></span><p data-i18n="c_clubs_plain"></p></div></div><div class="card" id="card_leagues"><h3 data-i18n="c_leagues"></h3><p class="sub" data-i18n="c_leagues_sub"></p><div class="league-bar" id="league_bar"></div><div class="league-legend" id="league_legend"></div></div></div>
 </section>
+  <section id="convocations">
+    <h2>Call-ups by window</h2>
+    <p class="lead">Who was called up, and for what. Open a player for their profile.</p>
+    <div class="windowblock">
+      <h3>Current squad (June 2026) <span class="wcount">27</span></h3>
+      <p class="sub">List as of 9 June 2026</p>
+      <div class="roster"><a class="pcard" href="players/farid-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">FO</span>
+  <span><span class="nm">Farid Ouédraogo</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Al Hilal</span></span>
+</a><a class="pcard" href="players/herve-koffi.html">
+  <img class="pic" src="../assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hervé Koffi</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Union Saint-Gilloise</span></span>
+</a><a class="pcard" href="players/hillel-konate.html">
+  <img class="pic" src="../assets/photos/player-hillel-konate.jpg" alt="Hillel Konaté" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hillel Konaté</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Troyes</span></span>
+</a><a class="pcard" href="players/kilian-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">KN</span>
+  <span><span class="nm">Kilian Nikiema</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">ADO Den Haag</span></span>
+</a><a class="pcard" href="players/adamo-nagalo.html">
+  <img class="pic" src="../assets/photos/player-adamo-nagalo.jpg" alt="Adamo Nagalo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Adamo Nagalo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">PSV Eindhoven</span></span>
+</a><a class="pcard" href="players/arsene-kouassi.html">
+  <span class="pic avatar" aria-hidden="true">AK</span>
+  <span><span class="nm">Arsène Kouassi</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Lorient</span></span>
+</a><a class="pcard" href="players/arthur-zagre.html">
+  <img class="pic" src="../assets/photos/player-arthur-zagre.jpg" alt="Arthur Zagré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Arthur Zagré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Utrecht</span></span>
+</a><a class="pcard" href="players/cyril-dao.html">
+  <span class="pic avatar" aria-hidden="true">CD</span>
+  <span><span class="nm">Cyril Dao</span>
+    <span class="rl">Defender</span>
+    <span class="stat">National Bank of Egypt</span></span>
+</a><a class="pcard" href="players/edmond-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Edmond Tapsoba</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Bayer Leverkusen</span></span>
+</a><a class="pcard" href="players/hanaby-hadalou-sagne.html">
+  <span class="pic avatar" aria-hidden="true">HS</span>
+  <span><span class="nm">Hanaby Hadalou Sagne</span>
+    <span class="rl">Defender</span>
+    <span class="stat">AS Douanes</span></span>
+</a><a class="pcard" href="players/mohamed-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">MO</span>
+  <span><span class="nm">Mohamed Ouédraogo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Rheindorf Altach</span></span>
+</a><a class="pcard" href="players/nasser-djiga.html">
+  <img class="pic" src="../assets/photos/player-nasser-djiga.jpg" alt="Nasser Djiga" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Nasser Djiga</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Rangers</span></span>
+</a><a class="pcard" href="players/rachide-gnanou.html">
+  <span class="pic avatar" aria-hidden="true">RG</span>
+  <span><span class="nm">Rachide Gnanou</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Gnistan</span></span>
+</a><a class="pcard" href="players/saidou-simpore.html">
+  <span class="pic avatar" aria-hidden="true">SS</span>
+  <span><span class="nm">Saïdou Simporé</span>
+    <span class="rl">Defender</span>
+    <span class="stat">National Bank of Egypt</span></span>
+</a><a class="pcard" href="players/aboubacar-bassinga.html">
+  <span class="pic avatar" aria-hidden="true">AB</span>
+  <span><span class="nm">Aboubacar Bassinga</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Ceuta</span></span>
+</a><a class="pcard" href="players/gustavo-sangare.html">
+  <img class="pic" src="../assets/photos/player-gustavo-sangare.jpg" alt="Gustavo Sangaré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Gustavo Sangaré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Noah</span></span>
+</a><a class="pcard" href="players/ismahila-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">IO</span>
+  <span><span class="nm">Ismahila Ouédraogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Odense</span></span>
+</a><a class="pcard" href="players/lohann-doucet.html">
+  <span class="pic avatar" aria-hidden="true">LD</span>
+  <span><span class="nm">Lohann Doucet</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Dunkerque</span></span>
+</a><a class="pcard" href="players/mohamed-zougrana.html">
+  <span class="pic avatar" aria-hidden="true">MZ</span>
+  <span><span class="nm">Mohamed Zougrana</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">MC Alger</span></span>
+</a><a class="pcard" href="players/abdoul-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-abdoul-tapsoba.jpg" alt="Abdoul Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Abdoul Tapsoba</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Radomiak Radom</span></span>
+</a><a class="pcard" href="players/cyriaque-irie.html">
+  <span class="pic avatar" aria-hidden="true">CI</span>
+  <span><span class="nm">Cyriaque Irié</span>
+    <span class="rl">Forward</span>
+    <span class="stat">SC Freiburg</span></span>
+</a><a class="pcard" href="players/dango-ouattara.html">
+  <img class="pic" src="../assets/photos/player-dango-ouattara.jpg" alt="Dango Ouattara" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Dango Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Brentford</span></span>
+</a><a class="pcard" href="players/elohim-kabore.html">
+  <span class="pic avatar" aria-hidden="true">EK</span>
+  <span><span class="nm">Elohim Kaboré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Hammarby IF</span></span>
+</a><a class="pcard" href="players/georgi-minoungou.html">
+  <img class="pic" src="../assets/photos/player-georgi-minoungou.jpg" alt="Georgi Minoungou" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Georgi Minoungou</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Colorado Rapids</span></span>
+</a><a class="pcard" href="players/mohamed-konate.html">
+  <span class="pic avatar" aria-hidden="true">MK</span>
+  <span><span class="nm">Mohamed Konaté</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Akhmat Grozny</span></span>
+</a><a class="pcard" href="players/ousseni-bouda.html">
+  <img class="pic" src="../assets/photos/player-ousseni-bouda.jpg" alt="Ousseni Bouda" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Ousseni Bouda</span>
+    <span class="rl">Forward</span>
+    <span class="stat">San Jose Earthquakes</span></span>
+</a><a class="pcard" href="players/pierre-landry-kabore.html">
+  <span class="pic avatar" aria-hidden="true">PK</span>
+  <span><span class="nm">Pierre Landry Kaboré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Heart of Midlothian</span></span>
+</a></div>
+    </div><div class="windowblock">
+      <h3>Recent call-ups (12 months) <span class="wcount">20</span></h3>
+      <p class="sub">List as of 1 June 2026</p>
+      <div class="roster"><a class="pcard" href="players/ladji-brahima-sanou.html">
+  <span class="pic avatar" aria-hidden="true">LS</span>
+  <span><span class="nm">Ladji Brahima Sanou</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Al-Merrikh</span></span>
+</a><a class="pcard" href="players/abdoul-ayinde.html">
+  <span class="pic avatar" aria-hidden="true">AA</span>
+  <span><span class="nm">Abdoul Ayinde</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Gent</span></span>
+</a><a class="pcard" href="players/dylan-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">DO</span>
+  <span><span class="nm">Dylan Ouédraogo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Krasava ENY</span></span>
+</a><a class="pcard" href="players/hassane-rachid-traore.html">
+  <span class="pic avatar" aria-hidden="true">HT</span>
+  <span><span class="nm">Hassane Rachid Traoré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Farul Constanța</span></span>
+</a><a class="pcard" href="players/ismaelo-ganiou.html">
+  <span class="pic avatar" aria-hidden="true">IG</span>
+  <span><span class="nm">Ismaëlo Ganiou</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Lens</span></span>
+</a><a class="pcard" href="players/issa-kabore.html">
+  <img class="pic" src="../assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issa Kaboré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Wrexham</span></span>
+</a><a class="pcard" href="players/issoufou-dayo.html">
+  <img class="pic" src="../assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issoufou Dayo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Umm-Salal</span></span>
+</a><a class="pcard" href="players/steeve-yago.html">
+  <img class="pic" src="../assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Steeve Yago</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Aris Limassol</span></span>
+</a><a class="pcard" href="players/abdoul-yoda.html">
+  <span class="pic avatar" aria-hidden="true">AY</span>
+  <span><span class="nm">Abdoul Yoda</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Milsami Orhei</span></span>
+</a><a class="pcard" href="players/blati-toure.html">
+  <img class="pic" src="../assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Blati Touré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Pyramids</span></span>
+</a><a class="pcard" href="players/cedric-badolo.html">
+  <img class="pic" src="../assets/photos/player-cedric-badolo.jpg" alt="Cedric Badolo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Cedric Badolo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Spartak Trnava</span></span>
+</a><a class="pcard" href="players/ibrahim-bance.html">
+  <span class="pic avatar" aria-hidden="true">IB</span>
+  <span><span class="nm">Ibrahim Bancé</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Marumo Gallants</span></span>
+</a><a class="pcard" href="players/josue-tiendrebeogo.html">
+  <span class="pic avatar" aria-hidden="true">JT</span>
+  <span><span class="nm">Josué Tiendrébéogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Annecy</span></span>
+</a><a class="pcard" href="players/raouf-memel-dao.html">
+  <span class="pic avatar" aria-hidden="true">RD</span>
+  <span><span class="nm">Raouf Memel Dao</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">APR</span></span>
+</a><a class="pcard" href="players/stephane-aziz-ki.html">
+  <img class="pic" src="../assets/photos/player-stephane-aziz-ki.jpg" alt="Stephane Aziz Ki" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Stephane Aziz Ki</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Wydad Casablanca</span></span>
+</a><a class="pcard" href="players/bertrand-traore.html">
+  <img class="pic" src="../assets/photos/player-bertrand-traore.jpg" alt="Bertrand Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Bertrand Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Wolverhampton Wanderers</span></span>
+</a><a class="pcard" href="players/faycal-konate.html">
+  <span class="pic avatar" aria-hidden="true">FK</span>
+  <span><span class="nm">Fayçal Konaté</span>
+    <span class="rl">Forward</span>
+    <span class="stat">RFS</span></span>
+</a><a class="pcard" href="players/hassane-bande.html">
+  <span class="pic avatar" aria-hidden="true">HB</span>
+  <span><span class="nm">Hassane Bandé</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Mechelen</span></span>
+</a><a class="pcard" href="players/jack-diarra.html">
+  <span class="pic avatar" aria-hidden="true">JD</span>
+  <span><span class="nm">Jack Diarra</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Espérance de Tunis</span></span>
+</a><a class="pcard" href="players/lassina-traore.html">
+  <img class="pic" src="../assets/photos/player-lassina-traore.jpg" alt="Lassina Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Lassina Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Shakhtar Donetsk</span></span>
+</a></div>
+    </div><div class="windowblock">
+      <h3>AFCON 2025 (Dec 2025) <span class="wcount">28</span></h3>
+      <p class="sub">List as of 21 December 2025</p>
+      <div class="roster"><a class="pcard" href="players/farid-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">FO</span>
+  <span><span class="nm">Farid Ouédraogo</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Al Hilal</span></span>
+</a><a class="pcard" href="players/herve-koffi.html">
+  <img class="pic" src="../assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hervé Koffi</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Angers</span></span>
+</a><a class="pcard" href="players/kilian-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">KN</span>
+  <span><span class="nm">Kilian Nikiema</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">ADO Den Haag</span></span>
+</a><a class="pcard" href="players/abdoul-ayinde.html">
+  <span class="pic avatar" aria-hidden="true">AA</span>
+  <span><span class="nm">Abdoul Ayinde</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Gent</span></span>
+</a><a class="pcard" href="players/adamo-nagalo.html">
+  <img class="pic" src="../assets/photos/player-adamo-nagalo.jpg" alt="Adamo Nagalo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Adamo Nagalo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">PSV Eindhoven</span></span>
+</a><a class="pcard" href="players/arsene-kouassi.html">
+  <span class="pic avatar" aria-hidden="true">AK</span>
+  <span><span class="nm">Arsène Kouassi</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Lorient</span></span>
+</a><a class="pcard" href="players/edmond-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Edmond Tapsoba</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Bayer Leverkusen</span></span>
+</a><a class="pcard" href="players/issa-kabore.html">
+  <img class="pic" src="../assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issa Kaboré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Wrexham</span></span>
+</a><a class="pcard" href="players/issoufou-dayo.html">
+  <img class="pic" src="../assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issoufou Dayo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Umm Salal</span></span>
+</a><a class="pcard" href="players/nasser-djiga.html">
+  <img class="pic" src="../assets/photos/player-nasser-djiga.jpg" alt="Nasser Djiga" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Nasser Djiga</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Rangers</span></span>
+</a><a class="pcard" href="players/steeve-yago.html">
+  <img class="pic" src="../assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Steeve Yago</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Aris Limassol</span></span>
+</a><a class="pcard" href="players/abdoul-yoda.html">
+  <span class="pic avatar" aria-hidden="true">AY</span>
+  <span><span class="nm">Abdoul Yoda</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Milsami Orhei</span></span>
+</a><a class="pcard" href="players/blati-toure.html">
+  <img class="pic" src="../assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Blati Touré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Pyramids</span></span>
+</a><a class="pcard" href="players/cedric-badolo.html">
+  <img class="pic" src="../assets/photos/player-cedric-badolo.jpg" alt="Cedric Badolo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Cedric Badolo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Spartak Trnava</span></span>
+</a><a class="pcard" href="players/gustavo-sangare.html">
+  <img class="pic" src="../assets/photos/player-gustavo-sangare.jpg" alt="Gustavo Sangaré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Gustavo Sangaré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Noah</span></span>
+</a><a class="pcard" href="players/ismahila-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">IO</span>
+  <span><span class="nm">Ismahila Ouédraogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">OB</span></span>
+</a><a class="pcard" href="players/josue-tiendrebeogo.html">
+  <span class="pic avatar" aria-hidden="true">JT</span>
+  <span><span class="nm">Josué Tiendrébéogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Annecy</span></span>
+</a><a class="pcard" href="players/mohamed-zougrana.html">
+  <span class="pic avatar" aria-hidden="true">MZ</span>
+  <span><span class="nm">Mohamed Zougrana</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">MC Alger</span></span>
+</a><a class="pcard" href="players/saidou-simpore.html">
+  <span class="pic avatar" aria-hidden="true">SS</span>
+  <span><span class="nm">Saïdou Simporé</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">National Bank of Egypt</span></span>
+</a><a class="pcard" href="players/stephane-aziz-ki.html">
+  <img class="pic" src="../assets/photos/player-stephane-aziz-ki.jpg" alt="Stephane Aziz Ki" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Stephane Aziz Ki</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Wydad AC</span></span>
+</a><a class="pcard" href="players/bertrand-traore.html">
+  <img class="pic" src="../assets/photos/player-bertrand-traore.jpg" alt="Bertrand Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Bertrand Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Sunderland</span></span>
+</a><a class="pcard" href="players/cyriaque-irie.html">
+  <span class="pic avatar" aria-hidden="true">CI</span>
+  <span><span class="nm">Cyriaque Irié</span>
+    <span class="rl">Forward</span>
+    <span class="stat">SC Freiburg</span></span>
+</a><a class="pcard" href="players/dango-ouattara.html">
+  <img class="pic" src="../assets/photos/player-dango-ouattara.jpg" alt="Dango Ouattara" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Dango Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Brentford</span></span>
+</a><a class="pcard" href="players/georgi-minoungou.html">
+  <img class="pic" src="../assets/photos/player-georgi-minoungou.jpg" alt="Georgi Minoungou" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Georgi Minoungou</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Seattle Sounders</span></span>
+</a><a class="pcard" href="players/lassina-traore.html">
+  <img class="pic" src="../assets/photos/player-lassina-traore.jpg" alt="Lassina Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Lassina Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Shakhtar Donetsk</span></span>
+</a><a class="pcard" href="players/mohamed-konate.html">
+  <span class="pic avatar" aria-hidden="true">MK</span>
+  <span><span class="nm">Mohamed Konaté</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Akhmat Grozny</span></span>
+</a><a class="pcard" href="players/ousseni-bouda.html">
+  <img class="pic" src="../assets/photos/player-ousseni-bouda.jpg" alt="Ousseni Bouda" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Ousseni Bouda</span>
+    <span class="rl">Forward</span>
+    <span class="stat">San Jose Earthquakes</span></span>
+</a><a class="pcard" href="players/pierre-landry-kabore.html">
+  <span class="pic avatar" aria-hidden="true">PK</span>
+  <span><span class="nm">Pierre Landry Kaboré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Heart of Midlothian</span></span>
+</a></div>
+    </div><div class="windowblock">
+      <h3>AFCON 2023 (Jan 2024) <span class="wcount">27</span></h3>
+      <p class="sub">List as of 13 January 2024</p>
+      <div class="roster"><a class="pcard" href="players/herve-koffi.html">
+  <img class="pic" src="../assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hervé Koffi</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Charleroi</span></span>
+</a><a class="pcard" href="players/hillel-konate.html">
+  <img class="pic" src="../assets/photos/player-hillel-konate.jpg" alt="Hillel Konaté" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hillel Konaté</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Châteauroux</span></span>
+</a><a class="pcard" href="players/kilian-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">KN</span>
+  <span><span class="nm">Kilian Nikiema</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">ADO Den Haag</span></span>
+</a><a class="pcard" href="players/sebas-koula.html">
+  <span class="pic avatar" aria-hidden="true">SK</span>
+  <span><span class="nm">Sebas Koula</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Sabadell</span></span>
+</a><a class="pcard" href="players/abdoul-guiebre.html">
+  <img class="pic" src="../assets/photos/player-abdoul-guiebre.jpg" alt="Abdoul Guiebre" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Abdoul Guiebre</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Modena</span></span>
+</a><a class="pcard" href="players/adamo-nagalo.html">
+  <img class="pic" src="../assets/photos/player-adamo-nagalo.jpg" alt="Adamo Nagalo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Adamo Nagalo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Nordsjælland</span></span>
+</a><a class="pcard" href="players/edmond-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Edmond Tapsoba</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Bayer Leverkusen</span></span>
+</a><a class="pcard" href="players/issa-kabore.html">
+  <img class="pic" src="../assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issa Kaboré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Luton Town</span></span>
+</a><a class="pcard" href="players/issoufou-dayo.html">
+  <img class="pic" src="../assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issoufou Dayo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">RS Berkane</span></span>
+</a><a class="pcard" href="players/nasser-djiga.html">
+  <img class="pic" src="../assets/photos/player-nasser-djiga.jpg" alt="Nasser Djiga" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Nasser Djiga</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Red Star Belgrade</span></span>
+</a><a class="pcard" href="players/steeve-yago.html">
+  <img class="pic" src="../assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Steeve Yago</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Aris Limassol</span></span>
+</a><a class="pcard" href="players/valentin-nouma.html">
+  <span class="pic avatar" aria-hidden="true">VN</span>
+  <span><span class="nm">Valentin Nouma</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Saint-Éloi</span></span>
+</a><a class="pcard" href="players/adama-guira.html">
+  <img class="pic" src="../assets/photos/player-adama-guira.jpg" alt="Adama Guira" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Adama Guira</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Racing Rioja</span></span>
+</a><a class="pcard" href="players/blati-toure.html">
+  <img class="pic" src="../assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Blati Touré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Pyramids</span></span>
+</a><a class="pcard" href="players/dramane-salou.html">
+  <img class="pic" src="../assets/photos/player-dramane-salou.jpg" alt="Dramane Salou" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Dramane Salou</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Urartu</span></span>
+</a><a class="pcard" href="players/gustavo-sangare.html">
+  <img class="pic" src="../assets/photos/player-gustavo-sangare.jpg" alt="Gustavo Sangaré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Gustavo Sangaré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Quevilly-Rouen</span></span>
+</a><a class="pcard" href="players/ismahila-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">IO</span>
+  <span><span class="nm">Ismahila Ouédraogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Panserraikos</span></span>
+</a><a class="pcard" href="players/sacha-banse.html">
+  <span class="pic avatar" aria-hidden="true">SB</span>
+  <span><span class="nm">Sacha Bansé</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Valenciennes</span></span>
+</a><a class="pcard" href="players/stephane-aziz-ki.html">
+  <img class="pic" src="../assets/photos/player-stephane-aziz-ki.jpg" alt="Stephane Aziz Ki" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Stephane Aziz Ki</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Young Africans</span></span>
+</a><a class="pcard" href="players/abdoul-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-abdoul-tapsoba.jpg" alt="Abdoul Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Abdoul Tapsoba</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Amiens</span></span>
+</a><a class="pcard" href="players/bertrand-traore.html">
+  <img class="pic" src="../assets/photos/player-bertrand-traore.jpg" alt="Bertrand Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Bertrand Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Aston Villa</span></span>
+</a><a class="pcard" href="players/cedric-badolo.html">
+  <img class="pic" src="../assets/photos/player-cedric-badolo.jpg" alt="Cedric Badolo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Cedric Badolo</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Sheriff Tiraspol</span></span>
+</a><a class="pcard" href="players/dango-ouattara.html">
+  <img class="pic" src="../assets/photos/player-dango-ouattara.jpg" alt="Dango Ouattara" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Dango Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Bournemouth</span></span>
+</a><a class="pcard" href="players/djibril-ouattara.html">
+  <span class="pic avatar" aria-hidden="true">DO</span>
+  <span><span class="nm">Djibril Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">RS Berkane</span></span>
+</a><a class="pcard" href="players/hassane-bande.html">
+  <span class="pic avatar" aria-hidden="true">HB</span>
+  <span><span class="nm">Hassane Bandé</span>
+    <span class="rl">Forward</span>
+    <span class="stat">HJK</span></span>
+</a><a class="pcard" href="players/mamady-bangre.html">
+  <img class="pic" src="../assets/photos/player-mamady-bangre.jpg" alt="Mamady Bangré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Mamady Bangré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Toulouse</span></span>
+</a><a class="pcard" href="players/mohamed-konate.html">
+  <span class="pic avatar" aria-hidden="true">MK</span>
+  <span><span class="nm">Mohamed Konaté</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Akhmat Grozny</span></span>
+</a></div>
+    </div><div class="windowblock">
+      <h3>AFCON 2021 (Jan 2022) <span class="wcount">28</span></h3>
+      <p class="sub">List as of 9 January 2022</p>
+      <div class="roster"><a class="pcard" href="players/aboubacar-sawadogo.html">
+  <span class="pic avatar" aria-hidden="true">AS</span>
+  <span><span class="nm">Aboubacar Sawadogo</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Kadiogo</span></span>
+</a><a class="pcard" href="players/farid-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">FO</span>
+  <span><span class="nm">Farid Ouédraogo</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">USFA</span></span>
+</a><a class="pcard" href="players/herve-koffi.html">
+  <img class="pic" src="../assets/photos/player-herve-koffi.jpg" alt="Hervé Koffi" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Hervé Koffi</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">Charleroi</span></span>
+</a><a class="pcard" href="players/kilian-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">KN</span>
+  <span><span class="nm">Kilian Nikiema</span>
+    <span class="rl">Goalkeeper</span>
+    <span class="stat">ADO Den Haag</span></span>
+</a><a class="pcard" href="players/edmond-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-edmond-tapsoba.jpg" alt="Edmond Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Edmond Tapsoba</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Bayer Leverkusen</span></span>
+</a><a class="pcard" href="players/hermann-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">HN</span>
+  <span><span class="nm">Hermann Nikiema</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Salitas</span></span>
+</a><a class="pcard" href="players/issa-kabore.html">
+  <img class="pic" src="../assets/photos/player-issa-kabore.jpg" alt="Issa Kaboré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issa Kaboré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Troyes</span></span>
+</a><a class="pcard" href="players/issoufou-dayo.html">
+  <img class="pic" src="../assets/photos/player-issoufou-dayo.jpg" alt="Issoufou Dayo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Issoufou Dayo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">RS Berkane</span></span>
+</a><a class="pcard" href="players/oula-abass-traore.html">
+  <span class="pic avatar" aria-hidden="true">OT</span>
+  <span><span class="nm">Oula Abass Traoré</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Horoya</span></span>
+</a><a class="pcard" href="players/patrick-malo.html">
+  <img class="pic" src="../assets/photos/player-patrick-malo.jpg" alt="Patrick Malo" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Patrick Malo</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Hassania Agadir</span></span>
+</a><a class="pcard" href="players/soumaila-ouattara.html">
+  <span class="pic avatar" aria-hidden="true">SO</span>
+  <span><span class="nm">Soumaïla Ouattara</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Raja CA</span></span>
+</a><a class="pcard" href="players/steeve-yago.html">
+  <img class="pic" src="../assets/photos/player-steeve-yago.jpg" alt="Steeve Yago" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Steeve Yago</span>
+    <span class="rl">Defender</span>
+    <span class="stat">Aris Limassol</span></span>
+</a><a class="pcard" href="players/adama-guira.html">
+  <img class="pic" src="../assets/photos/player-adama-guira.jpg" alt="Adama Guira" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Adama Guira</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Racing Rioja</span></span>
+</a><a class="pcard" href="players/blati-toure.html">
+  <img class="pic" src="../assets/photos/player-blati-toure.jpg" alt="Blati Touré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Blati Touré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Eskilstuna</span></span>
+</a><a class="pcard" href="players/dramane-nikiema.html">
+  <span class="pic avatar" aria-hidden="true">DN</span>
+  <span><span class="nm">Dramane Nikièma</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Horoya</span></span>
+</a><a class="pcard" href="players/gustavo-sangare.html">
+  <img class="pic" src="../assets/photos/player-gustavo-sangare.jpg" alt="Gustavo Sangaré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Gustavo Sangaré</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Quevilly-Rouen</span></span>
+</a><a class="pcard" href="players/ismahila-ouedraogo.html">
+  <span class="pic avatar" aria-hidden="true">IO</span>
+  <span><span class="nm">Ismahila Ouédraogo</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">PAOK</span></span>
+</a><a class="pcard" href="players/saidou-simpore.html">
+  <span class="pic avatar" aria-hidden="true">SS</span>
+  <span><span class="nm">Saïdou Simporé</span>
+    <span class="rl">Midfielder</span>
+    <span class="stat">Al Ittihad</span></span>
+</a><a class="pcard" href="players/abdoul-tapsoba.html">
+  <img class="pic" src="../assets/photos/player-abdoul-tapsoba.jpg" alt="Abdoul Tapsoba" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Abdoul Tapsoba</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Standard Liège</span></span>
+</a><a class="pcard" href="players/bertrand-traore.html">
+  <img class="pic" src="../assets/photos/player-bertrand-traore.jpg" alt="Bertrand Traoré" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Bertrand Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Aston Villa</span></span>
+</a><a class="pcard" href="players/cyrille-bayala.html">
+  <img class="pic" src="../assets/photos/player-cyrille-bayala.jpg" alt="Cyrille Bayala" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Cyrille Bayala</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Ajaccio</span></span>
+</a><a class="pcard" href="players/dango-ouattara.html">
+  <img class="pic" src="../assets/photos/player-dango-ouattara.jpg" alt="Dango Ouattara" loading="lazy" decoding="async" width="42" height="42">
+  <span><span class="nm">Dango Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Lorient</span></span>
+</a><a class="pcard" href="players/djibril-ouattara.html">
+  <span class="pic avatar" aria-hidden="true">DO</span>
+  <span><span class="nm">Djibril Ouattara</span>
+    <span class="rl">Forward</span>
+    <span class="stat">OC Safi</span></span>
+</a><a class="pcard" href="players/eric-traore.html">
+  <span class="pic avatar" aria-hidden="true">ET</span>
+  <span><span class="nm">Eric Traoré</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Pyramids</span></span>
+</a><a class="pcard" href="players/hassane-bande.html">
+  <span class="pic avatar" aria-hidden="true">HB</span>
+  <span><span class="nm">Hassane Bandé</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Istra 1961</span></span>
+</a><a class="pcard" href="players/kouame-botue.html">
+  <span class="pic avatar" aria-hidden="true">KB</span>
+  <span><span class="nm">Kouamé Botué</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Ajaccio</span></span>
+</a><a class="pcard" href="players/mohamed-konate.html">
+  <span class="pic avatar" aria-hidden="true">MK</span>
+  <span><span class="nm">Mohamed Konaté</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Akhmat</span></span>
+</a><a class="pcard" href="players/zakaria-sanogo.html">
+  <span class="pic avatar" aria-hidden="true">ZS</span>
+  <span><span class="nm">Zakaria Sanogo</span>
+    <span class="rl">Forward</span>
+    <span class="stat">Ararat-Armenia</span></span>
+</a></div>
+    </div>
+    <div class="plain"><span class="plain-lbl">In plain terms</span><p>One list per call-up window, as published. Not every qualifying window is covered: the site details 58 matches but holds only 5 lists. That is the project&#x27;s biggest gap, and the most useful contribution anyone can make to it.</p></div>
+  </section>
 </main>
 
 <footer>
-  <p id="footer_text">Étalons Analytics — open-source project (MIT). Data: Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (unaffiliated), portraits from Wikimedia Commons. Updated 2026-08-25. Contact: <a href="mailto:rolandS01@outlook.fr">rolandS01@outlook.fr</a> · <a href="https://github.com/rolandsanou/etalons-analytics">source code</a>.</p>
+  <p id="footer_text">Étalons Analytics — open-source project (MIT). Data: Wikipedia (CC BY-SA), martj42/international_results (CC0), Sofascore (unaffiliated), portraits from Wikimedia Commons. Updated 2026-09-22. Contact: <a href="mailto:rolandS01@outlook.fr">rolandS01@outlook.fr</a> · <a href="https://github.com/rolandsanou/etalons-analytics">source code</a>.</p>
 </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-<script src="../assets/i18n.js?v=7be102b2"></script>
-<script src="../assets/core.js?v=7be102b2"></script>
-<script src="../assets/sections/overview.js?v=7be102b2"></script>
-<script src="../assets/sections/breakdowns.js?v=7be102b2"></script>
-<script src="../assets/boot.js?v=7be102b2"></script>
+<script src="../assets/i18n.js?v=c71841b4"></script>
+<script src="../assets/core.js?v=c71841b4"></script>
+<script src="../assets/sections/overview.js?v=c71841b4"></script>
+<script src="../assets/sections/breakdowns.js?v=c71841b4"></script>
+<script src="../assets/boot.js?v=c71841b4"></script>
 </body>
 </html>

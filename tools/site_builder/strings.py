@@ -229,6 +229,77 @@ EN = {
         "on the bench, which is information too. A missing rating means the "
         "match has no detailed statistics.",
 
+    # --- next-match outlook -------------------------------------------------
+    "Ce que disent les chiffres": "What the numbers say",
+    "Prochain match : {opponent}, {when}, {where}.":
+        "Next match: {opponent}, {when}, {where}.",
+    "Issue attendue": "Expected outcome",
+    "Points attendus": "Expected points",
+    "{mine} contre {theirs}": "{mine} against {theirs}",
+    "Face à face depuis 1960": "Head to head since 1960",
+    "{n} matchs · {w}V {d}N {l}D · {gf}-{ga}":
+        "{n} matches · {w}W {d}D {l}L · {gf}-{ga}",
+    "Dans des matchs aussi déséquilibrés": "In matches this lopsided",
+    "{n} matchs · {w}V {d}N {l}D": "{n} matches · {w}W {d}D {l}L",
+    "Buts par match, dans ces matchs": "Goals per match in those matches",
+    "{gf} marqué · {ga} encaissé": "{gf} scored · {ga} conceded",
+    "Elo": "Elo",
+    "Un modèle de classement, rien de plus : il ne sait rien des blessures, des "
+    "suspensions, de la forme du moment ni de la composition. Testé sur 61 "
+    "matchs qu'il n'avait pas vus, il fait 21,6 % mieux que le simple taux de "
+    "base. Les deux dernières lignes ne sont pas des prévisions mais des "
+    "comptages : ce qui s'est réellement passé dans des matchs aussi "
+    "déséquilibrés.":
+        "A rating model, nothing more: it knows nothing about injuries, "
+        "suspensions, current form or team selection. Tested on 61 matches it "
+        "had not seen, it beats the plain base rate by 21.6%. The last two rows "
+        "are not forecasts but counts: what actually happened in matches as "
+        "lopsided as this one.",
+    "Convocations par fenêtre": "Call-ups by window",
+    "Qui a été appelé, et pour quelle échéance. Cliquez un joueur pour sa fiche.":
+        "Who was called up, and for what. Open a player for their profile.",
+    "Liste au {date}": "List as of {date}",
+    "Une liste par fenêtre de convocation, telle qu'elle a été publiée. Les "
+    "fenêtres d'éliminatoires ne sont pas toutes couvertes : le site détaille "
+    "{n} matchs mais ne dispose que de {w} listes. C'est le principal manque du "
+    "projet, et la contribution la plus utile qu'on puisse lui apporter.":
+        "One list per call-up window, as published. Not every qualifying window "
+        "is covered: the site details {n} matches but holds only {w} lists. That "
+        "is the project's biggest gap, and the most useful contribution anyone "
+        "can make to it.",
+    "État du groupe convoqué": "State of the called-up squad",
+    "Part du groupe qui enchaîne les titularisations en club.":
+        "How much of the squad is starting regularly for its club.",
+    "Titulaires réguliers": "Starting regularly",
+    "{k} sur {n} joueurs jugeables": "{k} of {n} players that can be judged",
+    "Minutes par match de club (médiane)": "Minutes per club appearance (median)",
+    "Sans données de club": "No club data",
+    "{n} sur {total} convoqués": "{n} of {total} called up",
+    "en forme": "in form", "moyen": "middling", "faible": "poor",
+    "Un joueur compte comme titulaire régulier s'il a joué en moyenne {mins} "
+    "minutes ou plus par match de club, sur au moins {apps} matchs. Le groupe "
+    "est dit « en forme » au-dessus de {strong} %, « faible » en dessous de "
+    "{weak} %. Une seule mesure sous une règle affichée, pas un indice "
+    "composite — et elle ne dit rien des blessures, que seule la liste "
+    "officielle révèle.":
+        "A player counts as starting regularly if he has averaged {mins} minutes "
+        "or more per club appearance, across at least {apps} matches. The squad "
+        "reads as “in form” above {strong}% and “poor” below {weak}%. One measure "
+        "under a printed rule, not a composite index — and it says nothing about "
+        "injuries, which only the official list reveals.",
+    "Score exact le plus probable": "Most likely exact score",
+    "Buts attendus : {gf} – {ga}": "Expected goals: {gf} – {ga}",
+    "Le score le plus probable n'est pas le score attendu : à {p} %, il veut "
+    "dire que dans plus de quatre cas sur cinq le match finit autrement. Les "
+    "buts attendus viennent de {n} matchs comparables, puis la répartition est "
+    "ajustée pour coller à la probabilité de victoire ci-contre — les deux ne "
+    "peuvent pas se contredire.":
+        "The likeliest score is not the expected score: at {p}%, it means that "
+        "more than four times out of five the match ends some other way. The "
+        "expected goals come from {n} comparable matches, then the split is "
+        "fitted to the win probability beside it — the two cannot contradict "
+        "each other.",
+
     # --- computed facts ----------------------------------------------------
     "Le saviez-vous ?": "Did you know?",
     "Des faits tirés directement des données — recalculés à chaque mise à jour, "

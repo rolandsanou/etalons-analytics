@@ -111,3 +111,44 @@ def test_a_real_outage_is_kept_as_an_error():
     payload = w.call_args.args[1]
     assert payload["events"] == []
     assert "503" in payload["error"]
+
+
+def test_a_fetched_date_fills_in_the_seeded_fixture_it_belongs_to():
+    """CAF announces the pairing and window first; the source publishes the day
+    weeks later. Keyed differently, they would otherwise both be listed — the
+    same match shown twice, once with a window and once with a date."""
+    seed = [_row(date="", date_confirmed="0", matchday="1", opponent="Benin",
+                 venue="H", window_start="2026-09-21", window_end="2026-10-06",
+                 tournament="AFCON Q", source="seed")]
+    src = [_row(date="2026-09-25", window_start="2026-09-25",
+                window_end="2026-09-25", matchday="", opponent="Benin",
+                venue="H", source="sofascore")]
+    rows = _run(src, seed)
+    assert len(rows) == 1                      # one match, not two
+    assert rows[0]["date"] == "2026-09-25"     # the source supplied the day
+    assert rows[0]["date_confirmed"] == "1"
+    assert rows[0]["matchday"] == "1"          # the seed kept what it knew
+    assert rows[0]["source"] == "seed"
+
+
+def test_a_neutral_venue_typed_by_hand_survives_the_merge():
+    """The source can only say home or away, so it must not overwrite a venue a
+    maintainer set to neutral."""
+    seed = [_row(date="", date_confirmed="0", matchday="1", opponent="Benin",
+                 venue="N", window_start="2026-09-21", window_end="2026-10-06",
+                 source="seed")]
+    src = [_row(date="2026-09-25", window_start="2026-09-25",
+                window_end="2026-09-25", matchday="", opponent="Benin",
+                venue="H", source="sofascore")]
+    assert _run(src, seed)[0]["venue"] == "N"
+
+
+def test_a_fetched_match_outside_every_window_is_added_on_its_own():
+    """A friendly the seed never mentioned still belongs on the list."""
+    seed = [_row(date="", date_confirmed="0", matchday="1", opponent="Benin",
+                 window_start="2026-09-21", window_end="2026-10-06", source="seed")]
+    src = [_row(date="2026-12-15", window_start="2026-12-15",
+                window_end="2026-12-15", matchday="", opponent="Morocco",
+                source="sofascore")]
+    rows = _run(src, seed)
+    assert [r["opponent"] for r in rows] == ["Benin", "Morocco"]

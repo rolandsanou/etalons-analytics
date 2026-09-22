@@ -6,14 +6,16 @@ fixture here may carry a confirmed date, or only the window it falls in — and 
 site says which. Inventing a date to fill the column would be worse than leaving
 it open, because a wrong date on a public page is read as fact.
 
-A seeded row wins over a fetched one on the same matchday: it was typed
-deliberately.
+When the source later publishes a match the seed already described, the two are
+recognised as one fixture — same opponent, date inside the announced window — and
+merged: the seed keeps what a maintainer typed deliberately (the matchday, a
+neutral venue the source cannot express) while the source supplies the day.
 """
 
 from datetime import date
 
 from ..config import RAW, SEED, SOFA_TEAM_ID, STAGING
-from ..util import read_csv, read_json, write_csv
+from ..util import norm_name, read_csv, read_json, write_csv
 
 FIXTURE_FIELDS = ["date", "date_confirmed", "window_start", "window_end",
                   "matchday", "opponent", "venue", "tournament", "source"]
@@ -74,21 +76,42 @@ def _from_seed():
     return rows
 
 
-def _key(row):
-    """What identifies the same fixture across sources: the matchday if there is
-    one, otherwise the date."""
-    return row["matchday"] or row["date"] or row["window_start"]
+def _open(row, today):
+    """A fixture stays listed until its window closes, not until its date, so an
+    unscheduled match does not vanish the morning its window opens."""
+    return (row["window_end"] or row["window_start"]) >= today
+
+
+def _same_match(seeded, fetched):
+    """Whether a fetched fixture is the match a seeded row already describes.
+
+    They are keyed differently — a seeded row knows its matchday and its window,
+    a fetched one knows its date — so they cannot be matched on a shared key.
+    Same opponent, and a date falling inside the announced window, is the thing
+    that actually identifies them as one match.
+    """
+    return (norm_name(seeded["opponent"]) == norm_name(fetched["opponent"])
+            and seeded["window_start"] <= fetched["date"] <= seeded["window_end"])
 
 
 def run(today=None):
     today = (today or date.today()).isoformat()
-    by_key = {}
-    for row in _from_source() + _from_seed():   # seed second, so it overwrites
-        # a fixture stays listed until its window has closed, not just its date,
-        # so an unscheduled match does not vanish the day the window opens
-        if (row["window_end"] or row["window_start"]) >= today:
-            by_key[_key(row)] = row
-    rows = sorted(by_key.values(),
-                  key=lambda r: (r["window_start"], int(r["matchday"] or 0)))
+    rows = [r for r in _from_seed() if _open(r, today)]
+
+    for got in (r for r in _from_source() if _open(r, today)):
+        seeded = next((s for s in rows if _same_match(s, got)), None)
+        if seeded is None:
+            rows.append(got)
+            continue
+        # The seed stays in charge of what a maintainer typed deliberately — the
+        # matchday, and a neutral venue the source cannot express. What the
+        # source adds is the day itself, once CAF sets it.
+        if seeded["date_confirmed"] != "1":
+            seeded.update(date=got["date"], date_confirmed="1")
+        seeded["venue"] = seeded["venue"] or got["venue"]
+        seeded["tournament"] = seeded["tournament"] or got["tournament"]
+
+    rows.sort(key=lambda r: (r["date"] or r["window_start"],
+                             int(r["matchday"] or 0)))
     write_csv(STAGING / "fixtures.csv", rows, FIXTURE_FIELDS)
     return rows
