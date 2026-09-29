@@ -1,6 +1,7 @@
 import json
+from datetime import datetime
 
-from .config import MARTS, SEED, SITE_DATA, STAGING
+from .config import MARTS, RAW, SEED, SITE_DATA, STAGING
 from .util import read_csv
 
 
@@ -363,6 +364,35 @@ def _check_site(report):
             report.append((f"site: {name}", "FAIL", str(e)[:80]))
     _check_factoids(report)
     _check_squad_columns(report)
+    _check_index_freshness(report)
+
+
+# A refresh is expected at least this often; beyond it the match list is stale
+# whatever the reason, and the site is quietly publishing an old season.
+INDEX_MAX_AGE_DAYS = 8
+
+
+def _check_index_freshness(report):
+    """Did this pipeline actually re-read the list of played matches?
+
+    The failure this exists for produced no error at all. The match index was
+    cached once and never refetched, so every refresh ran green, passed every
+    gate and published — while knowing nothing about two qualifiers played
+    three days earlier. Later the same silence came from Sofascore refusing the
+    client outright. Neither is visible in the data, because the data is
+    perfectly consistent; it is just old. Only the clock catches it.
+    """
+    path = RAW / "sofascore" / "events_index.json"
+    if not path.exists():
+        report.append(("sofascore: match index", "FAIL", "no match index fetched"))
+        return
+    age = (datetime.now() - datetime.fromtimestamp(path.stat().st_mtime)).days
+    report.append((
+        "sofascore: match index freshness",
+        "FAIL" if age > INDEX_MAX_AGE_DAYS else "PASS",
+        f"re-read {age} day(s) ago"
+        + (f" — over {INDEX_MAX_AGE_DAYS}, a played match could be missing"
+           if age > INDEX_MAX_AGE_DAYS else "")))
 
 
 def _check_squad_columns(report):

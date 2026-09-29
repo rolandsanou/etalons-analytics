@@ -22,9 +22,10 @@ def _row(**kw):
     return row
 
 
-def _run(src, seed, today=(2026, 8, 23)):
+def _run(src, seed, today=(2026, 8, 23), played=()):
     with mock.patch.object(fixtures, "_from_source", return_value=src), \
          mock.patch.object(fixtures, "_from_seed", return_value=seed), \
+         mock.patch.object(fixtures, "_played", return_value=list(played)), \
          mock.patch.object(fixtures, "write_csv"):
         return fixtures.run(today=date(*today))
 
@@ -152,3 +153,35 @@ def test_a_fetched_match_outside_every_window_is_added_on_its_own():
                 source="sofascore")]
     rows = _run(src, seed)
     assert [r["opponent"] for r in rows] == ["Benin", "Morocco"]
+
+
+# --- a fixture closes when the match is played, not when the window ends ----
+
+def test_a_played_match_stops_being_an_upcoming_fixture():
+    """CAF announces a nine-day window and names the day later, so a fixture is
+    held for the whole window. The window outlives the match: Benin was played
+    on 25 September and stayed listed as upcoming until 6 October, so the site
+    went on previewing a match whose result it was already reporting."""
+    seed = [_row(date="", date_confirmed="0", matchday="1", opponent="Benin",
+                 window_start="2026-09-21", window_end="2026-10-06",
+                 source="seed"),
+            _row(date="", date_confirmed="0", matchday="3", opponent="Mauritania",
+                 window_start="2026-11-09", window_end="2026-11-17",
+                 source="seed")]
+    rows = _run([], seed, today=(2026, 9, 29), played=[("benin", "2026-09-25")])
+    assert [r["opponent"] for r in rows] == ["Mauritania"]
+
+
+def test_an_unplayed_fixture_in_an_open_window_is_kept():
+    seed = [_row(date="", date_confirmed="0", opponent="Benin",
+                 window_start="2026-09-21", window_end="2026-10-06", source="seed")]
+    # the same opponent, but that meeting falls outside this window
+    played = [("benin", "2025-11-18")]
+    assert len(_run([], seed, today=(2026, 9, 29), played=played)) == 1
+
+
+def test_a_different_opponent_in_the_window_does_not_close_a_fixture():
+    seed = [_row(date="", date_confirmed="0", opponent="Mauritania",
+                 window_start="2026-09-21", window_end="2026-10-06", source="seed")]
+    played = [("benin", "2026-09-25")]
+    assert len(_run([], seed, today=(2026, 9, 29), played=played)) == 1

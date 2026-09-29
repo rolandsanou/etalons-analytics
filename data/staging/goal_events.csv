@@ -171,3 +171,6 @@ event_id,date,minute,added_time,class,is_bf,scorer_sofa_id,scorer_name,scorer_pl
 16205035,2026-06-09,67,0,regular,0,1088702,Karen Vardanyan,,,,,0,2,68,1,extender
 16205035,2026-06-09,73,0,regular,1,1490960,Moise Kaboré,moise-elohim-kabore,,,,1,2,74,-2,consolation
 16205035,2026-06-09,85,0,regular,1,883262,Edmond Tapsoba,edmond-tapsoba,,,,2,2,86,-1,equalizer
+17018569,2026-09-25,20,0,penalty,1,911719,Lassina Traoré,lassina-traore,,,,1,0,20,0,opener
+17018569,2026-09-25,68,0,penalty,0,875548,Aiyegun Tosin,,,,,1,1,72,-1,equalizer
+17018568,2026-09-28,60,0,regular,1,1542696,Aboubacar Camara,aboubacar-camara,910053,Arthur Zagre,arthur-zagre,1,0,64,0,opener

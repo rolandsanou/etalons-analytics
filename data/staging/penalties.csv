@@ -51,3 +51,5 @@ event_id,date,kind,minute,added_time,is_bf,outcome,sofa_id,name,player_id
 15032911,2025-11-14,ingame,56,0,0,scored,1130110,Daniel Sosah,
 13424954,2025-12-28,ingame,23,0,0,scored,158213,Riyad Mahrez,
 13424968,2025-12-31,ingame,24,0,0,missed,1104515,Al-Gozoli Nooh,
+17018569,2026-09-25,ingame,68,0,0,scored,875548,Aiyegun Tosin,
+17018569,2026-09-25,ingame,20,0,1,scored,911719,Lassina Traoré,lassina-traore

@@ -205,7 +205,7 @@
    "club_country": "Belgium",
    "league": "Pro League",
    "club_verified": true,
-   "age": 29.9,
+   "age": 30.0,
    "age_afcon27": 30.7,
    "age_wc30": 33.7,
    "phase_now": "peak",
@@ -224,7 +224,7 @@
    "club_country": "Serbia",
    "league": "Mozzart Bet Superliga",
    "club_verified": true,
-   "age": 22.8,
+   "age": 22.9,
    "age_afcon27": 23.6,
    "age_wc30": 26.6,
    "phase_now": "before",
@@ -878,7 +878,8 @@
    "24–26": 11,
    "≤20": 4,
    "21–23": 7,
-   "27–29": 3
+   "27–29": 2,
+   "30–32": 1
   },
   "by_club_country": {
    "Poland": 1,
@@ -932,7 +933,7 @@
    "Ismahila Ouédraogo",
    "Stephane Aziz Ki"
   ],
-  "avg_age_now": 28.8,
+  "avg_age_now": 28.9,
   "avg_age_afcon27": 29.6,
   "in_peak_afcon27": 9
  },
@@ -940,82 +941,10 @@
   "window_id": "sept2026",
   "compared_with": "current",
   "as_of": "2026-09-22",
-  "next_match": "2026-09-21",
-  "predates_next_match": false,
+  "next_match": "2026-11-09",
+  "predates_next_match": true,
   "squad": 25,
   "newcomers": [
-   {
-    "player_id": "axel-sountonoma-taonsa",
-    "name": "Axel Sountonoma Taonsa",
-    "pos": "MF",
-    "age": 22.6,
-    "club": "Västerås SK",
-    "league": "Allsvenskan",
-    "status": "active",
-    "caps": null,
-    "window_squads": 0,
-    "window_starts": 0,
-    "window_minutes": 0,
-    "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "Allsvenskan",
-     "season": "2026",
-     "apps": 20,
-     "minutes": 1459,
-     "per_app": 73.0,
-     "rating": 7.08,
-     "prev_minutes": 2226,
-     "prev_season": "2025"
-    }
-   },
-   {
-    "player_id": "ismael-maiga",
-    "name": "Ismael Maïga",
-    "pos": "DF",
-    "age": 22.8,
-    "club": "FK Čukarički",
-    "league": "Mozzart Bet Superliga",
-    "status": "active",
-    "caps": null,
-    "window_squads": 0,
-    "window_starts": 0,
-    "window_minutes": 0,
-    "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "Mozzart Bet Superliga",
-     "season": "26/27",
-     "apps": 10,
-     "minutes": 900,
-     "per_app": 90.0,
-     "rating": 6.68,
-     "prev_minutes": 1060,
-     "prev_season": "25/26"
-    }
-   },
-   {
-    "player_id": "julien-eymard-bationo",
-    "name": "Julien Eymard Bationo",
-    "pos": "MF",
-    "age": 21.0,
-    "club": "DAC 1904",
-    "league": "Niké Liga",
-    "status": "active",
-    "caps": null,
-    "window_squads": 0,
-    "window_starts": 0,
-    "window_minutes": 0,
-    "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "Niké Liga",
-     "season": "26/27",
-     "apps": 8,
-     "minutes": 538,
-     "per_app": 67.2,
-     "rating": 6.79,
-     "prev_minutes": 764,
-     "prev_season": "25/26"
-    }
-   },
    {
     "player_id": "mamoutou-ouedraogo",
     "name": "Mamoutou Ouédraogo",
@@ -1041,30 +970,6 @@
     }
    },
    {
-    "player_id": "rachid-kouda",
-    "name": "Rachid Kouda",
-    "pos": "MF",
-    "age": 24.2,
-    "club": "Mantova",
-    "league": "Serie B",
-    "status": "active",
-    "caps": null,
-    "window_squads": 0,
-    "window_starts": 0,
-    "window_minutes": 0,
-    "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "Serie B",
-     "season": "26/27",
-     "apps": 4,
-     "minutes": 290,
-     "per_app": 72.5,
-     "rating": 7.0,
-     "prev_minutes": 1983,
-     "prev_season": "25/26"
-    }
-   },
-   {
     "player_id": "aboubacar-sidiki-camara",
     "name": "Aboubacar Sidiki Camara",
     "pos": "FW",
@@ -1077,16 +982,22 @@
     "window_starts": 0,
     "window_minutes": 0,
     "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "Austrian Bundesliga",
-     "season": "26/27",
-     "apps": 5,
-     "minutes": 199,
-     "per_app": 39.8,
-     "rating": 7.18,
-     "prev_minutes": 2187,
-     "prev_season": "25/26"
-    }
+    "club_form": null
+   },
+   {
+    "player_id": "axel-sountonoma-taonsa",
+    "name": "Axel Sountonoma Taonsa",
+    "pos": "MF",
+    "age": 22.6,
+    "club": "Västerås SK",
+    "league": "Allsvenskan",
+    "status": "active",
+    "caps": null,
+    "window_squads": 0,
+    "window_starts": 0,
+    "window_minutes": 0,
+    "last_seen": "2026-09-22",
+    "club_form": null
    },
    {
     "player_id": "cheick-bebel-doumbia",
@@ -1101,19 +1012,58 @@
     "window_starts": 0,
     "window_minutes": 0,
     "last_seen": "2026-09-22",
-    "club_form": {
-     "competition": "SuperLiga României",
-     "season": "26/27",
-     "apps": 3,
-     "minutes": 167,
-     "per_app": 55.7,
-     "rating": 6.97,
-     "prev_minutes": 1137,
-     "prev_season": "25/26"
-    }
+    "club_form": null
    }
   ],
   "recalls": [
+   {
+    "player_id": "ismael-maiga",
+    "name": "Ismael Maïga",
+    "pos": "DF",
+    "age": 22.9,
+    "club": "FK Čukarički",
+    "league": "Mozzart Bet Superliga",
+    "status": "active",
+    "caps": null,
+    "window_squads": 1,
+    "window_starts": 0,
+    "window_minutes": 0,
+    "last_seen": "2026-09-28",
+    "club_form": {
+     "competition": "Mozzart Bet Superliga",
+     "season": "26/27",
+     "apps": 10,
+     "minutes": 900,
+     "per_app": 90.0,
+     "rating": 6.68,
+     "prev_minutes": 1060,
+     "prev_season": "25/26"
+    }
+   },
+   {
+    "player_id": "julien-eymard-bationo",
+    "name": "Julien Eymard Bationo",
+    "pos": "MF",
+    "age": 21.0,
+    "club": "DAC 1904",
+    "league": "Niké Liga",
+    "status": "active",
+    "caps": null,
+    "window_squads": 2,
+    "window_starts": 0,
+    "window_minutes": 0,
+    "last_seen": "2026-09-28",
+    "club_form": {
+     "competition": "Niké Liga",
+     "season": "26/27",
+     "apps": 8,
+     "minutes": 538,
+     "per_app": 67.2,
+     "rating": 6.79,
+     "prev_minutes": 764,
+     "prev_season": "25/26"
+    }
+   },
    {
     "player_id": "issa-kabore",
     "name": "Issa Kaboré",
@@ -1123,10 +1073,10 @@
     "league": "Championship",
     "status": "active",
     "caps": 52,
-    "window_squads": 38,
-    "window_starts": 28,
-    "window_minutes": 2517,
-    "last_seen": "2026-03-28",
+    "window_squads": 40,
+    "window_starts": 30,
+    "window_minutes": 2697,
+    "last_seen": "2026-09-28",
     "club_form": {
      "competition": "Championship",
      "season": "26/27",
@@ -1139,6 +1089,30 @@
     }
    },
    {
+    "player_id": "rachid-kouda",
+    "name": "Rachid Kouda",
+    "pos": "MF",
+    "age": 24.2,
+    "club": "Mantova",
+    "league": "Serie B",
+    "status": "active",
+    "caps": null,
+    "window_squads": 2,
+    "window_starts": 1,
+    "window_minutes": 46,
+    "last_seen": "2026-09-28",
+    "club_form": {
+     "competition": "Serie B",
+     "season": "26/27",
+     "apps": 4,
+     "minutes": 290,
+     "per_app": 72.5,
+     "rating": 7.0,
+     "prev_minutes": 1983,
+     "prev_season": "25/26"
+    }
+   },
+   {
     "player_id": "lassina-traore",
     "name": "Lassina Traoré",
     "pos": "FW",
@@ -1147,10 +1121,10 @@
     "league": "Ukrainian Premier League",
     "status": "active",
     "caps": 31,
-    "window_squads": 17,
-    "window_starts": 11,
-    "window_minutes": 924,
-    "last_seen": "2026-03-31",
+    "window_squads": 19,
+    "window_starts": 13,
+    "window_minutes": 1060,
+    "last_seen": "2026-09-28",
     "club_form": {
      "competition": "Ukrainian Premier League",
      "season": "26/27",
@@ -1365,12 +1339,12 @@
  "readiness": {
   "window_id": "sept2026",
   "squad": 25,
-  "rated": 25,
-  "no_club_data": 0,
-  "starting": 16,
-  "share": 0.64,
-  "band": "neutral",
-  "median_per_app": 72.5,
+  "rated": 22,
+  "no_club_data": 3,
+  "starting": 15,
+  "share": 0.682,
+  "band": "strong",
+  "median_per_app": 76.2,
   "rule": {
    "starter_minutes": 60,
    "min_apps": 3,
@@ -1511,18 +1485,6 @@
     "starting": true
    },
    {
-    "player_id": "axel-sountonoma-taonsa",
-    "name": "Axel Sountonoma Taonsa",
-    "pos": "MF",
-    "club": "Allsvenskan",
-    "season": "2026",
-    "apps": 20,
-    "minutes": 1459,
-    "per_app": 73.0,
-    "counts": true,
-    "starting": true
-   },
-   {
     "player_id": "rachid-kouda",
     "name": "Rachid Kouda",
     "pos": "MF",
@@ -1583,18 +1545,6 @@
     "starting": false
    },
    {
-    "player_id": "cheick-bebel-doumbia",
-    "name": "Cheick Bebel Doumbia",
-    "pos": "MF",
-    "club": "SuperLiga României",
-    "season": "26/27",
-    "apps": 3,
-    "minutes": 167,
-    "per_app": 55.7,
-    "counts": true,
-    "starting": false
-   },
-   {
     "player_id": "lohann-doucet",
     "name": "Lohann Doucet",
     "pos": "MF",
@@ -1627,18 +1577,6 @@
     "apps": 8,
     "minutes": 418,
     "per_app": 52.2,
-    "counts": true,
-    "starting": false
-   },
-   {
-    "player_id": "aboubacar-sidiki-camara",
-    "name": "Aboubacar Sidiki Camara",
-    "pos": "FW",
-    "club": "Austrian Bundesliga",
-    "season": "26/27",
-    "apps": 5,
-    "minutes": 199,
-    "per_app": 39.8,
     "counts": true,
     "starting": false
    },
@@ -1676,6 +1614,42 @@
     "minutes": 89,
     "per_app": 29.7,
     "counts": true,
+    "starting": false
+   },
+   {
+    "player_id": "aboubacar-sidiki-camara",
+    "name": "Aboubacar Sidiki Camara",
+    "pos": "FW",
+    "club": "",
+    "season": "",
+    "apps": 0,
+    "minutes": 0,
+    "per_app": null,
+    "counts": false,
+    "starting": false
+   },
+   {
+    "player_id": "axel-sountonoma-taonsa",
+    "name": "Axel Sountonoma Taonsa",
+    "pos": "MF",
+    "club": "",
+    "season": "",
+    "apps": 0,
+    "minutes": 0,
+    "per_app": null,
+    "counts": false,
+    "starting": false
+   },
+   {
+    "player_id": "cheick-bebel-doumbia",
+    "name": "Cheick Bebel Doumbia",
+    "pos": "MF",
+    "club": "",
+    "season": "",
+    "apps": 0,
+    "minutes": 0,
+    "per_app": null,
+    "counts": false,
     "starting": false
    }
   ]

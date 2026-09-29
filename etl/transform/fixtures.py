@@ -82,6 +82,32 @@ def _open(row, today):
     return (row["window_end"] or row["window_start"]) >= today
 
 
+def _played():
+    """Matches already played, as (normalised opponent, date) pairs."""
+    path = STAGING / "events.csv"
+    if not path.exists():
+        return []
+    return [(norm_name(e["opponent"]), e["date"]) for e in read_csv(path)]
+
+
+def _already_played(row, played):
+    """Whether this fixture is a match that has now been played.
+
+    A window is deliberately wide — CAF announces a nine-day slot and names the
+    day later — and a fixture is kept for the whole of it so an undated match
+    does not disappear the morning its window opens. But the window outlives the
+    match: Benin and the Central African Republic were played on the 25th and
+    the 28th and stayed listed as upcoming until the 6th of October, so the site
+    went on predicting a match it had already reported the result of. What
+    closes a fixture is the match being played, not the calendar.
+    """
+    for opponent, day in played:
+        if opponent == norm_name(row["opponent"]) and (
+                row["window_start"] <= day <= (row["window_end"] or day)):
+            return True
+    return False
+
+
 def _same_match(seeded, fetched):
     """Whether a fetched fixture is the match a seeded row already describes.
 
@@ -96,9 +122,12 @@ def _same_match(seeded, fetched):
 
 def run(today=None):
     today = (today or date.today()).isoformat()
-    rows = [r for r in _from_seed() if _open(r, today)]
+    played = _played()
+    rows = [r for r in _from_seed()
+            if _open(r, today) and not _already_played(r, played)]
 
-    for got in (r for r in _from_source() if _open(r, today)):
+    for got in (r for r in _from_source()
+                if _open(r, today) and not _already_played(r, played)):
         seeded = next((s for s in rows if _same_match(s, got)), None)
         if seeded is None:
             rows.append(got)

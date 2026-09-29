@@ -23,6 +23,10 @@ SOFA_SLEEP = 1.3
 PROFILE_MAX_AGE_DAYS = 30
 # A calendar changes far more often than a played match, and it is one request.
 FIXTURES_MAX_AGE_DAYS = 1
+# The all-time results feed gains a row within days of a match, and the Elo
+# model, the record and every historical page are built from it. Fetched once
+# and kept, it froze the team's history at whatever day the file first landed.
+RESULTS_MAX_AGE_DAYS = 1
 
 # study window: every call-up since AFCON 2021 (played January 2022)
 STATS_SINCE = date(2022, 1, 1)

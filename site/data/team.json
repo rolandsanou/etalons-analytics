@@ -22,52 +22,72 @@
   },
   {
    "formation": "4-2-3-1",
-   "matches": 18,
+   "matches": 19,
    "w": 8,
-   "d": 5,
+   "d": 6,
    "l": 5,
-   "gf": 26,
-   "ga": 22,
-   "gf_pm": 1.44,
-   "ga_pm": 1.22,
-   "ppg": 1.61,
+   "gf": 27,
+   "ga": 23,
+   "gf_pm": 1.42,
+   "ga_pm": 1.21,
+   "ppg": 1.58,
    "opp_elo_avg": 1599.0,
    "n_elo": 17,
    "comp_afcon": 11,
-   "comp_afcon_qual": 3,
+   "comp_afcon_qual": 4,
    "comp_wc_qual": 2,
    "comp_friendly": 2,
    "comp_other": 0,
    "pooled_from": ""
   },
   {
-   "formation": "others",
-   "matches": 20,
-   "w": 8,
-   "d": 4,
-   "l": 8,
-   "gf": 27,
-   "ga": 26,
-   "gf_pm": 1.35,
-   "ga_pm": 1.3,
-   "ppg": 1.4,
-   "opp_elo_avg": 1564.0,
-   "n_elo": 17,
-   "comp_afcon": 4,
+   "formation": "4-1-4-1",
+   "matches": 8,
+   "w": 2,
+   "d": 1,
+   "l": 5,
+   "gf": 2,
+   "ga": 10,
+   "gf_pm": 0.25,
+   "ga_pm": 1.25,
+   "ppg": 0.88,
+   "opp_elo_avg": 1678.0,
+   "n_elo": 5,
+   "comp_afcon": 2,
    "comp_afcon_qual": 3,
-   "comp_wc_qual": 5,
-   "comp_friendly": 8,
+   "comp_wc_qual": 2,
+   "comp_friendly": 1,
    "comp_other": 0,
-   "pooled_from": "3-4-2-1;3-4-3;3-5-2;4-1-4-1;4-4-2;4-5-1;5-4-1"
+   "pooled_from": ""
+  },
+  {
+   "formation": "others",
+   "matches": 13,
+   "w": 7,
+   "d": 3,
+   "l": 3,
+   "gf": 26,
+   "ga": 16,
+   "gf_pm": 2.0,
+   "ga_pm": 1.23,
+   "ppg": 1.85,
+   "opp_elo_avg": 1516.0,
+   "n_elo": 12,
+   "comp_afcon": 2,
+   "comp_afcon_qual": 1,
+   "comp_wc_qual": 3,
+   "comp_friendly": 7,
+   "comp_other": 0,
+   "pooled_from": "3-4-2-1;3-4-3;3-5-2;4-4-2;4-5-1;5-4-1"
   }
  ],
  "penalties": {
   "ingame_for": {
-   "scored": 12,
+   "scored": 13,
    "missed": 3
   },
   "ingame_against": {
-   "scored": 9,
+   "scored": 10,
    "missed": 1
   },
   "takers": [
@@ -80,7 +100,7 @@
    {
     "name": "Lassina Traoré",
     "player_id": "lassina-traore",
-    "scored": 1,
+    "scored": 2,
     "missed": 0
    },
    {
@@ -125,10 +145,10 @@
   "gk_shootout_saves": 1
  },
  "coverage": {
-  "events": 58,
-  "with_formation": 58,
-  "with_stats": 47,
-  "with_full_stats": 33
+  "events": 60,
+  "with_formation": 60,
+  "with_stats": 49,
+  "with_full_stats": 35
  },
  "timeline": {
   "bins": [
@@ -141,7 +161,7 @@
    },
    {
     "bin": "16_30",
-    "gf": 15,
+    "gf": 16,
     "ga": 13,
     "gf_stoppage": 0,
     "ga_stoppage": 0
@@ -155,7 +175,7 @@
    },
    {
     "bin": "46_60",
-    "gf": 11,
+    "gf": 12,
     "ga": 13,
     "gf_stoppage": 0,
     "ga_stoppage": 0
@@ -163,7 +183,7 @@
    {
     "bin": "61_75",
     "gf": 15,
-    "ga": 13,
+    "ga": 14,
     "gf_stoppage": 0,
     "ga_stoppage": 0
    },
@@ -183,21 +203,21 @@
    }
   ],
   "summary": {
-   "matches": 64,
+   "matches": 66,
    "minutes": {
-    "leading": 1737,
-    "level": 2953,
+    "leading": 1824,
+    "level": 3065,
     "trailing": 1535,
-    "pct_leading": 27.9,
-    "pct_level": 47.4,
-    "pct_trailing": 24.7
+    "pct_leading": 28.4,
+    "pct_level": 47.7,
+    "pct_trailing": 23.9
    },
    "scored_first": {
-    "n": 34,
-    "w": 25,
-    "d": 7,
+    "n": 36,
+    "w": 26,
+    "d": 8,
     "l": 2,
-    "ppg": 2.41
+    "ppg": 2.39
    },
    "conceded_first": {
     "n": 27,
@@ -210,16 +230,16 @@
    "comeback_wins": 4,
    "rescued_draws": 4,
    "blown_leads": 2,
-   "dropped_leads": 7,
+   "dropped_leads": 8,
    "chi2": {
     "gf": {
-     "stat": 15.53,
+     "stat": 14.62,
      "significant": true,
      "bin": "1_15",
      "direction": "low"
     },
     "ga": {
-     "stat": 4.31,
+     "stat": 4.32,
      "significant": false,
      "bin": null,
      "direction": null
@@ -227,9 +247,9 @@
    },
    "post60": {
     "gf": 37,
-    "ga": 32,
-    "minutes": 2385,
-    "gd90": 0.19
+    "ga": 33,
+    "minutes": 2464,
+    "gd90": 0.15
    }
   }
  },
@@ -264,14 +284,14 @@
    "player_id": "herve-koffi",
    "name": "Hervé Koffi",
    "pos": "GK",
-   "matches": 4,
-   "w": 2,
-   "d": 1,
+   "matches": 6,
+   "w": 3,
+   "d": 2,
    "l": 1,
-   "ppg": 1.75,
-   "minutes": 388,
+   "ppg": 1.83,
+   "minutes": 587,
    "first_date": "2022-01-29",
-   "last_date": "2025-06-02"
+   "last_date": "2026-09-28"
   },
   {
    "player_id": "steeve-yago",
@@ -343,19 +363,19 @@
   {
    "player_id": "herve-koffi",
    "name": "Hervé Koffi",
-   "apps": 27,
-   "starts": 27,
-   "minutes": 2536,
-   "ga_on": 23,
-   "ga90": 0.82,
-   "saves": 47,
-   "save_pct": 67.1,
-   "clean_sheets": 8,
-   "high_claims": 20,
+   "apps": 29,
+   "starts": 29,
+   "minutes": 2735,
+   "ga_on": 24,
+   "ga90": 0.79,
+   "saves": 53,
+   "save_pct": 68.8,
+   "clean_sheets": 9,
+   "high_claims": 21,
    "punches": 1,
-   "pens_faced": 4,
+   "pens_faced": 5,
    "shootout_saves": 1,
-   "rating_avg": 6.97,
+   "rating_avg": 6.98,
    "gated": 1
   },
   {
@@ -483,8 +503,8 @@
     "level": "U17",
     "window_date": "2023-04-29",
     "squad_size": 25,
-    "linked": 2,
-    "with_senior_apps": 2,
+    "linked": 3,
+    "with_senior_apps": 3,
     "median_days_to_debut": 621
    },
    {
@@ -699,16 +719,16 @@
     "club": "KOZAF"
    },
    {
-    "name": "Farouz Ouedraogo",
-    "pos": "FW",
-    "age": 18.7,
+    "name": "Emmanuel Ouédraogo",
+    "pos": "MF",
+    "age": 18.8,
     "window_id": "u17-2023",
     "level": "U17",
     "club": "Rahimo"
    },
    {
-    "name": "Emmanuel Ouédraogo",
-    "pos": "MF",
+    "name": "Farouz Ouedraogo",
+    "pos": "FW",
     "age": 18.8,
     "window_id": "u17-2023",
     "level": "U17",
@@ -787,14 +807,6 @@
     "club": "New Stars"
    },
    {
-    "name": "Aboubacar Camara",
-    "pos": "FW",
-    "age": 20.0,
-    "window_id": "u17-2023",
-    "level": "U17",
-    "club": "Rahimo"
-   },
-   {
     "name": "Erwinn Nikiéma",
     "pos": "DF",
     "age": 20.0,
@@ -803,20 +815,20 @@
     "club": "Red Star FC"
    },
    {
-    "name": "Drissa Traoré",
-    "pos": "DF",
-    "age": 20.1,
-    "window_id": "u17-2023",
-    "level": "U17",
-    "club": "Tenakourou"
-   },
-   {
     "name": "Mohamed Traoré",
     "pos": "GK",
     "age": 20.1,
     "window_id": "u17-2023",
     "level": "U17",
     "club": "Shamuel"
+   },
+   {
+    "name": "Drissa Traoré",
+    "pos": "DF",
+    "age": 20.2,
+    "window_id": "u17-2023",
+    "level": "U17",
+    "club": "Tenakourou"
    },
    {
     "name": "Nouhoun Bamba",
@@ -874,380 +886,380 @@
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "possession",
-    "value": 49.2,
-    "n": 33,
+    "value": 49.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "pass_accuracy",
-    "value": 79.6,
-    "n": 33,
+    "value": 79.8,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "passes_per_match",
-    "value": 370.7,
-    "n": 33,
+    "value": 371.9,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "long_ball_share",
-    "value": 15.2,
-    "n": 33,
+    "value": 15.1,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "long_ball_accuracy",
-    "value": 48.2,
-    "n": 33,
+    "value": 48.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_per_match",
-    "value": 12.2,
-    "n": 33,
+    "value": 12.1,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_on_target_share",
-    "value": 33.4,
-    "n": 33,
+    "value": 32.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_inside_box_share",
-    "value": 60.6,
-    "n": 33,
+    "value": 60.2,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "big_chances_per_match",
-    "value": 2.4,
-    "n": 33,
+    "value": 2.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "crosses_per_match",
-    "value": 15.6,
-    "n": 33,
+    "value": 16.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "dribbles_per_match",
     "value": 15.9,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "dribble_success",
-    "value": 51.4,
-    "n": 33,
+    "value": 50.8,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "aerial_win",
-    "value": 52.2,
-    "n": 33,
+    "value": 52.5,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "ground_duel_win",
     "value": 49.7,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "tackles_per_match",
-    "value": 14.8,
-    "n": 33,
+    "value": 14.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "interceptions_per_match",
-    "value": 8.0,
-    "n": 33,
+    "value": 7.9,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "clearances_per_match",
-    "value": 13.9,
-    "n": 33,
+    "value": 14.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "corners_per_match",
-    "value": 4.8,
-    "n": 33,
+    "value": 4.9,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "bf",
-    "matches": 33,
+    "matches": 35,
     "axis": "fouls_per_match",
-    "value": 16.5,
-    "n": 33,
+    "value": 16.6,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "possession",
-    "value": 50.8,
-    "n": 33,
+    "value": 50.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "pass_accuracy",
-    "value": 80.5,
-    "n": 33,
+    "value": 80.2,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "passes_per_match",
-    "value": 380.3,
-    "n": 33,
+    "value": 374.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "long_ball_share",
-    "value": 16.0,
-    "n": 33,
+    "value": 16.4,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "long_ball_accuracy",
     "value": 45.3,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_per_match",
-    "value": 12.0,
-    "n": 33,
+    "value": 11.7,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_on_target_share",
-    "value": 32.8,
-    "n": 33,
+    "value": 33.1,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "shots_inside_box_share",
-    "value": 52.0,
-    "n": 33,
+    "value": 52.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "big_chances_per_match",
     "value": 1.9,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "crosses_per_match",
-    "value": 14.4,
-    "n": 33,
+    "value": 14.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "dribbles_per_match",
-    "value": 13.7,
-    "n": 33,
+    "value": 13.3,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "dribble_success",
-    "value": 49.9,
-    "n": 33,
+    "value": 49.0,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "aerial_win",
-    "value": 47.8,
-    "n": 33,
+    "value": 47.5,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "ground_duel_win",
     "value": 50.3,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "tackles_per_match",
     "value": 15.5,
-    "n": 33,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "interceptions_per_match",
-    "value": 8.9,
-    "n": 33,
+    "value": 8.8,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "clearances_per_match",
-    "value": 19.0,
-    "n": 33,
+    "value": 20.0,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "corners_per_match",
-    "value": 4.0,
-    "n": 33,
+    "value": 4.1,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
     "scope": "overall",
     "scope_value": "all",
     "side": "opp",
-    "matches": 33,
+    "matches": 35,
     "axis": "fouls_per_match",
-    "value": 15.2,
-    "n": 33,
+    "value": 15.5,
+    "n": 35,
     "coverage_pct": 100.0
    },
    {
@@ -2414,380 +2426,380 @@
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "possession",
-    "value": 48.5,
-    "n": 14,
+    "value": 49.5,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "pass_accuracy",
-    "value": 78.5,
-    "n": 14,
+    "value": 79.4,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "passes_per_match",
-    "value": 364.6,
-    "n": 14,
+    "value": 371.5,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "long_ball_share",
-    "value": 15.2,
-    "n": 14,
+    "value": 14.8,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "long_ball_accuracy",
-    "value": 48.3,
-    "n": 14,
+    "value": 49.1,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "shots_per_match",
-    "value": 12.2,
-    "n": 14,
+    "value": 12.1,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "shots_on_target_share",
-    "value": 35.1,
-    "n": 14,
+    "value": 34.3,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "shots_inside_box_share",
-    "value": 61.4,
-    "n": 14,
+    "value": 60.2,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "big_chances_per_match",
-    "value": 2.4,
-    "n": 14,
+    "value": 2.3,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
+    "matches": 15,
     "axis": "crosses_per_match",
-    "value": 14.1,
-    "n": 14,
+    "value": 15.1,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "bf",
-    "matches": 14,
-    "axis": "dribbles_per_match",
-    "value": 17.5,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "dribble_success",
-    "value": 53.9,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "aerial_win",
-    "value": 53.0,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "ground_duel_win",
-    "value": 50.3,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "tackles_per_match",
-    "value": 16.9,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "interceptions_per_match",
-    "value": 9.0,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "clearances_per_match",
-    "value": 13.4,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "corners_per_match",
-    "value": 4.9,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "bf",
-    "matches": 14,
-    "axis": "fouls_per_match",
-    "value": 16.9,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "possession",
-    "value": 51.5,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "pass_accuracy",
-    "value": 79.3,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "passes_per_match",
-    "value": 375.6,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "long_ball_share",
-    "value": 16.8,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "long_ball_accuracy",
-    "value": 44.4,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "shots_per_match",
-    "value": 11.4,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "shots_on_target_share",
-    "value": 32.1,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "shots_inside_box_share",
-    "value": 54.1,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "big_chances_per_match",
-    "value": 1.9,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
-    "axis": "crosses_per_match",
-    "value": 15.4,
-    "n": 14,
-    "coverage_pct": 100.0
-   },
-   {
-    "scope": "formation",
-    "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
+    "matches": 15,
     "axis": "dribbles_per_match",
     "value": 17.2,
-    "n": 14,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
+    "side": "bf",
+    "matches": 15,
     "axis": "dribble_success",
-    "value": 49.0,
-    "n": 14,
+    "value": 52.7,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
+    "side": "bf",
+    "matches": 15,
     "axis": "aerial_win",
-    "value": 47.0,
-    "n": 14,
+    "value": 53.8,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
-    "side": "opp",
-    "matches": 14,
+    "side": "bf",
+    "matches": 15,
     "axis": "ground_duel_win",
-    "value": 49.6,
-    "n": 14,
+    "value": 50.5,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "bf",
+    "matches": 15,
+    "axis": "tackles_per_match",
+    "value": 17.0,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "bf",
+    "matches": 15,
+    "axis": "interceptions_per_match",
+    "value": 8.8,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "bf",
+    "matches": 15,
+    "axis": "clearances_per_match",
+    "value": 14.2,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "bf",
+    "matches": 15,
+    "axis": "corners_per_match",
+    "value": 5.1,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "bf",
+    "matches": 15,
+    "axis": "fouls_per_match",
+    "value": 16.9,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "opp",
-    "matches": 14,
+    "matches": 15,
+    "axis": "possession",
+    "value": 50.5,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "pass_accuracy",
+    "value": 79.5,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "passes_per_match",
+    "value": 368.7,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "long_ball_share",
+    "value": 17.1,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "long_ball_accuracy",
+    "value": 45.4,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "shots_per_match",
+    "value": 11.1,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "shots_on_target_share",
+    "value": 33.7,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "shots_inside_box_share",
+    "value": 55.4,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "big_chances_per_match",
+    "value": 1.9,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "crosses_per_match",
+    "value": 15.3,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "dribbles_per_match",
+    "value": 16.5,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "dribble_success",
+    "value": 48.0,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "aerial_win",
+    "value": 46.2,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
+    "axis": "ground_duel_win",
+    "value": 49.5,
+    "n": 15,
+    "coverage_pct": 100.0
+   },
+   {
+    "scope": "formation",
+    "scope_value": "4-2-3-1",
+    "side": "opp",
+    "matches": 15,
     "axis": "tackles_per_match",
     "value": 15.7,
-    "n": 14,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "opp",
-    "matches": 14,
+    "matches": 15,
     "axis": "interceptions_per_match",
-    "value": 9.4,
-    "n": 14,
+    "value": 9.3,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "opp",
-    "matches": 14,
+    "matches": 15,
     "axis": "clearances_per_match",
-    "value": 19.9,
-    "n": 14,
+    "value": 20.6,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "opp",
-    "matches": 14,
+    "matches": 15,
     "axis": "corners_per_match",
     "value": 4.9,
-    "n": 14,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
     "scope": "formation",
     "scope_value": "4-2-3-1",
     "side": "opp",
-    "matches": 14,
+    "matches": 15,
     "axis": "fouls_per_match",
     "value": 14.8,
-    "n": 14,
+    "n": 15,
     "coverage_pct": 100.0
    },
    {
@@ -4354,35 +4366,48 @@
   "halves": [
    {
     "half": "first",
-    "matches": 33,
-    "possession": 49.2,
-    "possession_n": 33,
-    "passes_per_match": 196.6,
-    "passes_per_match_n": 33,
-    "shots_per_match": 5.2,
-    "shots_per_match_n": 33,
+    "matches": 35,
+    "possession": 50.1,
+    "possession_n": 35,
+    "passes_per_match": 198.4,
+    "passes_per_match_n": 35,
+    "shots_per_match": 5.3,
+    "shots_per_match_n": 35,
     "big_chances_per_match": 0.9,
-    "big_chances_per_match_n": 33,
-    "dribbles_per_match": 7.7,
-    "dribbles_per_match_n": 33
+    "big_chances_per_match_n": 35,
+    "dribbles_per_match": 7.6,
+    "dribbles_per_match_n": 35
    },
    {
     "half": "second",
-    "matches": 33,
-    "possession": 49.3,
-    "possession_n": 33,
-    "passes_per_match": 170.4,
-    "passes_per_match_n": 33,
-    "shots_per_match": 6.8,
-    "shots_per_match_n": 33,
-    "big_chances_per_match": 1.5,
-    "big_chances_per_match_n": 33,
+    "matches": 35,
+    "possession": 49.4,
+    "possession_n": 35,
+    "passes_per_match": 170.1,
+    "passes_per_match_n": 35,
+    "shots_per_match": 6.7,
+    "shots_per_match_n": 35,
+    "big_chances_per_match": 1.4,
+    "big_chances_per_match_n": 35,
     "dribbles_per_match": 8.0,
-    "dribbles_per_match_n": 33
+    "dribbles_per_match_n": 35
    }
   ]
  },
  "stability": [
+  {
+   "coach": "inconnu",
+   "first_match": "2026-09-25",
+   "last_match": "2026-09-28",
+   "matches": 2,
+   "matches_with_xi": 2,
+   "players_used": 19,
+   "avg_changes": "",
+   "churn_pct": "",
+   "top11_share": "",
+   "unique_xis": 2,
+   "gated": 0
+  },
   {
    "coach": "Amir Abdou",
    "first_match": "2026-03-28",
@@ -4426,8 +4451,8 @@
  "partnerships": {
   "min_minutes": 270,
   "min_matches": 4,
-  "qualified": 218,
-  "pairs_seen": 852,
+  "qualified": 228,
+  "pairs_seen": 935,
   "most_used": [
    {
     "player_a": "edmond-tapsoba",
@@ -4437,12 +4462,12 @@
     "name_b": "Issa Kaboré",
     "pos_b": "DF",
     "pair_type": "DF-DF",
-    "matches": 24,
-    "minutes": 2281,
-    "gf": 34,
-    "ga": 23,
-    "gd": 11,
-    "gd90": 0.43,
+    "matches": 26,
+    "minutes": 2471,
+    "gf": 36,
+    "ga": 24,
+    "gd": 12,
+    "gd90": 0.44,
     "gated": 1
    },
    {
@@ -4459,6 +4484,38 @@
     "ga": 23,
     "gd": 16,
     "gd90": 0.64,
+    "gated": 1
+   },
+   {
+    "player_a": "edmond-tapsoba",
+    "name_a": "Edmond Tapsoba",
+    "pos_a": "DF",
+    "player_b": "herve-koffi",
+    "name_b": "Hervé Koffi",
+    "pos_b": "GK",
+    "pair_type": "GK-DF",
+    "matches": 24,
+    "minutes": 2235,
+    "gf": 31,
+    "ga": 19,
+    "gd": 12,
+    "gd90": 0.48,
+    "gated": 1
+   },
+   {
+    "player_a": "herve-koffi",
+    "name_a": "Hervé Koffi",
+    "pos_a": "GK",
+    "player_b": "issa-kabore",
+    "name_b": "Issa Kaboré",
+    "pos_b": "DF",
+    "pair_type": "GK-DF",
+    "matches": 24,
+    "minutes": 2177,
+    "gf": 29,
+    "ga": 19,
+    "gd": 10,
+    "gd90": 0.41,
     "gated": 1
    },
    {
@@ -4491,38 +4548,6 @@
     "ga": 26,
     "gd": 0,
     "gd90": 0.0,
-    "gated": 1
-   },
-   {
-    "player_a": "edmond-tapsoba",
-    "name_a": "Edmond Tapsoba",
-    "pos_a": "DF",
-    "player_b": "herve-koffi",
-    "name_b": "Hervé Koffi",
-    "pos_b": "GK",
-    "pair_type": "GK-DF",
-    "matches": 22,
-    "minutes": 2045,
-    "gf": 29,
-    "ga": 18,
-    "gd": 11,
-    "gd90": 0.48,
-    "gated": 1
-   },
-   {
-    "player_a": "herve-koffi",
-    "name_a": "Hervé Koffi",
-    "pos_a": "GK",
-    "player_b": "issa-kabore",
-    "name_b": "Issa Kaboré",
-    "pos_b": "DF",
-    "pair_type": "GK-DF",
-    "matches": 22,
-    "minutes": 1978,
-    "gf": 27,
-    "ga": 18,
-    "gd": 9,
-    "gd90": 0.41,
     "gated": 1
    },
    {
@@ -4752,22 +4777,6 @@
     "gated": 1
    },
    {
-    "player_a": "issa-kabore",
-    "name_a": "Issa Kaboré",
-    "pos_a": "DF",
-    "player_b": "lassina-traore",
-    "name_b": "Lassina Traoré",
-    "pos_b": "FW",
-    "pair_type": "DF-FW",
-    "matches": 8,
-    "minutes": 549,
-    "gf": 15,
-    "ga": 4,
-    "gd": 11,
-    "gd90": 1.8,
-    "gated": 1
-   },
-   {
     "player_a": "adamo-nagalo",
     "name_a": "Adamo Nagalo",
     "pos_a": "DF",
@@ -4781,6 +4790,22 @@
     "ga": 4,
     "gd": 7,
     "gd90": 1.61,
+    "gated": 1
+   },
+   {
+    "player_a": "cyriaque-irie",
+    "name_a": "Cyriaque Irié",
+    "pos_a": "FW",
+    "player_b": "issoufou-dayo",
+    "name_b": "Issoufou Dayo",
+    "pos_b": "DF",
+    "pair_type": "DF-FW",
+    "matches": 6,
+    "minutes": 284,
+    "gf": 7,
+    "ga": 2,
+    "gd": 5,
+    "gd90": 1.58,
     "gated": 1
    }
   ],
@@ -4850,22 +4875,6 @@
     "gated": 1
    },
    {
-    "player_a": "arsene-kouassi",
-    "name_a": "Arsène Kouassi",
-    "pos_a": "DF",
-    "player_b": "edmond-tapsoba",
-    "name_b": "Edmond Tapsoba",
-    "pos_b": "DF",
-    "pair_type": "DF-DF",
-    "matches": 6,
-    "minutes": 581,
-    "gf": 4,
-    "ga": 10,
-    "gd": -6,
-    "gd90": -0.93,
-    "gated": 1
-   },
-   {
     "player_a": "adamo-nagalo",
     "name_a": "Adamo Nagalo",
     "pos_a": "DF",
@@ -4882,18 +4891,34 @@
     "gated": 1
    },
    {
-    "player_a": "arsene-kouassi",
-    "name_a": "Arsène Kouassi",
+    "player_a": "nasser-djiga",
+    "name_a": "Nasser Djiga",
     "pos_a": "DF",
-    "player_b": "herve-koffi",
-    "name_b": "Hervé Koffi",
-    "pos_b": "GK",
-    "pair_type": "GK-DF",
-    "matches": 5,
-    "minutes": 442,
+    "player_b": "ousseni-bouda",
+    "name_b": "Ousseni Bouda",
+    "pos_b": "FW",
+    "pair_type": "DF-FW",
+    "matches": 6,
+    "minutes": 318,
     "gf": 3,
-    "ga": 7,
-    "gd": -4,
+    "ga": 6,
+    "gd": -3,
+    "gd90": -0.85,
+    "gated": 1
+   },
+   {
+    "player_a": "lassina-traore",
+    "name_a": "Lassina Traoré",
+    "pos_a": "FW",
+    "player_b": "ousseni-bouda",
+    "name_b": "Ousseni Bouda",
+    "pos_b": "FW",
+    "pair_type": "FW-FW",
+    "matches": 7,
+    "minutes": 335,
+    "gf": 3,
+    "ga": 6,
+    "gd": -3,
     "gd90": -0.81,
     "gated": 1
    },
@@ -4919,17 +4944,31 @@
   "by_scope": [
    {
     "scope": "Toutes périodes",
-    "matches": 54,
-    "subs": 187,
-    "subs_per_match": 3.46,
-    "first_sub_avg": 58.0,
+    "matches": 56,
+    "subs": 196,
+    "subs_per_match": 3.5,
+    "first_sub_avg": 57.7,
     "first_sub_median": 59,
-    "injury_subs": 15,
-    "entries_leading": 69,
-    "entries_level": 46,
+    "injury_subs": 16,
+    "entries_leading": 73,
+    "entries_level": 51,
     "entries_trailing": 72,
-    "late_entries": 55,
+    "late_entries": 58,
     "gated": 1
+   },
+   {
+    "scope": "inconnu",
+    "matches": 2,
+    "subs": 9,
+    "subs_per_match": 4.5,
+    "first_sub_avg": 52.5,
+    "first_sub_median": 52.5,
+    "injury_subs": 1,
+    "entries_leading": 4,
+    "entries_level": 5,
+    "entries_trailing": 0,
+    "late_entries": 3,
+    "gated": 0
    },
    {
     "scope": "Amir Abdou",
@@ -4981,19 +5020,19 @@
    },
    {
     "band": "46_60",
-    "n": 40
+    "n": 42
    },
    {
     "band": "61_70",
-    "n": 37
+    "n": 38
    },
    {
     "band": "71_80",
-    "n": 61
+    "n": 64
    },
    {
     "band": "81_plus",
-    "n": 59
+    "n": 62
    }
   ]
  },
@@ -5066,37 +5105,37 @@
    {
     "metric": "deficit",
     "scope": "never_trailed",
-    "n": 35,
-    "value": 2.43,
-    "detail": "25W-10D-0L"
+    "n": 37,
+    "value": 2.41,
+    "detail": "26W-11D-0L"
    },
    {
     "metric": "reply",
     "scope": "within_10",
     "n": 8,
-    "value": 10.3,
-    "detail": "8 of 78 goals conceded"
+    "value": 10.1,
+    "detail": "8 of 79 goals conceded"
    },
    {
     "metric": "reply",
     "scope": "11_20",
     "n": 5,
-    "value": 6.4,
-    "detail": "5 of 78 goals conceded"
+    "value": 6.3,
+    "detail": "5 of 79 goals conceded"
    },
    {
     "metric": "reply",
     "scope": "21_plus",
     "n": 11,
-    "value": 14.1,
-    "detail": "11 of 78 goals conceded"
+    "value": 13.9,
+    "detail": "11 of 79 goals conceded"
    },
    {
     "metric": "reply",
     "scope": "never",
-    "n": 54,
-    "value": 69.2,
-    "detail": "54 of 78 goals conceded"
+    "n": 55,
+    "value": 69.6,
+    "detail": "55 of 79 goals conceded"
    },
    {
     "metric": "reply",
@@ -5109,29 +5148,29 @@
     "metric": "scored_per90",
     "scope": "leading",
     "n": 36,
-    "value": 1.87,
-    "detail": "36 goals in 1737 min"
+    "value": 1.78,
+    "detail": "36 goals in 1824 min"
    },
    {
     "metric": "conceded_per90",
     "scope": "leading",
-    "n": 24,
-    "value": 1.24,
-    "detail": "24 goals in 1737 min"
+    "n": 25,
+    "value": 1.23,
+    "detail": "25 goals in 1824 min"
    },
    {
     "metric": "scored_per90",
     "scope": "level",
-    "n": 43,
-    "value": 1.31,
-    "detail": "43 goals in 2953 min"
+    "n": 45,
+    "value": 1.32,
+    "detail": "45 goals in 3065 min"
    },
    {
     "metric": "conceded_per90",
     "scope": "level",
     "n": 32,
-    "value": 0.98,
-    "detail": "32 goals in 2953 min"
+    "value": 0.94,
+    "detail": "32 goals in 3065 min"
    },
    {
     "metric": "scored_per90",
@@ -5242,8 +5281,8 @@
     "player_id": "lassina-traore",
     "name": "Lassina Traoré",
     "pos": "FW",
-    "goals": 8,
-    "openers": 3,
+    "goals": 9,
+    "openers": 4,
     "equalizers": 0,
     "go_ahead": 1,
     "extenders": 3,
@@ -5642,6 +5681,21 @@
     "goals_when_trailing": 0,
     "assists_when_trailing": 0,
     "as_sub_goals": 0
+   },
+   {
+    "player_id": "aboubacar-camara",
+    "name": "Aboubacar Camara",
+    "pos": "MF",
+    "goals": 1,
+    "openers": 1,
+    "equalizers": 0,
+    "go_ahead": 0,
+    "extenders": 0,
+    "consolations": 0,
+    "late_goals": 0,
+    "goals_when_trailing": 0,
+    "assists_when_trailing": 0,
+    "as_sub_goals": 1
    },
    {
     "player_id": "issa-kabore",

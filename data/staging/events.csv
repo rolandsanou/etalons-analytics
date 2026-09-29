@@ -34,11 +34,11 @@ event_id,date,tournament,opponent,venue,gf,ga,pens,result,comp_class,n_lineup,n_
 12526608,2024-10-13,"Africa Cup of Nations, Qualification, Group L",Burundi,A,2,0,,W,a,23,15,4-2-3-1,3-4-3
 12526607,2024-11-14,"Africa Cup of Nations, Qualification, Group L",Senegal,H,0,1,,L,a,23,13,4-1-4-1,4-2-3-1
 12526738,2024-11-18,"Africa Cup of Nations, Qualification, Group L",Malawi,A,0,3,,L,a,22,16,4-1-4-1,4-4-2
-13315144,2025-01-09,Int. Friendly Games,Tanzania,A,2,0,,W,a,23,0,3-4-3,4-3-3
+13315144,2025-01-09,International Friendly Games,Tanzania,A,2,0,,W,a,23,0,3-4-3,4-3-3
 12183513,2025-03-21,"FIFA World Cup, Qualification CAF, Group A",Djibouti,H,4,1,,W,a,22,0,4-2-3-1,4-5-1
 12183510,2025-03-24,"FIFA World Cup, Qualification CAF, Group A",Guinea-Bissau,A,2,1,,W,a,20,0,4-2-3-1,4-2-3-1
-13961689,2025-06-02,Int. Friendly Games,Tunisia,A,0,2,,L,a,22,15,4-4-2,4-2-3-1
-13975674,2025-06-06,Int. Friendly Games,Zimbabwe,A,2,0,,W,a,11,0,4-3-3,5-2-3
+13961689,2025-06-02,International Friendly Games,Tunisia,A,0,2,,L,a,22,15,4-4-2,4-2-3-1
+13975674,2025-06-06,International Friendly Games,Zimbabwe,A,2,0,,W,a,11,0,4-3-3,5-2-3
 14085001,2025-08-02,"African Nations Championship, Group B",Tanzania,A,0,2,,L,chan,23,15,4-1-4-1,4-3-3
 14085010,2025-08-06,"African Nations Championship, Group B",Central African Republic,H,4,2,,W,chan,23,15,4-2-3-1,3-5-2
 14085026,2025-08-13,"African Nations Championship, Group B",Mauritania,A,0,1,,L,chan,23,15,4-1-4-1,3-3-1-3
@@ -47,13 +47,15 @@ event_id,date,tournament,opponent,venue,gf,ga,pens,result,comp_class,n_lineup,n_
 12183469,2025-09-09,"FIFA World Cup, Qualification CAF, Group A",Egypt,H,0,0,,D,a,23,0,4-1-4-1,3-2-4-1
 12183427,2025-10-08,"FIFA World Cup, Qualification CAF, Group A",Sierra Leone,A,1,0,,W,a,22,0,4-1-4-1,4-3-3
 12183405,2025-10-12,"FIFA World Cup, Qualification CAF, Group A",Ethiopia,H,3,1,,W,a,23,0,4-5-1,4-2-3-1
-15032911,2025-11-14,Int. Friendly Games,Niger,H,3,2,,W,a,14,0,4-5-1,4-3-3
-15033101,2025-11-18,Int. Friendly Games,Benin,H,3,0,,W,a,22,0,4-3-3,4-3-3
+15032911,2025-11-14,International Friendly Games,Niger,H,3,2,,W,a,14,0,4-5-1,4-3-3
+15033101,2025-11-18,International Friendly Games,Benin,H,3,0,,W,a,22,0,4-3-3,4-3-3
 13424942,2025-12-24,"Africa Cup of Nations, Group E",Equatorial Guinea,H,2,1,,W,a,25,16,4-3-3,4-4-2
 13424954,2025-12-28,"Africa Cup of Nations, Group E",Algeria,A,0,1,,L,a,25,15,4-3-3,4-2-3-1
 13424968,2025-12-31,"Africa Cup of Nations, Group E",Sudan,A,2,0,,W,a,24,16,4-2-3-1,4-2-3-1
 14058095,2026-01-06,"Africa Cup of Nations, Knockout stage",Côte d'Ivoire,A,0,3,,L,a,25,16,5-4-1,4-3-3
-15883802,2026-03-28,Int. Friendly Games,Guinea-Bissau,H,5,0,,W,a,12,0,4-3-3,4-3-3
-15910597,2026-03-31,Int. Friendly Games,Guinea-Bissau,H,1,1,,D,a,11,0,3-4-2-1,4-3-3
-16189861,2026-06-05,Int. Friendly Games,Russia,A,0,3,,L,a,25,17,4-1-4-1,4-3-3
-16205035,2026-06-09,Int. Friendly Games,Belarus,A,2,2,,D,a,24,0,4-4-2,4-2-3-1
+15883802,2026-03-28,International Friendly Games,Guinea-Bissau,H,5,0,,W,a,12,0,4-3-3,4-3-3
+15910597,2026-03-31,International Friendly Games,Guinea-Bissau,H,1,1,,D,a,11,0,3-4-2-1,4-3-3
+16189861,2026-06-05,International Friendly Games,Russia,A,0,3,,L,a,25,17,4-1-4-1,4-3-3
+16205035,2026-06-09,International Friendly Games,Belarus,A,2,2,,D,a,24,0,4-4-2,4-2-3-1
+17018569,2026-09-25,"Africa Cup of Nations, Qualification, Group F",Benin,H,1,1,,D,a,23,16,4-2-3-1,4-1-4-1
+17018568,2026-09-28,"Africa Cup of Nations, Qualification, Group F",Central African Republic,A,1,0,,W,a,23,15,4-1-4-1,4-3-3

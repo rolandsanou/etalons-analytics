@@ -117,28 +117,73 @@ def _event_row(e):
     }
 
 
+def _since_ts():
+    return int(datetime(STATS_SINCE.year, STATS_SINCE.month, STATS_SINCE.day,
+                        tzinfo=timezone.utc).timestamp())
+
+
+def _index_page(page):
+    """One page of played matches, newest first."""
+    data = get_sofa_json(f"{SOFA_BASE}/team/{SOFA_TEAM_ID}/events/last/{page}")
+    events = data.get("events", [])
+    return [_event_row(e) for e in events], data.get("hasNextPage")
+
+
+def _playable(rows):
+    """Finished matches inside the study window, oldest first.
+
+    A match still being played has no final score and is simply not in the
+    index yet; the next run picks it up.
+    """
+    since = _since_ts()
+    keep = [r for r in rows if r["ts"] >= since and r["status"] == "finished"
+            and r["home_score"] is not None]
+    keep.sort(key=lambda r: r["ts"])
+    return keep
+
+
 def fetch_events_index(force=False):
+    """Every finished match since STATS_SINCE, with the newest page re-read.
+
+    A played match never changes, so rows already cached are kept as they are.
+    The LIST does change — that is the entire point of refreshing after a match
+    — and caching the list whole meant a refresh could run, pass every gate and
+    publish, and still know nothing about a game played three days earlier. The
+    most recent page is therefore re-read on every run and merged in; the full
+    backfill through the pages only runs when there is nothing cached yet.
+
+    If that one request fails, the cached list is returned untouched. Losing
+    five years of index because Sofascore refused one call would be a far worse
+    outcome than missing a match until the next run.
+    """
     index_path = OUT / "events_index.json"
-    if index_path.exists() and not force:
-        return read_json(index_path)
-    since_ts = int(datetime(STATS_SINCE.year, STATS_SINCE.month, STATS_SINCE.day,
-                            tzinfo=timezone.utc).timestamp())
-    rows = []
-    page = 0
+    cached = read_json(index_path) if index_path.exists() else None
+
+    if cached and not force:
+        merged = {r["event_id"]: r for r in cached}
+        try:
+            fresh, _ = _index_page(0)
+        except Exception as e:
+            print(f"sofascore: keeping the cached match index ({e})")
+            return _playable(cached)
+        merged.update({r["event_id"]: r for r in fresh})
+        rows = _playable(merged.values())
+        if len(rows) != len(_playable(cached)):
+            print(f"sofascore: match index now {len(rows)} played matches "
+                  f"(+{len(rows) - len(_playable(cached))})")
+        write_json(index_path, rows)
+        return rows
+
+    rows, page = [], 0
     while True:
-        data = get_sofa_json(f"{SOFA_BASE}/team/{SOFA_TEAM_ID}/events/last/{page}")
-        events = data.get("events", [])
-        if not events:
+        batch, has_next = _index_page(page)
+        if not batch:
             break
-        rows.extend(_event_row(e) for e in events)
-        oldest = min(e["startTimestamp"] for e in events)
-        if oldest < since_ts or not data.get("hasNextPage"):
+        rows.extend(batch)
+        if min(r["ts"] for r in batch) < _since_ts() or not has_next:
             break
         page += 1
-    rows = [r for r in rows
-            if r["ts"] >= since_ts and r["status"] == "finished"
-            and r["home_score"] is not None]
-    rows.sort(key=lambda r: r["ts"])
+    rows = _playable(rows)
     write_json(index_path, rows)
     return rows
 
