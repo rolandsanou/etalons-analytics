@@ -13,28 +13,28 @@
   {
    "key": "fact_never_trailed",
    "vals": {
-    "n": 35,
-    "w": 25,
-    "d": 10,
+    "n": 37,
+    "w": 26,
+    "d": 11,
     "l": 0,
-    "ppg": 2.43
+    "ppg": 2.41
    }
   },
   {
    "key": "fact_no_reply",
    "vals": {
-    "never": 54,
-    "total": 78,
+    "never": 55,
+    "total": 79,
     "answered": 24,
-    "pct": 69.2
+    "pct": 69.6
    }
   },
   {
    "key": "fact_first_goal",
    "vals": {
-    "sf_ppg": 2.41,
+    "sf_ppg": 2.39,
     "cf_ppg": 0.59,
-    "sf_n": 34,
+    "sf_n": 36,
     "cf_n": 27,
     "cf_w": 4,
     "cf_l": 19
@@ -44,15 +44,15 @@
    "key": "fact_bin_low",
    "vals": {
     "bin": "1–15",
-    "stat": 15.53
+    "stat": 14.62
    }
   },
   {
    "key": "fact_most_minutes",
    "vals": {
     "name": "Edmond Tapsoba",
-    "min": 2985,
-    "matches": 33.2
+    "min": 3162,
+    "matches": 35.1
    }
   },
   {
@@ -60,8 +60,8 @@
    "vals": {
     "name": "Dango Ouattara",
     "goals": 11,
-    "total": 62,
-    "pct": 18
+    "total": 64,
+    "pct": 17
    }
   },
   {
@@ -70,9 +70,9 @@
     "best": "4-3-3",
     "best_ppg": 1.8,
     "best_elo": 1579,
-    "worst": "4-2-3-1",
-    "worst_ppg": 1.61,
-    "worst_elo": 1599
+    "worst": "4-1-4-1",
+    "worst_ppg": 0.88,
+    "worst_elo": 1678
    }
   },
   {
