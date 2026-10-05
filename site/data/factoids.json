@@ -3,10 +3,10 @@
   {
    "key": "fact_two_down_never_won",
    "vals": {
-    "n": 14,
+    "n": 15,
     "w": 0,
     "d": 1,
-    "l": 13,
+    "l": 14,
     "ppg": 0.07
    }
   },
@@ -23,21 +23,21 @@
   {
    "key": "fact_no_reply",
    "vals": {
-    "never": 55,
-    "total": 79,
+    "never": 62,
+    "total": 86,
     "answered": 24,
-    "pct": 69.6
+    "pct": 72.1
    }
   },
   {
    "key": "fact_first_goal",
    "vals": {
     "sf_ppg": 2.39,
-    "cf_ppg": 0.59,
+    "cf_ppg": 0.57,
     "sf_n": 36,
-    "cf_n": 27,
+    "cf_n": 28,
     "cf_w": 4,
-    "cf_l": 19
+    "cf_l": 20
    }
   },
   {

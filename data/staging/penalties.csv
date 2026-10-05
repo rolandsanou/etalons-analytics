@@ -53,3 +53,4 @@ event_id,date,kind,minute,added_time,is_bf,outcome,sofa_id,name,player_id
 13424968,2025-12-31,ingame,24,0,0,missed,1104515,Al-Gozoli Nooh,
 17018569,2026-09-25,ingame,68,0,0,scored,875548,Aiyegun Tosin,
 17018569,2026-09-25,ingame,20,0,1,scored,911719,Lassina Traoré,lassina-traore
+17167377,2026-10-04,ingame,4,0,0,missed,823984,Lautaro Martínez,

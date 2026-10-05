@@ -174,3 +174,10 @@ event_id,date,minute,added_time,class,is_bf,scorer_sofa_id,scorer_name,scorer_pl
 17018569,2026-09-25,20,0,penalty,1,911719,Lassina Traoré,lassina-traore,,,,1,0,20,0,opener
 17018569,2026-09-25,68,0,penalty,0,875548,Aiyegun Tosin,,,,,1,1,72,-1,equalizer
 17018568,2026-09-28,60,0,regular,1,1542696,Aboubacar Camara,aboubacar-camara,910053,Arthur Zagre,arthur-zagre,1,0,64,0,opener
+17167377,2026-10-04,4,0,regular,0,823984,Lautaro Martínez,,,,,0,1,4,0,opener
+17167377,2026-10-04,8,0,ownGoal,0,2201033,Moumoune Diallo,moumoune-diallo,,,,0,2,8,1,extender
+17167377,2026-10-04,12,0,regular,0,1201395,Gianluca Prestianni,,823984,Lautaro Martínez,,0,3,12,2,extender
+17167377,2026-10-04,35,0,regular,0,1171451,Nico Paz,,,,,0,4,35,3,extender
+17167377,2026-10-04,36,0,regular,0,944656,Julián Alvarez,,1201395,Gianluca Prestianni,,0,5,36,4,extender
+17167377,2026-10-04,57,0,regular,0,1403559,Franco Mastantuono,,823984,Lautaro Martínez,,0,6,57,5,extender
+17167377,2026-10-04,90,3,regular,0,1099352,Giuliano Simeone,,1127057,Valentín Barco,,0,7,93,6,extender
