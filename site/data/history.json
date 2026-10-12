@@ -1,11 +1,11 @@
 {
  "all_time": {
-  "pld": 464,
-  "w": 164,
-  "d": 123,
-  "l": 177,
-  "gf": 580,
-  "ga": 617,
+  "pld": 467,
+  "w": 165,
+  "d": 124,
+  "l": 178,
+  "gf": 582,
+  "ga": 625,
   "win_pct": 35.3
  },
  "by_decade": [
@@ -71,13 +71,13 @@
   },
   {
    "decade": 2020,
-   "pld": 76,
-   "w": 36,
-   "d": 20,
-   "l": 20,
-   "gf": 115,
-   "ga": 80,
-   "win_pct": 47.4
+   "pld": 79,
+   "w": 37,
+   "d": 21,
+   "l": 21,
+   "gf": 117,
+   "ga": 88,
+   "win_pct": 46.8
   }
  ],
  "by_year": [
@@ -643,13 +643,13 @@
   },
   {
    "year": 2026,
-   "pld": 5,
-   "w": 1,
-   "d": 2,
-   "l": 2,
-   "gf": 8,
-   "ga": 9,
-   "win_pct": 20.0
+   "pld": 8,
+   "w": 2,
+   "d": 3,
+   "l": 3,
+   "gf": 10,
+   "ga": 17,
+   "win_pct": 25.0
   }
  ],
  "by_comp": {
@@ -663,22 +663,22 @@
    "win_pct": 21.4
   },
   "afcon_qual": {
-   "pld": 88,
-   "w": 39,
-   "d": 22,
+   "pld": 90,
+   "w": 40,
+   "d": 23,
    "l": 27,
-   "gf": 110,
-   "ga": 104,
-   "win_pct": 44.3
+   "gf": 112,
+   "ga": 105,
+   "win_pct": 44.4
   },
   "friendly": {
-   "pld": 206,
+   "pld": 207,
    "w": 65,
    "d": 60,
-   "l": 81,
+   "l": 82,
    "gf": 243,
-   "ga": 275,
-   "win_pct": 31.6
+   "ga": 282,
+   "win_pct": 31.4
   },
   "other": {
    "pld": 38,
@@ -703,14 +703,14 @@
   "all_time": [
    {
     "venue_class": "home_bf",
-    "pld": 144,
+    "pld": 145,
     "w": 79,
-    "d": 41,
+    "d": 42,
     "l": 24,
-    "gf": 241,
-    "ga": 140,
-    "win_pct": 54.9,
-    "ppg": 1.93
+    "gf": 242,
+    "ga": 141,
+    "win_pct": 54.5,
+    "ppg": 1.92
    },
    {
     "venue_class": "home_delocalized",
@@ -725,38 +725,38 @@
    },
    {
     "venue_class": "neutral",
-    "pld": 94,
-    "w": 35,
+    "pld": 95,
+    "w": 36,
     "d": 18,
     "l": 41,
-    "gf": 113,
+    "gf": 114,
     "ga": 117,
-    "win_pct": 37.2,
-    "ppg": 1.31
+    "win_pct": 37.9,
+    "ppg": 1.33
    },
    {
     "venue_class": "away",
-    "pld": 180,
+    "pld": 181,
     "w": 26,
     "d": 51,
-    "l": 103,
+    "l": 104,
     "gf": 140,
-    "ga": 307,
+    "ga": 314,
     "win_pct": 14.4,
-    "ppg": 0.72
+    "ppg": 0.71
    }
   ],
   "since_2015": [
    {
     "venue_class": "home_bf",
-    "pld": 18,
+    "pld": 19,
     "w": 12,
-    "d": 6,
+    "d": 7,
     "l": 0,
-    "gf": 35,
-    "ga": 9,
-    "win_pct": 66.7,
-    "ppg": 2.33
+    "gf": 36,
+    "ga": 10,
+    "win_pct": 63.2,
+    "ppg": 2.26
    },
    {
     "venue_class": "home_delocalized",
@@ -771,25 +771,25 @@
    },
    {
     "venue_class": "neutral",
-    "pld": 43,
-    "w": 26,
+    "pld": 44,
+    "w": 27,
     "d": 7,
     "l": 10,
-    "gf": 63,
+    "gf": 64,
     "ga": 30,
-    "win_pct": 60.5,
-    "ppg": 1.98
+    "win_pct": 61.4,
+    "ppg": 2.0
    },
    {
     "venue_class": "away",
-    "pld": 43,
+    "pld": 44,
     "w": 4,
     "d": 17,
-    "l": 22,
+    "l": 23,
     "gf": 28,
-    "ga": 63,
-    "win_pct": 9.3,
-    "ppg": 0.67
+    "ga": 70,
+    "win_pct": 9.1,
+    "ppg": 0.66
    }
   ],
   "delocalized_hosts": [
@@ -865,6 +865,13 @@
    "venue": "A"
   },
   {
+   "date": "2026-10-03",
+   "opponent": "Argentina",
+   "score": "0-7",
+   "tournament": "Friendly",
+   "venue": "A"
+  },
+  {
    "date": "1991-07-27",
    "opponent": "Nigeria",
    "score": "1-7",
@@ -884,13 +891,6 @@
    "score": "0-5",
    "tournament": "African Cup of Nations qualification",
    "venue": "H"
-  },
-  {
-   "date": "2009-09-05",
-   "opponent": "Ivory Coast",
-   "score": "0-5",
-   "tournament": "FIFA World Cup qualification",
-   "venue": "A"
   }
  ],
  "top_opponents": [
@@ -945,6 +945,16 @@
    "win_pct": 22.7
   },
   {
+   "opponent": "Benin",
+   "pld": 21,
+   "w": 12,
+   "d": 6,
+   "l": 3,
+   "gf": 38,
+   "ga": 20,
+   "win_pct": 57.1
+  },
+  {
    "opponent": "Niger",
    "pld": 21,
    "w": 10,
@@ -953,16 +963,6 @@
    "gf": 33,
    "ga": 19,
    "win_pct": 47.6
-  },
-  {
-   "opponent": "Benin",
-   "pld": 20,
-   "w": 12,
-   "d": 5,
-   "l": 3,
-   "gf": 37,
-   "ga": 19,
-   "win_pct": 60.0
   },
   {
    "opponent": "Ghana",
@@ -976,6 +976,30 @@
   }
  ],
  "last10": [
+  {
+   "date": "2026-10-03",
+   "opponent": "Argentina",
+   "score": "0-7",
+   "tournament": "Friendly",
+   "venue": "A",
+   "result": "L"
+  },
+  {
+   "date": "2026-09-28",
+   "opponent": "Central African Republic",
+   "score": "1-0",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "N",
+   "result": "W"
+  },
+  {
+   "date": "2026-09-25",
+   "opponent": "Benin",
+   "score": "1-1",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "H",
+   "result": "D"
+  },
   {
    "date": "2026-06-09",
    "opponent": "Belarus",
@@ -1031,30 +1055,6 @@
    "tournament": "African Cup of Nations",
    "venue": "N",
    "result": "L"
-  },
-  {
-   "date": "2025-12-24",
-   "opponent": "Equatorial Guinea",
-   "score": "2-1",
-   "tournament": "African Cup of Nations",
-   "venue": "N",
-   "result": "W"
-  },
-  {
-   "date": "2025-11-18",
-   "opponent": "Benin",
-   "score": "3-0",
-   "tournament": "Friendly",
-   "venue": "N",
-   "result": "W"
-  },
-  {
-   "date": "2025-11-14",
-   "opponent": "Niger",
-   "score": "3-2",
-   "tournament": "Friendly",
-   "venue": "N",
-   "result": "W"
   }
  ],
  "afcon_editions": [
@@ -1200,7 +1200,7 @@
   }
  ],
  "first_match": "1960-04-14",
- "last_match": "2026-06-09",
+ "last_match": "2026-10-03",
  "most_capped": [
   {
    "rank": 1,
@@ -1498,17 +1498,17 @@
    "coach": "Amir Abdou",
    "tenure_start": "2026-01-07",
    "first_match": "2026-03-28",
-   "last_match": "2026-06-09",
-   "matches": 4,
-   "w": 1,
-   "d": 2,
-   "l": 1,
-   "ppg": 1.25,
-   "gf_pm": 2.0,
-   "ga_pm": 1.5,
-   "elo_first": 1664.8,
-   "elo_last": 1651.6,
-   "elo_delta": -13.0,
+   "last_match": "2026-10-03",
+   "matches": 7,
+   "w": 2,
+   "d": 3,
+   "l": 2,
+   "ppg": 1.29,
+   "gf_pm": 1.43,
+   "ga_pm": 2.0,
+   "elo_first": 1665.3,
+   "elo_last": 1646.4,
+   "elo_delta": -19.0,
    "pooled": 0,
    "current": 1
   },
@@ -1524,8 +1524,8 @@
    "ppg": 1.7,
    "gf_pm": 1.64,
    "ga_pm": 1.12,
-   "elo_first": 1671.8,
-   "elo_last": 1661.3,
+   "elo_first": 1672.3,
+   "elo_last": 1661.8,
    "elo_delta": -10.0,
    "pooled": 0,
    "current": 0
@@ -1542,8 +1542,8 @@
    "ppg": 1.67,
    "gf_pm": 1.29,
    "ga_pm": 1.17,
-   "elo_first": 1679.6,
-   "elo_last": 1674.5,
+   "elo_first": 1679.8,
+   "elo_last": 1674.8,
    "elo_delta": -5.0,
    "pooled": 0,
    "current": 0
@@ -1560,9 +1560,9 @@
    "ppg": 1.77,
    "gf_pm": 1.23,
    "ga_pm": 0.55,
-   "elo_first": 1633.8,
-   "elo_last": 1669.3,
-   "elo_delta": 36.0,
+   "elo_first": 1634.2,
+   "elo_last": 1669.5,
+   "elo_delta": 35.0,
    "pooled": 0,
    "current": 0
   },
@@ -1579,8 +1579,8 @@
    "gf_pm": 1.22,
    "ga_pm": 1.04,
    "elo_first": 1639.7,
-   "elo_last": 1626.0,
-   "elo_delta": -14.0,
+   "elo_last": 1626.4,
+   "elo_delta": -13.0,
    "pooled": 0,
    "current": 0
   },
@@ -1596,8 +1596,8 @@
    "ppg": 1.38,
    "gf_pm": 1.12,
    "ga_pm": 1.0,
-   "elo_first": 1637.6,
-   "elo_last": 1636.4,
+   "elo_first": 1637.5,
+   "elo_last": 1636.5,
    "elo_delta": -1.0,
    "pooled": 0,
    "current": 0
@@ -1614,8 +1614,8 @@
    "ppg": 1.73,
    "gf_pm": 1.57,
    "ga_pm": 1.2,
-   "elo_first": 1426.3,
-   "elo_last": 1634.1,
+   "elo_first": 1425.8,
+   "elo_last": 1634.0,
    "elo_delta": 208.0,
    "pooled": 0,
    "current": 0
@@ -1633,7 +1633,7 @@
    "gf_pm": 1.07,
    "ga_pm": 1.67,
    "elo_first": 1560.5,
-   "elo_last": 1496.4,
+   "elo_last": 1496.1,
    "elo_delta": -64.0,
    "pooled": 0,
    "current": 0
@@ -1650,8 +1650,8 @@
    "ppg": 1.32,
    "gf_pm": 1.11,
    "ga_pm": 0.89,
-   "elo_first": 1504.9,
-   "elo_last": 1553.1,
+   "elo_first": 1505.1,
+   "elo_last": 1553.2,
    "elo_delta": 48.0,
    "pooled": 0,
    "current": 0
@@ -1668,8 +1668,8 @@
    "ppg": 0.94,
    "gf_pm": 0.94,
    "ga_pm": 1.31,
-   "elo_first": 1535.7,
-   "elo_last": 1512.7,
+   "elo_first": 1535.9,
+   "elo_last": 1512.9,
    "elo_delta": -23.0,
    "pooled": 0,
    "current": 0
@@ -1686,8 +1686,8 @@
    "ppg": 1.21,
    "gf_pm": 1.21,
    "ga_pm": 1.36,
-   "elo_first": 1526.6,
-   "elo_last": 1532.7,
+   "elo_first": 1527.0,
+   "elo_last": 1532.9,
    "elo_delta": 6.0,
    "pooled": 0,
    "current": 0
@@ -1704,8 +1704,8 @@
    "ppg": 1.46,
    "gf_pm": 1.46,
    "ga_pm": 1.4,
-   "elo_first": 1434.5,
-   "elo_last": 1527.7,
+   "elo_first": 1434.8,
+   "elo_last": 1528.2,
    "elo_delta": 93.0,
    "pooled": 0,
    "current": 0
@@ -1722,8 +1722,8 @@
    "ppg": 0.8,
    "gf_pm": 1.3,
    "ga_pm": 1.8,
-   "elo_first": 1448.4,
-   "elo_last": 1424.2,
+   "elo_first": 1448.7,
+   "elo_last": 1424.5,
    "elo_delta": -24.0,
    "pooled": 0,
    "current": 0
@@ -1740,9 +1740,9 @@
    "ppg": 0.86,
    "gf_pm": 0.71,
    "ga_pm": 1.36,
-   "elo_first": 1520.1,
-   "elo_last": 1487.5,
-   "elo_delta": -33.0,
+   "elo_first": 1520.3,
+   "elo_last": 1487.8,
+   "elo_delta": -32.0,
    "pooled": 0,
    "current": 0
   },
@@ -1759,7 +1759,7 @@
    "gf_pm": 1.12,
    "ga_pm": 1.31,
    "elo_first": 1532.7,
-   "elo_last": 1538.2,
+   "elo_last": 1538.4,
    "elo_delta": 6.0,
    "pooled": 0,
    "current": 0
@@ -1776,8 +1776,8 @@
    "ppg": 2.12,
    "gf_pm": 1.25,
    "ga_pm": 0.75,
-   "elo_first": 1415.2,
-   "elo_last": 1515.8,
+   "elo_first": 1415.0,
+   "elo_last": 1515.6,
    "elo_delta": 101.0,
    "pooled": 0,
    "current": 0
@@ -1794,8 +1794,8 @@
    "ppg": 1.07,
    "gf_pm": 1.29,
    "ga_pm": 1.64,
-   "elo_first": 1374.5,
-   "elo_last": 1405.4,
+   "elo_first": 1374.2,
+   "elo_last": 1405.0,
    "elo_delta": 31.0,
    "pooled": 0,
    "current": 0
@@ -1812,8 +1812,8 @@
    "ppg": 0.81,
    "gf_pm": 0.86,
    "ga_pm": 1.48,
-   "elo_first": 1485.6,
-   "elo_last": 1437.2,
+   "elo_first": 1485.2,
+   "elo_last": 1436.7,
    "elo_delta": -48.0,
    "pooled": 1,
    "current": 0

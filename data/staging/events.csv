@@ -59,3 +59,4 @@ event_id,date,tournament,opponent,venue,gf,ga,pens,result,comp_class,n_lineup,n_
 16205035,2026-06-09,International Friendly Games,Belarus,A,2,2,,D,a,24,0,4-4-2,4-2-3-1
 17018569,2026-09-25,"Africa Cup of Nations, Qualification, Group F",Benin,H,1,1,,D,a,23,16,4-2-3-1,4-1-4-1
 17018568,2026-09-28,"Africa Cup of Nations, Qualification, Group F",Central African Republic,A,1,0,,W,a,23,15,4-1-4-1,4-3-3
+17167377,2026-10-04,International Friendly Games,Argentina,A,0,7,,L,a,22,19,4-1-4-1,4-4-2

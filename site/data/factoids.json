@@ -69,16 +69,16 @@
    "vals": {
     "best": "4-3-3",
     "best_ppg": 1.8,
-    "best_elo": 1579,
+    "best_elo": 1580,
     "worst": "4-1-4-1",
-    "worst_ppg": 0.88,
-    "worst_elo": 1678
+    "worst_ppg": 0.78,
+    "worst_elo": 1712
    }
   },
   {
    "key": "fact_delocalized",
    "vals": {
-    "home_ppg": 1.93,
+    "home_ppg": 1.92,
     "delo_ppg": 1.85,
     "delo_n": 46
    }
@@ -86,19 +86,19 @@
   {
    "key": "fact_elo_rank",
    "vals": {
-    "caf": 14,
-    "n_caf": 53,
-    "world": 81,
-    "pts": 1652
+    "caf": 11,
+    "n_caf": 54,
+    "world": 79,
+    "pts": 1646
    }
   },
   {
    "key": "fact_all_time",
    "vals": {
-    "pld": 464,
-    "w": 164,
-    "d": 123,
-    "l": 177,
+    "pld": 467,
+    "w": 165,
+    "d": 124,
+    "l": 178,
     "pct": 35.3
    }
   }
