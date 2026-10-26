@@ -2649,20 +2649,20 @@
     "date_confirmed": "0",
     "window_start": "2026-11-09",
     "window_end": "2026-11-17",
-    "matchday": "3",
+    "matchday": "4",
     "opponent": "Mauritania",
-    "venue": "H",
+    "venue": "A",
     "tournament": "Africa Cup of Nations, Qualification, Group F",
     "source": "seed"
    },
    {
-    "date": "",
-    "date_confirmed": "0",
+    "date": "2026-11-13",
+    "date_confirmed": "1",
     "window_start": "2026-11-09",
     "window_end": "2026-11-17",
-    "matchday": "4",
+    "matchday": "3",
     "opponent": "Mauritania",
-    "venue": "A",
+    "venue": "H",
     "tournament": "Africa Cup of Nations, Qualification, Group F",
     "source": "seed"
    },
@@ -2690,85 +2690,6 @@
    }
   ],
   "outlook": [
-   {
-    "date": "",
-    "date_confirmed": "0",
-    "window_start": "2026-11-09",
-    "window_end": "2026-11-17",
-    "matchday": "3",
-    "opponent": "Mauritania",
-    "venue": "H",
-    "tournament": "Africa Cup of Nations, Qualification, Group F",
-    "h2h": {
-     "pld": 10,
-     "w": 6,
-     "d": 3,
-     "l": 1,
-     "gf": 11,
-     "ga": 5,
-     "last": "2024-01-16"
-    },
-    "opp_elo": 1452,
-    "elo_diff": 294,
-    "venue_swing": 100,
-    "probs": {
-     "win": 0.73,
-     "draw": 0.228,
-     "loss": 0.041
-    },
-    "xpts": 2.42,
-    "similar": {
-     "n": 70,
-     "w": 44,
-     "d": 18,
-     "l": 8,
-     "gf_pm": 1.7,
-     "ga_pm": 0.6,
-     "clean_sheets": 37,
-     "failed_to_score": 14,
-     "band": 150,
-     "from_year": "1990",
-     "to_year": "2026"
-    },
-    "scoreline": {
-     "goals_for": 1.882,
-     "goals_against": 0.418,
-     "total": 2.3,
-     "from_n": 70,
-     "scores": [
-      {
-       "gf": 1,
-       "ga": 0,
-       "p": 0.1887
-      },
-      {
-       "gf": 2,
-       "ga": 0,
-       "p": 0.1776
-      },
-      {
-       "gf": 3,
-       "ga": 0,
-       "p": 0.1114
-      },
-      {
-       "gf": 0,
-       "ga": 0,
-       "p": 0.1003
-      },
-      {
-       "gf": 1,
-       "ga": 1,
-       "p": 0.0789
-      },
-      {
-       "gf": 2,
-       "ga": 1,
-       "p": 0.0742
-      }
-     ]
-    }
-   },
    {
     "date": "",
     "date_confirmed": "0",
@@ -2844,6 +2765,85 @@
        "gf": 0,
        "ga": 1,
        "p": 0.0842
+      }
+     ]
+    }
+   },
+   {
+    "date": "2026-11-13",
+    "date_confirmed": "1",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-17",
+    "matchday": "3",
+    "opponent": "Mauritania",
+    "venue": "H",
+    "tournament": "Africa Cup of Nations, Qualification, Group F",
+    "h2h": {
+     "pld": 10,
+     "w": 6,
+     "d": 3,
+     "l": 1,
+     "gf": 11,
+     "ga": 5,
+     "last": "2024-01-16"
+    },
+    "opp_elo": 1452,
+    "elo_diff": 294,
+    "venue_swing": 100,
+    "probs": {
+     "win": 0.73,
+     "draw": 0.228,
+     "loss": 0.041
+    },
+    "xpts": 2.42,
+    "similar": {
+     "n": 70,
+     "w": 44,
+     "d": 18,
+     "l": 8,
+     "gf_pm": 1.7,
+     "ga_pm": 0.6,
+     "clean_sheets": 37,
+     "failed_to_score": 14,
+     "band": 150,
+     "from_year": "1990",
+     "to_year": "2026"
+    },
+    "scoreline": {
+     "goals_for": 1.882,
+     "goals_against": 0.418,
+     "total": 2.3,
+     "from_n": 70,
+     "scores": [
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1887
+      },
+      {
+       "gf": 2,
+       "ga": 0,
+       "p": 0.1776
+      },
+      {
+       "gf": 3,
+       "ga": 0,
+       "p": 0.1114
+      },
+      {
+       "gf": 0,
+       "ga": 0,
+       "p": 0.1003
+      },
+      {
+       "gf": 1,
+       "ga": 1,
+       "p": 0.0789
+      },
+      {
+       "gf": 2,
+       "ga": 1,
+       "p": 0.0742
       }
      ]
     }
