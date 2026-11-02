@@ -30,9 +30,9 @@ date,opponent,venue,venue_class,gf,ga,result,tournament,comp,neutral,city,countr
 1973-04-22,DR Congo,A,away,1,4,L,African Cup of Nations qualification,afcon_qual,False,Kinshasa,DR Congo,,
 1975-02-23,Niger,H,home_bf,4,1,W,Friendly,friendly,False,Ouagadougou,Burkina Faso,,
 1975-03-23,Ghana,A,away,1,3,L,Friendly,friendly,False,Accra,Ghana,,
-1976-03-13,Mauritania,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1976-03-13,Mauritania,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
 1976-03-28,Mauritania,A,away,2,0,W,FIFA World Cup qualification,wc_qual,False,Nouakchott,Mauritania,Otto Pfister,1976-01-01
-1976-09-04,Ivory Coast,N,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,True,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
+1976-09-04,Ivory Coast,H,home_bf,1,1,D,FIFA World Cup qualification,wc_qual,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01
 1976-09-26,Ivory Coast,A,away,0,2,L,FIFA World Cup qualification,wc_qual,False,Abidjan,Ivory Coast,Otto Pfister,1976-01-01
 1976-11-24,Mali,A,away,1,2,L,Friendly,friendly,False,Bamako,Mali,Otto Pfister,1976-01-01
 1977-03-20,Ivory Coast,H,home_bf,0,1,L,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Otto Pfister,1976-01-01

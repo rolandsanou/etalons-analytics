@@ -576,18 +576,10 @@
    {
     "name": "Alassane Traoré",
     "pos": "GK",
-    "age": 16.3,
+    "age": 16.4,
     "window_id": "u17-2025",
     "level": "U17",
     "club": "Rahimo"
-   },
-   {
-    "name": "Adesina Ramanou",
-    "pos": "MF",
-    "age": 16.6,
-    "window_id": "u17-2025",
-    "level": "U17",
-    "club": "New Stars"
    },
    {
     "name": "Asharaf Tapsoba",
@@ -596,6 +588,14 @@
     "window_id": "u17-2025",
     "level": "U17",
     "club": "Réal du Faso"
+   },
+   {
+    "name": "Adesina Ramanou",
+    "pos": "MF",
+    "age": 16.7,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "New Stars"
    },
    {
     "name": "Abdoul Ouédraogo",
@@ -640,7 +640,7 @@
    {
     "name": "Issouf Bara",
     "pos": "FW",
-    "age": 17.5,
+    "age": 17.6,
     "window_id": "u17-2025",
     "level": "U17",
     "club": "Rahimo"
@@ -652,14 +652,6 @@
     "window_id": "u17-2025",
     "level": "U17",
     "club": "Rahimo"
-   },
-   {
-    "name": "Alassana Bagayogo",
-    "pos": "FW",
-    "age": 17.8,
-    "window_id": "u17-2025",
-    "level": "U17",
-    "club": "AJEB"
    },
    {
     "name": "Mohamed Sako",
@@ -676,6 +668,14 @@
     "window_id": "u17-2023",
     "level": "U17",
     "club": "Cheetah FC"
+   },
+   {
+    "name": "Alassana Bagayogo",
+    "pos": "FW",
+    "age": 17.9,
+    "window_id": "u17-2025",
+    "level": "U17",
+    "club": "AJEB"
    },
    {
     "name": "Abdoulaye Diaby",
@@ -712,7 +712,7 @@
    {
     "name": "Mohamed Fofana",
     "pos": "MF",
-    "age": 18.4,
+    "age": 18.5,
     "window_id": "u17-2025",
     "level": "U17",
     "club": "New Stars"
