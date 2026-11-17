@@ -2645,24 +2645,13 @@
   ],
   "fixtures": [
    {
-    "date": "",
-    "date_confirmed": "0",
+    "date": "2026-11-17",
+    "date_confirmed": "1",
     "window_start": "2026-11-09",
     "window_end": "2026-11-17",
     "matchday": "4",
     "opponent": "Mauritania",
     "venue": "A",
-    "tournament": "Africa Cup of Nations, Qualification, Group F",
-    "source": "seed"
-   },
-   {
-    "date": "2026-11-13",
-    "date_confirmed": "1",
-    "window_start": "2026-11-09",
-    "window_end": "2026-11-17",
-    "matchday": "3",
-    "opponent": "Mauritania",
-    "venue": "H",
     "tournament": "Africa Cup of Nations, Qualification, Group F",
     "source": "seed"
    },
@@ -2691,8 +2680,8 @@
   ],
   "outlook": [
    {
-    "date": "",
-    "date_confirmed": "0",
+    "date": "2026-11-17",
+    "date_confirmed": "1",
     "window_start": "2026-11-09",
     "window_end": "2026-11-17",
     "matchday": "4",
@@ -2765,85 +2754,6 @@
        "gf": 0,
        "ga": 1,
        "p": 0.0842
-      }
-     ]
-    }
-   },
-   {
-    "date": "2026-11-13",
-    "date_confirmed": "1",
-    "window_start": "2026-11-09",
-    "window_end": "2026-11-17",
-    "matchday": "3",
-    "opponent": "Mauritania",
-    "venue": "H",
-    "tournament": "Africa Cup of Nations, Qualification, Group F",
-    "h2h": {
-     "pld": 10,
-     "w": 6,
-     "d": 3,
-     "l": 1,
-     "gf": 11,
-     "ga": 5,
-     "last": "2024-01-16"
-    },
-    "opp_elo": 1452,
-    "elo_diff": 294,
-    "venue_swing": 100,
-    "probs": {
-     "win": 0.73,
-     "draw": 0.229,
-     "loss": 0.041
-    },
-    "xpts": 2.42,
-    "similar": {
-     "n": 69,
-     "w": 43,
-     "d": 18,
-     "l": 8,
-     "gf_pm": 1.7,
-     "ga_pm": 0.61,
-     "clean_sheets": 36,
-     "failed_to_score": 14,
-     "band": 150,
-     "from_year": "1990",
-     "to_year": "2026"
-    },
-    "scoreline": {
-     "goals_for": 1.888,
-     "goals_against": 0.422,
-     "total": 2.31,
-     "from_n": 69,
-     "scores": [
-      {
-       "gf": 1,
-       "ga": 0,
-       "p": 0.1874
-      },
-      {
-       "gf": 2,
-       "ga": 0,
-       "p": 0.1769
-      },
-      {
-       "gf": 3,
-       "ga": 0,
-       "p": 0.1113
-      },
-      {
-       "gf": 0,
-       "ga": 0,
-       "p": 0.0993
-      },
-      {
-       "gf": 1,
-       "ga": 1,
-       "p": 0.0791
-      },
-      {
-       "gf": 2,
-       "ga": 1,
-       "p": 0.0747
       }
      ]
     }
