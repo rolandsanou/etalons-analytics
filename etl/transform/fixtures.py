@@ -90,22 +90,56 @@ def _played():
     return [(norm_name(e["opponent"]), e["date"]) for e in read_csv(path)]
 
 
-def _already_played(row, played):
-    """Whether this fixture is a match that has now been played.
+def _closes(row, day):
+    """Whether a match played on `day` could be this fixture."""
+    return row["window_start"] <= day <= (row["window_end"] or day)
+
+
+def _close_played(rows, played):
+    """Drop one fixture for each match actually played.
 
     A window is deliberately wide — CAF announces a nine-day slot and names the
-    day later — and a fixture is kept for the whole of it so an undated match
-    does not disappear the morning its window opens. But the window outlives the
+    day later — and a fixture is held for the whole of it so an undated match
+    does not vanish the morning its window opens. But the window outlives the
     match: Benin and the Central African Republic were played on the 25th and
     the 28th and stayed listed as upcoming until the 6th of October, so the site
-    went on predicting a match it had already reported the result of. What
+    went on previewing a match whose result it was already reporting. What
     closes a fixture is the match being played, not the calendar.
+
+    One played match closes ONE fixture. A double-header against the same
+    opponent inside a single window is the normal shape of a CAF campaign —
+    Mauritania at home on the 13th and away on the 17th share one nine-day slot
+    — and closing every match of that window the moment the first leg is played
+    struck out the return fixture too, which then came back from the feed
+    stripped of the matchday it had been seeded with.
     """
-    for opponent, day in played:
-        if opponent == norm_name(row["opponent"]) and (
-                row["window_start"] <= day <= (row["window_end"] or day)):
-            return True
-    return False
+    remaining = list(rows)
+    for opponent, day in sorted(played, key=lambda p: p[1]):
+        here = [r for r in remaining
+                if norm_name(r["opponent"]) == norm_name(opponent)
+                and _closes(r, day)]
+        if not here:
+            continue
+        # the fixture carrying this very date is unambiguously the one played;
+        # otherwise it is an undated fixture of that window, earliest first. A
+        # fixture already dated to a DIFFERENT day is some other match.
+        exact = [r for r in here if r["date"] == day]
+        undated = sorted((r for r in here if not r["date"]),
+                         key=lambda r: int(r["matchday"] or 0))
+        remaining.remove(exact[0] if exact else (undated or here)[0])
+    return remaining
+
+
+def _venue_agrees(seeded, fetched):
+    """Home and away, when both sides state one.
+
+    The feed only distinguishes home from away; a seeded "N" is a maintainer
+    correcting exactly that for a tie played on neutral ground, so it agrees
+    with either.
+    """
+    if not seeded["venue"] or not fetched["venue"] or seeded["venue"] == "N":
+        return True
+    return seeded["venue"] == fetched["venue"]
 
 
 def _same_match(seeded, fetched):
@@ -113,21 +147,23 @@ def _same_match(seeded, fetched):
 
     They are keyed differently — a seeded row knows its matchday and its window,
     a fetched one knows its date — so they cannot be matched on a shared key.
-    Same opponent, and a date falling inside the announced window, is the thing
-    that actually identifies them as one match.
+    Same opponent and a date inside the announced window identify the pairing;
+    the venue separates the two legs of it. A CAF double-header puts both
+    meetings in one nine-day window, so opponent and window alone matched the
+    away leg against the home row, which took the date, kept "home", and left
+    the site announcing tonight's away match at the wrong ground under the
+    wrong matchday.
     """
     return (norm_name(seeded["opponent"]) == norm_name(fetched["opponent"])
-            and seeded["window_start"] <= fetched["date"] <= seeded["window_end"])
+            and seeded["window_start"] <= fetched["date"] <= seeded["window_end"]
+            and _venue_agrees(seeded, fetched))
 
 
 def run(today=None):
     today = (today or date.today()).isoformat()
-    played = _played()
-    rows = [r for r in _from_seed()
-            if _open(r, today) and not _already_played(r, played)]
+    rows = [r for r in _from_seed() if _open(r, today)]
 
-    for got in (r for r in _from_source()
-                if _open(r, today) and not _already_played(r, played)):
+    for got in (r for r in _from_source() if _open(r, today)):
         seeded = next((s for s in rows if _same_match(s, got)), None)
         if seeded is None:
             rows.append(got)
@@ -140,6 +176,9 @@ def run(today=None):
         seeded["venue"] = seeded["venue"] or got["venue"]
         seeded["tournament"] = seeded["tournament"] or got["tournament"]
 
+    # merge first, so a fixture the feed has now dated is matched on that date
+    # rather than on the window it shares with its return leg
+    rows = _close_played(rows, _played())
     rows.sort(key=lambda r: (r["date"] or r["window_start"],
                              int(r["matchday"] or 0)))
     write_csv(STAGING / "fixtures.csv", rows, FIXTURE_FIELDS)

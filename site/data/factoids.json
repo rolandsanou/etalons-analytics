@@ -13,11 +13,11 @@
   {
    "key": "fact_never_trailed",
    "vals": {
-    "n": 37,
-    "w": 26,
+    "n": 38,
+    "w": 27,
     "d": 11,
     "l": 0,
-    "ppg": 2.41
+    "ppg": 2.42
    }
   },
   {
@@ -32,9 +32,9 @@
   {
    "key": "fact_first_goal",
    "vals": {
-    "sf_ppg": 2.39,
+    "sf_ppg": 2.41,
     "cf_ppg": 0.57,
-    "sf_n": 36,
+    "sf_n": 37,
     "cf_n": 28,
     "cf_w": 4,
     "cf_l": 20
@@ -44,15 +44,15 @@
    "key": "fact_bin_low",
    "vals": {
     "bin": "1–15",
-    "stat": 14.62
+    "stat": 15.27
    }
   },
   {
    "key": "fact_most_minutes",
    "vals": {
     "name": "Edmond Tapsoba",
-    "min": 3162,
-    "matches": 35.1
+    "min": 3252,
+    "matches": 36.1
    }
   },
   {
@@ -60,7 +60,7 @@
    "vals": {
     "name": "Dango Ouattara",
     "goals": 11,
-    "total": 64,
+    "total": 65,
     "pct": 17
    }
   },

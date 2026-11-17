@@ -185,3 +185,62 @@ def test_a_different_opponent_in_the_window_does_not_close_a_fixture():
                  window_start="2026-09-21", window_end="2026-10-06", source="seed")]
     played = [("benin", "2026-09-25")]
     assert len(_run([], seed, today=(2026, 9, 29), played=played)) == 1
+
+
+# --- a double-header puts both legs in one window --------------------------
+
+def _leg(matchday, venue):
+    return _row(date="", date_confirmed="0", matchday=matchday,
+                opponent="Mauritania", venue=venue, source="seed",
+                window_start="2026-11-09", window_end="2026-11-17")
+
+
+def test_the_played_leg_closes_and_the_return_leg_keeps_its_identity():
+    """CAF gives both meetings one nine-day slot. Mauritania at home on the
+    13th and away on the 17th share a window, so closing every fixture of that
+    window the moment the first leg was played struck out the return too."""
+    seed = [_leg("3", "H"), _leg("4", "A")]
+    fetched = [_row(date="2026-11-17", window_start="2026-11-17",
+                    window_end="2026-11-17", opponent="Mauritania", venue="A",
+                    matchday="", source="sofascore")]
+    rows = _run(fetched, seed, today=(2026, 11, 17),
+                played=[("mauritania", "2026-11-13")])
+    assert len(rows) == 1
+    kept = rows[0]
+    # the return leg, still away, still matchday 4, now carrying its date
+    assert (kept["matchday"], kept["venue"], kept["date"]) == ("4", "A", "2026-11-17")
+
+
+def test_the_feed_dates_the_leg_played_at_that_ground():
+    """Opponent and window alone matched the away fixture against the home row,
+    which took the date, kept "home", and announced the away leg at the wrong
+    ground under the wrong matchday."""
+    seed = [_leg("3", "H"), _leg("4", "A")]
+    fetched = [_row(date="2026-11-17", window_start="2026-11-17",
+                    window_end="2026-11-17", opponent="Mauritania", venue="A",
+                    matchday="", source="sofascore")]
+    rows = _run(fetched, seed, today=(2026, 11, 10))
+    dated = [r for r in rows if r["date"]]
+    assert [(r["matchday"], r["venue"]) for r in dated] == [("4", "A")]
+
+
+def test_a_seeded_neutral_venue_still_merges():
+    """The feed cannot express neutral ground, which is exactly why a
+    maintainer typed it."""
+    seed = [_row(date="", date_confirmed="0", matchday="7", opponent="Mali",
+                 venue="N", source="seed",
+                 window_start="2027-06-01", window_end="2027-06-10")]
+    fetched = [_row(date="2027-06-05", window_start="2027-06-05",
+                    window_end="2027-06-05", opponent="Mali", venue="H",
+                    matchday="", source="sofascore")]
+    rows = _run(fetched, seed, today=(2027, 5, 1))
+    assert len(rows) == 1
+    assert (rows[0]["venue"], rows[0]["date"]) == ("N", "2027-06-05")
+
+
+def test_two_played_legs_close_both_fixtures():
+    seed = [_leg("3", "H"), _leg("4", "A")]
+    rows = _run([], seed, today=(2026, 11, 18),
+                played=[("mauritania", "2026-11-13"),
+                        ("mauritania", "2026-11-17")])
+    assert rows == []

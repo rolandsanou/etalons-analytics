@@ -211,3 +211,5 @@ event_id,date,minute,added_time,is_bf,card,sofa_id,name,player_id,reason,rescind
 17018568,2026-09-28,33,0,0,yellow,2687275,Sacha M'Baka,,Handball,0
 17018568,2026-09-28,42,0,1,yellow,1855502,Arsène Kouassi,arsene-kouassi,Simulation,0
 17167377,2026-10-04,3,0,1,yellow,2201033,Moumoune Diallo,moumoune-diallo,Foul,0
+17364227,2026-11-13,52,0,0,yellow,1000139,Abdoullah Ba,,Foul,0
+17364227,2026-11-13,57,0,0,yellow,1196789,Ibrahima Keita,,Foul,0
