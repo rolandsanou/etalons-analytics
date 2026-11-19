@@ -1,12 +1,12 @@
 {
  "all_time": {
-  "pld": 467,
-  "w": 165,
+  "pld": 469,
+  "w": 167,
   "d": 124,
   "l": 178,
-  "gf": 582,
-  "ga": 625,
-  "win_pct": 35.3
+  "gf": 586,
+  "ga": 626,
+  "win_pct": 35.6
  },
  "by_decade": [
   {
@@ -71,13 +71,13 @@
   },
   {
    "decade": 2020,
-   "pld": 79,
-   "w": 37,
+   "pld": 81,
+   "w": 39,
    "d": 21,
    "l": 21,
-   "gf": 117,
-   "ga": 88,
-   "win_pct": 46.8
+   "gf": 121,
+   "ga": 89,
+   "win_pct": 48.1
   }
  ],
  "by_year": [
@@ -643,13 +643,13 @@
   },
   {
    "year": 2026,
-   "pld": 8,
-   "w": 2,
+   "pld": 10,
+   "w": 4,
    "d": 3,
    "l": 3,
-   "gf": 10,
-   "ga": 17,
-   "win_pct": 25.0
+   "gf": 14,
+   "ga": 18,
+   "win_pct": 40.0
   }
  ],
  "by_comp": {
@@ -663,13 +663,13 @@
    "win_pct": 21.4
   },
   "afcon_qual": {
-   "pld": 90,
-   "w": 40,
+   "pld": 92,
+   "w": 42,
    "d": 23,
    "l": 27,
-   "gf": 112,
-   "ga": 105,
-   "win_pct": 44.4
+   "gf": 116,
+   "ga": 106,
+   "win_pct": 45.7
   },
   "friendly": {
    "pld": 207,
@@ -703,14 +703,14 @@
   "all_time": [
    {
     "venue_class": "home_bf",
-    "pld": 145,
-    "w": 79,
+    "pld": 146,
+    "w": 80,
     "d": 42,
     "l": 24,
-    "gf": 242,
+    "gf": 243,
     "ga": 141,
-    "win_pct": 54.5,
-    "ppg": 1.92
+    "win_pct": 54.8,
+    "ppg": 1.93
    },
    {
     "venue_class": "home_delocalized",
@@ -736,27 +736,27 @@
    },
    {
     "venue_class": "away",
-    "pld": 181,
-    "w": 26,
+    "pld": 182,
+    "w": 27,
     "d": 51,
     "l": 104,
-    "gf": 140,
-    "ga": 314,
-    "win_pct": 14.4,
-    "ppg": 0.71
+    "gf": 143,
+    "ga": 315,
+    "win_pct": 14.8,
+    "ppg": 0.73
    }
   ],
   "since_2015": [
    {
     "venue_class": "home_bf",
-    "pld": 19,
-    "w": 12,
+    "pld": 20,
+    "w": 13,
     "d": 7,
     "l": 0,
-    "gf": 36,
+    "gf": 37,
     "ga": 10,
-    "win_pct": 63.2,
-    "ppg": 2.26
+    "win_pct": 65.0,
+    "ppg": 2.3
    },
    {
     "venue_class": "home_delocalized",
@@ -782,14 +782,14 @@
    },
    {
     "venue_class": "away",
-    "pld": 44,
-    "w": 4,
+    "pld": 45,
+    "w": 5,
     "d": 17,
     "l": 23,
-    "gf": 28,
-    "ga": 70,
-    "win_pct": 9.1,
-    "ppg": 0.66
+    "gf": 31,
+    "ga": 71,
+    "win_pct": 11.1,
+    "ppg": 0.71
    }
   ],
   "delocalized_hosts": [
@@ -977,6 +977,22 @@
  ],
  "last10": [
   {
+   "date": "2026-11-17",
+   "opponent": "Mauritania",
+   "score": "3-1",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "A",
+   "result": "W"
+  },
+  {
+   "date": "2026-11-13",
+   "opponent": "Mauritania",
+   "score": "1-0",
+   "tournament": "African Cup of Nations qualification",
+   "venue": "H",
+   "result": "W"
+  },
+  {
    "date": "2026-10-03",
    "opponent": "Argentina",
    "score": "0-7",
@@ -1036,22 +1052,6 @@
    "date": "2026-01-06",
    "opponent": "Ivory Coast",
    "score": "0-3",
-   "tournament": "African Cup of Nations",
-   "venue": "N",
-   "result": "L"
-  },
-  {
-   "date": "2025-12-31",
-   "opponent": "Sudan",
-   "score": "2-0",
-   "tournament": "African Cup of Nations",
-   "venue": "N",
-   "result": "W"
-  },
-  {
-   "date": "2025-12-28",
-   "opponent": "Algeria",
-   "score": "0-1",
    "tournament": "African Cup of Nations",
    "venue": "N",
    "result": "L"
@@ -1200,7 +1200,7 @@
   }
  ],
  "first_match": "1960-04-14",
- "last_match": "2026-10-03",
+ "last_match": "2026-11-17",
  "most_capped": [
   {
    "rank": 1,
@@ -1498,17 +1498,17 @@
    "coach": "Amir Abdou",
    "tenure_start": "2026-01-07",
    "first_match": "2026-03-28",
-   "last_match": "2026-10-03",
-   "matches": 7,
-   "w": 2,
+   "last_match": "2026-11-17",
+   "matches": 9,
+   "w": 4,
    "d": 3,
    "l": 2,
-   "ppg": 1.29,
-   "gf_pm": 1.43,
-   "ga_pm": 2.0,
+   "ppg": 1.67,
+   "gf_pm": 1.56,
+   "ga_pm": 1.67,
    "elo_first": 1665.2,
-   "elo_last": 1646.3,
-   "elo_delta": -19.0,
+   "elo_last": 1673.6,
+   "elo_delta": 8.0,
    "pooled": 0,
    "current": 1
   },
@@ -1597,7 +1597,7 @@
    "gf_pm": 1.12,
    "ga_pm": 1.0,
    "elo_first": 1637.4,
-   "elo_last": 1636.4,
+   "elo_last": 1636.3,
    "elo_delta": -1.0,
    "pooled": 0,
    "current": 0

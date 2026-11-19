@@ -13,28 +13,28 @@
   {
    "key": "fact_never_trailed",
    "vals": {
-    "n": 38,
-    "w": 27,
+    "n": 39,
+    "w": 28,
     "d": 11,
     "l": 0,
-    "ppg": 2.42
+    "ppg": 2.44
    }
   },
   {
    "key": "fact_no_reply",
    "vals": {
     "never": 62,
-    "total": 86,
-    "answered": 24,
-    "pct": 72.1
+    "total": 87,
+    "answered": 25,
+    "pct": 71.3
    }
   },
   {
    "key": "fact_first_goal",
    "vals": {
-    "sf_ppg": 2.41,
+    "sf_ppg": 2.42,
     "cf_ppg": 0.57,
-    "sf_n": 37,
+    "sf_n": 38,
     "cf_n": 28,
     "cf_w": 4,
     "cf_l": 20
@@ -44,15 +44,15 @@
    "key": "fact_bin_low",
    "vals": {
     "bin": "1–15",
-    "stat": 15.27
+    "stat": 14.48
    }
   },
   {
    "key": "fact_most_minutes",
    "vals": {
     "name": "Edmond Tapsoba",
-    "min": 3252,
-    "matches": 36.1
+    "min": 3342,
+    "matches": 37.1
    }
   },
   {
@@ -60,8 +60,8 @@
    "vals": {
     "name": "Dango Ouattara",
     "goals": 11,
-    "total": 65,
-    "pct": 17
+    "total": 68,
+    "pct": 16
    }
   },
   {
@@ -78,7 +78,7 @@
   {
    "key": "fact_delocalized",
    "vals": {
-    "home_ppg": 1.92,
+    "home_ppg": 1.93,
     "delo_ppg": 1.85,
     "delo_n": 46
    }
@@ -88,18 +88,18 @@
    "vals": {
     "caf": 11,
     "n_caf": 54,
-    "world": 79,
-    "pts": 1646
+    "world": 74,
+    "pts": 1674
    }
   },
   {
    "key": "fact_all_time",
    "vals": {
-    "pld": 467,
-    "w": 165,
+    "pld": 469,
+    "w": 167,
     "d": 124,
     "l": 178,
-    "pct": 35.3
+    "pct": 35.6
    }
   }
  ]
