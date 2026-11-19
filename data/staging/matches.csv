@@ -466,3 +466,5 @@ date,opponent,venue,venue_class,gf,ga,result,tournament,comp,neutral,city,countr
 2026-09-25,Benin,H,home_bf,1,1,D,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-07
 2026-09-28,Central African Republic,N,neutral,1,0,W,African Cup of Nations qualification,afcon_qual,True,Casablanca,Morocco,Amir Abdou,2026-01-07
 2026-10-03,Argentina,A,away,0,7,L,Friendly,friendly,False,Buenos Aires,Argentina,Amir Abdou,2026-01-07
+2026-11-13,Mauritania,H,home_bf,1,0,W,African Cup of Nations qualification,afcon_qual,False,Ouagadougou,Burkina Faso,Amir Abdou,2026-01-07
+2026-11-17,Mauritania,A,away,3,1,W,African Cup of Nations qualification,afcon_qual,False,Nouakchott,Mauritania,Amir Abdou,2026-01-07

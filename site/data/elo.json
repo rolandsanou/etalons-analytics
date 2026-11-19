@@ -17,7 +17,7 @@
   },
   {
    "date": "1961-12-27",
-   "elo": 1508.9,
+   "elo": 1509.0,
    "opponent": "Liberia"
   },
   {
@@ -67,7 +67,7 @@
   },
   {
    "date": "1967-10-01",
-   "elo": 1421.1,
+   "elo": 1421.2,
    "opponent": "Ghana"
   },
   {
@@ -82,7 +82,7 @@
   },
   {
    "date": "1968-02-25",
-   "elo": 1430.2,
+   "elo": 1430.3,
    "opponent": "Guinea"
   },
   {
@@ -112,7 +112,7 @@
   },
   {
    "date": "1971-12-12",
-   "elo": 1416.9,
+   "elo": 1417.0,
    "opponent": "Togo"
   },
   {
@@ -187,7 +187,7 @@
   },
   {
    "date": "1977-03-27",
-   "elo": 1375.3,
+   "elo": 1375.4,
    "opponent": "Ivory Coast"
   },
   {
@@ -657,7 +657,7 @@
   },
   {
    "date": "1996-12-20",
-   "elo": 1478.6,
+   "elo": 1478.5,
    "opponent": "Gabon"
   },
   {
@@ -857,7 +857,7 @@
   },
   {
    "date": "1999-02-28",
-   "elo": 1548.0,
+   "elo": 1548.1,
    "opponent": "Burundi"
   },
   {
@@ -1127,7 +1127,7 @@
   },
   {
    "date": "2003-09-26",
-   "elo": 1576.6,
+   "elo": 1576.5,
    "opponent": "Algeria"
   },
   {
@@ -1392,7 +1392,7 @@
   },
   {
    "date": "2009-09-05",
-   "elo": 1549.8,
+   "elo": 1549.7,
    "opponent": "Ivory Coast"
   },
   {
@@ -1402,7 +1402,7 @@
   },
   {
    "date": "2009-11-14",
-   "elo": 1582.2,
+   "elo": 1582.1,
    "opponent": "Malawi"
   },
   {
@@ -1577,7 +1577,7 @@
   },
   {
    "date": "2013-03-23",
-   "elo": 1632.2,
+   "elo": 1632.1,
    "opponent": "Niger"
   },
   {
@@ -1672,7 +1672,7 @@
   },
   {
    "date": "2014-11-19",
-   "elo": 1636.4,
+   "elo": 1636.3,
    "opponent": "Angola"
   },
   {
@@ -2334,15 +2334,25 @@
    "date": "2026-10-03",
    "elo": 1646.3,
    "opponent": "Argentina"
+  },
+  {
+   "date": "2026-11-13",
+   "elo": 1652.6,
+   "opponent": "Mauritania"
+  },
+  {
+   "date": "2026-11-17",
+   "elo": 1673.6,
+   "opponent": "Mauritania"
   }
  ],
- "current": 1646.3,
+ "current": 1673.6,
  "peak": {
   "date": "2017-02-04",
   "elo": 1724.9,
   "opponent": "Ghana"
  },
- "world_rank": 79,
+ "world_rank": 74,
  "n_world": 237,
  "caf_rank": 11,
  "n_caf": 54,
@@ -2350,56 +2360,56 @@
   {
    "rank": 11,
    "team": "Morocco",
-   "elo": 2022.8
+   "elo": 2025.7
   },
   {
    "rank": 25,
    "team": "Senegal",
-   "elo": 1872.7
-  },
-  {
-   "rank": 29,
-   "team": "Algeria",
-   "elo": 1849.1
+   "elo": 1881.5
   },
   {
    "rank": 33,
    "team": "Ivory Coast",
-   "elo": 1837.5
+   "elo": 1833.7
   },
   {
    "rank": 34,
    "team": "Egypt",
-   "elo": 1831.7
+   "elo": 1821.9
   },
   {
    "rank": 36,
    "team": "Nigeria",
-   "elo": 1825.7
+   "elo": 1813.1
   },
   {
    "rank": 43,
+   "team": "Algeria",
+   "elo": 1794.1
+  },
+  {
+   "rank": 46,
    "team": "DR Congo",
-   "elo": 1790.7
+   "elo": 1778.9
   },
   {
-   "rank": 54,
+   "rank": 48,
    "team": "Mali",
-   "elo": 1746.4
+   "elo": 1768.3
   },
   {
-   "rank": 58,
+   "rank": 52,
    "team": "Cameroon",
-   "elo": 1732.6
+   "elo": 1747.4
   },
   {
-   "rank": 61,
+   "rank": 62,
    "team": "South Africa",
-   "elo": 1724.5
+   "elo": 1721.0
   }
  ],
  "forecast": {
-  "slope_per_year": 4.9,
+  "slope_per_year": 5.5,
   "history_years": [
    {
     "year": 2010,
@@ -2419,7 +2429,7 @@
    },
    {
     "year": 2014,
-    "elo": 1636.4
+    "elo": 1636.3
    },
    {
     "year": 2015,
@@ -2467,194 +2477,183 @@
    },
    {
     "year": 2026,
-    "elo": 1646.3
+    "elo": 1673.6
    }
   ],
   "targets": [
    {
     "year": 2027.5,
-    "mid": 1684.0,
-    "lo": 1577.0,
-    "hi": 1791.0
+    "mid": 1691.0,
+    "lo": 1586.0,
+    "hi": 1796.0
    },
    {
     "year": 2030.5,
-    "mid": 1699.0,
-    "lo": 1514.0,
-    "hi": 1884.0
+    "mid": 1707.0,
+    "lo": 1525.0,
+    "hi": 1889.0
    }
   ]
  },
  "win_expectancy": [
   {
    "opponent": "Morocco",
-   "opp_elo": 2022.8,
-   "expected": 0.1
+   "opp_elo": 2025.7,
+   "expected": 0.12
   },
   {
    "opponent": "Senegal",
-   "opp_elo": 1872.7,
-   "expected": 0.21
+   "opp_elo": 1881.5,
+   "expected": 0.23
   },
   {
    "opponent": "Egypt",
-   "opp_elo": 1831.7,
-   "expected": 0.26
+   "opp_elo": 1821.9,
+   "expected": 0.3
   },
   {
    "opponent": "Nigeria",
-   "opp_elo": 1825.7,
-   "expected": 0.26
+   "opp_elo": 1813.1,
+   "expected": 0.31
   },
   {
    "opponent": "Algeria",
-   "opp_elo": 1849.1,
-   "expected": 0.24
+   "opp_elo": 1794.1,
+   "expected": 0.33
   },
   {
    "opponent": "Ivory Coast",
-   "opp_elo": 1837.5,
-   "expected": 0.25
+   "opp_elo": 1833.7,
+   "expected": 0.28
   },
   {
    "opponent": "Cameroon",
-   "opp_elo": 1732.6,
-   "expected": 0.38
+   "opp_elo": 1747.4,
+   "expected": 0.4
   },
   {
    "opponent": "Mali",
-   "opp_elo": 1746.4,
-   "expected": 0.36
+   "opp_elo": 1768.3,
+   "expected": 0.37
   },
   {
    "opponent": "Ghana",
-   "opp_elo": 1622.5,
-   "expected": 0.53
+   "opp_elo": 1624.9,
+   "expected": 0.57
   },
   {
    "opponent": "Tunisia",
-   "opp_elo": 1632.8,
-   "expected": 0.52
+   "opp_elo": 1589.3,
+   "expected": 0.62
   }
  ],
  "predictions": {
-  "team_elo": 1646,
+  "team_elo": 1674,
   "calibration": {
    "draw_peak": 0.279,
    "draw_width": 658.4,
    "n_close_matches": 111,
-   "n_samples": 443
+   "n_samples": 445
   },
   "matchups": [
    {
-    "opponent": "Ghana",
-    "opp_elo": 1622,
-    "diff": 24,
-    "win": 0.395,
-    "draw": 0.279,
-    "loss": 0.326
-   },
-   {
     "opponent": "Tunisia",
-    "opp_elo": 1633,
-    "diff": 14,
-    "win": 0.38,
-    "draw": 0.279,
-    "loss": 0.341
+    "opp_elo": 1589,
+    "diff": 84,
+    "win": 0.482,
+    "draw": 0.274,
+    "loss": 0.244
    },
    {
     "opponent": "Cape Verde",
-    "opp_elo": 1643,
-    "diff": 3,
-    "win": 0.365,
-    "draw": 0.279,
-    "loss": 0.356
+    "opp_elo": 1608,
+    "diff": 65,
+    "win": 0.454,
+    "draw": 0.276,
+    "loss": 0.269
+   },
+   {
+    "opponent": "Ghana",
+    "opp_elo": 1625,
+    "diff": 49,
+    "win": 0.431,
+    "draw": 0.277,
+    "loss": 0.292
    },
    {
     "opponent": "Cameroon",
-    "opp_elo": 1733,
-    "diff": -86,
-    "win": 0.241,
-    "draw": 0.274,
-    "loss": 0.485
+    "opp_elo": 1747,
+    "diff": -74,
+    "win": 0.258,
+    "draw": 0.276,
+    "loss": 0.467
    },
    {
     "opponent": "Mali",
-    "opp_elo": 1746,
-    "diff": -100,
-    "win": 0.223,
+    "opp_elo": 1768,
+    "diff": -95,
+    "win": 0.23,
     "draw": 0.273,
-    "loss": 0.504
+    "loss": 0.496
    },
    {
     "opponent": "DR Congo",
-    "opp_elo": 1791,
-    "diff": -144,
-    "win": 0.17,
-    "draw": 0.266,
-    "loss": 0.564
-   },
-   {
-    "opponent": "Nigeria",
-    "opp_elo": 1826,
-    "diff": -179,
-    "win": 0.133,
-    "draw": 0.259,
-    "loss": 0.608
-   },
-   {
-    "opponent": "Egypt",
-    "opp_elo": 1832,
-    "diff": -185,
-    "win": 0.127,
-    "draw": 0.258,
-    "loss": 0.615
-   },
-   {
-    "opponent": "Ivory Coast",
-    "opp_elo": 1838,
-    "diff": -191,
-    "win": 0.121,
-    "draw": 0.256,
-    "loss": 0.622
+    "opp_elo": 1779,
+    "diff": -105,
+    "win": 0.217,
+    "draw": 0.272,
+    "loss": 0.511
    },
    {
     "opponent": "Algeria",
-    "opp_elo": 1849,
-    "diff": -203,
-    "win": 0.11,
-    "draw": 0.254,
-    "loss": 0.636
+    "opp_elo": 1794,
+    "diff": -120,
+    "win": 0.198,
+    "draw": 0.27,
+    "loss": 0.532
+   },
+   {
+    "opponent": "Nigeria",
+    "opp_elo": 1813,
+    "diff": -140,
+    "win": 0.176,
+    "draw": 0.267,
+    "loss": 0.557
+   },
+   {
+    "opponent": "Egypt",
+    "opp_elo": 1822,
+    "diff": -148,
+    "win": 0.166,
+    "draw": 0.265,
+    "loss": 0.569
+   },
+   {
+    "opponent": "Ivory Coast",
+    "opp_elo": 1834,
+    "diff": -160,
+    "win": 0.153,
+    "draw": 0.263,
+    "loss": 0.584
    },
    {
     "opponent": "Senegal",
-    "opp_elo": 1873,
-    "diff": -226,
-    "win": 0.09,
-    "draw": 0.248,
-    "loss": 0.662
+    "opp_elo": 1882,
+    "diff": -208,
+    "win": 0.106,
+    "draw": 0.253,
+    "loss": 0.642
    },
    {
     "opponent": "Morocco",
-    "opp_elo": 2023,
-    "diff": -376,
-    "win": 0.026,
-    "draw": 0.154,
-    "loss": 0.82
+    "opp_elo": 2026,
+    "diff": -352,
+    "win": 0.029,
+    "draw": 0.175,
+    "loss": 0.796
    }
   ],
   "fixtures": [
-   {
-    "date": "2026-11-17",
-    "date_confirmed": "1",
-    "window_start": "2026-11-09",
-    "window_end": "2026-11-17",
-    "matchday": "4",
-    "opponent": "Mauritania",
-    "venue": "A",
-    "tournament": "Africa Cup of Nations, Qualification, Group F",
-    "source": "seed"
-   },
    {
     "date": "",
     "date_confirmed": "0",
@@ -2680,85 +2679,6 @@
   ],
   "outlook": [
    {
-    "date": "2026-11-17",
-    "date_confirmed": "1",
-    "window_start": "2026-11-09",
-    "window_end": "2026-11-17",
-    "matchday": "4",
-    "opponent": "Mauritania",
-    "venue": "A",
-    "tournament": "Africa Cup of Nations, Qualification, Group F",
-    "h2h": {
-     "pld": 10,
-     "w": 6,
-     "d": 3,
-     "l": 1,
-     "gf": 11,
-     "ga": 5,
-     "last": "2024-01-16"
-    },
-    "opp_elo": 1452,
-    "elo_diff": 94,
-    "venue_swing": -100,
-    "probs": {
-     "win": 0.496,
-     "draw": 0.273,
-     "loss": 0.231
-    },
-    "xpts": 1.76,
-    "similar": {
-     "n": 244,
-     "w": 103,
-     "d": 68,
-     "l": 73,
-     "gf_pm": 1.32,
-     "ga_pm": 1.09,
-     "clean_sheets": 91,
-     "failed_to_score": 68,
-     "band": 150,
-     "from_year": "1960",
-     "to_year": "2026"
-    },
-    "scoreline": {
-     "goals_for": 1.473,
-     "goals_against": 0.937,
-     "total": 2.41,
-     "from_n": 244,
-     "scores": [
-      {
-       "gf": 1,
-       "ga": 0,
-       "p": 0.1323
-      },
-      {
-       "gf": 1,
-       "ga": 1,
-       "p": 0.124
-      },
-      {
-       "gf": 2,
-       "ga": 0,
-       "p": 0.0974
-      },
-      {
-       "gf": 2,
-       "ga": 1,
-       "p": 0.0913
-      },
-      {
-       "gf": 0,
-       "ga": 0,
-       "p": 0.0898
-      },
-      {
-       "gf": 0,
-       "ga": 1,
-       "p": 0.0842
-      }
-     ]
-    }
-   },
-   {
     "date": "",
     "date_confirmed": "0",
     "window_start": "2027-03-22",
@@ -2776,53 +2696,53 @@
      "ga": 20,
      "last": "2026-09-25"
     },
-    "opp_elo": 1565,
-    "elo_diff": -19,
+    "opp_elo": 1582,
+    "elo_diff": -8,
     "venue_swing": -100,
     "probs": {
-     "win": 0.334,
+     "win": 0.349,
      "draw": 0.279,
-     "loss": 0.387
+     "loss": 0.372
     },
-    "xpts": 1.28,
+    "xpts": 1.33,
     "similar": {
-     "n": 292,
-     "w": 98,
-     "d": 78,
-     "l": 116,
-     "gf_pm": 1.19,
-     "ga_pm": 1.33,
-     "clean_sheets": 83,
+     "n": 297,
+     "w": 103,
+     "d": 79,
+     "l": 115,
+     "gf_pm": 1.2,
+     "ga_pm": 1.32,
+     "clean_sheets": 85,
      "failed_to_score": 85,
      "band": 150,
      "from_year": "1960",
      "to_year": "2026"
     },
     "scoreline": {
-     "goals_for": 1.193,
-     "goals_against": 1.327,
+     "goals_for": 1.225,
+     "goals_against": 1.295,
      "total": 2.52,
-     "from_n": 292,
+     "from_n": 297,
      "scores": [
       {
        "gf": 1,
        "ga": 1,
-       "p": 0.1274
+       "p": 0.1276
       },
       {
        "gf": 0,
        "ga": 1,
-       "p": 0.1068
+       "p": 0.1042
       },
       {
        "gf": 1,
        "ga": 0,
-       "p": 0.096
+       "p": 0.0986
       },
       {
        "gf": 1,
        "ga": 2,
-       "p": 0.0845
+       "p": 0.0826
       },
       {
        "gf": 0,
@@ -2832,7 +2752,7 @@
       {
        "gf": 2,
        "ga": 1,
-       "p": 0.076
+       "p": 0.0782
       }
      ]
     }
@@ -2855,63 +2775,63 @@
      "ga": 3,
      "last": "2026-09-28"
     },
-    "opp_elo": 1332,
-    "elo_diff": 414,
+    "opp_elo": 1316,
+    "elo_diff": 458,
     "venue_swing": 100,
     "probs": {
-     "win": 0.852,
-     "draw": 0.127,
-     "loss": 0.021
+     "win": 0.883,
+     "draw": 0.1,
+     "loss": 0.017
     },
-    "xpts": 2.68,
+    "xpts": 2.75,
     "similar": {
-     "n": 24,
-     "w": 19,
-     "d": 5,
+     "n": 12,
+     "w": 9,
+     "d": 3,
      "l": 0,
-     "gf_pm": 2.17,
-     "ga_pm": 0.46,
-     "clean_sheets": 13,
-     "failed_to_score": 1,
+     "gf_pm": 2.5,
+     "ga_pm": 0.67,
+     "clean_sheets": 4,
+     "failed_to_score": 0,
      "band": 150,
-     "from_year": "2011",
+     "from_year": "2014",
      "to_year": "2026"
     },
     "scoreline": {
-     "goals_for": 2.384,
-     "goals_against": 0.246,
-     "total": 2.63,
-     "from_n": 24,
+     "goals_for": 2.848,
+     "goals_against": 0.322,
+     "total": 3.17,
+     "from_n": 12,
      "scores": [
       {
        "gf": 2,
        "ga": 0,
-       "p": 0.2048
-      },
-      {
-       "gf": 1,
-       "ga": 0,
-       "p": 0.1718
+       "p": 0.1703
       },
       {
        "gf": 3,
        "ga": 0,
-       "p": 0.1628
+       "p": 0.1617
+      },
+      {
+       "gf": 1,
+       "ga": 0,
+       "p": 0.1196
       },
       {
        "gf": 4,
        "ga": 0,
-       "p": 0.097
+       "p": 0.1151
       },
       {
-       "gf": 0,
+       "gf": 5,
        "ga": 0,
-       "p": 0.0721
+       "p": 0.0656
       },
       {
        "gf": 2,
        "ga": 1,
-       "p": 0.0504
+       "p": 0.0549
       }
      ]
     }
@@ -2928,19 +2848,19 @@
    "n_close": 108
   },
   "test": {
-   "matches": 64,
+   "matches": 66,
    "from": "2022-01-01"
   },
   "brier": {
-   "model": 0.509,
+   "model": 0.5,
    "base_rates": 0.662,
    "uniform": 0.667,
-   "skill_vs_base": 23.1
+   "skill_vs_base": 24.5
   },
   "accuracy": {
-   "hits": 41,
-   "n": 64,
-   "pct": 64.1
+   "hits": 43,
+   "n": 66,
+   "pct": 65.2
   },
   "calibration": [
    {
@@ -2963,9 +2883,9 @@
    },
    {
     "band": "60–80 %",
-    "n": 19,
-    "predicted": 69.0,
-    "observed": 68.4
+    "n": 21,
+    "predicted": 68.6,
+    "observed": 71.4
    },
    {
     "band": "80–100 %",

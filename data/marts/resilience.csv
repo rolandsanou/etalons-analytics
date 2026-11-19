@@ -1,16 +1,16 @@
 metric,scope,n,value,detail
 deficit,trailed_1,15,1.0,4W-3D-8L
 deficit,trailed_2plus,15,0.07,0W-1D-14L
-deficit,never_trailed,38,2.42,27W-11D-0L
-reply,within_10,8,9.3,8 of 86 goals conceded
-reply,11_20,5,5.8,5 of 86 goals conceded
-reply,21_plus,11,12.8,11 of 86 goals conceded
-reply,never,62,72.1,62 of 86 goals conceded
-reply,median_minutes,24,20.0,
-scored_per90,leading,36,1.77,36 goals in 1826 min
-conceded_per90,leading,25,1.23,25 goals in 1826 min
-scored_per90,level,46,1.31,46 goals in 3164 min
-conceded_per90,level,33,0.94,33 goals in 3164 min
+deficit,never_trailed,39,2.44,28W-11D-0L
+reply,within_10,8,9.2,8 of 87 goals conceded
+reply,11_20,6,6.9,6 of 87 goals conceded
+reply,21_plus,11,12.6,11 of 87 goals conceded
+reply,never,62,71.3,62 of 87 goals conceded
+reply,median_minutes,25,18.0,
+scored_per90,leading,38,1.79,38 goals in 1912 min
+conceded_per90,leading,26,1.22,26 goals in 1912 min
+scored_per90,level,47,1.33,47 goals in 3176 min
+conceded_per90,level,33,0.94,33 goals in 3176 min
 scored_per90,trailing,15,0.83,15 goals in 1624 min
 conceded_per90,trailing,28,1.55,28 goals in 1624 min
 late_swing,points_gained,9,9,matches improved by goals after 75'

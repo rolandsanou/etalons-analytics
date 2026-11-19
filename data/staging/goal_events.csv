@@ -182,3 +182,7 @@ event_id,date,minute,added_time,class,is_bf,scorer_sofa_id,scorer_name,scorer_pl
 17167377,2026-10-04,57,0,regular,0,1403559,Franco Mastantuono,,823984,Lautaro Martínez,,0,6,57,5,extender
 17167377,2026-10-04,90,3,regular,0,1099352,Giuliano Simeone,,1127057,Valentín Barco,,0,7,93,6,extender
 17364227,2026-11-13,90,4,regular,1,1490960,Moise Kaboré,moise-elohim-kabore,1855502,Arsène Kouassi,arsene-kouassi,1,0,95,0,opener
+17364226,2026-11-17,12,0,regular,1,1542696,Aboubacar Camara,aboubacar-camara,1106451,Dango Ouattara,dango-ouattara,1,0,12,0,opener
+17364226,2026-11-17,27,0,regular,1,911719,Lassina Traoré,lassina-traore,983282,Ousseni Bouda,ousseni-bouda,2,0,27,1,extender
+17364226,2026-11-17,75,0,regular,0,1893086,Mohamed Ali Diadié,,1010564,Idrissa Thiam,,2,1,76,-2,consolation
+17364226,2026-11-17,89,0,regular,1,1490960,Moise Kaboré,moise-elohim-kabore,1011815,Rachid Kouda,rachid-kouda,3,1,90,1,extender

@@ -1,6 +1,7 @@
 player_id,name,pos,sub_apps,sub_min,sub_goals,sub_assists,sub_ga,sub_ga90,gate_ga90,sub_gd,sub_gd90,gate_gd,entry_avg,entries_leading,entries_level,entries_trailing
 bertrand-traore,Bertrand Traoré,FW,7,215,4,1,5,2.09,1,4,,0,66.3,1,4,2
 pierre-landry-kabore,Pierre Landry Kaboré,FW,8,148,3,0,3,,0,2,1.22,1,77.9,4,2,2
+moise-elohim-kabore,Moise Elohim Kaboré,FW,4,89,2,0,2,,0,1,,0,76.2,2,2,0
 hassane-bande,Hassane Bandé,FW,9,222,1,0,1,0.41,1,2,0.81,1,75.6,2,4,3
 abdoul-tapsoba,Abdoul Tapsoba,FW,9,200,1,0,1,0.45,1,1,0.45,1,78.4,2,4,3
 cedric-badolo,Cedric Badolo,MF,9,266,0,1,1,0.34,1,0,0.0,1,66.6,4,1,4
@@ -9,8 +10,8 @@ georgi-minoungou,Georgi Minoungou,FW,8,259,1,0,1,0.35,1,5,1.74,1,64.1,2,4,2
 stephane-aziz-ki,Stephane Aziz Ki,MF,6,95,1,0,1,,0,2,,0,81.3,2,3,1
 dango-ouattara,Dango Ouattara,FW,4,117,0,1,1,,0,2,,0,69.0,2,1,1
 yves-koutiama,Yves Koutiama,FW,3,125,0,1,1,,0,0,,0,60.7,1,0,2
-moise-elohim-kabore,Moise Elohim Kaboré,FW,3,66,1,0,1,,0,1,,0,76.7,1,2,0
 aboubacar-camara,Aboubacar Camara,MF,2,66,1,0,1,,0,2,,0,65.0,0,2,0
+rachid-kouda,Rachid Kouda,MF,2,40,0,1,1,,0,0,,0,78.5,2,0,0
 mohamed-konate,Mohamed Konaté,FW,12,220,0,0,0,0.0,1,-4,-1.64,1,81.2,8,2,2
 saidou-simpore,Saïdou Simporé,DF,9,236,0,0,0,0.0,1,0,0.0,1,72.9,4,1,4
 zakaria-sanogo,Zakaria Sanogo,FW,5,148,0,0,0,,0,-3,,0,72.4,2,2,1
@@ -24,6 +25,7 @@ josue-tiendrebeogo,Josué Tiendrébéogo,MF,4,109,0,0,0,,0,1,,0,67.5,1,3,0
 djibril-ouattara,Djibril Ouattara,FW,3,75,0,0,0,,0,0,,0,75.7,0,1,2
 steeve-yago,Steeve Yago,DF,3,79,0,0,0,,0,1,,0,71.3,1,0,2
 trova-boni,Trova Boni,DF,3,27,0,0,0,,0,-1,,0,88.3,2,1,0
+pakwo-gnanou,Pakwo Gnanou,DF,3,107,0,0,0,,0,-1,,0,62.3,1,1,1
 mamady-bangre,Mamady Bangré,FW,2,57,0,0,0,,0,-1,,0,68.5,0,2,0
 cyrille-bayala,Cyrille Bayala,FW,2,88,0,0,0,,0,-2,,0,53.0,0,2,0
 gustavo-sangare,Gustavo Sangaré,MF,2,41,0,0,0,,0,1,,0,74.5,1,0,1
@@ -35,7 +37,6 @@ abdoul-baguian,Abdoul Baguian,FW,2,62,0,0,0,,0,-1,,0,69.0,0,0,2
 souleymane-sangare,Souleymane Sangaré,MF,2,7,0,0,0,,0,-1,,0,100.0,1,0,1
 tertius-bagre,Tertius Bagré,MF,2,35,0,0,0,,0,1,,0,83.5,1,0,1
 cyriaque-irie,Cyriaque Irié,FW,2,25,0,0,0,,0,2,,0,87.5,0,0,2
-pakwo-gnanou,Pakwo Gnanou,DF,2,56,0,0,0,,0,-1,,0,70.0,0,1,1
 dramane-nikiema,Dramane Nikièma,MF,1,2,0,0,0,,0,0,,0,92.0,1,0,0
 farid-ouedraogo,Farid Ouédraogo,GK,1,63,0,0,0,,0,-2,,0,36.0,0,1,0
 aboubacar-sawadogo,Aboubacar Sawadogo,GK,1,30,0,0,0,,0,0,,0,98.0,0,1,0
@@ -61,7 +62,6 @@ issa-kabore,Issa Kaboré,DF,1,23,0,0,0,,0,-1,,0,74.0,0,0,1
 aboubacar-bassinga,Aboubacar Bassinga,MF,1,5,0,0,0,,0,0,,0,91.0,0,0,1
 chec-bebel-doumbia,Chec Bebel Doumbia,MF,1,25,0,0,0,,0,0,,0,75.0,0,1,0
 taonsa-axel,Taonsa Axel,MF,1,26,0,0,0,,0,-1,,0,50.0,1,0,0
-rachid-kouda,Rachid Kouda,MF,1,6,0,0,0,,0,0,,0,93.0,1,0,0
 alane-moussa-ky,Alane Moussa Ky,MF,1,35,0,0,0,,0,-1,,0,58.0,0,0,1
 fadil-adama-yassir-barro,Fadil Adama Yassir Barro,DF,1,47,0,0,0,,0,-2,,0,46.0,0,0,1
 mikael-coulibaly,Mikael Coulibaly,DF,1,35,0,0,0,,0,-1,,0,58.0,0,0,1
@@ -70,3 +70,5 @@ nouhoum-kone,Nouhoum Koné,MF,1,47,0,0,0,,0,-2,,0,46.0,0,0,1
 razack-sanou,Razack Sanou,FW,1,17,0,0,0,,0,-1,,0,76.0,0,0,1
 salif-tietietta,Salif Tietietta,FW,1,8,0,0,0,,0,-1,,0,85.0,0,0,1
 lohann-doucet,Lohann Doucet,MF,1,30,0,0,0,,0,1,,0,67.0,0,1,0
+arthur-zagre,Arthur Zagré,DF,1,34,0,0,0,,0,0,,0,64.0,1,0,0
+issoufou-dayo,Issoufou Dayo,DF,1,15,0,0,0,,0,1,,0,83.0,1,0,0
