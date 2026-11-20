@@ -112,7 +112,7 @@
   },
   {
    "date": "1971-12-12",
-   "elo": 1417.0,
+   "elo": 1416.9,
    "opponent": "Togo"
   },
   {
@@ -187,7 +187,7 @@
   },
   {
    "date": "1977-03-27",
-   "elo": 1375.4,
+   "elo": 1375.3,
    "opponent": "Ivory Coast"
   },
   {
@@ -212,7 +212,7 @@
   },
   {
    "date": "1978-03-08",
-   "elo": 1386.6,
+   "elo": 1386.5,
    "opponent": "Zambia"
   },
   {
@@ -422,7 +422,7 @@
   },
   {
    "date": "1988-07-24",
-   "elo": 1459.3,
+   "elo": 1459.2,
    "opponent": "Niger"
   },
   {
@@ -472,7 +472,7 @@
   },
   {
    "date": "1990-08-27",
-   "elo": 1512.1,
+   "elo": 1512.0,
    "opponent": "Mali"
   },
   {
@@ -582,12 +582,12 @@
   },
   {
    "date": "1995-04-09",
-   "elo": 1569.1,
+   "elo": 1569.0,
    "opponent": "Morocco"
   },
   {
    "date": "1995-07-30",
-   "elo": 1571.8,
+   "elo": 1571.7,
    "opponent": "Ivory Coast"
   },
   {
@@ -617,7 +617,7 @@
   },
   {
    "date": "1996-01-24",
-   "elo": 1485.2,
+   "elo": 1485.1,
    "opponent": "Algeria"
   },
   {
@@ -647,7 +647,7 @@
   },
   {
    "date": "1996-11-09",
-   "elo": 1484.9,
+   "elo": 1484.8,
    "opponent": "Nigeria"
   },
   {
@@ -662,7 +662,7 @@
   },
   {
    "date": "1996-12-22",
-   "elo": 1494.1,
+   "elo": 1494.0,
    "opponent": "Ghana"
   },
   {
@@ -672,12 +672,12 @@
   },
   {
    "date": "1996-12-27",
-   "elo": 1487.4,
+   "elo": 1487.3,
    "opponent": "Benin"
   },
   {
    "date": "1997-01-12",
-   "elo": 1448.3,
+   "elo": 1448.2,
    "opponent": "Guinea"
   },
   {
@@ -702,7 +702,7 @@
   },
   {
    "date": "1997-06-04",
-   "elo": 1439.4,
+   "elo": 1439.5,
    "opponent": "Togo"
   },
   {
@@ -717,27 +717,27 @@
   },
   {
    "date": "1997-11-02",
-   "elo": 1403.5,
+   "elo": 1403.6,
    "opponent": "Ivory Coast"
   },
   {
    "date": "1997-12-27",
-   "elo": 1424.2,
+   "elo": 1424.3,
    "opponent": "Ivory Coast"
   },
   {
    "date": "1998-01-04",
-   "elo": 1434.5,
+   "elo": 1434.6,
    "opponent": "Mozambique"
   },
   {
    "date": "1998-01-07",
-   "elo": 1449.0,
+   "elo": 1449.1,
    "opponent": "Mozambique"
   },
   {
    "date": "1998-01-11",
-   "elo": 1449.0,
+   "elo": 1449.1,
    "opponent": "Mali"
   },
   {
@@ -747,27 +747,27 @@
   },
   {
    "date": "1998-02-01",
-   "elo": 1478.1,
+   "elo": 1478.2,
    "opponent": "Namibia"
   },
   {
    "date": "1998-02-07",
-   "elo": 1457.1,
+   "elo": 1457.2,
    "opponent": "Cameroon"
   },
   {
    "date": "1998-02-11",
-   "elo": 1488.2,
+   "elo": 1488.3,
    "opponent": "Algeria"
   },
   {
    "date": "1998-02-15",
-   "elo": 1515.0,
+   "elo": 1515.1,
    "opponent": "Guinea"
   },
   {
    "date": "1998-02-21",
-   "elo": 1522.9,
+   "elo": 1523.0,
    "opponent": "Tunisia"
   },
   {
@@ -827,7 +827,7 @@
   },
   {
    "date": "1998-10-23",
-   "elo": 1475.2,
+   "elo": 1475.3,
    "opponent": "Bahrain"
   },
   {
@@ -837,22 +837,22 @@
   },
   {
    "date": "1999-01-10",
-   "elo": 1494.2,
+   "elo": 1494.3,
    "opponent": "Mali"
   },
   {
    "date": "1999-01-15",
-   "elo": 1508.0,
+   "elo": 1508.1,
    "opponent": "Mali"
   },
   {
    "date": "1999-01-23",
-   "elo": 1514.7,
+   "elo": 1514.8,
    "opponent": "Senegal"
   },
   {
    "date": "1999-02-20",
-   "elo": 1518.7,
+   "elo": 1518.8,
    "opponent": "Gabon"
   },
   {
@@ -862,32 +862,32 @@
   },
   {
    "date": "1999-04-03",
-   "elo": 1533.8,
+   "elo": 1533.9,
    "opponent": "Mali"
   },
   {
    "date": "1999-04-11",
-   "elo": 1557.9,
+   "elo": 1558.0,
    "opponent": "Burundi"
   },
   {
    "date": "1999-06-06",
-   "elo": 1550.2,
+   "elo": 1550.3,
    "opponent": "Senegal"
   },
   {
    "date": "1999-11-07",
-   "elo": 1556.1,
+   "elo": 1556.2,
    "opponent": "Togo"
   },
   {
    "date": "1999-11-10",
-   "elo": 1551.7,
+   "elo": 1551.8,
    "opponent": "Togo"
   },
   {
    "date": "1999-11-27",
-   "elo": 1540.6,
+   "elo": 1540.7,
    "opponent": "Congo"
   },
   {
@@ -977,7 +977,7 @@
   },
   {
    "date": "2001-01-13",
-   "elo": 1552.1,
+   "elo": 1552.0,
    "opponent": "Angola"
   },
   {
@@ -992,7 +992,7 @@
   },
   {
    "date": "2001-02-24",
-   "elo": 1500.6,
+   "elo": 1500.5,
    "opponent": "Zimbabwe"
   },
   {
@@ -1007,42 +1007,42 @@
   },
   {
    "date": "2001-06-03",
-   "elo": 1502.8,
+   "elo": 1502.7,
    "opponent": "Burundi"
   },
   {
    "date": "2001-06-17",
-   "elo": 1523.5,
+   "elo": 1523.4,
    "opponent": "Algeria"
   },
   {
    "date": "2001-07-01",
-   "elo": 1529.6,
+   "elo": 1529.5,
    "opponent": "South Africa"
   },
   {
    "date": "2001-07-15",
-   "elo": 1516.2,
+   "elo": 1516.1,
    "opponent": "Zimbabwe"
   },
   {
    "date": "2001-10-15",
-   "elo": 1509.2,
+   "elo": 1509.1,
    "opponent": "Algeria"
   },
   {
    "date": "2001-12-16",
-   "elo": 1499.0,
+   "elo": 1498.9,
    "opponent": "Togo"
   },
   {
    "date": "2001-12-22",
-   "elo": 1494.5,
+   "elo": 1494.4,
    "opponent": "Togo"
   },
   {
    "date": "2001-12-26",
-   "elo": 1520.1,
+   "elo": 1520.0,
    "opponent": "Senegal"
   },
   {
@@ -1052,57 +1052,57 @@
   },
   {
    "date": "2002-01-07",
-   "elo": 1504.9,
+   "elo": 1504.8,
    "opponent": "Cameroon"
   },
   {
    "date": "2002-01-11",
-   "elo": 1512.0,
+   "elo": 1511.9,
    "opponent": "Egypt"
   },
   {
    "date": "2002-01-20",
-   "elo": 1525.0,
+   "elo": 1524.9,
    "opponent": "South Africa"
   },
   {
    "date": "2002-01-26",
-   "elo": 1512.4,
+   "elo": 1512.3,
    "opponent": "Morocco"
   },
   {
    "date": "2002-01-30",
-   "elo": 1495.0,
+   "elo": 1494.9,
    "opponent": "Ghana"
   },
   {
    "date": "2002-09-08",
-   "elo": 1499.2,
+   "elo": 1499.1,
    "opponent": "Congo"
   },
   {
    "date": "2002-10-13",
-   "elo": 1507.8,
+   "elo": 1507.7,
    "opponent": "Central African Republic"
   },
   {
    "date": "2002-12-27",
-   "elo": 1508.7,
+   "elo": 1508.6,
    "opponent": "Niger"
   },
   {
    "date": "2003-03-26",
-   "elo": 1509.2,
+   "elo": 1509.1,
    "opponent": "Burundi"
   },
   {
    "date": "2003-03-30",
-   "elo": 1486.3,
+   "elo": 1486.2,
    "opponent": "Mozambique"
   },
   {
    "date": "2003-05-29",
-   "elo": 1499.8,
+   "elo": 1499.7,
    "opponent": "Algeria"
   },
   {
@@ -1112,12 +1112,12 @@
   },
   {
    "date": "2003-06-21",
-   "elo": 1540.1,
+   "elo": 1540.0,
    "opponent": "Congo"
   },
   {
    "date": "2003-07-06",
-   "elo": 1565.8,
+   "elo": 1565.7,
    "opponent": "Central African Republic"
   },
   {
@@ -1132,1077 +1132,1077 @@
   },
   {
    "date": "2003-10-23",
-   "elo": 1554.6,
+   "elo": 1554.5,
    "opponent": "Zimbabwe"
   },
   {
    "date": "2003-11-08",
-   "elo": 1556.8,
+   "elo": 1556.7,
    "opponent": "Gabon"
   },
   {
    "date": "2003-11-15",
-   "elo": 1553.0,
+   "elo": 1552.9,
    "opponent": "Morocco"
   },
   {
    "date": "2004-01-17",
-   "elo": 1560.4,
+   "elo": 1560.3,
    "opponent": "Egypt"
   },
   {
    "date": "2004-01-20",
-   "elo": 1552.0,
+   "elo": 1551.9,
    "opponent": "Guinea"
   },
   {
    "date": "2004-01-26",
-   "elo": 1568.3,
+   "elo": 1568.2,
    "opponent": "Senegal"
   },
   {
    "date": "2004-01-30",
-   "elo": 1545.5,
+   "elo": 1545.4,
    "opponent": "Mali"
   },
   {
    "date": "2004-02-02",
-   "elo": 1497.4,
+   "elo": 1497.3,
    "opponent": "Kenya"
   },
   {
    "date": "2004-05-26",
-   "elo": 1487.8,
+   "elo": 1487.7,
    "opponent": "Benin"
   },
   {
    "date": "2004-05-30",
-   "elo": 1497.1,
+   "elo": 1496.9,
    "opponent": "Libya"
   },
   {
    "date": "2004-06-05",
-   "elo": 1514.1,
+   "elo": 1514.0,
    "opponent": "Ghana"
   },
   {
    "date": "2004-06-13",
-   "elo": 1521.5,
+   "elo": 1521.4,
    "opponent": "Benin"
   },
   {
    "date": "2004-06-20",
-   "elo": 1506.5,
+   "elo": 1506.4,
    "opponent": "DR Congo"
   },
   {
    "date": "2004-07-03",
-   "elo": 1492.8,
+   "elo": 1492.7,
    "opponent": "South Africa"
   },
   {
    "date": "2004-08-17",
-   "elo": 1498.0,
+   "elo": 1497.9,
    "opponent": "Algeria"
   },
   {
    "date": "2004-09-04",
-   "elo": 1518.0,
+   "elo": 1517.9,
    "opponent": "Uganda"
   },
   {
    "date": "2004-10-09",
-   "elo": 1499.8,
+   "elo": 1499.7,
    "opponent": "Cape Verde"
   },
   {
    "date": "2004-11-17",
-   "elo": 1495.9,
+   "elo": 1495.8,
    "opponent": "Morocco"
   },
   {
    "date": "2005-02-09",
-   "elo": 1485.1,
+   "elo": 1485.0,
    "opponent": "Algeria"
   },
   {
    "date": "2005-03-20",
-   "elo": 1481.8,
+   "elo": 1481.6,
    "opponent": "South Korea"
   },
   {
    "date": "2005-03-26",
-   "elo": 1455.5,
+   "elo": 1455.3,
    "opponent": "Cape Verde"
   },
   {
    "date": "2005-05-29",
-   "elo": 1452.2,
+   "elo": 1452.1,
    "opponent": "Togo"
   },
   {
    "date": "2005-06-05",
-   "elo": 1443.7,
+   "elo": 1443.6,
    "opponent": "Ghana"
   },
   {
    "date": "2005-06-18",
-   "elo": 1475.4,
+   "elo": 1475.3,
    "opponent": "DR Congo"
   },
   {
    "date": "2005-09-03",
-   "elo": 1512.8,
+   "elo": 1512.7,
    "opponent": "South Africa"
   },
   {
    "date": "2005-10-08",
-   "elo": 1513.5,
+   "elo": 1513.3,
    "opponent": "Uganda"
   },
   {
    "date": "2006-02-28",
-   "elo": 1513.7,
+   "elo": 1513.6,
    "opponent": "Algeria"
   },
   {
    "date": "2006-08-16",
-   "elo": 1511.1,
+   "elo": 1511.0,
    "opponent": "Morocco"
   },
   {
    "date": "2006-08-29",
-   "elo": 1512.8,
+   "elo": 1512.7,
    "opponent": "Uganda"
   },
   {
    "date": "2006-09-02",
-   "elo": 1487.4,
+   "elo": 1487.3,
    "opponent": "Tanzania"
   },
   {
    "date": "2006-10-07",
-   "elo": 1516.9,
+   "elo": 1516.8,
    "opponent": "Senegal"
   },
   {
    "date": "2006-11-15",
-   "elo": 1527.4,
+   "elo": 1527.3,
    "opponent": "Algeria"
   },
   {
    "date": "2007-03-24",
-   "elo": 1515.7,
+   "elo": 1515.6,
    "opponent": "Mozambique"
   },
   {
    "date": "2007-05-29",
-   "elo": 1519.9,
+   "elo": 1519.8,
    "opponent": "Zimbabwe"
   },
   {
    "date": "2007-06-03",
-   "elo": 1485.0,
+   "elo": 1484.9,
    "opponent": "Mozambique"
   },
   {
    "date": "2007-06-09",
-   "elo": 1476.6,
+   "elo": 1476.5,
    "opponent": "Mali"
   },
   {
    "date": "2007-06-16",
-   "elo": 1448.4,
+   "elo": 1448.3,
    "opponent": "Tanzania"
   },
   {
    "date": "2007-08-22",
-   "elo": 1443.8,
+   "elo": 1443.7,
    "opponent": "Mali"
   },
   {
    "date": "2007-09-08",
-   "elo": 1436.6,
+   "elo": 1436.5,
    "opponent": "Senegal"
   },
   {
    "date": "2008-05-24",
-   "elo": 1425.7,
+   "elo": 1425.6,
    "opponent": "Cape Verde"
   },
   {
    "date": "2008-06-01",
-   "elo": 1462.2,
+   "elo": 1462.1,
    "opponent": "Tunisia"
   },
   {
    "date": "2008-06-07",
-   "elo": 1479.8,
+   "elo": 1479.7,
    "opponent": "Burundi"
   },
   {
    "date": "2008-06-14",
-   "elo": 1492.9,
+   "elo": 1492.8,
    "opponent": "Seychelles"
   },
   {
    "date": "2008-06-21",
-   "elo": 1501.1,
+   "elo": 1501.0,
    "opponent": "Seychelles"
   },
   {
    "date": "2008-08-20",
-   "elo": 1494.8,
+   "elo": 1494.7,
    "opponent": "Bahrain"
   },
   {
    "date": "2008-09-06",
-   "elo": 1501.4,
+   "elo": 1501.2,
    "opponent": "Tunisia"
   },
   {
    "date": "2008-10-12",
-   "elo": 1531.1,
+   "elo": 1531.0,
    "opponent": "Burundi"
   },
   {
    "date": "2009-02-11",
-   "elo": 1531.3,
+   "elo": 1531.1,
    "opponent": "Togo"
   },
   {
    "date": "2009-03-28",
-   "elo": 1564.3,
+   "elo": 1564.2,
    "opponent": "Guinea"
   },
   {
    "date": "2009-06-06",
-   "elo": 1583.9,
+   "elo": 1583.8,
    "opponent": "Malawi"
   },
   {
    "date": "2009-06-20",
-   "elo": 1571.8,
+   "elo": 1571.7,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2009-08-12",
-   "elo": 1557.7,
+   "elo": 1557.5,
    "opponent": "Mali"
   },
   {
    "date": "2009-09-05",
-   "elo": 1549.7,
+   "elo": 1549.6,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2009-10-11",
-   "elo": 1572.9,
+   "elo": 1572.8,
    "opponent": "Guinea"
   },
   {
    "date": "2009-11-14",
-   "elo": 1582.1,
+   "elo": 1582.0,
    "opponent": "Malawi"
   },
   {
    "date": "2010-01-11",
-   "elo": 1598.6,
+   "elo": 1598.4,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2010-01-19",
-   "elo": 1583.2,
+   "elo": 1583.0,
    "opponent": "Ghana"
   },
   {
    "date": "2010-08-11",
-   "elo": 1597.2,
+   "elo": 1597.1,
    "opponent": "Congo"
   },
   {
    "date": "2010-09-06",
-   "elo": 1600.1,
+   "elo": 1600.0,
    "opponent": "Gabon"
   },
   {
    "date": "2010-10-09",
-   "elo": 1615.6,
+   "elo": 1615.5,
    "opponent": "Gambia"
   },
   {
    "date": "2010-11-17",
-   "elo": 1626.3,
+   "elo": 1626.2,
    "opponent": "Guinea"
   },
   {
    "date": "2011-02-09",
-   "elo": 1613.0,
+   "elo": 1612.9,
    "opponent": "Cape Verde"
   },
   {
    "date": "2011-03-26",
-   "elo": 1623.6,
+   "elo": 1623.4,
    "opponent": "Namibia"
   },
   {
    "date": "2011-06-04",
-   "elo": 1645.5,
+   "elo": 1645.4,
    "opponent": "Namibia"
   },
   {
    "date": "2011-08-10",
-   "elo": 1636.7,
+   "elo": 1636.6,
    "opponent": "South Africa"
   },
   {
    "date": "2011-09-03",
-   "elo": 1638.5,
+   "elo": 1638.3,
    "opponent": "Equatorial Guinea"
   },
   {
    "date": "2011-10-08",
-   "elo": 1634.6,
+   "elo": 1634.5,
    "opponent": "Gambia"
   },
   {
    "date": "2011-11-11",
-   "elo": 1633.8,
+   "elo": 1633.6,
    "opponent": "Mali"
   },
   {
    "date": "2011-11-15",
-   "elo": 1633.9,
+   "elo": 1633.7,
    "opponent": "Guinea"
   },
   {
    "date": "2012-01-09",
-   "elo": 1637.4,
+   "elo": 1637.3,
    "opponent": "Gabon"
   },
   {
    "date": "2012-01-22",
-   "elo": 1610.1,
+   "elo": 1610.0,
    "opponent": "Angola"
   },
   {
    "date": "2012-01-26",
-   "elo": 1598.2,
+   "elo": 1598.1,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2012-01-30",
-   "elo": 1568.4,
+   "elo": 1568.3,
    "opponent": "Sudan"
   },
   {
    "date": "2012-02-29",
-   "elo": 1560.1,
+   "elo": 1560.0,
    "opponent": "Morocco"
   },
   {
    "date": "2012-05-26",
-   "elo": 1555.5,
+   "elo": 1555.3,
    "opponent": "Benin"
   },
   {
    "date": "2012-06-02",
-   "elo": 1506.8,
+   "elo": 1506.6,
    "opponent": "Congo"
   },
   {
    "date": "2012-06-09",
-   "elo": 1498.4,
+   "elo": 1498.2,
    "opponent": "Gabon"
   },
   {
    "date": "2012-08-14",
-   "elo": 1513.9,
+   "elo": 1513.7,
    "opponent": "Togo"
   },
   {
    "date": "2012-09-08",
-   "elo": 1494.4,
+   "elo": 1494.3,
    "opponent": "Central African Republic"
   },
   {
    "date": "2012-10-14",
-   "elo": 1512.2,
+   "elo": 1512.0,
    "opponent": "Central African Republic"
   },
   {
    "date": "2012-11-14",
-   "elo": 1526.2,
+   "elo": 1526.1,
    "opponent": "DR Congo"
   },
   {
    "date": "2012-12-26",
-   "elo": 1530.2,
+   "elo": 1530.0,
    "opponent": "Bahrain"
   },
   {
    "date": "2013-01-17",
-   "elo": 1535.6,
+   "elo": 1535.4,
    "opponent": "Eswatini"
   },
   {
    "date": "2013-01-21",
-   "elo": 1548.5,
+   "elo": 1548.4,
    "opponent": "Nigeria"
   },
   {
    "date": "2013-01-25",
-   "elo": 1586.2,
+   "elo": 1586.1,
    "opponent": "Ethiopia"
   },
   {
    "date": "2013-01-29",
-   "elo": 1594.5,
+   "elo": 1594.3,
    "opponent": "Zambia"
   },
   {
    "date": "2013-02-03",
-   "elo": 1617.3,
+   "elo": 1617.1,
    "opponent": "Togo"
   },
   {
    "date": "2013-02-06",
-   "elo": 1631.2,
+   "elo": 1631.0,
    "opponent": "Ghana"
   },
   {
    "date": "2013-02-10",
-   "elo": 1617.9,
+   "elo": 1617.7,
    "opponent": "Nigeria"
   },
   {
    "date": "2013-03-23",
-   "elo": 1632.1,
+   "elo": 1632.0,
    "opponent": "Niger"
   },
   {
    "date": "2013-06-02",
-   "elo": 1620.7,
+   "elo": 1620.6,
    "opponent": "Algeria"
   },
   {
    "date": "2013-06-09",
-   "elo": 1636.8,
+   "elo": 1636.7,
    "opponent": "Niger"
   },
   {
    "date": "2013-06-15",
-   "elo": 1658.3,
+   "elo": 1658.1,
    "opponent": "Congo"
   },
   {
    "date": "2013-06-29",
-   "elo": 1651.1,
+   "elo": 1651.0,
    "opponent": "Libya"
   },
   {
    "date": "2013-08-14",
-   "elo": 1662.1,
+   "elo": 1662.0,
    "opponent": "Morocco"
   },
   {
    "date": "2013-08-17",
-   "elo": 1650.8,
+   "elo": 1650.6,
    "opponent": "South Africa"
   },
   {
    "date": "2013-09-07",
-   "elo": 1662.6,
+   "elo": 1662.4,
    "opponent": "Gabon"
   },
   {
    "date": "2013-09-10",
-   "elo": 1655.8,
+   "elo": 1655.6,
    "opponent": "Nigeria"
   },
   {
    "date": "2013-09-30",
-   "elo": 1642.6,
+   "elo": 1642.5,
    "opponent": "Botswana"
   },
   {
    "date": "2013-10-12",
-   "elo": 1659.1,
+   "elo": 1658.9,
    "opponent": "Algeria"
   },
   {
    "date": "2013-11-19",
-   "elo": 1645.0,
+   "elo": 1644.8,
    "opponent": "Algeria"
   },
   {
    "date": "2014-03-05",
-   "elo": 1635.9,
+   "elo": 1635.8,
    "opponent": "Comoros"
   },
   {
    "date": "2014-05-21",
-   "elo": 1633.6,
+   "elo": 1633.5,
    "opponent": "Senegal"
   },
   {
    "date": "2014-09-06",
-   "elo": 1640.6,
+   "elo": 1640.5,
    "opponent": "Lesotho"
   },
   {
    "date": "2014-09-10",
-   "elo": 1676.8,
+   "elo": 1676.7,
    "opponent": "Angola"
   },
   {
    "date": "2014-10-11",
-   "elo": 1645.1,
+   "elo": 1644.9,
    "opponent": "Gabon"
   },
   {
    "date": "2014-10-15",
-   "elo": 1636.6,
+   "elo": 1636.5,
    "opponent": "Gabon"
   },
   {
    "date": "2014-11-15",
-   "elo": 1647.5,
+   "elo": 1647.4,
    "opponent": "Lesotho"
   },
   {
    "date": "2014-11-19",
-   "elo": 1636.3,
+   "elo": 1636.2,
    "opponent": "Angola"
   },
   {
    "date": "2015-01-10",
-   "elo": 1639.6,
+   "elo": 1639.4,
    "opponent": "Eswatini"
   },
   {
    "date": "2015-01-13",
-   "elo": 1647.5,
+   "elo": 1647.4,
    "opponent": "Botswana"
   },
   {
    "date": "2015-01-17",
-   "elo": 1604.9,
+   "elo": 1604.8,
    "opponent": "Gabon"
   },
   {
    "date": "2015-01-21",
-   "elo": 1597.2,
+   "elo": 1597.1,
    "opponent": "Equatorial Guinea"
   },
   {
    "date": "2015-01-25",
-   "elo": 1570.4,
+   "elo": 1570.2,
    "opponent": "Congo"
   },
   {
    "date": "2015-05-12",
-   "elo": 1568.0,
+   "elo": 1567.9,
    "opponent": "Kazakhstan"
   },
   {
    "date": "2015-05-29",
-   "elo": 1560.1,
+   "elo": 1560.0,
    "opponent": "Corsica"
   },
   {
    "date": "2015-06-06",
-   "elo": 1554.5,
+   "elo": 1554.4,
    "opponent": "Cameroon"
   },
   {
    "date": "2015-06-13",
-   "elo": 1557.6,
+   "elo": 1557.4,
    "opponent": "Comoros"
   },
   {
    "date": "2015-08-30",
-   "elo": 1556.7,
+   "elo": 1556.5,
    "opponent": "Niger"
   },
   {
    "date": "2015-09-05",
-   "elo": 1534.6,
+   "elo": 1534.5,
    "opponent": "Botswana"
   },
   {
    "date": "2015-10-09",
-   "elo": 1522.3,
+   "elo": 1522.1,
    "opponent": "Mali"
   },
   {
    "date": "2015-11-12",
-   "elo": 1506.2,
+   "elo": 1506.1,
    "opponent": "Benin"
   },
   {
    "date": "2015-11-17",
-   "elo": 1528.0,
+   "elo": 1527.9,
    "opponent": "Benin"
   },
   {
    "date": "2016-02-27",
-   "elo": 1523.1,
+   "elo": 1523.0,
    "opponent": "Egypt"
   },
   {
    "date": "2016-03-26",
-   "elo": 1544.2,
+   "elo": 1544.0,
    "opponent": "Uganda"
   },
   {
    "date": "2016-03-29",
-   "elo": 1553.5,
+   "elo": 1553.4,
    "opponent": "Uganda"
   },
   {
    "date": "2016-06-05",
-   "elo": 1560.3,
+   "elo": 1560.2,
    "opponent": "Comoros"
   },
   {
    "date": "2016-08-24",
-   "elo": 1557.3,
+   "elo": 1557.1,
    "opponent": "Uzbekistan"
   },
   {
    "date": "2016-09-04",
-   "elo": 1566.2,
+   "elo": 1566.1,
    "opponent": "Botswana"
   },
   {
    "date": "2016-10-08",
-   "elo": 1567.4,
+   "elo": 1567.3,
    "opponent": "South Africa"
   },
   {
    "date": "2016-11-12",
-   "elo": 1606.7,
+   "elo": 1606.5,
    "opponent": "Cape Verde"
   },
   {
    "date": "2017-01-07",
-   "elo": 1618.2,
+   "elo": 1618.0,
    "opponent": "Mali"
   },
   {
    "date": "2017-01-14",
-   "elo": 1625.7,
+   "elo": 1625.5,
    "opponent": "Cameroon"
   },
   {
    "date": "2017-01-18",
-   "elo": 1626.5,
+   "elo": 1626.3,
    "opponent": "Gabon"
   },
   {
    "date": "2017-01-22",
-   "elo": 1642.9,
+   "elo": 1642.7,
    "opponent": "Guinea-Bissau"
   },
   {
    "date": "2017-01-28",
-   "elo": 1689.9,
+   "elo": 1689.7,
    "opponent": "Tunisia"
   },
   {
    "date": "2017-02-01",
-   "elo": 1699.1,
+   "elo": 1698.8,
    "opponent": "Egypt"
   },
   {
    "date": "2017-02-04",
-   "elo": 1724.9,
+   "elo": 1724.6,
    "opponent": "Ghana"
   },
   {
    "date": "2017-03-24",
-   "elo": 1712.5,
+   "elo": 1712.3,
    "opponent": "Morocco"
   },
   {
    "date": "2017-05-04",
-   "elo": 1705.5,
+   "elo": 1705.2,
    "opponent": "Benin"
   },
   {
    "date": "2017-05-21",
-   "elo": 1702.9,
+   "elo": 1702.6,
    "opponent": "Benin"
   },
   {
    "date": "2017-06-02",
-   "elo": 1700.6,
+   "elo": 1700.3,
    "opponent": "Chile"
   },
   {
    "date": "2017-06-10",
-   "elo": 1704.8,
+   "elo": 1704.5,
    "opponent": "Angola"
   },
   {
    "date": "2017-07-16",
-   "elo": 1700.4,
+   "elo": 1700.2,
    "opponent": "North Korea"
   },
   {
    "date": "2017-09-02",
-   "elo": 1711.9,
+   "elo": 1711.6,
    "opponent": "Senegal"
   },
   {
    "date": "2017-09-05",
-   "elo": 1712.0,
+   "elo": 1711.8,
    "opponent": "Senegal"
   },
   {
    "date": "2017-10-07",
-   "elo": 1683.6,
+   "elo": 1683.4,
    "opponent": "South Africa"
   },
   {
    "date": "2017-11-14",
-   "elo": 1699.8,
+   "elo": 1699.5,
    "opponent": "Cape Verde"
   },
   {
    "date": "2018-03-22",
-   "elo": 1704.2,
+   "elo": 1703.9,
    "opponent": "Guinea-Bissau"
   },
   {
    "date": "2018-03-27",
-   "elo": 1680.9,
+   "elo": 1680.6,
    "opponent": "Kosovo"
   },
   {
    "date": "2018-05-27",
-   "elo": 1692.9,
+   "elo": 1692.7,
    "opponent": "Cameroon"
   },
   {
    "date": "2018-09-08",
-   "elo": 1650.9,
+   "elo": 1650.6,
    "opponent": "Mauritania"
   },
   {
    "date": "2018-10-13",
-   "elo": 1660.9,
+   "elo": 1660.7,
    "opponent": "Botswana"
   },
   {
    "date": "2018-10-16",
-   "elo": 1653.8,
+   "elo": 1653.6,
    "opponent": "Botswana"
   },
   {
    "date": "2018-11-18",
-   "elo": 1626.3,
+   "elo": 1626.1,
    "opponent": "Angola"
   },
   {
    "date": "2019-03-22",
-   "elo": 1634.1,
+   "elo": 1633.9,
    "opponent": "Mauritania"
   },
   {
    "date": "2019-06-09",
-   "elo": 1634.9,
+   "elo": 1634.7,
    "opponent": "DR Congo"
   },
   {
    "date": "2019-09-04",
-   "elo": 1643.1,
+   "elo": 1642.9,
    "opponent": "Libya"
   },
   {
    "date": "2019-09-06",
-   "elo": 1649.2,
+   "elo": 1649.0,
    "opponent": "Morocco"
   },
   {
    "date": "2019-10-10",
-   "elo": 1635.1,
+   "elo": 1634.9,
    "opponent": "Gabon"
   },
   {
    "date": "2019-11-13",
-   "elo": 1627.7,
+   "elo": 1627.5,
    "opponent": "Uganda"
   },
   {
    "date": "2019-11-17",
-   "elo": 1631.4,
+   "elo": 1631.2,
    "opponent": "South Sudan"
   },
   {
    "date": "2020-10-09",
-   "elo": 1647.2,
+   "elo": 1647.0,
    "opponent": "DR Congo"
   },
   {
    "date": "2020-10-12",
-   "elo": 1654.2,
+   "elo": 1654.0,
    "opponent": "Madagascar"
   },
   {
    "date": "2020-11-12",
-   "elo": 1663.3,
+   "elo": 1663.1,
    "opponent": "Malawi"
   },
   {
    "date": "2020-11-16",
-   "elo": 1656.8,
+   "elo": 1656.6,
    "opponent": "Malawi"
   },
   {
    "date": "2021-03-24",
-   "elo": 1658.5,
+   "elo": 1658.3,
    "opponent": "Uganda"
   },
   {
    "date": "2021-03-29",
-   "elo": 1660.6,
+   "elo": 1660.4,
    "opponent": "South Sudan"
   },
   {
    "date": "2021-06-05",
-   "elo": 1655.2,
+   "elo": 1655.0,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2021-06-12",
-   "elo": 1650.8,
+   "elo": 1650.7,
    "opponent": "Morocco"
   },
   {
    "date": "2021-09-02",
-   "elo": 1660.1,
+   "elo": 1659.9,
    "opponent": "Niger"
   },
   {
    "date": "2021-09-07",
-   "elo": 1671.3,
+   "elo": 1671.1,
    "opponent": "Algeria"
   },
   {
    "date": "2021-10-08",
-   "elo": 1673.4,
+   "elo": 1673.2,
    "opponent": "Djibouti"
   },
   {
    "date": "2021-10-11",
-   "elo": 1675.1,
+   "elo": 1674.9,
    "opponent": "Djibouti"
   },
   {
    "date": "2021-11-12",
-   "elo": 1660.4,
+   "elo": 1660.2,
    "opponent": "Niger"
   },
   {
    "date": "2021-11-16",
-   "elo": 1674.8,
+   "elo": 1674.6,
    "opponent": "Algeria"
   },
   {
    "date": "2021-12-30",
-   "elo": 1669.5,
+   "elo": 1669.3,
    "opponent": "Mauritania"
   },
   {
    "date": "2022-01-02",
-   "elo": 1679.7,
+   "elo": 1679.6,
    "opponent": "Gabon"
   },
   {
    "date": "2022-01-09",
-   "elo": 1663.9,
+   "elo": 1663.8,
    "opponent": "Cameroon"
   },
   {
    "date": "2022-01-13",
-   "elo": 1684.3,
+   "elo": 1684.1,
    "opponent": "Cape Verde"
   },
   {
    "date": "2022-01-17",
-   "elo": 1669.4,
+   "elo": 1669.2,
    "opponent": "Ethiopia"
   },
   {
    "date": "2022-01-23",
-   "elo": 1661.3,
+   "elo": 1661.2,
    "opponent": "Gabon"
   },
   {
    "date": "2022-01-29",
-   "elo": 1691.4,
+   "elo": 1691.2,
    "opponent": "Tunisia"
   },
   {
    "date": "2022-02-02",
-   "elo": 1667.7,
+   "elo": 1667.5,
    "opponent": "Senegal"
   },
   {
    "date": "2022-02-05",
-   "elo": 1679.0,
+   "elo": 1678.8,
    "opponent": "Cameroon"
   },
   {
    "date": "2022-03-24",
-   "elo": 1656.9,
+   "elo": 1656.7,
    "opponent": "Kosovo"
   },
   {
    "date": "2022-03-29",
-   "elo": 1655.7,
+   "elo": 1655.5,
    "opponent": "Belgium"
   },
   {
    "date": "2022-06-03",
-   "elo": 1679.9,
+   "elo": 1679.7,
    "opponent": "Cape Verde"
   },
   {
    "date": "2022-06-07",
-   "elo": 1688.5,
+   "elo": 1688.3,
    "opponent": "Eswatini"
   },
   {
    "date": "2022-09-23",
-   "elo": 1694.8,
+   "elo": 1694.6,
    "opponent": "DR Congo"
   },
   {
    "date": "2022-09-27",
-   "elo": 1697.7,
+   "elo": 1697.5,
    "opponent": "Comoros"
   },
   {
    "date": "2022-11-19",
-   "elo": 1710.3,
+   "elo": 1710.1,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2023-03-24",
-   "elo": 1717.2,
+   "elo": 1717.0,
    "opponent": "Togo"
   },
   {
    "date": "2023-03-28",
-   "elo": 1707.5,
+   "elo": 1707.3,
    "opponent": "Togo"
   },
   {
    "date": "2023-06-18",
-   "elo": 1677.1,
+   "elo": 1676.9,
    "opponent": "Cape Verde"
   },
   {
    "date": "2023-09-08",
-   "elo": 1663.1,
+   "elo": 1662.9,
    "opponent": "Eswatini"
   },
   {
    "date": "2023-09-12",
-   "elo": 1659.4,
+   "elo": 1659.2,
    "opponent": "Morocco"
   },
   {
    "date": "2023-10-13",
-   "elo": 1661.0,
+   "elo": 1660.8,
    "opponent": "Equatorial Guinea"
   },
   {
    "date": "2023-10-17",
-   "elo": 1667.4,
+   "elo": 1667.2,
    "opponent": "Mauritania"
   },
   {
    "date": "2023-11-17",
-   "elo": 1658.9,
+   "elo": 1658.7,
    "opponent": "Guinea-Bissau"
   },
   {
    "date": "2023-11-21",
-   "elo": 1674.7,
+   "elo": 1674.5,
    "opponent": "Ethiopia"
   },
   {
    "date": "2024-01-05",
-   "elo": 1672.2,
+   "elo": 1672.1,
    "opponent": "Iran"
   },
   {
    "date": "2024-01-10",
-   "elo": 1680.5,
+   "elo": 1680.3,
    "opponent": "DR Congo"
   },
   {
    "date": "2024-01-16",
-   "elo": 1693.9,
+   "elo": 1693.7,
    "opponent": "Mauritania"
   },
   {
    "date": "2024-01-20",
-   "elo": 1703.0,
+   "elo": 1702.8,
    "opponent": "Algeria"
   },
   {
    "date": "2024-01-23",
-   "elo": 1651.3,
+   "elo": 1651.1,
    "opponent": "Angola"
   },
   {
    "date": "2024-01-30",
-   "elo": 1633.5,
+   "elo": 1633.3,
    "opponent": "Mali"
   },
   {
    "date": "2024-03-22",
-   "elo": 1620.2,
+   "elo": 1620.0,
    "opponent": "Libya"
   },
   {
    "date": "2024-06-06",
-   "elo": 1611.5,
+   "elo": 1611.3,
    "opponent": "Egypt"
   },
   {
    "date": "2024-06-10",
-   "elo": 1602.4,
+   "elo": 1602.2,
    "opponent": "Sierra Leone"
   },
   {
    "date": "2024-09-06",
-   "elo": 1618.3,
+   "elo": 1618.1,
    "opponent": "Senegal"
   },
   {
    "date": "2024-09-10",
-   "elo": 1634.3,
+   "elo": 1634.1,
    "opponent": "Malawi"
   },
   {
    "date": "2024-10-10",
-   "elo": 1654.9,
+   "elo": 1654.8,
    "opponent": "Burundi"
   },
   {
    "date": "2024-10-13",
-   "elo": 1669.8,
+   "elo": 1669.7,
    "opponent": "Burundi"
   },
   {
    "date": "2024-11-14",
-   "elo": 1660.4,
+   "elo": 1660.3,
    "opponent": "Senegal"
   },
   {
@@ -2217,12 +2217,12 @@
   },
   {
    "date": "2025-01-06",
-   "elo": 1622.4,
+   "elo": 1622.3,
    "opponent": "Zanzibar"
   },
   {
    "date": "2025-01-09",
-   "elo": 1637.0,
+   "elo": 1636.9,
    "opponent": "Tanzania"
   },
   {
@@ -2232,7 +2232,7 @@
   },
   {
    "date": "2025-03-21",
-   "elo": 1624.7,
+   "elo": 1624.6,
    "opponent": "Djibouti"
   },
   {
@@ -2247,109 +2247,109 @@
   },
   {
    "date": "2025-06-06",
-   "elo": 1640.0,
+   "elo": 1639.9,
    "opponent": "Zimbabwe"
   },
   {
    "date": "2025-09-05",
-   "elo": 1643.5,
+   "elo": 1643.4,
    "opponent": "Djibouti"
   },
   {
    "date": "2025-09-09",
-   "elo": 1645.6,
+   "elo": 1645.5,
    "opponent": "Egypt"
   },
   {
    "date": "2025-10-08",
-   "elo": 1656.9,
+   "elo": 1656.8,
    "opponent": "Sierra Leone"
   },
   {
    "date": "2025-10-12",
-   "elo": 1663.4,
+   "elo": 1663.3,
    "opponent": "Ethiopia"
   },
   {
    "date": "2025-11-14",
-   "elo": 1669.8,
+   "elo": 1669.7,
    "opponent": "Niger"
   },
   {
    "date": "2025-11-18",
-   "elo": 1682.2,
+   "elo": 1682.1,
    "opponent": "Benin"
   },
   {
    "date": "2025-12-24",
-   "elo": 1694.3,
+   "elo": 1694.2,
    "opponent": "Equatorial Guinea"
   },
   {
    "date": "2025-12-28",
-   "elo": 1679.7,
+   "elo": 1679.6,
    "opponent": "Algeria"
   },
   {
    "date": "2025-12-31",
-   "elo": 1699.4,
+   "elo": 1699.3,
    "opponent": "Sudan"
   },
   {
    "date": "2026-01-06",
-   "elo": 1661.7,
+   "elo": 1661.6,
    "opponent": "Ivory Coast"
   },
   {
    "date": "2026-03-28",
-   "elo": 1665.2,
+   "elo": 1665.1,
    "opponent": "Guinea-Bissau"
   },
   {
    "date": "2026-03-31",
-   "elo": 1656.9,
+   "elo": 1656.8,
    "opponent": "Guinea-Bissau"
   },
   {
    "date": "2026-06-05",
-   "elo": 1651.1,
+   "elo": 1651.0,
    "opponent": "Russia"
   },
   {
    "date": "2026-06-09",
-   "elo": 1652.1,
+   "elo": 1652.0,
    "opponent": "Belarus"
   },
   {
    "date": "2026-09-25",
-   "elo": 1641.2,
+   "elo": 1641.0,
    "opponent": "Benin"
   },
   {
    "date": "2026-09-28",
-   "elo": 1647.1,
+   "elo": 1647.0,
    "opponent": "Central African Republic"
   },
   {
    "date": "2026-10-03",
-   "elo": 1646.3,
+   "elo": 1646.2,
    "opponent": "Argentina"
   },
   {
    "date": "2026-11-13",
-   "elo": 1652.6,
+   "elo": 1652.4,
    "opponent": "Mauritania"
   },
   {
    "date": "2026-11-17",
-   "elo": 1673.6,
+   "elo": 1673.5,
    "opponent": "Mauritania"
   }
  ],
- "current": 1673.6,
+ "current": 1673.5,
  "peak": {
   "date": "2017-02-04",
-  "elo": 1724.9,
+  "elo": 1724.6,
   "opponent": "Ghana"
  },
  "world_rank": 74,
@@ -2360,52 +2360,52 @@
   {
    "rank": 11,
    "team": "Morocco",
-   "elo": 2025.7
+   "elo": 2025.6
   },
   {
    "rank": 25,
    "team": "Senegal",
-   "elo": 1881.5
+   "elo": 1881.3
   },
   {
    "rank": 33,
    "team": "Ivory Coast",
-   "elo": 1833.7
+   "elo": 1833.6
   },
   {
    "rank": 34,
    "team": "Egypt",
-   "elo": 1821.9
+   "elo": 1821.7
   },
   {
    "rank": 36,
    "team": "Nigeria",
-   "elo": 1813.1
+   "elo": 1813.0
   },
   {
    "rank": 43,
    "team": "Algeria",
-   "elo": 1794.1
+   "elo": 1794.0
   },
   {
    "rank": 46,
    "team": "DR Congo",
-   "elo": 1778.9
+   "elo": 1778.8
   },
   {
    "rank": 48,
    "team": "Mali",
-   "elo": 1768.3
+   "elo": 1768.2
   },
   {
    "rank": 52,
    "team": "Cameroon",
-   "elo": 1747.4
+   "elo": 1747.3
   },
   {
    "rank": 62,
    "team": "South Africa",
-   "elo": 1721.0
+   "elo": 1720.8
   }
  ],
  "forecast": {
@@ -2413,59 +2413,59 @@
   "history_years": [
    {
     "year": 2010,
-    "elo": 1626.3
+    "elo": 1626.2
    },
    {
     "year": 2011,
-    "elo": 1633.9
+    "elo": 1633.7
    },
    {
     "year": 2012,
-    "elo": 1530.2
+    "elo": 1530.0
    },
    {
     "year": 2013,
-    "elo": 1645.0
+    "elo": 1644.8
    },
    {
     "year": 2014,
-    "elo": 1636.3
+    "elo": 1636.2
    },
    {
     "year": 2015,
-    "elo": 1528.0
+    "elo": 1527.9
    },
    {
     "year": 2016,
-    "elo": 1606.7
+    "elo": 1606.5
    },
    {
     "year": 2017,
-    "elo": 1699.8
+    "elo": 1699.5
    },
    {
     "year": 2018,
-    "elo": 1626.3
+    "elo": 1626.1
    },
    {
     "year": 2019,
-    "elo": 1631.4
+    "elo": 1631.2
    },
    {
     "year": 2020,
-    "elo": 1656.8
+    "elo": 1656.6
    },
    {
     "year": 2021,
-    "elo": 1669.5
+    "elo": 1669.3
    },
    {
     "year": 2022,
-    "elo": 1710.3
+    "elo": 1710.1
    },
    {
     "year": 2023,
-    "elo": 1674.7
+    "elo": 1674.5
    },
    {
     "year": 2024,
@@ -2473,11 +2473,11 @@
    },
    {
     "year": 2025,
-    "elo": 1699.4
+    "elo": 1699.3
    },
    {
     "year": 2026,
-    "elo": 1673.6
+    "elo": 1673.5
    }
   ],
   "targets": [
@@ -2498,52 +2498,52 @@
  "win_expectancy": [
   {
    "opponent": "Morocco",
-   "opp_elo": 2025.7,
+   "opp_elo": 2025.6,
    "expected": 0.12
   },
   {
    "opponent": "Senegal",
-   "opp_elo": 1881.5,
+   "opp_elo": 1881.3,
    "expected": 0.23
   },
   {
    "opponent": "Egypt",
-   "opp_elo": 1821.9,
+   "opp_elo": 1821.7,
    "expected": 0.3
   },
   {
    "opponent": "Nigeria",
-   "opp_elo": 1813.1,
+   "opp_elo": 1813.0,
    "expected": 0.31
   },
   {
    "opponent": "Algeria",
-   "opp_elo": 1794.1,
+   "opp_elo": 1794.0,
    "expected": 0.33
   },
   {
    "opponent": "Ivory Coast",
-   "opp_elo": 1833.7,
+   "opp_elo": 1833.6,
    "expected": 0.28
   },
   {
    "opponent": "Cameroon",
-   "opp_elo": 1747.4,
+   "opp_elo": 1747.3,
    "expected": 0.4
   },
   {
    "opponent": "Mali",
-   "opp_elo": 1768.3,
+   "opp_elo": 1768.2,
    "expected": 0.37
   },
   {
    "opponent": "Ghana",
-   "opp_elo": 1624.9,
+   "opp_elo": 1624.7,
    "expected": 0.57
   },
   {
    "opponent": "Tunisia",
-   "opp_elo": 1589.3,
+   "opp_elo": 1589.1,
    "expected": 0.62
   }
  ],
@@ -2568,7 +2568,7 @@
     "opponent": "Cape Verde",
     "opp_elo": 1608,
     "diff": 65,
-    "win": 0.454,
+    "win": 0.455,
     "draw": 0.276,
     "loss": 0.269
    },
@@ -2578,7 +2578,7 @@
     "diff": 49,
     "win": 0.431,
     "draw": 0.277,
-    "loss": 0.292
+    "loss": 0.291
    },
    {
     "opponent": "Cameroon",
@@ -2638,7 +2638,7 @@
    },
    {
     "opponent": "Senegal",
-    "opp_elo": 1882,
+    "opp_elo": 1881,
     "diff": -208,
     "win": 0.106,
     "draw": 0.253,
@@ -2696,7 +2696,7 @@
      "ga": 20,
      "last": "2026-09-25"
     },
-    "opp_elo": 1582,
+    "opp_elo": 1581,
     "elo_diff": -8,
     "venue_swing": -100,
     "probs": {
@@ -2975,7 +2975,7 @@
     "result": "L",
     "win": 0.015,
     "draw": 0.09,
-    "loss": 0.896,
+    "loss": 0.895,
     "brier": 0.019
    },
    {
